@@ -1,0 +1,48 @@
+### Ignore all files within any Data folder
+**/Data/*
+**/csv/*
+**/log/*
+###
+
+### Python virtual environment
+.venv/
+__pycache__/
+.index
+.env
+###
+
+### Also ignore any files with extensions that look like data files
+*.xlsx
+*.dta
+*.csv
+*.db
+###
+
+### Ignore any files which are probably log files
+*.log
+*.msg
+*.txt
+*.text
+# Stata log format
+*.smcl
+*.sthlp
+*.Rout
+###
+
+### For now, ignore all output files. It should be safe to upload output to Git too.
+*.TEX
+*.gph
+# ###
+
+### I think all of these are created when converting a .tex into .pdf
+*.aux
+*.out
+*.gz
+*.fdb_latexmk
+###
+
+### Random other files automatically created by mac
+._.*
+._*
+.DS_Store
+###
