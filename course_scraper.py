@@ -12,6 +12,8 @@ import json
 import re
 import os
 import time
+import tqdm
+from collections import OrderedDict
 import unicodedata
 
 def normalize_text(text):
@@ -71,36 +73,44 @@ def extract_info(soup):
       course_codes = []
       if course_code_paragraph:
             text = course_code_paragraph.get_text(separator=" ", strip=True)
-            # This regex captures course codes like AMST-117 and FAMS-130
+            # This regex captures course codes like AMST-117 and FAMS-130 and CHEM-160L
             course_codes = re.findall(r'\b([A-Z]{2,}-\d+[A-Z]?)\b', text)
 
-      # Extract faculty
-      faculty_section = soup.find("h4", string="Faculty")
-      faculty = []
-      if faculty_section:
-            for p in faculty_section.find_next_siblings("p"):
-                  links = p.find_all("a")
-                  faculty += [a.get_text(strip=True) for a in links]
-                  break  # Assuming only one relevant <p> under Faculty
+      # Locate the "Faculty" section
+      faculty_dict = OrderedDict()
 
-      # Extract faculty by section (if possible)
       faculty_section = soup.find("h4", string="Faculty")
-      faculty = {}
       if faculty_section:
             for p in faculty_section.find_next_siblings("p"):
-                  links = p.find_all("a")
-                  names = [a.get_text(strip=True) for a in links]
-                  section_info = p.get_text()
-                  # Extract section numbers, e.g., "Sections 01 and 02"
-                  sections = re.findall(r'Section(?:s)? ([\d\sand]+)', section_info)
-                  if sections:
-                        section_list = re.split(r'\s*and\s*|\s+', sections[0])
-                        for sec in section_list:
-                              if sec:
-                                    faculty[f"Section {sec}"] = names
-                  else:
-                        faculty["all"] = names
+                  # Stop parsing once next <h4> is reached
+                  if p.find_previous_sibling("h4") and p.find_previous_sibling("h4").text.strip() != "Faculty":
+                        break
+
+                  chunks = re.split(r'<br\s*/?>', p.decode_contents())
+                  for chunk in chunks:
+                        chunk_soup = BeautifulSoup(chunk, "html.parser")
+                        text = chunk_soup.get_text(strip=True)
+
+                        # Extract section (optional)
+                        section_match = re.search(r"\(Section (\d+)\)", text)
+                        section = f"Section {section_match.group(1)}" if section_match else "Section 01"
+
+                        # Extract faculty name(s)
+                        names = [a.get_text(strip=True) for a in chunk_soup.find_all("a")]
+                        if not names:
+                              # Fallback: try extracting from plain text before (Section XX)
+                              name_only = re.sub(r"\(Section \d+\)", "", text).strip()
+                              if name_only:
+                                    names = [name_only]
+                              else:
+                                    names = ["TBA"]
+
+                        faculty_dict.setdefault(section, []).extend(names)
                   break
+
+      # Guarantee Section 01 exists
+      if "Section 01" not in faculty_dict:
+            faculty_dict["Section 01"] = ["TBA"]
         
       # Extract description
       description_section = soup.find("h4", string="Description")
@@ -163,7 +173,7 @@ def extract_info(soup):
             "semester": semester,
             "course_title": course_title,
             "course_codes": course_codes,
-            "faculty": faculty,
+            "faculty": faculty_dict,
             "description": description,
             "times_and_locations": times_by_section
       }
@@ -193,7 +203,7 @@ driver = webdriver.Firefox(service=service1, options=options)
 # Fetch the URL -- changed to jobs approved in the past 3 months
 url = "https://www.amherst.edu/academiclife/departments/american_studies/courses/2526S"
 driver.get(url)
-time.sleep(60)
+time.sleep(20)
 soup = BeautifulSoup(driver.page_source, 'html.parser')
 
 # Extract list of semesters
@@ -208,9 +218,11 @@ output_file = output_path + f'amherst_courses_{term}.json'
 # Extract list of departments
 dept_options = soup.select("#curriculum-department option")
 departments = [(opt["value"], opt.text.strip()) for opt in dept_options]
+loop = tqdm.tqdm(total=len(departments), desc="Departments")
 
 # Loop through semesters
 jsons = []
+failed_links = []
 print(f"Scraping term: {term}")
 
 # Loop through departments
@@ -220,6 +232,7 @@ for dept_url, dept_name in departments:
       # Go to that url
       major_url = f"https://www.amherst.edu/{dept_url}/{term}"
       driver.get(major_url)
+      time.sleep(20)
       soup = BeautifulSoup(driver.page_source, 'html.parser')
 
       # Extract list of courses
@@ -232,10 +245,17 @@ for dept_url, dept_name in departments:
       # Loop through courses
       for link in course_urls:
             driver.get(link)
+            # time.sleep(20)
             soup = BeautifulSoup(driver.page_source, 'html.parser')
+            course_list_div = soup.find("div", id="academics-course-list")
+            if not course_list_div:
+                  failed_links.append(link)
+                  continue
             course_data = extract_info(soup)
             print(course_data)
             jsons.append(course_data)
+      
+      loop.update()
 
 # Write to JSON
 with open(output_file, "w") as f:
@@ -243,3 +263,4 @@ with open(output_file, "w") as f:
 
 driver.quit()
 print(f"Data successfully written to {output_file}")
+print(f"Failed links: {failed_links}")
