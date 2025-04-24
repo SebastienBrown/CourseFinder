@@ -191,7 +191,7 @@ num_cores = int(os.environ.get("SLURM_CPUS_PER_TASK", 1))
 total_jobs = 36
 
 # Save location
-output_path = "/orcd/home/002/hnaka24/CourseFinder/"
+output_path = "/orcd/home/002/hnaka24/CourseFinder/scraped/"
 
 # Set up Selenium WebDriver
 options = Options()
@@ -244,6 +244,9 @@ for dept_url, dept_name in departments:
 
       # Loop through courses
       for link in course_urls:
+            if link == "https://www.amherst.edu/academiclife/departments/courses/1617F/ENGL/ENGL-338-1617F":
+                 failed_links.append(link)
+                 continue
             driver.get(link)
             # time.sleep(20)
             soup = BeautifulSoup(driver.page_source, 'html.parser')
