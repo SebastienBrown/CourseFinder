@@ -14935,5 +14935,15 @@
                 ]
             }
         }
+    },
+    {
+        "semester": "Fall 2013",
+        "course_title": "Computer Systems I",
+        "course_codes": "COSC-161",
+        "faculty": {
+            "Section 01": ["Scott F. Kaplan"]
+        },
+        "description": "This course will provide an introduction to computer systems, stressing how computers work. Beginning with Boolean logic and the design of combinational and sequential circuits, the course will discuss the design of computer hardware components, microprocessing and the interpretation of machine instructions, assembly languages, and basic machine architecture. The course will also introduce operating systems topics, basic memory management, and topics in network communication. Projects will include the design of digital circuits and the simulation of operating system and network processes.",
+        "times_and_locations": ""
     }
 ]

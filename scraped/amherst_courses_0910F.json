@@ -5602,45 +5602,6 @@
     },
     {
         "semester": "Fall 2009",
-        "course_title": "Introduction to Economics with Environmental Applications",
-        "course_codes": [
-            "ECON-11",
-            "ENST-23"
-        ],
-        "faculty": {
-            "Section 01": [
-                "Katharine R. E. Sims"
-            ]
-        },
-        "description": "(Offered as Environmental Studies 23 and Economics 11, section 3.) A study of the central problem of scarcity and the ways in which the U. S. economic system allocates scarce resources among competing ends and apportions the goods produced among people. We will apply core economic concepts to major environmental/natural resource policy topics such as global climate change, local air and water pollution, over-harvesting of renewable resources, habitat loss, and solid waste management. Students who have already taken Economics 11 can satisfy the Environmental Studies requirement by taking Economics 25. Limited to 25 Amherst College students. Fall semester. Professor Sims.",
-        "times_and_locations": {
-            "ENST 23 - DIS": {
-                "Section 01": [
-                    {
-                        "day": "Tu",
-                        "time": "10:00 AM - 11:20 AM",
-                        "location": "CONV 207"
-                    },
-                    {
-                        "day": "Th",
-                        "time": "10:00 AM - 11:20 AM",
-                        "location": "CONV 207"
-                    }
-                ]
-            },
-            "ENST 23 - LEC": {
-                "Section 01": [
-                    {
-                        "day": "Tu",
-                        "time": "01:00 PM - 01:50 PM",
-                        "location": "MERR 1"
-                    }
-                ]
-            }
-        }
-    },
-    {
-        "semester": "Fall 2009",
         "course_title": "Introduction to Statistics",
         "course_codes": [
             "ENST-24",
@@ -12633,5 +12594,115 @@
                 ]
             }
         }
+    },
+    {
+        "semester": "Fall 2009",
+        "course_title": "Inorganic Chemistry",
+        "course_codes": "CHEM-35",
+        "faculty": {
+            "Section 01": ["Sandra Burkett"]
+        },
+        "description": "The structure, bonding, and symmetry of transition metal-containing molecules and inorganic solids are discussed. Structure and bonding in transition metal complexes are examined through molecular orbital and ligand field theories, with an emphasis on the magnetic, spectral, and thermodynamic properties of transition metal complexes. Reactions of transition metal complexes, including the unique chemistry of organometallic compounds, will be examined. The laboratory experiments complement lecture material and include a final independent project. Four hours of class and four hours of laboratory per week.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Fall 2009",
+        "course_title": "Introduction to the Greek Language",
+        "course_codes": "GREE-01",
+        "faculty": {
+            "Section 01": ["Luca Grillo"]
+        },
+        "description": "(Fall semester)This course prepares students in one term to read Plato, Greek tragedy, Homer, and other Greek literary, historical, and philosophical texts in the original and also provides sufficient competence to read New Testament Greek. Three class hours per week. This course is normally followed by Greek 12 and then Greek 15 or 17.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Fall 2009",
+        "course_title": "Computer Systems I",
+        "course_codes": "COSC-16",
+        "faculty": {
+            "Section 01": ["Scott F. Kaplan"]
+        },
+        "description": "This course will provide an introduction to computer systems, stressing how computers work. Beginning with Boolean logic and the design of combinational and sequential circuits, the course will discuss the design of computer hardware components, microprocessing and the interpretation of machine instructions, assembly languages, and basic machine architecture. The course will also introduce operating systems topics, basic memory management, and topics in network communication. Projects will include the design of digital circuits and the simulation of operating system and network processes.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Fall 2009",
+        "course_title": "Advanced Operating Systems",
+        "course_codes": "COSC-39",
+        "faculty": {
+            "Section 01": ["Scott F. Kaplan"]
+        },
+        "description": "Computer operating systems are responsible for allowing multiple users and their programs to share the hardware resources of a single machine. The policies implemented in an operating system determine its ability to provide good performance, fair sharing, isolation between programs, and predictable behavior. There are many policy choices that determine these properties, and measuring their effect requires empirical experimentation and analysis. This course will examine both basic and advanced policies that can be used to control process scheduling, memory management, disk scheduling, network bandwidth allocation, and power consumption. We will design and perform experiments to evaluate these policies, comparing them and analyzing their behavior. Experiments will involve both simulation and in-kernel implementation. Offered in alternate years.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Fall 2009",
+        "course_title": "Microeconomics",
+        "course_codes": "ECON-54",
+        "faculty": {
+            "Section 01": ["Jessica Wolpaw Reyes"]
+        },
+        "description": "This course develops the tools of modern microeconomic theory and notes their applications to matters of utility and demand; production functions and cost; pricing of output under perfect competition, monopoly, oligopoly, etc.; pricing of productive services; intertemporal decision-making; the economics of uncertainty; efficiency, equity, general equilibrium; externalities and public goods. A student may not receive credit for both Economics 54 and Economics 58.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Fall 2009",
+        "course_title": "Senior Departmental Honors Seminar",
+        "course_codes": "ECON-77",
+        "faculty": {
+            "Section 01": ["Jessica Wolpaw Reyes"]
+        },
+        "description": "A seminar preparing senior economics majors to undertake independent research for their honors projects. Five or six topics of current interest will be studied.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Fall 2009",
+        "course_title": "Christianity and Evolution",
+        "course_codes": "FYSE-21",
+        "faculty": {
+            "Section 01": ["Andrew C. Dole"]
+        },
+        "description": "The recent and ongoing controversies over Intelligent Design and the teaching of evolution represent the tip of a large and rather interesting iceberg.  Christian opposition to evolution is not new, but neither does it represent the universal report of the tradition.  In fact, prior to the early twentieth century emergence of the fundamentalist movement in the United States, attempts to reconcile Christianity and an evolutionary understanding of human beings were prominent among Christian intellectuals.  This course will explore the pre-history and history of the relationship between Christianity and theories of evolution.  Over the course of the semester we will explore the classical \"design argument\" for the existence of God, as articulated by William Paley in the early nineteenth century, attempting to understand both the content of the argument and its religious importance; pre-Darwinian attempts to construct a developmental and yet Christianity-friendly understanding of the world; Darwins theory of evolution and its initially positive reception in Christian circles; the Scopes Trial of 1925 and its historical context; and texts drawn from proponents and opponents of the contemporary Intelligent Design movement.  Finally, we will turn briefly to recent attempts to explain religion itself using evolutionary theories. This course will focus on developing a number of competencies central to liberal studies: understanding the positions articulated in texts and the chains of reasoning advanced in their support; engaging, with charity, the thought of others whose fundamental convictions differ significantly from one's own; constructive dialogue across the same sort of differences; and expository writing. Classroom time will be spent primarily in discussion of the assigned texts and the issues they raise, with a minimal amount of lecturing by the instructor. Writing assignments will be relatively frequent and relatively short, and will receive substantial commentary from the instructor. Students will also be required to make short (ca. 10-minute) presentations to the class on material drawn from the assigned texts.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Fall 2009",
+        "course_title": "Multivariate Data Analysis",
+        "course_codes": "MATH-23",
+        "faculty": {
+            "Section 01": ["Amy S. Wagaman"]
+        },
+        "description": "Real world experiments often provide data that consist of many variables. When confronted with a large number of variables, there may be many different directions to proceed, but the direction chosen is ultimately based on the question(s) being asked. In biology, one could ask which observed characteristics distinguish females from males in a given species. In archeology, one could examine how the observed characteristics of pottery relate to their location on the site, look for clusters of similar pottery types, and gain valuable information about the location of markets or religious centers in relation to residential housing. This course will explore how to visualize large data sets and study a variety of methods to analyze them. Methods covered include principal components analysis, factor analysis, classification techniques (discriminant analysis and classification trees) and clustering techniques. This course will feature hands-on data analysis in weekly computer labs, emphasizing application over theory. Four class hours per week.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Fall 2009",
+        "course_title": "Global Sound",
+        "course_codes": "MUSI-04",
+        "faculty": {
+            "Section 01": ["Jeffers L. Engelhardt"]
+        },
+        "description": "This course explores the global scale of much music-making and musical consumption today. Migration, diaspora, war, tourism, postsocialist and postcolonial change, commerce, and digital technology have all profoundly reshaped the way musics are created, circulated, and consumed. These forces have also illuminated important ethical, legal, and aesthetic issues concerning intellectual property rights and the nature of musical authorship, the appropriation of \"traditional\" musics by elites in the global North, and local musical responses to transnational music industries, for instance. Through a series of case studies that will include performances and workshops by visiting musicians, Global Sound will examine how musics animate processes of globalization and how globalization affects musics by establishing new social, cultural, and economic formations. Two class meetings per week.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Fall 2009",
+        "course_title": "Modern Physics",
+        "course_codes": "PHYS-25",
+        "faculty": {
+            "Section 01": ["Jonathan R. Friedman"]
+        },
+        "description": "The theories of relativity (special and general) and the quantum theory constituted the revolutionary transformation of physics in the early twentieth century. Certain crucial experiments precipitated crises in our classical understanding to which these theories offered responses; in other instances, the theories implied strange and/or counterintuitive phenomena that were then investigated by crucial experiments. After an examination of the basics of Special Relativity, the quantum theory, and the important early experiments, we will consider their implications for model systems such as a particle in a box, the harmonic oscillator, and a simple version of the hydrogen atom. We will also explore the properties of nuclei and elementary particles, study lasers and photonics, and discuss some very recent experiments of interest in contemporary physics. Three class hours per week.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Fall 2009",
+        "course_title": "Spanish Conversation",
+        "course_codes": "SPAN-06",
+        "faculty": {
+            "Section 01": ["Twardy"]
+        },
+        "description": "This course emphasizes fluency speaking and is designed to provide students the opportunity to practice the language through discussion of selected texts and topics of interest.  Spanish 6 prepares students to express opinions, ideas, points of view and critiques on debates, readings and films.  With this goal in mind, this course will also provide exposure to other language skills important to the development of fluency in speaking Spanish. The course will meet for three hours per week with the instructor and one hour with a teaching assistant. This course counts for the major.",
+        "times_and_locations": ""
     }
 ]

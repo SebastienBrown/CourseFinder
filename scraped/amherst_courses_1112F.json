@@ -14403,5 +14403,67 @@
                 ]
             }
         }
+    },
+    {
+        "semester": "Fall 2011",
+        "course_title": "Science and Religion",
+        "course_codes": "FYSE-107",
+        "faculty": {
+            "Section 01": ["Scott F. Kaplan"]
+        },
+        "description": "Science and religion have a long, sometimes intense history of conflict, at times fighting bitterly to establish themselves as the authority that best dictates how we should view our world. Must this division exist? Are science and religion fundamentally competing viewpoints? Or should they be complementary views that, understood properly, address distinct aspects of our lives? Some believe the latter: that science describes the physical world while religion provides moral and ethical grounding. Others believe this distinction is artificial, and that neither religion nor science can be so easily constrained. We will sample the history of this conflict and analyze opinions on both sides. More broadly, we will examine whether and how sensitive topics, such as a person's core beliefs, can be rationally discussed.  We will apply our examination to current conflicts such as stem-cell research and genetic engineering. The reading for this course will begin with an historic examination of how early scientific concepts were received and opposed.  We will then examine the scientific process, discovering that it is not the neat and tidy progression that many assume it to be.  Finally, we will address current topics for which scientific directions conflict with religious concepts or ethics. This course will focus substantially on critical argument, both spoken and written.  Class sessions will center on in-depth discussions of the reading, serving as our primary method for delving into challenging topics.  There will be a smaller number of substantial writing assignments.  For each assignment, each student will be required to formulate and persuasively present an argument.  Moreover, for each writing assignment, each student will critically review the written arguments of other students.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Fall 2011",
+        "course_title": "Ancient Philosophy",
+        "course_codes": "PHIL-217",
+        "faculty": {
+            "Section 01": ["Jyl Gentzler"]
+        },
+        "description": "An examination of the origins of Western philosophical thought in Ancient Greece. We will consider the views of the Milesians, Heraclitus, Parmenides, Protagoras, Socrates, Plato and Aristotle. Particular attention will be paid to questions about the nature, sources, and limits of human knowledge; about the merits of relativism, subjectivism, and objectivism in science and ethics; about the nature of, and relationship between, obligations to others and self-interest; and about the connection between the body and the mind.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Fall 2011",
+        "course_title": "Introduction to Hispanic Literatures",
+        "course_codes": [
+            "SPAN-211"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Sara J. Brenneis"
+            ]
+        },
+        "description": "This course provides an introduction to the diverse literatures of the Spanish-speaking world over the course of six centuries, from the Middle Ages to the turn of the twentieth century.  Students will learn the tools and critical vocabulary for advanced work reading the canon of Hispanic literatures from Spain, Latin America, and the Caribbean Basin, identifying aesthetic trends and historical periods such as the Renaissance, the Golden Age, the Romantic era, realism and modernism.  The syllabus will include a wide variety of authors of different national, political, and artistic persuasions and an array of linguistic styles.  A medium- to high-level knowledge of the Spanish language and reasonable proficiency in listening, speaking, reading, and writing in Spanish are required.  This course counts for the major.  Conducted entirely in Spanish. Requisite:  SPAN 199 or consent of the instructor.  Limited to 15 students.  Fall semester:  Professor Brenneis.  Spring semester: Professor Suarez. If Overenrolled: Priority given to Spanish majors Cost: $$20.00 ?",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Fall 2011",
+        "course_title": "Spanish Composition",
+        "course_codes": [
+            "SPAN-199"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Victoria Maillo (Sections 01 and 02)"
+            ]
+        },
+        "description": "In this course students will learn how to approach writing as a process.  The emphasis is on writing as a communicative act rather than as a mere language exercise.  As such, emphasis is given to the interaction between the author and the text, the target audience, and the purpose and message of the final product.  In order to develop the necessary skills that good writers should have, the course will focus on expanding vocabulary, exploring rhetorical techniques for organizing information, developing strategies for writing, and characterizing the target audience(s).  At the same time we will insist upon critical readings, and the processes of revising and editing.  In addition, this course includes the study of written texts (narrative, description, poems, reports, essays, letters, etc.), and of literature's many genres and subgenres (prose, poetry, drama, etc.).  This course counts for the major.  Conducted entirely in Spanish. Requisite: SPAN 130, Spanish Placement Test or with permission of Language Coordinator. Limited to 15 students. Fall semester: Senior Lecturer Maillo.  Spring semester: Lecturer Aldea-Agudo. If Overenrolled: Priority given to Amherst College students and then to non-seniors Cost: $$20.00 ?",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Fall 2011",
+        "course_title": "Barcelona",
+        "course_codes": [
+            "SPAN-352"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Sara J. Brenneis"
+            ]
+        },
+        "description": "[RC] As a global city with a local identity, Barcelona resides both literally and figuratively at the border between Spain and the rest of the world. This interdisciplinary course will explore the in-between space this vibrant city inhabits at the turn of the 21st century, at once imagined as a tourist's playground in films and popular novels, while also actively guarding its particular Catalan cultural roots. Students will study architectural, literary, cinematic, linguistic and political movements set amid the urban cityscape of Barcelona, focusing on the city's role in the exportation of a unique Spanish and Catalan identity beyond Spain's borders. Conducted in Spanish.",
+        "times_and_locations": ""
     }
 ]

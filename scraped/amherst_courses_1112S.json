@@ -12338,7 +12338,7 @@
         ],
         "faculty": {
             "Section 01": [
-                "Victoria Maillo (Sections 01 and 02)"
+                "Elena Aldea Agudo (Sections 01 and 02)"
             ]
         },
         "description": "In this course students will learn how to approach writing as a process.  The emphasis is on writing as a communicative act rather than as a mere language exercise.  As such, emphasis is given to the interaction between the author and the text, the target audience, and the purpose and message of the final product.  In order to develop the necessary skills that good writers should have, the course will focus on expanding vocabulary, exploring rhetorical techniques for organizing information, developing strategies for writing, and characterizing the target audience(s).  At the same time we will insist upon critical readings, and the processes of revising and editing.  In addition, this course includes the study of written texts (narrative, description, poems, reports, essays, letters, etc.), and of literature's many genres and subgenres (prose, poetry, drama, etc.).  This course counts for the major.  Conducted entirely in Spanish. Requisite: SPAN 130, Spanish Placement Test or with permission of Language Coordinator. Limited to 15 students. Fall semester: Senior Lecturer Maillo.  Spring semester: Lecturer Aldea-Agudo. If Overenrolled: Priority given to Amherst College students and then to non-seniors Cost: $$20.00 ?",
@@ -13578,5 +13578,182 @@
                 ]
             }
         }
+    },
+    {
+        "semester": "Spring 2012",
+        "course_title": "Introduction to Computer Science I",
+        "course_codes": [
+            "COSC-111"
+        ],
+        "faculty": {
+            "Section 01": [
+                "TBA"
+            ]
+        },
+        "description": "This course introduces ideas and techniques that are fundamental to computer science. The course emphasizes procedural abstraction, algorithmic methods, and structured design techniques. Students will gain a working knowledge of a block-structured programming language and will use the language to solve a variety of problems illustrating ideas in computer science. A selection of other elementary topics will be presented, for example: the historical development of computers, comparison and evaluation of programming languages, and artificial intelligence. A laboratory section will meet once a week to give students practice with programming constructs. Two class hours and one one-hour laboratory per week. Fall semester. Professors C. McGeoch and L. McGeoch.  Spring semester:  Professor L. McGeoch.",
+        "times_and_locations": {
+            "COSC 111 - LEC": {
+                "Section 01": [
+                    {
+                        "day": "M",
+                        "time": "01:00 PM - 01:50 PM",
+                        "location": "MERR 1"
+                    },
+                    {
+                        "day": "W",
+                        "time": "01:00 PM - 01:50 PM",
+                        "location": "MERR 1"
+                    }
+                ],
+                "Section 02": [
+                    {
+                        "day": "M",
+                        "time": "01:00 PM - 01:50 PM",
+                        "location": "MERR 1"
+                    },
+                    {
+                        "day": "W",
+                        "time": "01:00 PM - 01:50 PM",
+                        "location": "MERR 1"
+                    }
+                ],
+                "Section 03": [
+                    {
+                        "day": "M",
+                        "time": "01:00 PM - 01:50 PM",
+                        "location": "MERR 1"
+                    },
+                    {
+                        "day": "W",
+                        "time": "01:00 PM - 01:50 PM",
+                        "location": "MERR 1"
+                    }
+                ],
+                "Section 04": [
+                    {
+                        "day": "M",
+                        "time": "01:00 PM - 01:50 PM",
+                        "location": "MERR 1"
+                    },
+                    {
+                        "day": "W",
+                        "time": "01:00 PM - 01:50 PM",
+                        "location": "MERR 1"
+                    }
+                ]
+            },
+            "COSC 111 - LAB": {
+                "Section 01": [
+                    {
+                        "day": "F",
+                        "time": "01:00 PM - 01:50 PM",
+                        "location": "SMUD 014"
+                    }
+                ],
+                "Section 02": [
+                    {
+                        "day": "F",
+                        "time": "02:00 PM - 02:50 PM",
+                        "location": "SMUD 014"
+                    }
+                ],
+                "Section 03": [
+                    {
+                        "day": "F",
+                        "time": "12:00 PM - 12:50 PM",
+                        "location": "SMUD 014"
+                    }
+                ],
+                "Section 04": [
+                    {
+                        "day": "Th",
+                        "time": "07:30 PM - 08:30 PM",
+                        "location": "SMUD 014"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "semester": "Spring 2012",
+        "course_title": "Ghosts in Shells? Virtuality and Embodiment from Passing to the Posthuman",
+        "course_codes": [
+            "ENGL-456", "BLST-441", "FAMS-451"
+        ],
+        "faculty": {
+            "Section 01": []
+        },
+        "description": "(Offered as ENGL 456, BLST 441 [US], and FAMS 451.)  This class begins with narratives about individuals who pass-that is, who come to be recognized as someone different from whom they were sexually or racially “born as.”  Such stories suggest that one's identity depends minimally on the body into which one is born, and is more attached to the supplementation and presentation of that body in support of whichever cultural story the body is desired to tell.  Drawing on familiar liberal humanist claims, which centralize human identity in the mind, these narratives also respond to the growing sophistication of human experience with virtual worlds-from acts of reading to immersions in computer simulation.  But what kinds of tensions emerge when bodies nonetheless signify beyond an individual's self-imagination?  As technology expands the possibilities of the virtual, for instance surrogacy, cloning, and cybernetics, what pressures are brought to bear on the physical human body and its processes to signify authentic humanness?  Rather than ask whether identity is natural or cultural, our discussions will project these questions into a not-so-distant future:  What would it mean to take “human” as only one identity, as a category amongst many others, each also acknowledged as equally subject to the same social and biological matrices of desire, creation, and recognition?  We will approach these questions through works of literature, philosophy, media history, and contemporary science writing.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2012",
+        "course_title": "Computer Systems II",
+        "course_codes": "COSC-261",
+        "faculty": {
+            "Section 01": ["Scott F. Kaplan"]
+        },
+        "description": "This course will examine the principles and design choices involved in creating the software and hardware systems on which ordinary computer programs rely. It will develop advanced topics in computer processor architecture, cover the design of operating systems and runtime systems, and provide an introduction to programming language compilers. Architectural topics will include pipelines, out-of-order execution, symmetric multithreading, and multi-core cache management. Topics in operating and runtime systems will include virtual memory, file systems, linkers and loaders, virtual machines, memory allocators, and garbage collectors. Projects will involve the implementation of key concepts and structures.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2012",
+        "course_title": "Advanced Operating Systems",
+        "course_codes": "COSC-461",
+        "faculty": {
+            "Section 01": ["Scott F. Kaplan"]
+        },
+        "description": "Computer operating systems are responsible for allowing multiple users and their programs to share the hardware resources of a single machine. The policies implemented in an operating system determine its ability to provide good performance, fair sharing, isolation between programs, and predictable behavior. There are many policy choices that determine these properties, and measuring their effect requires empirical experimentation and analysis. This course will examine both basic and advanced policies that can be used to control process scheduling, memory management, disk scheduling, network bandwidth allocation, and power consumption. We will design and perform experiments to evaluate these policies, comparing them and analyzing their behavior. Experiments will involve both simulation and in-kernel implementation. Offered in alternate years.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2012",
+        "course_title": "Health Economics and Policy",
+        "course_codes": "ECON-214",
+        "faculty": {
+            "Section 01": ["Jessica Wolpaw Reyes"]
+        },
+        "description": "Health care poses many pressing questions: Why do we spend so much on health care?  Does this spending actually produce better health?  How do health care institutions function?  What is the appropriate role of government? How are we to judge the efficiency and equity of health care policy?  By applying economic analysis to health, health care, and health care markets, health economics provides insight into these questions.  In the first section of this course, we will assess the role of health care in the economy and apply economic models to the production of health and health care.  In the second section of the course, we will study the structure of health care markets and the roles of key institutions.  In the third section of the course, we will investigate the role of government and use our acquired knowledge to understand and evaluate health care policy and reform.  Throughout this analysis, we will pay careful attention to the nature of health care markets, the anatomy of market failures, and the implications for public policy.  Empirical results, current issues, and public policies will be discussed throughout the course.  In addition to technical problems and economic analyses, students will be asked to write analytical papers and participate actively in the discussion of current economic research and public policy.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2012",
+        "course_title": "Sedimentology and Stratigraphy",
+        "course_codes": "GEOL-311",
+        "faculty": {
+            "Section 01": ["David S. Jones"]
+        },
+        "description": "An overview of the dominant sedimentologic processes operating in both modern and ancient depositional environments. Students will learn how to examine and interpret features of sedimentary rocks and how to assess temporal or spatial patterns in sequences of sedimentary rocks. Students will then use these observations to expand their understanding of Earth history. Three hours of lecture and three hours of laboratory each week.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2012",
+        "course_title": "Seminar on Race and Nation in the U.S.-Mexican Borderland",
+        "course_codes": "HIST-467",
+        "faculty": {
+            "Section 01": ["Rick A. Lopez"]
+        },
+        "description": "[LA or US] The U.S.-Mexican borderland has been the site of violent conflict over race and nationality. The way race and nation have been defined, and the ways these definitions have changed over time, has been linked intimately with struggles over politics, economics, and culture in a land that is short on ecological resources, but rich in mineral wealth and ideal for commercial agriculture. Central themes include state and nation formation; nationalism; indigenous politics; Mexican-American politics; constructions of whiteness; gender; violence; industrialization; colonialism and imperialist expansion; and cultural improvisation. In addition to secondary readings, the class incorporates original documents, music, film and images. This is a history research seminar. As such, we will learn how to find and interpret original documents; how to develop original research questions that contribute to current historical debates; and how to formulate effective analytical questions and historical arguments. Students will be required to complete an independent research paper. Two meetings per week.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2012",
+        "course_title": "Microeconomics",
+        "course_codes": "ECON-300",
+        "faculty": {
+            "Section 01": ["Christopher G. Kingston"]
+        },
+        "description": "This course develops the tools of modern microeconomic theory and notes their applications to matters of utility and demand; production functions and cost; pricing of output under perfect competition, monopoly, oligopoly, etc.; pricing of productive services; intertemporal decision-making; the economics of uncertainty; efficiency, equity, general equilibrium; externalities and public goods. A student may not receive credit for both ECON 300 and ECON 301.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2012",
+        "course_title": "Game Theory and Applications",
+        "course_codes": "ECON-420",
+        "faculty": {
+            "Section 01": ["Christopher G. Kingston"]
+        },
+        "description": "Game theory analyzes situations in which multiple individuals (or firms, political parties, countries) interact in a strategic manner. It has proved useful for explaining cooperation and conflict in a wide variety of strategic situations in economics, political science, and elsewhere. Such situations can include, for example, firms interacting in imperfectly competitive markets, auctions, arms races, political competition for votes, and chess. This course will provide an introduction to the tools and insights of game theory. Though mathematically rigorous, emphasis will be on applications rather than on formal theory.",
+        "times_and_locations": ""
     }
 ]

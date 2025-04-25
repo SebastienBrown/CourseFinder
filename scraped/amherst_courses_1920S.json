@@ -20418,5 +20418,64 @@
                 ]
             }
         }
+    },
+    {
+        "semester": "Spring 2020",
+        "course_title": "The Asian American Experience",
+        "course_codes": [
+            "AMST-204",
+            "SOCI-202"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Pawan H. Dhingra"
+            ]
+        },
+        "description": "(Offered as AMST 204 and SOCI 202) How do race, immigration, and the state not only shape peoples access to resources but also delimit who belongs to the nation, self-conceptions, and personal relationships? How can ethnic minorities at times be out-whiting whites but still be denied full citizenship by the state? What does it mean to grow up within a culture but never fully identify with it? We will answer these questions and more by examining Asian Americans' efforts for belonging and social justice as full members of the United States. Substantive topics include how race, gender, sexuality, and class intersect to influence life chances; immigration laws and trends; how people form ethnic and racial identities while becoming good Americans; educational experiences of youth and so-called Tiger parents; how family and relationship formations are shaped by race and immigration; media portrayals; inter-minority solidarities and tensions. Limited to 20 students. Spring semester. Professor Dhingra.",
+        "times_and_locations": {
+            "AMST 204 - L/D": {
+                "Section 01": [
+                    {
+                        "day": "M",
+                        "time": "12:30 PM - 01:50 PM",
+                        "location": "CONV 308"
+                    },
+                    {
+                        "day": "W",
+                        "time": "12:30 PM - 01:50 PM",
+                        "location": "CONV 308"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "semester": "Spring 2020",
+        "course_title": "Archive Stories",
+        "course_codes": [
+            "AMST-218"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Wendy H. Bergoffen"
+            ]
+        },
+        "description": "This course examines archives as rich sites of meaning and memory. We will gain valuable research skills as we develop original projects, collaborate with community partners, and write archive stories. Scholarly readings will foreground the functions of archives and the labor of archivists; local and oral histories will situate specific collections in the Connecticut River Valley. A number of questions will guide our study: In what ways are archives constructed and contested spaces? How do collections shape, narrate, and silence the past? How can we think about archives in social, historical, and communal contexts? What types of stories can and do archives tell?  We will work with staff in the Amherst College Special Collections as well as visit Wistariahurst Museum, the Holyoke Public Library, and the Sexual Minorities Archives in Holyoke. Limited to 18 students. Spring semester. Lecturer Bergoffen.",
+        "times_and_locations": {
+            "AMST 218 - L/D": {
+                "Section 01": [
+                    {
+                        "day": "Tu",
+                        "time": "10:00 AM - 11:20 AM",
+                        "location": "MORG 110"
+                    },
+                    {
+                        "day": "Th",
+                        "time": "10:00 AM - 11:20 AM",
+                        "location": "MORG 110"
+                    }
+                ]
+            }
+        }
     }
 ]

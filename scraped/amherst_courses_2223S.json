@@ -21625,5 +21625,36 @@
         },
         "description": "Double course. Open to senior majors in Sexuality, Womens and Gender Studies who have received departmental approval. Spring semester. The Department. How to handle overenrollment: null Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: an emphasis on written work, readings, and independent research. They will be required to meet regularly with the professor.",
         "times_and_locations": {}
+    },
+    {
+        "semester": "Spring 2023",
+        "course_title": "Art From the Realm of Dreams",
+        "course_codes": [
+            "ARHA-146",
+            "EUST-146",
+            "SWAG-113"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Natasha Staller"
+            ]
+        },
+        "description": "(Offered as ARHA 146, EUST 146, and SWAGS 113.)  We will consider the multifarious and resplendent ways dreams have been given form across centuries, cultures, and media. Our paintings, prints, films, and texts will include those by Goya, Jung, Freud, van Gogh, Gauguin, Kahlo, Frankenheimer, Kurosawa and others. Limited to 20 students. Spring semester.  Professor Staller. How to handle overenrollment: Preference to sophomores, then juniors, then seniors, then first-years (who will have another chance to take it). Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Public presentations, and an emphasis on intense engagement with our material and collaborative learning.",
+        "times_and_locations": {
+            "ARHA 146 - LEC": {
+                "Section 01": [
+                    {
+                        "day": "Tu",
+                        "time": "11:30 AM - 12:50 PM",
+                        "location": "FAYE 217"
+                    },
+                    {
+                        "day": "Th",
+                        "time": "11:30 AM - 12:50 PM",
+                        "location": "FAYE 217"
+                    }
+                ]
+            }
+        }
     }
 ]

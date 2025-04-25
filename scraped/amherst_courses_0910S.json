@@ -12369,5 +12369,196 @@
                 "Section 05": []
             }
         }
+    },
+    {
+        "semester": "Spring 2010",
+        "course_title": "Practice of Art",
+        "course_codes": "ARHA-02",
+        "faculty": {
+            "Section 01": ["David I. Gloman"]
+        },
+        "description": "An introduction to two-dimensional and three-dimensional studio disciplines with related lectures and readings. Historical and contemporary references will be used throughout the course to enhance and increase the students understanding of the visual vocabulary of art. How the comprehension of differing visual practices directly relates to personal investigations and interpretations within the covered disciplines of drawing, sculpture, painting, photography and printmaking. This includes applying elements of composition, weight, line, value, perspective, form, spatial concerns, color theory and graphics. Work will be developed from exercises based on direct observation and memory, realism and abstraction. Formal and conceptual concerns will be an integral aspect of the development of studio work. Class time will be a balance of lectures, demonstrations, exercises, discussions and critiques. Weekly homework assignments will consist of studio work and reading assignments. Two two-hour class sessions per week.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2010",
+        "course_title": "Asian Studies Colloquium: 2010 - Imagining Boundaries",
+        "course_codes": "ASLC-31",
+        "faculty": {
+            "Section 01": ["Jerry P. Dennerline", "Monica M. Ringer"]
+        },
+        "description": "A close study of a focused topic that has broad significance in Asian Studies. Normally to be team-taught by two faculty of the department. The approach will be multidisciplinary; the goal of the course will be to explore a subject of interest in Asian Studies that also has suggestive implications for issues in the humanities and social sciences. The human mind seems infinitely creative in its effort to imagine boundaries between peoples. Human society seems just as infinitely creative in constructing barriers and breaking them down. Ancient Chinese rulers built walls to define the boundary between the states they imagined to be civilized and the nomads that threatened them. Modern European and American diplomats have drawn borders across the Middle East to distinguish what they imagine to be coherent nations in an international community of nations. Great religions and lesser sects, nomads, sojourners, and musicians have crossed these boundaries and drawn alternative ones around themselves, sometimes challenging and sometimes reinforcing political divisions already in place. Beginning with current events and reaching into the past, we will examine a variety of cases--political, religious, and cultural--in which imagining boundaries and crossing lines have enhanced or reduced major conflicts. Student input will play a major role in determining the content. Possible areas of inquiry include Iraq, Iran, Kashmir, Tibet, Islam in Southeast Asia, Buddhist international relief efforts, the Taiwan problem, and historical influences such as the Mongol expansion, religious pilgrimage, piracy, and Pan-Asianism in Japan.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2010",
+        "course_title": "Asia Pop!",
+        "course_codes": "ASLC-39",
+        "faculty": {
+            "Section 01": ["Timothy J. Van Compernolle", "Paola Zamperini"]
+        },
+        "description": "How do globalization and post-modernity alter how we must think of cultural production?  How do we grasp the seeming contradiction between the movement of people, images, and technologies without regard for national borders, on the one hand, and the increasing fragmentation of the world into enclaves of difference?  As a way to frame such issues, this course will examine popular culture in China and Japan.  Paying due attention to the local meaning of popular culture and to its export to and reception in other countries, we will study such varied forms as kung fu films, anime, television, manga, toys, music, fashion, sports, and mass-produced art, in order to grapple with topics such as the transnational flow of cultural products, the cultural coding of commodities, gender construction, the otaku phenomenon, the commodification of political icons, the impact of technology on subjectivity and the body, and millennial visions of utopia and dystopia.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2010",
+        "course_title": "The Monkey, the Outlaws, and the Stone: The Novel in Pre-modern China",
+        "course_codes": "ASLC-66",
+        "faculty": {
+            "Section 01": ["Paola Zamperini"]
+        },
+        "description": "[C] This course will be devoted to reading the English translations of the major Chinese novels, from the Ming dynastyXiyouji(Journey to the West), to theJin Ping Mei(The Plum in the Golden Vase), theShui hu zhuan(The Water Margins), to the eighteenth-century novelHongloumeng (The Dream of the Red Chamber). Due to the length of each individual text, only one major novel will be the focus of the course each time, though we will often include selections from other contemporary and related sources, when relevant to the overall understanding of the text under study. As we read through the novel selected for the semester together, uncovering its richness and complexity, we will in turn address issues such as the place of the novel in traditional Chinese literature; authorship and authority; narrative strategies and plot development; magic and religion; material culture and fashion; class and discrimination; health and disease; femininity, masculinity and their discontents. In addition to the primary source chosen for each semester, representative theoretical work in the field of pre-modern Chinese literature will be incorporated as much as possible.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2010",
+        "course_title": "Experience with Authentic Japanese Materials",
+        "course_codes": "JAPA-06",
+        "faculty": {
+            "Section 01": ["Kozue Miyama"]
+        },
+        "description": "This course is a continuation of Japanese 05. The course will provide sufficient practice of reading authentic texts and viewing films to prepare for the next level, Japanese 11, in which various genres of reading and films will be introduced. Throughout the course, the development of more fluent speech and stronger literacy will be emphasized by studying more complex and idiomatic expressions. Acquisition of an additional few hundred characters(Kanji)will be part of the course. The class will be conducted mostly in Japanese. Small groups based on the students proficiency levels will be formed, so that instruction accords with the needs of each group. Students will be required to practice with the materials that are on the course website at the college. Two group meetings and two individualized or small group evaluations per week are normally required throughout the semester.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2010",
+        "course_title": "Seminar in Disease Biology",
+        "course_codes": "BIOL-44",
+        "faculty": {
+            "Section 01": ["Michael E. Hood"]
+        },
+        "description": "The majority of organisms on earth cause disease or are parasitic, and it could be said that a thorough understanding of biology should necessarily involve the study of infectious disease. Yet only within the past two decades has there been a realization that diseases may regulate populations, stabilize ecosystems, and be responsible for major biological features such as reproductive systems or genomic structures. Disease is of course responsible for large amounts of human misery and death, and it is all the more remarkable that our understanding of disease as an ecological and evolutionary force is in its infancy. In this course we will discuss our historical and current understandings of infectious disease biology. We will include studies of human, animal, and plant diseases, as well as their impacts on wild and domestic populations. Three classroom hours per week.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2010",
+        "course_title": "Introductory Chemistry",
+        "course_codes": "CHEM-11",
+        "faculty": {
+            "Section 01": ["Sandra Burkett"],
+            "Section 02": ["Karena A. McKinney"]
+        },
+        "description": "This course examines the structure of matter from both a microscopic and macroscopic viewpoint. We begin with a detailed discussion of the physical structure of atoms, followed by an analysis of how the interactions between atoms lead to the formation of molecules. The relationship between the structures of molecular compounds and their properties is then described. Experiments in the laboratory provide experience in conducting quantitative chemical measurements and illustrate principles discussed in the lectures.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2010",
+        "course_title": "Demystifying the Internet",
+        "course_codes": "COSC-05",
+        "faculty": {
+            "Section 01": ["Catherine C. McGeoch"]
+        },
+        "description": "This course provides an introductory survey of topics in computer science that are related to the Internet. Students will become familiar with the history and underlying structure of the Internet and with technologies such as email, web browsers, search engines, and web page design tools. We will learn about the science behind the technology: topics to be addressed include network design and network protocols, modern encryption methods, and applications of algorithmics and artificial intelligence to the design of search engines. Some time will also be spent considering social issues such as privacy, worms and viruses, spam, cookies, and encryption policy. Three class meetings per week, with occasional in-class lab sessions. This course does not provide prerequisite credit for any computer science course, nor does it count towards the computer science major. No previous experience with computers is required.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2010",
+        "course_title": "Introduction to Computer Science I",
+        "course_codes": "COSC-11",
+        "faculty": {
+            "Section 01": ["Scott F. Kaplan"]
+        },
+        "description": "This course introduces ideas and techniques that are fundamental to computer science. The course emphasizes procedural abstraction, algorithmic methods, and structured design techniques. Students will gain a working knowledge of a block-structured programming language and will use the language to solve a variety of problems illustrating ideas in computer science. A selection of other elementary topics will be presented, for example: the historical development of computers, comparison and evaluation of programming languages, and artificial intelligence. A laboratory section will meet once a week to give students practice with programming constructs. Two class hours and one one-hour laboratory per week.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2010",
+        "course_title": "Introduction to Computer Science II",
+        "course_codes": "COSC-12",
+        "faculty": {
+            "Section 01": ["John E. Rager"]
+        },
+        "description": "A continuation of Computer Science 11. This course will emphasize more complicated problems and their algorithmic solutions. The object-oriented programming paradigm will be discussed in detail, including data abstraction, inheritance and polymorphism. Other topics will include linked lists and trees and the use of finite-state machines in algorithm design. A laboratory section will meet once a week to give students practice with programming constructs. Two class hours and one one-hour laboratory per week.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2010",
+        "course_title": "Computer Systems II",
+        "course_codes": "COSC-26",
+        "faculty": {
+            "Section 01": ["Scott F. Kaplan"]
+        },
+        "description": "This course will examine the principles and design choices involved in creating the software and hardware systems on which ordinary computer programs rely. It will develop advanced topics in computer processor architecture, cover the design of operating systems and runtime systems, and provide an introduction to programming language compilers. Architectural topics will include pipelines, out-of-order execution, symmetric multithreading, and multi-core cache management. Topics in operating and runtime systems will include virtual memory, file systems, linkers and loaders, virtual machines, memory allocators, and garbage collectors. Projects will involve the implementation of key concepts and structures.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2010",
+        "course_title": "Health Economics and Policy",
+        "course_codes": "ECON-40",
+        "faculty": {
+            "Section 01": ["Jessica Wolpaw Reyes"]
+        },
+        "description": "Health care poses many pressing public policy issues: Why do we spend so much on health care? Does it actually produce significantly better health? What is the appropriate role of government? Should the U.S. have a system of national health insurance? This course provides insight into these questions. We will start by assessing the important role of health care in the national economy (health care costs exceed 15% of the Gross Domestic Product of the United States) and by applying economic models to the production of health and health care. We will then study the structure of the health care market and the role of key institutions. Next, we will devote substantial time to the role of government, placing emphasis on the status of the uninsured population and on public provision of care to the disadvantaged. Finally, we will use this acquired knowledge to consider possibilities for national health care reform and to discuss the relative merits of current state reform efforts. Throughout this analysis, we will pay particular attention to the nature of health care markets, the anatomy of market failures, and the implications for current policy. Empirical results, current issues, and public policy will be discussed throughout the course.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2010",
+        "course_title": "Evaluating Social Policy",
+        "course_codes": "ECON-64",
+        "faculty": {
+            "Section 01": ["Jessica Wolpaw Reyes"]
+        },
+        "description": "This seminar in social policy examines a number of social programs in the United States, including Medicaid, the Earned Income Tax Credit, and Temporary Aid to Needy Families. The course will introduce you to the operation of these programs and will illustrate how economic and econometric tools can be used to evaluate them. A significant portion of the course will be devoted to careful reading and discussion of empirical research papers, including discussion of the relative merits of various empirical and econometric techniques. Students will be asked to participate actively in class discussion, to make oral presentations, to evaluate empirical data, and to write one of more papers on specific social programs. Throughout the course, we will also think broadly about the goals of social policy and the practical challenges policymakers face in designing effective policies.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2010",
+        "course_title": "Language and Literature",
+        "course_codes": "FREN-05",
+        "faculty": {
+            "Section 01": ["Leah D. Hewitt"]
+        },
+        "description": "An introduction to the critical reading of French literary and non-literary texts; a review of French grammar; training in composition, conversation and listening comprehension. Texts will be drawn from significant short stories, poetry and films. The survey of different literary genres serves also to contrast several views of French culture. Supplementary work with audio and video materials. Successful completion of French 05 prepares students for French 07, 08, 11 or 12. Conducted in French. Three hours a week.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2010",
+        "course_title": "War and Memory",
+        "course_codes": "FREN-54",
+        "faculty": {
+            "Section 01": ["Leah D. Hewitt"]
+        },
+        "description": "Through readings of short fiction, historical essays, drama and films, we study how the French have tried to come to terms with their role in World War II, both as individuals and as a nation. We will explore the various myths and deconstructions concerning French heroism and guilt, with particular attention paid to the way wartime memories have become a lightning rod for debate and discord in contemporary French culture and politics. No prior knowledge of the historical period of the war is necessary, but students of French history are welcome. Conducted in French.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2010",
+        "course_title": "Elementary Spanish",
+        "course_codes": "SPAN-01",
+        "faculty": {
+            "Section 01": ["Glenda Y. Nieto Cuebas"]
+        },
+        "description": "Grammar, pronunciation, oral practice, and reading. Major emphasis on speaking and on aural comprehension. Three hours a week in class, plus two hours with a teaching assistant and regular work in the language laboratory.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2010",
+        "course_title": "Advanced Spanish",
+        "course_codes": "SPAN-05",
+        "faculty": {
+            "Section 01": ["Victoria Maillo"]
+        },
+        "description": "While expanding on the grammar essentials covered in Spanish 3, this course helps the student further develop listening, speaking, reading, and writing skills in Spanish.  It is directed toward students who already have a good linguistic-communicative competency, broadening their contact with different kinds of texts, deepening their grammatical understanding, and enabling them to communicate through a variety of forms and registers.  Upon completing the course, students should be able to make themselves understood with accuracy and fluency and participate easily in a wide range of formal and informal communicative situations.  An array of literary texts and readings, not ordinarily considered literature and films, will be used.  Three hours a week in class plus one hour with a language assistant.  Conducted entirely in Spanish.  Prepares students for Spanish 7 and literature courses. This course counts for the major.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2010",
+        "course_title": "Spanish Conversation",
+        "course_codes": "SPAN-06",
+        "faculty": {
+            "Section 01": ["Patricia Ferrer-Medina"]
+        },
+        "description": "This course emphasizes fluency speaking and is designed to provide students the opportunity to practice the language through discussion of selected texts and topics of interest.  Spanish 6 prepares students to express opinions, ideas, points of view and critiques on debates, readings and films.  With this goal in mind, this course will also provide exposure to other language skills important to the development of fluency in speaking Spanish. The course will meet for three hours per week with the instructor and one hour with a teaching assistant. This course counts for the major.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2010",
+        "course_title": "Spanish for Heritage Speakers",
+        "course_codes": "SPAN-09",
+        "faculty": {
+            "Section 01": ["Glenda Y. Nieto Cuebas"]
+        },
+        "description": "This course is designed specifically for native or heritage speakers of Spanish with oral proficiency but little or no formal training in the language. Generally, these are learners who were raised in homes where Spanish was spoken. The course is designed to build on the language base students already possess. Spanish-speaking students are not viewed as using an improper form of Spanish that is incorrect or needs to be eliminated. Rather, their language is viewed as an extremely valid means of oral communication. The primary purpose of this course is to develop reading and writing skills, although all of four language skills (listening, speaking, reading, and writing) are emphasized via cultural and community activities.",
+        "times_and_locations": ""
     }
 ]

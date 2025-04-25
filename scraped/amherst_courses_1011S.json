@@ -14841,5 +14841,128 @@
                 ]
             }
         }
+    },
+    {
+        "semester": "Spring 2011",
+        "course_title": "Philosophy of Mathematics",
+        "course_codes": [
+            "PHIL-50"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Alexander George",
+                "Daniel J. Velleman"
+            ]
+        },
+        "description": "Mathematics is often thought to be the paragon of clarity and certainty. However, vexing problems arise almost immediately upon asking such seemingly straightforward questions as: What is the number 1? Why can proofs be trusted? What is infinity? What is mathematics about? During the first decades of the twentieth century, philosophers and mathematicians mounted a sustained effort to clarify the nature of mathematics. The result was three original and finely articulated programs that seek to view mathematics in the proper light: logicism, intuitionism, and finitism. The mathematical and philosophical work in these areas complement one another and indeed are, to an important extent, intertwined. For this reason, our exploration of these philosophies of mathematics will examine both the philosophical vision that animated them and the mathematical work that gave them content. In discussing logicism, we will focus primarily on the writings of Gottlob Frege. Some indication of how the goal of logicism--the reduction of mathematics to logic--was imagined to be achievable will also be given: introduction to the concepts and axioms of set theory, the set-theoretic definition of natural number, the Peano axioms and their derivation in set theory, reduction of the concepts of analysis to those in set theory, etc. Some of the set-theoretic paradoxes will be discussed as well as philosophical and mathematical responses to them. In the section on intuitionism, we will read papers by L.E.J. Brouwer and Michael Dummett, who argue that doing mathematics is more an act of creation than of discovery. This will proceed in tandem with an introduction to intuitionistic logic, which stands in contrast to the more commonly used classical logic. Finally, we will discuss finitism, as articulated in the writings of David Hilbert, who sought to reconcile logicism and intuitionism. Students will then be taken carefully through Godels Incompleteness Theorems and their proofs. The course will conclude with an examination of the impact of Godels work on Hilberts attempted reconciliation, as well as on more general philosophical questions about mathematics and mind. Requisite: Philosophy 13 or Mathematics 34 or consent of the instructors. Spring semester. Professors A. George and Velleman.",
+        "times_and_locations": {
+            "PHIL 50 - L/D": {
+                "Section 01": [
+                    {
+                        "day": "Tu",
+                        "time": "10:00 AM - 11:20 AM",
+                        "location": "SMUD 207"
+                    },
+                    {
+                        "day": "Th",
+                        "time": "10:00 AM - 11:20 AM",
+                        "location": "SMUD 207"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "semester": "Spring 2011",
+        "course_title": "Intermediate Laboratory",
+        "course_codes": [
+            "PHYS-26"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Jonathan R. Friedman"
+            ]
+        },
+        "description": "A variety of classic and topical experiments will be performed. In the area of fundamental constants, we will undertake a measurement of the speed of light, a determination of the ratio of Plancks constant to the charge of the electron through the study of the photoelectric effect, and an experiment to obtain the charge-to-mass ratio of the electron. We will study the wave nature of the electron through a diffraction experiment. An experiment to measure optical spectra and another on gamma ray spectra will reveal the power of spectroscopy for exploring the structure of matter. Other experiments such as nuclear magnetic resonance, quantized conductance in nanocontacts, and properties of superconductors will give students an opportunity to experience laboratory practice in its contemporary form. Emphasis will be placed on careful experimental work and data-analysis techniques. One meeting a week of discussion plus additional, weekly self-scheduled laboratory work. Requisite: Physics 25 or consent of the instructor. Spring semester. Professor Friedman.",
+        "times_and_locations": {
+            "PHYS 26 - L/D": {
+                "Section 01": [
+                    {
+                        "day": "Tu",
+                        "time": "02:00 PM - 06:00 PM",
+                        "location": "MERR 211"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "semester": "Spring 2011",
+        "course_title": "The Politics of Moral Reasoning",
+        "course_codes": [
+            "POSC-59"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Thomas L. Dumm"
+            ]
+        },
+        "description": "[GP, PT] This course is an exploration of the connections between the experience of ordinary life and the judgments humans and citizens make concerning good and bad, and competing goods. We will use as the core text Stanley Cavells Cities of Words , which organizes themes concerning moral reasoning around a series of thinkers--Emerson, Aristotle, Plato, Rawls, Nietzsche, Locke, Mill and others--and couples each thinker with a movie from the classic age of American cinema. While we will be relying on Cavells study as a primary source, students will also be reading essays by the thinkers Cavell identifies. Each week we will discuss the reading in the first class exclusively, and then screen the film prior to the second class meeting, when we will broaden the discussion. Not open to first-year students. Spring semester. Professor Dumm.",
+        "times_and_locations": {
+            "POSC 59 - L/D": {
+                "Section 01": [
+                    {
+                        "day": "Tu",
+                        "time": "02:00 PM - 03:20 PM",
+                        "location": "FAYE 117"
+                    },
+                    {
+                        "day": "Th",
+                        "time": "02:00 PM - 03:20 PM",
+                        "location": "FAYE 117"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "semester": "Spring 2011",
+        "course_title": "Microeconomics",
+        "course_codes": "ECON-54",
+        "faculty": {
+            "Section 01": ["Christopher G. Kingston"]
+        },
+        "description": "This course develops the tools of modern microeconomic theory and notes their applications to matters of utility and demand; production functions and cost; pricing of output under perfect competition, monopoly, oligopoly, etc.; pricing of productive services; intertemporal decision-making; the economics of uncertainty; efficiency, equity, general equilibrium; externalities and public goods. A student may not receive credit for both Economics 54 and Economics 58.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2011",
+        "course_title": "New Institutional Economics",
+        "course_codes": "ECON-79",
+        "faculty": {
+            "Section 01": ["Christopher G. Kingston"]
+        },
+        "description": "All economic activity is embedded in a framework of institutions including both formal laws and contracts, and informal norms and conventions. Institutions constrain individual behavior and thereby affect resource allocation, income distribution, learning, and economic growth. This course introduces recent approaches to the study of institutions in economics and political science. Particular emphasis will be placed on recent applications to economic history and development, and to theories of institutional stability and change.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2011",
+        "course_title": "The Maxwellian Synthesis: Dynamics of Charges and Fields, Optics",
+        "course_codes": "PHYS-24",
+        "faculty": {
+            "Section 01": ["David S. Hall"]
+        },
+        "description": "In the mid-nineteenth century, completing nearly a century of work by others, Maxwell developed an elegant set of equations describing the dynamical behavior of electromagnetic fields. A remarkable consequence of Maxwells equations is that the wave theory of light is subsumed under electrodynamics. Moreover, we know from subsequent developments that the electromagnetic interaction largely determines the structure and properties of ordinary matter. The course will begin with Coulombs Law but will quickly introduce the concept of the electric field. Moving charges and their connection with the magnetic field will be explored. Currents and electrical circuits will be studied. Faradays introduction of the dynamics of the magnetic field and Maxwells generalization of it will be discussed. Laboratory exercises will concentrate on circuits, electronic measuring instruments, and optics. Four hours of lecture and discussion and one three-hour laboratory per week.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Spring 2011",
+        "course_title": "Spanish Conversation",
+        "course_codes": "SPAN-06",
+        "faculty": {
+            "Section 01": ["Victoria Maillo"]
+        },
+        "description": "This course emphasizes fluency speaking and is designed to provide students the opportunity to practice the language through discussion of selected texts and topics of interest.  Spanish 06 prepares students to express opinions, ideas, points of view and critiques on debates, readings and films.  With this goal in mind, this course will also provide exposure to other language skills important to the development of fluency in speaking Spanish. The course will meet for three hours per week with the instructor and one hour with a teaching assistant. This course counts for the major.",
+        "times_and_locations": ""
     }
 ]

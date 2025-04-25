@@ -18337,5 +18337,29 @@
                 ]
             }
         }
+    },
+    {
+        "semester": "Spring 2018",
+        "course_title": "America's Death Penalty",
+        "course_codes": [
+            "COLQ-234"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Austin D. Sarat"
+            ]
+        },
+        "description": "The United States, almost alone among constitutional democracies, retains death as a criminal punishment.  It does so in the face of growing international pressure for abolition and of evidence that the system for deciding who lives and who dies is fraught with error.  This seminar is designed to expose students to America's death penalty as a researchable subject.  It will be organized to help students understand how research is framed in this area, analyze theories and approaches of death penalty researchers, and identify open questions and most promising lines of future research.  It will focus on the following dimensions of America's death penalty:  its history, current status, public support/opposition, the processing of capital cases in the criminal justice system, race and capital punishment, and its impact and efficacy.  During the seminar, each student will develop a prospectus for a research project on America's death penalty. This course is part of a new model of tutorials at Amherst designed to enable students to engage in substantive research with faculty. Part of the Global Classroom Project. The Global Classroom Project uses videoconferencing technology to connect Amherst classes with courses/students outside the United States. Open to sophomores and juniors interested in research.  Limited to 6 students.  Spring semester.  Professor Sarat. If Overenrolled: determined by professor Cost: $1.00 ?",
+        "times_and_locations": {
+            "COLQ 234 - L/D": {
+                "Section 01": [
+                    {
+                        "day": "M",
+                        "time": "02:00 PM - 04:30 PM",
+                        "location": "CONV 308"
+                    }
+                ]
+            }
+        }
     }
 ]
