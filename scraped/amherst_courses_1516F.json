@@ -16698,5 +16698,40 @@
                 ]
             }
         }
+    },
+    {
+        "semester": "Fall 2015",
+        "course_title": "Women of Ill Repute",
+        "course_codes": [
+            "FREN-342",
+            "SWAG-342"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Laure A. Katsaros"
+            ]
+        },
+        "description": "(Offered as FREN 342 and SWAG 342) Prostitutes play a central role in nineteenth-century French fiction, especially of the realistic and naturalistic kind. Both widely available and largely visible in nineteenth-century France, prostitutes inspired many negative stereotypes. But, as the very product of the culture that marginalized her, the prostitute offered an ideal vehicle for writers to criticize the hypocrisy of bourgeois mores. The socially stratified world of prostitutes, ranging from low-ranking sex workers to high-class courtesans, presents a fascinating microcosm of French society as a whole. We will read selections from Honore de Balzac, Splendeur et misere des courtisanes ; Victor Hugo, Les Miserables ; and Gustave Flaubert, Leducation sentimentale ; as well as Boule-de-Suif and other stories by Guy de Maupassant; La fille Elisa by Edmond de Goncourt; Nana by Emile Zola; Marthe by Joris-Karl Huysmans; La dame aux camelias by Alexandre Dumas fils; and extracts from Du cote de chez Swann by Marcel Proust. Additional readings will be drawn from the fields of history (Alain Corbin, Michelle Perrot) and critical theory (Walter Benjamin, Michel Foucault, Julia Kristeva). We will also discuss visual representations of prostitutes in nineteenth-century French art (Gavarni, Daumier, C. Guys, Degas, Manet, Toulouse-Lautrec). Conducted in French. Requisite: One of the following--FREN 207, 208, 311 or equivalent. Fall semester. Professor Katsaros.",
+        "times_and_locations": {
+            "SWAG 342 - L/D": {
+                "Section 01": [
+                    {
+                        "day": "M",
+                        "time": "10:00 AM - 10:50 AM",
+                        "location": "BARR 102"
+                    },
+                    {
+                        "day": "W",
+                        "time": "10:00 AM - 10:50 AM",
+                        "location": "BARR 102"
+                    },
+                    {
+                        "day": "F",
+                        "time": "10:00 AM - 10:50 AM",
+                        "location": "BARR 102"
+                    }
+                ]
+            }
+        }
     }
 ]

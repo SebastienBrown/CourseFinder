@@ -15817,5 +15817,40 @@
                 ]
             }
         }
+    },
+    {
+        "semester": "Fall 2014",
+        "course_title": "Performance Studio",
+        "course_codes": [
+            "FAMS-345",
+            "THDA-353"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Wendy Woodson"
+            ]
+        },
+        "description": "(Offered as THDA 353 and FAMS 345.)  An advanced course in the techniques of creating performance. Each student will create and rehearse a performance piece that develops and incorporates original choreography, text, music, sound and/or video. Experimental and collaborative structures and approaches among and within different media will be stressed. The final performance pieces and events will be presented in the Holden Theater. Can be taken more than once for credit. Requisite: THDA 252 or the equivalent and consent of the instructor. Fall semester. Professor Woodson.",
+        "times_and_locations": {
+            "THDA 353 - L/D": {
+                "Section 01": [
+                    {
+                        "day": "F",
+                        "time": "01:00 PM - 04:00 PM",
+                        "location": "WEBS 117"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "semester": "Fall 2014",
+        "course_title": "Computer Systems I",
+        "course_codes": "COSC-161",
+        "faculty": {
+            "Section 01": ["Scott F. Kaplan"]
+        },
+        "description": "This course will provide an introduction to computer systems, stressing how computers work. Beginning with Boolean logic and the design of combinational and sequential circuits, the course will discuss the design of computer hardware components, microprocessing and the interpretation of machine instructions, assembly languages, and basic machine architecture. The course will also introduce operating systems topics, basic memory management, and topics in network communication. Projects will include the design of digital circuits and the simulation of operating system and network processes.",
+        "times_and_locations": ""
     }
 ]

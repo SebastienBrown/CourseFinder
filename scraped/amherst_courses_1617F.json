@@ -18264,5 +18264,15 @@
                 ]
             }
         }
+    },
+    {
+        "semester": "Fall 2016",
+        "course_title": "Shakespeare",
+        "course_codes": "ENGL-338",
+        "faculty": {
+            "Section 01": ["Peter Berek"]
+        },
+        "description": "[before 1800]  Readings in the comedies, histories, and tragedies, with attention to their poetic language, dramatic structure, and power in performance.  Texts and topics will vary by instructor.  This course will be offered only in the fall semester in 2016-17.",
+        "times_and_locations": ""
     }
 ]

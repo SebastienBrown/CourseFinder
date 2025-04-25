@@ -6727,7 +6727,7 @@
     },
     {
         "semester": "Fall 2010",
-        "course_title": "Human Health:&nbsp; Rights and Wrongs",
+        "course_title": "Human Health: Rights and Wrongs",
         "course_codes": [],
         "faculty": {
             "Section 01": [
@@ -13342,5 +13342,211 @@
                 ]
             }
         }
+    },
+    {
+        "semester": "Fall 2010",
+        "course_title": "Medieval Europe: From Charlemagne to Columbus",
+        "course_codes": [
+            "HIST-13"
+        ],
+        "faculty": {
+            "Section 01": [
+                "C. Teresa Shawcross"
+            ]
+        },
+        "description": "[EU P ] The period from the rise of the Holy Roman Empire to the discovery of the New World has been rightly described as the \"making of Europe.\" This course explores aspects of medieval institutions, society and culture from the Mediterranean to Scandinavia and beyond, looking at royal and aristocratic authority, the power of the papacy, and the emergence of urban classes. Attention will be drawn to agrarian and commercial revolutions, to technological advances and revivals of intellectual activity, letters and the arts, but also to warfare and religious conflict. We will discover how people lived, how they viewed themselves, and how their perceptions of the world changed.  Two class meetings per week. Limited to 30 students.  Fall semester. Professor Shawcross.",
+        "times_and_locations": {
+            "HIST 13 - L/D": {
+                "Section 01": [
+                    {
+                        "day": "Tu",
+                        "time": "10:00 AM - 11:20 AM",
+                        "location": "SMUD 207"
+                    },
+                    {
+                        "day": "Th",
+                        "time": "10:00 AM - 11:20 AM",
+                        "location": "SMUD 207"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "semester": "Fall 2010",
+        "course_title": "Global Environmental History of the Twentieth Century",
+        "course_codes": [
+            "HIST-27"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Edward D. Melillo"
+            ]
+        },
+        "description": "[ C ] This course examines the environmental history of the world since 1900 with a particular focus on Latin America, Sub-Saharan Africa, and China. We will use books, articles, four films, and a range of online media to illuminate the comparative and interdisciplinary possibilities of global environmental history. In addition to studying the past, we will explore how to use historical knowledge in the formulation of policy recommendations and grassroots initiatives for addressing contemporary environmental issues.  Two class meetings per week. Fall semester. Professor Melillo.",
+        "times_and_locations": {
+            "HIST 27 - L/D": {
+                "Section 01": [
+                    {
+                        "day": "Tu",
+                        "time": "10:00 AM - 11:20 AM",
+                        "location": "MEAD 115"
+                    },
+                    {
+                        "day": "Th",
+                        "time": "10:00 AM - 11:20 AM",
+                        "location": "MEAD 115"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "semester": "Fall 2010",
+        "course_title": "Popular Revolution in Modern Mexico",
+        "course_codes": [
+            "HIST-53"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Rick A. Lopez"
+            ]
+        },
+        "description": "[LA] In September 2010 Mexicans will commemorate the centennial of their popular revolution of 1910-1920, and in October they will celebrate the bicentennial of Miguel Hidalgos famous 1810 Grito de Dolores that launched a decade of bloody wars for liberal government and independence from Spain. In this year of weighty commemorations, we will take stock of 200 years of struggle among Mexicos popular classes. Few countries are as well known, yet so poorly understood, as is Mexico among North Americans. Headlines about illegal immigration, street violence, and drug smuggling often take the place of real understanding. As a result, few North Americans appreciate their neighbors historical odyssey in search of political stability, national unity, democracy and economic prosperity. This course provides a general overview of the dominant narratives of Mexican history, while challenging those narratives through an examination of the experience of subaltern groups (including women, indigenous peoples, peasants, and those from the periphery). We also will grapple with the question of what genuine social revolution looks like, how it unfolds, and to what degree it has been attained in Mexico. Original documents, testimonials, movies, images, music, and art will supplement discussions and secondary readings. Two class meetings per week. Fall semester.  Professor Lopez.",
+        "times_and_locations": {
+            "HIST 53 - L/D": {
+                "Section 01": [
+                    {
+                        "day": "M",
+                        "time": "12:30 PM - 01:50 PM",
+                        "location": "WEBS 217"
+                    },
+                    {
+                        "day": "W",
+                        "time": "12:30 PM - 01:50 PM",
+                        "location": "WEBS 217"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "semester": "Fall 2010",
+        "course_title": "Proseminar in History: Writing the Past",
+        "course_codes": [
+            "HIST-99"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Francis G. Couvares"
+            ]
+        },
+        "description": "This course offers an opportunity for history majors to reflect upon the practice of history. How do we claim to know anything about the past at all? How do historians construct the stories they tell about the past from the fragmentary remnants of former times? What is the connection of historians work to public memory? How do we judge the truth and value of these stories and memories? The course explores questions such as these through readings and case studies drawn from a variety of places and times. Two class meetings a week. Required of all history majors. Not open to first-year students.  Fall semester: Professor Couvares. Spring semester: Professor Maxey.",
+        "times_and_locations": {
+            "HIST 99 - L/D": {
+                "Section 01": [
+                    {
+                        "day": "Tu",
+                        "time": "08:30 AM - 09:50 AM",
+                        "location": "CHAP 101"
+                    },
+                    {
+                        "day": "Th",
+                        "time": "08:30 AM - 09:50 AM",
+                        "location": "CHAP 101"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "semester": "Fall 2010",
+        "course_title": "Computer Systems I",
+        "course_codes": "COSC-16",
+        "faculty": {
+            "Section 01": ["Scott F. Kaplan"]
+        },
+        "description": "This course will provide an introduction to computer systems, stressing how computers work. Beginning with Boolean logic and the design of combinational and sequential circuits, the course will discuss the design of computer hardware components, microprocessing and the interpretation of machine instructions, assembly languages, and basic machine architecture. The course will also introduce operating systems topics, basic memory management, and topics in network communication. Projects will include the design of digital circuits and the simulation of operating system and network processes.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Fall 2010",
+        "course_title": "Cultural History of France: From the Middle Ages to the Revolution",
+        "course_codes": "FREN-11",
+        "faculty": {
+            "Section 01": ["Jay L. Caplan"]
+        },
+        "description": "A survey of French civilization: literature, history, art and society. We will discuss Romanesque and Gothic art, the role of women in medieval society, witchcraft and the Church, Reformation and Counter-Reformation, the centralization of power and the emergence of absolute monarchy. Slides and films will complement lectures, reading and discussion of monuments, events and social structures. Conducted in French.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Fall 2010",
+        "course_title": "Environmental Science: Global Warming and Energy Resources",
+        "course_codes": "GEOL-09",
+        "faculty": {
+            "Section 01": ["Anna M. Martini"]
+        },
+        "description": "From the earliest civilizations man has been a major agent of environmental change. However, from the dawn of the industrial age, when fossil fuels were first tapped for energy, the rate of this change has increased exponentially. In this course, we will dissect environmental issues by first examining the recent geologic record of climate change and how processes that affect climate change operate in modern natural systems. We will then assess how societies have modified such systems and what factors control the trajectory and rate of change. Several environmental case studies will be used to provide insight into the scientific issues associated with specific environmental problems. Case studies will focus on nonrenewable and renewable energy resources and their relationship to climate change.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Fall 2010",
+        "course_title": "Geomorphology and Landscape Evolution",
+        "course_codes": "GEOL-25",
+        "faculty": {
+            "Section 01": ["William B. Ouimet"]
+        },
+        "description": "Geomorphology is the quantitative analysis of earth-surface processes and interpretation of landforms and landscapes throughout the world. This course focuses on the landforms and landform evolution associated with fluvial and glacial landscapes and hillslope processes such as mass movements that affect the dynamics of drainage basins.The course also examines the long-term evolution of landscapes through complex feedback between tectonics, climate, and erosion. The goal of this course will be to learn to read landscapes to make these large-scale connections. The lab will introduce surveying and GPS field instruments, satellite images and Geographical Information Systems (GIS). Three hours of lecture and 3 hours of lab, including field trips each week.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Fall 2010",
+        "course_title": "Hydrogeology",
+        "course_codes": "GEOL-28",
+        "faculty": {
+            "Section 01": ["Anna M. Martini"]
+        },
+        "description": "As the global human population expands, the search for and preservation of our most important resource, water, will demand societal vigilance and greater scientific understanding. This course is an introduction to surface and groundwater hydrology and geochemistry in natural systems, providing fundamental concepts aimed at the understanding and management of the hydrosphere. The course is divided into two roughly equal parts: surface and groundwater hydrology, and aqueous geochemistry. In the first section, we will cover the principal concepts of physical hydrogeology including watershed analysis and groundwater modeling. In the second half, we will integrate the geochemistry of these systems addressing both natural variations and the human impact on our environment. Three hours of lecture and three hours of lab or field trip each week.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Fall 2010",
+        "course_title": "Structural Geology",
+        "course_codes": "GEOL-29",
+        "faculty": {
+            "Section 01": ["Tekla A. Harms"]
+        },
+        "description": "A study of the geometry and origin of sedimentary, metamorphic and igneous rock structures that are the products of earth deformation. Emphasis will be placed on recognition and interpretation of structures through development of field and laboratory methodology. Three hours of lecture and five hours of laboratory each week.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Fall 2010",
+        "course_title": "Mineralogy",
+        "course_codes": "GEOL-30",
+        "faculty": {
+            "Section 01": ["Peter D. Crowley"]
+        },
+        "description": "The crystallography and crystal chemistry of naturally occurring inorganic compounds (minerals). The identification, origin, distribution and use of minerals. Laboratory work includes the principles and methods of optical mineralogy, X-ray diffraction, back-scattered electron microscopy, and electron beam microanalysis. Four hours of lecture and two hours of directed laboratory.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Fall 2010",
+        "course_title": "Plate Tectonics and Continental Dynamics",
+        "course_codes": "GEOL-40",
+        "faculty": {
+            "Section 01": ["Tekla A. Harms"]
+        },
+        "description": "An analysis of the dynamic processes that drive the physical evolution of the earths crust and mantle. Plate tectonics, the changing configuration of the continents and oceans, and the origin and evolution of mountain belts will be studied using evidence from diverse branches of geology. Present dynamics are examined as a means to interpret the record of the past, and the rock record is examined as a key to understanding the potential range of present and future earth dynamics. Three hours of class and three hours of laboratory each week.",
+        "times_and_locations": ""
+    },
+    {
+        "semester": "Fall 2010",
+        "course_title": "Spanish for Heritage Speakers",
+        "course_codes": "SPAN-09",
+        "faculty": {
+            "Section 01": ["Glenda Y. Nieto Cuebas"]
+        },
+        "description": "This course is designed specifically for native or heritage speakers of Spanish with oral proficiency but little or no formal training in the language. Generally, these are learners who were raised in homes where Spanish was spoken. The course is designed to build on the language base students already possess. Spanish-speaking students are not viewed as using an improper form of Spanish that is incorrect or needs to be eliminated. Rather, their language is viewed as an extremely valid means of oral communication. The primary purpose of this course is to develop reading and writing skills, although all of four language skills (listening, speaking, reading, and writing) are emphasized via cultural and community activities.",
+        "times_and_locations": ""
     }
 ]
