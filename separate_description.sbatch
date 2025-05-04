@@ -9,10 +9,10 @@
 
 #SBATCH --mail-type=all                         # send email on job start, end and fault
 #SBATCH --mail-user=hnakazawa@povertyactionlab.org
-#SBATCH --output=CourseFinder/logs/failed_links_%A.txt
+#SBATCH --output=CourseFinder/logs/separate_description_%A.txt
 
 source /orcd/software/core/001/centos7/pkg/miniforge/24.3.0-0/etc/profile.d/conda.sh
 conda activate migrantjobs
 
 echo "Scraping Amherst courses for failed links..."
-python "CourseFinder/failed_links.py"
+python "CourseFinder/separate_description.py"
