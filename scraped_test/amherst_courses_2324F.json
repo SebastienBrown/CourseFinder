@@ -1,0 +1,266 @@
+[
+    {
+        "semester": "Fall 2023",
+        "course_title": "Global Valley",
+        "course_codes": [
+            "AMST-111"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Lisa Brooks"
+            ],
+            "Section 02": [
+                "Karen J. Sanchez-Eppler"
+            ]
+        },
+        "description": "[Pre-1900] Drawing on a wide range of primary materials, and taking advantage of the ease of visiting the sites of many of the topics we study, this course offers an introduction to American Studies through an exploration of the Connecticut River Valley that stresses both the fascination of detailed local history and the economic, political, social, and cultural networks that tie this place to the world. Topics may include conflicts and accommodations between Native peoples and English settlers; changing uses of land and resources; seventeenth-century witchcraft trials; the American Revolution and Shays rebellion; religious revivalism of the Great Awakening; abolitionist and other nineteenth-century reform movements; tourism and the scenic including Thomas Cole's famous painting of the oxbow; immigration, industrialization and deindustrialization, especially in the cities of Holyoke and Springfield; educational institutions and innovations; the Cold War, the reach of the \"military industrial complex\" into local educational institutions, and \"the bunker\"; the sanctuary movement; feminist and gay activism; present environmental, mass incarceration, and other social equity issues; and of course, Emily Dickinson's poetry. Limited to 20 students per section. 8 seats per section reserved for first-year students. Fall semester. Professors Brooks and Sanchez-Eppler. How to handle overenrollment: Preference given to majors, and first and second year students as this is an introductory course. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Emphasis on discussion, reading, written work, field trips, critical analysis, independent research, and exposure to a wide range of American Studies interpretive methods including interpreting landscapes, material culture objects, poems, novels, deeds, maps, archival manuscripts, photographs, and paintings.  This course aims to foster critical engagement with the history of colonialism and of diverse forms of inequality in the Connecticut River valley.",
+        "times_and_locations": {
+            "AMST 111 - LEC": {
+                "Section 01": [
+                    {
+                        "day": "Tu",
+                        "time": "10:00 AM - 11:20 AM",
+                        "location": "WEBS 220"
+                    },
+                    {
+                        "day": "Th",
+                        "time": "10:00 AM - 11:20 AM",
+                        "location": "WEBS 220"
+                    }
+                ],
+                "Section 02": [
+                    {
+                        "day": "Tu",
+                        "time": "10:00 AM - 11:20 AM",
+                        "location": "WEBS 215"
+                    },
+                    {
+                        "day": "Th",
+                        "time": "10:00 AM - 11:20 AM",
+                        "location": "WEBS 215"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "semester": "Fall 2023",
+        "course_title": "Transnational American Studies",
+        "course_codes": [
+            "AMST-130",
+            "BLST-130"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Jallicia A. Jolly"
+            ]
+        },
+        "description": "(Offered as AMST 130 and BLST 130[D]) The hustle and flow of bodies, ideas, inequalities and solidarities is core to our increasingly globalized world. This course offers an introduction to the Americas as a transnational space. We will explore the interplay of race, gender, ethnicity, sexuality, and nationality from interdisciplinary perspectives. We will draw examples from the United States, Canada, the Caribbean, and Latin America. Students will learn through a variety of methods including textual analysis, feminist ethnography, archival research, and cultural studies. We will also examine multiple approaches to American Studies such as critical race and ethnic studies, feminist and queer studies, indigenous studies, as well as theories of decolonization and settler colonialism. We will grapple with the complexities of identity and difference, immigration and border control, slavery, colonization, and empire. Limited to 20 students. Fall semester. Assistant Professor Jolly. How to handle overenrollment: Preference will be given to first year students and sophomores and American Studies and Black Studies majors. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: emphasis on written work, critical reflections, qualitative work, group-based discussions, cultural analysis, ethnographic analysis, critical engagements with linkages in various ethnic studies fields; open engagements with difference, identity, and nuanced interrogations of the inner-workings of power, unsettling racism and colonialism in a transnational context.",
+        "times_and_locations": {}
+    },
+    {
+        "semester": "Fall 2023",
+        "course_title": "Drugs in History",
+        "course_codes": [
+            "AMST-147",
+            "HIST-147"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Francis G. Couvares"
+            ]
+        },
+        "description": "(Offered as AMST-147 and HIST-147)  This course examines the changing ways that human beings have used psychoactive drugs and societies have controlled that use. After examining drug use in historical and cross-cultural perspectives and studying the physiological and psychological effects of different drugs, we look at the ways in which contemporary societies both encourage and repress drug use. We address the drug war, the disease model of drug addiction, the proliferation of prescription drugs, the images of drug use in popular culture, Americas complicated history of alcohol control, and international drug trafficking and its implications for American foreign policy. Readings include Huxleys Brave New World , Kramers Listening to Prozac , and Reinarman and Schivelbusch, Tastes of Paradise ; films include Drugstore Cowboy and Traffic . This course will be writing attentive. Two class meetings per week. Limited to 15 students.  Fall semester. Professor Couvares. How to handle overenrollment: Preference given to AMST and HIST majors. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: The seminar will focus on the related skills of close reading, engaged discussion, and critical writing. Students will produce several short essays and a longer final research paper.",
+        "times_and_locations": {
+            "AMST 147 - LEC": {
+                "Section 01": [
+                    {
+                        "day": "Tu",
+                        "time": "1:00 PM - 2:20 PM",
+                        "location": "SCCE E210"
+                    },
+                    {
+                        "day": "Th",
+                        "time": "1:00 PM - 2:20 PM",
+                        "location": "SCCE E210"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "semester": "Fall 2023",
+        "course_title": "Whose Game: Sports in American Society",
+        "course_codes": [
+            "AMST-205"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Robert T. Hayashi"
+            ]
+        },
+        "description": "Sports infiltrate American lives.  Whether we are active participants, fans, or only disinterested consumers of media, we cannot escape the influence sport has on American society. Moreover, the world of sports is the place where discussions of major societal issuesracism, gender inequality, labor rightsmost prominently arise in the public sphere. Media often point to sport as being emblematic of the most powerful myths about American culture and identity. Yet, few people have an appreciation for how sports in American society and their meaning have evolved over time. This course is designed to offer such an understanding and promote critical analysis of the role of sports in our individual and collective lives. We will study and discuss contemporary scholarship on the history of American sport, from roughly 1800 to the present, as well as related literature and documentary film. Limited to 25 students.  Fall semester.  Professor Hayashi. How to handle overenrollment: Preference will be given to American Studies majors. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: class discussions, small group work, short written assignments, and oral presentations.",
+        "times_and_locations": {
+            "AMST 205 - LEC": {
+                "Section 01": [
+                    {
+                        "day": "Tu",
+                        "time": "2:30 PM - 3:50 PM",
+                        "location": "CHAP 203"
+                    },
+                    {
+                        "day": "Th",
+                        "time": "2:30 PM - 3:50 PM",
+                        "location": "CHAP 203"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "semester": "Fall 2023",
+        "course_title": "K&#x0101;naka Maoli and Asians in Hawai'i",
+        "course_codes": [
+            "AMST-212"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Lili M. Kim"
+            ]
+        },
+        "description": "Even though Hawaii is often referred to as the Paradise on Earth, the history of Hawaii is rife with the legacies of imperial ambitions of the United States.  This course examines the history of US occupation of Hawaii as a case study of US imperialism.  We will examine the history of the illegal overthrow of the Hawaiian monarchy and the independent Hawaiian Kingdom, the subsequent annexation of Hawaii as a US territory, and finally the current status of Hawaii as the fiftieth state in the United States.  Topics of discussion include Native Hawaiian resistance to American annexation, indigenous land struggles and continued US military expansion after annexation, Asian sugar plantation laborer settlers in Hawaii, revitalization of Hawaiian language, and contemporary Native Hawaiian sovereignty movements for self-determination. Students will engage with a variety of primary sources (court cases, protest songs, memoirs, letters) and secondary sources (scholarly books, articles, documentaries, films) to critically examine global geopolitics and economic interests that fueled US imperialism in Hawaii as well as to understand historical and contemporary manifestations of Kanaka Maoli self-determination and Asian settler solidarity. Students in this course will receive priority for the Hampshire Colleges Jan-term field course, Malama Aina:  Sustainability, Settler Colonialism, and Native Hawaiian Struggle for Self-Determination. Limited to 25 students.  Fall semester.  Visiting Professor Kim.",
+        "times_and_locations": {
+            "AMST 212 - LEC": {
+                "Section 01": [
+                    {
+                        "day": "M",
+                        "time": "1:00 PM - 2:20 PM",
+                        "location": "FAYE 113"
+                    },
+                    {
+                        "day": "W",
+                        "time": "1:00 PM - 2:20 PM",
+                        "location": "FAYE 113"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "semester": "Fall 2023",
+        "course_title": "Religion, Democracy, and American Culture",
+        "course_codes": [
+            "AMST-217"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Francis G. Couvares"
+            ]
+        },
+        "description": "[Pre-1900] The United States has inscribed the separation of church and state into its constitutional order, and yet Americans have for two centuries been more deeply committed to religious faith and practice than any other people in the Western world. This course endeavors to explore that paradox. Topics addressed include the changing meanings of \"the city on a hill\"; the varieties of millennial belief and utopian community; the relationship between religion, ethnicity, and gender; religious political activism, including abolition, prohibition, anti-war and anti-abortion movements; and the limits of religious tolerance from movements against Catholics and Mormons to recent warnings of a \"clash of civilizations\" with Muslim cultures. Limited to 25 students. Fall semester. Professors Couvares. How to handle overenrollment: Preference given to majors, then first and second year students Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Emphasis on discussion, reading, written work, critical analysis, and at least one field trip; and exposure to various American Studies readings, ranging from the colonial era to the present; and the use of various methods, including interpreting historical, sociological and other scholarly work, as well as poems, novels, photographs, and paintings.",
+        "times_and_locations": {
+            "AMST 217 - LEC": {
+                "Section 01": [
+                    {
+                        "day": "Tu",
+                        "time": "8:30 AM - 9:50 AM",
+                        "location": "CHAP 101"
+                    },
+                    {
+                        "day": "Th",
+                        "time": "8:30 AM - 9:50 AM",
+                        "location": "CHAP 101"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "semester": "Fall 2023",
+        "course_title": "Rebels and Reformers: Women in the Progressive Era",
+        "course_codes": [
+            "AMST-219"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Wendy H. Bergoffen"
+            ]
+        },
+        "description": "This course examines the experiences of women from diverse backgrounds during the Progressive Era (1890-1920). During this period characterized by rapid industrialization, mass immigration, and contested civil rights, women advocated for reforms of all kinds. But they did not always share the same visions of progress. Course units on labor, settlement work, sexual and racial politics, education, and physical culture will put these competing visions in historical context. Who defined the terms and goals of progress? Elite reformers worked for the betterment of society, but in whose interests? And what about the anarchists, who refused to play by the rules? Primary course materials will include periodical literature, pamphlets, political tracts, and works of literature. We will also examine historical writing, visual art, and archival material in the Sophia Smith Collection of Womens History at Smith College. Limited to 25 students. Fall semester. Senior Lecturer Bergoffen. How to handle overenrollment: If overenrolled, preference will be given to American Studies majors. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Writing and collaborating are central practices and goals in this course.  Students will write regularly--during class sessions, reflecting on discussions and course materials, composing short essays, and reporting on research.  Students will collaborate in small groups, learn archival practices, and engage in research.",
+        "times_and_locations": {
+            "AMST 219 - LEC": {
+                "Section 01": [
+                    {
+                        "day": "Tu",
+                        "time": "1:00 PM - 2:20 PM",
+                        "location": "FAYE 117"
+                    },
+                    {
+                        "day": "Th",
+                        "time": "1:00 PM - 2:20 PM",
+                        "location": "FAYE 117"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "semester": "Fall 2023",
+        "course_title": "Reading, Writing, and Teaching",
+        "course_codes": [
+            "EDST-120",
+            "AMST-220",
+            "ENGL-120"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Judith E. Frank"
+            ]
+        },
+        "description": "(Offered as ENGL 120 and EDST 120)  This Intensive Writing course functions primarily as an introduction to academic writing. It also considers from many perspectives what it means to read and write and learn and teach both for ourselves and for others. As part of the work of this course, in addition to the usual class hours, students will serve as weekly tutors and classroom assistants in adult basic education centers in nearby towns. Thus, this course consciously engages with the obstacles to and the power of education through course readings, through self-reflexive writing about our own varied educational experiences, and through weekly work in the community. As an Intensive Writing course, this class further supports students as they hone deep reading strategies and multi-step writing processes themselves. Although this course presses participants to reflect a great deal about teaching, this course does not teach how to teach. Instead it offers an exploration of the contexts and processes of education, and of the politics and desires that suffuse learning. Course readings range across literary genres (ex: essays, poems, autobiographies, and novels) in which education and teaching figure centrally, as well as readings from other disciplines, which may include ethnography, sociology, psychology, and philosophy. As part of the work of Intensive Writing, students will examine not only the content of these readings but also how they are constructed. Specifically, they will study rhetorical features (ex: audience awareness and genre expectations), as well as the structures of argument and analysis, with an eye on developing reading and writing skills they can use in other courses across the College. Ultimately, students will come together as a community of writers who support one another as they reflect on their experiences as tutors and develop their own academic writing voices. Preference given to first-year Amherst College students recommended for Intensive Writing. Admission with consent of the instructor. Limited to 15 students. Fall semester: Professor Frank. Spring semester: Lecturer Reardon. How to handle overenrollment: Preference given to first-year Amherst College students recommended for Intensive Writing Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Fall semester: emphasis on written work, readings, tutoring at off-campus sites. Spring semester: emphasis on close reading and written work, oral presentations, tutoring in the community,  co-editing group work.",
+        "times_and_locations": {
+            "AMST 220 - LEC": {
+                "Section 01": [
+                    {
+                        "day": "M",
+                        "time": "2:00 PM - 3:20 PM",
+                        "location": "CHAP 201"
+                    },
+                    {
+                        "day": "W",
+                        "time": "2:00 PM - 3:20 PM",
+                        "location": "CHAP 201"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "semester": "Fall 2023",
+        "course_title": "Indigenous Books and Art: A Boundless Approach to Texts and Images",
+        "course_codes": [
+            "AMST-238"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Kiara M. Vigil"
+            ]
+        },
+        "description": "In September 2023 the Boundless Exhibition will open at the Mead Art Museum featuring Native American artists and books from the Kim-Wait/Eisenberg Native American Literature Collection. This course enables students to learn about Native American literature and art production through the Boundless exhibit, and through readings and research related to Native American artistic traditions and literary practices. As an interdisciplinary course, taught within American Studies, students will work with texts from the Amherst Native Literature collection and choose a Native artist from the Meads exhibit to study in more depth. Some questions we will consider in our class discussions: What is the relationship between text and image within different Native American artistic traditions? From ledger books to the work of Mary Sulley and more contemporary Native performers and artists, how have Indigenous creators used the site of culture to contend with the shifting challenges that arise out of settler colonialism? How have Native artists and writers collaborated to produce cultural projects that celebrate Indigenous epistemologies? How do American and Indigenous artistic practices and traditions, in terms of literature, visual art, and film, overlap, critique, or enliven one another? This course is centered around Indigenous approaches to learning and will enable students to deepen their understanding of the relationships between research, museums, archives, and Indigenous cultural representations that contend with the legacies of colonization. Students will produce a final assignment that contributes to the Mead Museums Boundless Exhibit. Limited to 15 students. Fall semester. Professor Vigil. Pending Faculty Approval How to handle overenrollment: Preference will be given to students completing the Five College NAIS Certificate program, American Studies majors, Art & the History of Art majors, and first and second year students. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: collaborative group work, readings and discussion, field trips, artistic work, independent research, visual analysis, oral presentations, and writing/storytelling.",
+        "times_and_locations": {
+            "AMST 238 - LEC": {
+                "Section 01": [
+                    {
+                        "day": "W",
+                        "time": "12:30 PM - 1:50 PM",
+                        "location": "CONV 302 (ina"
+                    },
+                    {
+                        "day": "F",
+                        "time": "12:30 PM - 1:50 PM",
+                        "location": "CONV 302 (ina"
+                    }
+                ]
+            }
+        }
+    }]
