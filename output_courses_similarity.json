@@ -1,0 +1,722 @@
+[
+    {
+        "course_codes": [
+            "AMST-117"
+        ],
+        "compared_courses": [
+            {
+                "course_codes": [
+                    "EDST-200",
+                    "AMST-200",
+                    "SOCI-200"
+                ],
+                "similarity_score": 0.8144880108076742
+            },
+            {
+                "course_codes": [
+                    "AMST-206",
+                    "LLAS-200"
+                ],
+                "similarity_score": 0.8007958539057355
+            },
+            {
+                "course_codes": [
+                    "EDST-120",
+                    "AMST-220",
+                    "ENGL-120"
+                ],
+                "similarity_score": 0.7621657089016289
+            },
+            {
+                "course_codes": [
+                    "AMST-221"
+                ],
+                "similarity_score": 0.8137644527059013
+            },
+            {
+                "course_codes": [
+                    "AMST-222",
+                    "EUST-217",
+                    "GERM-222"
+                ],
+                "similarity_score": 0.7683744217329497
+            },
+            {
+                "course_codes": [
+                    "AMST-224"
+                ],
+                "similarity_score": 0.7774069122618295
+            },
+            {
+                "course_codes": [
+                    "AMST-225"
+                ],
+                "similarity_score": 0.7924241746700348
+            },
+            {
+                "course_codes": [
+                    "EDST-240",
+                    "AMST-240",
+                    "SWAG-243"
+                ],
+                "similarity_score": 0.7771912952230373
+            },
+            {
+                "course_codes": [
+                    "AMST-309",
+                    "BLST-309",
+                    "SWAG-311"
+                ],
+                "similarity_score": 0.8286853670701964
+            }
+        ]
+    },
+    {
+        "course_codes": [
+            "EDST-200",
+            "AMST-200",
+            "SOCI-200"
+        ],
+        "compared_courses": [
+            {
+                "course_codes": [
+                    "AMST-117"
+                ],
+                "similarity_score": 0.8144880108076742
+            },
+            {
+                "course_codes": [
+                    "AMST-206",
+                    "LLAS-200"
+                ],
+                "similarity_score": 0.8170053172888235
+            },
+            {
+                "course_codes": [
+                    "EDST-120",
+                    "AMST-220",
+                    "ENGL-120"
+                ],
+                "similarity_score": 0.7943254501780199
+            },
+            {
+                "course_codes": [
+                    "AMST-221"
+                ],
+                "similarity_score": 0.8490741648444965
+            },
+            {
+                "course_codes": [
+                    "AMST-222",
+                    "EUST-217",
+                    "GERM-222"
+                ],
+                "similarity_score": 0.7845018450719587
+            },
+            {
+                "course_codes": [
+                    "AMST-224"
+                ],
+                "similarity_score": 0.7590823602310848
+            },
+            {
+                "course_codes": [
+                    "AMST-225"
+                ],
+                "similarity_score": 0.815906384708068
+            },
+            {
+                "course_codes": [
+                    "EDST-240",
+                    "AMST-240",
+                    "SWAG-243"
+                ],
+                "similarity_score": 0.8098763123760957
+            },
+            {
+                "course_codes": [
+                    "AMST-309",
+                    "BLST-309",
+                    "SWAG-311"
+                ],
+                "similarity_score": 0.816997498619652
+            }
+        ]
+    },
+    {
+        "course_codes": [
+            "AMST-206",
+            "LLAS-200"
+        ],
+        "compared_courses": [
+            {
+                "course_codes": [
+                    "AMST-117"
+                ],
+                "similarity_score": 0.8007958539057355
+            },
+            {
+                "course_codes": [
+                    "EDST-200",
+                    "AMST-200",
+                    "SOCI-200"
+                ],
+                "similarity_score": 0.8170053172888235
+            },
+            {
+                "course_codes": [
+                    "EDST-120",
+                    "AMST-220",
+                    "ENGL-120"
+                ],
+                "similarity_score": 0.7667456697629633
+            },
+            {
+                "course_codes": [
+                    "AMST-221"
+                ],
+                "similarity_score": 0.7848273931030125
+            },
+            {
+                "course_codes": [
+                    "AMST-222",
+                    "EUST-217",
+                    "GERM-222"
+                ],
+                "similarity_score": 0.7863217439176867
+            },
+            {
+                "course_codes": [
+                    "AMST-224"
+                ],
+                "similarity_score": 0.7693872376994885
+            },
+            {
+                "course_codes": [
+                    "AMST-225"
+                ],
+                "similarity_score": 0.7998134025330792
+            },
+            {
+                "course_codes": [
+                    "EDST-240",
+                    "AMST-240",
+                    "SWAG-243"
+                ],
+                "similarity_score": 0.8132284328374446
+            },
+            {
+                "course_codes": [
+                    "AMST-309",
+                    "BLST-309",
+                    "SWAG-311"
+                ],
+                "similarity_score": 0.8221037692549494
+            }
+        ]
+    },
+    {
+        "course_codes": [
+            "EDST-120",
+            "AMST-220",
+            "ENGL-120"
+        ],
+        "compared_courses": [
+            {
+                "course_codes": [
+                    "AMST-117"
+                ],
+                "similarity_score": 0.7621657089016289
+            },
+            {
+                "course_codes": [
+                    "EDST-200",
+                    "AMST-200",
+                    "SOCI-200"
+                ],
+                "similarity_score": 0.7943254501780199
+            },
+            {
+                "course_codes": [
+                    "AMST-206",
+                    "LLAS-200"
+                ],
+                "similarity_score": 0.7667456697629633
+            },
+            {
+                "course_codes": [
+                    "AMST-221"
+                ],
+                "similarity_score": 0.8145827806264334
+            },
+            {
+                "course_codes": [
+                    "AMST-222",
+                    "EUST-217",
+                    "GERM-222"
+                ],
+                "similarity_score": 0.7465074732582371
+            },
+            {
+                "course_codes": [
+                    "AMST-224"
+                ],
+                "similarity_score": 0.7547995627462836
+            },
+            {
+                "course_codes": [
+                    "AMST-225"
+                ],
+                "similarity_score": 0.7299829549682937
+            },
+            {
+                "course_codes": [
+                    "EDST-240",
+                    "AMST-240",
+                    "SWAG-243"
+                ],
+                "similarity_score": 0.7863204735047118
+            },
+            {
+                "course_codes": [
+                    "AMST-309",
+                    "BLST-309",
+                    "SWAG-311"
+                ],
+                "similarity_score": 0.7749988500192582
+            }
+        ]
+    },
+    {
+        "course_codes": [
+            "AMST-221"
+        ],
+        "compared_courses": [
+            {
+                "course_codes": [
+                    "AMST-117"
+                ],
+                "similarity_score": 0.8137644527059013
+            },
+            {
+                "course_codes": [
+                    "EDST-200",
+                    "AMST-200",
+                    "SOCI-200"
+                ],
+                "similarity_score": 0.8490741648444965
+            },
+            {
+                "course_codes": [
+                    "AMST-206",
+                    "LLAS-200"
+                ],
+                "similarity_score": 0.7848273931030125
+            },
+            {
+                "course_codes": [
+                    "EDST-120",
+                    "AMST-220",
+                    "ENGL-120"
+                ],
+                "similarity_score": 0.8145827806264334
+            },
+            {
+                "course_codes": [
+                    "AMST-222",
+                    "EUST-217",
+                    "GERM-222"
+                ],
+                "similarity_score": 0.7806436275551848
+            },
+            {
+                "course_codes": [
+                    "AMST-224"
+                ],
+                "similarity_score": 0.7846474308529053
+            },
+            {
+                "course_codes": [
+                    "AMST-225"
+                ],
+                "similarity_score": 0.7881792902103207
+            },
+            {
+                "course_codes": [
+                    "EDST-240",
+                    "AMST-240",
+                    "SWAG-243"
+                ],
+                "similarity_score": 0.8147252682208361
+            },
+            {
+                "course_codes": [
+                    "AMST-309",
+                    "BLST-309",
+                    "SWAG-311"
+                ],
+                "similarity_score": 0.8094563744090746
+            }
+        ]
+    },
+    {
+        "course_codes": [
+            "AMST-222",
+            "EUST-217",
+            "GERM-222"
+        ],
+        "compared_courses": [
+            {
+                "course_codes": [
+                    "AMST-117"
+                ],
+                "similarity_score": 0.7683744217329497
+            },
+            {
+                "course_codes": [
+                    "EDST-200",
+                    "AMST-200",
+                    "SOCI-200"
+                ],
+                "similarity_score": 0.7845018450719587
+            },
+            {
+                "course_codes": [
+                    "AMST-206",
+                    "LLAS-200"
+                ],
+                "similarity_score": 0.7863217439176867
+            },
+            {
+                "course_codes": [
+                    "EDST-120",
+                    "AMST-220",
+                    "ENGL-120"
+                ],
+                "similarity_score": 0.7465074732582371
+            },
+            {
+                "course_codes": [
+                    "AMST-221"
+                ],
+                "similarity_score": 0.7806436275551848
+            },
+            {
+                "course_codes": [
+                    "AMST-224"
+                ],
+                "similarity_score": 0.7989265702605062
+            },
+            {
+                "course_codes": [
+                    "AMST-225"
+                ],
+                "similarity_score": 0.7675928799968719
+            },
+            {
+                "course_codes": [
+                    "EDST-240",
+                    "AMST-240",
+                    "SWAG-243"
+                ],
+                "similarity_score": 0.8038028461189928
+            },
+            {
+                "course_codes": [
+                    "AMST-309",
+                    "BLST-309",
+                    "SWAG-311"
+                ],
+                "similarity_score": 0.7508791966417165
+            }
+        ]
+    },
+    {
+        "course_codes": [
+            "AMST-224"
+        ],
+        "compared_courses": [
+            {
+                "course_codes": [
+                    "AMST-117"
+                ],
+                "similarity_score": 0.7774069122618295
+            },
+            {
+                "course_codes": [
+                    "EDST-200",
+                    "AMST-200",
+                    "SOCI-200"
+                ],
+                "similarity_score": 0.7590823602310848
+            },
+            {
+                "course_codes": [
+                    "AMST-206",
+                    "LLAS-200"
+                ],
+                "similarity_score": 0.7693872376994885
+            },
+            {
+                "course_codes": [
+                    "EDST-120",
+                    "AMST-220",
+                    "ENGL-120"
+                ],
+                "similarity_score": 0.7547995627462836
+            },
+            {
+                "course_codes": [
+                    "AMST-221"
+                ],
+                "similarity_score": 0.7846474308529053
+            },
+            {
+                "course_codes": [
+                    "AMST-222",
+                    "EUST-217",
+                    "GERM-222"
+                ],
+                "similarity_score": 0.7989265702605062
+            },
+            {
+                "course_codes": [
+                    "AMST-225"
+                ],
+                "similarity_score": 0.7604589286587786
+            },
+            {
+                "course_codes": [
+                    "EDST-240",
+                    "AMST-240",
+                    "SWAG-243"
+                ],
+                "similarity_score": 0.8277821345065369
+            },
+            {
+                "course_codes": [
+                    "AMST-309",
+                    "BLST-309",
+                    "SWAG-311"
+                ],
+                "similarity_score": 0.7281922446235408
+            }
+        ]
+    },
+    {
+        "course_codes": [
+            "AMST-225"
+        ],
+        "compared_courses": [
+            {
+                "course_codes": [
+                    "AMST-117"
+                ],
+                "similarity_score": 0.7924241746700348
+            },
+            {
+                "course_codes": [
+                    "EDST-200",
+                    "AMST-200",
+                    "SOCI-200"
+                ],
+                "similarity_score": 0.815906384708068
+            },
+            {
+                "course_codes": [
+                    "AMST-206",
+                    "LLAS-200"
+                ],
+                "similarity_score": 0.7998134025330792
+            },
+            {
+                "course_codes": [
+                    "EDST-120",
+                    "AMST-220",
+                    "ENGL-120"
+                ],
+                "similarity_score": 0.7299829549682937
+            },
+            {
+                "course_codes": [
+                    "AMST-221"
+                ],
+                "similarity_score": 0.7881792902103207
+            },
+            {
+                "course_codes": [
+                    "AMST-222",
+                    "EUST-217",
+                    "GERM-222"
+                ],
+                "similarity_score": 0.7675928799968719
+            },
+            {
+                "course_codes": [
+                    "AMST-224"
+                ],
+                "similarity_score": 0.7604589286587786
+            },
+            {
+                "course_codes": [
+                    "EDST-240",
+                    "AMST-240",
+                    "SWAG-243"
+                ],
+                "similarity_score": 0.7897086587441118
+            },
+            {
+                "course_codes": [
+                    "AMST-309",
+                    "BLST-309",
+                    "SWAG-311"
+                ],
+                "similarity_score": 0.7756210715241207
+            }
+        ]
+    },
+    {
+        "course_codes": [
+            "EDST-240",
+            "AMST-240",
+            "SWAG-243"
+        ],
+        "compared_courses": [
+            {
+                "course_codes": [
+                    "AMST-117"
+                ],
+                "similarity_score": 0.7771912952230373
+            },
+            {
+                "course_codes": [
+                    "EDST-200",
+                    "AMST-200",
+                    "SOCI-200"
+                ],
+                "similarity_score": 0.8098763123760957
+            },
+            {
+                "course_codes": [
+                    "AMST-206",
+                    "LLAS-200"
+                ],
+                "similarity_score": 0.8132284328374446
+            },
+            {
+                "course_codes": [
+                    "EDST-120",
+                    "AMST-220",
+                    "ENGL-120"
+                ],
+                "similarity_score": 0.7863204735047118
+            },
+            {
+                "course_codes": [
+                    "AMST-221"
+                ],
+                "similarity_score": 0.8147252682208361
+            },
+            {
+                "course_codes": [
+                    "AMST-222",
+                    "EUST-217",
+                    "GERM-222"
+                ],
+                "similarity_score": 0.8038028461189928
+            },
+            {
+                "course_codes": [
+                    "AMST-224"
+                ],
+                "similarity_score": 0.8277821345065369
+            },
+            {
+                "course_codes": [
+                    "AMST-225"
+                ],
+                "similarity_score": 0.7897086587441118
+            },
+            {
+                "course_codes": [
+                    "AMST-309",
+                    "BLST-309",
+                    "SWAG-311"
+                ],
+                "similarity_score": 0.7882668122307696
+            }
+        ]
+    },
+    {
+        "course_codes": [
+            "AMST-309",
+            "BLST-309",
+            "SWAG-311"
+        ],
+        "compared_courses": [
+            {
+                "course_codes": [
+                    "AMST-117"
+                ],
+                "similarity_score": 0.8286853670701964
+            },
+            {
+                "course_codes": [
+                    "EDST-200",
+                    "AMST-200",
+                    "SOCI-200"
+                ],
+                "similarity_score": 0.816997498619652
+            },
+            {
+                "course_codes": [
+                    "AMST-206",
+                    "LLAS-200"
+                ],
+                "similarity_score": 0.8221037692549494
+            },
+            {
+                "course_codes": [
+                    "EDST-120",
+                    "AMST-220",
+                    "ENGL-120"
+                ],
+                "similarity_score": 0.7749988500192582
+            },
+            {
+                "course_codes": [
+                    "AMST-221"
+                ],
+                "similarity_score": 0.8094563744090746
+            },
+            {
+                "course_codes": [
+                    "AMST-222",
+                    "EUST-217",
+                    "GERM-222"
+                ],
+                "similarity_score": 0.7508791966417165
+            },
+            {
+                "course_codes": [
+                    "AMST-224"
+                ],
+                "similarity_score": 0.7281922446235408
+            },
+            {
+                "course_codes": [
+                    "AMST-225"
+                ],
+                "similarity_score": 0.7756210715241207
+            },
+            {
+                "course_codes": [
+                    "EDST-240",
+                    "AMST-240",
+                    "SWAG-243"
+                ],
+                "similarity_score": 0.7882668122307696
+            }
+        ]
+    }
+]
