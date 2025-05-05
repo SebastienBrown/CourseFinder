@@ -1,0 +1,29 @@
+[{
+        "semester": "Spring 2024",
+        "course_title": "Women, Gender, and Pop Culture",
+        "course_codes": [
+            "AMST-117"
+        ],
+        "faculty": {
+            "Section 01": [
+                "Aneeka A. Henderson"
+            ]
+        },
+        "description": "In this course, students will interrogate the precarious relationship between political and popular culture. As we study how politics has successfully deployed popular culture as an ideological tool, we will also consider how politics has overburdened popular culture as a vehicle of change. These broad issues will serve as our framework for analyzing black femininity, womanhood, and the efficacy of the word feminism in the post-Civil Rights era. We will think critically about the construction of gender, race, sexuality, and class identity as well as the historical and sociopolitical context for cultural icons and phenomena. Students will read cultural theory, essays, fiction as well as listen to, and watch various forms of media. Expectations include three writing/visual projects as well as a group presentation. Limited to 18 students.  Spring semester.  Professor Henderson. How to handle overenrollment: Priority goes to student who are registered and attend first day of class Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: emphasis on written work, readings, oral presentations, group work, in-class quizzes or exams, artistic work, field work or trips, visual analysis and aural analysis.",
+        "times_and_locations": {
+            "AMST 117 - LEC": {
+                "Section 01": [
+                    {
+                        "day": "Tu",
+                        "time": "11:30 AM - 12:50 PM",
+                        "location": "SCCE D103"
+                    },
+                    {
+                        "day": "Th",
+                        "time": "11:30 AM - 12:50 PM",
+                        "location": "SCCE D103"
+                    }
+                ]
+            }
+        }
+    }]
