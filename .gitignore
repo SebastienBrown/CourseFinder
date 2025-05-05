@@ -1,48 +1,64 @@
-### Ignore all files within any Data folder
+# --- Python virtual environments ---
+venv/
+.venv/
+env/
+.env
+course_venv/     
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+
+# --- IDE / Editor settings ---
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# --- OS metadata ---
+._*
+Thumbs.db
+Desktop.ini
+
+# --- Logs and debug ---
+logs/
+*.log
+*.msg
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# --- Output and build files ---
+dist/
+dist-ssr/
+*.local
+*.out
+*.aux
+*.gz
+*.fdb_latexmk
+*.gph
+*.TEX
+*.pdf
+
+# --- Data files ---
 **/Data/*
 **/csv/*
 **/log/*
-###
-
-### Python virtual environment
-.venv/
-__pycache__/
-.index
-.env
-###
-
-### Also ignore any files with extensions that look like data files
+*.csv
 *.xlsx
 *.dta
-*.csv
 *.db
-###
-
-### Ignore any files which are probably log files
-*.log
-*.msg
 *.txt
 *.text
-# Stata log format
+
+# --- R / Stata outputs ---
 *.smcl
 *.sthlp
 *.Rout
-###
 
-### For now, ignore all output files. It should be safe to upload output to Git too.
-*.TEX
-*.gph
-# ###
-
-### I think all of these are created when converting a .tex into .pdf
-*.aux
-*.out
-*.gz
-*.fdb_latexmk
-###
-
-### Random other files automatically created by mac
-._.*
-._*
-.DS_Store
-###
+# --- Node.js dependencies ---
+node_modules/
