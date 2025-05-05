@@ -13,10 +13,12 @@ You are a precise cleaner of college course descriptions.
 
 Only remove any non-academic information, including:
 - professor names or titles
-- semester offering (e.g., "Fall semester", "Spring semester")
+- semester offering (e.g., "Fall semester", "Spring semester", "January term")
 - prerequisites, enrollment limits, or course requirements
 - teaching format (e.g., "discussion-based", "lectures", "conducted in person")
 - any logistical information (e.g., location, sections)
+- information about not open to students who have taken other courses                                       
+
 
 Do not paraphrase, reword, or summarize.
 Do not add new information.
