@@ -6,6 +6,19 @@ from sklearn.manifold import TSNE
 with open('./output_courses_similarity.json', 'r') as f:
     data = json.load(f)
 
+# Filter out courses with course codes containing '499', '490', or '390'
+filtered_courses = []
+for course in data:
+    # Check if any of the main course codes contain the excluded numbers
+    if any(code in course['course_codes'] for code in ['499', '490', '390']):
+        continue
+    # Check if any of the compared courses contain the excluded numbers
+    if any(any(code in comp.get('course_codes', []) for code in ['499', '490', '390']) for comp in course.get('compared_courses', [])):
+        continue
+    filtered_courses.append(course)
+print(f"Filtered out {len(data) - len(filtered_courses)} courses with course codes containing '499', '490', or '390'.")
+data = filtered_courses
+
 # Filter out entries with empty course_codes
 valid_data = [entry for entry in data if entry.get('course_codes') and len(entry['course_codes']) > 0]
 skipped_entries = [entry for entry in data if not (entry.get('course_codes') and len(entry['course_codes']) > 0)]
@@ -16,7 +29,7 @@ code_to_idx = {}
 for entry in valid_data:
     # Only use the first course code for each entry
     primary_code = entry['course_codes'][0]
-    if primary_code not in code_to_idx:
+    if primary_code not in code_to_idx and not any(code in primary_code for code in ['499', '490', '390']):
         code_to_idx[primary_code] = len(course_codes)
         course_codes.append(primary_code)
 
@@ -26,7 +39,10 @@ sim_matrix = np.zeros((n, n))
 # Fill similarity matrix
 for entry in valid_data:
     # Use only the first course code
-    idxA = code_to_idx[entry['course_codes'][0]]
+    primary_code = entry['course_codes'][0]
+    if primary_code not in code_to_idx:
+        continue
+    idxA = code_to_idx[primary_code]
     
     for comp in entry.get('compared_courses', []):
         if not comp.get('course_codes') or len(comp['course_codes']) == 0:
