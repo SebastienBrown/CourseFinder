@@ -45,7 +45,6 @@ dist-ssr/
 *.pdf
 
 # --- Data files ---
-**/Data/*
 **/csv/*
 **/log/*
 *.csv
