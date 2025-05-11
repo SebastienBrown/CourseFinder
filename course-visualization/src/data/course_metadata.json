@@ -83,26 +83,8 @@
     "description": "",
     "department": ""
   },
-  "AMST-390": {
-    "code": "AMST-390",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "AMST-490": {
-    "code": "AMST-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "AMST-496": {
     "code": "AMST-496",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "AMST-499": {
-    "code": "AMST-499",
     "title": "",
     "description": "",
     "department": ""
@@ -161,18 +143,6 @@
     "description": "",
     "department": ""
   },
-  "ANTH-490": {
-    "code": "ANTH-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "ANTH-499": {
-    "code": "ANTH-499",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "SOCI-112": {
     "code": "SOCI-112",
     "title": "",
@@ -211,18 +181,6 @@
   },
   "SOCI-334": {
     "code": "SOCI-334",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "SOCI-390": {
-    "code": "SOCI-390",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "SOCI-499": {
-    "code": "SOCI-499",
     "title": "",
     "description": "",
     "department": ""
@@ -301,18 +259,6 @@
   },
   "ARCH-381": {
     "code": "ARCH-381",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "ARCH-490": {
-    "code": "ARCH-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "ARCH-499": {
-    "code": "ARCH-499",
     "title": "",
     "description": "",
     "department": ""
@@ -443,18 +389,6 @@
     "description": "",
     "department": ""
   },
-  "ARHA-490": {
-    "code": "ARHA-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "ARHA-499": {
-    "code": "ARHA-499",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "ARAB-102": {
     "code": "ARAB-102",
     "title": "",
@@ -475,12 +409,6 @@
   },
   "ARAB-402": {
     "code": "ARAB-402",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "ARAB-490": {
-    "code": "ARAB-490",
     "title": "",
     "description": "",
     "department": ""
@@ -563,18 +491,6 @@
     "description": "",
     "department": ""
   },
-  "ASLC-490": {
-    "code": "ASLC-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "ASLC-499": {
-    "code": "ASLC-499",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "CHIN-102": {
     "code": "CHIN-102",
     "title": "",
@@ -595,12 +511,6 @@
   },
   "CHIN-402": {
     "code": "CHIN-402",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "CHIN-490": {
-    "code": "CHIN-490",
     "title": "",
     "description": "",
     "department": ""
@@ -679,12 +589,6 @@
   },
   "BCBP-498": {
     "code": "BCBP-498",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "BCBP-499D": {
-    "code": "BCBP-499D",
     "title": "",
     "description": "",
     "department": ""
@@ -791,12 +695,6 @@
     "description": "",
     "department": ""
   },
-  "BIOL-390": {
-    "code": "BIOL-390",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "BIOL-411": {
     "code": "BIOL-411",
     "title": "",
@@ -805,12 +703,6 @@
   },
   "BIOL-454": {
     "code": "BIOL-454",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "BIOL-499": {
-    "code": "BIOL-499",
     "title": "",
     "description": "",
     "department": ""
@@ -917,18 +809,6 @@
     "description": "",
     "department": ""
   },
-  "BLST-490": {
-    "code": "BLST-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "BLST-499": {
-    "code": "BLST-499",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "CHEM-151": {
     "code": "CHEM-151",
     "title": "",
@@ -1001,18 +881,6 @@
     "description": "",
     "department": ""
   },
-  "CHEM-490": {
-    "code": "CHEM-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "CHEM-499": {
-    "code": "CHEM-499",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "CLAS-124": {
     "code": "CLAS-124",
     "title": "",
@@ -1027,18 +895,6 @@
   },
   "CLAS-217": {
     "code": "CLAS-217",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "CLAS-390": {
-    "code": "CLAS-390",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "CLAS-499": {
-    "code": "CLAS-499",
     "title": "",
     "description": "",
     "department": ""
@@ -1061,20 +917,8 @@
     "description": "",
     "department": ""
   },
-  "GREE-390": {
-    "code": "GREE-390",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "GREE-442": {
     "code": "GREE-442",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "GREE-499": {
-    "code": "GREE-499",
     "title": "",
     "description": "",
     "department": ""
@@ -1091,20 +935,8 @@
     "description": "",
     "department": ""
   },
-  "LATI-390": {
-    "code": "LATI-390",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "LATI-442": {
     "code": "LATI-442",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "LATI-499": {
-    "code": "LATI-499",
     "title": "",
     "description": "",
     "department": ""
@@ -1151,20 +983,8 @@
     "description": "",
     "department": ""
   },
-  "COSC-390": {
-    "code": "COSC-390",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "COSC-461": {
     "code": "COSC-461",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "COSC-499": {
-    "code": "COSC-499",
     "title": "",
     "description": "",
     "department": ""
@@ -1295,18 +1115,6 @@
     "description": "",
     "department": ""
   },
-  "ECON-490": {
-    "code": "ECON-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "ECON-499": {
-    "code": "ECON-499",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "EDST-121": {
     "code": "EDST-121",
     "title": "",
@@ -1331,26 +1139,8 @@
     "description": "",
     "department": ""
   },
-  "EDST-490": {
-    "code": "EDST-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "EDST-437": {
     "code": "EDST-437",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "EDST-499": {
-    "code": "EDST-499",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "EDST-499D": {
-    "code": "EDST-499D",
     "title": "",
     "description": "",
     "department": ""
@@ -1523,12 +1313,6 @@
     "description": "",
     "department": ""
   },
-  "ENGL-499": {
-    "code": "ENGL-499",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "ENST-105": {
     "code": "ENST-105",
     "title": "",
@@ -1565,12 +1349,6 @@
     "description": "",
     "department": ""
   },
-  "ENST-499D": {
-    "code": "ENST-499D",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "EUST-122": {
     "code": "EUST-122",
     "title": "",
@@ -1601,12 +1379,6 @@
     "description": "",
     "department": ""
   },
-  "EUST-499": {
-    "code": "EUST-499",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "FAMS-213": {
     "code": "FAMS-213",
     "title": "",
@@ -1621,18 +1393,6 @@
   },
   "FAMS-375": {
     "code": "FAMS-375",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "FAMS-490": {
-    "code": "FAMS-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "FAMS-499": {
-    "code": "FAMS-499",
     "title": "",
     "description": "",
     "department": ""
@@ -1685,18 +1445,6 @@
     "description": "",
     "department": ""
   },
-  "FREN-490": {
-    "code": "FREN-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "FREN-499": {
-    "code": "FREN-499",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "GEOL-104": {
     "code": "GEOL-104",
     "title": "",
@@ -1733,30 +1481,6 @@
     "description": "",
     "department": ""
   },
-  "GEOL-390": {
-    "code": "GEOL-390",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "GEOL-490": {
-    "code": "GEOL-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "GEOL-499": {
-    "code": "GEOL-499",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "GEOL-499D": {
-    "code": "GEOL-499D",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "GERM-101": {
     "code": "GERM-101",
     "title": "",
@@ -1789,18 +1513,6 @@
   },
   "GERM-320": {
     "code": "GERM-320",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "GERM-490": {
-    "code": "GERM-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "GERM-499": {
-    "code": "GERM-499",
     "title": "",
     "description": "",
     "department": ""
@@ -1847,12 +1559,6 @@
     "description": "",
     "department": ""
   },
-  "HIST-390": {
-    "code": "HIST-390",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "HIST-428": {
     "code": "HIST-428",
     "title": "",
@@ -1861,12 +1567,6 @@
   },
   "HIST-459": {
     "code": "HIST-459",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "HIST-499D": {
-    "code": "HIST-499D",
     "title": "",
     "description": "",
     "department": ""
@@ -1891,12 +1591,6 @@
   },
   "LLAS-333": {
     "code": "LLAS-333",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "LLAS-499": {
-    "code": "LLAS-499",
     "title": "",
     "description": "",
     "department": ""
@@ -1963,18 +1657,6 @@
   },
   "LJST-366": {
     "code": "LJST-366",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "LJST-490": {
-    "code": "LJST-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "LJST-499": {
-    "code": "LJST-499",
     "title": "",
     "description": "",
     "department": ""
@@ -2099,18 +1781,6 @@
     "description": "",
     "department": ""
   },
-  "MATH-490": {
-    "code": "MATH-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "MATH-499": {
-    "code": "MATH-499",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "STAT-136": {
     "code": "STAT-136",
     "title": "",
@@ -2143,18 +1813,6 @@
   },
   "STAT-436": {
     "code": "STAT-436",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "STAT-490": {
-    "code": "STAT-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "STAT-499": {
-    "code": "STAT-499",
     "title": "",
     "description": "",
     "department": ""
@@ -2257,18 +1915,6 @@
   },
   "MUSI-383": {
     "code": "MUSI-383",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "MUSI-490H": {
-    "code": "MUSI-490H",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "MUSI-499": {
-    "code": "MUSI-499",
     "title": "",
     "description": "",
     "department": ""
@@ -2447,12 +2093,6 @@
     "description": "",
     "department": ""
   },
-  "NEUR-499": {
-    "code": "NEUR-499",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "PHIL-111": {
     "code": "PHIL-111",
     "title": "",
@@ -2507,18 +2147,6 @@
     "description": "",
     "department": ""
   },
-  "PHIL-490": {
-    "code": "PHIL-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "PHIL-499": {
-    "code": "PHIL-499",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "ASTR-112": {
     "code": "ASTR-112",
     "title": "",
@@ -2545,24 +2173,6 @@
   },
   "ASTR-352": {
     "code": "ASTR-352",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "ASTR-490": {
-    "code": "ASTR-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "ASTR-499": {
-    "code": "ASTR-499",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "ASTR-499D": {
-    "code": "ASTR-499D",
     "title": "",
     "description": "",
     "department": ""
@@ -2617,18 +2227,6 @@
   },
   "PHYS-348": {
     "code": "PHYS-348",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "PHYS-490": {
-    "code": "PHYS-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "PHYS-499": {
-    "code": "PHYS-499",
     "title": "",
     "description": "",
     "department": ""
@@ -2735,18 +2333,6 @@
     "description": "",
     "department": ""
   },
-  "POSC-490": {
-    "code": "POSC-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "POSC-499": {
-    "code": "POSC-499",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "PSYC-100": {
     "code": "PSYC-100",
     "title": "",
@@ -2813,20 +2399,8 @@
     "description": "",
     "department": ""
   },
-  "PSYC-490": {
-    "code": "PSYC-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "PSYC-498": {
     "code": "PSYC-498",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "PSYC-499D": {
-    "code": "PSYC-499D",
     "title": "",
     "description": "",
     "department": ""
@@ -2857,18 +2431,6 @@
   },
   "RELI-239": {
     "code": "RELI-239",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "RELI-490": {
-    "code": "RELI-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "RELI-499": {
-    "code": "RELI-499",
     "title": "",
     "description": "",
     "department": ""
@@ -2909,18 +2471,6 @@
     "description": "",
     "department": ""
   },
-  "RUSS-490": {
-    "code": "RUSS-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "RUSS-499": {
-    "code": "RUSS-499",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "SWAG-101": {
     "code": "SWAG-101",
     "title": "",
@@ -2929,18 +2479,6 @@
   },
   "SWAG-200": {
     "code": "SWAG-200",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "SWAG-490": {
-    "code": "SWAG-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "SWAG-499": {
-    "code": "SWAG-499",
     "title": "",
     "description": "",
     "department": ""
@@ -2977,18 +2515,6 @@
   },
   "SPAN-445": {
     "code": "SPAN-445",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "SPAN-490": {
-    "code": "SPAN-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "SPAN-499": {
-    "code": "SPAN-499",
     "title": "",
     "description": "",
     "department": ""
@@ -3061,18 +2587,6 @@
   },
   "THDA-400H": {
     "code": "THDA-400H",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "THDA-490": {
-    "code": "THDA-490",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "THDA-499": {
-    "code": "THDA-499",
     "title": "",
     "description": "",
     "department": ""
