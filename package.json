@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "tsne-js": "^1.0.3"
+  }
+}
