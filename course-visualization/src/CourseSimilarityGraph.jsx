@@ -125,23 +125,23 @@ export default function CourseSimilarityGraph() {
     initializeGraph();
   }, [dimensions]);
 
-  if (loading) {
-    return <div className="flex items-center justify-center p-4">Loading...</div>;
-  }
-
-  if (error) {
-    return <div className="flex items-center justify-center p-4 text-red-500">Error: {error}</div>;
-  }
-
   return (
-    <div style={{ width: '100vw', height: '100vh', margin: 0, padding: 0, position: 'relative', overflow: 'hidden' }}>
-      <svg
-        ref={svgRef}
-        style={{ width: '100vw', height: '100vh', display: 'block', position: 'absolute', top: 0, left: 0 }}
-      />
-      <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100vw', background: 'rgba(255,255,255,0.95)', textAlign: 'center', fontSize: '1rem', padding: '0.5rem 0' }}>
-        Each point represents a course, positioned using t-SNE based on course description similarity. Courses with similar content are placed closer together. Colors indicate departments.
-      </div>
+    <div style={{ width:'100vw', height:'100vh', position:'relative' }}>
+      {/* this svg is always on the page, so svgRef.current is never null */}
+      <svg ref={svgRef} style={{ width:'100%', height:'100%' }}/>
+      
+      {/* loading overlay on top of the svg */}
+      {loading && (
+        <div style={{
+          position:'absolute', top:0, left:0,
+          width:'100%', height:'100%',
+          display:'flex', alignItems:'center', justifyContent:'center',
+          background:'rgba(255,255,255,0.8)'
+        }}>
+          Loading…
+        </div>
+      )}
+      {/* … your caption at bottom … */}
     </div>
   );
-}
+  }
