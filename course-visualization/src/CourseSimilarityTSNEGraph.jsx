@@ -120,12 +120,6 @@ export default function CourseSimilarityTSNEGraph() {
     initializeGraphAsync();
   }, [dimensions]);
 
-  if (loading) {
-    return <div className="flex items-center justify-center p-4">Loading...</div>;
-  }
-  if (error) {
-    return <div className="flex items-center justify-center p-4 text-red-500">Error: {error}</div>;
-  }
   return (
     <div style={{ width: '100vw', height: '100vh', margin: 0, padding: 0, position: 'relative', overflow: 'hidden' }}>
       <svg
