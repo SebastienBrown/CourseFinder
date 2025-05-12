@@ -3,6 +3,30 @@ import * as d3 from 'd3';
 import { loadPrecomputedCourseData, applyPCA, applyTSNE } from './CourseSimilarityPrecomputedProcessor';
 import precomputedTSNECoords from './data/precomputed_tsne_coords.json';
 
+// === Tranche & Shape Definitions ===
+const TRANCHE_SHAPES = {
+  arts: 'circle',
+  humanities: 'square',
+  sciences: 'triangle',
+  social: 'star'
+};
+
+const TRANCHES = {
+  arts: ['ARCH', 'ARHA', 'MUSI', 'MUSL', 'THDA'],
+  humanities: ['AAPI', 'AMST', 'ARAB', 'ASLC', 'BLST', 'CHIN', 'CLAS', 'EDST', 'ENGL', 'ENST', 'EUST', 'FAMS', 'FREN', 'GERM', 'GREE', 'HIST', 'JAPA', 'LATI', 'LJST', 'LLAS', 'PHIL', 'RELI', 'RUSS', 'SPAN', 'SWAG'],
+  sciences: ['ASTR', 'BCBP', 'BIOL', 'CHEM', 'COSC', 'GEOL', 'MATH', 'NEUR', 'PHYS', 'STAT'],
+  social: ['ANTH', 'ECON', 'POSC', 'PSYC', 'SOCI']
+};
+
+const getTrancheForDept = (dept) => {
+  for (const [tranche, majors] of Object.entries(TRANCHES)) {
+    if (majors.includes(dept)) return tranche;
+  }
+  return 'other';
+};
+
+const getShapeForDept = (dept) => TRANCHE_SHAPES[getTrancheForDept(dept)] || 'circle';
+
 export default function CourseSimilarityPrecomputedGraph({ mode }) {
   const svgRef = useRef(null);
   const [svgReady, setSvgReady] = useState(false);
@@ -10,7 +34,6 @@ export default function CourseSimilarityPrecomputedGraph({ mode }) {
   const [error, setError] = useState(null);
   const [dimensions, setDimensions] = useState({ width: window.innerWidth, height: window.innerHeight });
 
-  // Callback ref to set svgReady when SVG is mounted
   const setSvgRef = useCallback(node => {
     svgRef.current = node;
     if (node) setSvgReady(true);
@@ -33,14 +56,15 @@ export default function CourseSimilarityPrecomputedGraph({ mode }) {
           setLoading(false);
           return;
         }
+
         const { courses, similarityMatrix } = loadPrecomputedCourseData();
         let coordinates;
+
         if (mode === 'pca') {
           coordinates = applyPCA(similarityMatrix);
         } else {
-          // Use precomputed t-SNE coordinates
           const codeToIndex = new Map(courses.map((c, i) => [c.code, i]));
-          coordinates = Array(courses.length).fill([0, 0]);
+          coordinates = Array(courses.length).fill().map(() => [NaN, NaN]);
           precomputedTSNECoords.forEach(({ code, x, y }) => {
             const idx = codeToIndex.get(code);
             if (idx !== undefined) {
@@ -48,48 +72,49 @@ export default function CourseSimilarityPrecomputedGraph({ mode }) {
             }
           });
         }
-        // Diagnostics
-        console.log('[Graph] SVG element:', svgRef.current);
-        console.log('[Graph] Number of courses:', courses.length);
-        console.log('[Graph] Sample coordinates:', coordinates.slice(0, 5));
-        let hasNaN = false;
-        for (let i = 0; i < coordinates.length; i++) {
-          if (!Number.isFinite(coordinates[i][0]) || !Number.isFinite(coordinates[i][1])) {
-            hasNaN = true;
-            console.error('[Graph] NaN/undefined in coordinates at', i, coordinates[i]);
+
+        const allMajors = Object.values(TRANCHES).flat();
+        const colorPalette = d3.schemeCategory10.concat(d3.schemeSet3).concat(d3.schemePaired);
+        const majorColorMap = new Map();
+        let colorIndex = 0;
+        for (const tranche of Object.values(TRANCHES)) {
+          for (const major of tranche) {
+            if (!majorColorMap.has(major)) {
+              majorColorMap.set(major, colorPalette[colorIndex % colorPalette.length]);
+              colorIndex++;
+            }
           }
         }
-        if (hasNaN) {
-          console.error('[Graph] Some coordinates are NaN/undefined!');
-        }
-        const nodes = courses.map((course, i) => ({
-          id: course.code,
-          x: coordinates[i][0],
-          y: coordinates[i][1],
-          department: course.department
-        }));
-        if (nodes.length === 0) {
-          console.error('[Graph] No nodes to render!');
-        }
-        console.log('[Graph] Sample nodes:', nodes.slice(0, 5));
+
+        const nodes = courses
+          .map((course, i) => {
+            const [x, y] = coordinates[i];
+            if (!Number.isFinite(x) || !Number.isFinite(y)) return null;
+            return {
+              id: course.code,
+              x,
+              y,
+              department: course.department,
+              shape: getShapeForDept(course.department),
+              color: majorColorMap.get(course.department) || '#999'
+            };
+          })
+          .filter(Boolean);
+
         const width = dimensions.width;
         const height = dimensions.height;
         const svg = d3.select(svgRef.current);
         svg.selectAll('*').remove();
-        svg.attr('width', width)
-          .attr('height', height)
-          .attr('viewBox', `0 0 ${width} ${height}`);
+        svg.attr('width', width).attr('height', height).attr('viewBox', `0 0 ${width} ${height}`);
         const g = svg.append('g');
+
         g.append('rect')
           .attr('width', width)
           .attr('height', height)
           .attr('fill', '#f8f9fa')
           .attr('stroke', '#dee2e6')
           .attr('stroke-width', 1);
-        const departments = [...new Set(nodes.map(d => d.department))];
-        const colorScale = d3.scaleOrdinal()
-          .domain(departments)
-          .range(d3.schemeCategory10);
+
         const padding = Math.max(40, Math.min(width, height) * 0.08);
         const xScale = d3.scaleLinear()
           .domain(d3.extent(nodes, d => d.x))
@@ -97,39 +122,109 @@ export default function CourseSimilarityPrecomputedGraph({ mode }) {
         const yScale = d3.scaleLinear()
           .domain(d3.extent(nodes, d => d.y))
           .range([padding * 1.5, height - padding * 1.5]);
+
         const nodeGroup = g.append('g')
           .selectAll('g')
           .data(nodes)
           .enter()
           .append('g')
           .attr('transform', d => `translate(${xScale(d.x)},${yScale(d.y)})`);
-        nodeGroup.append('circle')
-          .attr('r', 4)
-          .attr('fill', d => colorScale(d.department))
-          .attr('stroke', '#fff')
-          .attr('stroke-width', 1);
+
+        nodeGroup.each(function(d) {
+          const group = d3.select(this);
+          const size = 6;
+          const color = d.color;
+
+          switch (d.shape) {
+            case 'circle':
+              group.append('circle')
+                .attr('r', size)
+                .attr('fill', color)
+                .attr('stroke', '#fff')
+                .attr('stroke-width', 1);
+              break;
+            case 'square':
+              group.append('rect')
+                .attr('x', -size)
+                .attr('y', -size)
+                .attr('width', size * 2)
+                .attr('height', size * 2)
+                .attr('fill', color)
+                .attr('stroke', '#fff')
+                .attr('stroke-width', 1);
+              break;
+            case 'triangle':
+              group.append('path')
+                .attr('d', d3.symbol().type(d3.symbolTriangle).size(size * size * 6)())
+                .attr('fill', color)
+                .attr('stroke', '#fff')
+                .attr('stroke-width', 1);
+              break;
+            case 'star':
+              group.append('path')
+                .attr('d', d3.symbol().type(d3.symbolStar).size(size * size * 6)())
+                .attr('fill', color)
+                .attr('stroke', '#fff')
+                .attr('stroke-width', 1);
+              break;
+            default:
+              group.append('circle')
+                .attr('r', size)
+                .attr('fill', color)
+                .attr('stroke', '#fff')
+                .attr('stroke-width', 1);
+          }
+        });
+
         nodeGroup.append('text')
           .attr('text-anchor', 'middle')
-          .attr('dy', -8)
+          .attr('dy', d => -8 + Math.random() * 6 - 3)
           .attr('font-size', '10px')
           .attr('fill', '#333')
           .text(d => d.id);
+
+        // Optional: shape-aware legend (can be enhanced)
         const legend = svg.append('g')
           .attr('transform', `translate(${padding}, ${padding})`)
           .attr('class', 'legend');
-        departments.forEach((dept, i) => {
+
+        let legendIndex = 0;
+        for (const [dept, color] of majorColorMap.entries()) {
+          const shape = getShapeForDept(dept);
           const row = legend.append('g')
-            .attr('transform', `translate(0, ${i * 20})`);
-          row.append('rect')
-            .attr('width', 15)
-            .attr('height', 15)
-            .attr('fill', colorScale(dept));
+            .attr('transform', `translate(0, ${legendIndex * 20})`);
+          const size = 6;
+
+          switch (shape) {
+            case 'circle':
+              row.append('circle').attr('r', size).attr('fill', color);
+              break;
+            case 'square':
+              row.append('rect').attr('x', -size).attr('y', -size).attr('width', size * 2).attr('height', size * 2).attr('fill', color);
+              break;
+            case 'triangle':
+              row.append('path')
+                .attr('d', d3.symbol().type(d3.symbolTriangle).size(size * size * 6)())
+                .attr('fill', color)
+                .attr('transform', `translate(0, 0)`);
+              break;
+            case 'star':
+              row.append('path')
+                .attr('d', d3.symbol().type(d3.symbolStar).size(size * size * 6)())
+                .attr('fill', color)
+                .attr('transform', `translate(0, 0)`);
+              break;
+          }
+
           row.append('text')
             .attr('x', 20)
-            .attr('y', 12)
+            .attr('y', 5)
             .text(dept)
             .style('font-size', '12px');
-        });
+
+          legendIndex++;
+        }
+
         svg.append('text')
           .attr('x', width / 2)
           .attr('y', padding * 0.6)
@@ -137,13 +232,14 @@ export default function CourseSimilarityPrecomputedGraph({ mode }) {
           .style('font-size', Math.max(18, padding * 0.3))
           .style('font-weight', 'bold')
           .text(`Course Similarity Network (Precomputed, ${mode.toUpperCase()})`);
+
         setLoading(false);
-        console.log('[Graph] Drawing complete.');
       } catch (err) {
         setError(err.message);
         setLoading(false);
       }
     }
+
     if (svgReady) {
       initializeGraph();
     }
@@ -156,8 +252,8 @@ export default function CourseSimilarityPrecomputedGraph({ mode }) {
         style={{ width: '100vw', height: '100vh', display: 'block', position: 'absolute', top: 0, left: 0 }}
       />
       <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100vw', background: 'rgba(255,255,255,0.95)', textAlign: 'center', fontSize: '1rem', padding: '0.5rem 0' }}>
-        Each point represents a course, positioned using precomputed similarity scores. Courses with similar content are placed closer together. Colors indicate departments.
+        Each point represents a course, positioned using precomputed similarity scores. Shape indicates major group, and color distinguishes individual departments.
       </div>
     </div>
   );
-} 
+}
