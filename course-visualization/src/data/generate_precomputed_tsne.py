@@ -10,10 +10,10 @@ with open('./output_courses_similarity.json', 'r') as f:
 filtered_courses = []
 for course in data:
     # Check if any of the main course codes contain the excluded numbers
-    if any(code in course['course_codes'] for code in ['499', '490', '390']):
+    if any(code in course['course_codes'] for code in ['499', '490', '390','498']):
         continue
     # Check if any of the compared courses contain the excluded numbers
-    if any(any(code in comp.get('course_codes', []) for code in ['499', '490', '390']) for comp in course.get('compared_courses', [])):
+    if any(any(code in comp.get('course_codes', []) for code in ['499', '490', '390','498']) for comp in course.get('compared_courses', [])):
         continue
     filtered_courses.append(course)
 print(f"Filtered out {len(data) - len(filtered_courses)} courses with course codes containing '499', '490', or '390'.")
