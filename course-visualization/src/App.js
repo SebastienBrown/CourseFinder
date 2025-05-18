@@ -1,24 +1,30 @@
-import React, { useState } from 'react';
-import CourseSimilarityGraph from './CourseSimilarityGraph';
-import CourseSimilarityTSNEGraph from './CourseSimilarityTSNEGraph';
-import CourseSimilarityPrecomputedGraph from './CourseSimilarityPrecomputedGraph';
+import React, { useState } from "react";
+import CourseSimilarityGraph from "./CourseSimilarityGraph";
+import CourseSimilarityTSNEGraph from "./CourseSimilarityTSNEGraph";
+import CourseSimilarityPrecomputedGraph from "./CourseSimilarityPrecomputedGraph";
+import CourseInput from "./CourseInput";
 
-function App() {
-  const [mode, setMode] = useState('precomputed-tsne');
+export default function App() {
+  const [mode] = useState("precomputed-tsne");
+  const [highlighted, setHighlighted] = useState([]);
+
   return (
-    <div className="App">
-      {/* <div style={{ position: 'absolute', top: 10, left: 10, zIndex: 10 }}> */}
-       {/*  <button onClick={() => setMode('pca')} style={{ marginRight: 8, padding: '0.5em 1em', fontWeight: mode === 'pca' ? 'bold' : 'normal' }}>PCA</button>
-        <button onClick={() => setMode('tsne')} style={{ marginRight: 8, padding: '0.5em 1em', fontWeight: mode === 'tsne' ? 'bold' : 'normal' }}>t-SNE</button>
-        <button onClick={() => setMode('precomputed-pca')} style={{ marginRight: 8, padding: '0.5em 1em', fontWeight: mode === 'precomputed-pca' ? 'bold' : 'normal' }}>Precomputed PCA</button> */}
-        {/* <button onClick={() => setMode('precomputed-tsne')} style={{ padding: '0.5em 1em', fontWeight: mode === 'precomputed-tsne' ? 'bold' : 'normal' }}>Precomputed t-SNE</button> */}
-      {/* </div> */}
-      {/* {mode === 'pca' && <CourseSimilarityGraph />}
-      {mode === 'tsne' && <CourseSimilarityTSNEGraph />}
-      {mode === 'precomputed-pca' && <CourseSimilarityPrecomputedGraph mode="pca" />} */}
-      {mode === 'precomputed-tsne' && <CourseSimilarityPrecomputedGraph mode="tsne" />}
+    <div className="flex flex-col min-h-screen bg-[#f9f7fb]">
+      {/* Title + Search Bar */}
+      <div className="w-full max-w-[1200px] mx-auto space-y-6 mb-4 px-4">
+        <h1 className="text-3xl font-bold text-[#3f1f69] text-center mt-6">
+          Amherst Course Scheduler
+        </h1>
+        <CourseInput onHighlight={setHighlighted} />
+      </div>
+
+      {/* Graph Container */}
+      <div className="flex-grow relative px-4">
+        <CourseSimilarityPrecomputedGraph
+          mode="tsne"
+          highlighted={highlighted}
+        />
+      </div>
     </div>
   );
 }
-
-export default App;
