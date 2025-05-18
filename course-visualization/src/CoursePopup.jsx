@@ -23,26 +23,27 @@ export default function CoursePopup({ course, onClose }) {
           {course.course_title || course.id}
         </h2>
 
-        {course.description && (
-          <p className="text-gray-700 whitespace-pre-line">
-            {course.description}
-          </p>
-        )}
+        <p className="text-gray-700 whitespace-pre-line">
+          {course.description || "No course description available."}
+        </p>
 
-        {course.faculty && (
-          <p className="text-gray-600">
-            <strong>Instructor:</strong> {Object.values(course.faculty)[0][0]}
-          </p>
-        )}
+        <p className="text-gray-600">
+          <strong>Instructor:</strong>{" "}
+          {course.faculty
+            ? Object.values(course.faculty)?.[0]?.[0] || "Unavailable"
+            : "Unavailable"}
+        </p>
 
-        {course.times_and_locations && (
-          <p className="text-gray-500">
-            <strong>When:</strong>{" "}
-            {Object.values(Object.values(course.times_and_locations)[0])[0]
-              .map((s) => `${s.day} ${s.time}`)
-              .join(", ")}
-          </p>
-        )}
+        <p className="text-gray-500">
+          <strong>When:</strong>{" "}
+          {course.times_and_locations
+            ? Object.values(
+                Object.values(course.times_and_locations)?.[0] || {}
+              )[0]
+                ?.map((s) => `${s.day} ${s.time}`)
+                .join(", ") || "Unavailable"
+            : "Unavailable"}
+        </p>
       </div>
     </div>
   );
