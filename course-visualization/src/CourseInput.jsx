@@ -1,15 +1,30 @@
 import React, { useState } from "react";
 
-export default function CourseInput({ onHighlight }) {
+export default function CourseInput({ onHighlight, onConflicted }) {
   const [input, setInput] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const codes = input
       .split(",")
       .map((code) => code.trim().toUpperCase())
       .filter((code) => code.length > 0);
-    onHighlight(codes);
+
+    onHighlight(codes); // Highlight user input courses
+
+    const response = await fetch(
+      "http://localhost:5000/api/conflicted_courses",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ taken_courses: codes }),
+      }
+    );
+
+    const data = await response.json();
+    onConflicted(data.conflicted_courses);
   };
 
   return (
