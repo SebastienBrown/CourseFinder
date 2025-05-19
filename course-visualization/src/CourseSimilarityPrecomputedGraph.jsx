@@ -17,15 +17,15 @@ import CoursePopup from "./CoursePopup";
 
 // === Tranche & Shape Definitions ===
 const TRANCHE_SHAPES = {
-  arts: "circle",
-  humanities: "square",
-  sciences: "triangle",
-  social: "star",
+  "Arts": "circle",
+  "Humanities": "square",
+  "Sciences": "triangle",
+  "Social sciences": "star",
 };
 
 const TRANCHES = {
-  arts: ["ARCH", "ARHA", "MUSI", "MUSL", "THDA"],
-  humanities: [
+  "Arts": ["ARCH", "ARHA", "MUSI", "MUSL", "THDA"],
+  "Humanities": [
     "AAPI",
     "AMST",
     "ARAB",
@@ -52,7 +52,7 @@ const TRANCHES = {
     "SPAN",
     "SWAG",
   ],
-  sciences: [
+  "Sciences": [
     "ASTR",
     "BCBP",
     "BIOL",
@@ -64,7 +64,7 @@ const TRANCHES = {
     "PHYS",
     "STAT",
   ],
-  social: ["ANTH", "ECON", "POSC", "PSYC", "SOCI"],
+  "Social sciences": ["ANTH", "ECON", "POSC", "PSYC", "SOCI"],
 };
 
 const getTrancheForDept = (dept) => {
@@ -181,15 +181,42 @@ export default function CourseSimilarityPrecomputedGraph({
           .attr("height", height)
           .attr("fill", "#f9f7fb");
 
-        const padding = Math.max(40, Math.min(width, height) * 0.08);
+        // Calculate the legend space requirements
+        const deptEntries = [...majorColorMap.entries()];
+        const legendItemHeight = 20;
+        const legendItemWidth = 80; // Width for each column (reduced)
+        const colCount = 2; // Left legend columns
+        
+        // Left legend dimensions
+        const leftLegendWidth = legendItemWidth * colCount + 30; // Added padding (reduced)
+        const leftLegendHeight = Math.ceil(deptEntries.length / colCount) * legendItemHeight + 40;
+        
+        // Right legend dimensions
+        const rightLegendWidth = 130; // Reduced width
+        
+        // Create padding for chart area
+        const topPadding = 80; // Title space
+        const bottomPadding = 40; // Footer space
+        const leftPadding = leftLegendWidth;
+        const rightPadding = rightLegendWidth + 20;
+        
+        const xExtent = d3.extent(nodes, (d) => d.x);
+        const yExtent = d3.extent(nodes, (d) => d.y);
+
+        // Add some padding inside the data extent to avoid drawing to the very edge
+        const xMargin = (xExtent[1] - xExtent[0]) * 0.05;
+        const yMargin = (yExtent[1] - yExtent[0]) * 0.05;
+
         const xScale = d3
           .scaleLinear()
-          .domain(d3.extent(nodes, (d) => d.x))
-          .range([padding * 1.5, width - padding * 1.5]);
+          .domain([xExtent[0] - xMargin, xExtent[1] + xMargin])
+          .range([leftPadding, width - rightPadding]);
+
         const yScale = d3
           .scaleLinear()
-          .domain(d3.extent(nodes, (d) => d.y))
-          .range([padding * 1.5, height - padding * 1.5]);
+          .domain([yExtent[0] - yMargin, yExtent[1] + yMargin])
+          .range([topPadding, height - bottomPadding]);
+
 
         const nodeGroup = g
           .append("g")
@@ -282,26 +309,56 @@ export default function CourseSimilarityPrecomputedGraph({
           .attr("fill", "#333")
           .text((d) => d.id);
 
-        // Optional: shape-aware legend (can be enhanced)
+        // === DEPARTMENT LEGEND (2-COLUMN LAYOUT) ===
+        const legendPadding = 20;
+        const legendItemCount = deptEntries.length;
+        const legendRows = Math.ceil(legendItemCount / colCount);
+        
+        // Create background for legend
+        svg.append("rect")
+          .attr("x", legendPadding - 10)
+          .attr("y", legendPadding - 10)
+          .attr("width", leftLegendWidth - 20)
+          .attr("height", leftLegendHeight)
+          .attr("fill", "rgba(249, 247, 251, 0.95)")
+          .attr("stroke", "#e8e2f2")
+          .attr("stroke-width", 1)
+          .attr("rx", 5);
+        
+        // Add title to legend
+        svg.append("text")
+          .attr("x", legendPadding)
+          .attr("y", legendPadding + 15)
+          .attr("text-anchor", "start")
+          .style("font-weight", "bold")
+          .style("font-size", "14px")
+          .text("Departments");
+          
         const legend = svg
           .append("g")
-          .attr("transform", `translate(${padding}, ${padding})`)
+          .attr("transform", `translate(${legendPadding}, ${legendPadding + 30})`)
           .attr("class", "legend");
 
-        let legendIndex = 0;
-        for (const [dept, color] of majorColorMap.entries()) {
-          const shape = getShapeForDept(dept);
-          const row = legend
+        deptEntries.forEach((entry, i) => {
+          const [dept, color] = entry;
+          const col = Math.floor(i / legendRows);
+          const row = i % legendRows;
+          
+          const legendItem = legend
             .append("g")
-            .attr("transform", `translate(0, ${legendIndex * 20})`);
+            .attr("transform", `translate(${col * legendItemWidth}, ${row * legendItemHeight})`);
+
+          const shape = getShapeForDept(dept);
           const size = 6;
 
           switch (shape) {
             case "circle":
-              row.append("circle").attr("r", size).attr("fill", color);
+              legendItem.append("circle")
+                .attr("r", size)
+                .attr("fill", color);
               break;
             case "square":
-              row
+              legendItem
                 .append("rect")
                 .attr("x", -size)
                 .attr("y", -size)
@@ -310,7 +367,7 @@ export default function CourseSimilarityPrecomputedGraph({
                 .attr("fill", color);
               break;
             case "triangle":
-              row
+              legendItem
                 .append("path")
                 .attr(
                   "d",
@@ -319,11 +376,10 @@ export default function CourseSimilarityPrecomputedGraph({
                     .type(d3.symbolTriangle)
                     .size(size * size * 6)()
                 )
-                .attr("fill", color)
-                .attr("transform", `translate(0, 0)`);
+                .attr("fill", color);
               break;
             case "star":
-              row
+              legendItem
                 .append("path")
                 .attr(
                   "d",
@@ -332,27 +388,122 @@ export default function CourseSimilarityPrecomputedGraph({
                     .type(d3.symbolStar)
                     .size(size * size * 6)()
                 )
-                .attr("fill", color)
-                .attr("transform", `translate(0, 0)`);
+                .attr("fill", color);
               break;
           }
 
-          row
+          legendItem
             .append("text")
-            .attr("x", 20)
+            .attr("x", 10)
             .attr("y", 5)
             .text(dept)
-            .style("font-size", "12px");
+            .style("font-size", "10px");
+        });
 
-          legendIndex++;
-        }
+        // === TRANCHE SHAPE LEGEND (RIGHT SIDE) ===
+        const shapeEntries = Object.entries(TRANCHE_SHAPES);
+        const shapeLegendX = legendPadding;
+        const shapeLegendY = leftLegendHeight+25;
+        const shapeLegendHeight = shapeEntries.length * legendItemHeight + 30;
+        
+        // Background for shape legend
+        svg.append("rect")
+          .attr("x", shapeLegendX - 10)
+          .attr("y", shapeLegendY - 10)
+          .attr("width", leftLegendWidth)
+          .attr("height", shapeLegendHeight)
+          .attr("fill", "rgba(249, 247, 251, 0.95)")
+          .attr("stroke", "#e8e2f2")
+          .attr("stroke-width", 1)
+          .attr("rx", 5);
+          
+        const shapeLegend = svg
+          .append("g")
+          .attr("transform", `translate(${shapeLegendX}, ${shapeLegendY})`)
+          .attr("class", "shape-legend");
 
+        // Title for shape legend
+        shapeLegend
+          .append("text")
+          .attr("x", 0)
+          .attr("y", 5)
+          .text("Department Groups")
+          .style("font-weight", "bold")
+          .style("font-size", "14px");
+
+        shapeEntries.forEach(([tranche, shapeType], i) => {
+          const legendItem = shapeLegend
+            .append("g")
+            .attr("transform", `translate(0, ${i * legendItemHeight + 25})`);
+
+          const size = 6;
+          // Use a standard color for the shape legend
+          const color = "#666";
+
+          switch (shapeType) {
+            case "circle":
+              legendItem.append("circle")
+                .attr("r", size)
+                .attr("fill", color);
+              break;
+            case "square":
+              legendItem
+                .append("rect")
+                .attr("x", -size)
+                .attr("y", -size)
+                .attr("width", size * 2)
+                .attr("height", size * 2)
+                .attr("fill", color);
+              break;
+            case "triangle":
+              legendItem
+                .append("path")
+                .attr(
+                  "d",
+                  d3
+                    .symbol()
+                    .type(d3.symbolTriangle)
+                    .size(size * size * 6)()
+                )
+                .attr("fill", color);
+              break;
+            case "star":
+              legendItem
+                .append("path")
+                .attr(
+                  "d",
+                  d3
+                    .symbol()
+                    .type(d3.symbolStar)
+                    .size(size * size * 6)()
+                )
+                .attr("fill", color);
+              break;
+          }
+
+          legendItem
+            .append("text")
+            .attr("x", 12)
+            .attr("y", 5)
+            .text(tranche.charAt(0).toUpperCase() + tranche.slice(1)) // Capitalize
+            .style("font-size", "10px");
+        });
+
+        // Optional: Add a visual separator between legends and graph
+        svg.append("rect")
+          .attr("x", leftPadding - 10)
+          .attr("y", 0)
+          .attr("width", 1)
+          .attr("height", height)
+          .attr("fill", "#e8e2f2");
+
+        // Main title with adjusted positioning
         svg
           .append("text")
-          .attr("x", width / 2)
-          .attr("y", padding * 0.6)
+          .attr("x", leftPadding + (width - leftPadding - rightPadding) / 2)
+          .attr("y", topPadding * 0.6)
           .attr("text-anchor", "middle")
-          .style("font-size", Math.max(18, padding * 0.3))
+          .style("font-size", "18px")
           .style("font-weight", "bold")
           .text(
             `Course Similarity Network (Precomputed, ${mode.toUpperCase()})`
@@ -382,6 +533,18 @@ export default function CourseSimilarityPrecomputedGraph({
         ref={setSvgRef}
         className="w-full h-full absolute top-0 left-0"
       ></svg>
+
+      {loading && (
+        <div className="absolute inset-0 flex items-center justify-center bg-white/50">
+          <div className="text-lg font-medium">Loading visualization...</div>
+        </div>
+      )}
+
+      {error && (
+        <div className="absolute inset-0 flex items-center justify-center bg-white/80">
+          <div className="text-red-500 text-lg font-medium">Error: {error}</div>
+        </div>
+      )}
 
       <CoursePopup
         course={selectedCourse}
