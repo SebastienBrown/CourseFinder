@@ -192,7 +192,7 @@ export default function CourseSimilarityPrecomputedGraph({
         const leftLegendHeight = Math.ceil(deptEntries.length / colCount) * legendItemHeight + 40;
         
         // Right legend dimensions
-        const rightLegendWidth = 130; // Reduced width
+        const rightLegendWidth = leftLegendWidth; // Reduced width
         
         // Create padding for chart area
         const topPadding = 80; // Title space
@@ -410,7 +410,7 @@ export default function CourseSimilarityPrecomputedGraph({
         svg.append("rect")
           .attr("x", shapeLegendX - 10)
           .attr("y", shapeLegendY - 10)
-          .attr("width", leftLegendWidth)
+          .attr("width", leftLegendWidth-20)
           .attr("height", shapeLegendHeight)
           .attr("fill", "rgba(249, 247, 251, 0.95)")
           .attr("stroke", "#e8e2f2")
