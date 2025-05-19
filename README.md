@@ -1,6 +1,17 @@
 # CourseFinder
 
 To run this webapp, from root directory:
+
+# Run backend
+
+cd backend
+python3 -m venv venv # optional but recommended
+source venv/bin/activate # or venv\Scripts\activate on Windows
+pip install -r requirements.txt
+flask run
+
+# Run frontend
+
 cd course-visualization/src
 npm install
 npm install tsne-js

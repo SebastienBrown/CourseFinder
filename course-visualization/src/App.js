@@ -7,6 +7,7 @@ import CourseInput from "./CourseInput";
 export default function App() {
   const [mode] = useState("precomputed-tsne");
   const [highlighted, setHighlighted] = useState([]);
+  const [conflicted, setConflicted] = useState([]);
 
   return (
     <div className="flex flex-col min-h-screen bg-[#f9f7fb]">
@@ -15,7 +16,10 @@ export default function App() {
         <h1 className="text-3xl font-bold text-[#3f1f69] text-center mt-6">
           Amherst Course Scheduler
         </h1>
-        <CourseInput onHighlight={setHighlighted} />
+        <CourseInput
+          onHighlight={setHighlighted}
+          onConflicted={setConflicted}
+        />
       </div>
 
       {/* Graph Container */}
@@ -23,6 +27,7 @@ export default function App() {
         <CourseSimilarityPrecomputedGraph
           mode="tsne"
           highlighted={highlighted}
+          conflicted={conflicted}
         />
       </div>
     </div>
