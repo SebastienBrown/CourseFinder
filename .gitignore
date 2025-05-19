@@ -53,6 +53,7 @@ dist-ssr/
 *.db
 *.txt
 *.text
+!requirements.txt
 
 # --- R / Stata outputs ---
 *.smcl

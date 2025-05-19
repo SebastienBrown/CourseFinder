@@ -93,3 +93,5 @@ def conflicted_courses():
 
     return jsonify({"conflicted_courses": conflicted_courses})
 
+if __name__ == "__main__":
+    app.run(port=5000, debug=True)
