@@ -80,6 +80,7 @@ const getShapeForDept = (dept) =>
 export default function CourseSimilarityPrecomputedGraph({
   mode,
   highlighted = [],
+  conflicted = [],
 }) {
   const svgRef = useRef(null);
   const [svgReady, setSvgReady] = useState(false);
@@ -160,9 +161,10 @@ export default function CourseSimilarityPrecomputedGraph({
               shape: getShapeForDept(course.department),
               color: majorColorMap.get(course.department) || "#999",
               highlighted: highlighted.includes(course.code),
+              conflicted: conflicted.includes(course.code),
             };
           })
-          .filter(Boolean);
+          .filter((node) => node && !node.conflicted);
 
         const width = dimensions.width;
         const height = dimensions.height;
@@ -200,7 +202,11 @@ export default function CourseSimilarityPrecomputedGraph({
         nodeGroup.each(function (d) {
           const group = d3.select(this);
           const baseSize = 6;
-          const shapeColor = d.highlighted ? "#311a4d" : d.color;
+          const shapeColor = d.conflicted
+            ? "#856cb0" // this allows conflicted courses to be shown in a different color, but this is not currently used right now. We can use it later if we want to toggle show conflicted courses
+            : d.highlighted
+            ? "#311a4d" // user-selected course
+            : d.color;
           const shapeSize = d.highlighted ? baseSize * 1.5 : baseSize;
 
           group.style("cursor", "pointer").on("click", () => {
@@ -362,7 +368,13 @@ export default function CourseSimilarityPrecomputedGraph({
     if (svgReady) {
       initializeGraph();
     }
-  }, [dimensions, mode, svgReady, JSON.stringify(highlighted)]);
+  }, [
+    dimensions,
+    mode,
+    svgReady,
+    JSON.stringify(highlighted),
+    JSON.stringify(conflicted),
+  ]);
 
   return (
     <div className="relative w-full max-w-[1200px] mx-auto h-[80vh] bg-[#f9f7fb] shadow-md rounded-xl overflow-hidden border border-[#e8e2f2]">
