@@ -8,6 +8,7 @@ cd backend
 python3 -m venv venv # optional but recommended
 source venv/bin/activate # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
+export FLASK_APP=schedule.py # or set FLASK_APP=schedule.py on Windows
 flask run
 
 # Run frontend
