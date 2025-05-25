@@ -29,7 +29,7 @@ code_to_idx = {}
 for entry in valid_data:
     # Only use the first course code for each entry
     primary_code = entry['course_codes'][0]
-    if primary_code not in code_to_idx and not any(code in primary_code for code in ['499', '490', '390']):
+    if primary_code not in code_to_idx and not any(code in primary_code for code in ['499', '490', '390','498']):
         code_to_idx[primary_code] = len(course_codes)
         course_codes.append(primary_code)
 
