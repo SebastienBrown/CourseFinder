@@ -64,7 +64,7 @@ const TRANCHES = {
     "PHYS",
     "STAT",
   ],
-  "Social sciences": ["ANTH", "ECON", "POSC", "PSYC", "SOCI"],
+  "Social Sciences": ["ANTH", "ECON", "POSC", "PSYC", "SOCI"],
 };
 
 const getTrancheForDept = (dept) => {

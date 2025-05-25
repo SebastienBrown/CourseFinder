@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import CourseSimilarityGraph from "./CourseSimilarityGraph";
-import CourseSimilarityTSNEGraph from "./CourseSimilarityTSNEGraph";
 import CourseSimilarityPrecomputedGraph from "./CourseSimilarityPrecomputedGraph";
 import CourseInput from "./CourseInput";
 
