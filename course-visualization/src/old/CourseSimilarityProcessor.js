@@ -1,7 +1,7 @@
 import * as d3 from 'd3';
 
 // Import the course data
-import courseData from './data/amherst_courses_2324S.json';
+import courseData from '../data/amherst_courses_2324S.json';
 
 export async function loadAllCourseData() {
   console.log('Loading course data:', courseData.length, 'courses');
