@@ -587,12 +587,6 @@
     "description": "",
     "department": ""
   },
-  "BCBP-498": {
-    "code": "BCBP-498",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
   "BIOL-150": {
     "code": "BIOL-150",
     "title": "",
@@ -2395,12 +2389,6 @@
   },
   "PSYC-366": {
     "code": "PSYC-366",
-    "title": "",
-    "description": "",
-    "department": ""
-  },
-  "PSYC-498": {
-    "code": "PSYC-498",
     "title": "",
     "description": "",
     "department": ""
