@@ -208,6 +208,44 @@ export default function CourseSimilarityPrecomputedGraph({
           .attr("width", width)
           .attr("height", height)
           .attr("viewBox", `0 0 ${width} ${height}`);
+
+        // Add zoom behavior
+        const zoom = d3.zoom()
+          .scaleExtent([0.5, 8]) // Min and max zoom levels
+          .on("zoom", (event) => {
+            g.attr("transform", event.transform);
+          });
+
+        svg.call(zoom);
+
+        // Add a reset zoom button
+        const resetButton = svg.append("g")
+          .attr("class", "reset-zoom")
+          .attr("transform", `translate(${width - 100}, 20)`)
+          .style("cursor", "pointer");
+
+        resetButton.append("rect")
+          .attr("width", 80)
+          .attr("height", 30)
+          .attr("rx", 5)
+          .attr("fill", "rgba(249, 247, 251, 0.95)")
+          .attr("stroke", "#e8e2f2")
+          .attr("stroke-width", 1);
+
+        resetButton.append("text")
+          .attr("x", 40)
+          .attr("y", 20)
+          .attr("text-anchor", "middle")
+          .attr("dominant-baseline", "middle")
+          .style("font-size", "12px")
+          .text("Reset View");
+
+        resetButton.on("click", () => {
+          svg.transition()
+            .duration(750)
+            .call(zoom.transform, d3.zoomIdentity);
+        });
+
         const g = svg.append("g");
 
         g.append("rect")
@@ -269,6 +307,9 @@ export default function CourseSimilarityPrecomputedGraph({
           const departments = d.codes.map(code => code.split('-')[0]);
           const uniqueDepts = [...new Set(departments)];
           
+          // Define scaling factor for non-circle shapes in single-code nodes
+          const singleShapeScale = 0.7; // Adjust this value to scale down non-circle shapes
+
           // Handle single vs. multi-code nodes
           if (d.codes.length === 1) {
             // Single code: Draw a single, unclipped shape
@@ -276,38 +317,37 @@ export default function CourseSimilarityPrecomputedGraph({
             const shape = getShapeForDept(dept);
             const color = majorColorMap.get(dept) || "#999";
 
-            let adjustedSize = shapeSize;
+            let size = shapeSize; // Use base shapeSize
              switch (shape) {
                 case "circle":
                   group.append("circle")
-                    .attr("r", adjustedSize)
+                    .attr("r", size)
                     .attr("fill", color);
                   break;
                 case "square":
-                  group.append("rect")
-                    .attr("x", -adjustedSize)
-                    .attr("y", -adjustedSize)
-                    .attr("width", adjustedSize * 2)
-                    .attr("height", adjustedSize * 2)
+                  size = shapeSize * singleShapeScale; // Apply scale
+                   group.append("rect")
+                    .attr("x", -size)
+                    .attr("y", -size)
+                    .attr("width", size * 2.5)
+                    .attr("height", size * 2.5)
                     .attr("fill", color);
                   break;
                 case "triangle":
-                   adjustedSize = shapeSize * 1.1; // Slightly larger to appear similar
+                   size = shapeSize * singleShapeScale; // Apply scale
+                   const triangleSymbolSize = size * size * 3; 
                    group.append("path")
-                    .attr("d", d3.symbol().type(d3.symbolTriangle).size(adjustedSize * adjustedSize * 2.5)())
+                    .attr("d", d3.symbol().type(d3.symbolTriangle).size(triangleSymbolSize)())
                     .attr("fill", color);
                   break;
                 case "star":
-                   adjustedSize = shapeSize * 1.1; // Slightly larger to appear similar
+                   size = shapeSize * singleShapeScale; // Apply scale
+                   const starSymbolSize = size * size * 3;
                    group.append("path")
-                    .attr("d", d3.symbol().type(d3.symbolStar).size(adjustedSize * adjustedSize * 2.5)())
+                    .attr("d", d3.symbol().type(d3.symbolStar).size(starSymbolSize)())
                     .attr("fill", color);
                   break;
             }
-             // Add stroke to the shape element
-            group.selectAll("circle, rect, path")
-              .attr("stroke", "#fff")
-              .attr("stroke-width", 1);
 
           } else {
             // Multi code: Draw clipped shape segments (pie chart)
@@ -327,6 +367,9 @@ export default function CourseSimilarityPrecomputedGraph({
             let currentAngle = 0;
             // Sort departments to ensure consistent rendering order for pie slices
             const sortedDepartmentEntries = Object.entries(departmentCounts).sort((a, b) => a[0].localeCompare(b[0]));
+
+            // Define scaling factor for non-circle shapes in multi-code nodes
+            const multiShapeScale = 0.8; // Adjust this value to control size difference relative to single-code
 
             sortedDepartmentEntries.forEach(([dept, count]) => {
               const portion = count / totalWeight;
@@ -354,42 +397,45 @@ export default function CourseSimilarityPrecomputedGraph({
               const shapeSegmentGroup = shapeContainer.append("g")
                  .attr("clip-path", `url(#${clipPathId})`);
 
-              // Draw the full shape within the clipped area
-              let adjustedSize = shapeSize;
+              // Draw the full shape within the clipped area with adjusted size for non-circles
+              let currentShapeSize = shapeSize; // Start with base size
                switch (shape) {
                   case "circle":
+                    // Circle size remains the same as single-code
                     shapeSegmentGroup.append("circle")
-                      .attr("r", adjustedSize)
+                      .attr("r", currentShapeSize)
                       .attr("fill", color);
                     break;
                   case "square":
+                    // Scale down square size for multi-code
+                    currentShapeSize = shapeSize * multiShapeScale; // Apply multi-shape scale
                     shapeSegmentGroup.append("rect")
-                      .attr("x", -adjustedSize)
-                      .attr("y", -adjustedSize)
-                      .attr("width", adjustedSize * 2)
-                      .attr("height", adjustedSize * 2)
+                      .attr("x", -currentShapeSize)
+                      .attr("y", -currentShapeSize)
+                      .attr("width", currentShapeSize * 2)
+                      .attr("height", currentShapeSize * 2)
                       .attr("fill", color);
                     break;
                   case "triangle":
-                     adjustedSize = shapeSize * 1.1; // Slightly larger to appear similar
+                    // Scale down triangle size for multi-code, maintaining visual proportion
+                    currentShapeSize = shapeSize * multiShapeScale; // Apply multi-shape scale
+                    const multiTriangleSymbolSize = currentShapeSize * currentShapeSize * 3; // Use same area multiplier as single-code
                      shapeSegmentGroup.append("path")
-                      .attr("d", d3.symbol().type(d3.symbolTriangle).size(adjustedSize * adjustedSize * 2.5)())
+                      .attr("d", d3.symbol().type(d3.symbolTriangle).size(multiTriangleSymbolSize)())
                       .attr("fill", color);
                     break;
                   case "star":
-                     adjustedSize = shapeSize * 1.1; // Slightly larger to appear similar
+                    // Scale down star size for multi-code, maintaining visual proportion
+                    currentShapeSize = shapeSize * multiShapeScale; // Apply multi-shape scale
+                    const multiStarSymbolSize = currentShapeSize * currentShapeSize * 2.7; // Use same area multiplier as single-code
                      shapeSegmentGroup.append("path")
-                      .attr("d", d3.symbol().type(d3.symbolStar).size(adjustedSize * adjustedSize * 2.5)())
+                      .attr("d", d3.symbol().type(d3.symbolStar).size(multiStarSymbolSize)())
                       .attr("fill", color);
                     break;
               }
 
               currentAngle = endAngle;
             });
-
-            // Add stroke to the overall shape container
-            shapeContainer.attr("stroke", "#fff")
-              .attr("stroke-width", 1);
           }
 
           group.style("cursor", "pointer").on("click", () => {
@@ -400,13 +446,14 @@ export default function CourseSimilarityPrecomputedGraph({
           });
         });
 
-        // Update label handling
+        // Update label handling to scale with zoom
         nodeGroup
           .append("text")
           .attr("text-anchor", "middle")
           .attr("dy", (d) => -8 + Math.random() * 6 - 3)
           .attr("font-size", "7px")
           .attr("fill", "#333")
+          .attr("class", "node-label") // Add class for styling
           .text((d) => d.codes.length > 1 ? `${d.codes[0]}...` : d.codes[0]);
 
         // === DEPARTMENT LEGEND (2-COLUMN LAYOUT) ===
@@ -608,6 +655,16 @@ export default function CourseSimilarityPrecomputedGraph({
           .text(
             `Course Similarity Network`
           );
+
+        // Add CSS to handle label scaling
+        const style = document.createElement('style');
+        style.textContent = `
+          .node-label {
+            pointer-events: none;
+            text-rendering: geometricPrecision;
+          }
+        `;
+        document.head.appendChild(style);
 
         setLoading(false);
       } catch (err) {
