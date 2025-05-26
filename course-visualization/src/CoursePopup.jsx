@@ -23,6 +23,10 @@ export default function CoursePopup({ course, onClose }) {
           {course.course_title || course.id}
         </h2>
 
+        <p className="text-gray-600">
+          <strong>Course Code(s):</strong> {course.course_codes ? course.course_codes.join(', ') : 'Unavailable'}
+        </p>
+
         <p className="text-gray-700 whitespace-pre-line">
           {course.description || "No course description available."}
         </p>

@@ -2,6 +2,24 @@ import json
 import numpy as np
 from sklearn.manifold import TSNE
 
+def separate_overlapping_points(coords, min_dist=1.0, step_size=0.1, num_iterations=100):
+    """Iteratively separates points that are closer than min_dist."""
+    n = coords.shape[0]
+    for _ in range(num_iterations):
+        displacements = np.zeros_like(coords)
+        for i in range(n):
+            for j in range(i + 1, n):
+                vec = coords[j] - coords[i]
+                dist = np.linalg.norm(vec)
+                if dist < min_dist and dist > 1e-6: # Avoid division by zero
+                    overlap = min_dist - dist
+                    direction = vec / dist
+                    # Move both points away from each other
+                    displacements[i] -= direction * overlap * 0.5 * step_size
+                    displacements[j] += direction * overlap * 0.5 * step_size
+        coords += displacements
+    return coords
+
 # Load your similarity data
 with open('./output_courses_similarity.json', 'r') as f:
     data = json.load(f)
@@ -86,6 +104,10 @@ tsne = TSNE(
     init='random'
 )
 coords = tsne.fit_transform(dist_matrix)
+
+# Separate overlapping points
+print(f'Separating overlapping points with min_dist={1.0}...')
+coords = separate_overlapping_points(coords, min_dist=1.0)
 
 # Save coordinates and course codes
 output = []
