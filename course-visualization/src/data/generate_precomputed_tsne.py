@@ -6,17 +6,19 @@ from sklearn.manifold import TSNE
 with open('./output_courses_similarity.json', 'r') as f:
     data = json.load(f)
 
-# Filter out courses with course codes containing '499', '490', or '390'
+out = ['499', '490', '390','498', '210F']
+
+# Filter out courses with course codes
 filtered_courses = []
 for course in data:
     # Check if any of the main course codes contain the excluded numbers
-    if any(code in course['course_codes'] for code in ['499', '490', '390','498']):
+    if any(code in course['course_codes'] for code in out):
         continue
     # Check if any of the compared courses contain the excluded numbers
-    if any(any(code in comp.get('course_codes', []) for code in ['499', '490', '390','498']) for comp in course.get('compared_courses', [])):
+    if any(any(code in comp.get('course_codes', []) for code in out) for comp in course.get('compared_courses', [])):
         continue
     filtered_courses.append(course)
-print(f"Filtered out {len(data) - len(filtered_courses)} courses with course codes containing '499', '490', or '390'.")
+print(f"Filtered out {len(data) - len(filtered_courses)} courses with course codes containing {out}.")
 data = filtered_courses
 
 # Filter out entries with empty course_codes
@@ -29,7 +31,7 @@ code_to_idx = {}
 for entry in valid_data:
     # Only use the first course code for each entry
     primary_code = entry['course_codes'][0]
-    if primary_code not in code_to_idx and not any(code in primary_code for code in ['499', '490', '390','498']):
+    if primary_code not in code_to_idx and not any(code in primary_code for code in out):
         code_to_idx[primary_code] = len(course_codes)
         course_codes.append(primary_code)
 
@@ -86,10 +88,22 @@ tsne = TSNE(
 coords = tsne.fit_transform(dist_matrix)
 
 # Save coordinates and course codes
-output = [
-    {'code': code, 'x': float(x), 'y': float(y)}
-    for code, (x, y) in zip(course_codes, coords)
-]
+output = []
+for entry in valid_data:
+    # Get all course codes for this entry
+    codes = entry['course_codes']
+    # Find the index of the primary code in the similarity matrix
+    primary_code = codes[0]
+    if primary_code not in code_to_idx:
+        continue
+    idx = code_to_idx[primary_code]
+    x, y = coords[idx]
+    # Create an entry with all course codes
+    output.append({
+        'codes': codes,  # Store all codes
+        'x': float(x),
+        'y': float(y)
+    })
 
 # Save results
 with open('precomputed_tsne_coords.json', 'w') as f:
