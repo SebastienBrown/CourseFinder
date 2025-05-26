@@ -20,7 +20,7 @@ const TRANCHE_SHAPES = {
   "Arts": "circle",
   "Humanities": "square",
   "Sciences": "triangle",
-  "Social sciences": "star",
+  "Social Sciences": "star",
 };
 
 const TRANCHES = {
@@ -158,6 +158,7 @@ export default function CourseSimilarityPrecomputedGraph({
               x,
               y,
               department: course.department,
+              codes: [course.code], // Initialize with single code
               shape: getShapeForDept(course.department),
               color: majorColorMap.get(course.department) || "#999",
               highlighted: highlighted.includes(course.code),
@@ -165,6 +166,39 @@ export default function CourseSimilarityPrecomputedGraph({
             };
           })
           .filter((node) => node && !node.conflicted);
+
+        // Merge nodes with the same coordinates
+        const mergedNodes = new Map();
+        precomputedTSNECoords.forEach(({ codes, x, y }) => {
+          const key = `${x},${y}`;
+          if (!mergedNodes.has(key)) {
+            const firstCode = codes[0];
+            const dept = firstCode.split('-')[0];
+            mergedNodes.set(key, {
+              id: firstCode,
+              x,
+              y,
+              department: dept,
+              codes: codes,
+              shape: getShapeForDept(dept),
+              color: majorColorMap.get(dept) || "#999",
+              highlighted: codes.some(code => highlighted.includes(code)),
+              conflicted: codes.some(code => conflicted.includes(code)),
+            });
+          } else {
+            const node = mergedNodes.get(key);
+            node.codes = [...new Set([...node.codes, ...codes])];
+            // Update department based on all codes
+            const departments = node.codes.map(code => code.split('-')[0]);
+            node.department = departments[0]; // Keep first department as primary
+            node.shape = getShapeForDept(node.department);
+            node.color = majorColorMap.get(node.department) || "#999";
+            node.highlighted = node.codes.some(code => highlighted.includes(code));
+            node.conflicted = node.codes.some(code => conflicted.includes(code));
+          }
+        });
+
+        const finalNodes = Array.from(mergedNodes.values());
 
         const width = dimensions.width;
         const height = dimensions.height;
@@ -200,8 +234,8 @@ export default function CourseSimilarityPrecomputedGraph({
         const leftPadding = leftLegendWidth;
         const rightPadding = rightLegendWidth + 20;
         
-        const xExtent = d3.extent(nodes, (d) => d.x);
-        const yExtent = d3.extent(nodes, (d) => d.y);
+        const xExtent = d3.extent(finalNodes, (d) => d.x);
+        const yExtent = d3.extent(finalNodes, (d) => d.y);
 
         // Add some padding inside the data extent to avoid drawing to the very edge
         const xMargin = (xExtent[1] - xExtent[0]) * 0.05;
@@ -221,7 +255,7 @@ export default function CourseSimilarityPrecomputedGraph({
         const nodeGroup = g
           .append("g")
           .selectAll("g")
-          .data(nodes)
+          .data(finalNodes)
           .enter()
           .append("g")
           .attr("transform", (d) => `translate(${xScale(d.x)},${yScale(d.y)})`);
@@ -229,85 +263,151 @@ export default function CourseSimilarityPrecomputedGraph({
         nodeGroup.each(function (d) {
           const group = d3.select(this);
           const baseSize = 6;
-          const shapeColor = d.conflicted
-            ? "#856cb0" // this allows conflicted courses to be shown in a different color, but this is not currently used right now. We can use it later if we want to toggle show conflicted courses
-            : d.highlighted
-            ? "#311a4d" // user-selected course
-            : d.color;
           const shapeSize = d.highlighted ? baseSize * 1.5 : baseSize;
+
+          // Get all departments for this course
+          const departments = d.codes.map(code => code.split('-')[0]);
+          const uniqueDepts = [...new Set(departments)];
+          
+          // Handle single vs. multi-code nodes
+          if (d.codes.length === 1) {
+            // Single code: Draw a single, unclipped shape
+            const dept = departments[0];
+            const shape = getShapeForDept(dept);
+            const color = majorColorMap.get(dept) || "#999";
+
+            let adjustedSize = shapeSize;
+             switch (shape) {
+                case "circle":
+                  group.append("circle")
+                    .attr("r", adjustedSize)
+                    .attr("fill", color);
+                  break;
+                case "square":
+                  group.append("rect")
+                    .attr("x", -adjustedSize)
+                    .attr("y", -adjustedSize)
+                    .attr("width", adjustedSize * 2)
+                    .attr("height", adjustedSize * 2)
+                    .attr("fill", color);
+                  break;
+                case "triangle":
+                   adjustedSize = shapeSize * 1.1; // Slightly larger to appear similar
+                   group.append("path")
+                    .attr("d", d3.symbol().type(d3.symbolTriangle).size(adjustedSize * adjustedSize * 2.5)())
+                    .attr("fill", color);
+                  break;
+                case "star":
+                   adjustedSize = shapeSize * 1.1; // Slightly larger to appear similar
+                   group.append("path")
+                    .attr("d", d3.symbol().type(d3.symbolStar).size(adjustedSize * adjustedSize * 2.5)())
+                    .attr("fill", color);
+                  break;
+            }
+             // Add stroke to the shape element
+            group.selectAll("circle, rect, path")
+              .attr("stroke", "#fff")
+              .attr("stroke-width", 1);
+
+          } else {
+            // Multi code: Draw clipped shape segments (pie chart)
+
+            // Calculate total weight for portions (based on department count)
+            const totalWeight = departments.length; // Use total number of departments as weight
+            
+            // Calculate department weights (how many times each department appears)
+            const departmentCounts = {};
+            departments.forEach(dept => {
+                departmentCounts[dept] = (departmentCounts[dept] || 0) + 1;
+            });
+
+            // Create a group for shapes and apply clipping
+            const shapeContainer = group.append("g");
+
+            let currentAngle = 0;
+            // Sort departments to ensure consistent rendering order for pie slices
+            const sortedDepartmentEntries = Object.entries(departmentCounts).sort((a, b) => a[0].localeCompare(b[0]));
+
+            sortedDepartmentEntries.forEach(([dept, count]) => {
+              const portion = count / totalWeight;
+              const startAngle = currentAngle;
+              const endAngle = startAngle + portion * 360;
+
+              const shape = getShapeForDept(dept);
+              const color = majorColorMap.get(dept) || "#999";
+              
+              // Create a clip path for this portion (pie slice)
+              const clipPathId = `clip-${d.id}-${dept}-${startAngle}`;
+              const clipPath = svg.append("defs").append("clipPath")
+                .attr("id", clipPathId);
+              
+              const arc = d3.arc()
+                .innerRadius(0)
+                .outerRadius(shapeSize)
+                .startAngle(startAngle * Math.PI / 180)
+                .endAngle(endAngle * Math.PI / 180);
+              
+              clipPath.append("path")
+                .attr("d", arc());
+
+              // Create a group for this segment and apply the clip path
+              const shapeSegmentGroup = shapeContainer.append("g")
+                 .attr("clip-path", `url(#${clipPathId})`);
+
+              // Draw the full shape within the clipped area
+              let adjustedSize = shapeSize;
+               switch (shape) {
+                  case "circle":
+                    shapeSegmentGroup.append("circle")
+                      .attr("r", adjustedSize)
+                      .attr("fill", color);
+                    break;
+                  case "square":
+                    shapeSegmentGroup.append("rect")
+                      .attr("x", -adjustedSize)
+                      .attr("y", -adjustedSize)
+                      .attr("width", adjustedSize * 2)
+                      .attr("height", adjustedSize * 2)
+                      .attr("fill", color);
+                    break;
+                  case "triangle":
+                     adjustedSize = shapeSize * 1.1; // Slightly larger to appear similar
+                     shapeSegmentGroup.append("path")
+                      .attr("d", d3.symbol().type(d3.symbolTriangle).size(adjustedSize * adjustedSize * 2.5)())
+                      .attr("fill", color);
+                    break;
+                  case "star":
+                     adjustedSize = shapeSize * 1.1; // Slightly larger to appear similar
+                     shapeSegmentGroup.append("path")
+                      .attr("d", d3.symbol().type(d3.symbolStar).size(adjustedSize * adjustedSize * 2.5)())
+                      .attr("fill", color);
+                    break;
+              }
+
+              currentAngle = endAngle;
+            });
+
+            // Add stroke to the overall shape container
+            shapeContainer.attr("stroke", "#fff")
+              .attr("stroke-width", 1);
+          }
 
           group.style("cursor", "pointer").on("click", () => {
             const full = courseDetails.find((entry) =>
-              entry.course_codes.includes(d.id)
+              entry.course_codes.some(code => d.codes.includes(code))
             );
             setSelectedCourse(full || { course_title: "Unknown", ...d });
           });
-
-          switch (d.shape) {
-            case "circle":
-              group
-                .append("circle")
-                .attr("r", shapeSize)
-                .attr("fill", shapeColor)
-                .attr("stroke", "#fff")
-                .attr("stroke-width", 1);
-              break;
-            case "square":
-              group
-                .append("rect")
-                .attr("x", -shapeSize)
-                .attr("y", -shapeSize)
-                .attr("width", shapeSize * 2)
-                .attr("height", shapeSize * 2)
-                .attr("fill", shapeColor)
-                .attr("stroke", "#fff")
-                .attr("stroke-width", 0.5);
-              break;
-            case "triangle":
-              group
-                .append("path")
-                .attr(
-                  "d",
-                  d3
-                    .symbol()
-                    .type(d3.symbolTriangle)
-                    .size(shapeSize * shapeSize * 6)()
-                )
-                .attr("fill", shapeColor)
-                .attr("stroke", "#fff")
-                .attr("stroke-width", 1);
-              break;
-            case "star":
-              group
-                .append("path")
-                .attr(
-                  "d",
-                  d3
-                    .symbol()
-                    .type(d3.symbolStar)
-                    .size(shapeSize * shapeSize * 6)()
-                )
-                .attr("fill", shapeColor)
-                .attr("stroke", "#fff")
-                .attr("stroke-width", 1);
-              break;
-            default:
-              group
-                .append("circle")
-                .attr("r", shapeSize)
-                .attr("fill", shapeColor)
-                .attr("stroke", "#fff")
-                .attr("stroke-width", 1);
-          }
         });
 
+        // Update label handling
         nodeGroup
           .append("text")
           .attr("text-anchor", "middle")
           .attr("dy", (d) => -8 + Math.random() * 6 - 3)
           .attr("font-size", "7px")
           .attr("fill", "#333")
-          .text((d) => d.id);
+          .text((d) => d.codes.length > 1 ? `${d.codes[0]}...` : d.codes[0]);
 
         // === DEPARTMENT LEGEND (2-COLUMN LAYOUT) ===
         const legendPadding = 20;
@@ -374,7 +474,7 @@ export default function CourseSimilarityPrecomputedGraph({
                   d3
                     .symbol()
                     .type(d3.symbolTriangle)
-                    .size(size * size * 6)()
+                    .size(size * size * 4)() // Reverted size multiplier
                 )
                 .attr("fill", color);
               break;
@@ -386,7 +486,7 @@ export default function CourseSimilarityPrecomputedGraph({
                   d3
                     .symbol()
                     .type(d3.symbolStar)
-                    .size(size * size * 6)()
+                    .size(size * size * 4)() // Reverted size multiplier
                 )
                 .attr("fill", color);
               break;
@@ -463,7 +563,7 @@ export default function CourseSimilarityPrecomputedGraph({
                   d3
                     .symbol()
                     .type(d3.symbolTriangle)
-                    .size(size * size * 6)()
+                    .size(size * size * 4)() // Reverted size multiplier
                 )
                 .attr("fill", color);
               break;
@@ -475,7 +575,7 @@ export default function CourseSimilarityPrecomputedGraph({
                   d3
                     .symbol()
                     .type(d3.symbolStar)
-                    .size(size * size * 6)()
+                    .size(size * size * 4)() // Reverted size multiplier
                 )
                 .attr("fill", color);
               break;
@@ -506,7 +606,7 @@ export default function CourseSimilarityPrecomputedGraph({
           .style("font-size", "18px")
           .style("font-weight", "bold")
           .text(
-            `Course Similarity Network (Precomputed, ${mode.toUpperCase()})`
+            `Course Similarity Network`
           );
 
         setLoading(false);
@@ -552,9 +652,7 @@ export default function CourseSimilarityPrecomputedGraph({
       />
 
       <div className="absolute bottom-0 left-0 w-full bg-white/90 text-center text-sm py-2 border-t border-[#e8e2f2]">
-        Each point represents a course, positioned using precomputed similarity
-        scores. Shape indicates major group, and color distinguishes individual
-        departments.
+        Each point represents a course. Shape indicates major group, and color distinguishes individual departments.
       </div>
     </div>
   );

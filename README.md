@@ -43,3 +43,15 @@ npm run start
 - Manually clean the courses printed under `Courses that caused errors`
 
 **Network Graph**
+1. Create embeddings for each course
+- Output: `./output_courses_with_embeddings.json`
+
+2. Compute pairwise similarity scores
+- Output: `./course-visualization/src/data/output_courses_similarity.json`
+
+3. Apply t-SNE to generate coordinates for each course
+- `cd ./course-visualization/src/data/`
+- `python ./generate_precomputed_tsne.py`
+- Output: `./course-visualization/src/data/precomputed_tsne_coords.json`
+
+3. 
