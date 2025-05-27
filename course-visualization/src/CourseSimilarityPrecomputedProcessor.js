@@ -1,6 +1,8 @@
 import * as d3 from 'd3';
 import TSNE from 'tsne-js';
-import precomputedData from './data/output_courses_similarity.json';
+
+// Define the semester globally for this file
+const semester = '2324S'; // You can change this semester as needed
 
 // Extract unique course codes
 function getUniqueCourseCodes(data) {
@@ -38,7 +40,11 @@ function buildSimilarityMatrix(data, uniqueCodes, codeToIdx) {
   return matrix;
 }
 
-export function loadPrecomputedCourseData() {
+export async function loadPrecomputedCourseData() {
+  // Dynamically import the precomputed data based on the semester
+  const precomputedDataModule = await import(`../../similarity/output_similarity_${semester}.json`);
+  const precomputedData = precomputedDataModule.default;
+
   const uniqueCodes = getUniqueCourseCodes(precomputedData);
   const codeToIdx = getCourseCodeToIndexMap(uniqueCodes);
   const similarityMatrix = buildSimilarityMatrix(precomputedData, uniqueCodes, codeToIdx);
