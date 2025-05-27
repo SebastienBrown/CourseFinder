@@ -45,6 +45,9 @@ dist-ssr/
 *.pdf
 
 # --- Data files ---
+embeddings/*
+similarity/output_similarity_22*.json
+similarity/output_similarity_2324F.json
 **/csv/*
 **/log/*
 *.csv
@@ -62,5 +65,3 @@ dist-ssr/
 
 # --- Node.js dependencies ---
 node_modules/
-embeddings/*
-similarity/*
