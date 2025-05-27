@@ -78,8 +78,17 @@ def process_and_compute_similarities(input_file, output_file):
             courses = json.load(file)
             print("Courses loaded successfully.")
         
+        # Filter out courses without embeddings
+        courses_with_embeddings = [course for course in courses if 'embedding' in course]
+        if len(courses_with_embeddings) < len(courses):
+            print(f"Warning: {len(courses) - len(courses_with_embeddings)} courses were skipped due to missing embeddings")
+        
+        if not courses_with_embeddings:
+            print(f"Error: No courses with embeddings found in {input_file}")
+            return
+            
         # Compute the similarity matrix
-        result = compute_similarity_matrix(courses)
+        result = compute_similarity_matrix(courses_with_embeddings)
         print("done")
         
         # Save the result to the output file
@@ -91,8 +100,11 @@ def process_and_compute_similarities(input_file, output_file):
         print(f"Error processing courses: {e}")
 
 # Input and output file paths
-input_file = 'output_courses_with_embeddings.json'  # Replace with your actual input file
-output_file = 'output_courses_similarity.json'  # Output file
+semesters = ['2223F', '2223S', '2324F', '2324S']
 
-# Process courses and compute similarities
-process_and_compute_similarities(input_file, output_file)
+for semester in semesters:
+    input_file = f'embeddings/output_embeddings_{semester}.json'  # Replace with your actual input file
+    output_file = f'similarity/output_similarity_{semester}.json'  # Output file
+
+    # Process courses and compute similarities
+    process_and_compute_similarities(input_file, output_file)

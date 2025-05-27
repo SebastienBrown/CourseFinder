@@ -13,7 +13,7 @@
 #SBATCH --output=CourseFinder/logs/course_scraper_%a.txt
 
 source /orcd/software/core/001/centos7/pkg/miniforge/24.3.0-0/etc/profile.d/conda.sh
-conda activate migrantjobs
+conda activate course_venv
 
 echo "Scraping Amherst courses..."
 python "CourseFinder/course_scraper.py"
