@@ -10,11 +10,13 @@ import {
   loadPrecomputedCourseData,
   applyPCA,
   applyTSNE,
+  useLoadData,
 } from "./CourseSimilarityPrecomputedProcessor";
 import precomputedTSNECoords from "./data/precomputed_tsne_coords.json";
-const semester = '2324S';
-import courseDetails from `../../llm_cleaned/amherst_courses_${semester}.json`;
 import CoursePopup from "./CoursePopup";
+
+// Define the semester globally
+const semester = '2324S'; // You can change this semester as needed
 
 // === Tranche & Shape Definitions ===
 const TRANCHE_SHAPES = {
@@ -87,6 +89,9 @@ export default function CourseSimilarityPrecomputedGraph({
   const [svgReady, setSvgReady] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [graphData, setGraphData] = useState(null);
+  const [courseDetailsData, setCourseDetailsData] = useState(null);
+  const [tsneCoords, setTsneCoords] = useState(null);
   const [dimensions, setDimensions] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
@@ -106,234 +111,258 @@ export default function CourseSimilarityPrecomputedGraph({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useLayoutEffect(() => {
-    async function initializeGraph() {
+  useEffect(() => {
+    async function loadData() {
       try {
         setLoading(true);
-        if (!svgRef.current) {
-          console.error("[Graph] SVG element is null, skipping D3 drawing.");
-          setLoading(false);
-          return;
+        const { courses, similarityMatrix } = await loadPrecomputedCourseData(semester);
+        setGraphData({ courses, similarityMatrix });
+
+        const courseDetailsModule = await import(`../../llm_cleaned/amherst_courses_${semester}.json`);
+        setCourseDetailsData(courseDetailsModule.default);
+
+        const tsneCoordsModule = await import("./data/precomputed_tsne_coords.json");
+        setTsneCoords(tsneCoordsModule.default);
+
+        setLoading(false);
+      } catch (err) {
+        console.error("Error loading data:", err);
+        setError(err.message);
+        setLoading(false);
+      }
+    }
+    loadData();
+  }, [semester]);
+
+  useLayoutEffect(() => {
+    // Ensure SVG is ready and all necessary data is loaded and in expected format
+    if (!svgReady || !graphData || !courseDetailsData || !tsneCoords ||
+        !Array.isArray(tsneCoords) || tsneCoords.length === 0 ||
+        !Array.isArray(courseDetailsData) || courseDetailsData.length === 0) {
+      return;
+    }
+
+    try {
+      const { courses, similarityMatrix } = graphData;
+      const courseDetails = courseDetailsData;
+      const precomputedTSNECoords = tsneCoords;
+      let coordinates;
+
+      if (mode === "pca") {
+        coordinates = applyPCA(similarityMatrix);
+      } else {
+        const codeToIndex = new Map(courses.map((c, i) => [c.code, i]));
+        coordinates = Array(courses.length)
+          .fill()
+          .map(() => [NaN, NaN]);
+        precomputedTSNECoords.forEach(({ code, x, y }) => {
+          const idx = codeToIndex.get(code);
+          if (idx !== undefined) {
+            coordinates[idx] = [x, y];
+          }
+        });
+      }
+
+      const allMajors = Object.values(TRANCHES).flat();
+      const colorPalette = d3.schemePastel1.concat(d3.schemePastel2);
+      const majorColorMap = new Map();
+      let colorIndex = 0;
+      for (const tranche of Object.values(TRANCHES)) {
+        for (const major of tranche) {
+          if (!majorColorMap.has(major)) {
+            majorColorMap.set(
+              major,
+              colorPalette[colorIndex % colorPalette.length]
+            );
+            colorIndex++;
+          }
         }
+      }
 
-        const { courses, similarityMatrix } = loadPrecomputedCourseData();
-        let coordinates;
+      const nodes = courses
+        .map((course, i) => {
+          const [x, y] = coordinates[i];
+          if (!Number.isFinite(x) || !Number.isFinite(y)) return null;
+          return {
+            id: course.code,
+            x,
+            y,
+            department: course.department,
+            codes: [course.code], // Initialize with single code
+            shape: getShapeForDept(course.department),
+            color: majorColorMap.get(course.department) || "#999",
+            highlighted: highlighted.includes(course.code),
+            conflicted: conflicted.includes(course.code),
+          };
+        })
+        .filter((node) => node && !node.conflicted);
 
-        if (mode === "pca") {
-          coordinates = applyPCA(similarityMatrix);
+      // Merge nodes with the same coordinates
+      const mergedNodes = new Map();
+      precomputedTSNECoords.forEach(({ codes, x, y }) => {
+        const key = `${x},${y}`;
+        if (!mergedNodes.has(key)) {
+          const firstCode = codes[0];
+          const dept = firstCode.split('-')[0];
+          mergedNodes.set(key, {
+            id: firstCode,
+            x,
+            y,
+            department: dept,
+            codes: codes,
+            shape: getShapeForDept(dept),
+            color: majorColorMap.get(dept) || "#999",
+            highlighted: codes.some(code => highlighted.includes(code)),
+            conflicted: codes.some(code => conflicted.includes(code)),
+          });
         } else {
-          const codeToIndex = new Map(courses.map((c, i) => [c.code, i]));
-          coordinates = Array(courses.length)
-            .fill()
-            .map(() => [NaN, NaN]);
-          precomputedTSNECoords.forEach(({ code, x, y }) => {
-            const idx = codeToIndex.get(code);
-            if (idx !== undefined) {
-              coordinates[idx] = [x, y];
-            }
-          });
+          const node = mergedNodes.get(key);
+          node.codes = [...new Set([...node.codes, ...codes])];
+          // Update department based on all codes
+          const departments = node.codes.map(code => code.split('-')[0]);
+          node.department = departments[0]; // Keep first department as primary
+          node.shape = getShapeForDept(node.department);
+          node.color = majorColorMap.get(node.department) || "#999";
+          node.highlighted = node.codes.some(code => highlighted.includes(code));
+          node.conflicted = node.codes.some(code => conflicted.includes(code));
         }
+      });
 
-        const allMajors = Object.values(TRANCHES).flat();
-        const colorPalette = d3.schemePastel1.concat(d3.schemePastel2);
-        const majorColorMap = new Map();
-        let colorIndex = 0;
-        for (const tranche of Object.values(TRANCHES)) {
-          for (const major of tranche) {
-            if (!majorColorMap.has(major)) {
-              majorColorMap.set(
-                major,
-                colorPalette[colorIndex % colorPalette.length]
-              );
-              colorIndex++;
-            }
-          }
-        }
+      const finalNodes = Array.from(mergedNodes.values());
 
-        const nodes = courses
-          .map((course, i) => {
-            const [x, y] = coordinates[i];
-            if (!Number.isFinite(x) || !Number.isFinite(y)) return null;
-            return {
-              id: course.code,
-              x,
-              y,
-              department: course.department,
-              codes: [course.code], // Initialize with single code
-              shape: getShapeForDept(course.department),
-              color: majorColorMap.get(course.department) || "#999",
-              highlighted: highlighted.includes(course.code),
-              conflicted: conflicted.includes(course.code),
-            };
-          })
-          .filter((node) => node && !node.conflicted);
+      const width = dimensions.width;
+      const height = dimensions.height;
+      const svg = d3.select(svgRef.current);
+      svg.selectAll("*").remove();
+      svg
+        .attr("width", width)
+        .attr("height", height)
+        .attr("viewBox", `0 0 ${width} ${height}`);
 
-        // Merge nodes with the same coordinates
-        const mergedNodes = new Map();
-        precomputedTSNECoords.forEach(({ codes, x, y }) => {
-          const key = `${x},${y}`;
-          if (!mergedNodes.has(key)) {
-            const firstCode = codes[0];
-            const dept = firstCode.split('-')[0];
-            mergedNodes.set(key, {
-              id: firstCode,
-              x,
-              y,
-              department: dept,
-              codes: codes,
-              shape: getShapeForDept(dept),
-              color: majorColorMap.get(dept) || "#999",
-              highlighted: codes.some(code => highlighted.includes(code)),
-              conflicted: codes.some(code => conflicted.includes(code)),
-            });
-          } else {
-            const node = mergedNodes.get(key);
-            node.codes = [...new Set([...node.codes, ...codes])];
-            // Update department based on all codes
-            const departments = node.codes.map(code => code.split('-')[0]);
-            node.department = departments[0]; // Keep first department as primary
-            node.shape = getShapeForDept(node.department);
-            node.color = majorColorMap.get(node.department) || "#999";
-            node.highlighted = node.codes.some(code => highlighted.includes(code));
-            node.conflicted = node.codes.some(code => conflicted.includes(code));
-          }
+      // Add zoom behavior
+      const zoom = d3.zoom()
+        .scaleExtent([0.5, 8]) // Min and max zoom levels
+        .on("zoom", (event) => {
+          g.attr("transform", event.transform);
         });
 
-        const finalNodes = Array.from(mergedNodes.values());
+      svg.call(zoom);
 
-        const width = dimensions.width;
-        const height = dimensions.height;
-        const svg = d3.select(svgRef.current);
-        svg.selectAll("*").remove();
-        svg
-          .attr("width", width)
-          .attr("height", height)
-          .attr("viewBox", `0 0 ${width} ${height}`);
+      // Add a reset zoom button
+      const resetButton = svg.append("g")
+        .attr("class", "reset-zoom")
+        .attr("transform", `translate(${width - 100}, 20)`)
+        .style("cursor", "pointer");
 
-        // Add zoom behavior
-        const zoom = d3.zoom()
-          .scaleExtent([0.5, 8]) // Min and max zoom levels
-          .on("zoom", (event) => {
-            g.attr("transform", event.transform);
-          });
+      resetButton.append("rect")
+        .attr("width", 80)
+        .attr("height", 30)
+        .attr("rx", 5)
+        .attr("fill", "rgba(249, 247, 251, 0.95)")
+        .attr("stroke", "#e8e2f2")
+        .attr("stroke-width", 1);
 
-        svg.call(zoom);
+      resetButton.append("text")
+        .attr("x", 40)
+        .attr("y", 20)
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "middle")
+        .style("font-size", "12px")
+        .text("Reset View");
 
-        // Add a reset zoom button
-        const resetButton = svg.append("g")
-          .attr("class", "reset-zoom")
-          .attr("transform", `translate(${width - 100}, 20)`)
-          .style("cursor", "pointer");
+      resetButton.on("click", () => {
+        svg.transition()
+          .duration(750)
+          .call(zoom.transform, d3.zoomIdentity);
+      });
 
-        resetButton.append("rect")
-          .attr("width", 80)
-          .attr("height", 30)
-          .attr("rx", 5)
-          .attr("fill", "rgba(249, 247, 251, 0.95)")
-          .attr("stroke", "#e8e2f2")
-          .attr("stroke-width", 1);
+      const g = svg.append("g");
 
-        resetButton.append("text")
-          .attr("x", 40)
-          .attr("y", 20)
-          .attr("text-anchor", "middle")
-          .attr("dominant-baseline", "middle")
-          .style("font-size", "12px")
-          .text("Reset View");
+      g.append("rect")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("fill", "#f9f7fb");
 
-        resetButton.on("click", () => {
-          svg.transition()
-            .duration(750)
-            .call(zoom.transform, d3.zoomIdentity);
-        });
+      // Calculate the legend space requirements
+      const deptEntries = [...majorColorMap.entries()];
+      const legendItemHeight = 20;
+      const legendItemWidth = 80; // Width for each column (reduced)
+      const colCount = 2; // Left legend columns
+      
+      // Left legend dimensions
+      const leftLegendWidth = legendItemWidth * colCount + 30; // Added padding (reduced)
+      const leftLegendHeight = Math.ceil(deptEntries.length / colCount) * legendItemHeight + 40;
+      
+      // Right legend dimensions
+      const rightLegendWidth = leftLegendWidth; // Reduced width
+      
+      // Create padding for chart area
+      const topPadding = 80; // Title space
+      const bottomPadding = 40; // Footer space
+      const leftPadding = leftLegendWidth;
+      const rightPadding = rightLegendWidth + 20;
+      
+      const xExtent = d3.extent(finalNodes, (d) => d.x);
+      const yExtent = d3.extent(finalNodes, (d) => d.y);
 
-        const g = svg.append("g");
+      // Add some padding inside the data extent to avoid drawing to the very edge
+      const xMargin = (xExtent[1] - xExtent[0]) * 0.05;
+      const yMargin = (yExtent[1] - yExtent[0]) * 0.05;
 
-        g.append("rect")
-          .attr("width", width)
-          .attr("height", height)
-          .attr("fill", "#f9f7fb");
+      const xScale = d3
+        .scaleLinear()
+        .domain([xExtent[0] - xMargin, xExtent[1] + xMargin])
+        .range([leftPadding, width - rightPadding]);
 
-        // Calculate the legend space requirements
-        const deptEntries = [...majorColorMap.entries()];
-        const legendItemHeight = 20;
-        const legendItemWidth = 80; // Width for each column (reduced)
-        const colCount = 2; // Left legend columns
+      const yScale = d3
+        .scaleLinear()
+        .domain([yExtent[0] - yMargin, yExtent[1] + yMargin])
+        .range([topPadding, height - bottomPadding]);
+
+
+      const nodeGroup = g
+        .append("g")
+        .selectAll("g")
+        .data(finalNodes)
+        .enter()
+        .append("g")
+        .attr("transform", (d) => `translate(${xScale(d.x)},${yScale(d.y)})`);
+
+      nodeGroup.each(function (d) {
+        const group = d3.select(this);
+        const baseSize = 6;
+        const shapeSize = d.highlighted ? baseSize * 1.5 : baseSize;
+
+        // Get all departments for this course
+        const departments = d.codes.map(code => code.split('-')[0]);
+        const uniqueDepts = [...new Set(departments)];
         
-        // Left legend dimensions
-        const leftLegendWidth = legendItemWidth * colCount + 30; // Added padding (reduced)
-        const leftLegendHeight = Math.ceil(deptEntries.length / colCount) * legendItemHeight + 40;
-        
-        // Right legend dimensions
-        const rightLegendWidth = leftLegendWidth; // Reduced width
-        
-        // Create padding for chart area
-        const topPadding = 80; // Title space
-        const bottomPadding = 40; // Footer space
-        const leftPadding = leftLegendWidth;
-        const rightPadding = rightLegendWidth + 20;
-        
-        const xExtent = d3.extent(finalNodes, (d) => d.x);
-        const yExtent = d3.extent(finalNodes, (d) => d.y);
+        // Define scaling factor for non-circle shapes in single-code nodes
+        const singleShapeScale = 0.7; // Adjust this value to scale down non-circle shapes
 
-        // Add some padding inside the data extent to avoid drawing to the very edge
-        const xMargin = (xExtent[1] - xExtent[0]) * 0.05;
-        const yMargin = (yExtent[1] - yExtent[0]) * 0.05;
+        // Handle single vs. multi-code nodes
+        if (d.codes.length === 1) {
+          // Single code: Draw a single, unclipped shape
+          const dept = departments[0];
+          const shape = getShapeForDept(dept);
+          const color = majorColorMap.get(dept) || "#999";
 
-        const xScale = d3
-          .scaleLinear()
-          .domain([xExtent[0] - xMargin, xExtent[1] + xMargin])
-          .range([leftPadding, width - rightPadding]);
-
-        const yScale = d3
-          .scaleLinear()
-          .domain([yExtent[0] - yMargin, yExtent[1] + yMargin])
-          .range([topPadding, height - bottomPadding]);
-
-
-        const nodeGroup = g
-          .append("g")
-          .selectAll("g")
-          .data(finalNodes)
-          .enter()
-          .append("g")
-          .attr("transform", (d) => `translate(${xScale(d.x)},${yScale(d.y)})`);
-
-        nodeGroup.each(function (d) {
-          const group = d3.select(this);
-          const baseSize = 6;
-          const shapeSize = d.highlighted ? baseSize * 1.5 : baseSize;
-
-          // Get all departments for this course
-          const departments = d.codes.map(code => code.split('-')[0]);
-          const uniqueDepts = [...new Set(departments)];
-          
-          // Define scaling factor for non-circle shapes in single-code nodes
-          const singleShapeScale = 0.7; // Adjust this value to scale down non-circle shapes
-
-          // Handle single vs. multi-code nodes
-          if (d.codes.length === 1) {
-            // Single code: Draw a single, unclipped shape
-            const dept = departments[0];
-            const shape = getShapeForDept(dept);
-            const color = majorColorMap.get(dept) || "#999";
-
-            let size = shapeSize; // Use base shapeSize
-             switch (shape) {
-                case "circle":
-                  group.append("circle")
-                    .attr("r", size)
-                    .attr("fill", color);
-                  break;
-                case "square":
-                  size = shapeSize * singleShapeScale; // Apply scale
-                   group.append("rect")
-                    .attr("x", -size)
-                    .attr("y", -size)
-                    .attr("width", size * 2.5)
-                    .attr("height", size * 2.5)
-                    .attr("fill", color);
-                  break;
+          let size = shapeSize; // Use base shapeSize
+           switch (shape) {
+              case "circle":
+                group.append("circle")
+                  .attr("r", size)
+                  .attr("fill", color);
+                break;
+              case "square":
+                size = shapeSize * singleShapeScale; // Apply scale
+                 group.append("rect")
+                  .attr("x", -size)
+                  .attr("y", -size)
+                  .attr("width", size * 2.5)
+                  .attr("height", size * 2.5)
+                  .attr("fill", color);
+                break;
                 case "triangle":
                    size = shapeSize * singleShapeScale; // Apply scale
                    const triangleSymbolSize = size * size * 3; 
@@ -350,332 +379,328 @@ export default function CourseSimilarityPrecomputedGraph({
                   break;
             }
 
-          } else {
-            // Multi code: Draw clipped shape segments (pie chart)
+        } else {
+          // Multi code: Draw clipped shape segments (pie chart)
 
-            // Calculate total weight for portions (based on department count)
-            const totalWeight = departments.length; // Use total number of departments as weight
-            
-            // Calculate department weights (how many times each department appears)
-            const departmentCounts = {};
-            departments.forEach(dept => {
-                departmentCounts[dept] = (departmentCounts[dept] || 0) + 1;
-            });
-
-            // Create a group for shapes and apply clipping
-            const shapeContainer = group.append("g");
-
-            let currentAngle = 0;
-            // Sort departments to ensure consistent rendering order for pie slices
-            const sortedDepartmentEntries = Object.entries(departmentCounts).sort((a, b) => a[0].localeCompare(b[0]));
-
-            // Define scaling factor for non-circle shapes in multi-code nodes
-            const multiShapeScale = 0.8; // Adjust this value to control size difference relative to single-code
-
-            sortedDepartmentEntries.forEach(([dept, count]) => {
-              const portion = count / totalWeight;
-              const startAngle = currentAngle;
-              const endAngle = startAngle + portion * 360;
-
-              const shape = getShapeForDept(dept);
-              const color = majorColorMap.get(dept) || "#999";
-              
-              // Create a clip path for this portion (pie slice)
-              const clipPathId = `clip-${d.id}-${dept}-${startAngle}`;
-              const clipPath = svg.append("defs").append("clipPath")
-                .attr("id", clipPathId);
-              
-              const arc = d3.arc()
-                .innerRadius(0)
-                .outerRadius(shapeSize)
-                .startAngle(startAngle * Math.PI / 180)
-                .endAngle(endAngle * Math.PI / 180);
-              
-              clipPath.append("path")
-                .attr("d", arc());
-
-              // Create a group for this segment and apply the clip path
-              const shapeSegmentGroup = shapeContainer.append("g")
-                 .attr("clip-path", `url(#${clipPathId})`);
-
-              // Draw the full shape within the clipped area with adjusted size for non-circles
-              let currentShapeSize = shapeSize; // Start with base size
-               switch (shape) {
-                  case "circle":
-                    // Circle size remains the same as single-code
-                    shapeSegmentGroup.append("circle")
-                      .attr("r", currentShapeSize)
-                      .attr("fill", color);
-                    break;
-                  case "square":
-                    // Scale down square size for multi-code
-                    currentShapeSize = shapeSize * multiShapeScale; // Apply multi-shape scale
-                    shapeSegmentGroup.append("rect")
-                      .attr("x", -currentShapeSize)
-                      .attr("y", -currentShapeSize)
-                      .attr("width", currentShapeSize * 2)
-                      .attr("height", currentShapeSize * 2)
-                      .attr("fill", color);
-                    break;
-                  case "triangle":
-                    // Scale down triangle size for multi-code, maintaining visual proportion
-                    currentShapeSize = shapeSize * multiShapeScale; // Apply multi-shape scale
-                    const multiTriangleSymbolSize = currentShapeSize * currentShapeSize * 3; // Use same area multiplier as single-code
-                     shapeSegmentGroup.append("path")
-                      .attr("d", d3.symbol().type(d3.symbolTriangle).size(multiTriangleSymbolSize)())
-                      .attr("fill", color);
-                    break;
-                  case "star":
-                    // Scale down star size for multi-code, maintaining visual proportion
-                    currentShapeSize = shapeSize * multiShapeScale; // Apply multi-shape scale
-                    const multiStarSymbolSize = currentShapeSize * currentShapeSize * 2.7; // Use same area multiplier as single-code
-                     shapeSegmentGroup.append("path")
-                      .attr("d", d3.symbol().type(d3.symbolStar).size(multiStarSymbolSize)())
-                      .attr("fill", color);
-                    break;
-              }
-
-              currentAngle = endAngle;
-            });
-          }
-
-          group.style("cursor", "pointer").on("click", () => {
-            const full = courseDetails.find((entry) =>
-              entry.course_codes.some(code => d.codes.includes(code))
-            );
-            setSelectedCourse(full || { course_title: "Unknown", ...d });
+          // Calculate total weight for portions (based on department count)
+          const totalWeight = departments.length; // Use total number of departments as weight
+          
+          // Calculate department weights (how many times each department appears)
+          const departmentCounts = {};
+          departments.forEach(dept => {
+              departmentCounts[dept] = (departmentCounts[dept] || 0) + 1;
           });
-        });
 
-        // Update label handling to scale with zoom
-        nodeGroup
-          .append("text")
-          .attr("text-anchor", "middle")
-          .attr("dy", (d) => -8 + Math.random() * 6 - 3)
-          .attr("font-size", "7px")
-          .attr("fill", "#333")
-          .attr("class", "node-label") // Add class for styling
-          .text((d) => d.codes.length > 1 ? `${d.codes[0]}...` : d.codes[0]);
+          // Create a group for shapes and apply clipping
+          const shapeContainer = group.append("g");
 
-        // === DEPARTMENT LEGEND (2-COLUMN LAYOUT) ===
-        const legendPadding = 20;
-        const legendItemCount = deptEntries.length;
-        const legendRows = Math.ceil(legendItemCount / colCount);
-        
-        // Create background for legend
-        svg.append("rect")
-          .attr("x", legendPadding - 10)
-          .attr("y", legendPadding - 10)
-          .attr("width", leftLegendWidth - 20)
-          .attr("height", leftLegendHeight)
-          .attr("fill", "rgba(249, 247, 251, 0.95)")
-          .attr("stroke", "#e8e2f2")
-          .attr("stroke-width", 1)
-          .attr("rx", 5);
-        
-        // Add title to legend
-        svg.append("text")
-          .attr("x", legendPadding)
-          .attr("y", legendPadding + 15)
-          .attr("text-anchor", "start")
-          .style("font-weight", "bold")
-          .style("font-size", "14px")
-          .text("Departments");
-          
-        const legend = svg
-          .append("g")
-          .attr("transform", `translate(${legendPadding}, ${legendPadding + 30})`)
-          .attr("class", "legend");
+          let currentAngle = 0;
+          // Sort departments to ensure consistent rendering order for pie slices
+          const sortedDepartmentEntries = Object.entries(departmentCounts).sort((a, b) => a[0].localeCompare(b[0]));
 
-        deptEntries.forEach((entry, i) => {
-          const [dept, color] = entry;
-          const col = Math.floor(i / legendRows);
-          const row = i % legendRows;
-          
-          const legendItem = legend
-            .append("g")
-            .attr("transform", `translate(${col * legendItemWidth}, ${row * legendItemHeight})`);
+          // Define scaling factor for non-circle shapes in multi-code nodes
+          const multiShapeScale = 0.8; // Adjust this value to control size difference relative to single-code
 
-          const shape = getShapeForDept(dept);
-          const size = 6;
+          sortedDepartmentEntries.forEach(([dept, count]) => {
+            const portion = count / totalWeight;
+            const startAngle = currentAngle;
+            const endAngle = startAngle + portion * 360;
 
-          switch (shape) {
-            case "circle":
-              legendItem.append("circle")
-                .attr("r", size)
-                .attr("fill", color);
-              break;
-            case "square":
-              legendItem
-                .append("rect")
-                .attr("x", -size)
-                .attr("y", -size)
-                .attr("width", size * 2)
-                .attr("height", size * 2)
-                .attr("fill", color);
-              break;
-            case "triangle":
-              legendItem
-                .append("path")
-                .attr(
-                  "d",
-                  d3
-                    .symbol()
-                    .type(d3.symbolTriangle)
-                    .size(size * size * 4)() // Reverted size multiplier
-                )
-                .attr("fill", color);
-              break;
-            case "star":
-              legendItem
-                .append("path")
-                .attr(
-                  "d",
-                  d3
-                    .symbol()
-                    .type(d3.symbolStar)
-                    .size(size * size * 4)() // Reverted size multiplier
-                )
-                .attr("fill", color);
-              break;
-          }
+            const shape = getShapeForDept(dept);
+            const color = majorColorMap.get(dept) || "#999";
+            
+            // Create a clip path for this portion (pie slice)
+            const clipPathId = `clip-${d.id}-${dept}-${startAngle}`;
+            const clipPath = svg.append("defs").append("clipPath")
+              .attr("id", clipPathId);
+            
+            const arc = d3.arc()
+              .innerRadius(0)
+              .outerRadius(shapeSize)
+              .startAngle(startAngle * Math.PI / 180)
+              .endAngle(endAngle * Math.PI / 180);
+            
+            clipPath.append("path")
+              .attr("d", arc());
 
-          legendItem
-            .append("text")
-            .attr("x", 10)
-            .attr("y", 5)
-            .text(dept)
-            .style("font-size", "10px");
-        });
+            // Create a group for this segment and apply the clip path
+            const shapeSegmentGroup = shapeContainer.append("g")
+               .attr("clip-path", `url(#${clipPathId})`);
 
-        // === TRANCHE SHAPE LEGEND (RIGHT SIDE) ===
-        const shapeEntries = Object.entries(TRANCHE_SHAPES);
-        const shapeLegendX = legendPadding;
-        const shapeLegendY = leftLegendHeight+25;
-        const shapeLegendHeight = shapeEntries.length * legendItemHeight + 30;
-        
-        // Background for shape legend
-        svg.append("rect")
-          .attr("x", shapeLegendX - 10)
-          .attr("y", shapeLegendY - 10)
-          .attr("width", leftLegendWidth-20)
-          .attr("height", shapeLegendHeight)
-          .attr("fill", "rgba(249, 247, 251, 0.95)")
-          .attr("stroke", "#e8e2f2")
-          .attr("stroke-width", 1)
-          .attr("rx", 5);
-          
-        const shapeLegend = svg
-          .append("g")
-          .attr("transform", `translate(${shapeLegendX}, ${shapeLegendY})`)
-          .attr("class", "shape-legend");
+            // Draw the full shape within the clipped area with adjusted size for non-circles
+            let currentShapeSize = shapeSize; // Start with base size
+             switch (shape) {
+                case "circle":
+                  // Circle size remains the same as single-code
+                  shapeSegmentGroup.append("circle")
+                    .attr("r", currentShapeSize)
+                    .attr("fill", color);
+                  break;
+                case "square":
+                  // Scale down square size for multi-code
+                  currentShapeSize = shapeSize * multiShapeScale; // Apply multi-shape scale
+                  shapeSegmentGroup.append("rect")
+                    .attr("x", -currentShapeSize)
+                    .attr("y", -currentShapeSize)
+                    .attr("width", currentShapeSize * 2)
+                    .attr("height", currentShapeSize * 2)
+                    .attr("fill", color);
+                  break;
+                case "triangle":
+                  // Scale down triangle size for multi-code, maintaining visual proportion
+                  currentShapeSize = shapeSize * multiShapeScale; // Apply multi-shape scale
+                  const multiTriangleSymbolSize = currentShapeSize * currentShapeSize * 3; // Use same area multiplier as single-code
+                   shapeSegmentGroup.append("path")
+                    .attr("d", d3.symbol().type(d3.symbolTriangle).size(multiTriangleSymbolSize)())
+                    .attr("fill", color);
+                  break;
+                case "star":
+                  // Scale down star size for multi-code, maintaining visual proportion
+                  currentShapeSize = shapeSize * multiShapeScale; // Apply multi-shape scale
+                  const multiStarSymbolSize = currentShapeSize * currentShapeSize * 2.7; // Use same area multiplier as single-code
+                   shapeSegmentGroup.append("path")
+                    .attr("d", d3.symbol().type(d3.symbolStar).size(multiStarSymbolSize)())
+                    .attr("fill", color);
+                  break;
+            }
 
-        // Title for shape legend
-        shapeLegend
-          .append("text")
-          .attr("x", 0)
-          .attr("y", 5)
-          .text("Department Groups")
-          .style("font-weight", "bold")
-          .style("font-size", "14px");
+            currentAngle = endAngle;
+          });
+        }
 
-        shapeEntries.forEach(([tranche, shapeType], i) => {
-          const legendItem = shapeLegend
-            .append("g")
-            .attr("transform", `translate(0, ${i * legendItemHeight + 25})`);
-
-          const size = 6;
-          // Use a standard color for the shape legend
-          const color = "#666";
-
-          switch (shapeType) {
-            case "circle":
-              legendItem.append("circle")
-                .attr("r", size)
-                .attr("fill", color);
-              break;
-            case "square":
-              legendItem
-                .append("rect")
-                .attr("x", -size)
-                .attr("y", -size)
-                .attr("width", size * 2)
-                .attr("height", size * 2)
-                .attr("fill", color);
-              break;
-            case "triangle":
-              legendItem
-                .append("path")
-                .attr(
-                  "d",
-                  d3
-                    .symbol()
-                    .type(d3.symbolTriangle)
-                    .size(size * size * 4)() // Reverted size multiplier
-                )
-                .attr("fill", color);
-              break;
-            case "star":
-              legendItem
-                .append("path")
-                .attr(
-                  "d",
-                  d3
-                    .symbol()
-                    .type(d3.symbolStar)
-                    .size(size * size * 4)() // Reverted size multiplier
-                )
-                .attr("fill", color);
-              break;
-          }
-
-          legendItem
-            .append("text")
-            .attr("x", 12)
-            .attr("y", 5)
-            .text(tranche.charAt(0).toUpperCase() + tranche.slice(1)) // Capitalize
-            .style("font-size", "10px");
-        });
-
-        // Optional: Add a visual separator between legends and graph
-        svg.append("rect")
-          .attr("x", leftPadding - 10)
-          .attr("y", 0)
-          .attr("width", 1)
-          .attr("height", height)
-          .attr("fill", "#e8e2f2");
-
-        // Main title with adjusted positioning
-        svg
-          .append("text")
-          .attr("x", leftPadding + (width - leftPadding - rightPadding) / 2)
-          .attr("y", topPadding * 0.6)
-          .attr("text-anchor", "middle")
-          .style("font-size", "18px")
-          .style("font-weight", "bold")
-          .text(
-            `Course Similarity Network`
+        group.style("cursor", "pointer").on("click", () => {
+          const full = courseDetails.find((entry) =>
+            entry.course_codes.some(code => d.codes.includes(code))
           );
+          setSelectedCourse(full || { course_title: "Unknown", ...d });
+        });
+      });
 
-        // Add CSS to handle label scaling
-        const style = document.createElement('style');
-        style.textContent = `
-          .node-label {
-            pointer-events: none;
-            text-rendering: geometricPrecision;
-          }
-        `;
-        document.head.appendChild(style);
+      // Update label handling to scale with zoom
+      nodeGroup
+        .append("text")
+        .attr("text-anchor", "middle")
+        .attr("dy", (d) => -8 + Math.random() * 6 - 3)
+        .attr("font-size", "7px")
+        .attr("fill", "#333")
+        .attr("class", "node-label") // Add class for styling
+        .text((d) => d.codes.length > 1 ? `${d.codes[0]}...` : d.codes[0]);
 
-        setLoading(false);
-      } catch (err) {
-        setError(err.message);
-        setLoading(false);
-      }
-    }
+      // === DEPARTMENT LEGEND (2-COLUMN LAYOUT) ===
+      const legendPadding = 20;
+      const legendItemCount = deptEntries.length;
+      const legendRows = Math.ceil(legendItemCount / colCount);
+      
+      // Create background for legend
+      svg.append("rect")
+        .attr("x", legendPadding - 10)
+        .attr("y", legendPadding - 10)
+        .attr("width", leftLegendWidth - 20)
+        .attr("height", leftLegendHeight)
+        .attr("fill", "rgba(249, 247, 251, 0.95)")
+        .attr("stroke", "#e8e2f2")
+        .attr("stroke-width", 1)
+        .attr("rx", 5);
+      
+      // Add title to legend
+      svg.append("text")
+        .attr("x", legendPadding)
+        .attr("y", legendPadding + 15)
+        .attr("text-anchor", "start")
+        .style("font-weight", "bold")
+        .style("font-size", "14px")
+        .text("Departments");
+        
+      const legend = svg
+        .append("g")
+        .attr("transform", `translate(${legendPadding}, ${legendPadding + 30})`)
+        .attr("class", "legend");
 
-    if (svgReady) {
-      initializeGraph();
+      deptEntries.forEach((entry, i) => {
+        const [dept, color] = entry;
+        const col = Math.floor(i / legendRows);
+        const row = i % legendRows;
+        
+        const legendItem = legend
+          .append("g")
+          .attr("transform", `translate(${col * legendItemWidth}, ${row * legendItemHeight})`);
+
+        const shape = getShapeForDept(dept);
+        const size = 6;
+
+        switch (shape) {
+          case "circle":
+            legendItem.append("circle")
+              .attr("r", size)
+              .attr("fill", color);
+            break;
+          case "square":
+            legendItem
+              .append("rect")
+              .attr("x", -size)
+              .attr("y", -size)
+              .attr("width", size * 2)
+              .attr("height", size * 2)
+              .attr("fill", color);
+            break;
+          case "triangle":
+            legendItem
+              .append("path")
+              .attr(
+                "d",
+                d3
+                  .symbol()
+                  .type(d3.symbolTriangle)
+                  .size(size * size * 4)() // Reverted size multiplier
+              )
+              .attr("fill", color);
+            break;
+          case "star":
+            legendItem
+              .append("path")
+              .attr(
+                "d",
+                d3
+                  .symbol()
+                  .type(d3.symbolStar)
+                  .size(size * size * 4)() // Reverted size multiplier
+              )
+              .attr("fill", color);
+            break;
+        }
+
+        legendItem
+          .append("text")
+          .attr("x", 10)
+          .attr("y", 5)
+          .text(dept)
+          .style("font-size", "10px");
+      });
+
+      // === TRANCHE SHAPE LEGEND (RIGHT SIDE) ===
+      const shapeEntries = Object.entries(TRANCHE_SHAPES);
+      const shapeLegendX = legendPadding;
+      const shapeLegendY = leftLegendHeight+25;
+      const shapeLegendHeight = shapeEntries.length * legendItemHeight + 30;
+      
+      // Background for shape legend
+      svg.append("rect")
+        .attr("x", shapeLegendX - 10)
+        .attr("y", shapeLegendY - 10)
+        .attr("width", leftLegendWidth-20)
+        .attr("height", shapeLegendHeight)
+        .attr("fill", "rgba(249, 247, 251, 0.95)")
+        .attr("stroke", "#e8e2f2")
+        .attr("stroke-width", 1)
+        .attr("rx", 5);
+        
+      const shapeLegend = svg
+        .append("g")
+        .attr("transform", `translate(${shapeLegendX}, ${shapeLegendY})`)
+        .attr("class", "shape-legend");
+
+      // Title for shape legend
+      shapeLegend
+        .append("text")
+        .attr("x", 0)
+        .attr("y", 5)
+        .text("Department Groups")
+        .style("font-weight", "bold")
+        .style("font-size", "14px");
+
+      shapeEntries.forEach(([tranche, shapeType], i) => {
+        const legendItem = shapeLegend
+          .append("g")
+          .attr("transform", `translate(0, ${i * legendItemHeight + 25})`);
+
+        const size = 6;
+        // Use a standard color for the shape legend
+        const color = "#666";
+
+        switch (shapeType) {
+          case "circle":
+            legendItem.append("circle")
+              .attr("r", size)
+              .attr("fill", color);
+            break;
+          case "square":
+            legendItem
+              .append("rect")
+              .attr("x", -size)
+              .attr("y", -size)
+              .attr("width", size * 2)
+              .attr("height", size * 2)
+              .attr("fill", color);
+            break;
+          case "triangle":
+            legendItem
+              .append("path")
+              .attr(
+                "d",
+                d3
+                  .symbol()
+                  .type(d3.symbolTriangle)
+                  .size(size * size * 4)() // Reverted size multiplier
+              )
+              .attr("fill", color);
+            break;
+          case "star":
+            legendItem
+              .append("path")
+              .attr(
+                "d",
+                d3
+                  .symbol()
+                  .type(d3.symbolStar)
+                  .size(size * size * 4)() // Reverted size multiplier
+              )
+              .attr("fill", color);
+            break;
+        }
+
+        legendItem
+          .append("text")
+          .attr("x", 12)
+          .attr("y", 5)
+          .text(tranche.charAt(0).toUpperCase() + tranche.slice(1)) // Capitalize
+          .style("font-size", "10px");
+      });
+
+      // Optional: Add a visual separator between legends and graph
+      svg.append("rect")
+        .attr("x", leftPadding - 10)
+        .attr("y", 0)
+        .attr("width", 1)
+        .attr("height", height)
+        .attr("fill", "#e8e2f2");
+
+      // Main title with adjusted positioning
+      svg
+        .append("text")
+        .attr("x", leftPadding + (width - leftPadding - rightPadding) / 2)
+        .attr("y", topPadding * 0.6)
+        .attr("text-anchor", "middle")
+        .style("font-size", "18px")
+        .style("font-weight", "bold")
+        .text(
+          `Course Similarity Network`
+        );
+
+      // Add CSS to handle label scaling
+      const style = document.createElement('style');
+      style.textContent = `
+        .node-label {
+          pointer-events: none;
+          text-rendering: geometricPrecision;
+        }
+      `;
+      document.head.appendChild(style);
+
+      setLoading(false);
+    } catch (err) {
+      console.error('Error initializing graph:', err);
+      setError(err.message);
+      setLoading(false);
     }
   }, [
     dimensions,
@@ -683,6 +708,9 @@ export default function CourseSimilarityPrecomputedGraph({
     svgReady,
     JSON.stringify(highlighted),
     JSON.stringify(conflicted),
+    graphData,
+    courseDetailsData,
+    tsneCoords,
   ]);
 
   return (
