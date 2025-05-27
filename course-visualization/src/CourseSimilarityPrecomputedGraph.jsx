@@ -12,7 +12,8 @@ import {
   applyTSNE,
 } from "./CourseSimilarityPrecomputedProcessor";
 import precomputedTSNECoords from "./data/precomputed_tsne_coords.json";
-import courseDetails from "./data/amherst_courses_2324S.json";
+const semester = '2324S';
+import courseDetails from `../../llm_cleaned/amherst_courses_${semester}.json`;
 import CoursePopup from "./CoursePopup";
 
 // === Tranche & Shape Definitions ===

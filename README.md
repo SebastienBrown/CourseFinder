@@ -29,29 +29,28 @@ npm run start
 **Data Collection and Cleaning**
 
 1. Scraping:
-   `sbatch ./CourseFinder/course_scraper.sbatch`
+   `sbatch ./course_scraper.sbatch`
 
 2. To complete the scraping,
 
-- `sbatch ./CourseFinder/failed_links.sbatch`
+- `sbatch ./failed_links.sbatch`
 - Manually check the log of failed_links and add courses
 - Find course AMST 224 in amherst_courses_2526F.json and manually add course codes EDST/PSYC/AMST/AAPI 224
 
 3. To clean scraped data:
-
-- `sbatch ./CourseFinder/llm_parsing.sbatch`
+- `sbatch ./llm_parsing.sbatch`
 - Manually clean the courses printed under `Courses that caused errors`
 
 **Network Graph**
 1. Create embeddings for each course
-- Output: `./output_courses_with_embeddings.json`
+- `sbatch ./.sbatch`
+- Output: `./embeddings/output_embeddings_{semester}.json`
 
 2. Compute pairwise similarity scores
-- Output: `./course-visualization/src/data/output_courses_similarity.json`
+- `sbatch ./`
+- Output: `./similarity/output_similarity_{semester}.json`
 
-3. Apply t-SNE to generate coordinates for each course
+3. Apply t-SNE to compute coordinates for each course
 - `cd ./course-visualization/src/data/`
 - `python ./generate_precomputed_tsne.py`
 - Output: `./course-visualization/src/data/precomputed_tsne_coords.json`
-
-3. 

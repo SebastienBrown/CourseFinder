@@ -21,7 +21,8 @@ def separate_overlapping_points(coords, min_dist=1.0, step_size=0.1, num_iterati
     return coords
 
 # Load your similarity data
-with open('./output_courses_similarity.json', 'r') as f:
+semester = '2324F'
+with open(f'similarity/output_courses_similarity_{semester}.json', 'r') as f:
     data = json.load(f)
 
 out = ['499', '490', '390','498', '210F']

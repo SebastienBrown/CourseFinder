@@ -10,7 +10,7 @@ endpoint = os.environ["AZURE_OPENAI_ENDPOINT"]
 api_key= os.environ["AZURE_OPENAI_API_KEY"]
 
 if not endpoint or not api_key:
-    raise ValueError("Please set AZURE_OPENAI_ENDPOINT and AZURE_OPENAI_KEY environment variables")
+    raise ValueError("Please set AZURE_OPENAI_ENDPOINT and AZURE_OPENAI_API_KEY environment variables")
 
 def azure_openai_generate_embeddings(text, deployment_name):
     """
@@ -24,8 +24,6 @@ def azure_openai_generate_embeddings(text, deployment_name):
     Returns:
         list: The embedding vector.
     """
-    # Construct the API URL for the embedding endpoint
-    url = os.environ["AZURE_URL"]
     
     # Set up headers
     headers = {
@@ -40,7 +38,7 @@ def azure_openai_generate_embeddings(text, deployment_name):
     
     # Make the API call
     try:
-        response = requests.post(url, headers=headers, json=payload)
+        response = requests.post(endpoint, headers=headers, json=payload)
         response.raise_for_status()  # Raise exception for non-200 status codes
         return response.json()["data"][0]["embedding"]
     except requests.exceptions.RequestException as e:
@@ -70,12 +68,9 @@ def process_courses(input_file, output_file, deployment_name):
         print(f"The file {input_file} was not found.")
         return
 
-    # Process only the first 10 courses
-    courses_to_process = courses[:10]
-
     updated_courses = []
 
-    for course in courses_to_process:
+    for course in courses:
         description = course.get("description", "")
         
         if description:
@@ -99,9 +94,12 @@ def process_courses(input_file, output_file, deployment_name):
 
 
 # Input and output file paths
-input_file = "scraped/amherst_courses_2324S.json"  # Replace with your actual input file
-output_file = 'output_courses_with_embeddings.json'  # Output file
-deployment_name = "text-embedding-3-small"  # Replace with your actual deployment name
+semesters = ['2223F', '2223S', '2324F', '2324S']
 
-# Process courses and generate embeddings
-process_courses(input_file, output_file, deployment_name)
+for semester in semesters:
+    input_file = f"llm_cleaned/amherst_courses_{semester}.json"  # Replace with your actual input file
+    output_file = f'embeddings/output_embeddings_{semester}.json'  # Output file
+    deployment_name = "text-embedding-3-small"  # Replace with your actual deployment name
+
+    # Process courses and generate embeddings
+    process_courses(input_file, output_file, deployment_name)
