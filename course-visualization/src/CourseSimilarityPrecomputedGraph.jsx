@@ -12,7 +12,7 @@ import {
   applyTSNE,
   useLoadData,
 } from "./CourseSimilarityPrecomputedProcessor";
-import { CURRENT_SEMESTER, getSemesterDataPaths } from "./config/semesterConfig";
+import { CURRENT_SEMESTER, AVAILABLE_SEMESTERS, getSemesterDataPaths } from "./config/semesterConfig";
 import CoursePopup from "./CoursePopup";
 
 // Use the globally defined current semester
@@ -97,6 +97,7 @@ export default function CourseSimilarityPrecomputedGraph({
     height: window.innerHeight,
   });
   const [selectedCourse, setSelectedCourse] = useState(null);
+  const [selectedSemester, setSelectedSemester] = useState(CURRENT_SEMESTER);
 
   const setSvgRef = useCallback((node) => {
     svgRef.current = node;
@@ -116,18 +117,11 @@ export default function CourseSimilarityPrecomputedGraph({
       try {
         setLoading(true);
         
-        // This already loads both courses and courseDetails
-        const { courses, courseDetails } = await loadPrecomputedCourseData(semester);
-        setGraphData({ courses, similarityMatrix: null }); // You might need similarityMatrix elsewhere
-        setCourseDetailsData(courseDetails); // Use the courseDetails from the processor
-  
-        // Fetch precomputed t-SNE coordinates using the config path
-        const tsneCoordsResponse = await fetch(getSemesterDataPaths(semester).tsneCoords);
-        if (!tsneCoordsResponse.ok) {
-          throw new Error(`HTTP error! status: ${tsneCoordsResponse.status}`);
-        }
-        const tsneCoordsData = await tsneCoordsResponse.json();
-        setTsneCoords(tsneCoordsData);
+        // Load all data once and get filtered data for the selected semester
+        const { courses, courseDetails, tsneCoords: filteredTsneCoords } = await loadPrecomputedCourseData(selectedSemester);
+        setGraphData({ courses, similarityMatrix: null });
+        setCourseDetailsData(courseDetails);
+        setTsneCoords(filteredTsneCoords);
   
         setLoading(false);
       } catch (err) {
@@ -137,7 +131,7 @@ export default function CourseSimilarityPrecomputedGraph({
       }
     }
     loadData();
-  }, [semester]);
+  }, [selectedSemester]);
 
   useLayoutEffect(() => {
     // Ensure SVG is ready and all necessary data is loaded and in expected format
@@ -148,7 +142,7 @@ export default function CourseSimilarityPrecomputedGraph({
     }
 
     try {
-      const { courses, similarityMatrix } = graphData;
+      const { courses } = graphData;
       const courseDetails = courseDetailsData;
       const precomputedTSNECoords = tsneCoords;
       let coordinates;
@@ -716,6 +710,7 @@ export default function CourseSimilarityPrecomputedGraph({
     graphData,
     courseDetailsData,
     tsneCoords,
+    selectedSemester,
   ]);
 
   return (
@@ -742,8 +737,34 @@ export default function CourseSimilarityPrecomputedGraph({
         onClose={() => setSelectedCourse(null)}
       />
 
-      <div className="absolute bottom-0 left-0 w-full bg-white/90 text-center text-sm py-2 border-t border-[#e8e2f2]">
-        Each point represents a course. Shape indicates major group, and color distinguishes individual departments.
+      {/* Semester Slider */}
+      <div className="absolute bottom-0 left-0 w-full bg-white/90 p-4 border-t border-[#e8e2f2]">
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-sm font-medium text-gray-700">Semester:</span>
+          <span className="text-sm text-gray-600">{selectedSemester}</span>
+        </div>
+        <input
+          type="range"
+          min="0"
+          max={AVAILABLE_SEMESTERS.length - 1}
+          value={AVAILABLE_SEMESTERS.indexOf(selectedSemester)}
+          onChange={(e) => setSelectedSemester(AVAILABLE_SEMESTERS[e.target.value])}
+          className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+        />
+        <div className="flex justify-between mt-1">
+          {AVAILABLE_SEMESTERS.map((sem) => (
+            <span
+              key={sem}
+              className="text-xs text-gray-500"
+              style={{
+                color: sem === selectedSemester ? '#3f1f69' : '#6b7280',
+                fontWeight: sem === selectedSemester ? 'bold' : 'normal'
+              }}
+            >
+              {sem}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   );
