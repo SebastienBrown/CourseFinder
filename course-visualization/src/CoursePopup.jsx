@@ -24,6 +24,10 @@ export default function CoursePopup({ course, onClose }) {
         </h2>
 
         <p className="text-gray-600">
+          <strong>Semester:</strong> {course.semester || 'Unavailable'}
+        </p>
+
+        <p className="text-gray-600">
           <strong>Course Code(s):</strong> {course.course_codes ? course.course_codes.join(', ') : 'Unavailable'}
         </p>
 
