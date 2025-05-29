@@ -1,8 +1,6 @@
 import * as d3 from 'd3';
 import TSNE from 'tsne-js';
-
-// Define the semester globally for this file
-const semester = '2324S'; // You can change this semester as needed
+import { CURRENT_SEMESTER, getSemesterDataPaths } from './config/semesterConfig';
 
 // Extract unique course codes
 function getUniqueCourseCodes(data) {
@@ -40,20 +38,32 @@ function buildSimilarityMatrix(data, uniqueCodes, codeToIdx) {
   return matrix;
 }
 
-export async function loadPrecomputedCourseData() {
-  // Dynamically import the precomputed data based on the semester
-  const precomputedDataModule = await import(`../../similarity/output_similarity_${semester}.json`);
-  const precomputedData = precomputedDataModule.default;
+export async function loadPrecomputedCourseData(semester) {
+  // Fetch course details from the public directory
+  const courseDetailsResponse = await fetch(getSemesterDataPaths(semester).courseDetails);
+  if (!courseDetailsResponse.ok) {
+    throw new Error(`HTTP error! status: ${courseDetailsResponse.status}`);
+  }
+  const courseDetails = await courseDetailsResponse.json();
+  
+  console.log('Course Details Sample:', courseDetails[0]); // Debug log
 
-  const uniqueCodes = getUniqueCourseCodes(precomputedData);
-  const codeToIdx = getCourseCodeToIndexMap(uniqueCodes);
-  const similarityMatrix = buildSimilarityMatrix(precomputedData, uniqueCodes, codeToIdx);
-  // Prepare course objects for graph
-  const courses = uniqueCodes.map(code => ({
-    code,
-    department: code.split('-')[0]
-  }));
-  return { courses, similarityMatrix };
+  // Prepare a simplified list of courses from the details for graph node generation
+  // This assumes each entry in courseDetails corresponds to a unique course or merged node
+  const courses = courseDetails.map(course => {
+    console.log('Processing course:', course); // Debug log
+    if (!course.course_codes || !course.course_codes[0]) {
+      console.error('Invalid course data:', course);
+      return null;
+    }
+    return {
+      code: course.course_codes[0], // Use the first code as a primary identifier
+      department: course.course_codes[0].split('-')[0], // Derive department
+      // Add other relevant fields needed for nodes if any
+    };
+  }).filter(Boolean); // Remove any null entries
+
+  return { courses, courseDetails };
 }
 
 // PCA logic (same as before)
