@@ -21,11 +21,11 @@ def separate_overlapping_points(coords, min_dist=1.0, step_size=0.1, num_iterati
     return coords
 
 # Load your similarity data
-semester = '2324S'
+semester = 'all'
 with open(f'../../../similarity/output_similarity_{semester}.json', 'r') as f:
     data = json.load(f)
 
-out = ['499', '490', '390','498', '210F']
+out = ['499', '498', '490', '390', '290', '210F']
 
 # Filter out courses with course codes
 filtered_courses = []
@@ -124,18 +124,20 @@ for entry in valid_data:
     # Create an entry with all course codes
     output.append({
         'codes': codes,  # Store all codes
+        'semester': entry.get('semester'), # Include semester from the original data
         'x': float(x),
         'y': float(y)
     })
 
 # Save results
-with open('precomputed_tsne_coords.json', 'w') as f:
+with open(f'../../public/precomputed_tsne_coords_{semester}.json', 'w') as f:
     json.dump(output, f, indent=2)
 
 if skipped_entries:
-    with open('skipped_entries.json', 'w') as f:
+    # Save skipped entries to the 'skipped' directory at the workspace root
+    with open(f'../../../skipped/skipped_entries_{semester}.json', 'w') as f:
         json.dump(skipped_entries, f, indent=2)
-    print(f"Skipped {len(skipped_entries)} entries with empty course_codes. See skipped_entries.json for details.")
+    print(f"Skipped {len(skipped_entries)} entries with empty course_codes. See skipped/skipped_entries_{semester}.json for details.")
 else:
     print("No entries with empty course_codes were skipped.")
 
@@ -156,6 +158,7 @@ for entry in valid_data:
         course_metadata[primary_code] = metadata
 
 if course_metadata:
-    with open('course_metadata.json', 'w') as f:
+    # Save course metadata to the 'course_metadata' directory at the workspace root
+    with open(f'../../../course_metadata/course_metadata_{semester}.json', 'w') as f:
         json.dump(course_metadata, f, indent=2)
-    print('Saved course metadata to course_metadata.json')
+    print(f'Saved course metadata to course_metadata/{semester}.json')
