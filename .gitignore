@@ -46,7 +46,9 @@ dist-ssr/
 
 # --- Data files ---
 embeddings/*
-similarity/output_similarity_22*.json
+similarity/*
+skipped/*
+course_metadata/*
 **/csv/*
 **/log/*
 *.csv
