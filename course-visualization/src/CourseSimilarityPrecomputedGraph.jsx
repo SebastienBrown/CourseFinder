@@ -12,11 +12,11 @@ import {
   applyTSNE,
   useLoadData,
 } from "./CourseSimilarityPrecomputedProcessor";
-import precomputedTSNECoords from "./data/precomputed_tsne_coords.json";
+import { CURRENT_SEMESTER, getSemesterDataPaths } from "./config/semesterConfig";
 import CoursePopup from "./CoursePopup";
 
-// Define the semester globally
-const semester = '2324S'; // You can change this semester as needed
+// Use the globally defined current semester
+const semester = CURRENT_SEMESTER;
 
 // === Tranche & Shape Definitions ===
 const TRANCHE_SHAPES = {
@@ -115,15 +115,20 @@ export default function CourseSimilarityPrecomputedGraph({
     async function loadData() {
       try {
         setLoading(true);
-        const { courses, similarityMatrix } = await loadPrecomputedCourseData(semester);
-        setGraphData({ courses, similarityMatrix });
-
-        const courseDetailsModule = await import(`../../llm_cleaned/amherst_courses_${semester}.json`);
-        setCourseDetailsData(courseDetailsModule.default);
-
-        const tsneCoordsModule = await import("./data/precomputed_tsne_coords.json");
-        setTsneCoords(tsneCoordsModule.default);
-
+        
+        // This already loads both courses and courseDetails
+        const { courses, courseDetails } = await loadPrecomputedCourseData(semester);
+        setGraphData({ courses, similarityMatrix: null }); // You might need similarityMatrix elsewhere
+        setCourseDetailsData(courseDetails); // Use the courseDetails from the processor
+  
+        // Fetch precomputed t-SNE coordinates using the config path
+        const tsneCoordsResponse = await fetch(getSemesterDataPaths(semester).tsneCoords);
+        if (!tsneCoordsResponse.ok) {
+          throw new Error(`HTTP error! status: ${tsneCoordsResponse.status}`);
+        }
+        const tsneCoordsData = await tsneCoordsResponse.json();
+        setTsneCoords(tsneCoordsData);
+  
         setLoading(false);
       } catch (err) {
         console.error("Error loading data:", err);
@@ -149,7 +154,7 @@ export default function CourseSimilarityPrecomputedGraph({
       let coordinates;
 
       if (mode === "pca") {
-        coordinates = applyPCA(similarityMatrix);
+        // coordinates = applyPCA(similarityMatrix);
       } else {
         const codeToIndex = new Map(courses.map((c, i) => [c.code, i]));
         coordinates = Array(courses.length)
