@@ -44,14 +44,21 @@ export async function loadPrecomputedCourseData(semester) {
   if (!courseDetailsResponse.ok) {
     throw new Error(`HTTP error! status: ${courseDetailsResponse.status}`);
   }
-  const courseDetails = await courseDetailsResponse.json();
+  const allCourseDetails = await courseDetailsResponse.json();
   
-  console.log('Course Details Sample:', courseDetails[0]); // Debug log
+  // Filter courses for the selected semester
+  const courseDetails = allCourseDetails.filter(course => course.semester === semester);
+  
+  // Fetch and filter t-SNE coordinates
+  const tsneCoordsResponse = await fetch(getSemesterDataPaths(semester).tsneCoords);
+  if (!tsneCoordsResponse.ok) {
+    throw new Error(`HTTP error! status: ${tsneCoordsResponse.status}`);
+  }
+  const allTsneCoords = await tsneCoordsResponse.json();
+  const tsneCoords = allTsneCoords.filter(coord => coord.semester === semester);
 
   // Prepare a simplified list of courses from the details for graph node generation
-  // This assumes each entry in courseDetails corresponds to a unique course or merged node
   const courses = courseDetails.map(course => {
-    console.log('Processing course:', course); // Debug log
     if (!course.course_codes || !course.course_codes[0]) {
       console.error('Invalid course data:', course);
       return null;
@@ -59,11 +66,10 @@ export async function loadPrecomputedCourseData(semester) {
     return {
       code: course.course_codes[0], // Use the first code as a primary identifier
       department: course.course_codes[0].split('-')[0], // Derive department
-      // Add other relevant fields needed for nodes if any
     };
   }).filter(Boolean); // Remove any null entries
 
-  return { courses, courseDetails };
+  return { courses, courseDetails, tsneCoords };
 }
 
 // PCA logic (same as before)
