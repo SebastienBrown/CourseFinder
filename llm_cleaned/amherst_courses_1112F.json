@@ -3601,7 +3601,7 @@
   },
   {
     "semester": "Fall 2011",
-    "course_title": "Exploring Ralph Ellison's <em>Invisible Man</em>",
+    "course_title": "Exploring Ralph Ellison's Invisible Man",
     "course_codes": [
       "BLST-432"
     ],
@@ -4901,7 +4901,7 @@
         "Frank H. Westhoff"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "ECON 111I - DIS": {
         "Section 01": [
@@ -5349,7 +5349,7 @@
         "Brian A. Bethune"
       ]
     },
-    "description": "...",
+    "description": "The course will deal mainly with current topics in macroeconomic fluctuations including the history, causes and consequences of business cycles and the effectiveness of monetary and fiscal stabilization policy efforts. There will be emphasis on “real-time” understanding and analysis of current business and macroeconomic conditions. The course will also study the origins of recent severe stresses in the credit and banking markets, as well as the causes and various consequences of the “great financial crisis of 2007-2009”. The course will focus primarily on the U.S. economy but also will examine the critical issues and stresses that have emerged in the functioning and stabilization of the European Monetary System, as well as the roles of the G7, G20, IMF and central banks.",
     "times_and_locations": {
       "ECON 436 - L/D": {
         "Section 01": [
@@ -6317,7 +6317,7 @@
   },
   {
     "semester": "Fall 2011",
-    "course_title": "The Unprinted Page:&nbsp; Working with Manuscripts",
+    "course_title": "The Unprinted Page: Working with Manuscripts",
     "course_codes": [
       "ENGL-415"
     ],
@@ -11904,7 +11904,8 @@
     "semester": "Fall 2011",
     "course_title": "The Home and the World: Women and Gender in South Asia",
     "course_codes": [
-      "POSC-207"
+      "POSC-207",
+      "WAGS-207"
     ],
     "faculty": {
       "Section 01": [
@@ -13112,7 +13113,7 @@
   {
     "semester": "Fall 2011",
     "course_title": "Feminist Theory",
-    "course_codes": [],
+    "course_codes": ["WAGS-200"],
     "faculty": {
       "Section 01": [
         "Krupa Shandilya"
@@ -13139,7 +13140,7 @@
   {
     "semester": "Fall 2011",
     "course_title": "Black Women's Narratives and Counternarratives: Love and the Family",
-    "course_codes": [],
+    "course_codes": ["WAGS-202"],
     "faculty": {
       "Section 01": [
         "Aneeka A. Henderson"
@@ -13158,36 +13159,6 @@
             "day": "Th",
             "time": "11:30 AM - 12:50 PM",
             "location": "MERR 401"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2011",
-    "course_title": "The Home and the World: Women and Gender in South Asia",
-    "course_codes": [
-      "POSC-207"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Amrita Basu",
-        "Krupa Shandilya"
-      ]
-    },
-    "description": "This course will study South Asian women and gender through key texts in film, literature, history and politics. How did colonialism and nationalism challenge the distinctions between the home and the world and bring about partitions which splintered once shared cultural practices? What consequences did this have for postcolonial politics? How do ethnic conflicts, religious nationalisms and state repression challenge conceptions of home? How have migrations, globalization and diasporas complicated relations between the home and the world? Texts will include Salman Rushdies Shalimar the Clown , Ram Gopal Varmas epic film Sarkar and Partha Chatterjees The Nation and Its Fragments.",
-    "times_and_locations": {
-      "WAGS 207 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "WEBS 220"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "WEBS 220"
           }
         ]
       }
@@ -13830,7 +13801,7 @@
   },
   {
     "semester": "Fall 2011",
-    "course_title": "Configuring Catastrophe:&nbsp; War and Remembrance Since 1900",
+    "course_title": "Configuring Catastrophe: War and Remembrance Since 1900",
     "course_codes": [
       "COLQ-324"
     ],
@@ -14008,7 +13979,7 @@
   },
   {
     "semester": "Fall 2011",
-    "course_title": "Contemporary Dance Techniques: Modern 4/5&nbsp;",
+    "course_title": "Contemporary Dance Techniques: Modern 4/5",
     "course_codes": [
       "THDA-216H"
     ],
@@ -14258,90 +14229,6 @@
     "times_and_locations": {
       "THDA 400H": {
         "Section 01": []
-      }
-    }
-  },
-  {
-    "semester": "Fall 2011",
-    "course_title": "Feminist Theory",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Krupa Shandilya"
-      ]
-    },
-    "description": "In this course we will investigate contemporary feminist thought from a variety of disciplinary perspectives. We will focus on key issues in feminist theory, such as the sex/gender debate, sexual desire and the body, the political economy of gender, the creation of the \"queer\" as subject, and the construction of masculinity, among others. This course aims also to think through the ways in which these concerns intersect with issues of race, class, the environment and the nation. Texts include feminist philosopher Judith Butler's Gender Trouble , anthropologist Kamala Visweswaran's Fictions of Feminist Ethnography , and feminist economist Bina Agarwal's The Structure of Patriarchy.",
-    "times_and_locations": {
-      "WAGS 200 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "JOCH 21"
-          },
-          {
-            "day": "W",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "JOCH 21"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2011",
-    "course_title": "Black Women's Narratives and Counternarratives: Love and the Family",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Aneeka A. Henderson"
-      ]
-    },
-    "description": "Why does love and courtship continue to be central concerns in black women's literature and contemporary black popular fiction? Are these thematic issues representative of apolitical yearnings or an allegory for political subjectivity? Drawing on a wide range of texts, we will examine the chasm between the 'popular' and the literary, as we uncover how representations of love and courtship vary in both genres. Surveying the growing discourse in media outlets such as CNN and The Washington Post regarding the 'crisis' of the single black woman, students will analyze the contentious public debates regarding black women and love and connect them to black women's literature and black feminist literary theory. Authors covered will range from Nella Larsen to Terry McMillan and topics will include gender, race, class, and sexuality.",
-    "times_and_locations": {
-      "WAGS 202 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "MERR 401"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "MERR 401"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2011",
-    "course_title": "The Home and the World: Women and Gender in South Asia",
-    "course_codes": [
-      "POSC-207"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Amrita Basu",
-        "Krupa Shandilya"
-      ]
-    },
-    "description": "This course will study South Asian women and gender through key texts in film, literature, history and politics. How did colonialism and nationalism challenge the distinctions between the home and the world and bring about partitions which splintered once shared cultural practices? What consequences did this have for postcolonial politics? How do ethnic conflicts, religious nationalisms and state repression challenge conceptions of home? How have migrations, globalization and diasporas complicated relations between the home and the world? Texts will include Salman Rushdies Shalimar the Clown , Ram Gopal Varmas epic film Sarkar and Partha Chatterjees The Nation and Its Fragments.",
-    "times_and_locations": {
-      "WAGS 207 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "WEBS 220"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "WEBS 220"
-          }
-        ]
       }
     }
   },

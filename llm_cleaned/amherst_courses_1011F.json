@@ -1074,36 +1074,6 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Mother India: Reading Gender and Nation in South Asia&nbsp;",
-    "course_codes": [
-      "ASLC-51",
-      "FAMS-30"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Krupa Shandilya"
-      ]
-    },
-    "description": "Do you often wonder why some countries are referred to as the motherland and others as the fatherland? What and who decides how we refer to a country? In this course, we will examine seismic changes over time in gendered imaginings of the Indian subcontinent. As women stepped out of the domestic sphere to participate in the nationalist struggle of the late 19th century, the idea of the nation swayed dramatically between the nation as wife and the nation as mother in the Indian popular imagination. Readings will include novels such as Rabindranath Tagores Home and the World and Arundhati Roys The God of Small Things. We will also study a range of cinematic texts from the classic Mother India to the recent feminist film Silent Waters.",
-    "times_and_locations": {
-      "WAGS 66 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CHAP 103"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CHAP 103"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
     "course_title": "The History and Memory of the Asia-Pacific War",
     "course_codes": [
       "ASLC-62",
@@ -2961,7 +2931,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "BLST 97": {
         "Section 06": []
@@ -4909,7 +4879,7 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Seminar on the Economics of the Welfare State&nbsp;",
+    "course_title": "Seminar on the Economics of the Welfare State",
     "course_codes": [
       "ECON-74"
     ],
@@ -5302,7 +5272,7 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Chaucer&rsquo;s Shorter Poems",
+    "course_title": "Chaucer's Shorter Poems",
     "course_codes": [
       "ENGL-33"
     ],
@@ -5515,7 +5485,7 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Topics in Film Study:&nbsp; Knowing Television",
+    "course_title": "Topics in Film Study: Knowing Television",
     "course_codes": [
       "ENGL-84",
       "FAMS-50"
@@ -5545,7 +5515,7 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Topics in Film Study:&nbsp; The Romance",
+    "course_title": "Topics in Film Study: The Romance",
     "course_codes": [
       "ENGL-84",
       "FAMS-52"
@@ -5618,7 +5588,7 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "THEATER AND ANTHROPOLOGY:&nbsp; READINGS IN PERFORMANCE STUDIES",
+    "course_title": "THEATER AND ANTHROPOLOGY: READINGS IN PERFORMANCE STUDIES",
     "course_codes": [
       "ENGL-95"
     ],
@@ -5742,7 +5712,7 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Topics in Film Study:&nbsp; The Romance",
+    "course_title": "Topics in Film Study: The Romance",
     "course_codes": [
       "ENGL-84",
       "FAMS-52"
@@ -6421,10 +6391,11 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Mother India: Reading Gender and Nation in South Asia&nbsp;",
+    "course_title": "Mother India: Reading Gender and Nation in South Asia",
     "course_codes": [
       "ASLC-51",
-      "FAMS-30"
+      "FAMS-30",
+      "WAGS-66"
     ],
     "faculty": {
       "Section 01": [
@@ -6476,7 +6447,7 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Topics in Film Study:&nbsp; Knowing Television",
+    "course_title": "Topics in Film Study: Knowing Television",
     "course_codes": [
       "ENGL-84",
       "FAMS-50"
@@ -6506,7 +6477,7 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Topics in Film Study:&nbsp; The Romance",
+    "course_title": "Topics in Film Study: The Romance",
     "course_codes": [
       "ENGL-84",
       "FAMS-52"
@@ -6971,7 +6942,7 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Slavery&nbsp;and the American Imagination",
+    "course_title": "Slaveryand the American Imagination",
     "course_codes": [],
     "faculty": {
       "Section 01": [
@@ -8735,7 +8706,7 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Ideas and American Foreign Policy&nbsp;",
+    "course_title": "Ideas and American Foreign Policy",
     "course_codes": [
       "HIST-86"
     ],
@@ -11647,7 +11618,7 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Jews Writing in Greek:&nbsp; The Formation of Jewish Identity in the Greco-Roman World",
+    "course_title": "Jews Writing in Greek: The Formation of Jewish Identity in the Greco-Roman World",
     "course_codes": [
       "RELI-42"
     ],
@@ -11671,7 +11642,7 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "American Religious Thought:&nbsp; From Edwards to Emerson--and Beyond",
+    "course_title": "American Religious Thought: From Edwards to Emerson--and Beyond",
     "course_codes": [
       "RELI-48"
     ],
@@ -12098,7 +12069,7 @@
   {
     "semester": "Fall 2010",
     "course_title": "The Cross-Cultural Construction of Gender",
-    "course_codes": [],
+    "course_codes": ["WAGS-11"],
     "faculty": {
       "Section 01": [
         "Margaret R. Hunt",
@@ -12142,36 +12113,6 @@
             "day": "M",
             "time": "04:00 PM - 06:30 PM",
             "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Mother India: Reading Gender and Nation in South Asia&nbsp;",
-    "course_codes": [
-      "ASLC-51",
-      "FAMS-30"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Krupa Shandilya"
-      ]
-    },
-    "description": "Do you often wonder why some countries are referred to as the motherland and others as the fatherland? What and who decides how we refer to a country? In this course, we will examine seismic changes over time in gendered imaginings of the Indian subcontinent. As women stepped out of the domestic sphere to participate in the nationalist struggle of the late 19th century, the idea of the nation swayed dramatically between the nation as wife and the nation as mother in the Indian popular imagination. Readings will include novels such as Rabindranath Tagores Home and the World and Arundhati Roys The God of Small Things. We will also study a range of cinematic texts from the classic Mother India to the recent feminist film Silent Waters.",
-    "times_and_locations": {
-      "WAGS 66 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CHAP 103"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CHAP 103"
           }
         ]
       }
@@ -12788,7 +12729,7 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Dynamics of Play Reading:&nbsp; Elements, Structures, Paradigms",
+    "course_title": "Dynamics of Play Reading: Elements, Structures, Paradigms",
     "course_codes": [
       "THDA-29"
     ],
@@ -12846,7 +12787,7 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Contemporary Dance Techniques:&nbsp; Modern 2/3",
+    "course_title": "Contemporary Dance Techniques: Modern 2/3",
     "course_codes": [
       "THDA-30H"
     ],
@@ -12878,7 +12819,7 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "The Craft of Speaking I:&nbsp; Vocal Freedom",
+    "course_title": "The Craft of Speaking I: Vocal Freedom",
     "course_codes": [
       "THDA-32H"
     ],
@@ -13207,34 +13148,6 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "The Cross-Cultural Construction of Gender",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Margaret R. Hunt",
-        "Krupa Shandilya"
-      ]
-    },
-    "description": "This course introduces students to the issues involved in the social and historical construction of gender and gender roles from a cross-cultural and interdisciplinary perspective. Topics change from year-to-year and have included women and social change; male and female sexualities including homosexualities; the uses and limits of biology in explaining human gender differences; womens participation in production and reproduction; the relationship among gender, race and class as intertwining oppressions; women, men and globalization; and gender and warfare.",
-    "times_and_locations": {
-      "WAGS 11 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 209"
-          },
-          {
-            "day": "Th",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 209"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
     "course_title": "Women in Judaism",
     "course_codes": [
       "RELI-39"
@@ -13252,36 +13165,6 @@
             "day": "M",
             "time": "04:00 PM - 06:30 PM",
             "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Mother India: Reading Gender and Nation in South Asia&nbsp;",
-    "course_codes": [
-      "ASLC-51",
-      "FAMS-30"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Krupa Shandilya"
-      ]
-    },
-    "description": "Do you often wonder why some countries are referred to as the motherland and others as the fatherland? What and who decides how we refer to a country? In this course, we will examine seismic changes over time in gendered imaginings of the Indian subcontinent. As women stepped out of the domestic sphere to participate in the nationalist struggle of the late 19th century, the idea of the nation swayed dramatically between the nation as wife and the nation as mother in the Indian popular imagination. Readings will include novels such as Rabindranath Tagores Home and the World and Arundhati Roys The God of Small Things. We will also study a range of cinematic texts from the classic Mother India to the recent feminist film Silent Waters.",
-    "times_and_locations": {
-      "WAGS 66 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CHAP 103"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CHAP 103"
           }
         ]
       }

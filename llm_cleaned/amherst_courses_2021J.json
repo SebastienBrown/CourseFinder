@@ -25,7 +25,7 @@
   },
   {
     "semester": "January 2021",
-    "course_title": "\"We've never not been here\":&nbsp; Introduction to Native American and Indigenous Studies",
+    "course_title": "\"We've never not been here\": Introduction to Native American and Indigenous Studies",
     "course_codes": [
       "AMST-273"
     ],
@@ -88,7 +88,7 @@
   },
   {
     "semester": "January 2021",
-    "course_title": "Plant Cultures: Chemical Perspectives on Slavery and the Land.&nbsp;",
+    "course_title": "Plant Cultures: Chemical Perspectives on Slavery and the Land.",
     "course_codes": [
       "ARCH-120",
       "ARHA-120",
@@ -109,7 +109,7 @@
   },
   {
     "semester": "January 2021",
-    "course_title": "Plant Cultures: Chemical Perspectives on Slavery and the Land.&nbsp;",
+    "course_title": "Plant Cultures: Chemical Perspectives on Slavery and the Land.",
     "course_codes": [
       "ARCH-120",
       "ARHA-120",
@@ -185,7 +185,7 @@
   },
   {
     "semester": "January 2021",
-    "course_title": "Image &amp; Text",
+    "course_title": "Image & Text",
     "course_codes": [
       "ARHA-228"
     ],
@@ -303,7 +303,7 @@
   },
   {
     "semester": "January 2021",
-    "course_title": "Plant Cultures: Chemical Perspectives on Slavery and the Land.&nbsp;",
+    "course_title": "Plant Cultures: Chemical Perspectives on Slavery and the Land.",
     "course_codes": [
       "ARCH-120",
       "ARHA-120",
@@ -378,7 +378,7 @@
         "John E. Rager"
       ]
     },
-    "description": "",
+    "description": "This course will emphasize more complicated problems and their algorithmic solutions. The object-oriented programming paradigm will be discussed in detail, including data abstraction, inheritance, and polymorphism. Other topics will include stacks, queues, linked lists, programming for graphical user interfaces, and basic topics in probability. A laboratory section will meet once a week to give students practice with programming constructs.",
     "times_and_locations": {
       "COSC 112": {
         "Section 01": []
@@ -478,13 +478,15 @@
   {
     "semester": "January 2022",
     "course_title": "Emily Dickinson",
-    "course_codes": [],
+    "course_codes": [
+      "ENGL-444"
+    ],
     "faculty": {
       "Section 01": [
-        "TBA"
+        "Karen J. Sanchez-Eppler"
       ]
     },
-    "description": "...",
+    "description": "“Experience is the Angled Road / Preferred against the Mind / By-Paradox-the Mind itself-” Emily Dickinson explained in one poem and in this course we will make use of the resources of the town of Amherst to play experience and mind off each other in our efforts to come to terms with her elusive poetry. The course will meet in the Dickinson Homestead, visit the Evergreens (her brother Austen's house, and a veritable time capsule), make use of Dickinson manuscripts in the Amherst College archives, and set her work in the context of other nineteenth-century writers such as Helen Hunt Jackson, Walt Whitman, Edgar Allan Poe, and Harriet Jacobs. But as we explore how Dickinson's poetry responds to her world we will also ask how it can speak to our present. One major project of the course will be to develop exhibits and activities for the Homestead that will help visitors engage with her poems.",
     "times_and_locations": {}
   },
   {
@@ -874,7 +876,7 @@
         "Darryl Harper"
       ]
     },
-    "description": "...",
+    "description": "Students in this course will be designated \"Folger Undergraduate Fellows\" and will join the research team for the Folger Shakespeare Library's investigation of an anonymous seventeenth-century manuscript recipe book from its archival collection. They will engage in a close reading and analysis of the book, looking at how it was put together and examining its users, contributors and sources. Students will consider issues of international trade and food justice, and they will uncover implicit knowledge and hidden labor encoded in the recipes. They will transcribe, edit, and adapt recipes, and even recreate them. Students will be brought behind the scenes to explore sugar cane fields, museums, and restaurants from around the world. Research will be conducted through a broad array of disciplines, including English, History, Anthropology, Psychology, Art, Music, Black Studies, Digital Humanities, Asian Studies, Political Science, and Statistics.",
     "times_and_locations": {
       "COLQ 320": {
         "Section 01": []
