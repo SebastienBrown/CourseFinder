@@ -1060,37 +1060,6 @@
   },
   {
     "semester": "Spring 2013",
-    "course_title": "Digital Constructions: Intermediate Architectural Design Studio",
-    "course_codes": [
-      "ARCH-216",
-      "ARHA-216",
-      "EUST-216"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Thom Long"
-      ]
-    },
-    "description": "In this intermediate architectural design studio we will explore the intellectual and creative process of making and representing architectural space. The focus will be to explore the boundaries of architecture--physically and theoretically, historically and presently--through digital media. Our process will prompt us to dissect 20th-century European architectures and urban spaces and to explore their relationships to contemporary, global issues. The capstone of the course will be a significant design project (TBD) requiring rigorous studio practices, resulting in plans, sections, elevations and digital models. This course will introduce students to various digital diagramming, drawing, and modeling software, while challenging students to question the theoretical and practical implications of these interdisciplinary media processes. This course will combine lectures, reading, discussion, and extensive studio design.",
-    "times_and_locations": {
-      "EUST 216 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "09:00 AM - 11:30 AM",
-            "location": "SMUD 116"
-          },
-          {
-            "day": "W",
-            "time": "09:00 AM - 11:30 AM",
-            "location": "SMUD 116"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
     "course_title": "Photography I",
     "course_codes": [
       "ARHA-218"
@@ -1244,37 +1213,6 @@
   },
   {
     "semester": "Spring 2013",
-    "course_title": "Modern Architecture, Design, and the Built Environment",
-    "course_codes": [
-      "ARCH-271",
-      "ARHA-271",
-      "EUST-271"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jeffrey Saletnik"
-      ]
-    },
-    "description": "This course considers architecture and design of the 19th and 20th centuries in light of contemporary disciplinary themes like space, globalization, and sustainability. In doing so, it strives to highlight the social, political, intellectual, and technological forces that have influenced (and continue to motivate) modern design. Key figures to be addressed include: Gottfried Semper, William Morris, Peter Behrens, Adolf Loos, Le Corbusier, Mies van der Rohe, Robert Venturi and Denise Scott Brown, Daniel Libeskind, Herzog and de Meuron, and Zaha Hadid.",
-    "times_and_locations": {
-      "ARHA 271 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:00 PM - 02:20 PM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "Th",
-            "time": "01:00 PM - 02:20 PM",
-            "location": "FAYE 113"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
     "course_title": "Foundations and Integrations: Film and Media Studies",
     "course_codes": [
       "ARHA-272",
@@ -1295,36 +1233,6 @@
             "day": "Tu",
             "time": "01:00 PM - 04:00 PM",
             "location": "CONV 302"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Cathedral, Crown, and City: Gothic Art",
-    "course_codes": [
-      "ARCH-280",
-      "ARHA-280"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Michael T. Davis"
-      ]
-    },
-    "description": "Through case studies, this course explores the art of Western Europe between 1100 and 1500. The great church, including the cathedrals of Chartres and Paris, serves as the matrix for the consideration of architecture and its integration of sculpture, stained glass, and ritual performance. Thematic surveys examine art as a political tool in the hands of the secular elite, its construction of gender roles, and its reflection of the values of medieval society.",
-    "times_and_locations": {
-      "ARHA 280 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "FAYE 117"
-          },
-          {
-            "day": "W",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "FAYE 117"
           }
         ]
       }
@@ -1507,36 +1415,6 @@
   },
   {
     "semester": "Spring 2013",
-    "course_title": "Public Art and Collective Memory in the United States",
-    "course_codes": [
-      "AMST-360",
-      "ARHA-360"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Carol C. Clark"
-      ]
-    },
-    "description": "What is public art and what role does it play in public life and collective memory in the United States? In this course we will study art that is commissioned, paid for, and owned by the state as well as private works scaled to public encounter. A focus of our study will be the evolution of public art in Washington, D.C. (19th-21st centuries), but we will range from New York harbor to the Black Hills of South Dakota and the Great Salt Lake, and we will discuss the fate of works that, like Richard Serra's Tilted Arc, exist today only in photographic record and documented debate. Asking whether and how public art mediates between private and public life will guide us to consider when and how it defines national or local values and why so many public art projects have aroused controversy. The course is organized around class discussion and student presentations, and it includes short papers and a paper/presentation of an independent research project.",
-    "times_and_locations": {
-      "AMST 360 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "FAYE 113"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
     "course_title": "The Sixties",
     "course_codes": [
       "ARHA-412"
@@ -1671,41 +1549,6 @@
             "day": "W",
             "time": "12:30 PM - 01:50 PM",
             "location": "BARR 105"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Arts of Japan",
-    "course_codes": [
-      "ARHA-148",
-      "ASLC-123"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Samuel C. Morse"
-      ]
-    },
-    "description": "A survey of the history of Japanese art from neolithic times to the present. Topics will include Buddhist art and its ritual context, the aristocratic arts of the Heian court, monochromatic ink painting and the arts related to the Zen sect, the prints and paintings of the Floating World and contemporary artists and designers such as Ando Tadao and Miyake Issey. The class will focus on the ways Japan adopts and adapts foreign cultural traditions. There will be field trips to look at works in museums and private collections in the region.",
-    "times_and_locations": {
-      "ARHA 148 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "W",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "F",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "FAYE 113"
           }
         ]
       }
@@ -1887,41 +1730,6 @@
   },
   {
     "semester": "Spring 2013",
-    "course_title": "Buddhist Art of Asia",
-    "course_codes": [
-      "ARHA-261",
-      "ASLC-260"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Samuel C. Morse"
-      ]
-    },
-    "description": "Visual imagery plays a central role in the Buddhist faith. As the religion developed and spread throughout Asia it took many forms. This class will first examine the appearance of the earliest aniconic traditions in ancient India, the development of the Buddha image, and early monastic centers. It will then trace the dissemination and transformation of Buddhist art as the religion reached South-East Asia, Central Asia, and eventually East Asia. In each region indigenous cultural practices and artistic traditions influenced Buddhist art. Among the topics the class will address are the nature of the Buddha image, the political uses of Buddhist art, the development of illustrated hagiographies, and the importance of pilgrimage, both in the past and the present.",
-    "times_and_locations": {
-      "ARHA 261 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "W",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "F",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "FAYE 113"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
     "course_title": "The Arts of the Book in Iran and Islamic South Asia, 1250-1650",
     "course_codes": [
       "ARHA-267",
@@ -2012,31 +1820,6 @@
   },
   {
     "semester": "Spring 2013",
-    "course_title": "Chinese Childrearing",
-    "course_codes": [
-      "ANTH-318",
-      "ASLC-318"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Vanessa L. Fong"
-      ]
-    },
-    "description": "This course examines Chinese childrearing, focusing primarily on childrearing in mainland China. We will look at differences as well as similarities between childrearing in Chinese families of different socioeconomic status within China, as well as between childrearing in mainland China and in childrearing in Chinese and non-Chinese families worldwide. We will also look at dominant discourses within and outside of China about the nature of Chinese childrearing and ask about relationships between those discourses and the experiences of Chinese families. Students will work together to conduct original research about childrearing in China, drawing on data from the instructors research projects. Students with statistical analysis skills will analyze English-language survey data; students with advanced Chinese language skills will translate and analyze Chinese-language interview questions and responses; and students who have taken or are currently taking at least one course about anthropology, sociology, economics, psychology, or China will analyze the English-language scholarly literature about Chinese childrearing in the field(s) with which they are most familiar. Course assignments will be tailored to the interests, skills, and academic background of each student.",
-    "times_and_locations": {
-      "ANTH 318 - L/D": {
-        "Section 01": [
-          {
-            "day": "F",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "CONV 304"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
     "course_title": "Enlightening Passion: Sexuality and Gender in Tibetan Buddhism",
     "course_codes": [
       "ASLC-326",
@@ -2068,7 +1851,9 @@
   {
     "semester": "Spring 2013",
     "course_title": "Early Islam: Construction of an Historical Tradition",
-    "course_codes": [],
+    "course_codes": [
+      "ASLC-355"
+    ],
     "faculty": {
       "Section 01": [
         "Monica M. Ringer"
@@ -3128,135 +2913,6 @@
   },
   {
     "semester": "Spring 2013",
-    "course_title": "Cell Structure and Function",
-    "course_codes": [
-      "BCBP-291",
-      "BIOL-291"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Dominic L. Poccia"
-      ]
-    },
-    "description": "An analysis of the structure and function of cells in plants, animals, and bacteria. Topics to be discussed include the cell surface and membranes, cytoskeletal elements and motility, cytoplasmic organelles and bioenergetics, the interphase nucleus and chromosomes, mitosis, meiosis, and cell cycle regulation. Four classroom hours and three hours of laboratory per week.",
-    "times_and_locations": {
-      "BIOL 291 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:00 PM - 12:50 PM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "W",
-            "time": "12:00 PM - 12:50 PM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "F",
-            "time": "12:00 PM - 12:50 PM",
-            "location": "MERR 4"
-          }
-        ]
-      },
-      "BIOL 291F - DIS": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:00 PM - 01:50 PM",
-            "location": "MERR 3"
-          }
-        ]
-      },
-      "BIOL 291L - LAB": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 05:30 PM",
-            "location": "MCLS 336"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 05:00 PM",
-            "location": "MCLS 336"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Biochemistry",
-    "course_codes": [
-      "BCBP-331",
-      "BIOL-331",
-      "CHEM-331"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Anthony C. Bishop",
-        "Patrick L. Williamson"
-      ]
-    },
-    "description": "Structure and function of biologically important molecules and their role(s) in life processes. Protein conformation, enzymatic mechanisms and selected metabolic pathways will be analyzed. Additional topics may include: nucleic acid conformation, DNA/protein interactions, signal transduction and transport phenomena. Four classroom hours and four hours of laboratory work per week.",
-    "times_and_locations": {
-      "BIOL 331 - LEC": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "W",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "F",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "MERR 4"
-          }
-        ]
-      },
-      "BIOL 331F - DIS": {
-        "Section 01": [
-          {
-            "day": "F",
-            "time": "02:00 PM - 02:50 PM",
-            "location": "MERR 4"
-          }
-        ]
-      },
-      "BIOL 331L - LAB": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:00 PM - 05:00 PM",
-            "location": "MERR 404"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 06:00 PM",
-            "location": "MERR 404"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "Th",
-            "time": "01:00 PM - 05:00 PM",
-            "location": "MERR 404"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
     "course_title": "Genome Biology",
     "course_codes": [
       "BIOL-380"
@@ -3441,36 +3097,6 @@
   },
   {
     "semester": "Spring 2013",
-    "course_title": "Survey of African Art",
-    "course_codes": [
-      "ARHA-149",
-      "BLST-123"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Rowland O. Abiodun"
-      ]
-    },
-    "description": "An introduction to the ancient and traditional arts of Africa. Special attention will be given to the archaeological importance of the rock art paintings found in such disparate areas as the Sahara and South Africa, achievements in the architectural and sculptural art in clay of the early people in the area now called Zimbabwe and the aesthetic qualities of the terracotta and bronze sculptures of the Nok, Igbo-Ukwe, Ife and Benin cultures in West Africa, which date from the second century B.C.E. to the sixteenth century C.E. The study will also pursue a general socio-cultural survey of traditional arts of the major ethnic groups of Africa.",
-    "times_and_locations": {
-      "ARHA 149 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "FAYE 217"
-          },
-          {
-            "day": "W",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "FAYE 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
     "course_title": "Critical Debates in Black Studies",
     "course_codes": [
       "BLST-200"
@@ -3558,36 +3184,6 @@
           {
             "day": "W",
             "time": "02:00 PM - 04:30 PM",
-            "location": "COOP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Myth, Ritual and Iconography in West Africa",
-    "course_codes": [
-      "ARHA-353",
-      "BLST-315"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Rowland O. Abiodun"
-      ]
-    },
-    "description": "Through a contrastive analysis of the religious and artistic modes of expression in three West African societies--the Asanti of the Guinea Coast, and the Yoruba and Igbo peoples of Nigeria--the course will explore the nature and logic of symbols in an African cultural context. We shall address the problem of cultural symbols in terms of African conceptions of performance and the creative play of the imagination in ritual acts, masked festivals, music, dance, oral histories, and the visual arts as they provide the means through which cultural heritage and identity are transmitted and preserved, while, at the same time, being the means for innovative responses to changing social circumstances.",
-    "times_and_locations": {
-      "BLST 315 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "COOP 101"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
             "location": "COOP 101"
           }
         ]
@@ -4042,100 +3638,6 @@
       },
       "CHEM 290H": {
         "Section 02": []
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Molecular Gastronomy",
-    "course_codes": [
-      "CHEM-290",
-      "CHEM-290H"
-    ],
-    "faculty": {
-      "Section 02": [
-        "Patricia B. O'Hara"
-      ],
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "",
-    "times_and_locations": {
-      "CHEM 290": {
-        "Section 02": []
-      },
-      "CHEM 290H": {
-        "Section 02": []
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Biochemistry",
-    "course_codes": [
-      "BCBP-331",
-      "BIOL-331",
-      "CHEM-331"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Anthony C. Bishop",
-        "Patrick L. Williamson"
-      ]
-    },
-    "description": "Structure and function of biologically important molecules and their role(s) in life processes. Protein conformation, enzymatic mechanisms and selected metabolic pathways will be analyzed. Additional topics may include: nucleic acid conformation, DNA/protein interactions, signal transduction and transport phenomena. Four classroom hours and four hours of laboratory work per week.",
-    "times_and_locations": {
-      "BIOL 331 - LEC": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "W",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "F",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "MERR 4"
-          }
-        ]
-      },
-      "BIOL 331F - DIS": {
-        "Section 01": [
-          {
-            "day": "F",
-            "time": "02:00 PM - 02:50 PM",
-            "location": "MERR 4"
-          }
-        ]
-      },
-      "BIOL 331L - LAB": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:00 PM - 05:00 PM",
-            "location": "MERR 404"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 06:00 PM",
-            "location": "MERR 404"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "Th",
-            "time": "01:00 PM - 05:00 PM",
-            "location": "MERR 404"
-          }
-        ]
       }
     }
   },
@@ -6064,40 +5566,10 @@
   },
   {
     "semester": "Spring 2013",
-    "course_title": "Spike Lee's Joints",
-    "course_codes": [
-      "BLST-330",
-      "ENGL-374",
-      "FAMS-358"
-    ],
-    "faculty": {
-      "Section 01": [
-        "John E. Drabinski",
-        "Marisa Parham"
-      ]
-    },
-    "description": "In offering extended formal considerations of Spike Lees cinematic oeuvrein particular his uses of light, sound, and colorthis course is interested in how shifting through various modes of critical inquiry can enable or broaden different kinds of cultural, political, or historical engagement with a film. This semester we will also pay special attention to the question of what it means to encapsulate a particular cultural moment, particularly vis-a-vis the often differing demands of fictional and non-fictional representation.",
-    "times_and_locations": {
-      "ENGL 374 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 115"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 115"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
     "course_title": "Cinema and Everyday Life",
-    "course_codes": [],
+    "course_codes": [
+      "FAMS-351"
+    ],
     "faculty": {
       "Section 01": [
         "Amelie E. Hastie"
@@ -6124,7 +5596,9 @@
   {
     "semester": "Spring 2013",
     "course_title": "Screenwriting",
-    "course_codes": [],
+    "course_codes": [
+      "FAMS-240"
+    ],
     "faculty": {
       "Section 01": [
         "Chris Mason Johnson"
@@ -6191,37 +5665,6 @@
             "day": "Th",
             "time": "11:30 AM - 12:50 PM",
             "location": "CHAP 204"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Ghosts in Shells? Virtuality and Embodiment from Passing to the Posthuman",
-    "course_codes": [
-      "BLST-441",
-      "ENGL-456",
-      "FAMS-451"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Marisa Parham"
-      ]
-    },
-    "description": "This class begins with narratives about individuals who passthat is, who come to be recognized as someone different from whom they were sexually or racially born as. Such stories suggest that ones identity depends minimally on the body into which one is born, and is more attached to the supplementation and presentation of that body in support of whichever cultural story the body is desired to tell. Drawing on familiar liberal humanist claims, which centralize human identity in the mind, these narratives also respond to the growing sophistication of human experience with virtual worldsfrom acts of reading to immersions in computer simulation. But what kinds of tensions emerge when bodies nonetheless signify beyond an individuals self-imagination? As technology expands the possibilities of the virtual, for instance surrogacy, cloning, and cybernetics, what pressures are brought to bear on the physical human body and its processes to signify authentic humanness? Rather than ask whether identity is natural or cultural, our discussions will project these questions into a not-so-distant future: What would it mean to take human as only one identity, as a category amongst many others, each also acknowledged as equally subject to the same social and biological matrices of desire, creation, and recognition? We will approach these questions through works of literature, philosophy, media history, and contemporary science writing.",
-    "times_and_locations": {
-      "ENGL 456 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "FAYE 217"
-          },
-          {
-            "day": "Th",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "FAYE 217"
           }
         ]
       }
@@ -6492,67 +5935,6 @@
   },
   {
     "semester": "Spring 2013",
-    "course_title": "Art From the Realm of Dreams",
-    "course_codes": [
-      "ARHA-146",
-      "EUST-146"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Natasha Staller"
-      ]
-    },
-    "description": "We begin with a long-standing Spanish obsession with dreams, analyzing images and texts by Calderon, Quevedo and Goya. We next will consider a range of dream workers from a range of cultures, centuries, and disciplines--among them Apollinaire, Freud, Breton, Dali, Carrington, and Kahlo--as well as others working around the globe in our own time.",
-    "times_and_locations": {
-      "ARHA 146 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 217"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Digital Constructions: Intermediate Architectural Design Studio",
-    "course_codes": [
-      "ARCH-216",
-      "ARHA-216",
-      "EUST-216"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Thom Long"
-      ]
-    },
-    "description": "In this intermediate architectural design studio we will explore the intellectual and creative process of making and representing architectural space. The focus will be to explore the boundaries of architecture--physically and theoretically, historically and presently--through digital media. Our process will prompt us to dissect 20th-century European architectures and urban spaces and to explore their relationships to contemporary, global issues. The capstone of the course will be a significant design project (TBD) requiring rigorous studio practices, resulting in plans, sections, elevations and digital models. This course will introduce students to various digital diagramming, drawing, and modeling software, while challenging students to question the theoretical and practical implications of these interdisciplinary media processes. This course will combine lectures, reading, discussion, and extensive studio design.",
-    "times_and_locations": {
-      "EUST 216 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "09:00 AM - 11:30 AM",
-            "location": "SMUD 116"
-          },
-          {
-            "day": "W",
-            "time": "09:00 AM - 11:30 AM",
-            "location": "SMUD 116"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
     "course_title": "Music and Culture I",
     "course_codes": [
       "EUST-221",
@@ -6712,37 +6094,6 @@
   },
   {
     "semester": "Spring 2013",
-    "course_title": "Modern Architecture, Design, and the Built Environment",
-    "course_codes": [
-      "ARCH-271",
-      "ARHA-271",
-      "EUST-271"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jeffrey Saletnik"
-      ]
-    },
-    "description": "This course considers architecture and design of the 19th and 20th centuries in light of contemporary disciplinary themes like space, globalization, and sustainability. In doing so, it strives to highlight the social, political, intellectual, and technological forces that have influenced (and continue to motivate) modern design. Key figures to be addressed include: Gottfried Semper, William Morris, Peter Behrens, Adolf Loos, Le Corbusier, Mies van der Rohe, Robert Venturi and Denise Scott Brown, Daniel Libeskind, Herzog and de Meuron, and Zaha Hadid.",
-    "times_and_locations": {
-      "ARHA 271 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:00 PM - 02:20 PM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "Th",
-            "time": "01:00 PM - 02:20 PM",
-            "location": "FAYE 113"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
     "course_title": "Poetic Translation",
     "course_codes": [
       "EUST-303"
@@ -6765,36 +6116,6 @@
             "day": "W",
             "time": "02:30 PM - 03:50 PM",
             "location": "WEBS 215"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Proust",
-    "course_codes": [
-      "ENGL-309",
-      "EUST-309"
-    ],
-    "faculty": {
-      "Section 01": [
-        "John Cameron"
-      ]
-    },
-    "description": "A critical reading in English translation of substantial portions of Marcel Prousts great work of fiction and philosophy, A la Recherche du temps perdu ( In Search of Lost Time). An extended synopsis of the entire work will be provided. Class discussion and exercises will concentrate on major passages of the work (amounting to roughly half of the whole). Attention will be given to the tradition of critical commentary in English on Prousts work and its place as a document of European modernism.",
-    "times_and_locations": {
-      "ENGL 309 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "JOCH 202"
-          },
-          {
-            "day": "Th",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "JOCH 202"
           }
         ]
       }
@@ -6827,120 +6148,6 @@
   },
   {
     "semester": "Spring 2013",
-    "course_title": "SPACE",
-    "course_codes": [
-      "ARCH-368",
-      "EUST-368",
-      "FAMS-373",
-      "GERM-368"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Heidi Gilpin"
-      ]
-    },
-    "description": "This research seminar will explore conceptions of space as they have informed and influenced thought and creativity in the fields of cultural studies, literature, architecture, urban studies, performance, and the visual, electronic, and time-based arts. Students will select and pursue a major semester-long research project early in the semester in consultation with the professor, and present their research in its various stages of development throughout the semester, in a variety of media formats (writing, performance, video, electronic art/interactive media, installation, online and networked events, architectural/design drawings/renderings), along with oral presentations of readings and other materials. Readings and visual materials will be drawn from the fields of literature and philosophy; from architectural, art, and film theory and history; from performance studies and performance theory; and from theories of technology and the natural and built environment. Emphasis on developing research, writing, and presentation skills is a core of this seminar. German majors will select a research project focused on a German Studies context, and will do a substantial portion of the readings in German.",
-    "times_and_locations": {
-      "GERM 368 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "12:00 PM - 03:00 PM",
-            "location": "CONV 302"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Film and Writing",
-    "course_codes": [
-      "ENGL-180",
-      "FAMS-110"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Patrick Pritchett"
-      ]
-    },
-    "description": "A first course in reading films and writing about them. A varied selection of films for study and criticism, partly to illustrate the main elements of film language and partly to pose challenging texts for reading and writing. Frequent short papers.",
-    "times_and_locations": {
-      "ENGL 180 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50",
-            "location": "PM"
-          },
-          {
-            "day": "F",
-            "time": "12:30 PM - 01:50",
-            "location": "PM"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Coming to Terms: Cinema",
-    "course_codes": [
-      "ENGL-280",
-      "FAMS-210"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Andrew R. Johnston"
-      ]
-    },
-    "description": "An introduction to cinema studies through consideration of a few critical and descriptive terms, together with a selection of various films (classic and contemporary, foreign and American) for illustration and discussion. The terms for discussion will include, among others: the cinematic image, mise en scene, montage and editing, narration in cinema, genre, authorship. Frequent critical writing required.",
-    "times_and_locations": {
-      "ENGL 280 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "SMUD 205"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "SMUD 205"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Foundations and Integrations: Film and Media Studies",
-    "course_codes": [
-      "ARHA-272",
-      "ENGL-281",
-      "FAMS-220"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Amelie E. Hastie",
-        "Chris Mason Johnson"
-      ]
-    },
-    "description": "Foundations and Integrations will be an annual team-taught course between a Critical Studies scholar and moving-image artist. It will build on critical analysis of moving images and introductory production work to develop an integrated critical and creative practice. Focused in particular around themes and concepts, students will develop ideas in both written and visual form. The theme will be Film and Inner Life.",
-    "times_and_locations": {
-      "ENGL 281 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:00 PM - 04:00 PM",
-            "location": "CONV 302"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
     "course_title": "Production Workshop in the Moving Image",
     "course_codes": [
       "ENGL-289",
@@ -6959,28 +6166,6 @@
             "day": "Th",
             "time": "02:30 PM - 05:30 PM",
             "location": "FAYE 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Screenwriting",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Chris Mason Johnson"
-      ]
-    },
-    "description": "A first workshop in narrative screenwriting. Through frequent exercises, readings, and screenings we will explore the fundamentals of scene and story shape as theyre practiced in mainstream commercial filmmaking, while taking a broader look at what a screenplay might be outside of that world. In the process, well juxtapose two modes of writing that are not mutually exclusive but are often at odds with each other, both historically (within the industry) and aesthetically: the well-established craft of three-act screenwriting, on the one hand, and the more elastic possibilities of the audio-visual medium as exemplified by the art film, on the other. One class meeting per week.",
-    "times_and_locations": {
-      "FAMS 240 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 05:00 PM",
-            "location": "CHAP 210"
           }
         ]
       }
@@ -7011,36 +6196,6 @@
             "day": "Th",
             "time": "08:30 AM - 09:50 AM",
             "location": "ARMU 212"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Japan on Screen",
-    "course_codes": [
-      "ASLC-234",
-      "FAMS-320"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Timothy J. Van Compernolle"
-      ]
-    },
-    "description": "Is the concept of national cinema useful in the age of globalization? Given the international nature of cinema at its inception, was it ever a valid concept? In this course, we will consider how the nation is represented on screen as we survey the history of film culture in Japan, from the very first film footage shot in the country in 1897, through the golden age of studio cinema in the 1950s, to important independent filmmakers working today. While testing different theories of national, local, and world cinema, we will investigate the Japanese film as a narrative art, as a formal construct, and as a participant in larger aesthetic and social contexts. This course includes the major genres of Japanese film and influential schools and movements. Students will also learn and get extensive practice using the vocabulary of the discipline of film studies. This course assumes no prior knowledge of Japan or Japanese, and all films have English subtitles.",
-    "times_and_locations": {
-      "ASLC 234 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "FAYE 117"
-          },
-          {
-            "day": "Th",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "FAYE 117"
           }
         ]
       }
@@ -7106,7 +6261,9 @@
   {
     "semester": "Spring 2013",
     "course_title": "Cinema and Everyday Life",
-    "course_codes": [],
+    "course_codes": [
+      "FAMS-351"
+    ],
     "faculty": {
       "Section 01": [
         "Amelie E. Hastie"
@@ -7125,38 +6282,6 @@
             "day": "W",
             "time": "02:00 PM - 03:20 PM",
             "location": "FAYE 113"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Spike Lee's Joints",
-    "course_codes": [
-      "BLST-330",
-      "ENGL-374",
-      "FAMS-358"
-    ],
-    "faculty": {
-      "Section 01": [
-        "John E. Drabinski",
-        "Marisa Parham"
-      ]
-    },
-    "description": "In offering extended formal considerations of Spike Lees cinematic oeuvrein particular his uses of light, sound, and colorthis course is interested in how shifting through various modes of critical inquiry can enable or broaden different kinds of cultural, political, or historical engagement with a film. This semester we will also pay special attention to the question of what it means to encapsulate a particular cultural moment, particularly vis-a-vis the often differing demands of fictional and non-fictional representation.",
-    "times_and_locations": {
-      "ENGL 374 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 115"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 115"
           }
         ]
       }
@@ -7214,37 +6339,6 @@
             "day": "Th",
             "time": "02:30 PM - 03:50 PM",
             "location": "CONV 207"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Ghosts in Shells? Virtuality and Embodiment from Passing to the Posthuman",
-    "course_codes": [
-      "BLST-441",
-      "ENGL-456",
-      "FAMS-451"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Marisa Parham"
-      ]
-    },
-    "description": "This class begins with narratives about individuals who passthat is, who come to be recognized as someone different from whom they were sexually or racially born as. Such stories suggest that ones identity depends minimally on the body into which one is born, and is more attached to the supplementation and presentation of that body in support of whichever cultural story the body is desired to tell. Drawing on familiar liberal humanist claims, which centralize human identity in the mind, these narratives also respond to the growing sophistication of human experience with virtual worldsfrom acts of reading to immersions in computer simulation. But what kinds of tensions emerge when bodies nonetheless signify beyond an individuals self-imagination? As technology expands the possibilities of the virtual, for instance surrogacy, cloning, and cybernetics, what pressures are brought to bear on the physical human body and its processes to signify authentic humanness? Rather than ask whether identity is natural or cultural, our discussions will project these questions into a not-so-distant future: What would it mean to take human as only one identity, as a category amongst many others, each also acknowledged as equally subject to the same social and biological matrices of desire, creation, and recognition? We will approach these questions through works of literature, philosophy, media history, and contemporary science writing.",
-    "times_and_locations": {
-      "ENGL 456 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "FAYE 217"
-          },
-          {
-            "day": "Th",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "FAYE 217"
           }
         ]
       }
@@ -8290,63 +7384,6 @@
   },
   {
     "semester": "Spring 2013",
-    "course_title": "SPACE",
-    "course_codes": [
-      "ARCH-368",
-      "EUST-368",
-      "FAMS-373",
-      "GERM-368"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Heidi Gilpin"
-      ]
-    },
-    "description": "This research seminar will explore conceptions of space as they have informed and influenced thought and creativity in the fields of cultural studies, literature, architecture, urban studies, performance, and the visual, electronic, and time-based arts. Students will select and pursue a major semester-long research project early in the semester and present their research in its various stages of development throughout the semester, in a variety of media formats (writing, performance, video, electronic art/interactive media, installation, online and networked events, architectural/design drawings/renderings), along with oral presentations of readings and other materials. Readings and visual materials will be drawn from the fields of literature and philosophy; from architectural, art, and film theory and history; from performance studies and performance theory; and from theories of technology and the natural and built environment. Emphasis on developing research, writing, and presentation skills is a core of this seminar. German majors will select a research project focused on a German Studies context, and will do a substantial portion of the readings in German.",
-    "times_and_locations": {
-      "GERM 368 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "12:00 PM - 03:00 PM",
-            "location": "CONV 302"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Early Modern Europe",
-    "course_codes": [
-      "EUST-125",
-      "HIST-125"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Margaret R. Hunt"
-      ]
-    },
-    "description": "This introductory survey covers Western, Central and Eastern Europe and the European parts of the Ottoman Empire during the period from approximately 1500 to 1800. It looks at the main political developments of the period, with special attention to court culture, rebellions and revolutions, colonial expansion and contraction, and the clash of states and empires. It examines new developments in long-distance trade, agriculture, industry, finance, warfare, media and the arts, and their impact on social life, politics and the environment. It looks at the emergent slave systems of Europe and her colonies as well as the Ottoman Empire. And it analyzes religious conflict and accommodation with respect to Catholics, Protestants, the Eastern Orthodox, Jews, Muslims and non-believers. The course aims to uncover the political, ethnic and religious diversity of Early Modern Europe as well as to plumb the roots of present-day conflicts and controversies about the historical definition of Europe and Europeans.",
-    "times_and_locations": {
-      "HIST 125 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "MEAD 115"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "MEAD 115"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
     "course_title": "Colonial North America",
     "course_codes": [
       "HIST-141"
@@ -8374,101 +7411,6 @@
             "day": "F",
             "time": "01:00 PM - 01:50 PM",
             "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Modern China",
-    "course_codes": [
-      "ASLC-146",
-      "HIST-172"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jerry P. Dennerline"
-      ]
-    },
-    "description": "A survey of Chinese history from the Manchu conquest of 1644 to the present. Beginning with the successes and failures of the imperial state as it faced global economic development, expanding European empires, and internal social change, we will study the Opium War, massive nineteenth-century religious rebellions, Republican revolution and state-building, the New Culture movement, Communist revolution, the anti-Japanese war, Maos Cultural Revolution, and the problems of post-Mao reform, all with comparative reference to current events. Readings, which include a wide variety of documents such as religious and revolutionary tracts, eye-witness accounts, memoirs, and letters, are supplemented by interpretive essays and videos.",
-    "times_and_locations": {
-      "HIST 172 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CHAP 201"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CHAP 201"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Introduction to Modern South Asian History",
-    "course_codes": [
-      "ASLC-174",
-      "HIST-174"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Dwaipayan Sen"
-      ]
-    },
-    "description": "This survey course introduces key themes and events in the making of modern South Asia. The objective is to provide a skeletal historical narrative of the various transformations the subcontinent and its peoples experienced through the colonial and post-colonial eras. A variety of primary sources and audio and visual materials will be utilized in conjunction with excerpts from panoramic textbooks as well as portions of monographs, combining perspectives from political, social, cultural and economic history. Commencing with the transitions occurring in the middle to late 18th century, the course explores some of the major historical developments in South Asia until the present moment including the East India Company-state, colonial and imperial rule, social reform, the revolt of 1857, Indian nationalism, caste and communal conflict, and the struggles for post-colonial democracy.",
-    "times_and_locations": {
-      "HIST 174 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 201"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 201"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Colonial and Post-Colonial Africa",
-    "course_codes": [
-      "BLST-221",
-      "HIST-181"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sean Redding"
-      ]
-    },
-    "description": "This is a history of Africa from the late nineteenth century to the present day. In the first half of the course, we will study the imperial scramble to colonize Africa; the broader integration of African societies into the world economy; the social, political and medical impact of imperial policies; Western popular images of Africa in the colonial period; the nationalist struggles that resulted in the independent African states; and the persistent problems faced by those post-colonial states. In the final half of the course, we will investigate three cases: Congo-Zaire and the state as a source of chaos through the Second Congo War; violence, liberation and memories of childhood in late colonial Rhodesia and postcolonial Zimbabwe; the political history of economic development programs and the advent of resource conflicts, particularly those involving diamonds.",
-    "times_and_locations": {
-      "HIST 181 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "CHAP 101"
-          },
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "CHAP 101"
-          },
-          {
-            "day": "F",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "CHAP 101"
           }
         ]
       }
@@ -8528,36 +7470,6 @@
             "day": "Th",
             "time": "08:30 AM - 09:50 AM",
             "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Popular Culture and Resistance in Western Europe, c. 1950-2000",
-    "course_codes": [
-      "EUST-239",
-      "HIST-237"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Onni L Gust"
-      ]
-    },
-    "description": "From the Beatles to the World Cup, from punk to protest, popular culture flourished in Europe in the fifty years between 1950 and 2000. With the increase of leisure time, expendable income and a \"baby boom\" that resulted in a youth-heavy population, art, film, fashion, music and sport had an increasingly wide appeal. At the same time, anti-war activism, right-wing nationalism, feminism, gay liberation and anti-racism all used music, art, sport, literature and film to rally support and carve out distinctive cultural idioms. This course looks at the ways in which popular culture and popular movements reflected and responded to broader changes in post-war Europe. Although focused on Western Europe, the course places the history of popular culture in the context of the Cold War world and post-colonial cultural transfer. Topics include: fashion and fascism in the context of post-war immigration; football, class and racism; anti-capitalism and art; punk and popular politics; the Beatles, religion and sexual liberation; feminism and gay rights in art and film; and responses to racism through literature, television and in film.",
-    "times_and_locations": {
-      "HIST 237 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MERR 401"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MERR 401"
           }
         ]
       }
@@ -8674,36 +7586,6 @@
   },
   {
     "semester": "Spring 2013",
-    "course_title": "Introduction to South African History",
-    "course_codes": [
-      "BLST-121",
-      "HIST-283"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sean Redding"
-      ]
-    },
-    "description": "South African history is undergoing radical shifts in the way it is being written, read and interpreted, and this course will explore established and emerging themes in the history of this intriguing country. The time period covered will span the precolonial indigenous cultures and move on to study the initiation and expansion of white settlement and its early dependence on slave labor. The course will also investigate African resistance, both in its political and cultural forms, as well as the social effects of gold-mining and migrant labor. African nationalism, including the ANC, the Black Consciousness Movement, and the United Democratic Front, will be the focus of our study of the responses to apartheid and the ultimate collapse of the apartheid state. The course will end with discussions of recent events in South Africa, particularly the Truth and Reconciliation Commission and its aftermath as well as the developing AIDS epidemic and the growing problem of crime.",
-    "times_and_locations": {
-      "HIST 283 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 203"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
     "course_title": "Proseminar in History: Writing the Past",
     "course_codes": [
       "HIST-301"
@@ -8726,58 +7608,6 @@
             "day": "W",
             "time": "12:30 PM - 01:50 PM",
             "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Topics in African American History: Race and Educational Opportunity in America",
-    "course_codes": [
-      "BLST-341",
-      "HIST-355"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Hilary J. Moss"
-      ]
-    },
-    "description": "This seminar is an interdisciplinary exploration of the relationship between race and educational opportunity in American history. Students will gain a historical understanding of the divergent educational experiences of various groups within American society. The course is divided into four units: ethnicity and educational access in early America, education and segregation in Jim Crow America, desegregation (implementation and opposition) after Brown v. Board of Education, and contemporary discussions over race and access to education. In the first section of the course, students will pay special attention to trends including northern and southern resistance to African American education, education as assimilation, and vocational vs. classical education. Next, they will delve into twentieth- and twenty-first-century issues involving race and education. For example, they will examine how specific communities--northern, southern, and western--grappled with the desegregation process. Finally, students will assess the extent to which desegregation has been achieved and the transformative effects of this policy on public schools.",
-    "times_and_locations": {
-      "HIST 355 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:00 PM - 03:30 PM",
-            "location": "WEBS 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Early Islam: Construction of an Historical Tradition",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Monica M. Ringer"
-      ]
-    },
-    "description": "This course examines in depth the formative period of Islam between c. 500-680. Using predominantly primary material, we will chart the emergence, success, and evolution of Islam, the Islamic community, and the Islamic polity. The focus of this course is on understanding the changing nature over time of peoples understanding of and conception of what Islam was and what Islam implied socially, religiously, culturally and politically. We concentrate on exploring the growth of the historical tradition of Islam and its continued contestations amongst scholars today. This course will familiarize students with the events, persons, ideas, texts and historical debates concerning this period. It is not a course on the religion or beliefs of Islam, but a historical deconstruction and analysis of the period. This class is writing intensive.",
-    "times_and_locations": {
-      "ASLC 355 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "MCLS 230"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "MCLS 230"
           }
         ]
       }
@@ -8840,31 +7670,6 @@
   },
   {
     "semester": "Spring 2013",
-    "course_title": "Defining the Modern: Russia Between Tsars and Communists",
-    "course_codes": [
-      "EUST-339",
-      "HIST-439"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sergey Glebov"
-      ]
-    },
-    "description": "The course will explore a most intense and fascinating period in Russian history: the years 1890-1910. This period witnessed rapid urbanization and industrialization; the rise of professional and mass politics; first instances of modern terrorism and an intensification of nationalist struggles; imperialist ventures in Central Asia, Manchuria, and Korea; several revolutions and wars; and, above all, an unprecedented efflorescence of modernist culture in the late Russian Empire which was readily exported to and consumed in Europe. We will analyze these developments through a range of sources, including resources found at the Mead Art Museum. In addition to acquainting students with major developments in turn-of-the-century Russian Empire, the class will address contemporary scholarly debates that focus on concepts such as modernity, self, discipline, knowledge, civil society, and nationalism. Students will be required to complete an independent research paper.",
-    "times_and_locations": {
-      "HIST 439 - L/D": {
-        "Section 01": [
-          {
-            "day": "Th",
-            "time": "02:30 PM - 05:00 PM",
-            "location": "CONV 308"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
     "course_title": "Black Liberation Theology",
     "course_codes": [
       "BLST-401",
@@ -8883,36 +7688,6 @@
             "day": "M",
             "time": "02:00 PM - 04:30 PM",
             "location": "COOP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Seminar on Modern China: The People and the State",
-    "course_codes": [
-      "ASLC-470",
-      "HIST-478"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jerry P. Dennerline"
-      ]
-    },
-    "description": "Political thinkers and activists inside China and throughout the world today puzzle over the relationship between the people and the state. Where do state functions and state control begin and end? How do the global economy, Chinas increasing regional hegemony, internal migration, NGOs, rural protest, and the internet influence the relationship between the people and the state? Fundamental questions about the relationship between the people and the state have occupied thinkers and activists since the beginning of the twentieth century. Reformers in China tried to transform the imperial state into a constitutional monarchy, revolutionaries tried to create a Republic, Nationalists tried to build a corporatist state, and Communists tried to create a Socialist one. At each stage, the state-makers imagined the people, mobilized them, categorized them, and tried to control them. The people became subjects, citizens, nationals, and the masses. They divided themselves by native place, region, language, ethnicity, political party, class, and educational status. Chinese people in Southeast Asia, Japan, Hong Kong, and Taiwan, have imagined themselves in relation to both the ancestral land and the colonial or national states under which they live. The process is by no means over. This seminar will focus on the problem of imagining and mobilizing people in China and these other states over the past century. General topics will include the ideas, the intellectual and educational context, and the mobilizations of urban and rural communities, commercial and religious groups, and NGOs. Research topics will depend on the interests of students.",
-    "times_and_locations": {
-      "HIST 478 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CHAP 203"
-          },
-          {
-            "day": "Th",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CHAP 203"
           }
         ]
       }
@@ -9979,45 +8754,6 @@
   },
   {
     "semester": "Spring 2013",
-    "course_title": "Music and Culture I",
-    "course_codes": [
-      "EUST-221",
-      "MUSI-221"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Klara Moricz"
-      ]
-    },
-    "description": "One of three courses in which music is studied in relation to issues of history, theory, culture, and performance, with the focus of the course changing from year to year. This course is an introduction to European music in the Medieval, Renaissance, and Baroque eras. We will begin by singing Gregorian chant and will go on to cover such topics as the music of the Troubadours, the polyphonic style associated with Notre Dame, the development of musical notation, Renaissance sacred polyphony, madrigals, court dances, and the birth of opera. Throughout the course we will seek to bring the music we study alive by singing and/or playing. We will also host several professional performers of early music who will help us understand how this music is likely to have sounded at the time of its creation.",
-    "times_and_locations": {
-      "MUSI 221 - LAB": {
-        "Section 01": [
-          {
-            "day": "TBD",
-            "time": "",
-            "location": "-"
-          }
-        ]
-      },
-      "MUSI 221 - LEC": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "ARMU 212"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "ARMU 212"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
     "course_title": "Tonal Harmony and Counterpoint",
     "course_codes": [
       "MUSI-241"
@@ -10129,50 +8865,6 @@
             "day": "W",
             "time": "02:00 PM - 05:00 PM",
             "location": "WEBS 19"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Performance and Analysis II",
-    "course_codes": [
-      "MUSI-310",
-      "MUSI-310H"
-    ],
-    "faculty": {
-      "Section 01": [
-        "David E. Schneider"
-      ]
-    },
-    "description": "Members of the class will be assigned to chamber ensembles, representing a range of repertoire from the past and present. Ensembles will include both student and artist musicians, who will prepare works for performance in class sessions and private coachings. Intensive class analysis will serve as the basis of musical expression and interpretation. This course is open to singers and instrumentalists.",
-    "times_and_locations": {
-      "MUSI 310 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "03:30 PM - 05:30 PM",
-            "location": "ARMU 212"
-          },
-          {
-            "day": "Su",
-            "time": "03:30 PM - 05:30 PM",
-            "location": "ARMU 212"
-          }
-        ]
-      },
-      "MUSI 310H - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "03:30 PM - 05:30 PM",
-            "location": "ARMU 212"
-          },
-          {
-            "day": "Sa",
-            "time": "03:30 PM - 05:30 PM",
-            "location": "ARMU 212"
           }
         ]
       }
@@ -11174,32 +9866,6 @@
   },
   {
     "semester": "Spring 2013",
-    "course_title": "Post-Cold War American Diplomacy",
-    "course_codes": [
-      "HIST-257",
-      "POSC-312"
-    ],
-    "faculty": {
-      "Section 01": [
-        "N. Gordon Levin",
-        "Pavel Machala"
-      ]
-    },
-    "description": "A 1992 still-classified Pentagon Defense Policy Guidance draft asserts that Americas political and military mission in the post-cold war era will be to ensure that no rival superpower be allowed to emerge in world politics. This course will examine American foreign relations from the fall of the Berlin Wall to the present. We will study the similarities and differences in the styles of statecraft of all post-cold war U.S. administrations in producing, managing and sustaining Americas unrivaled international position, which emerged in the aftermath of the collapse of the Soviet Union. While examining the debates between liberals and neoconservatives about Americas role in the world both preceding and following the 9-11 attack, we will also discuss the extent to which these debates not only have shaped American foreign policy but also how they have influenced our domestic politics and vice versa. Among the other main themes to be examined: the strategic, tactical and humanitarian uses of military and other forms of power by each administration (e.g., towards Somalia, the Balkans, Iraq, Afghanistan); U.S. policy towards NATO and towards the world economy; U.S. policy towards Russia, China, the Middle East and Latin America; human, economic and political costs and benefits of American leadership in this period.",
-    "times_and_locations": {
-      "POSC 312 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "MORG 111"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
     "course_title": "Introduction to the Frankfurt School",
     "course_codes": [
       "POSC-315"
@@ -11615,67 +10281,6 @@
             "day": "Th",
             "time": "08:30 AM - 09:50 AM",
             "location": "MERR 4"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Introduction to Neuroscience",
-    "course_codes": [
-      "NEUR-226",
-      "PSYC-226"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ethan R. Graf",
-        "Sarah M. Turgeon"
-      ]
-    },
-    "description": "An introduction to the structure and function of the nervous system, this course will explore the neural bases of behavior at the cellular and systems levels. Basic topics in neurobiology, neuroanatomy and physiological psychology will be covered with an emphasis on understanding how neuroscientists approach the study of the nervous system. Three class hours and four hours of laboratory per week.",
-    "times_and_locations": {
-      "NEUR 226 - LEC": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 3"
-          },
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 3"
-          },
-          {
-            "day": "F",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 3"
-          }
-        ]
-      },
-      "NEUR 226F - DIS": {
-        "Section 01": [
-          {
-            "day": "Th",
-            "time": "01:00 PM - 01:50 PM",
-            "location": "MERR 2"
-          }
-        ]
-      },
-      "NEUR 226L - LAB": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:00 PM - 04:00 PM",
-            "location": "MCLS 145"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 05:00 PM",
-            "location": "MCLS 145"
           }
         ]
       }
@@ -12099,96 +10704,6 @@
   },
   {
     "semester": "Spring 2013",
-    "course_title": "Muhammad and the Qur'an",
-    "course_codes": [
-      "ASLC-282",
-      "RELI-282"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Tariq Jaffer"
-      ]
-    },
-    "description": "This course deals with the life of Muhammad and the Quran. The first part deals with the life of Muhammad as reflected in the writings of the early Muslim biographers. It examines the crucial events of Muhammads life and focuses on Muhammads image in the eyes of the early Muslim community. The second deals with the Quran. It focuses on the history of the Quran, its canonization, major themes, various methods of Quranic interpretation, the role of the Quran in Islamic law, ritual, and modernity.",
-    "times_and_locations": {
-      "RELI 282 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "WEBS 220"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "WEBS 220"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Philosophy of Religion",
-    "course_codes": [
-      "PHIL-219",
-      "RELI-316"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Andrew C. Dole"
-      ]
-    },
-    "description": "An examination of several major discussion topics in the analytic philosophy of religion: the ethics of religious belief, the problem of religious language, the nature of God and the problem of evil. It would seem that it is always irrational to believe that statements about matters which transcend the realm of the empirical are true, since none of these statements can be directly supported by evidence. Thus it would seem that a great deal of religious belief is irrational. Is this the case, or can religious beliefs be supported by other means? Can philosophical reflection bring clarity to such puzzling matters as God's relationship to time, or the question of how a good and all-powerful God could permit the existence of evil? Alternatively, is the entire project of evaluating religious discourse as a set of claims about transcendent realities misguided--i.e., does religious language work differently than the language we use to speak about ordinary objects?",
-    "times_and_locations": {
-      "RELI 316 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CHAP 203"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Enlightening Passion: Sexuality and Gender in Tibetan Buddhism",
-    "course_codes": [
-      "ASLC-326",
-      "RELI-326"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Paola Zamperini"
-      ]
-    },
-    "description": "In this course we will study the lives of prominent female teachers in Tibetan Buddhism from its inception up to the present day. Our focus will be on reconstructing the narratives of the trajectories to realization that women like Yedshe Tsogyal, Mandarava, Yid Thogma, Machig Labdron, Sera Khandro, and Ayu Khandro, among others, undertook, often at high personal and societal cost. By utilizing biographical and--as much as possible--autobiographical records (in English translation), we will analyze the religious and social aspects of these womens choice to privilege the Vajarayana path to enlightenment, often (but not always), at the expense of more conventional and accepted lifestyles. In order to do so, we will explore in depth the meanings attached to femininity, masculinity, sexuality, and gender dynamics within Tibetan monastic and lay life. The course will combine methodology from Buddhist studies, Tibetan studies, women and gender studies, critical theory, and literary criticism in an effort to unravel and explore the complex negotiations that Buddhist female teachers engaged in during their spiritual pursuit, in the context of traditional as well as contemporary Tibetan culture.",
-    "times_and_locations": {
-      "ASLC 326 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MERR 314"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MERR 314"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
     "course_title": "Folklore and the Bible",
     "course_codes": [
       "RELI-362"
@@ -12240,31 +10755,6 @@
             "day": "Th",
             "time": "10:00 AM - 11:20 AM",
             "location": "CHAP 210"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "The Islamic Mystical Tradition",
-    "course_codes": [
-      "ASLC-356",
-      "RELI-385"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Tariq Jaffer"
-      ]
-    },
-    "description": "This course is a survey of the large complex of Islamic intellectual and social perspectives subsumed under the term Sufism. Sufi mystical philosophies, liturgical practices, and social organizations have been a major part of the Islamic tradition in all historical periods, and Sufism has also served as a primary creative force behind Islamic aesthetic expression in poetry, music, and the visual arts. In this course, we will attempt to understand the various significations of Sufism by addressing both the world of ideas and socio-cultural practices. The course is divided into four modules: central themes and concepts going back to the earliest individuals who identified themselves as Sufis; the lives and works of two medieval Sufis; Sufi cosmology and metaphysics; Sufism as a global and multifarious trend in the modern world.",
-    "times_and_locations": {
-      "RELI 385 - L/D": {
-        "Section 01": [
-          {
-            "day": "Th",
-            "time": "02:30 PM - 04:30 PM",
-            "location": "CHAP 119"
           }
         ]
       }
@@ -12543,72 +11033,10 @@
   },
   {
     "semester": "Spring 2013",
-    "course_title": "Art From the Realm of Dreams",
-    "course_codes": [
-      "ARHA-146",
-      "EUST-146"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Natasha Staller"
-      ]
-    },
-    "description": "We begin with a long-standing Spanish obsession with dreams, analyzing images and texts by Calderon, Quevedo and Goya. We next will consider a range of dream workers from a range of cultures, centuries, and disciplines--among them Apollinaire, Freud, Breton, Dali, Carrington, and Kahlo--as well as others working around the globe in our own time.",
-    "times_and_locations": {
-      "ARHA 146 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 217"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Greek Civilization",
-    "course_codes": [
-      "CLAS-123"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Frederick T. Griffiths"
-      ]
-    },
-    "description": "We read in English the major authors from Homer in the 8th century BCE to Plato in the 4th century in order to trace the emergence of epic, lyric poetry, tragedy, comedy, history, and philosophy. How did the Greek enlightenment, and through it Western culture, emerge from a few generations of people moving around a rocky archipelago? How did oral and mythological traditions develop into various forms of rationality: science, history, and philosophy? What are the implications of male control over public and private life and the written record? What can be inferred about ancient women if they cannot speak for themselves in the texts? Other authors include Sappho, Herodotus, Aeschylus, Sophocles, Euripides, Aristophanes, and Thucydides. The course seeks to develop the skills of close reading and persuasive argumentation.",
-    "times_and_locations": {
-      "CLAS 123 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "BEBU 107"
-          },
-          {
-            "day": "W",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "BEBU 107"
-          },
-          {
-            "day": "F",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "BEBU 107"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
     "course_title": "Feminist Theory",
-    "course_codes": ["WAGS-200"],
+    "course_codes": [
+      "WAGS-200"
+    ],
     "faculty": {
       "Section 01": [
         "Krupa Shandilya"
@@ -12635,7 +11063,9 @@
   {
     "semester": "Spring 2013",
     "course_title": "Feminism, Gender and Science",
-    "course_codes": ["WAGS-201"],
+    "course_codes": [
+      "WAGS-201"
+    ],
     "faculty": {
       "Section 01": [
         "Banumathi Subramaniam"
@@ -12680,65 +11110,6 @@
             "day": "Th",
             "time": "11:30 AM - 12:50 PM",
             "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Gender and Work",
-    "course_codes": [
-      "SOCI-237"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Eunmi Mun"
-      ]
-    },
-    "description": "How has the rise of working women complicated modern workplaces and the idea of work? One challenge is how to value womens work fairly. One index of this challenge is that in workplaces across the world, women earn significantly less than men and are underrepresented in high status positions. What explains such gender gaps in the workplace? Taking an empirical, social-science perspective, this course will discuss three main aspects of gender and work. First, we will cover major theories of gender inequality, such as psychological stereotyping, social exclusion, structural barriers, and gendered socialization. Second, in learning about the sociological mechanisms of inequality in the workplace, we will expand our discussion to womens work in the family and examine how the conflicts individuals face when trying to have both career and family influence womens lives. Finally, we will discuss the mixed results of public policies proposed to reduce gender inequality and work-family incompatibilities and the possible reasons for those mixed results.",
-    "times_and_locations": {
-      "SOCI 237 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MCLS 428"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MCLS 428"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Enlightening Passion: Sexuality and Gender in Tibetan Buddhism",
-    "course_codes": [
-      "ASLC-326",
-      "RELI-326"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Paola Zamperini"
-      ]
-    },
-    "description": "In this course we will study the lives of prominent female teachers in Tibetan Buddhism from its inception up to the present day. Our focus will be on reconstructing the narratives of the trajectories to realization that women like Yedshe Tsogyal, Mandarava, Yid Thogma, Machig Labdron, Sera Khandro, and Ayu Khandro, among others, undertook, often at high personal and societal cost. By utilizing biographical and--as much as possible--autobiographical records (in English translation), we will analyze the religious and social aspects of these womens choice to privilege the Vajarayana path to enlightenment, often (but not always), at the expense of more conventional and accepted lifestyles. In order to do so, we will explore in depth the meanings attached to femininity, masculinity, sexuality, and gender dynamics within Tibetan monastic and lay life. The course will combine methodology from Buddhist studies, Tibetan studies, women and gender studies, critical theory, and literary criticism in an effort to unravel and explore the complex negotiations that Buddhist female teachers engaged in during their spiritual pursuit, in the context of traditional as well as contemporary Tibetan culture.",
-    "times_and_locations": {
-      "ASLC 326 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MERR 314"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MERR 314"
           }
         ]
       }
@@ -13206,37 +11577,6 @@
   },
   {
     "semester": "Spring 2013",
-    "course_title": "Representation and Reality in Spanish Cinema",
-    "course_codes": [
-      "EUST-232",
-      "FAMS-328",
-      "SPAN-236"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sara J. Brenneis"
-      ]
-    },
-    "description": "Once severely constrained by dictator Francisco Francos censorship laws and rarely exported beyond the countrys borders, Spanish film has been transformed into an internationally-known cinema in the last decades. This course offers a critical overview of Spanish film from 1950 to the present, examining how Spains culture and society are imagined onscreen by directors such as Berlanga, Erice, Bollain, and Almodovar. Students will analyze works of Spanish cinema alongside theoretical and critical texts, exploring such topics as gendered roles in contemporary society, immigration, globalization, censorship, and experiences of war and violence. We will also track the sociological, cultural, and political forces inside Spain that have inspired such cinematic representations. This course provides an introduction to visual analysis and critical writing about film and will be conducted in English. Students are expected to attend weekly screenings where films will be shown in Spanish with English subtitles.",
-    "times_and_locations": {
-      "SPAN 236 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CONV 304"
-          },
-          {
-            "day": "Th",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CONV 304"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
     "course_title": "Golden Age Literature",
     "course_codes": [
       "SPAN-316"
@@ -13501,7 +11841,9 @@
   {
     "semester": "Spring 2013",
     "course_title": "Numbers Rule the World.",
-    "course_codes": [],
+    "course_codes": [
+      "MELL-116"
+    ],
     "faculty": {
       "Section 01": [
         "Jerome L. Himmelstein"
@@ -14048,70 +12390,6 @@
   },
   {
     "semester": "Spring 2013",
-    "course_title": "Art From the Realm of Dreams",
-    "course_codes": [
-      "ARHA-146",
-      "EUST-146"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Natasha Staller"
-      ]
-    },
-    "description": "We begin with a long-standing Spanish obsession with dreams, analyzing images and texts by Calderon, Quevedo and Goya. We next will consider a range of dream workers from a range of cultures, centuries, and disciplines--among them Apollinaire, Freud, Breton, Dali, Carrington, and Kahlo--as well as others working around the globe in our own time.",
-    "times_and_locations": {
-      "ARHA 146 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 217"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Greek Civilization",
-    "course_codes": [
-      "CLAS-123"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Frederick T. Griffiths"
-      ]
-    },
-    "description": "We read in English the major authors from Homer in the 8th century BCE to Plato in the 4th century in order to trace the emergence of epic, lyric poetry, tragedy, comedy, history, and philosophy. How did the Greek enlightenment, and through it Western culture, emerge from a few generations of people moving around a rocky archipelago? How did oral and mythological traditions develop into various forms of rationality: science, history, and philosophy? What are the implications of male control over public and private life and the written record? What can be inferred about ancient women if they cannot speak for themselves in the texts? Other authors include Sappho, Herodotus, Aeschylus, Sophocles, Euripides, Aristophanes, and Thucydides. The course seeks to develop the skills of close reading and persuasive argumentation.",
-    "times_and_locations": {
-      "CLAS 123 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "BEBU 107"
-          },
-          {
-            "day": "W",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "BEBU 107"
-          },
-          {
-            "day": "F",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "BEBU 107"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
     "course_title": "Black Women's Narratives and Counternarratives: Love and the Family",
     "course_codes": [
       "BLST-242",
@@ -14135,35 +12413,6 @@
             "day": "Th",
             "time": "11:30 AM - 12:50 PM",
             "location": "CONV 302"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
-    "course_title": "Gender and Work",
-    "course_codes": [
-      "SOCI-237"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Eunmi Mun"
-      ]
-    },
-    "description": "How has the rise of working women complicated modern workplaces and the idea of work? One challenge is how to value womens work fairly. One index of this challenge is that in workplaces across the world, women earn significantly less than men and are underrepresented in high status positions. What explains such gender gaps in the workplace? Taking an empirical, social-science perspective, this course will discuss three main aspects of gender and work. First, we will cover major theories of gender inequality, such as psychological stereotyping, social exclusion, structural barriers, and gendered socialization. Second, in learning about the sociological mechanisms of inequality in the workplace, we will expand our discussion to womens work in the family and examine how the conflicts individuals face when trying to have both career and family influence womens lives. Finally, we will discuss the mixed results of public policies proposed to reduce gender inequality and work-family incompatibilities and the possible reasons for those mixed results.",
-    "times_and_locations": {
-      "SOCI 237 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MCLS 428"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MCLS 428"
           }
         ]
       }
@@ -14201,38 +12450,10 @@
   },
   {
     "semester": "Spring 2013",
-    "course_title": "Enlightening Passion: Sexuality and Gender in Tibetan Buddhism",
-    "course_codes": [
-      "ASLC-326",
-      "RELI-326"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Paola Zamperini"
-      ]
-    },
-    "description": "In this course we will study the lives of prominent female teachers in Tibetan Buddhism from its inception up to the present day. Our focus will be on reconstructing the narratives of the trajectories to realization that women like Yedshe Tsogyal, Mandarava, Yid Thogma, Machig Labdron, Sera Khandro, and Ayu Khandro, among others, undertook, often at high personal and societal cost. By utilizing biographical and--as much as possible--autobiographical records (in English translation), we will analyze the religious and social aspects of these womens choice to privilege the Vajarayana path to enlightenment, often (but not always), at the expense of more conventional and accepted lifestyles. In order to do so, we will explore in depth the meanings attached to femininity, masculinity, sexuality, and gender dynamics within Tibetan monastic and lay life. The course will combine methodology from Buddhist studies, Tibetan studies, women and gender studies, critical theory, and literary criticism in an effort to unravel and explore the complex negotiations that Buddhist female teachers engaged in during their spiritual pursuit, in the context of traditional as well as contemporary Tibetan culture.",
-    "times_and_locations": {
-      "ASLC 326 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MERR 314"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MERR 314"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2013",
     "course_title": "Black Sexualities",
-    "course_codes": ["WAGS-330"],
+    "course_codes": [
+      "WAGS-330"
+    ],
     "faculty": {
       "Section 01": [
         "Khary O. Polk"

@@ -149,21 +149,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Special Topics",
-    "course_codes": [
-      "AAPI-390",
-      "AAPI-290"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Independent reading course. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: independent research, critical analysis, close reading, and extended writing.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Senior Departmental Honors",
     "course_codes": [
       "AAPI-498"
@@ -684,25 +669,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Special Topics",
-    "course_codes": [
-      "JAPA-290",
-      "JAPA-490",
-      "JAPA-290H",
-      "JAPA-490H",
-      "JAPA-390",
-      "JAPA-390H"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Independent reading course. A full course. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Emphasis on targeted skills, themes, and expectations will be jointly determined by the student and instructor; instruction in languages other than English.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Introduction to Different Genres of Japanese Writing and Film",
     "course_codes": [
       "JAPA-301"
@@ -729,44 +695,6 @@
       ]
     },
     "description": "This course will be a continuation of JAPA 301. Various genres of writing and film, of longer and increased difficulty levels, will be used to develop a high proficiency level of reading, writing, speaking, and listening. At this level, the students should gradually be moving from learning to read to reading to learn. This important progression will be guided carefully. Small groups based on the students proficiency levels will be formed, so that instruction accords with the needs of each group. Students will be required to practice with the materials that are on the course website at the college. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: emphasis on reading book length authentic Japanese materials and writing well-structured discourse in Japanese; high level proficiency in speaking and listening; oral and written presentations; peer work; in-class and/or online quizzes or tests; autonomous practice; independent work; instruction in languages other than English.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Special Topics",
-    "course_codes": [
-      "JAPA-290",
-      "JAPA-490",
-      "JAPA-290H",
-      "JAPA-490H",
-      "JAPA-390",
-      "JAPA-390H"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Independent reading course. A full course. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Emphasis on targeted skills, themes, and expectations will be jointly determined by the student and instructor; instruction in languages other than English.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Special Topics",
-    "course_codes": [
-      "JAPA-290",
-      "JAPA-490",
-      "JAPA-290H",
-      "JAPA-490H",
-      "JAPA-390",
-      "JAPA-390H"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Independent reading course. A full course. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Emphasis on targeted skills, themes, and expectations will be jointly determined by the student and instructor; instruction in languages other than English.",
     "times_and_locations": {}
   },
   {
@@ -829,44 +757,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Special Topics",
-    "course_codes": [
-      "JAPA-290",
-      "JAPA-490",
-      "JAPA-290H",
-      "JAPA-490H",
-      "JAPA-390",
-      "JAPA-390H"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Independent reading course. A full course. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Emphasis on targeted skills, themes, and expectations will be jointly determined by the student and instructor; instruction in languages other than English.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Special Topics",
-    "course_codes": [
-      "JAPA-290",
-      "JAPA-490",
-      "JAPA-290H",
-      "JAPA-490H",
-      "JAPA-390",
-      "JAPA-390H"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Independent reading course. A full course. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Emphasis on targeted skills, themes, and expectations will be jointly determined by the student and instructor; instruction in languages other than English.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Cell Structure and Function with Lab",
     "course_codes": [
       "BCBP-291",
@@ -924,21 +814,6 @@
       ]
     },
     "description": "Independent reading course. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Self-directed research and study.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Senior Departmental Honors",
-    "course_codes": [
-      "BCBP-498",
-      "BCBP-498D"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "The course emphasizes readings from the primary scientific literature, independent research, quantitative work, and laboratory work toward the writing of a senior honors thesis.",
     "times_and_locations": {}
   },
   {
@@ -1122,21 +997,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Cell Structure and Function with Lab",
-    "course_codes": [
-      "BCBP-291",
-      "BIOL-291"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Marc A. Edwards"
-      ]
-    },
-    "description": "An analysis of the structure and function of eukaryotic cells. Topics to be discussed include the cell surface and membranes, cytoskeletal elements and motility, cytoplasmic organelles and bioenergetics, the interphase nucleus and chromosomes, mitosis, meiosis, and cell cycle regulation. There will be three classroom hours consisting of both lectures and problem-solving sessions, and three hours of laboratory per week. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: reading primary literature, data analysis, experimental design, lab work, collaboration, critical thinking, individual exams.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Molecular Neurobiology with Lab",
     "course_codes": [
       "BIOL-301",
@@ -1152,23 +1012,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Biochemistry with Lab",
-    "course_codes": [
-      "BCBP-331",
-      "BIOL-331",
-      "CHEM-331"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Kendra Marcus",
-        "Mona Wu Orr"
-      ]
-    },
-    "description": "Structure and function of biologically important molecules and their role(s) in life processes. Protein conformation, enzymatic mechanisms and selected metabolic pathways will be analyzed. Additional topics may include: nucleic acid conformation, DNA/protein interactions, signal transduction and transport phenomena. Four classroom hours and four hours of laboratory work per week. A student may not receive credit for both CHEM/BIOL 330 and BCBP/BIOL/CHEM 331. BCBP/BIOL/CHEM 331 is a requirement for the biochemistry track of the BCBP major. Students will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: oral presentations, group work, in-class quizzes or exams, quantitative work, lab work, visual analysis, reading primary literature.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Neurophysiology with CURE lab",
     "course_codes": [
       "BIOL-351",
@@ -1180,21 +1023,6 @@
       ]
     },
     "description": "This course will provide a deeper understanding of the physiological properties of the nervous system. We will address the mechanisms underlying the structure and function of neurons, the primary cells of the nervous system in animals. These cells transfer information through both chemical and electrical mechanisms, and we focus on these processes at the synapse, the connection point between two neurons. We then examine how signals move across multiple cells using the hippocampus and inner ear as models. Key learning areas include understanding the quantitative nature of neurophysiology; the transduction and integration of sensory information; the structure and function of circuits; the trophic and plastic properties of neurons; and the relationship between neuronal activity and behavior. Throughout the course, we focus on past and current neurophysiology primary research and how it contributes to the field of neuroscience. Three classroom lecture hours. Three hours of laboratory work per week, which is designed around a research laboratory experience that focuses on hypothesis and experimental design, expertise with neurophysiology equipment, the zebrafish model organism, and analysis and presentation of collected data in the form of scientific figures and research papers. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Learning in BIOL-351 is facilitated by three lectures per week, in addition to group work that is emphasized in both the classroom and laboratory sections. Skills being emphasized include analytical thinking, scientific communication, synthesis, reflection and creativity. Assessments include individual exams, individual and group quizzes, paper summaries, lab reports/worksheets, and participation in group and laboratory learning activities.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Molecular Genetics with Lab",
-    "course_codes": [
-      "BCBP-371",
-      "BIOL-371"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Cole M. Dovey"
-      ]
-    },
-    "description": "A study of the molecular mechanisms underlying the transmission and expression of genes. DNA replication and recombination, RNA synthesis and processing, and protein synthesis and modification will be examined. Both prokaryotic and eukaryotic systems will be analyzed, with an emphasis upon the regulation of gene expression. Application of modern molecular methods to biomedical and agricultural problems will also be considered. The laboratory component will focus upon recombinant DNA methodology. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: readings, oral presentations, group work, in-class quizzes or exams, lab work.",
     "times_and_locations": {}
   },
   {
@@ -1223,21 +1051,6 @@
       ]
     },
     "description": "Germ cells have captured the attention of scientists for more than a century. In many animals, they are among the first cells to be separated from others during embryonic development. They do not contribute to the form or function or an individual, but provide the continuity of life between generations. Elaborate mechanisms ensure that the genetic information in these reproductive cells is protected and packaged in unique ways to be used in the next generation. This seminar will focus on primary literature readings that probe the unique development and genetic regulation of germ cells. Classic developmental genetic approaches as well as more modern molecular genetic methods will be discussed as ways of understanding these extraordinary cells. Students will use oral and written formats to present paper reviews and analyses.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Senior Departmental Honors",
-    "course_codes": [
-      "BIOL-498",
-      "BIOL-498D"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Honors students take three courses of thesis research. The work consists of seminar programs, individual research projects, and preparation of a thesis on the research project. A double course. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Develop and carry out an independent research project using an inquiry-based approach to science; read and evaluate primary literature; quantitative reasoning; laboratory work; field work; data analysis; independent writing; oral presentation; preparation of a thesis.",
     "times_and_locations": {}
   },
   {
@@ -1504,21 +1317,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Senior Departmental Honors",
-    "course_codes": [
-      "BLST-498D",
-      "BLST-498"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "A double course. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: written work, independent research and oral presentations.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Introductory Chemistry",
     "course_codes": [
       "CHEM-151"
@@ -1680,25 +1478,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Special Topics",
-    "course_codes": [
-      "CHEM-290H",
-      "CHEM-490H",
-      "CHEM-390",
-      "CHEM-390H",
-      "CHEM-290",
-      "CHEM-490"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Independent reading or research course. A full course. The course emphasizes readings from the primary scientific literature, independent research, quantitative work, and laboratory work.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Advanced Physical and Mechanistic Organic Chemistry",
     "course_codes": [
       "CHEM-320"
@@ -1754,82 +1533,6 @@
       ]
     },
     "description": "This course will discuss structure, bonding, and properties of transition metal-containing molecules and inorganic solids. Students will examine structure and bonding in transition metal complexes through molecular orbital and ligand field theories, with an emphasis on the magnetic, spectroscopic, and thermodynamic properties of transition metal complexes. The class will also examine reactions of transition metal complexes, including the unique chemistry of organometallic compounds. The laboratory experiments complement lecture material and include an independent project. Three hours of class, one hour of discussion and four hours of laboratory per week. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: An emphasis on quantitative work, in-class exams, engagement with primary scientific literature, group work, and laboratory work.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Special Topics",
-    "course_codes": [
-      "CHEM-290H",
-      "CHEM-490H",
-      "CHEM-390",
-      "CHEM-390H",
-      "CHEM-290",
-      "CHEM-490"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Independent reading or research course. A full course. The course emphasizes readings from the primary scientific literature, independent research, quantitative work, and laboratory work.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Special Topics",
-    "course_codes": [
-      "CHEM-290H",
-      "CHEM-490H",
-      "CHEM-390",
-      "CHEM-390H",
-      "CHEM-290",
-      "CHEM-490"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Independent reading or research course. A full course. The course emphasizes readings from the primary scientific literature, independent research, quantitative work, and laboratory work.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Special Topics",
-    "course_codes": [
-      "CHEM-290H",
-      "CHEM-490H",
-      "CHEM-390",
-      "CHEM-390H",
-      "CHEM-290",
-      "CHEM-490"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Independent reading or research course. A full course. The course emphasizes readings from the primary scientific literature, independent research, quantitative work, and laboratory work.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Special Topics",
-    "course_codes": [
-      "CHEM-290H",
-      "CHEM-490H",
-      "CHEM-390",
-      "CHEM-390H",
-      "CHEM-290",
-      "CHEM-490"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Independent reading or research course. A full course. The course emphasizes readings from the primary scientific literature, independent research, quantitative work, and laboratory work.",
     "times_and_locations": {}
   },
   {
@@ -1988,21 +1691,6 @@
       ]
     },
     "description": "The authors read in GREE 441 and 442 vary from year to year, but as a general practice are chosen from a list including Homer, choral and lyric poetry, historians, tragedians, and Plato, depending upon the interests and needs of the students. GREE 441 and 442 may be elected any number of times by a student, providing only that the topic is not the same. In 2025, the class will read a selection of the Presocratic philosophers in Ancient Greek along with a handful of articles that explore the origins of early Greek science and philosophy. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Translation, written work.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Special Topics",
-    "course_codes": [
-      "GREE-490",
-      "GREE-390"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Independent reading course. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Intensive translation.",
     "times_and_locations": {}
   },
   {
@@ -2532,23 +2220,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Special Topics",
-    "course_codes": [
-      "ECON-490H",
-      "ECON-290",
-      "ECON-390",
-      "ECON-490"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "A special topics course focused on core economic theory. Intended for students who have, in the past, received a D in a core theory course in economics and who therefore need to take a special topics course focused on that area of core theory to satisfy the major requirements. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: TBD based on student plan with faculty advisor(s).",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Pluralist Applied Micro Practicum",
     "course_codes": [
       "ECON-412"
@@ -2587,23 +2258,6 @@
       ]
     },
     "description": "In this course, we will explore the determinants of educational acquisition in developing countries. We will begin by discussing human capital theory. We will then explore a number of key determinants of educational outcomes in developing countries, such as educational infrastructure, teacher quality, conditional cash transfers, anti-child labor programs, and peer effects. The course will also include a module comparing the key questions in the economics of education facing developed versus developing countries. The purposes of this course are to deepen understanding of the determinants of educational investments and to build experience with using empirical research to expand knowledge in this area. To that end, much of the course will focus on careful reading of empirical journal articles, discussion of the various econometric techniques used, and causal identification. The course is built around student development of an original paper that expands our empirical understanding of the determinants of educational investments in a low-income economy context. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Reading and engaging with academic research, writing analytical and theoretical economic papers, group work, quantitative and analytical reasoning, oral presentations, use of statistical software.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Special Topics",
-    "course_codes": [
-      "ECON-490H",
-      "ECON-290",
-      "ECON-390",
-      "ECON-490"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "A special topics course focused on core economic theory. Intended for students who have, in the past, received a D in a core theory course in economics and who therefore need to take a special topics course focused on that area of core theory to satisfy the major requirements. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: TBD based on student plan with faculty advisor(s).",
     "times_and_locations": {}
   },
   {
@@ -2684,22 +2338,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Power and Politics in Contemporary China",
-    "course_codes": [
-      "EDST-208",
-      "ASLC-208",
-      "POSC-208"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Kerry E. Ratigan"
-      ]
-    },
-    "description": "This course provides an introduction to the major institutions, actors, and ideas that shape contemporary Chinese politics. Through an examination of texts from the social sciences as well as historical narratives and film, we will analyze the development of the current party-state, the relationship between the state and society, policy challenges, and prospects for further reform. First, we examine the political history of the Peoples Republic, including the Maoist period and the transition to market reforms. Next, we will interrogate the relations between various social groups and the state, through an analysis of contentious politics in China including the ways in which the party-state seeks to maintain social and political stability. Finally, we will examine the major policy challenges in contemporary China including growing inequality, environmental degradation, waning economic growth, and foreign policy conflicts. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Students should expect to encounter an emphasis on written work, readings, in-class quizzes, group work, and independent research.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "The Economics of Inequality in the United States",
     "course_codes": [
       "EDST-218",
@@ -2749,22 +2387,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Museums and Education",
-    "course_codes": [
-      "EDST-258",
-      "AMST-258"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Angus McLeod",
-        "Karen J. Sanchez-Eppler"
-      ]
-    },
-    "description": "All too often, when we think of education we think of the grammar of schoolingdesks, the classroom, a teacher lecturingbut some of the most exciting and creative educational work is happening in museum spaces. Museums are educational institutions in that they seek to preserve and disseminate knowledge, culture, aesthetics, and scientific insight. Museums are innovators in expanding the modes of conveying information beyond reading and writingthe written text. They have worked hard to be sites of experiential learning for students of all ages. Examining museums and education together highlights the complementary nature of these endeavors as well as their inherent tensions. How does a museums materiality affect its educational mission? What economic and political forces (philanthropy, governments, public sentiment) set and shape museums educational programming? This course introduces students to the educational mission of different kinds of museums through weekly visits to local museums and semester-long group projects with a specific museum partner. This course interrogates the opportunities and challenges of creating and sharing knowledge in museum settings and through that process provides new insights into the goals and methods of education. Note on field trips: Occasionally class sessions will involve transportation to area museums and may conclude after 3:50 pm (closer to 4:30 pm instead). Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: close reading, object analysis, analytic writing, active discussion, community engagement, and public facing group projects.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "AfAm Hist from Slave Trade to Recon",
     "course_codes": [
       "EDST-286",
@@ -2793,22 +2415,6 @@
       ]
     },
     "description": "This course explores the recent politicization of social studies education (with a particular focus on the teaching of History and Civics) in American public schools through a close examination of the process through which the standards and curriculum for the teaching of social studies are determined, revised, and legislated. By analyzing the debates over legislation to restrict the teaching of divisive concepts, as well as the associated revision of state standards in a variety of contested spaces, students will gain awareness not only of how guidelines for the teaching of social studies are created, but also why an understanding of the political process influencing curriculum and classroom instruction is vital for the protection of free speech and public education within our democracy. With state history standards as the case study, students will complete the course having considered how educational reform is advanced, who does and should have a say in U.S. Social Studies education, and what role they wish to assume in education as a project of democracy. This course will involve community engagement with public school educators, state and national social studies scholars and advocates, and state legislators. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: an emphasis on written work, readings, independent and group research projects, oral presentations, group work and participation in community engaged learning involving public school educators.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Rescuing Democracy: Ferguson, USA",
-    "course_codes": [
-      "EDST-329",
-      "BLST-329",
-      "HIST-329"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Stefan Bradley"
-      ]
-    },
-    "description": "In 2014-2015, young Black people in St. Louis and Ferguson rescued American democracy, and it scared the nation. Their agitation on behalf of 18-year-old Mike Brown, who fatally resisted an overbearing white police officer, virtually brought millions of people to a sleepy suburb. Browns last stand sparked a democracy movement throughout the country -- in places like Memphis, Baltimore, New York, Dallas, and Minneapolis. This course will cover the making of a modern freedom movement. The bold action of primarily Black demonstrators provoked Americans to seek answers to three fundamental questions: what is the precise purpose of policing; who will protect Black youth; and, who is eligible for citizen rights? In challenging the U.S. police state, young democrats called on people of good conscience to see the overreach of a militarized police force. In Ferguson, many young Black residents, believing that law enforcement was more interested in protecting property and capital than them, moved to protect themselves. Although they felt justified in destroying the systems that had neglected and abused them, Black youth, as citizens, influenced politics at every level. In that way, they fortified American democracy by making law enforcement recognize their constitutional rights. Navigating articles, media clips, monographs, edited works, oral histories, and art, this class will delve into the role of traditional and unconventional politics in the creation of policies that affect the lives of all Americans.",
     "times_and_locations": {}
   },
   {
@@ -2884,36 +2490,6 @@
       ]
     },
     "description": "This course is designed for Education Studies majors (and prospective Education Studies majors) working on theses and other intensive research projects that examine the history, purpose, politics, and consequences of education. The course is intended to provide guidance and scholarly community for majors as they complete the requirement to produce a significant research project. Research may take a variety of forms, including but not limited to writing and research associated with a community-based project in an educational setting. Students will engage in the pre-writing, drafting, and revision of writing associated with an advanced research project in the field of Education Studies. Beyond writing skills, the course will (a) teach students how to identify, examine, and integrate primary and secondary research materials; (b) review protocols for ethical research; (c) when appropriate, connect students with community research sites; and (d) workshop students' work in progress. Students will engage in several research and writing exercises throughout the semester, submit a significant research paper at the end of the semester, and participate in a works in progress presentation for the Education Studies community. Emphasis on written work, readings, independent research, oral presentations, group work.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Special Topics",
-    "course_codes": [
-      "EDST-390",
-      "EDST-490"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Independent reading course. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Reading, independent work, assessment as agreed on with instructor.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Senior Honors",
-    "course_codes": [
-      "EDST-498",
-      "EDST-498D"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Independent work on an extended academic, creative, or pedagogical project on a topic relevant to the field. Thesis progress will be assessed by the department at the end of the first semester as a precondition for entrance to the next semester of thesis work. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Independent scholarly work; assessment based on completion of substantial thesis project.",
     "times_and_locations": {}
   },
   {
@@ -3345,21 +2921,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Ecology",
-    "course_codes": [
-      "BIOL-230",
-      "ENST-210"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ethan J. Temeles"
-      ]
-    },
-    "description": "A study of the relationships of plants and animals (including humans) to each other and to their environment. We'll start by considering the decisions an individual makes in its daily life concerning its use of resources, such as what to eat and where to live, and whether to defend such resources. We'll then move on to populations of individuals, and investigate species population growth, limits to population growth, and why some species are so successful as to become pests whereas others are on the road to extinction. The next level will address communities, and how interactions among populations, such as competition, predation, parasitism, and mutualism, affect the organization and diversity of species within communities. The final stage of the course will focus on ecosystems, and the effects of humans and other organisms on population, community, and global stability. Three hours of lecture per week.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Environmental Philosophy",
     "course_codes": [
       "ENST-228",
@@ -3461,21 +3022,6 @@
       ]
     },
     "description": "In the course of almost 500 years, the Russian Empire evolved from a backwater principality at the crossroad of Eastern Europe and Eurasia into one of historys largest polities. By exploring the evolution of the Russian Empire, we will learn about different peoples and cultures in Northern Eurasia. We will also study how imperial states were built and managed, and how they dealt with human diversity reflected in languages, cultures, confessions, etc. Among the problems that will guide our discussion are colonialism and de-colonization, nationalism, diasporas and transnational connections, state-building and wars, citizenship and migration, interethnic conflict and hybridity, the role of religion and religious pluralism in modern politics and society, and impact of modernization on multi-peopled empires. One theme running through the course focuses on how Russian culture, state and institutions were shaped by imperial experiences. One issue for comparative reflection will be how the experience of the Russian imperial formations contributed to shaping the global history course. Chronologically, we will cover the period between the 7th and the 20th centuries, with heavy focus on the modern period (from the 17th century on). The class discussions will be based on classical and new historical scholarship and will involve analysis of primary historical sources. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Close analysis of historical evidence, which may include written documents, images, music, films, or statistics from the historical period under study. Exploration of scholarly, methodological, and theoretical debates about historical topics. Extensive reading, varying forms of written work, and intensive in-class discussions.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Arthurian Literature",
-    "course_codes": [
-      "ENGL-117",
-      "EUST-117"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ingrid L. Nelson"
-      ]
-    },
-    "description": "Knights, monsters, quests, and true love: these are the things we associate with King Arthur and tales of his court. Why has Arthurian literature proved so enchanting to centuries of poets, novelists, and recently, filmmakers? In this introductory English course, we will read and watch Arthurian legends from Chaucer to Monty Python, examining the ways in which they have been represented in different eras. Beginning with the historical foundations of the King Arthur legend, we will examine how it blossomed and took form in later eras. Our focus will be on close literary and visual analysis of British, American, and French (in translation) versions of these legends. We will also discuss what cultural forces lie behind the popularity of Arthurian legend in certain eras: later medieval England and France; the Victorian era; and twentieth-century England and America. There will be frequent writing assignments and presentations, as well as a final creative project.",
     "times_and_locations": {}
   },
   {
@@ -3667,21 +3213,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Film and Writing",
-    "course_codes": [
-      "ENGL-180",
-      "FAMS-110"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Joshua M. Guilford"
-      ]
-    },
-    "description": "A first course in reading films and writing about them. A varied selection of films for study and criticism, partly to illustrate the main elements of film language and partly to pose challenging texts for reading and writing. Frequent short papers. Two class meetings and one screening per week. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: emphasis on written work, readings, audio-visual analysis, independent film viewing, collaborative assignments.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Women, Gender, and Pop Culture",
     "course_codes": [
       "AMST-117",
@@ -3708,21 +3239,6 @@
       ]
     },
     "description": "This introductory course is designed for students with no prior experience in video production. The aim is both technical and creative. We will begin with the literal foundation of the moving imagethe framebefore moving through shot and scene construction, lighting, sound-image concepts, and final edit. In addition to instruction in production equipment and facilities, the course will also explore cinematic form and structure through weekly readings, screenings and discussion. Each student will work on a series of production exercises and a final video assignment. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Emphasis on technical workshops, artistic practice, group critique, group work and readings of critical material.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Documenting Reality",
-    "course_codes": [
-      "ENGL-251",
-      "FAMS-251"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Pooja G. Rangan"
-      ]
-    },
-    "description": "From the ubiquity of selfies to the drama of true crime, the practice of documenting reality is endlessly fascinating and influential. This course explores the tradition of documentary filmmakingan art form that has sparked debates, shaped industries, and transformed worldviews since the dawn of cinema. Famously described by filmmaker John Grierson as the creative treatment of actuality, documentaries challenge us to ask: What does it mean to capture reality? Can film not only reflect the world but also change it? Our journey will begin with a field trip to the Camden International Film Festival in Maine, immersing students in the dynamic world of contemporary documentary. Through weekly theatrical screenings, students will explore the vast spectrum of documentary film and mediafrom poetic and personal essays to investigative exposes and experimental works. We will examine the ethical dilemmas filmmakers face, the expectations of audiences, and the aesthetic innovations that make documentary a force to reckon with. Guest visits from filmmakers and industry professionals will provide behind-the-scene insights. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Weekly readings and theatrical screenings of feature-length and short films; field trip to a film festival; a range of in-class activities (mini-lectures, close readings of films, group discussions, engagement with guest speakers); regular writing assignments (reading responses, textual analysis, argument-driven essays).",
     "times_and_locations": {}
   },
   {
@@ -3758,23 +3274,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "The Cinema of Pedro Almod&oacute;var",
-    "course_codes": [
-      "EUST-347",
-      "FAMS-328",
-      "SWAG-357",
-      "SPAN-347"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sara J. Brenneis"
-      ]
-    },
-    "description": "Pedro Almodovar has defined world cinema for the last five decades. As Spains most celebrated film director, Almodovar has created his own cinematic universe. Almodovar lit up Spains movie screens beginning in the 1980s with his confrontational takes on gender, sexuality, religion and family. Now a globally-recognized and award-winning queer filmmaker, Almodovar has matured from his raunchy beginnings in the Madrid punk scene to become a director sensitive to the LGBTQ+ community, marginalized people, and human rights, though he still manages to stir up controversy. In this course, we will consider a panorama of Almodovar films from the 1980s to the 2020s during periods of political, social and cultural transition in Spain. Particular emphasis will be placed on how the director has represented gender identity and sexuality throughout his career. Through weekly screenings, course readings, written assignments and a final video essay, we will work through Almodovars ongoing dialogue with Spains social history and culture, as well as his cinematic legacy throughout Europe, Latin America and the United States. This course is conducted in Spanish, with most readings in English; prior exposure to film studies is not required. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Emphasis on visual analysis, group work, critical analysis of readings, and written work. Instruction and films in Spanish; readings in Spanish and English. Assessments include short written responses, graded essays and a final edited video essay.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Experiments in 16mm Film",
     "course_codes": [
       "ARHA-273",
@@ -3786,52 +3285,6 @@
       ]
     },
     "description": "This intermediate production course surveys the outer limits of cinematic expression and provides an overview of creative 16mm film production. We will begin by making cameraless projects through drawing, painting and scratching directly onto the film strip before further exploring the fundamentals of 16mm technology, including cameras, editing and hand-processing. While remaining aware of our creative choices, we will invite chance into our process and risk failure, as every experiment inevitably must. Through screenings of original film prints, assigned readings and discussion, the course will consider a number of experimental filmmakers and then conclude with a review of exhibition and distribution strategies for moving image art. All students will complete a number of short assignments on film and one final project on either film or video, each of which is to be presented for class critique. One three-hour class and one film screening per week. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Emphasis on technical workshops, artistic practice, group critique, critical readings and film screenings.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Cinematic Worlds",
-    "course_codes": [
-      "ENGL-369",
-      "FAMS-369"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Joshua M. Guilford"
-      ]
-    },
-    "description": "This course examines a variety of approaches to world-making in cinema and scholarly debates about the aesthetic and political dimensions of cinematic worlds. We will begin by exploring the imaginary worlds created within popular film genres such as fantasy, science fiction, and animation. With the aid of readings from film and media studies, literary theory, cultural studies, and other scholarly fields, we will consider how such imaginary worlds relate to and diverge from the political, ideological, and economic systems that organize our actual world. Our conversation will then expand to engage other areas of film practice such as art cinema, documentary, and experimental film, as well as readings about world-making from different scholarly fields such as ecocriticism, Black studies, and queer theory. We will consider whether we as worldly inhabitants should be working to preserve, reconstruct, or dismantle the world, and how cinema may enable or hinder such projects. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Emphasis on written work, readings, oral presentations, group work, and audio-visual analysis.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "The Question of Accent: Polyphony on the Page, Screen, and Stage",
-    "course_codes": [
-      "ENGL-379",
-      "FAMS-379"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Anston L. Bosman",
-        "Pooja G. Rangan"
-      ]
-    },
-    "description": "I detect an accent... Anyone who has heard this sentence has had to navigate the topography of voice, accent and identity that is our multilingual world. But what is an accent? What assumptions about speakers and listeners do we make when we detect accents or when we perform them as writers, actors, and citizens? How, in other words, does the simple act of perceiving an accent allow us to fix and stabilize our sense of a speakers origins, education, affiliations, affects, preferences, and tendencies--even their tastes? In this course we will attend closely to our habits of reading, watching, and interpreting accent as a key to social relations, and imagine alternative modes of perceiving and performing difference. Our case studies will include drama and cinema, poetry and pedagogy, fiction and nonfiction. We will put traditional literary analysis of voice in conversation with questions of legal and political power, translation and migration, and the uses and abuses of synthetic media. The course will welcome a range of global and vernacular Englishes and cultivate a multilingual and multidialectal environment. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Deep listening, reading aloud, theoretical discussion, analysis of literary and audiovisual texts, collaborative group work, sharing work in progress, and independent research.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "How Does Hollywood Work?",
-    "course_codes": [
-      "ENGL-387",
-      "FAMS-387"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Amelie E. Hastie"
-      ]
-    },
-    "description": "As an industry in the business of making both entertainment and art, Hollywood is a fascinating case study to explore. This course will focus on how contemporary Hollywood works and how understanding its work can enable us also to understand how films work. Our first unit will begin by exploring the context of industrial and independent practices through six key examples, which will form the primary models for the course throughout the semester. With some overlap between them, each film will enable us to look at various aspects of movie-making, whether through particular creative roles or through other aspects of production. Students will compose an essay that examines 1-2 creative roles in a particular film or one particular role across two films. The second unit of the course will build on the first, as we will focus on the same set of films, but from a more analytical perspective to emphasize cultural and textual analysis. In this unit, students will therefore have the choice to investigate one of the previous films for further research, ultimately producing an exploratory essay that brings together contextual and textual analysis. The final unit of the course will focus on a final project that considers how we might pitch one of our central films for production in Hollywood today. Readings throughout the course will be drawn from popular and academic sources that focus on our central films in relation to the primary roles or fields of inquiry of the respective units. Case studies will likely include the following six films: Die Hard, Speed, Somethings Gotta Give, Creed, The Rider, and Everything Everywhere All at Once. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: emphasis on written work, readings, filmic analysis, peer assessment.",
     "times_and_locations": {}
   },
   {
@@ -4109,21 +3562,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "The Grail, The Rose, and Dante",
-    "course_codes": [
-      "EUST-324",
-      "FREN-314"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Paul V. Rockwell"
-      ]
-    },
-    "description": "We will study the social, philosophical, poetic and institutional currents that contribute to the emergence of allegorical texts in the period between the twelfth and the late-fourteenth centuries. Readings include the Quest for the Holy Grail and works by Chretien de Troyes, Guillaume de Lorris, Jean de Meung, Dante Alighieri, and Marie de France. All readings will be done in English translation. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Readings, Textual Analysis, Independent Research, Oral Presentations, In-class Discussions, In-class Exams.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Writing Under the Influence: Italy and the Literature of Renaissance France",
     "course_codes": [
       "FREN-322"
@@ -4237,21 +3675,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Principles of Geospatial Inquiry",
-    "course_codes": [
-      "ENST-253",
-      "GEOL-253"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Michelle Fame"
-      ]
-    },
-    "description": "Geospatial inquiry is an iterative creative process that involves asking, answering, and communicating the results of questions using data linked to geographic locations. The anticipated results of this process are thoughtfully assembled maps and geographic datasets that serve as accessible, persuasive, and even beautiful means of conveying large amounts of complex information. Geospatial thinking is a critical skill for pursuing a systems-based perspective on our rapidly changing and interconnected world. This course is a hands-on introduction to geospatial inquiry using geographic information systems (GIS) software applied to a variety of intersecting topics in environmental studies, natural science, and the humanities. Technical topics include geospatial data acquisition and database management, coordinate systems and projections, creation and manipulation of raster and vector datasets, data digitization, incorporation of field data into GIS, use of lidar, aerial imagery, and other remote sensing tools, and the production of professional-quality final maps. While there is a lecture component in the course, students will mainly be engaged in active learning in the form of skills tutorials, reflection and discussion assignments, independent and peer troubleshooting, and question-driven projects. Three hours of class and two hours of lab.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Igneous and Metamorphic Petrology",
     "course_codes": [
       "GEOL-321"
@@ -4290,21 +3713,6 @@
       ]
     },
     "description": "Independent reading or research. A written report will be required. A full course. Approval of the Departmental Chair is required. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Independent reading or research.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Senior Departmental Honors",
-    "course_codes": [
-      "GEOL-498",
-      "GEOL-498D"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Anna M. Martini"
-      ]
-    },
-    "description": "Independent research on a geologic problem within any area of staff competence. A thesis of high quality will be required. A double course.",
     "times_and_locations": {}
   },
   {
@@ -4501,36 +3909,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Indian Ocean World History",
-    "course_codes": [
-      "ASLC-201",
-      "HIST-201"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Mekhola S. Gomes"
-      ]
-    },
-    "description": "The Indian Ocean World (IOW) is a vast world region that includes parts of five areas: Africa, Middle East, South Asia, Southeast Asia, and East Asia. Thousands of large and small islands are also part of the IOW. Inspired by the global turn in history, we learn about the diversity of human experiences and histories in the IOW. Themes include Roman trade with India, travels of Buddhist scholars, Islamic empires, movement of commodities, pilgrimage, slavery, and European expansion and imperialism. Throughout the course, we explore how to think about the IOW both in terms of geography and concepts, question Eurocentric perspectives on the region, and ask: does our understanding of history change when we look away from land divided by nation-states and toward people connected by oceans? Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Close analysis of historical evidence, which may include written documents, images, music, films, or statistics from the historical period under study. Exploration of scholarly, methodological, and theoretical debates about historical topics. Extensive reading, varying forms of written work, and intensive in-class discussions.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "European Intellectual History and Its Discontents",
-    "course_codes": [
-      "EUST-129",
-      "HIST-205"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Alexander Semyonov"
-      ]
-    },
-    "description": "Intellectual history concerns itself with the study of social and political ideas. These ideas are known by big words, such as Conservatism, Liberalism, Socialism. As George Orwell once remarked: The worst thing one can do with words is to surrender to them. This course will help students to create a distance needed to analyze the big ideas and the meaning beneath them and help acquire skills for exploration of the origin of key social and political concepts, their development and impact. The readings for this class will take students on a journey through the battle of ideas in Europe at the end of the 19th and early 20th century when tensions and paradoxes of modernity surfaced in the form of political and social divisions. This journey will continue through the Age of Extremes and the confrontation between Communism, Fascism, and renewed Liberalism observing the legacy of this defining for the 20th century history moment. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Close analysis of historical evidence, which may include written documents, images, music, films, or statistics from the historical period under study. Exploration of scholarly, methodological, and theoretical debates about historical topics. Extensive reading, varying forms of written work, and intensive in-class discussions.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "They Not Like Us: Race in the Medieval Mediterranean",
     "course_codes": [
       "HIST-206"
@@ -4541,21 +3919,6 @@
       ]
     },
     "description": "When did race begin? This course explores answers to this question by focusing on the multi-faith and multicultural Mediterranean between the eighth-fifteenth centuries prior to the rise of the trans-Atlantic slave trade and the ideas it spawned about race that have violently shaped the present. We will study how the Christian and Islamic societies of southern Europe, Mediterranean Africa, and the Near East invented racial frameworks when and as it suited their needs. Over the course of the semester, students will be introduced to the literary, historical, and art historical frameworks and sources for the study of premodern race in such spheres as the law, religion, gender, enslavement, violence, and status. Through close reading of texts, images, and objects, we will consider the contingencies and complexities of race-making within and across the communities of the medieval Mediterranean. The course will also examine the legacy of premodern race in shaping modern ideologies, curricula, and politics. Why have groups from the Ku Klux Klan to far-right extremists to ISIS invoked the medieval past as a homogeneous, racially 'pure' space? Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Close analysis of historical evidence, which may include written documents, images, music, films, or statistics from the historical period under study. Exploration of scholarly, methodological, and theoretical debates about historical topics. Extensive reading, varying forms of written work, and intensive in-class discussions.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "African Migrations and Globalization",
-    "course_codes": [
-      "BLST-208",
-      "HIST-211"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Olufemi O. Vaughan"
-      ]
-    },
-    "description": "As the crisis of the postcolonial nation-state deepens in the context of globalization and statism in African countries especially in the last three decades, African societies have experienced significant migration of skilled and unskilled workers. These migration flows are raising new questions about the nature of politics, economics, and culture in various African national and transnational contexts. To explore the political, social, and economic consequences of these waves of migration in African states and among countries receiving African migrants, this course will examine the following topics at the core of the transformation of African states in the global age: colonialism and the construction of modern African states; globalization and political legitimacy in postcolonial African states; globalization and African labor migration; globalization and African popular culture; globalization and Africa's new religious movements; globalization and Africa's refugee crisis; Africa and globalization of the media; Africa and the global discourse on gender and sexuality; Africa and the global discourse on AIDS/HIV; Africa and the globalization of football (soccer). Course readings will focus not only on the impact of globalization and state crisis on African societies, but also on how emerging national and transnational African populations are shaping the processes of globalization.",
     "times_and_locations": {}
   },
   {
@@ -4586,55 +3949,6 @@
       ]
     },
     "description": "Literature from the later Roman empire abounds with accounts of heightened acts of violence between religious groups: Roman judges torture religious deviants; monks massacre banqueters and destroy temples with their bare hands; Christians clash with each other on darkened city streets; Christians attack Jewish synagogues and festival-goers. What about the late Roman world encouraged such violence? Were some religious groups more or less tolerant than their counterparts? Were incidents of violence primarily rhetorical, or do they reflect the real volatility of social interactions? How might the literary representation of violence be an act of violence itself or encourage physical violence? This course investigates the intersection of violence and religion from the third through the seventh century C.E., paying particular attention to questions of definition, legitimacy, and the interpretation of violent acts. As we explore these questions, we will engage with ongoing theoretical discussions about identity, violence, social performance, and boundary construction. Over the course of the semester, students will compile research portfolios that examine and analyze incidents of inter-religious violence.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Gender and Slavery in Latin America",
-    "course_codes": [
-      "BLST-275",
-      "HIST-275",
-      "LLAS-275",
-      "SWAG-274"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Russell Lohse"
-      ]
-    },
-    "description": "Latin American slavery was one of the most brutal institutions the world has ever known, and it affected women and girls, boys and men in profoundly different ways. This readings-based course features both secondary and primary sources. Students will gain in-depth understanding of how gender and sexuality affected the experiences of enslaved Africans and their descendants in Latin America from the sixteenth through nineteenth centuries. Topics will include gender roles in Western Africa and how these diverged from the expectations of Spanish and Portuguese slave masters; the sexual and reproductive as well as labor exploitation of enslaved African women and girls; how enslaved men constructed masculinity within the emasculating institution of slavery; gender relations and family structures within slave communities; childhoods under slavery; and the sometimes distinct visions of freedom imagined by enslaved women and men. Select primary documents will acquaint students with the sources historians use to reconstruct these aspects of the histories of largely non-literate African-descended peoples. Regions to be covered include Brazil, the Spanish-speaking Caribbean, Mexico and Central America, and the Andean region. Students will be evaluated on class participation, a series of weekly reading notes, and two short papers.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Haitian Revolution in the Atlantic World",
-    "course_codes": [
-      "BLST-277",
-      "HIST-277",
-      "LLAS-277"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Russell Lohse"
-      ]
-    },
-    "description": "The Haitian Revolution began in 1791 with a slave revolt on a single plantation and, after more than a decade of total war, destroyed slavery forever and resulted in the independence of the world's first Black republic. By the end of 1804, the white planter class had been killed or exiled and Black men ruled the island. Before it happened, white slave masters could never imagine that tens of thousands of enslaved Africans would one day break their chains and succeed in defeating French, British, and Spanish armies. For millions of enslaved people, the Haitian Revolution proved that the dream of freedom could become reality and inspired slave conspiracies and rebellions from Virginia to Brazil. At the same time, Haiti struck fear in white slave masters throughout the Americas, who did their best to strangle the new Black Republic in its cradle. This readings-based course features both secondary and primary sources. Students will gain in-depth understanding of the origins and development of the Haitian Revolution and its impact in Africa, Europe, and the Americas. Students will be evaluated on class participation, a series of weekly reading notes, and two short papers.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "AfAm Hist from Slave Trade to Recon",
-    "course_codes": [
-      "EDST-286",
-      "BLST-286",
-      "HIST-286"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Hilary J. Moss"
-      ]
-    },
-    "description": "This course traverses African American history from the beginnings of the transatlantic slave trade through the close of the American Civil War. Focusing on the Black freedom struggle, we will explore questions including: What are the origins of American slavery and how and why did it expand in the eighteenth and early nineteenth centuries? What did Africa mean to Black Americans and how did differing ideas about Black nationalism contribute to the struggle for citizenship and abolition? What political, economic, and day-to-day actions did African Americans take to secure liberation, promote abolition, and to lay claim to civic inclusion? What role did access to literacy play in slaveholders efforts to perpetuate slavery and racial oppression? How did African Americans utilize education and schooling to promote liberation; to lay claim to citizenship; and to agitate against slavery and civic exclusion? And what did freedom mean both to enslaved Black Americans and to Black Americans who lived their lives in a nation founded on racial oppression? Readings will consist of primary sources, including the writings of early Black Americans; and scholarly and historical explorations of African American history during this period. Assignments will expose students to research in early African American history and to analyzing and interpreting key historical questions and debates. Readings include historical monographs, slave narratives by men and women, and one work of fiction.",
     "times_and_locations": {}
   },
   {
@@ -4695,22 +4009,6 @@
       ]
     },
     "description": "This seminar will explore the intersections of gender, migration, and labor, with a particular focus on Asian American women in the United States (broadly defined to include the U.S.s territories and military bases), from 1870 to the present. Through transnational and woman-of color feminist lenses, we will investigate U.S. colonial and neo-colonial formations which disrupt local economies, compelling women to migrate from their homes across national borders and then channeling them into limited employment opportunities in some of the most exploitative industries in the United States, including manufacturing, agricultural, and domestic work. Students will do close analysis of historical evidence, including written documents, images, film, and newspapers. There will also be intensive in-class discussion and varying forms of written work, which will culminate in a final research paper on a topic chosen by the student. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: an emphasis on written work, readings, and independent research.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Race and Educational Opportunity in America",
-    "course_codes": [
-      "EDST-355",
-      "BLST-355",
-      "HIST-355"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Hilary J. Moss"
-      ]
-    },
-    "description": "This interdisciplinary seminar blends African American history; urban history; and the history of education to explore the relationship between race, schools, and inequality in American society. In 1935, W.E.B. Du Bois credited the creation and expansion of public education in the South to African Americans educational activism in the aftermath of slavery. And yet, race has historically delineated access to public schooling, and by extension, economic, political, and civic equality. In this course, we will ask how and why race and educational opportunity have structured and subverted civic inclusion, racial justice, and socio-economic equality. We will focus on African Americans efforts to secure literacy, schooling, and higher education, with an emphasis on the twentieth and twenty-first centuries. In the first part of the course, we will consider why Americans created a public school system and how race influenced the formation of this critical social institution. Next, we will query how African Americans debated the relationship between education and liberation, particularly after Reconstruction and during the Long Civil Rights Movement. Here, we will focus on African Americans legal and grassroots efforts to advance school desegregation, and the backlash against its implementation in northern and southern cities. Along the way, we will assess the meaning and value of integration, and ask how, why, and to what extent school desegregation has promoted and subverted equal opportunity. Then, we will explore how policy makers have attempted to use education as a social welfare institution, particularly in an effort to redress segregated housing and unequal labor markets. We will trace the relationship between public schools and evolution of the welfare state, and reflect upon the power and limitations of Americans unique dependence on schooling to equalize opportunity. Finally, we will consider how race continues to inform contemporary reform efforts including school choice, Afro-centric education, and school discipline, among others. Course assignments will consist of weekly responses; two short papers; and one longer essay designed to allow students to delve into some aspect of the course in depth.",
     "times_and_locations": {}
   },
   {
@@ -4820,21 +4118,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Special Topics",
-    "course_codes": [
-      "HIST-490",
-      "HIST-390"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Independent reading course. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Research seminars require independent research, including the framing of a research question, and the identification and analysis of relevant primary and secondary sources. History majors must write a 20-25 page, evidence-based paper.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "History Thesis Seminar",
     "course_codes": [
       "HIST-498"
@@ -4875,39 +4158,6 @@
       ]
     },
     "description": "This course explores the movement of art both in and out of Latin America in the twentieth and early twenty-first centuries. This includes the forging of a mural movement in Mexico, the cosmopolitan travels of artists to Europe, the export of art to the United States, and the transnational circulation of art and ideas across national contexts within Latin America. In the process, we will explore the sometimes conflicting and sometimes hybrid desires to create local aesthetics in particular places (sometimes drawing on the pre-Columbian past and Indigenous present) and to participate in international, sometimes transcontinental artistic movements and debates. We will also consider the category Latin American art as it developed over the course of the twentieth century and how it has both intersected with and stood apart from developments in art elsewhere. A core concern of the class will be the examination of how culture develops in relation to both political and economic shifts in the region and in the world beyond, including in relation to imperialism, the spread of capitalism, the Cold War, Communism, modernization, dictatorship, and globalization. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: emphasis on written work, readings, independent research, oral presentations, visual analysis.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Gender and Slavery in Latin America",
-    "course_codes": [
-      "BLST-275",
-      "HIST-275",
-      "LLAS-275",
-      "SWAG-274"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Russell Lohse"
-      ]
-    },
-    "description": "Latin American slavery was one of the most brutal institutions the world has ever known, and it affected women and girls, boys and men in profoundly different ways. This readings-based course features both secondary and primary sources. Students will gain in-depth understanding of how gender and sexuality affected the experiences of enslaved Africans and their descendants in Latin America from the sixteenth through nineteenth centuries. Topics will include gender roles in Western Africa and how these diverged from the expectations of Spanish and Portuguese slave masters; the sexual and reproductive as well as labor exploitation of enslaved African women and girls; how enslaved men constructed masculinity within the emasculating institution of slavery; gender relations and family structures within slave communities; childhoods under slavery; and the sometimes distinct visions of freedom imagined by enslaved women and men. Select primary documents will acquaint students with the sources historians use to reconstruct these aspects of the histories of largely non-literate African-descended peoples. Regions to be covered include Brazil, the Spanish-speaking Caribbean, Mexico and Central America, and the Andean region. Students will be evaluated on class participation, a series of weekly reading notes, and two short papers.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Haitian Revolution in the Atlantic World",
-    "course_codes": [
-      "BLST-277",
-      "HIST-277",
-      "LLAS-277"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Russell Lohse"
-      ]
-    },
-    "description": "The Haitian Revolution began in 1791 with a slave revolt on a single plantation and, after more than a decade of total war, destroyed slavery forever and resulted in the independence of the world's first Black republic. By the end of 1804, the white planter class had been killed or exiled and Black men ruled the island. Before it happened, white slave masters could never imagine that tens of thousands of enslaved Africans would one day break their chains and succeed in defeating French, British, and Spanish armies. For millions of enslaved people, the Haitian Revolution proved that the dream of freedom could become reality and inspired slave conspiracies and rebellions from Virginia to Brazil. At the same time, Haiti struck fear in white slave masters throughout the Americas, who did their best to strangle the new Black Republic in its cradle. This readings-based course features both secondary and primary sources. Students will gain in-depth understanding of the origins and development of the Haitian Revolution and its impact in Africa, Europe, and the Americas. Students will be evaluated on class participation, a series of weekly reading notes, and two short papers.",
     "times_and_locations": {}
   },
   {
@@ -5467,21 +4717,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Probability",
-    "course_codes": [
-      "MATH-360",
-      "STAT-360"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Katherine E. Moore"
-      ]
-    },
-    "description": "This course explores the nature of probability and its use in modeling real world phenomena. There are two explicit complementary goals: to explore probability theory and its use in applied settings, and to learn parallel analytic and empirical problem-solving skills. The course begins with the development of an intuitive feel for probabilistic thinking, based on the simple yet subtle idea of counting. It then evolves toward the rigorous study of discrete and continuous probability spaces, independence, conditional probability, expectation, and variance. Distributions covered include the binomial, hypergeometric, Poisson, normal, Gamma, Beta, multinomial, and bivariate normal. Other topics include generating functions, order statistics, and limit theorems. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: quantitative work, problem sets, quizzes or exams, group work, use of computational software.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Generalized Linear Models and Mixed Models",
     "course_codes": [
       "STAT-456"
@@ -5595,21 +4830,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Looking at the World Through Jazz-Colored Lenses",
-    "course_codes": [
-      "BLST-141",
-      "MUSI-141"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Darryl Harper"
-      ]
-    },
-    "description": "When you think of Jazz, what comes to mind? Perhaps a romantic, elegant, candle-lit dinner? A goatee-sporting fashion plate? Individual freedom to create? Something old that your parents listen to? Jazz emerged in New Orleans in the early twentieth century and quickly spread throughout the world, becoming, at certain points in its history, wildly popular, and at others, decidedly esoteric. Jazz has been called, variously: savage, modern, instinctive, sophisticated, revolutionary, a rare national treasure, a secret sonic weapon, noise, America's classical music, and the most powerful evolutionary force in modern music. It has been instrumental in political movements (for instance, the export of jazz ensembles to the Soviet Union during the Cold War); in campaigns both to sanction human rights (Jazz in the Civil Rights Movement), and suppress them (its concerted and systematic effort to exclude women); and it has been used at once to amplify capitalism (the market-savvy Smooth Jazz industry) and to critique it (the efflorescence of independent musician collectives, such as the Association for the Advancement of Creative Musicians). Using audio recordings, newspaper articles, television programs, and other archival materials, along with recent and past scholarship, we will examine the sounds, key figures, and practices that make up this music to consider what this enduring yet elusive style has to tell us about ourselves.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Exploring Music",
     "course_codes": [
       "MUSI-211"
@@ -5634,21 +4854,6 @@
       ]
     },
     "description": "This is a beginner-level course designed to explore jazz harmony and improvisation from theoretical and applied standpoints. Students will study common harmonic practices, modes and their related chords, rhythmic practices, 32-measure song form, and the blues, and will learn the historical contexts in which these practices have developed. An end-of-semester group performance of material studied will be required alongside an individual performance evaluation. One-hour ear training sections will be scheduled outside of regular class meetings. Two class meetings and one ear training section per week. This course is considered a point of entry to MUSI 341 and a pre-requisite of MUSI 246. Prior performance experience on a harmonic instrument or voice at a basic proficiency level is assumed and necessary to fully participate in the learning examples and outcomes. Feel free to inquire about your own experience level and how it relates to the course content. Students who have not previously taken a course in music theory at Amherst College are encouraged to take a self-administered placement exam. Students are also encouraged to discuss placement in music theory with a member of the Music Department. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: group work, individual artistic work, extensive listening, and aural analysis.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Music in the Twentieth Century",
-    "course_codes": [
-      "EUST-223",
-      "MUSI-223"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Political turmoil, artistic movements, and cultural shifts all left their marks on the music of the twentieth century and we will follow history's course through the lens of various composers, musical styles, and artistic movements. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: written work, readings, listening, independent research, oral presentations, group work.",
     "times_and_locations": {}
   },
   {
@@ -5737,22 +4942,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Rhythm Beyond Music",
-    "course_codes": [
-      "ARHA-339",
-      "FAMS-314",
-      "MUSI-339"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Brian House"
-      ]
-    },
-    "description": "This studio-seminar course foregrounds the concept of rhythm as it appears across disciplines including philosophy, ecology, neuroscience, and media theory. We explore what rhythm means in these contexts and how it relates to aesthetic practices in the sonic and visual arts. The course takes a hybrid theory/practice approach. Classes consist of discussing texts and exemplary artworks in a seminar format. In addition, students are expected to independently produce studio-based art in any medium for in-class critique. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Studio art projects in textual, visual, and aural mediums, in-class critiques including visual and verbal analysis, textual analysis of readings, oral presentations, systems thinking.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Tonal Harmony and Counterpoint",
     "course_codes": [
       "MUSI-341"
@@ -5820,36 +5009,6 @@
       ]
     },
     "description": "Independent reading course. A half course.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Special Topics",
-    "course_codes": [
-      "MUSI-490H",
-      "MUSI-490"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Independent reading course. A half course.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Senior Departmental Honors",
-    "course_codes": [
-      "MUSI-498D",
-      "MUSI-498"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "A double course. Advanced work for Honors candidates in music history and criticism, music theory, ethnomusicology, composition, or performance. A thesis, a major composition project or a full-length recital will be required. No student shall elect more than one semester as a double course.",
     "times_and_locations": {}
   },
   {
@@ -6281,21 +5440,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Senior Departmental Honors",
-    "course_codes": [
-      "NEUR-498D",
-      "NEUR-498"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Research in an area relevant to neuroscience, under the direction of a faculty member, and preparation of a thesis based upon the research. Emphasis on independent research and writing.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Philosophical Questions",
     "course_codes": [
       "PHIL-111"
@@ -6338,21 +5482,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Environmental Philosophy",
-    "course_codes": [
-      "ENST-228",
-      "PHIL-225"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Our impact on the environment has been significant, and in recent decades, the pace of change has clearly accelerated. Many species face extinction, forests are disappearing, and toxic wastes and emissions continue to accumulate. People are being displaced, and even our climate is changing. These are all well-established scientific facts and the prospect of a general environmental calamity seems all too real. This sense of crisis has spurred intense and wide-ranging debate over what our proper relationship to nature should be. This is the focus of the course. Among the questions we shall explore will be: Do animals have rights we ought to respect? Is nature intrinsically valuable or merely a bundle of utilities for our benefit? Is there even a stable notion of what is natural that can be deployed in a workable environmental ethic? What obligations, if any, do we have to future generations? Can there be overpopulation and if so, how many should live on our planet? Do our answers to these questions result in some way from a culturally contingent image we have of nature and our place within it? Is there anything special about the way that we go about appreciating nature aesthetically? How might we best go about changing the ways we inhabit the planet? Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Emphasis on readings and written work.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Political Philosophy",
     "course_codes": [
       "PHIL-226"
@@ -6363,21 +5492,6 @@
       ]
     },
     "description": "States are made up of individuals. Yet states have powers that no individuals have. They collect taxes, put us in jail, draft us into the army, and tell us what we can and cannot own. In this course, an introduction to Western political philosophy, we seek to understand what, if anything, could justify the state in wielding such extraordinary power over us. We will pursue questions like: Why should I obey the law? Should the state tax the rich and give to the poor? Does the state promote freedom, or threaten it? Readings will include works by Hobbes, Locke, Rousseau, Mill, Rawls, and Nozick. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Emphasis on written work, readings, oral presentations, group work, and class participation.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Theory of Knowledge",
-    "course_codes": [
-      "EDST-335",
-      "PHIL-335"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Lauren J. Leydon-Hardy"
-      ]
-    },
-    "description": "This is a course on epistemology, the branch of philosophy concerned with knowledge. We humans are in the business of believing, knowing, justifying, and rationalizing. Our capacities for acquiring, sharing, and participating in the production of knowledge bear significantly on our flourishing. In this course we will investigate the relationship between core epistemic concepts, including knowledge, belief, justification, and truth. Is knowledge more valuable than mere true belief? Why? What is the nature of epistemic justification? How are evidence, belief, and rationality related? Are there distinctively epistemic wrongs, or injustices? What can these questions tell us about ourselves? Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Emphasis on written work, readings, independent research, oral presentations, group work, and class participation.",
     "times_and_locations": {}
   },
   {
@@ -6737,21 +5851,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Work",
-    "course_codes": [
-      "EDST-145",
-      "POSC-145"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Kristin Bumiller"
-      ]
-    },
-    "description": "This course will explore the role of work in the context of American politics and society. We will study how work has been understood in political and social theory. We will also consider ethnographic studies that explore how workers experience their lives inside organizations and how workplaces transform in response to changing legal regulations. These theoretical and empirical explorations will provide a foundation for reflections about how work structures opportunities in democratic societies and how re-imagining work might unleash human potential. The course will ground these questions about the role of work in the context of American politics and society. At the broadest level we will ask: Do citizens in a liberal society have a right to engage in meaningful work and earn a living wage? What is the changing nature of work in a neoliberal society? What are the goals of the state in regards to the production of a future workforce? What are the impacts of employment discrimination, occupational segregation, and wage disparity based on race or gender? Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Group work, readings, written work, oral presentations.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Sexualities in International Relations",
     "course_codes": [
       "POSC-160",
@@ -6911,22 +6010,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Geopolitics and American Foreign Policy",
-    "course_codes": [
-      "HIST-363",
-      "POSC-363"
-    ],
-    "faculty": {
-      "Section 01": [
-        "N. Gordon Levin",
-        "Pavel Machala"
-      ]
-    },
-    "description": "This course uses both international relations theory and historical analysis to understand how and why America moved from the periphery of world politics at the beginning of the twentieth century to the center of world politics during World War Two and the Cold War. Finally, we will conclude by paying special attention to how and why America gained and then lost its' unipolar position in the decades after 1989 and to Donald Trump's crucial role in transforming America's liberal internationalist orientation to the world. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Emphasis on reading and written work.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "United States and the Middle East",
     "course_codes": [
       "POSC-368"
@@ -7055,21 +6138,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Senior Departmental Honors",
-    "course_codes": [
-      "POSC-498",
-      "POSC-498D"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "A double credit course with department approval. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Independent research, written work, and oral presentations.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Introduction to Psychology",
     "course_codes": [
       "PSYC-100"
@@ -7168,25 +6236,6 @@
       ]
     },
     "description": "This course examines how psychologists understand the patterns of experiencing and behaving that constitute an individuals personality. Personality psychologists are concerned with the ways in which a person is like all other people in these patterns (common psychological processes), like some others (individual differences), and like no one else (uniqueness). In examining these questions, we study the grand theories of Freud, Skinner, and Rogers, as well as the contemporary models of traits and scripts. We explore what professional observations led to the major theoretical ideas in personality psychology, and we critically examine how these ideas have been tested in empirical research. Furthermore, we study the lives of the theorists to examine how their professional ideas were informed by their personal lives. Students will also take personality assessment devices as a way to better understand the models, and perhaps themselves as well.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Intergroup Dialogue on Race",
-    "course_codes": [
-      "EDST-224",
-      "PSYC-224",
-      "AMST-223",
-      "AAPI-224"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Allen J. Hart",
-        "Leah C. Schmalzbauer",
-        "Paul A. Schroeder Rodriguez"
-      ]
-    },
-    "description": "This highly interactive course brings together students to examine the roles race and other intersecting identities play in their lives. Coursework includes an interdisciplinary blend of scholarly readings, in-class dialogue, experiential learning activities, reflective writing, and an intergroup collaborative research project. Students in this course bring their own experiences with race into the classroom as a legitimate and valued source for learning. The course readings link students personal experiences around race to a socio-historical understanding of individual, institutional, and structural discrimination--to the ways social inequality is embedded in social institutions and individual consciousness, constraining life chances. Early in the course students engage in structured activities that develop trust among participants. Coursework and learn skills at intergroup dialogue--suspending judgment and listening for understanding--in order to create respectful, sustained dialogues around racial divisions. Students engage in small mixed-race teams to research a racial inequality/inequity on campus. Students do reflective writing weekly, linking their in-class experiences to the readings, as well as reflective writing at the end about their learning throughout the semester. The course exposes participants in a very intimate way to how classmates of different races see and experience the world, to the pain and trauma students of color may have undergone due to race, and to the privilege White students possess, whether or not they are aware of it. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Emphasis is on readings, classroom participation, writing weekly reflections and a final reflection, working in mixed-race teams to design and conduct a research project, and presenting the research orally and in written form.",
     "times_and_locations": {}
   },
   {
@@ -7321,21 +6370,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Music, Religion, and Ritual in Africa",
-    "course_codes": [
-      "BLST-122",
-      "RELI-122"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Monika Brodnicka"
-      ]
-    },
-    "description": "There is an aura of mystery that surrounds the meaning and practice of African religions. This is due to several factors: limited material on particular religions, the secrecy of most initiations, and the gradual disappearance of their rich heritage as a result of colonization. This course explores current scholarly understandings of the intricate dances, music, myths of creation, and various rituals associated with African religion, while going further to probe the inner meaning of these external manifestations. We will look in particular at African authors who have elucidated the stories, practices, and symbols of specific religions and revealed their esoteric meaning. Often these practitioners have undergone rigorous initiations and are able to engage the complex relationship between spirituality and practice in their writings. This course will address both the spiritual/mystical aspects of African religions as expressed by these authors as well as the limitations of studying such a topic. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: emphasis on close reading, class discussion, group work, small written assignments, oral presentations, and creative projects.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Beginning the Bible",
     "course_codes": [
       "RELI-166"
@@ -7378,21 +6412,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Buddhist Ethics",
-    "course_codes": [
-      "ASLC-256",
-      "RELI-255"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Maria R. Heim"
-      ]
-    },
-    "description": "A systematic exploration of the place of ethics and moral reasoning in Buddhist thought and practice. The scope of the course is wide, with examples drawn from the whole Buddhist world, but emphasis is on the particularity of different Buddhist visions of the ideal human life. Attention is given to the problems of the proper description of Buddhist ethics in a comparative perspective.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Jewish Identity and MeToo: A Study of Women in Judaism",
     "course_codes": [
       "RELI-261",
@@ -7408,21 +6427,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Religion and Violence in the Roman Empire",
-    "course_codes": [
-      "HIST-274",
-      "RELI-277"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Rebecca Stephens Falcasantos"
-      ]
-    },
-    "description": "Literature from the later Roman empire abounds with accounts of heightened acts of violence between religious groups: Roman judges torture religious deviants; monks massacre banqueters and destroy temples with their bare hands; Christians clash with each other on darkened city streets; Christians attack Jewish synagogues and festival-goers. What about the late Roman world encouraged such violence? Were some religious groups more or less tolerant than their counterparts? Were incidents of violence primarily rhetorical, or do they reflect the real volatility of social interactions? How might the literary representation of violence be an act of violence itself or encourage physical violence? This course investigates the intersection of violence and religion from the third through the seventh century C.E., paying particular attention to questions of definition, legitimacy, and the interpretation of violent acts. As we explore these questions, we will engage with ongoing theoretical discussions about identity, violence, social performance, and boundary construction. Over the course of the semester, students will compile research portfolios that examine and analyze incidents of inter-religious violence.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Christianity and Democracy",
     "course_codes": [
       "RELI-279"
@@ -7433,21 +6437,6 @@
       ]
     },
     "description": "This course will explore the relationship between a family of religious traditions (Christianity) and an ideal of governance (democracy), both historically and theoretically. Over the past two thousand years Christian traditions have existed within a wide range of systems of governance. Very few of these have been democratic systems. The history of Christian traditions includes substantive reflections on matters of governance by Christian thinkers and leaders; it also includes substantive engagements between Christian institutions and governments of different kinds. The arrival of democratic governance in the early modern period represented a new condition for Christian traditions, and these traditions have adapted to this condition in a wide variety of ways. Through examination of both ancient and modern materials drawn from both Catholic and Protestant traditions we will survey these adaptations, with particular attention to the question of whether Christianity is a reliable support of democracy, a threat to democracy, or something in between. Authors will include Augustine of Hippo; Martin Luther; John Calvin; Reinhold Niebuhr; Jerry Falwell; and David Gushee. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Close reading and analysis of unfamiliar texts; brief written reflections; classroom discussions and presentations; formally written papers.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Islam: Authors and Texts",
-    "course_codes": [
-      "ASLC-286",
-      "RELI-286"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Tariq Jaffer"
-      ]
-    },
-    "description": "Close readings of classics from the Islamic world. Topics may include: theories of language and revelation; the role of the human intellect and imagination; ritual and prayer; ethics and responsibility; prophecy and miracles; the Quran and its interpretation; sin and salvation. All readings are in English. Emphasis on written work, readings, and oral presentations.",
     "times_and_locations": {}
   },
   {
@@ -7504,23 +6493,6 @@
       ]
     },
     "description": "Often referred to as the \"Golden Age,\" the nineteenth-century of Russian literature boasts some of the most famous and influential works of world literature. The poems, novels, and dramas pose important questions about imperialism, gender, class, and social organization that still inform our modern conversations on the topics. Such authors as Alexander Pushkin, Nikolai Gogol, Leo Tolstoy, Evgeniia Tur, Fyodor Dostoevsky, and Anton Chekhov offer works that are profoundly thought provoking and also incredibly enjoyable reads. This course will survey some of the major works of this period and tradition, presenting the texts within their sociocultural and political contexts. We will also consider other modes of artistic creation that flourished in this era, such as ballet and opera. While this course presents canonical works of the nineteenth century, students will also gain exposure to texts that push back against dominant narratives about the long nineteenth century. No knowledge of Russian or Russian literature is needed for this course. All works will be read in English translation, with additional optional sessions for students wishing to read all or some of the texts in the original Russian. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Emphasis on written work, readings, independent research, oral presentations, visual analysis.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Russian Empire in Eurasia",
-    "course_codes": [
-      "ASLC-112",
-      "EUST-112",
-      "HIST-112",
-      "RUSS-130"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Alexander Semyonov"
-      ]
-    },
-    "description": "In the course of almost 500 years, the Russian Empire evolved from a backwater principality at the crossroad of Eastern Europe and Eurasia into one of historys largest polities. By exploring the evolution of the Russian Empire, we will learn about different peoples and cultures in Northern Eurasia. We will also study how imperial states were built and managed, and how they dealt with human diversity reflected in languages, cultures, confessions, etc. Among the problems that will guide our discussion are colonialism and de-colonization, nationalism, diasporas and transnational connections, state-building and wars, citizenship and migration, interethnic conflict and hybridity, the role of religion and religious pluralism in modern politics and society, and impact of modernization on multi-peopled empires. One theme running through the course focuses on how Russian culture, state and institutions were shaped by imperial experiences. One issue for comparative reflection will be how the experience of the Russian imperial formations contributed to shaping the global history course. Chronologically, we will cover the period between the 7th and the 20th centuries, with heavy focus on the modern period (from the 17th century on). The class discussions will be based on classical and new historical scholarship and will involve analysis of primary historical sources. Two class meetings per week. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Close analysis of historical evidence, which may include written documents, images, music, films, or statistics from the historical period under study. Exploration of scholarly, methodological, and theoretical debates about historical topics. Extensive reading, varying forms of written work, and intensive in-class discussions.",
     "times_and_locations": {}
   },
   {
@@ -7638,36 +6610,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Sexualities in International Relations",
-    "course_codes": [
-      "POSC-160",
-      "SWAG-160"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Manuela Picq"
-      ]
-    },
-    "description": "From abortion to gay rights, sexuality is deeply entangled in world politics. As LGBT rights become human rights principles, they not only enter the rights structure of the European Union and the United Nations but are also considered a barometer of political modernity. If some Latin American nations have depicted their recognition of gay rights as symbolic of their progressive character, certain North African nations have depicted their repression of homosexuality symbolic of their opposition to western imperialism. The results of sexual politics are often contradictory, with some countries enabling same-sex marriage but criminalizing abortion and others cutting aid in the name of human rights. This course explores the influence of sexual politics on international relations. We analyze how women and gay rights take shape in the international system, from the UN to security agendas, and evaluate how sexuality shapes the modus operandi of contemporary politics. This course fulfills a requirement for the Five College Reproductive Health, Rights and Justice (RHRJ) certificate. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Group work, readings, written work, oral presentations.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Sex, Race, and Empire: The Global Politics of Gender and Sexuality",
-    "course_codes": [
-      "BLST-288",
-      "SWAG-188"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Krupa Shandilya"
-      ]
-    },
-    "description": "How might we connect the U.S.s current economic, social, and military dominance over much of the world to empires of the past such as the nineteenth century British empire in India, Africa and the Caribbean? What does the existence of human zoos of the nineteenth and early twentieth century tell us about how empires thought of colonized peoples? How might we connect imperial legacies to the current immigrant crisis in the U.S.? How have the gendered performances of American military women during the US-led occupations of Iraq and Afghanistan been instrumentalized for counterinsurgency warfare? This course looks at a global range of responses to empire and colonization by activists, writers and filmmakersfrom the early Indian proto-feminist novella Sultanas Dream (1905) to the contemporary American film BlacKkKlansman (2018), and the classic anti-colonial film Battle of Algiers (1967), among others. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Written work, readings, independent research, oral presentations, group work, and visual analysis.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Theories in Sexuality, Women's and Gender Studies",
     "course_codes": [
       "SWAG-200"
@@ -7698,21 +6640,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Black Sexualities",
-    "course_codes": [
-      "BLST-236",
-      "SWAG-235"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Khary O. Polk"
-      ]
-    },
-    "description": "From the modern era to the contemporary moment, the intersection of race, gender, and class has been especially salient for people of African descent for men as well as for women. How might the category of sexuality act as an additional optic through which to view and reframe contemporary and historical debates concerning the construction of black identity? In what ways have traditional understandings of masculinity and femininity contributed to an understanding of African American life and culture as invariably heterosexual? How have black lesbian, gay, and transgendered persons effected political change through their theoretical articulations of identity, difference, and power? In this interdisciplinary course, we will address these questions through an examination of the complex roles gender and sexuality play in the lives of people of African descent. Remaining attentive to the ways black people have claimed social and sexual agency in spite of systemic modes of inequality, we will engage with critical race theory, black feminist thought, queer-of-color critique, literature, art, film, new media and erotica, as well as scholarship from anthropology, sociology, and history. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Readings, written work, class lead, oral presentation, analysis.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Jewish Identity and MeToo: A Study of Women in Judaism",
     "course_codes": [
       "RELI-261",
@@ -7724,147 +6651,6 @@
       ]
     },
     "description": "Ranging from ancient texts to contemporary documentaries, we explore the portrayals and roles of women in Jewish tradition. Sources include biblical and apocryphal texts; Rabbinic literature; selections from medieval commentaries; letters, diaries, and autobiographies written by Jewish women of various periods and settings; works of fiction; and visual media. An important thread in the course examines contemporary responses to and interpretations of classical sources, as writers and film-makers examine or refashion the tradition in the light of current challenges facing women in Judaism. This discussion course requires participants to prepare a series of closely argued essays related to assigned readings and films.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "History of Race, Gender, and Comic Books",
-    "course_codes": [
-      "HIST-252",
-      "SWAG-252"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Christine N. Peralta"
-      ]
-    },
-    "description": "What can we learn about MLK and Malcolm X and from Magneto and Professor X? What can we learn about gendered and racialized depictions within comic books? As a catalyst to encourage looking at history from different vantage points, we will put comic books in conversation with the history of race and empire in the United States. Sometimes we will read comic books as primary sources and products of a particular historical moment, and other times we will be reading them as powerful and yet imperfect critiques of imperialism and racial inequality in U.S. history. Besides comic books, this course uses a wide range of material including academic texts, traditional primary source documents, and multi-media sources. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: emphasis on written work, readings, independent research, oral presentations, group work, artistic work, and visual analysis.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Feminist Legal Theory",
-    "course_codes": [
-      "LJST-260",
-      "SWAG-262"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Nica M. Siegel"
-      ]
-    },
-    "description": "In the twentieth century, American feminist movements made significant strides in securing suffrage, formal equality under the law, reproductive justice, and the possibility of economic independence through paid labor. And yet, the entry of (some) women into the public sphere has only intensified the urgency of a series of underlying questions: Is it desirable to demand legal transformations in the name of the identity woman, and if so, how should we incorporate considerations of gender and queerness, class, race, ability, and nationality? What is the relation between the formal emancipation of some women and intensified forms of domination of other women, for example, in the sphere of care work? What are the histories, logics, and political economies of these relations? What is the family, what is its relationship to reproduction, and how should its legal attachments, obligations, and relationships be understood from a feminist perspective? How did individual choice become the privileged legal mechanism for feminist forms of freedom and what is the status of choice today? We will aim to develop our understanding of these distinct but deeply linked questions of feminist thinking and methodology, with an emphasis on American writers and their postcolonial and anti-racist critics, and to appreciate conflicting points of view and longer histories within these debates. Thinkers include Mary Wollstonecraft, Sojourner Truth, Aleksandra Kollontai, Rosa Luxemburg, Simone de Beauvoir, Frantz Fanon, Betty Friedan, Catherine Mackinnon, Andrea Dworkin, Shulamith Firestone, Adrianne Rich, Angela Davis, Bell Hooks, Eve Sedgewick, Sylvia Federici, Kimberle Crenshaw, Donna Haraway, Hortense Spillers, Patricia J. Williams, Judith Butler, Kim TallBear, Jose Munoz, Melinda Cooper, Sophie Lewis, M.E. OBrian, and Amia Srinivasan, as well as materials from intersectional movements and jurisprudence that demanded legal and more-than-legal transformation, including the Atlanta Washer Women Strike of 1881, the Jane Collective, Wages for Housework, the Combahee River Collective, ACT-UP, INCITE!, sex worker unions, and the #MeToo movement. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: engaging with, summarizing, and synthesizing theoretical and historical material, writing papers, and participating in discussion through small group work and close reading in class.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Gender and Slavery in Latin America",
-    "course_codes": [
-      "BLST-275",
-      "HIST-275",
-      "LLAS-275",
-      "SWAG-274"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Russell Lohse"
-      ]
-    },
-    "description": "Latin American slavery was one of the most brutal institutions the world has ever known, and it affected women and girls, boys and men in profoundly different ways. This readings-based course features both secondary and primary sources. Students will gain in-depth understanding of how gender and sexuality affected the experiences of enslaved Africans and their descendants in Latin America from the sixteenth through nineteenth centuries. Topics will include gender roles in Western Africa and how these diverged from the expectations of Spanish and Portuguese slave masters; the sexual and reproductive as well as labor exploitation of enslaved African women and girls; how enslaved men constructed masculinity within the emasculating institution of slavery; gender relations and family structures within slave communities; childhoods under slavery; and the sometimes distinct visions of freedom imagined by enslaved women and men. Select primary documents will acquaint students with the sources historians use to reconstruct these aspects of the histories of largely non-literate African-descended peoples. Regions to be covered include Brazil, the Spanish-speaking Caribbean, Mexico and Central America, and the Andean region. Students will be evaluated on class participation, a series of weekly reading notes, and two short papers.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Witches, Vampires and Other Monsters",
-    "course_codes": [
-      "ARHA-385",
-      "EUST-385",
-      "SWAG-310"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Natasha Staller"
-      ]
-    },
-    "description": "Our course will explore how evil was imagined, over cultures, centuries and disciplines. With the greatest possible historical and cultural specificity, we will investigate an array of monstrous creatures and plagues -- their terrifying powers, the explanations for why they came to be, and the strategies for how they could be purged -- as we attempt to articulate the kindred qualities they shared. We will study centuries-old witch-burning manuals, and note the striking degree to which dangerous tropes -- about women, about pestilence, about dangerous sexuality, and about differences of all kinds -- have continued to our day. Among the artists to be considered are Velazquez, Goya, Picasso, Dali, Bunuel, Dreyer, Wilder, Almodovar, and the community who made the AIDS Quilt. This course fulfills a requirement for the Five College Reproductive Health, Rights and Justice (RHRJ) certificate. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Emphasis on written work, close reading, visual analyses, group work, oral presentations, museum visits.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "History of Asian American Women: Migration and Labor",
-    "course_codes": [
-      "HIST-348",
-      "SWAG-348"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Christine N. Peralta"
-      ]
-    },
-    "description": "This seminar will explore the intersections of gender, migration, and labor, with a particular focus on Asian American women in the United States (broadly defined to include the U.S.s territories and military bases), from 1870 to the present. Through transnational and woman-of color feminist lenses, we will investigate U.S. colonial and neo-colonial formations which disrupt local economies, compelling women to migrate from their homes across national borders and then channeling them into limited employment opportunities in some of the most exploitative industries in the United States, including manufacturing, agricultural, and domestic work. Students will do close analysis of historical evidence, including written documents, images, film, and newspapers. There will also be intensive in-class discussion and varying forms of written work, which will culminate in a final research paper on a topic chosen by the student. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: an emphasis on written work, readings, and independent research.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "The Cinema of Pedro Almod&oacute;var",
-    "course_codes": [
-      "EUST-347",
-      "FAMS-328",
-      "SWAG-357",
-      "SPAN-347"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sara J. Brenneis"
-      ]
-    },
-    "description": "Pedro Almodovar has defined world cinema for the last five decades. As Spains most celebrated film director, Almodovar has created his own cinematic universe. Almodovar lit up Spains movie screens beginning in the 1980s with his confrontational takes on gender, sexuality, religion and family. Now a globally-recognized and award-winning queer filmmaker, Almodovar has matured from his raunchy beginnings in the Madrid punk scene to become a director sensitive to the LGBTQ+ community, marginalized people, and human rights, though he still manages to stir up controversy. In this course, we will consider a panorama of Almodovar films from the 1980s to the 2020s during periods of political, social and cultural transition in Spain. Particular emphasis will be placed on how the director has represented gender identity and sexuality throughout his career. Through weekly screenings, course readings, written assignments and a final video essay, we will work through Almodovars ongoing dialogue with Spains social history and culture, as well as his cinematic legacy throughout Europe, Latin America and the United States. This course is conducted in Spanish, with most readings in English; prior exposure to film studies is not required. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Emphasis on visual analysis, group work, critical analysis of readings, and written work. Instruction and films in Spanish; readings in Spanish and English. Assessments include short written responses, graded essays and a final edited video essay.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Reading the Romance",
-    "course_codes": [
-      "ENGL-372",
-      "SWAG-365"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Krupa Shandilya"
-      ]
-    },
-    "description": "Do people the world over love in the same way, or does romance mean different things in different cultures? What happens when love violates social norms? Is the romance genre an escape from real-world conflicts or a resolution of them? This course analyzes romantic narratives from across the world through the lens of feminist theories of sexuality, marriage, and romance. We will read the heterosexual romance such as Jane Austens Pride and Prejudice and popular romance author Julia Quinn's Bridgerton series, alongside queer fiction such as Alison Bechdel's Dykes to Watch Out For and trans-romances like Torrey Peters' Detransition, Baby . We will also pay attention to the Western romantic-comedy film, the telenovela, and the Bollywood spectacular. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: critical thinking, reading intensive, essay writing, and oral presentations.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Sex, Gender, and the Body in South Asian History",
-    "course_codes": [
-      "ASLC-376",
-      "HIST-376",
-      "SWAG-377"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Mekhola S. Gomes"
-      ]
-    },
-    "description": "This course explores how history can be understood through sex, gender, and the body. The course focuses on South Asia as part of global history. We explore what relationship sex had with medieval politics. We analyze how colonialism and capitalism dominated people through disciplining bodies. Finally, we examine how nationalisms operate through gender. Throughout the course, we interpret a range of primary sources including poetry, maps, and films. Students will have the opportunity to do independent research by visiting the Amherst College Archives and Special Collections. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Close analysis of historical evidence, which include written documents, images, music, films, and literature from the historical period under study. Exploration of the categories of sex, gender, and the body across South Asian history. Engagement with the intertwining of gender, social formations, and ethical configurations in South Asian history. Extensive reading, varying forms of written work, and intensive in-class discussions.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "U.S. LGBTQ Rights Movement, 1945-2020",
-    "course_codes": [
-      "HIST-424",
-      "SWAG-424"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jen Manion"
-      ]
-    },
-    "description": "The LGBTQ Rights Movement in the U.S. has revolutionized the lives, rights, and representations of lesbian, gay, bisexual, transgender, and queer people in modern life. Despite its transformative impact, few people know much of anything about the people, organizations, or legal issues involved in the struggle. By studying LGBTQ history through primary source materials, students will develop a rich and nuanced historical view of pivotal moments, places, and people from the homophile movement of the 1950s to gay liberation of the 1970s to the anti-sodomy law and gay marriage battles of the 1990s to the transgender revolution of the 2000s. We will examine organizational records, movement magazines, legislative debates, oral histories and prominent published writings while also diving deeply into the LGBTQ press. We will address such topics as the closet, bullying, anti-gay laws, conversion therapy, the lavender scare, police harassment, religious campaigns, employment discrimination, and violence. Students will learn to identify and work with an archive to craft a major, original research paper or digital exhibition or art installation on some aspect of the LGBTQ Rights Movement in the U.S. history. We will make extensive use of digitized source material while also visiting local archives such as the Sophia Smith Collection at Smith College and the Robert S. Cox Special Collections and University Archives Research Center at UMass Amherst. Students will expect to read, write, work with primary sources, work in groups, and make public presentations.",
     "times_and_locations": {}
   },
   {
@@ -8064,21 +6850,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Don Quixote",
-    "course_codes": [
-      "EUST-264",
-      "SPAN-460"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ilan Stavans"
-      ]
-    },
-    "description": "A patient, careful reading of Cervantes' masterpiece (published in 1605 and 1615), taking into consideration the biographical, historical, social, religious, and literary context from which it emerged during the Renaissance. The discussion will center on the novel's structure, style, and durability as a classic and its impact on our understanding of ideas and emotions connected with the Enlightenment and its aftermath. Authors discussed in connection to the material include Erasmus of Rotterdam, Montaigne, Emerson, Tobias Smollett, Flaubert, Dostoyevsky, Unamuno, Nabokov, Borges, Garcia Marquez, and Rushdie. Emphasis on race and colonialism. Conducted in Spanish. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Critical thinking, active participation in class discussions, reading of the material and contextual research before class, daring spirit in creative writing, only one absence accepted throughout the entire semester.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Special Topics",
     "course_codes": [
       "SPAN-490"
@@ -8117,136 +6888,6 @@
       ]
     },
     "description": "One single course. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Independent research; critical review of texts; drafting and revising thesis; discussions with thesis advisor; readings, discussions and/or written work in Spanish (dependent on thesis topic and language of composition); thesis defense.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Statistical Ethics and Institutions",
-    "course_codes": [
-      "STAT-108"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Andreas V. Georgiou"
-      ]
-    },
-    "description": "This course will provide a rigorous presentation of fundamental statistical principles and ethics. We will discuss standards for relationships between statisticians and policymakers, researchers, the press, and other institutions, as well as the standards for interactions between statisticians and their employers/clients, colleagues and research subjects. The course will explore how the interplay of institutions and the broader sociopolitical culture affect the production of reliable, high quality statistics. Students will also explore the implications of statistical principles and ethics for the operation of national, regional, and international official statistical systems. In addition, we will investigate the proper place of official statistics within a government system that operates with separate branches. Students will gain a strong foundation in international statistical principles and professional ethics as well as an understanding and the tools to assess the quality of the statistics they use. The course is designed to make students responsible and effective supporters of reliable, high quality statistics in their professions. Students will particularly learn how to assess the quality of official statistics produced by governments and how to identify areas for improvement. Examples, case studies, readings from statistical practice, and discussion will provide a full appreciation of real world applications. The course is also intended for non-majors interested in an introduction to quantitative social science and the use of data in public policy. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: term papers, in class final and midterm, group project and class presentation, problem sets, readings, class attendance and class discussion.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Introduction to Statistics via Modeling",
-    "course_codes": [
-      "STAT-135"
-    ],
-    "faculty": {
-      "Section 03": [
-        "Brittney E. Bailey"
-      ],
-      "Section 01": [
-        "Pamela B. Matheson"
-      ]
-    },
-    "description": "This course is an introductory statistics course that uses modeling as a unifying framework. The course provides a basic foundation in statistics with a major emphasis on constructing models from data. Students learn important concepts of statistics by mastering powerful and relatively advanced statistical techniques using computational tools. Topics include descriptive and inferential statistics, visualization, probability, study design, and multiple regression. No prior experience with statistical software is expected. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: quantitative work, homework assignments/problem sets, quizzes or exams, group work, use of computational software; may include projects.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Intermediate Statistics",
-    "course_codes": [
-      "STAT-230"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Pamela B. Matheson"
-      ]
-    },
-    "description": "This course is an intermediate applied statistics course that builds on the statistical data analysis methods introduced in STAT 111, STAT 135, or STAT 136. Students will learn how to pose a statistical question, perform appropriate statistical analysis of the data, and properly interpret and communicate their results. Emphasis will be placed on the use of statistical software, data wrangling, model fitting, and assessment. Topics covered will include ethics, experimental design, resampling approaches, analysis of variance models, multiple regression, model selection, and logistic regression. No prior experience with statistical software is expected.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Data Science",
-    "course_codes": [
-      "STAT-231"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Computational data analysis is an essential part of modern statistics and data science. This course provides a practical foundation for students to think with data by participating in the entire data analysis cycle. Students will generate statistical questions and then address them through data acquisition, cleaning, transforming, modeling, and interpretation. This course will introduce students to tools for data management, wrangling, and databases that are common in data science and will apply those tools to real-world applications. Students will undertake practical analyses of large, complex, and messy data sets leveraging modern computing tools. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: quantitative work, problem sets, projects, group work, use of computational software, may include quizzes or exams.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Probability",
-    "course_codes": [
-      "MATH-360",
-      "STAT-360"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Katherine E. Moore"
-      ]
-    },
-    "description": "This course explores the nature of probability and its use in modeling real world phenomena. There are two explicit complementary goals: to explore probability theory and its use in applied settings, and to learn parallel analytic and empirical problem-solving skills. The course begins with the development of an intuitive feel for probabilistic thinking, based on the simple yet subtle idea of counting. It then evolves toward the rigorous study of discrete and continuous probability spaces, independence, conditional probability, expectation, and variance. Distributions covered include the binomial, hypergeometric, Poisson, normal, Gamma, Beta, multinomial, and bivariate normal. Other topics include generating functions, order statistics, and limit theorems. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: quantitative work, problem sets, quizzes or exams, group work, use of computational software.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Generalized Linear Models and Mixed Models",
-    "course_codes": [
-      "STAT-456"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Brittney E. Bailey"
-      ]
-    },
-    "description": "Linear regression and logistic regression are powerful tools for statistical analysis, but they are only a subset of a broader class of generalized linear models. This course will explore the theory behind and practical application of generalized linear models for responses that do not have a normal distribution, including counts, categories, and proportions. If time allows, we will also explore extensions of these models for dependent responses such as repeated measures over time. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: quantitative work, problem sets, reading research articles, group work, use of computational software, projects.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Special Topics",
-    "course_codes": [
-      "STAT-490"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: quantitative work, projects, use of computational software",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Advanced Data Analysis",
-    "course_codes": [
-      "STAT-495"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Our world is awash in data. To allow decisions to be made based on evidence, there is a need for statisticians to be able to make sense of the data around us and communicate their findings. In this course, students will be exposed to advanced statistical methods and will undertake the analysis and interpretation of complex and real-world datasets that go beyond textbook problems. Course topics will vary from year to year depending on selected case studies. Potential topics include but are not limited to: visualization techniques to summarize and display high dimensional data, advanced topics in design and linear regression, ethics, selected topics in machine learning and data mining, nonparametric analysis, spatial data, and analysis of network data. Students will enhance their capacity to think and compute with data, undertake and assess analyses, and effectively communicate their results. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: quantitative work, problem sets, quizzes or exams, group work, use of computational software, research paper (project), reflection and integration of prior coursework, and oral presentations.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Senior Honors",
-    "course_codes": [
-      "STAT-498"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: quantitative work, writing intensive, use of computational software, independent research",
     "times_and_locations": {}
   },
   {
@@ -8582,66 +7223,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Sexualities in International Relations",
-    "course_codes": [
-      "POSC-160",
-      "SWAG-160"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Manuela Picq"
-      ]
-    },
-    "description": "From abortion to gay rights, sexuality is deeply entangled in world politics. As LGBT rights become human rights principles, they not only enter the rights structure of the European Union and the United Nations but are also considered a barometer of political modernity. If some Latin American nations have depicted their recognition of gay rights as symbolic of their progressive character, certain North African nations have depicted their repression of homosexuality symbolic of their opposition to western imperialism. The results of sexual politics are often contradictory, with some countries enabling same-sex marriage but criminalizing abortion and others cutting aid in the name of human rights. This course explores the influence of sexual politics on international relations. We analyze how women and gay rights take shape in the international system, from the UN to security agendas, and evaluate how sexuality shapes the modus operandi of contemporary politics. This course fulfills a requirement for the Five College Reproductive Health, Rights and Justice (RHRJ) certificate. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Group work, readings, written work, oral presentations.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Sex, Race, and Empire: The Global Politics of Gender and Sexuality",
-    "course_codes": [
-      "BLST-288",
-      "SWAG-188"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Krupa Shandilya"
-      ]
-    },
-    "description": "How might we connect the U.S.s current economic, social, and military dominance over much of the world to empires of the past such as the nineteenth century British empire in India, Africa and the Caribbean? What does the existence of human zoos of the nineteenth and early twentieth century tell us about how empires thought of colonized peoples? How might we connect imperial legacies to the current immigrant crisis in the U.S.? How have the gendered performances of American military women during the US-led occupations of Iraq and Afghanistan been instrumentalized for counterinsurgency warfare? This course looks at a global range of responses to empire and colonization by activists, writers and filmmakersfrom the early Indian proto-feminist novella Sultanas Dream (1905) to the contemporary American film BlacKkKlansman (2018), and the classic anti-colonial film Battle of Algiers (1967), among others. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Written work, readings, independent research, oral presentations, group work, and visual analysis.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Theories in Sexuality, Women's and Gender Studies",
-    "course_codes": [
-      "SWAG-200"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Katrina Karkazis"
-      ]
-    },
-    "description": "This course provides an introduction to historical and contemporary intersectional and interdisciplinary feminist theory. We begin the course by first asking the questions: What is theory? Who gets to participate in theory building? How is feminist knowledge production influenced by power, privilege and geopolitics? We will explore the ways in which feminism is multi-vocal, non-linear, and influenced by multiple and shifting sites of feminist identities. This exploration includes the examination and analysis of local and global feminist thoughts on gender/sex, race, sexuality, disability, reproductive justice, colonialism, nationalism as they effect and shape social and economic forms of power and oppression. The emphasis of the course will remain focused on the theories produced by feminist, Black, queer, trans, indigenous, and transnational scholars, among others, to help explain and resist dominant or exploitative forms of power.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Intersectional Feminist Science Studies",
-    "course_codes": [
-      "ANTH-209",
-      "SOCI-207",
-      "SWAG-209"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Katrina Karkazis"
-      ]
-    },
-    "description": "This seminar uses feminist theory and methods to consider scientific practice and the production of medicoscientific knowledge. We will explore how medicine and science reflects and reinforces social relations, positions, and hierarchies as well as whether and how medicoscientific practice and knowledge might be made more accurate and socially beneficial. Central to this course is how assumptions about sex, gender and race have shaped what we have come to know as true, natural, and fact. We will explore interdisciplinary works on three main themes: feminist critiques of objectivity; the structure and meanings of natural variations, especially human differences; and challenges to familiar binaries (nature/culture, human/animal, female/male, etc). Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Readings, written work, class lead, oral presentation, analysis.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Black Sexualities",
     "course_codes": [
       "BLST-236",
@@ -8653,36 +7234,6 @@
       ]
     },
     "description": "From the modern era to the contemporary moment, the intersection of race, gender, and class has been especially salient for people of African descent for men as well as for women. How might the category of sexuality act as an additional optic through which to view and reframe contemporary and historical debates concerning the construction of black identity? In what ways have traditional understandings of masculinity and femininity contributed to an understanding of African American life and culture as invariably heterosexual? How have black lesbian, gay, and transgendered persons effected political change through their theoretical articulations of identity, difference, and power? In this interdisciplinary course, we will address these questions through an examination of the complex roles gender and sexuality play in the lives of people of African descent. Remaining attentive to the ways black people have claimed social and sexual agency in spite of systemic modes of inequality, we will engage with critical race theory, black feminist thought, queer-of-color critique, literature, art, film, new media and erotica, as well as scholarship from anthropology, sociology, and history.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Jewish Identity and MeToo: A Study of Women in Judaism",
-    "course_codes": [
-      "RELI-261",
-      "SWAG-239"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Susan Niditch"
-      ]
-    },
-    "description": "Ranging from ancient texts to contemporary documentaries, we explore the portrayals and roles of women in Jewish tradition. Sources include biblical and apocryphal texts; Rabbinic literature; selections from medieval commentaries; letters, diaries, and autobiographies written by Jewish women of various periods and settings; works of fiction; and visual media. An important thread in the course examines contemporary responses to and interpretations of classical sources, as writers and film-makers examine or refashion the tradition in the light of current challenges facing women in Judaism. This discussion course requires participants to prepare a series of closely argued essays related to assigned readings and films.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "History of Race, Gender, and Comic Books",
-    "course_codes": [
-      "HIST-252",
-      "SWAG-252"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Christine N. Peralta"
-      ]
-    },
-    "description": "What can we learn about MLK and Malcolm X and from Magneto and Professor X? What can we learn about gendered and racialized depictions within comic books? As a catalyst to encourage looking at history from different vantage points, we will put comic books in conversation with the history of race and empire in the United States. Sometimes we will read comic books as primary sources and products of a particular historical moment, and other times we will be reading them as powerful and yet imperfect critiques of imperialism and racial inequality in U.S. history. Besides comic books, this course uses a wide range of material including academic texts, traditional primary source documents, and multi-media sources. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: emphasis on written work, readings, independent research, oral presentations, group work, artistic work, and visual analysis.",
     "times_and_locations": {}
   },
   {
@@ -8702,71 +7253,6 @@
   },
   {
     "semester": "Fall 2025",
-    "course_title": "Gender and Slavery in Latin America",
-    "course_codes": [
-      "BLST-275",
-      "HIST-275",
-      "LLAS-275",
-      "SWAG-274"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Russell Lohse"
-      ]
-    },
-    "description": "Latin American slavery was one of the most brutal institutions the world has ever known, and it affected women and girls, boys and men in profoundly different ways. This readings-based course features both secondary and primary sources. Students will gain in-depth understanding of how gender and sexuality affected the experiences of enslaved Africans and their descendants in Latin America from the sixteenth through nineteenth centuries. Topics will include gender roles in Western Africa and how these diverged from the expectations of Spanish and Portuguese slave masters; the sexual and reproductive as well as labor exploitation of enslaved African women and girls; how enslaved men constructed masculinity within the emasculating institution of slavery; gender relations and family structures within slave communities; childhoods under slavery; and the sometimes distinct visions of freedom imagined by enslaved women and men. Select primary documents will acquaint students with the sources historians use to reconstruct these aspects of the histories of largely non-literate African-descended peoples. Regions to be covered include Brazil, the Spanish-speaking Caribbean, Mexico and Central America, and the Andean region. Students will be evaluated on class participation, a series of weekly reading notes, and two short papers.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Witches, Vampires and Other Monsters",
-    "course_codes": [
-      "ARHA-385",
-      "EUST-385",
-      "SWAG-310"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Natasha Staller"
-      ]
-    },
-    "description": "Our course will explore how evil was imagined, over cultures, centuries and disciplines. With the greatest possible historical and cultural specificity, we will investigate an array of monstrous creatures and plagues -- their terrifying powers, the explanations for why they came to be, and the strategies for how they could be purged -- as we attempt to articulate the kindred qualities they shared. We will study centuries-old witch-burning manuals, and note the striking degree to which dangerous tropes -- about women, about pestilence, about dangerous sexuality, and about differences of all kinds -- have continued to our day. Among the artists to be considered are Velazquez, Goya, Picasso, Dali, Bunuel, Dreyer, Wilder, Almodovar, and the community who made the AIDS Quilt. This course fulfills a requirement for the Five College Reproductive Health, Rights and Justice (RHRJ) certificate. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Emphasis on written work, close reading, visual analyses, group work, oral presentations, museum visits.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "History of Asian American Women: Migration and Labor",
-    "course_codes": [
-      "HIST-348",
-      "SWAG-348"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Christine N. Peralta"
-      ]
-    },
-    "description": "This seminar will explore the intersections of gender, migration, and labor, with a particular focus on Asian American women in the United States (broadly defined to include the U.S.s territories and military bases), from 1870 to the present. Through transnational and woman-of color feminist lenses, we will investigate U.S. colonial and neo-colonial formations which disrupt local economies, compelling women to migrate from their homes across national borders and then channeling them into limited employment opportunities in some of the most exploitative industries in the United States, including manufacturing, agricultural, and domestic work. Students will do close analysis of historical evidence, including written documents, images, film, and newspapers. There will also be intensive in-class discussion and varying forms of written work, which will culminate in a final research paper on a topic chosen by the student. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: an emphasis on written work, readings, and independent research.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "The Cinema of Pedro Almod&oacute;var",
-    "course_codes": [
-      "EUST-347",
-      "FAMS-328",
-      "SWAG-357",
-      "SPAN-347"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sara J. Brenneis"
-      ]
-    },
-    "description": "Pedro Almodovar has defined world cinema for the last five decades. As Spains most celebrated film director, Almodovar has created his own cinematic universe. Almodovar lit up Spains movie screens beginning in the 1980s with his confrontational takes on gender, sexuality, religion and family. Now a globally-recognized and award-winning queer filmmaker, Almodovar has matured from his raunchy beginnings in the Madrid punk scene to become a director sensitive to the LGBTQ+ community, marginalized people, and human rights, though he still manages to stir up controversy. In this course, we will consider a panorama of Almodovar films from the 1980s to the 2020s during periods of political, social and cultural transition in Spain. Particular emphasis will be placed on how the director has represented gender identity and sexuality throughout his career. Through weekly screenings, course readings, written assignments and a final video essay, we will work through Almodovars ongoing dialogue with Spains social history and culture, as well as his cinematic legacy throughout Europe, Latin America and the United States. This course is conducted in Spanish, with most readings in English; prior exposure to film studies is not required. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Emphasis on visual analysis, group work, critical analysis of readings, and written work. Instruction and films in Spanish; readings in Spanish and English. Assessments include short written responses, graded essays and a final edited video essay.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
     "course_title": "Reading the Romance",
     "course_codes": [
       "ENGL-372",
@@ -8778,51 +7264,6 @@
       ]
     },
     "description": "Do people the world over love in the same way, or does romance mean different things in different cultures? What happens when love violates social norms? Is the romance genre an escape from real-world conflicts or a resolution of them? This course analyzes romantic narratives from across the world through the lens of feminist theories of sexuality, marriage, and romance. We will read the heterosexual romance such as Jane Austens Pride and Prejudice and popular romance author Julia Quinn's Bridgerton series, alongside queer fiction such as Alison Bechdel's Dykes to Watch Out For and trans-romances like Torrey Peters' Detransition, Baby. We will also pay attention to the Western romantic-comedy film, the telenovela, and the Bollywood spectacular. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: critical thinking, reading intensive, essay writing, and oral presentations.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Sex, Gender, and the Body in South Asian History",
-    "course_codes": [
-      "ASLC-376",
-      "HIST-376",
-      "SWAG-377"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Mekhola S. Gomes"
-      ]
-    },
-    "description": "This course explores how history can be understood through sex, gender, and the body. The course focuses on South Asia as part of global history. We explore what relationship sex had with medieval politics. We analyze how colonialism and capitalism dominated people through disciplining bodies. Finally, we examine how nationalisms operate through gender. Throughout the course, we interpret a range of primary sources including poetry, maps, and films. Students will have the opportunity to do independent research by visiting the Amherst College Archives and Special Collections. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Close analysis of historical evidence, which include written documents, images, music, films, and literature from the historical period under study. Exploration of the categories of sex, gender, and the body across South Asian history. Engagement with the intertwining of gender, social formations, and ethical configurations in South Asian history. Extensive reading, varying forms of written work, and intensive in-class discussions.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "U.S. LGBTQ Rights Movement, 1945-2020",
-    "course_codes": [
-      "HIST-424",
-      "SWAG-424"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jen Manion"
-      ]
-    },
-    "description": "The LGBTQ Rights Movement in the U.S. has revolutionized the lives, rights, and representations of lesbian, gay, bisexual, transgender, and queer people in modern life. Despite its transformative impact, few people know much of anything about the people, organizations, or legal issues involved in the struggle. By studying LGBTQ history through primary source materials, students will develop a rich and nuanced historical view of pivotal moments, places, and people from the homophile movement of the 1950s to gay liberation of the 1970s to the anti-sodomy law and gay marriage battles of the 1990s to the transgender revolution of the 2000s. We will examine organizational records, movement magazines, legislative debates, oral histories and prominent published writings while also diving deeply into the LGBTQ press. We will address such topics as the closet, bullying, anti-gay laws, conversion therapy, the lavender scare, police harassment, religious campaigns, employment discrimination, and violence. Students will learn to identify and work with an archive to craft a major, original research paper or digital exhibition or art installation on some aspect of the LGBTQ Rights Movement in the U.S. history. We will make extensive use of digitized source material while also visiting local archives such as the Sophia Smith Collection at Smith College and the Robert S. Cox Special Collections and University Archives Research Center at UMass Amherst. Students will expect to read, write, work with primary sources, work in groups, and make public presentations.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Special Topics",
-    "course_codes": [
-      "SWAG-490"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Independent reading course. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: an emphasis on written work, readings, and independent research.",
     "times_and_locations": {}
   },
   {
@@ -8844,66 +7285,6 @@
     "semester": "Fall 2025",
     "course_title": "Senior Departmental Honors",
     "course_codes": [
-      "SWAG-498D",
-      "SWAG-498"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Double course. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: an emphasis on written work, readings, and independent research.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Women, Gender, and Pop Culture",
-    "course_codes": [
-      "AMST-117",
-      "FAMS-130"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Aneeka A. Henderson"
-      ]
-    },
-    "description": "In this course, students will interrogate the precarious relationship between political and popular culture. As we study how politics has successfully deployed popular culture as an ideological tool, we will also consider how politics has overburdened popular culture as a vehicle of change. These broad issues will serve as our framework for analyzing black femininity, womanhood, and the efficacy of the word feminism in the post-Civil Rights era. We will think critically about the construction of gender, race, sexuality, and class identity as well as the historical and sociopolitical context for cultural icons and phenomena. Students will read cultural theory, essays, fiction as well as listen to, and watch various forms of media. Expectations include three writing/visual projects as well as a group presentation. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: emphasis on written work, readings, oral presentations, group work, in-class quizzes or exams, artistic work, field work or trips, visual analysis and aural analysis.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Emily Dickinson",
-    "course_codes": [
-      "AMST-364",
-      "ENGL-355"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Karen J. Sanchez-Eppler"
-      ]
-    },
-    "description": "Emily Dickinsons poetry is rich in what she called illocality. Her writing characteristically dissolves images and refuses specificity of place or event, and yet no writer is more intimately connected to a particular place. Dickinson wrote almost all of her poems in this one house on Main Street, in Amherst. Coursework will include close collaborations with The Emily Dickinson Museum and rare access to the Dickinson manuscripts housed at Amherst College archives and special collections. Thus, in this course we will have the extraordinary opportunity to read these poems in Amherst, to study both her individual life and her practices of literary expression in the place where she lived and wrote and with access to her manuscripts and to many of the spaces, artifacts, and records of family and local history. It is a complicated history, and starting with new scholarship on the roles the Dickinson family played in the white settlement of the Connecticut River Valley, this class will be particularly attuned to the inequalities of race, class, and gender that structure Dickinson's poetic practice and legacy. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Close reading of poetry, literary criticism, and historical materials, independent research including archival research and work with material culture objects. Local field trips. Collaborative work on group projects for the Dickinson Museum.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Special Topics",
-    "course_codes": [
-      "AMST-390",
-      "AMST-490"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Independent reading course. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: independent research, critical analysis, close reading, and extended writing.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Senior Departmental Honors",
-    "course_codes": [
       "AMST-498"
     ],
     "faculty": {
@@ -8912,36 +7293,6 @@
       ]
     },
     "description": "Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: independent research, critical analysis, close reading, and extended writing.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Globalization Through the Lens of Border Culture",
-    "course_codes": [
-      "AAPI-235",
-      "POSC-235"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Lorne Falk"
-      ]
-    },
-    "description": "This course will look at globalization through the lens of border culture, a term that refers to the \"deterritorialized\" experience of people when they move or are displaced from their context or place of origin. How are peoples experience of belonging and understanding of identity affected by borders within the realms of language, gender, ideology, race, and genres of cultural production as well as geopolitical locations? What does it mean to live between two culturesan experience that in 2019 might well represent the nature of contemporary life? We will explore these questions by examining the political and aesthetic impact of global processes such as the unprecedented turbulence of migration, the persistent threat of terrorism, and the perplexing influence of communications technologies. Readings will include the voices of artists, critics, historians, cultural theorists, anthropologists, and philosophers, including Gloria Anzaldua, Arjun Appadurai, Homi Bhabha, Michel Foucault, Guillermo Gomez-Pena, Derek Gregory, Trinh T. Minh-ha, Nikos Papastergiadis, Edward Said, Gianni Vattimo, and Eyal Weizman. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Emphasis is on written work, readings, independent research, oral presentations, and group work.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Fall 2025",
-    "course_title": "Senior Departmental Honors",
-    "course_codes": [
-      "ASLC-498D",
-      "ASLC-498"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Students will conduct independent research under faculty direction.",
     "times_and_locations": {}
   },
   {

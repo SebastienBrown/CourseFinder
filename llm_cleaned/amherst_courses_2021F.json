@@ -644,66 +644,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "Race, Education, and Belonging",
-    "course_codes": [
-      "AMST-200",
-      "SOCI-200"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Kristen V. Luschen"
-      ]
-    },
-    "description": "(Offered as AMST 200 and SOCI 200) Disproportionate numbers of students of color drop out or disengage from schools in America each year. Responding to the framework of drop out, critical educational scholars have argued that many school practices, policies, and cultures push out already marginalized students, or at the very least, do not take sufficient steps to create an inclusive culture that supports all students participation and sense of belonging. This course examines the ways in which race and racism influence political, social, cultural, and institutional belonging. This interdisciplinary course will draw on theory and research from the fields of education, sociology, and ethnic studies to examine the conditions of schooling that prompt students formal and less formal forms of school disengagement. We will explore how educational institutions, educators, and their community partners support students access to and engagement with education. We will examine educational reform practices that strive to cultivate a culture of belonging and community in schools. In particular, we will examine programs and schools that forefront anti-racist education, community engagement, student participation, critical multicultural education, and restorative justice. Students in the course will participate in the Education Studies Lecture Series, 'Education, Crisis, and Belonging.' These conversations will explore the possibilities afforded by this contemporary moment of crisis to examine the purposes and promise of education.",
-    "times_and_locations": {
-      "AMST 200 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:10 AM - 11:30 AM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "Th",
-            "time": "10:10 AM - 11:30 AM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "The Asian American Experience",
-    "course_codes": [
-      "AMST-204",
-      "SOCI-202"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Pawan H. Dhingra"
-      ]
-    },
-    "description": "(Offered as AMST 204 and SOCI 202) How do race, immigration, and the state not only shape peoples access to resources but also delimit who belongs to the nation, self-conceptions, and personal relationships? How can ethnic minorities at times be out-whiting whites but still be denied full citizenship by the state? What does it mean to grow up within a culture but never fully identify with it? We will answer these questions and more by examining Asian Americans' efforts for belonging and social justice as full members of the United States. Substantive topics include how race, gender, sexuality, and class intersect to influence life chances; immigration laws and trends; how people form ethnic and racial identities while becoming good Americans; educational experiences of youth and so-called Tiger parents; how family and relationship formations are shaped by race and immigration; media portrayals; inter-minority solidarities and tensions.",
-    "times_and_locations": {
-      "AMST 204 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:10 AM - 11:30 AM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "Th",
-            "time": "10:10 AM - 11:30 AM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "Racism and the City",
     "course_codes": [
       "SOCI-209",
@@ -727,61 +667,6 @@
           {
             "day": "W",
             "time": "02:10 PM - 03:30 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "\"The Embodied Self\" in American Culture and Society",
-    "course_codes": [
-      "AMST-215",
-      "SOCI-215"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Wendy H. Bergoffen"
-      ],
-      "Section 02": [
-        "Francis G. Couvares"
-      ]
-    },
-    "description": "(Offered as AMST 215 and SOCI 215) The course is an interdisciplinary, historically organized study of American perceptions of and attitudes towards the human body in a variety of media, ranging from medical and legal documents to poetry and novels, the visual arts, film, and dance. Among the topics to be discussed are the physical performance of gender; the social construction of the ideal male and female body; health reform movements; athletic achievement as an instrumentalization of the body; commercialization of physical beauty in the fitness and fashion industries; eating disorders as cultural phenomena; the interminable abortion controversy; the equally interminable conflict over pornography and the limits of free speech; and adaptations to the possibility of serious illness and to the certainty of death.",
-    "times_and_locations": {
-      "AMST 215 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "F",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "M",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "F",
-            "time": "11:20 AM - 12:10 PM",
             "location": "ONLI ONLI"
           }
         ]
@@ -921,94 +806,6 @@
           {
             "day": "Th",
             "time": "11:50 AM - 01:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Protest!",
-    "course_codes": [
-      "ANTH-325",
-      "SOCI-325"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Hannah A. Holleman"
-      ]
-    },
-    "description": "(Offered as SOCI 325 and ANTH 325) From Arab Spring and Occupy Wall Street to Black Lives Matter and the Womens March, protests across the globe are questioning the social, political and economic status quo. This course explores the concept and practice of protest from sociological and anthropological perspectives. Why do people protest? What are their cultural and social forms? How does one understand the emotions involved? What is the role of technology? What relationships exist between the act of protest and social movements? Are protests always progressive? How does the study of protest help one understand power, democracy, and societal change? To explore these questions we will look at ethnography and history of collective mobilizations, from anti-colonial movements to nationalist struggles, as well as contemplate the future of protest for the U.S. and the rest of the world. While the readings will include case study research and key theoretical texts, we will also speak with organizers and participants of current uprisings to understand concerns on the ground.",
-    "times_and_locations": {
-      "SOCI 325 - TUT": {
-        "Section 01": [
-          {
-            "day": "TBD",
-            "time": "-",
-            "location": "MAQT 005"
-          }
-        ]
-      },
-      "SOCI 325 - LEC": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:30 PM - 04:00 PM",
-            "location": "POWE 001"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Model Minorities: Jewish and Asian Americans",
-    "course_codes": [
-      "AMST-345",
-      "SOCI-345"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Wendy H. Bergoffen",
-        "Franklin S. Odo"
-      ]
-    },
-    "description": "(Offered as AMST 345 and SOCI 345) The United States has long struggled with challenges created by the need to absorb ethnic and racial minorities. In the face of seemingly intractable problems, one solution has been to designate a model minority, which then appears to divert attention from the society at large. Earlier in the twentieth century, Jewish Americans played this role; today, Asian Americans are the focus. This course examines specific instances in which Jewish Americans and Asian Americans both embraced and rejected the model minority stereotype. Course units will also examine the underside of the model minority stereotype, quotas imposed to limit access to education and employment as well as social and legal actions taken in response to such restrictions. The course will feature a range of materials, including plays, fiction, journalism, and visual works. Students will read scholarship in the fields of American Studies, Sociology, History, and Critical Race Studies.",
-    "times_and_locations": {
-      "AMST 345 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:10 PM - 05:00 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "The Purpose and Politics of Education",
-    "course_codes": [
-      "AMST-352",
-      "SOCI-352",
-      "BLST-351",
-      "HIST-352"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Kristen V. Luschen",
-        "Hilary J. Moss"
-      ]
-    },
-    "description": "Focusing on the United States, this course introduces students to foundational questions and texts central to the history of education and education studies. We will explore the competing goals and priorities Americans have held for primary, secondary and post-secondary education and ask how and why these visions have influenced or failed to influence classrooms, schools, and educational policy. We will pay particular attention to sources of educational stratification; the tensions between the public and private purposes of schooling; and the relationship between schooling and equality. In the first part of the course, students will reflect on how Americans have imagined the purpose of self-education, literacy, public schooling, and the liberal arts. Among the questions we will consider: What do Americans want from public schools? Does education promote liberation? Has a liberal arts education outlived its usefulness? How has the organization of schools and school systems promoted some educational objectives in lieu of others? In the second section of the course, we will concentrate on the politics of schooling. Here, we will pay particular attention to several issues central to understanding educational inequality and its relationship to American politics, culture, and society: localism; state and federal authority; desegregation; and the complicated relationship between schooling and racial, linguistic, class-based, gender, and ethnic hierarchies. Finally, we will explore how competing ideas about the purpose and politics of education manifest themselves in current policy debates about privatization, charters, testing, and school discipline. Throughout the course, students will reflect on both the limits and possibilities of American schools to challenge and reconfigure the social order. Course assignments will consist of a mix of short papers and analytical reading exercises. Students will have the opportunity to participate in the Education Studies Lecture Series, \"Education, Crisis, and Belonging.\" These conversations will explore the possibilities afforded by this contemporary moment of crisis to examine the purposes and promises of education.",
-    "times_and_locations": {
-      "HIST 352 - L/D": {
-        "Section 01": [
-          {
-            "day": "Th",
-            "time": "01:30 PM - 04:15 PM",
             "location": "ONLI ONLI"
           }
         ]
@@ -1517,37 +1314,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "Art and Architecture of India",
-    "course_codes": [
-      "ARCH-154",
-      "ARHA-154",
-      "ASLC-154"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Yael R. Rice"
-      ]
-    },
-    "description": "This introductory course surveys the architecture, painting, sculpture, textiles, decorative arts, and photography of India as well as other parts of the Indian subcontinentnamely Bangladesh, Nepal, Pakistan, Afghanistan and Sri Lankafrom 2300 B.C. to the present. It considers the role of tradition in the broader history of art in India, but does not see India as \"traditional\" or unchanging. The Indian sub-continent is the source for multi-cultural civilizations that have lasted and evolved for several thousand years. Its art is as rich and complex as that of Europe, and as diverse. This course attempts to introduce the full range of artistic production in India in relation to the multiple strands that have made the cultural fabric of the sub-continent so rich and long lasting. Films, musical recordings, and museum websites will supplement assigned readings and lectures. No previous background is presumed, and all readings will be available in English. This course will incorporate synchronous and asynchronous community-building small-group activities, cutting-edge digital approaches to the study of architecture and objects, and, when possible, visits to local museum collections. Students who are unable to attend synchronous class meetings will be accommodated.",
-    "times_and_locations": {
-      "ARHA 154 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:30 PM - 02:50 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "Th",
-            "time": "01:30 PM - 02:50 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "Introduction to Contemporary Art",
     "course_codes": [
       "ARHA-155"
@@ -1560,66 +1326,6 @@
     "description": "This introductory course explores art produced between 1960 and the present. We will take a transnational approach, from the emergence of Pop art as an international phenomenon in the 1960s to the mushrooming cloud of biennials in the twenty-first century. The course will sometimes look at arts intersection with architecture, film, and visual culture more broadly. We will keep in mind the following questions: How have new technologies, civil rights movements, emergent subjectivities, new forms of theoretical inquiry, and processes of globalization shaped the work of art? How have artists critiqued both institutions and the art historical canon? How does contemporary art both participate in and stand apart from the world in which and for which it was made? The course will include extensive office hours, small breakout discussion sections, brief lectures, video content, and both synchronous and asynchronous activities and assignments.",
     "times_and_locations": {
       "ARHA 155 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:50 AM - 01:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "Th",
-            "time": "11:50 AM - 01:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Architectural Anthropology",
-    "course_codes": [
-      "ARCH-202",
-      "ARHA-202"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Gabriel A. Arboleda"
-      ]
-    },
-    "description": "This seminar explores the emerging interdisciplinary field that combines the theory and practice of architecture and anthropology. We compare and contrast these two disciplines canonical methods, their ethical stances, and their primary subject matters (i.e., buildings and people). With that, we reflect upon the challenges of ethnoarchitecture as a new discipline, emphasizing the challenges of carrying out architectural research and/or construction work among people from cultural backgrounds different than the architects own. In general, this course invites critical thinking about the theory and practice of architecture, especially when it confronts issues of difference, including ethno-cultural and social class differences.",
-    "times_and_locations": {
-      "ARCH 202 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:10 PM - 03:30 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "02:10 PM - 03:30 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Sustainable Design: Principles, Practice, Critique",
-    "course_codes": [
-      "ARCH-205",
-      "ARHA-205"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Gabriel A. Arboleda"
-      ]
-    },
-    "description": "(Offered as ARCH 205 and ARHA 205) This theory seminar aims to provide students with a strong basis for a deep engagement with the practice of sustainability in architectural design. The studied material covers both canonical literature on green design and social science-based critical theory. We start by exploring the key tenets of the sustainable design discourse, and how these tenets materialize in practice. Then, we examine sustainable design in relation to issues such as inequality and marginality. As we do this, we locate sustainability within the larger environmental movement, studying in detail some of the main approaches and standards of sustainable design, the attempts to improve this practice over time, and the specific challenges confronting these attempts. In addition to reading discussions, we study our subject through student presentations and written responses, a field trip, and two graphic design exercises.",
-    "times_and_locations": {
-      "ARCH 205 - L/D": {
         "Section 01": [
           {
             "day": "Tu",
@@ -1809,36 +1515,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "Cartographic Cultures: Making Maps, Building Worlds",
-    "course_codes": [
-      "ARCH-232",
-      "ARHA-232"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Dwight A. Carey"
-      ]
-    },
-    "description": "This course traces the history of modern cartography from the integration of indigenous map-making techniques into colonial Latin American land surveys in the sixteenth century to the use of GIS software by militaries and corporations to create detailed images of foreign and domestic territories in the twenty-first century. Along the way, we will study the political and economic impetus that drove governments, militaries, municipalities, and private entities to create renderings of the land on which we live. We will also investigate the technological history of map-making as we consider the extent to which innovations in modern science have influenced the production of maps. This course will challenge the presumption that maps are factual portrayals of physical space. It will also question how divergent forms of culturally based knowledge as well as economic constraints and corporate rivalries have historically influenced map-making and subsequently shaped our understanding of territories near and far. We will think through these issues while investigating a number of major topics in the history of modern cartography: map-making and indigenous expertise in the Americas prior to and during European intervention; colonial cartography in the Americas, Asia, and Africa; the explosion of the map-making industry in eighteenth and nineteenth-century England and France; the mapping of oceans and other remote landscapes during this time; the twentieth-century genre of pictorial maps in the United States; cartography and modern warfare; and artists responses to these histories. Through written assignments and a final creative project, students will build their writing and research skills while gaining knowledge of the methods that scholars employ when reading a wide variety of maps. Moreover, in approaching contemporary debates in the field of cartography, this course will introduce students to landscape studies.",
-    "times_and_locations": {
-      "ARHA 232 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "03:50 PM - 05:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "Th",
-            "time": "03:50 PM - 05:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "2020: Art Can Help",
     "course_codes": [
       "ARHA-233",
@@ -1951,36 +1627,6 @@
             "day": "W",
             "time": "02:10 PM - 04:40 PM",
             "location": "FAYE 1"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Digital Art History",
-    "course_codes": [
-      "ARCH-249",
-      "ARHA-249"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Yael R. Rice"
-      ]
-    },
-    "description": "This course is an introduction to the latest digital tools that art historians and museum curators use to analyze and display works of art, architecture, and the larger built environment, including, but not limited to, 3D modeling, network graphing, and digital mapping and storytelling. We will begin by asking what actually constitutes art historical data and then turn to consider how the digital collection, organization, interpretation, and presentation of this information can inform our understanding of objects, buildings, cities, and landscapes. Among the other topics we will explore are the digital artworks and exhibitions that artists and curators around the globe are currently creating in response to the Covid-19 pandemic, as well as the ethics and practicalities of doing digital art history today. This non-lecture-based course centers hands-on collective learning and is designed for students of all backgrounds. No previous knowledge of the subject is presumed. This course will incorporate synchronous and asynchronous community-building small-group activities, use of computer labs on campus, mapping exercises in town, cutting-edge digital approaches to the study of architecture and objects, and, when possible, visits to local museum collections. Students who are unable to attend synchronous class meetings and/or possess limited access to high-speed bandwidth will be accommodated.",
-    "times_and_locations": {
-      "ARHA 249 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "05:00 PM - 06:20 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "05:00 PM - 06:20 PM",
-            "location": "ONLI ONLI"
           }
         ]
       }
@@ -2562,31 +2208,6 @@
           {
             "day": "Th",
             "time": "03:50 PM - 05:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Chinese Childrearing",
-    "course_codes": [
-      "ANTH-318",
-      "ASLC-318"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Vanessa L. Fong"
-      ]
-    },
-    "description": "This course examines Chinese childrearing, focusing primarily on childrearing in mainland China. We will look at differences as well as similarities between childrearing in Chinese families of different socioeconomic status within China, as well as between childrearing in mainland China and in childrearing in Chinese and non-Chinese families worldwide. We will also look at dominant discourses within and outside of China about the nature of Chinese childrearing and ask about relationships between those discourses and the experiences of Chinese families. Students will work together to conduct original research about childrearing in China, drawing on data from the instructors research projects. Course assignments will be tailored to the interests, skills, and academic background of each student.",
-    "times_and_locations": {
-      "ANTH 318 - L/D": {
-        "Section 01": [
-          {
-            "day": "TBD",
-            "time": "-",
             "location": "ONLI ONLI"
           }
         ]
@@ -3883,119 +3504,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "Biochemistry",
-    "course_codes": [
-      "BCBP-331",
-      "BIOL-331",
-      "CHEM-331"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Anthony C. Bishop",
-        "Mona Wu Orr"
-      ]
-    },
-    "description": "Structure and function of biologically important molecules and their role(s) in life processes. Protein conformation, enzymatic mechanisms and selected metabolic pathways will be analyzed. Additional topics may include: nucleic acid conformation, DNA/protein interactions, signal transduction and transport phenomena. Four classroom hours and four hours of laboratory work per week. Offered jointly by the Departments of Biology and Chemistry.",
-    "times_and_locations": {
-      "BIOL 331 - LEC": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "F",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      },
-      "BIOL 331F - DIS": {
-        "Section 01": [
-          {
-            "day": "F",
-            "time": "12:40 PM - 01:30 PM",
-            "location": "ONLI ONLI"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "F",
-            "time": "12:40 PM - 01:30 PM",
-            "location": "ONLI ONLI"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "F",
-            "time": "02:20 PM - 03:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ],
-        "Section 04": [
-          {
-            "day": "F",
-            "time": "02:20 PM - 03:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      },
-      "BIOL 331L - DIS": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:30 PM - 05:00 PM",
-            "location": "SCCE A231"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "W",
-            "time": "02:10 PM - 05:40 PM",
-            "location": "SCCE A231"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "Th",
-            "time": "01:30 PM - 05:00 PM",
-            "location": "SCCE A231"
-          }
-        ]
-      },
-      "BIOL 331L - LAB": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:30 PM - 05:00 PM",
-            "location": "ONLI ONLI"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "W",
-            "time": "02:10 PM - 05:40 PM",
-            "location": "ONLI ONLI"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "Th",
-            "time": "01:30 PM - 05:00 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "Cell and Molecular Disease Mechanisms",
     "course_codes": [
       "BIOL-340"
@@ -4208,37 +3716,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "Transnational American Studies",
-    "course_codes": [
-      "AMST-130",
-      "BLST-130"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jallicia A. Jolly",
-        "Leah C. Schmalzbauer"
-      ]
-    },
-    "description": "(Offered as AMST 130 and BLST 130) The hustle and flow of bodies, ideas, inequalities and solidarities is core to our increasingly globalized world. This course offers an introduction to the Americas as a transnational space. We will explore the interplay of race, gender, ethnicity, sexuality, and nationality from interdisciplinary perspectives. We will draw examples from the United States, Canada, the Caribbean, and Latin America. Students will learn through a variety of methods including textual analysis, feminist ethnography, archival research, and cultural studies. We will also examine multiple approaches to American Studies such as critical race and ethnic studies, feminist and queer studies, indigenous studies, as well as theories of decolonization and settler colonialism. We will grapple with the complexities of identity and difference, immigration and border control, slavery, colonization, and empire.",
-    "times_and_locations": {
-      "AMST 130 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:30 PM - 02:50 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "Th",
-            "time": "01:30 PM - 02:50 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "Black (on) Earth: Introduction to African American Environmental Literature",
     "course_codes": [
       "BLST-162",
@@ -4359,67 +3836,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "The Colonial City: Architecture, Empire, Resistance",
-    "course_codes": [
-      "ARCH-257",
-      "ARHA-257",
-      "BLST-253"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Dwight A. Carey"
-      ]
-    },
-    "description": "Creole dwellings were first erected by enslaved builders working under Diego Colon on the island of Hispaniola. By the end of the first wave of European expansion in the early nineteenth century, the creole style existed across imperial domains in the Caribbean, North and South America, Africa, the Indian Ocean, and even Asia. We will examine the global diffusion of this architectural typology from its emergence in the Spanish Caribbean to its florescence in British and French India in the eighteenth and nineteenth centuries. In doing so, we will address buildings and towns in former Spanish, French, Dutch, Portuguese, and British colonies worldwide. Some of the urban centers that we will engage include: Kingston, Jamaica; Pondicherry, India; Cape Town, South Africa; Cartagena, Colombia; Saint-Louis, Senegal; and Macau, China. In investigating both creole structures and the cities that harbored such forms, we will think through the social and economic factors that caused buildings and urban areas to display marked continuities despite geographical and imperial distinctions.",
-    "times_and_locations": {
-      "ARHA 257 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "African Art and the Diaspora",
-    "course_codes": [
-      "ARHA-270",
-      "BLST-293"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Rowland O. Abiodun"
-      ]
-    },
-    "description": "The course of study will examine those African cultures and their arts that have survived and shaped the aesthetic, philosophic and religious patterns of African descendants in Brazil, Cuba, Haiti and urban centers in North America. We shall explore the modes of transmission of African artistry to the West and examine the significance of the preservation and transformation of artistic forms from the period of slavery to our own day. Through the use of films, slides and objects, we shall explore the depth and diversity of this vital artistic heritage of Afro-Americans. The course requires students to make virtual visits to museums with important collections of art works by African descendants in the diaspora. If and when possible, in-person visits to museums like the Studio Museum in Harlem are encouraged. There will also be selected video viewings in class to further highlight the creativity, innovation, and change in the works of African descendants in their new environments.",
-    "times_and_locations": {
-      "ARHA 270 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "Research in Black Studies",
     "course_codes": [
       "BLST-300"
@@ -4437,67 +3853,6 @@
           {
             "day": "Tu",
             "time": "01:30 PM - 04:30 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Visual Arts and Orature in Africa",
-    "course_codes": [
-      "ARHA-138",
-      "BLST-313"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Rowland O. Abiodun"
-      ]
-    },
-    "description": "In the traditionally non-literate societies of Africa, verbal and visual arts constitute two systems of communication. The performance of verbal art and the display of visual art are governed by social and cultural rules. We will examine the epistemological process of understanding cultural symbols, of visualizing narratives, or proverbs, and of verbalizing sculptures or designs. Focusing on the Yoruba people of West Africa, the course will attempt to interpret the language of their verbal and visual arts and their interrelations in terms of cultural cosmologies, artistic performances, and historical changes in perception and meaning. We will explore new perspectives in the critical analysis of African verbal and visual arts, and their interdependence as they support each other through mutual references and allusions. In addition to visiting the Mead Art Museum to see African works, students will be required to listen to audio-recordings and engage selected visual images to enhance their understanding of the interrelationship of arts in Africa.",
-    "times_and_locations": {
-      "BLST 313 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Racism and the City",
-    "course_codes": [
-      "SOCI-209",
-      "ARCH-207",
-      "BLST-319"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Utku B. Balaban"
-      ]
-    },
-    "description": "Defying the hopes of many for the future of democracy, cities continue to be the hotbed of racial oppression, exploitation, and injustice in the United States. In this course, we will focus on this connection and discuss the alternatives. The first theme of the course is the intellectual origins of structural racism in urban theory. The redefinition of racism in the early twentieth century as a predominantly urban phenomenon happened at the same time as (if not as a result of) the foundation of urban sociology in the United States that implicitly justifies racial stratification as a natural component of urban ecology. The second theme is the role of U.S. urban planning and policymaking in structural racism. The formation and transformation of urban spaces and institutions such as suburbs, the highway system, the police force, and homeowner associations account for a complex matrix that keeps both the illusion of legal equality and the reality of social inequality intact. The third theme is urban resistance against structural racism. Both well-known and mostly forgotten incidents, such as the protests in the Watts region of Los Angeles or the MOVE bombing in Philadelphia, and the global demonstrations about the death of George Floyd inform us about the actors of urban collective action in the post-WWII context. We will embark on studying the literature concerning social movements to relate these instances to a broader discussion about how urban resistance could both facilitate and contain anti-racist mobilization. Last, we will focus on the urban elements in alternative political, intellectual, and artistic visions and practices such as the African American communal experiences, separatism, and Afrofuturism. In this section, the goal is to develop ideas collectively about anti-racist urban political action and policymaking in the years to come.",
-    "times_and_locations": {
-      "SOCI 209 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:10 PM - 03:30 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "02:10 PM - 03:30 PM",
             "location": "ONLI ONLI"
           }
         ]
@@ -4614,34 +3969,6 @@
           {
             "day": "Th",
             "time": "11:50 AM - 01:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "The Purpose and Politics of Education",
-    "course_codes": [
-      "AMST-352",
-      "SOCI-352",
-      "BLST-351",
-      "HIST-352"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Kristen V. Luschen",
-        "Hilary J. Moss"
-      ]
-    },
-    "description": "Focusing on the United States, this course introduces students to foundational questions and texts central to the history of education and education studies. We will explore the competing goals and priorities Americans have held for primary, secondary and post-secondary education and ask how and why these visions have influenced or failed to influence classrooms, schools, and educational policy. We will pay particular attention to sources of educational stratification; the tensions between the public and private purposes of schooling; and the relationship between schooling and equality. In the first part of the course, students will reflect on how Americans have imagined the purpose of self-education, literacy, public schooling, and the liberal arts. Among the questions we will consider: What do Americans want from public schools? Does education promote liberation? Has a liberal arts education outlived its usefulness? How has the organization of schools and school systems promoted some educational objectives in lieu of others? In the second section of the course, we will concentrate on the politics of schooling. Here, we will pay particular attention to several issues central to understanding educational inequality and its relationship to American politics, culture, and society: localism; state and federal authority; desegregation; and the complicated relationship between schooling and racial, linguistic, class-based, gender, and ethnic hierarchies. Finally, we will explore how competing ideas about the purpose and politics of education manifest themselves in current policy debates about privatization, charters, testing, and school discipline. Throughout the course, students will reflect on both the limits and possibilities of American schools to challenge and reconfigure the social order. Course assignments will consist of a mix of short papers and analytical reading exercises. Students will have the opportunity to participate in the Education Studies Lecture Series, \"Education, Crisis, and Belonging.\" These conversations will explore the possibilities afforded by this contemporary moment of crisis to examine the purposes and promises of education.",
-    "times_and_locations": {
-      "HIST 352 - L/D": {
-        "Section 01": [
-          {
-            "day": "Th",
-            "time": "01:30 PM - 04:15 PM",
             "location": "ONLI ONLI"
           }
         ]
@@ -5025,119 +4352,6 @@
           {
             "day": "Th",
             "time": "02:00 PM - 04:30 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Biochemistry",
-    "course_codes": [
-      "BCBP-331",
-      "BIOL-331",
-      "CHEM-331"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Anthony C. Bishop",
-        "Mona Wu Orr"
-      ]
-    },
-    "description": "Structure and function of biologically important molecules and their role(s) in life processes. Protein conformation, enzymatic mechanisms and selected metabolic pathways will be analyzed. Additional topics may include: nucleic acid conformation, DNA/protein interactions, signal transduction and transport phenomena. Four classroom hours and four hours of laboratory work per week. Offered jointly by the Departments of Biology and Chemistry.",
-    "times_and_locations": {
-      "BIOL 331 - LEC": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "F",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      },
-      "BIOL 331F - DIS": {
-        "Section 01": [
-          {
-            "day": "F",
-            "time": "12:40 PM - 01:30 PM",
-            "location": "ONLI ONLI"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "F",
-            "time": "12:40 PM - 01:30 PM",
-            "location": "ONLI ONLI"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "F",
-            "time": "02:20 PM - 03:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ],
-        "Section 04": [
-          {
-            "day": "F",
-            "time": "02:20 PM - 03:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      },
-      "BIOL 331L - DIS": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:30 PM - 05:00 PM",
-            "location": "SCCE A231"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "W",
-            "time": "02:10 PM - 05:40 PM",
-            "location": "SCCE A231"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "Th",
-            "time": "01:30 PM - 05:00 PM",
-            "location": "SCCE A231"
-          }
-        ]
-      },
-      "BIOL 331L - LAB": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:30 PM - 05:00 PM",
-            "location": "ONLI ONLI"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "W",
-            "time": "02:10 PM - 05:40 PM",
-            "location": "ONLI ONLI"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "Th",
-            "time": "01:30 PM - 05:00 PM",
             "location": "ONLI ONLI"
           }
         ]
@@ -6669,36 +5883,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "Black (on) Earth: Introduction to African American Environmental Literature",
-    "course_codes": [
-      "BLST-162",
-      "ENGL-162"
-    ],
-    "faculty": {
-      "Section 01": [
-        "C. Rhonda Cobham-Sander"
-      ]
-    },
-    "description": "(Offered as ENGL 162 and BLST 162) African and African-descended people have a long-documented and intimate relationship to the natural world as a source of healing, nurture, and wealth. However, for a people who were stripped of their land in colonial Africa, exploited to work the land by European enslavers in the New World, and hung from trees in the American South, and who still have a precarious relationship to water in such places as Flint, Michigan, and post-Maria Puerto Rico, inhabiting the earth is complicated. How might we begin to tell this entangled history? What kinds of stories have Africans and their descendants developed to address their relationship with nature? What does the term environmental justice even mean to and for people of African descent today? In this course, we will encounter a range of texts, including slave narratives, novels, poems, visual art, and performance written by and about Black subjects, to begin to understand how various authors, artists, and activists represent the rich relationship between blackness and the natural world. Readings may include works by Olaudah Equiano, W. E. B Du Bois, Ken Saro-Wiwa, Zora Neale Hurston, Derek Walcott, Jamaica Kincaid, Yvonne Adhiambo Owuor, T. Dungy, Britt Rusert, Kimberly N. Ruffin, among others.",
-    "times_and_locations": {
-      "ENGL 162 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "Film and Writing",
     "course_codes": [
       "ENGL-180",
@@ -7019,38 +6203,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "Black Feminist Literary Traditions",
-    "course_codes": [
-      "BLST-345",
-      "ENGL-276",
-      "FAMS-379",
-      "SWAG-208"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Aneeka A. Henderson"
-      ]
-    },
-    "description": "Through a close reading of texts by African American authors, we will critically examine the characterization of female protagonists, with a specific focus on how writers negotiate literary forms alongside race, gender, sexuality, and class in their work. Coupled with our explication of poems, short stories, novels, and literary criticism, we will explore the stakes of adaptation in visual culture. Students will analyze the film and television adaptations of twentieth-century fiction. Authors will include Toni Morrison, Lorraine Hansberry, Alice Walker, and Gloria Naylor. Expectations include three writing projects, a group presentation, and various in-class assignments. This course fulfills a requirement for the Five College Reproductive Health, Rights and Justice (RHRJ) certificate.",
-    "times_and_locations": {
-      "SWAG 208 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:50 AM - 01:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "Th",
-            "time": "11:50 AM - 01:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "Introduction to Film Studies: The History of American Cinema, 1895-1960",
     "course_codes": [
       "ENGL-287",
@@ -7109,7 +6261,7 @@
         "Lawrence R. Douglas"
       ]
     },
-    "description": "Interpretation lies at the center of legal and literary activity. Both law and literature are in the business of making sense of texts—statutes, constitutions, poems or stories. Both disciplines confront similar questions regarding the nature of interpretive practice: Should interpretation always be directed to recovering the intent of the author? If we abandon intentionalism as a theory of textual meaning, how do we judge the \"excellence\" of our interpretations? How can the critic or judge continue to claim to read in an \"authoritative\" manner in the face of interpretive plurality? In the last few years, a remarkable dialogue has burgeoned between law and literature as both disciplines have grappled with life in a world in which \"there are no facts, only interpretations.\" This seminar will examine contemporary theories of interpretation as they inform both legal and literary understandings. Readings will include works of literature (Hemingway, Kafka, Woolf) and court cases, as well as contributions by theorists of interpretation such as Spinoza, Dilthey, Freud, Geertz, Kermode, Dworkin, and Sontag.",
+    "description": "Interpretation lies at the center of legal and literary activity. Both law and literature are in the business of making sense of texts\u2014statutes, constitutions, poems or stories. Both disciplines confront similar questions regarding the nature of interpretive practice: Should interpretation always be directed to recovering the intent of the author? If we abandon intentionalism as a theory of textual meaning, how do we judge the \"excellence\" of our interpretations? How can the critic or judge continue to claim to read in an \"authoritative\" manner in the face of interpretive plurality? In the last few years, a remarkable dialogue has burgeoned between law and literature as both disciplines have grappled with life in a world in which \"there are no facts, only interpretations.\" This seminar will examine contemporary theories of interpretation as they inform both legal and literary understandings. Readings will include works of literature (Hemingway, Kafka, Woolf) and court cases, as well as contributions by theorists of interpretation such as Spinoza, Dilthey, Freud, Geertz, Kermode, Dworkin, and Sontag.",
     "times_and_locations": {
       "LJST 341 - L/D": {
         "Section 01": [
@@ -7393,41 +6545,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "Ecology",
-    "course_codes": [
-      "BIOL-230",
-      "ENST-210"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ethan J. Temeles"
-      ]
-    },
-    "description": "A study of the relationships of plants and animals (including humans) to each other and to their environment. We'll start by considering the decisions an individual makes in its daily life concerning its use of resources, such as what to eat and where to live, and whether to defend such resources. We'll then move on to populations of individuals, and investigate species population growth, limits to population growth, and why some species are so successful as to become pests whereas others are on the road to extinction. The next level will address communities, and how interactions among populations, such as competition, predation, parasitism, and mutualism, affect the organization and diversity of species within communities. The final stage of the course will focus on ecosystems, and the effects of humans and other organisms on population, community, and global stability. Three hours of lecture per week.",
-    "times_and_locations": {
-      "BIOL 230 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "10:10 AM - 11:00 AM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "10:10 AM - 11:00 AM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "F",
-            "time": "10:10 AM - 11:00 AM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "Unequal Footprints on the Earth: Understanding the Social Drivers of Ecological Crises and Environmental Inequality",
     "course_codes": [
       "SOCI-226",
@@ -7587,45 +6704,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "Arthurian Literature",
-    "course_codes": [
-      "ENGL-117",
-      "EUST-117"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ingrid L. Nelson"
-      ]
-    },
-    "description": "(Offered as ENGL 117 and EUST 117) [Before 1800] Knights, monsters, quests, and true love: these are the things we associate with King Arthur and tales of his court. Why has Arthurian literature proved so enchanting to centuries of poets, novelists, and recently, filmmakers? In this introductory English course, we will read and watch Arthurian legends from Chaucer to Monty Python, examining the ways in which they have been represented in different eras. Beginning with the historical foundations of the King Arthur legend, we will examine how it blossomed and took form in later eras. Our focus will be on close literary and visual analysis of British, American, and French (in translation) versions of these legends. We will also discuss what cultural forces lie behind the popularity of Arthurian legend in certain eras: later medieval England and France; the Victorian era; and twentieth-century England and America. There will be frequent writing assignments and presentations, as well as a final creative project.",
-    "times_and_locations": {
-      "ENGL 117 - TUT": {
-        "Section 01": [
-          {
-            "day": "TBD",
-            "time": "-",
-            "location": "MAQT 002"
-          }
-        ]
-      },
-      "ENGL 117 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:30 PM - 02:50 PM",
-            "location": "WEBS 217"
-          },
-          {
-            "day": "Th",
-            "time": "01:30 PM - 02:50 PM",
-            "location": "WEBS 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "Renaissance to Revolution: Early Modern European Art and Architecture",
     "course_codes": [
       "ARCH-135",
@@ -7691,7 +6769,7 @@
         "Ronald C. Rosbottom"
       ]
     },
-    "description": "This course is designed to introduce students to the impact that World War II (1939-1945) had and continues to have on the society and culture of several European nations. As the last of the generation that lived during the war passes on, their grandchildren persist in raising questions about the reasons and effects of this political cataclysm. During the war, and afterwards with more or less intensity, writers and filmmakers made and have made attempts to analyze and represent the memories, the guilt, and the false histories that the war left behind in every involved nation. The course will examine the ethics of historical memory, the sincerity of representation, the clever use of history for political purposes. It will also probe and analyze persistent myths of the war as well as discover stories and facts that have been ignored or forgotten. Finally, the course will look at alternative scenarios, that is, “what if” narratives. Readings might include works by Camus, The Plague, Fallada, Every Man is Alone, Modiano, Dora Bruder, Junger, On the Marble Cliffs, Semprun, The Long Journey, De Gaulle's and Churchill's memoirs, Nemirovsky, La Suite francaise, and Levi, The Periodic Table. Films might include Rossellini's Rome: Open City and Germany: Year Zero, Bresson's Pickpocket, Holland's Europa, Europa, Clouzot's Le Corbeau, Reed's The Third Man, Wyler, Mrs. Miniver, and Peterson, Das Boot. The class will study how nations too have attempted to make sense of this hecatomb, seeking explanation, expiation, and often excuses. We will also study how the Second World War's legacy still affects contemporary European culture and politics.",
+    "description": "This course is designed to introduce students to the impact that World War II (1939-1945) had and continues to have on the society and culture of several European nations. As the last of the generation that lived during the war passes on, their grandchildren persist in raising questions about the reasons and effects of this political cataclysm. During the war, and afterwards with more or less intensity, writers and filmmakers made and have made attempts to analyze and represent the memories, the guilt, and the false histories that the war left behind in every involved nation. The course will examine the ethics of historical memory, the sincerity of representation, the clever use of history for political purposes. It will also probe and analyze persistent myths of the war as well as discover stories and facts that have been ignored or forgotten. Finally, the course will look at alternative scenarios, that is, \u201cwhat if\u201d narratives. Readings might include works by Camus, The Plague, Fallada, Every Man is Alone, Modiano, Dora Bruder, Junger, On the Marble Cliffs, Semprun, The Long Journey, De Gaulle's and Churchill's memoirs, Nemirovsky, La Suite francaise, and Levi, The Periodic Table. Films might include Rossellini's Rome: Open City and Germany: Year Zero, Bresson's Pickpocket, Holland's Europa, Europa, Clouzot's Le Corbeau, Reed's The Third Man, Wyler, Mrs. Miniver, and Peterson, Das Boot. The class will study how nations too have attempted to make sense of this hecatomb, seeking explanation, expiation, and often excuses. We will also study how the Second World War's legacy still affects contemporary European culture and politics.",
     "times_and_locations": {
       "EUST 202 - L/D": {
         "Section 01": [
@@ -7738,37 +6816,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "Witches, Vampires and Other Monsters",
-    "course_codes": [
-      "ARHA-385",
-      "EUST-385",
-      "SWAG-310"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Natasha Staller"
-      ]
-    },
-    "description": "Our course will explore how evil was imagined, over cultures, centuries and disciplines. With the greatest possible historical and cultural specificity, we will investigate an array of monstrous creatures and plagues -- their terrifying powers, the explanations for why they came to be, and the strategies for how they could be purged -- as we attempt to articulate the kindred qualities they shared. We will study centuries-old witch burning manuals, and note the striking degree to which dangerous tropes -- about women, about pestilence, about dangerous sexuality, and about differences of all kinds -- have continued to our day. Among the artists to be considered are Velazquez, Goya, Picasso, Dali, Bunuel, Dreyer, Wilder, Almodovar, and the community who made the AIDS Quilt. In addition to vibrant discussions, there will be weekly written assignments to deepen students' understanding of the material, as well as to develop the beauty of their writing, the acuity of their sight, their synthetic and analytical powers. There will be frequent one-on-one meetings, and constantly changing mini-groups, as we learn and explore together. This course fulfills a requirement for the Five College Reproductive Health, Rights and Justice (RHRJ) certificate.",
-    "times_and_locations": {
-      "ARHA 385 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:30 PM - 02:50 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "Th",
-            "time": "01:30 PM - 02:50 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "Antisemitism",
     "course_codes": [
       "EUST-420"
@@ -7790,36 +6837,6 @@
           {
             "day": "Th",
             "time": "11:50 AM - 01:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Film and Writing",
-    "course_codes": [
-      "ENGL-180",
-      "FAMS-110"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Amelie E. Hastie"
-      ]
-    },
-    "description": "A first course in reading films and writing about them. A varied selection of films for study and criticism, partly to illustrate the main elements of film language and partly to pose challenging texts for reading and writing. Frequent short papers.",
-    "times_and_locations": {
-      "ENGL 180 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:10 AM - 11:30 AM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "Th",
-            "time": "10:10 AM - 11:30 AM",
             "location": "ONLI ONLI"
           }
         ]
@@ -7964,36 +6981,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "Japan on Screen",
-    "course_codes": [
-      "ASLC-234",
-      "FAMS-320"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Timothy J. Van Compernolle"
-      ]
-    },
-    "description": "This course places equal emphasis on the two key terms of its title, Japan and screen. Is the concept of national cinema useful in the age of globalization? What is the place of cinema in a history of screen culture in Japan? This course aspires to rethink the idea of Japanese cinema while surveying the history of cinema in Japan, from early efforts to disentangle it from fairground spectacles and the theater at the turn of the last century, through the golden age of studio cinema in the 1950s, to the place of film in the contemporary media ecology. This course will investigate the Japanese film as a narrative art, as a formal construct, and as a participant in larger aesthetic, social, and even political contexts. This course includes the major genres of Japanese film, influential schools and movements, and major directors. Additionally, students will learn and get extensive practice using the vocabulary of the discipline of film studies.",
-    "times_and_locations": {
-      "ASLC 234 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:30 PM - 02:50 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "Th",
-            "time": "01:30 PM - 02:50 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "Performance Studio",
     "course_codes": [
       "FAMS-345",
@@ -8019,38 +7006,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "Black Feminist Literary Traditions",
-    "course_codes": [
-      "BLST-345",
-      "ENGL-276",
-      "FAMS-379",
-      "SWAG-208"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Aneeka A. Henderson"
-      ]
-    },
-    "description": "Through a close reading of texts by African American authors, we will critically examine the characterization of female protagonists, with a specific focus on how writers negotiate literary forms alongside race, gender, sexuality, and class in their work. Coupled with our explication of poems, short stories, novels, and literary criticism, we will explore the stakes of adaptation in visual culture. Students will analyze the film and television adaptations of twentieth-century fiction. Authors will include Toni Morrison, Lorraine Hansberry, Alice Walker, and Gloria Naylor. Expectations include three writing projects, a group presentation, and various in-class assignments. This course fulfills a requirement for the Five College Reproductive Health, Rights and Justice (RHRJ) certificate.",
-    "times_and_locations": {
-      "SWAG 208 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:50 AM - 01:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "Th",
-            "time": "11:50 AM - 01:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "\"It was the '70s\": US Film, History, and the Cultural Imagination",
     "course_codes": [
       "ENGL-484",
@@ -8068,36 +7023,6 @@
           {
             "day": "W",
             "time": "02:10 PM - 04:55 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Fictional Narrative Video Production",
-    "course_codes": [
-      "ARHA-330",
-      "FAMS-443"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Elliot T. Montague"
-      ]
-    },
-    "description": "Intended for advanced film/video production students, this course will explore fictional narrative filmmaking through a rigorous script-to-screen process. Students will write, shoot and edit a short (8-minute) fictional narrative film either in small groups or individually. In addition to weekly online screenings of short and feature narrative films, the class will consist of weekly Zoom sessions, including lectures on advanced narrative filmmaking techniques, film discussions, script readings, and critiques of footage and various cuts.",
-    "times_and_locations": {
-      "ARHA 330 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:30 PM - 04:30 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "Th",
-            "time": "01:30 PM - 04:30 PM",
             "location": "ONLI ONLI"
           }
         ]
@@ -8140,7 +7065,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "The Soviet Experiment",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-101"
+    ],
     "faculty": {
       "Section 01": [
         "Catherine A. Ciepiela"
@@ -8176,7 +7103,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "Romanticism and the Enlightenment",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-102"
+    ],
     "faculty": {
       "Section 01": [
         "Ute Brandes"
@@ -8208,7 +7137,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "Fake News",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-103"
+    ],
     "faculty": {
       "Section 01": [
         "Amalia V. Culiuc"
@@ -8235,7 +7166,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "Authority, Obedience and The Rule of Law",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-104"
+    ],
     "faculty": {
       "Section 01": [
         "Lawrence R. Douglas"
@@ -8262,7 +7195,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "Reading Asian American",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-105"
+    ],
     "faculty": {
       "Section 01": [
         "Robert T. Hayashi"
@@ -8289,7 +7224,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "Language Crossing and Living in Translation",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-106"
+    ],
     "faculty": {
       "Section 01": [
         "Benigno R. Sanchez-Eppler"
@@ -8325,7 +7262,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "Secrets and Lies",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-107"
+    ],
     "faculty": {
       "Section 01": [
         "Austin D. Sarat"
@@ -8352,7 +7291,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "The Value of Nature",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-108"
+    ],
     "faculty": {
       "Section 01": [
         "Rachel A. Levin"
@@ -8379,7 +7320,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "\"Finding Your Roots\": Narratives of Self and Community",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-109"
+    ],
     "faculty": {
       "Section 01": [
         "Rick A. Lopez"
@@ -8415,7 +7358,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "Encounters with Nature",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-110"
+    ],
     "faculty": {
       "Section 01": [
         "Nicola Courtright"
@@ -8451,7 +7396,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "Giving",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-111"
+    ],
     "faculty": {
       "Section 01": [
         "Molly Mead"
@@ -8478,7 +7425,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "Beginnings",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-112"
+    ],
     "faculty": {
       "Section 01": [
         "Hannah E. Hunter-Parker"
@@ -8550,7 +7499,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "The Nuclear Age",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-113"
+    ],
     "faculty": {
       "Section 02": [
         "Ellen R. Boucher"
@@ -8592,7 +7543,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "Thinking Through Improvisation",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-114"
+    ],
     "faculty": {
       "Section 01": [
         "Darryl Harper"
@@ -8619,7 +7572,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "Goya and His World",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-115"
+    ],
     "faculty": {
       "Section 01": [
         "Natasha Staller"
@@ -8646,7 +7601,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "Thought Experiments in Physics",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-116"
+    ],
     "faculty": {
       "Section 01": [
         "Jagu Jagannathan"
@@ -8673,7 +7630,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "Evolution and Intellectual Revolution",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-117"
+    ],
     "faculty": {
       "Section 01": [
         "David S. Jones",
@@ -8735,7 +7694,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "Transformative Ideas",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-119"
+    ],
     "faculty": {
       "Section 01": [
         "Thomas L. Dumm"
@@ -8762,7 +7723,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "Africa and the Globalization of Football (Soccer)",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-120"
+    ],
     "faculty": {
       "Section 01": [
         "Olufemi O. Vaughan"
@@ -8789,7 +7752,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "Pariscape: Imagining Paris in the Twentieth Century",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-122"
+    ],
     "faculty": {
       "Section 01": [
         "Ronald C. Rosbottom"
@@ -8816,7 +7781,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "Antiracism",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-123"
+    ],
     "faculty": {
       "Section 01": [
         "Leah C. Schmalzbauer"
@@ -8843,7 +7810,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "Telling Stories",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-124"
+    ],
     "faculty": {
       "Section 01": [
         "Molly Mead"
@@ -8870,7 +7839,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "Race, Difference, and the American Imagination",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-125"
+    ],
     "faculty": {
       "Section 01": [
         "Khary O. Polk"
@@ -8897,7 +7868,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "Polemical Women Writers of the Premodern Era",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-126"
+    ],
     "faculty": {
       "Section 01": [
         "Amanda K. Henrichs"
@@ -8924,7 +7897,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "Populism",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-127"
+    ],
     "faculty": {
       "Section 01": [
         "Pavel Machala"
@@ -9794,36 +8769,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "Race, Empire, and Transnationalism: Chinese Diasporic Communities in the U.S. and the World",
-    "course_codes": [
-      "ASLC-114",
-      "HIST-114"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Richard T. Chu"
-      ]
-    },
-    "description": "How does a study of the Chinese diasporic communities in Southeast Asia, the Caribbean, the United States, and other parts of the world help us understand the questions of ethnic identity formation, construction, and negotiation? More specifically, how does the study of their history and experiences force us to rethink the concepts of China and Chinese-ness? How did scholars, officials, and travelers construct the categories of China and being Chinese? These are the main questions that we seek to answer in this introductory course to the history of the Chinese diaspora. We will begin by looking into the early history of Chinese migration (circa 1500 to 1800) to particular geographical areas in the world, including the United States. The rest of the course will look into the history of selected diasporic communities from the nineteenth to the twenty-first centuries. All throughout the course we will also examine how these diasporic people and their families manipulated and continue to manipulate attempts by dominant groups to control their identities, bodies, and resources, and how their lives challenge the meanings of China and Chinese-ness. Other questions to be discussed during the course are: What caused people from China to move, and to where? What forms of discrimination and control did they experience? How do their experiences and histories deepen our understanding of race, empire, and transnationalism? Themes to be discussed throughout the course include imperialism, colonialism, race, ethnicity, gender, nationalism, transnationalism, orientalism, hegemony, and globalization.",
-    "times_and_locations": {
-      "HIST 114 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:10 AM - 11:30 AM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "Th",
-            "time": "10:10 AM - 11:30 AM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "Medieval Europe (1000-1500)",
     "course_codes": [
       "HIST-128"
@@ -9862,7 +8807,7 @@
         "Francis G. Couvares"
       ]
     },
-    "description": "The course traces United States political, social, and cultural history from 1900 to the present. Among the topics covered are the rise of the modern corporation, class conflict and the Progressive movement; immigration, ethnic pluralism, and the rise of mass culture; the Great Depression and the New Deal; World War II, the Cold War, and McCarthyism; the civil rights, women’s and environmental movements, the New Left, the New Right, and the continuing inequalities of race and class. Films and videos will regularly supplement class readings.",
+    "description": "The course traces United States political, social, and cultural history from 1900 to the present. Among the topics covered are the rise of the modern corporation, class conflict and the Progressive movement; immigration, ethnic pluralism, and the rise of mass culture; the Great Depression and the New Deal; World War II, the Cold War, and McCarthyism; the civil rights, women\u2019s and environmental movements, the New Left, the New Right, and the continuing inequalities of race and class. Films and videos will regularly supplement class readings.",
     "times_and_locations": {
       "HIST 155 - L/D": {
         "Section 01": [
@@ -9935,67 +8880,6 @@
           {
             "day": "W",
             "time": "02:10 PM - 04:55 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "The Virgin Mary: Image, Cult, Syncretism (ca. 400-1700)",
-    "course_codes": [
-      "ARHA-229",
-      "HIST-229",
-      "RELI-229"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jutta G. Sperling"
-      ]
-    },
-    "description": "When, in 431, the Council of Ephesus declared the Virgin Mary to be Theotokos or God-Bearer, she had already been venerated in Egypt since the third century as a re-instantiation of Isis. The syncretism of her cult explains her ubiquitous popularity in medieval Byzantium and the Latin West, but also in early Islamic Syria and colonial Latin America. Her frequent depiction on moveable wooden panels (icons) and mosaics accompanied her early rise to liturgical prominence. By 1200, she rivaled Jesus Christ in religious importance, not only through her role as intercessor, but also as dispenser of divine grace in the form of breastmilk. She was the most active miracle-working saint in all of Christianity. Her frequent depiction on icons, altarpieces and devotional panels accompanies and, in part, explains the development of figurative art in the West. In colonial America, the introduction of her cult ended prior religious forms of expression, but also helped them to partially survive in a new context. In this seminar, students will produce a 15-page research paper based on a careful analysis of textual and visual sources as well as pertinent scholarship.",
-    "times_and_locations": {
-      "HIST 229 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "03:50 PM - 05:10 PM",
-            "location": "CHAP 203"
-          },
-          {
-            "day": "Th",
-            "time": "03:50 PM - 05:10 PM",
-            "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Race and American Capitalism: From Slavery to Ferguson",
-    "course_codes": [
-      "BLST-248",
-      "HIST-246"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Alec F. Hickmott"
-      ]
-    },
-    "description": "An unconventional history of capitalism, this course explores the various ways African Americans have experienced and responded to shifts in the organization of the American economy. Beginning with the middle passage and creation of plantation slavery in the New World, we will explore the commodification of African Americans' labor, and the ways in which that labor became a cornerstone of capital accumulation, both globally and in the United States. We continue through the revolutions of emancipation, the rise of Jim Crow and the making of urban America, to our present day reality of deeply rooted, and racialized, economic inequality. More than a history of exploitation, however, we will address the various ways in which African Americans chose to manage both the challenges and possibilities of American capitalist development. How, for instance, did black ownership of real estate in the segregated South shape Jim Crow governance? To what extent has black business contributed toward struggles for political and social equality? Finally, we will assess the numerous black critics, including intellectuals, activists and working African Americans, of the American political economy. How have such men and women called attention to the ways race and class have combined to shape both black lives and black political subjectivity?",
-    "times_and_locations": {
-      "BLST 248 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
             "location": "ONLI ONLI"
           }
         ]
@@ -10105,34 +8989,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "The Purpose and Politics of Education",
-    "course_codes": [
-      "AMST-352",
-      "SOCI-352",
-      "BLST-351",
-      "HIST-352"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Kristen V. Luschen",
-        "Hilary J. Moss"
-      ]
-    },
-    "description": "Focusing on the United States, this course introduces students to foundational questions and texts central to the history of education and education studies. We will explore the competing goals and priorities Americans have held for primary, secondary and post-secondary education and ask how and why these visions have influenced or failed to influence classrooms, schools, and educational policy. We will pay particular attention to sources of educational stratification; the tensions between the public and private purposes of schooling; and the relationship between schooling and equality. In the first part of the course, students will reflect on how Americans have imagined the purpose of self-education, literacy, public schooling, and the liberal arts. Among the questions we will consider: What do Americans want from public schools? Does education promote liberation? Has a liberal arts education outlived its usefulness? How has the organization of schools and school systems promoted some educational objectives in lieu of others? In the second section of the course, we will concentrate on the politics of schooling. Here, we will pay particular attention to several issues central to understanding educational inequality and its relationship to American politics, culture, and society: localism; state and federal authority; desegregation; and the complicated relationship between schooling and racial, linguistic, class-based, gender, and ethnic hierarchies. Finally, we will explore how competing ideas about the purpose and politics of education manifest themselves in current policy debates about privatization, charters, testing, and school discipline. Throughout the course, students will reflect on both the limits and possibilities of American schools to challenge and reconfigure the social order. Course assignments will consist of a mix of short papers and analytical reading exercises. Students will have the opportunity to participate in the Education Studies Lecture Series, \"Education, Crisis, and Belonging.\" These conversations will explore the possibilities afforded by this contemporary moment of crisis to examine the purposes and promises of education.",
-    "times_and_locations": {
-      "HIST 352 - L/D": {
-        "Section 01": [
-          {
-            "day": "Th",
-            "time": "01:30 PM - 04:15 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "Japan's Empire in Asia, 1868&ndash;1945",
     "course_codes": [
       "ASLC-370",
@@ -10155,32 +9011,6 @@
           {
             "day": "F",
             "time": "12:30 PM - 01:50 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Women of Color and the Emergence of U.S. Third World Feminist Left",
-    "course_codes": [
-      "AMST-380",
-      "HIST-380",
-      "SWAG-380"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Lili M. Kim"
-      ]
-    },
-    "description": "This research seminar investigates the history of Asian American women and other women of color solidarities and activisms in the emergence of the U.S. Third World Feminist Left during the 1960s and 1970s. This movement saw ending imperialism and colonialism as a necessary part of their fight against racism, sexism, and capitalism in the United States and beyond and drew inspiration from Third World feminism and decolonization activities. Third World feminism posits that women's activisms in the Third World do not originate from the ideologies of the First World and specifically centers Third World women's radicalism in their local/national contexts and struggles. Organizations such as the Third World Womens Alliance (TWWA) in New York City, which grew out of the Student Nonviolent Coordinating Committee (SNCC), brought together Black, Puerto Rican, and Asian American women in the socialist fight to end imperialism, sexism, capitalism, and racism. The images of revolutionary Third World women engaged in anti-colonial struggles in Asia, Africa, Latin America, and the Middle East, especially during the Vietnam War era, inspired U.S.-based feminists of color and helped them embrace leftist Third World solidarity politics. Utilizing the rich archival sources found in the Sophia Smith Collection (TWWA records, Miriam Ching Yoon Louie papers, National Asian Pacific American Women's Forum papers) as well as the Triple Jeopardy newspapers found in the Marshall I. Bloom papers at the Amherst College Archives and Special Collections, students will have an opportunity to work collaboratively to produce a substantial research project.",
-    "times_and_locations": {
-      "HIST 380 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:30 PM - 04:15 PM",
             "location": "ONLI ONLI"
           }
         ]
@@ -10260,31 +9090,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "The Long Civil Rights Movement",
-    "course_codes": [
-      "BLST-331",
-      "HIST-455"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Alec F. Hickmott"
-      ]
-    },
-    "description": "This course will explore the temporal, ideological and cultural dimensions of the American Civil Rights Movement. Following 1954s Brown vs Board of Education decision, a diverse social movement of students, preachers, working people, activists and intellectuals challengedand eventually dismantledJim Crow segregation in the American South. How did this happen? To answer this question, we will examine the origins of the movement, its institutional dimensions, its key figures, and its intellectual underpinnings. In addition, this course will trace the afterlife of the movement, assessing its national and global reverberations, as well as its relationship to the Black Power movement. As a research seminar, this course will culminate in the production of a 25-page research paper based on an analysis of primary sources related to the movement. This course will involve work in a range of online archival sources, making it accessible to those students learning remotely.",
-    "times_and_locations": {
-      "HIST 455 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "04:30 PM - 07:15 PM",
-            "location": "SCCE A131"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "The History and Memory of the Asia-Pacific War",
     "course_codes": [
       "ASLC-477",
@@ -10305,28 +9110,6 @@
             "location": "ONLI ONLI"
           }
         ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Topics in Jewish History",
-    "course_codes": [
-      "HIST-390",
-      "HIST-490"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Adi Gordon"
-      ]
-    },
-    "description": "",
-    "times_and_locations": {
-      "HIST 390": {
-        "Section 01": []
-      },
-      "HIST 490": {
-        "Section 02": []
       }
     }
   },
@@ -10365,76 +9148,6 @@
     "description": "In this course students will become familiar with the major debates that have animated Latinx and Latin American Studies, addressing a wide range of issues from the Conquest to the present. Each week students will focus on specific questions such as: Does Latin America have a common culture? Is Latin America part of the Western world? Is Latinx a race or an ethnicity? Is U.S. Latinx identity rooted in Latin America or the United States? Are Latin American nations post-colonial? Was the modern concept of race invented in the Caribbean at the time of the Conquest? The opposing viewpoints around such questions will provide the main focus of the reading assignments, which will average two or three articles per week. In the first four weeks, students will learn a methodology for analyzing, contextualizing, and making arguments that they will apply in developing their own positions in the specific controversies that will make up the rest of the course. The class will have a mix of synchronous live class meetings and some asynchronous components via Moodle (discussion threads, recorded lecture materials and presentations, etc). The class will also feature some live online screenings of relevant documentaries and films to encourage a community of viewership. While there will be some asynchronous work, a greater emphasis will be on synchronous class meetings and discussions. This class will require several short oral reading presentations, one longer formal oral presentation, and an analytical essay of approximately 7-10 pages. For the final projects, students will have latitude to prepare something more free-form, artistic, literary, or visual if it is desired and always in consultation with the professor.",
     "times_and_locations": {
       "LLAS 200 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "The Sanctuary Movement: Religion, Activism, and Social Contestation",
-    "course_codes": [
-      "AMST-234",
-      "LLAS-234",
-      "RELI-234"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Lloyd D. Barba"
-      ]
-    },
-    "description": "From sanctuary cities and states to sanctuary campuses and churches, declarations of sanctuary sites have swept the nation in recent years. The U.S. Sanctuary Movement, established in 1982 to harbor Central American asylum seekers fleeing civil wars, has today assumed broader social implementations in the New Sanctuary Movement. Beginning with an examination of antecedents to the U.S. Sanctuary Movement in global contexts, this course will offer students an in-depth study of the Sanctuary Movement since the 1980s with special attention to the New Sanctuary Movement which is active today throughout the country. Engagement with sanctuary workers outside the Amherst area may occasion one or two field trips, depending on availability.",
-    "times_and_locations": {
-      "RELI 234 - TUT": {
-        "Section 01": [
-          {
-            "day": "TBD",
-            "time": "-",
-            "location": "VALT 002"
-          }
-        ]
-      },
-      "RELI 234 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:10 PM - 03:30 PM",
-            "location": "CHAP 201"
-          },
-          {
-            "day": "W",
-            "time": "02:10 PM - 03:30 PM",
-            "location": "CHAP 201"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Latin America and the United States",
-    "course_codes": [
-      "HIST-262",
-      "LLAS-262"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Russell Lohse"
-      ]
-    },
-    "description": "In this course, students will gain an understanding of major events and themes in the history of United States foreign policy toward Latin America from colonial times to the present. As important, they will think and write critically about the contentious history of U.S.-Latin American relations. Just a few of the many topics to be addressed are the Monroe Doctrine, the U.S. invasion of Mexico, the construction of the Panama Canal, the Bay of Pigs fiasco, and the Iran-Contra Scandal.",
-    "times_and_locations": {
-      "HIST 262 - L/D": {
         "Section 01": [
           {
             "day": "M",
@@ -10499,36 +9212,6 @@
             "day": "TBD",
             "time": "-",
             "location": "VALT 002"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Indigenous Histories of Latin America",
-    "course_codes": [
-      "HIST-346",
-      "LLAS-346"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Russell Lohse"
-      ]
-    },
-    "description": "In this course, students will explore the cultures and civilizations of native peoples of Latin America from ancient times to the present. Examining the Caribbean, Mesoamerican, Andean, and Amazonian regions, we will consider questions such as: What were the earliest cultures of the Americas like? How did civilizations such as the Maya, the Aztecs, and the Inca confront the unprecedented challenges of the conquest? How did indigenous peoples resist and forcibly adapt to centuries of Spanish and Portuguese colonialism? What roles did native peoples play in the new nations of the nineteenth century? How have indigenous peoples pursued their own struggles for citizenship in the face of threats to their autonomy and the environment? In a series of short writing assignments and a longer paper based on original research, students will explore secondary historiographies, analyze diverse primary sources, and discuss different historical methods in the study of the indigenous past and present.",
-    "times_and_locations": {
-      "HIST 346 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:10 PM - 03:30 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "02:10 PM - 03:30 PM",
-            "location": "ONLI ONLI"
           }
         ]
       }
@@ -10692,31 +9375,6 @@
           {
             "day": "W",
             "time": "02:10 PM - 04:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Interpretation Law & Lit",
-    "course_codes": [
-      "ENGL-310",
-      "LJST-341"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Lawrence R. Douglas"
-      ]
-    },
-    "description": "Interpretation lies at the center of legal and literary activity. Both law and literature are in the business of making sense of texts—statutes, constitutions, poems or stories. Both disciplines confront similar questions regarding the nature of interpretive practice: Should interpretation always be directed to recovering the intent of the author? If we abandon intentionalism as a theory of textual meaning, how do we judge the \"excellence\" of our interpretations? How can the critic or judge continue to claim to read in an \"authoritative\" manner in the face of interpretive plurality? In the last few years, a remarkable dialogue has burgeoned between law and literature as both disciplines have grappled with life in a world in which \"there are no facts, only interpretations.\" This seminar will examine contemporary theories of interpretation as they inform both legal and literary understandings. Readings will include works of literature (Hemingway, Kafka, Woolf) and court cases, as well as contributions by theorists of interpretation such as Spinoza, Dilthey, Freud, Geertz, Kermode, Dworkin, and Sontag.",
-    "times_and_locations": {
-      "LJST 341 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 04:45 PM",
             "location": "ONLI ONLI"
           }
         ]
@@ -11653,83 +10311,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "Introduction to Statistics via Modeling",
-    "course_codes": [
-      "MATH-135",
-      "STAT-135"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Brittney E. Bailey",
-        "Ryan P. McShane (Sections 03 and 04)"
-      ]
-    },
-    "description": "(Offered as STAT 135 and MATH 135) This course is an introductory statistics course that uses modeling as a unifying framework. The course provides a basic foundation in statistics with a major emphasis on constructing models from data. Students learn important concepts of statistics by mastering powerful and relatively advanced statistical techniques using computational tools. Topics include descriptive and inferential statistics, visualization, probability, study design, and multiple regression. No prior experience with statistical software is expected.",
-    "times_and_locations": {
-      "STAT 135 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "10:10 AM - 11:00 AM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "10:10 AM - 11:00 AM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "F",
-            "time": "10:10 AM - 11:00 AM",
-            "location": "ONLI ONLI"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "M",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "F",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "Tu",
-            "time": "01:30 PM - 02:50",
-            "location": "PM"
-          },
-          {
-            "day": "Th",
-            "time": "01:30 PM - 02:50",
-            "location": "PM"
-          }
-        ],
-        "Section 04": [
-          {
-            "day": "Tu",
-            "time": "03:50 PM - 05:10",
-            "location": "PM"
-          },
-          {
-            "day": "Th",
-            "time": "03:50 PM - 05:10",
-            "location": "PM"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "Intermediate Statistics",
     "course_codes": [
       "STAT-230"
@@ -11902,58 +10483,6 @@
             "day": "F",
             "time": "03:50 PM - 04:40 PM",
             "location": "SMUD 206"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Probability",
-    "course_codes": [
-      "MATH-360",
-      "STAT-360"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Kevin Donges"
-      ]
-    },
-    "description": "(Offered as STAT 360 and MATH 360) This course explores the nature of probability and its use in modeling real world phenomena. There are two explicit complementary goals: to explore probability theory and its use in applied settings, and to learn parallel analytic and empirical problem-solving skills. The course begins with the development of an intuitive feel for probabilistic thinking, based on the simple yet subtle idea of counting. It then evolves toward the rigorous study of discrete and continuous probability spaces, independence, conditional probability, expectation, and variance. Distributions covered include the binomial, hypergeometric, Poisson, normal, Gamma, Beta, multinomial, and bivariate normal. Other topics include generating functions, order statistics, and limit theorems. Students will engage with the material through synchronous lectures, individual and team based learning activities, and office hours. In addition, some lecture videos and discussion boards will be made available on Moodle for asynchronous engagement.",
-    "times_and_locations": {
-      "STAT 360 - LEC": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "10:10 AM - 11:00 AM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "10:10 AM - 11:00 AM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "F",
-            "time": "10:10 AM - 11:00 AM",
-            "location": "ONLI ONLI"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "M",
-            "time": "02:20 PM - 03:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "02:20 PM - 03:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "F",
-            "time": "02:20 PM - 03:10 PM",
-            "location": "ONLI ONLI"
           }
         ]
       }
@@ -12214,66 +10743,6 @@
           {
             "day": "W",
             "time": "06:40 PM - 08:00 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "The Blues Muse: African American Music in American Culture",
-    "course_codes": [
-      "BLST-114",
-      "MUSI-128"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jason Robinson"
-      ]
-    },
-    "description": "This course examines the relationship between blues music and American culture. Using Amiri Baraka's influential 1963 book of music criticism, Blues People, as a central text, we will explore ways in which the \"blues impulse\" has been fundamental to conceptions of African-American identity. At the same time, we will trace the development of African-American music through its connection to West African musical traditions and through its emergence during slavery and the Jim Crow South. Our investigation will survey a number of precursors to the blues, work songs, spirituals, and minstrels and see how these impacted early blues styles, including delta blues, classic blues, and early blues-oriented gospel practices. The blues played a fundamental role in the emergence of new popular musics in the 1940s and 1950s, most notably rock and roll. Embedded within these new musical practices were ideas about African American modernism, urbanity, and self-representation. Culminating in an examination of hip-hop culture, we will analyze the connection between African-American musical practices and larger debates about race, class, gender, and ethnicity. We will see how the blues serves as a mode of activism, and how blues musicians engage questions about racial and ethnic identity through music making.",
-    "times_and_locations": {
-      "MUSI 128 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:10 AM - 11:30 AM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "Th",
-            "time": "10:10 AM - 11:30 AM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Jazz History to 1945: Emergence, Early Development, and Innovation",
-    "course_codes": [
-      "BLST-334",
-      "MUSI-226"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jason Robinson"
-      ]
-    },
-    "description": "One of two courses that trace the development of jazz from its emergence in early 20th-century New Orleans to its profound impact on American culture. This course examines its early roots in late 19th-century American popular culture and its role as American popular music in the 1920s, '30s, and '40s. Using themes that connect the evolution of jazz practices to social and racial politics in American popular culture, we will look closely at the work of well-known historical figures (Louis Armstrong, Jelly Roll Morton, Duke Ellington, Fletcher Henderson, Billie Holiday, Count Basie, Benny Goodman, and several others) as well as the vibrant communities that nurtured and prompted their innovative musical practices.",
-    "times_and_locations": {
-      "MUSI 226 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:50 AM - 01:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "Th",
-            "time": "11:50 AM - 01:10 PM",
             "location": "ONLI ONLI"
           }
         ]
@@ -14363,7 +12832,9 @@
   {
     "semester": "Fall 2020",
     "course_title": "Cognitive Neuroscience",
-    "course_codes": [],
+    "course_codes": [
+      "NEUR-211F"
+    ],
     "faculty": {
       "Section 01": [
         "Michael A. Cohen"
@@ -14373,41 +12844,6 @@
     "times_and_locations": {
       "NEUR 211F": {
         "Section 02": []
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Neurobiology",
-    "course_codes": [
-      "BIOL-214",
-      "NEUR-214"
-    ],
-    "faculty": {
-      "Section 01": [
-        "John P. Roche"
-      ]
-    },
-    "description": "An introduction to the structure and function of the nervous system, this course explores the basic functions of neurons and synapses as well as neural mechanisms of sensation at molecular, cellular, circuit and system levels. Basic topics in neurobiology and neurophysiology will be covered with emphasis on neuroscience history and understanding how neuroscientists approach the study of the nervous system.",
-    "times_and_locations": {
-      "BIOL 214 - LEC": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "08:50 AM - 09:40 AM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "08:50 AM - 09:40 AM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "F",
-            "time": "08:50 AM - 09:40 AM",
-            "location": "ONLI ONLI"
-          }
-        ]
       }
     }
   },
@@ -15176,36 +13612,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "China: Continuity and Change",
-    "course_codes": [
-      "ASLC-108",
-      "POSC-108"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Kerry E. Ratigan"
-      ]
-    },
-    "description": "This is an introductory intensive writing course on China. As such, we will focus on the fundamentals of reading and writing to help students develop clear and persuasive writing styles. We will also pay close attention to understanding and critiquing academic sources. Students will be expected to engage in frequent in-class writing and attend regular writing consultations. Chinese politics is replete with tensions between opposing forces: modernity and tradition, economic growth and societal protections, central government and local government, top-down mandates and bottom-up pressures, ideology and expertise, state control and market forces, continuity and change. This course examines these tensions and their effects on state-society relations and authoritarian governance during communist party rule in China (1949-present). We will learn how to apply different reading strategies to examine a variety of sources that shed light on these tensions, including speeches, films, government documents, news media, and academic sources. Through frequent short papers, students will incorporate different types of evidence to make compelling arguments regarding the strategies that the Chinese party-state has used to maintain stability amid myriad challenges.",
-    "times_and_locations": {
-      "POSC 108 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "06:40 PM - 08:00 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "06:40 PM - 08:00 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "Work",
     "course_codes": [
       "POSC-145"
@@ -15294,32 +13700,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "Geopolitics and American Foreign Policy",
-    "course_codes": [
-      "HIST-215",
-      "POSC-214"
-    ],
-    "faculty": {
-      "Section 01": [
-        "N. Gordon Levin",
-        "Pavel Machala"
-      ]
-    },
-    "description": "The goal in this course is to examine the geopolitics which lies at the intersection of international relations and foreign policy. But what is geopolitics and why is it as often berated as it is embraced by American politicians and policy elites alike? Over the past two centuries, what part has geopolitics played in the currents of world politics and in the conduct of American foreign policy? What role has geopolitics played in the post-Cold War era, after the demise of the Soviet Union and the ostensible triumph of liberal capitalism? Using the methods of diplomatic history and political science, this course will explore critical moments and themes in American foreign policy. Our overall aim is to better understand todays position of the United States in world politics as well as present domestic controversies over the character of Americas global role. This is also a period which has been characterized by growing tension between two sets of political power dynamics: one is dominated by a territorial logic of power that has as its basis the direct control of specific territory, people and resources; the other is dominated by a more diffuse logic of power that derives from the command of de-territorialized global political, economic, technological and cultural forces which emanate from states as well as stateless groups with a global and transnational reach. In an attempt to better understand world politics in the age of Americas preponderance, the course will ultimately examine how American presidents have understood and navigated between these two sets of political power dynamics in articulating and conducting foreign policy, and how the American public and elites have facilitated or complicated this task.",
-    "times_and_locations": {
-      "POSC 214 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:10 PM - 04:55 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "International Relations GoneViral",
     "course_codes": [
       "POSC-216"
@@ -15386,7 +13766,7 @@
         "Jonathan M. Obert"
       ]
     },
-    "description": "U.S. politics have been an object of fascination not only for American citizens but also for scholars, students, and observers from around the world. This course provides both an introduction to key scholarly arguments about American political institutions, development and participation as well as a chance to engage with the important question of how distinctive the politics of the U.S. actually are. Focusing our attention initially on the role Congress, the Presidency, the Supreme Court, and the Constitution play in the shaping of policy, we will then examine how Americans actually participate in the political process. This means looking at how parties, the media, perceptions of class, race, and gender, interactions with bureaucracy, and even arguing and fighting shape the way Americans view their place in the political world.  Finally, we will focus on the question of American \"exceptionalism\"—how different, really, are American political institutions and experience, and what lessons can we draw from the American experiment that might (or might not) help us understand the political process elsewhere?",
+    "description": "U.S. politics have been an object of fascination not only for American citizens but also for scholars, students, and observers from around the world. This course provides both an introduction to key scholarly arguments about American political institutions, development and participation as well as a chance to engage with the important question of how distinctive the politics of the U.S. actually are. Focusing our attention initially on the role Congress, the Presidency, the Supreme Court, and the Constitution play in the shaping of policy, we will then examine how Americans actually participate in the political process. This means looking at how parties, the media, perceptions of class, race, and gender, interactions with bureaucracy, and even arguing and fighting shape the way Americans view their place in the political world.  Finally, we will focus on the question of American \"exceptionalism\"\u2014how different, really, are American political institutions and experience, and what lessons can we draw from the American experiment that might (or might not) help us understand the political process elsewhere?",
     "times_and_locations": {
       "POSC 219 - LEC": {
         "Section 01": [
@@ -15808,40 +14188,6 @@
     "semester": "Fall 2020",
     "course_title": "Cognitive Neuroscience",
     "course_codes": [
-      "NEUR-211",
-      "PSYC-211"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Michael A. Cohen"
-      ]
-    },
-    "description": "(Offered as PSYC 211 and NEUR 211) Historically, psychologists and neuroscientists have worked somewhat in parallel to one another. While psychologists have traditionally focused on how humans think, feel, and behave, neuroscientists have primarily focused exclusively on the workings of the brain. Cognitive neuroscience is a relatively new discipline that lies at the intersection of these fields and seeks to understand the neurobiological processes that underlie cognition. This course serves as a broad introduction to the field of cognitive neuroscience and will focus on a variety of questions, including the following: How does the brain obtain and process information about the environment via sight, taste, and touch? How does the brain support our capacity to learn and speak different languages? What happens to the brain when it is afflicted with neurological disorders such as Alzheimers, amnesia, schizophrenia, and autism? This course will provide students with a foundational understanding of modern cognitive neuroscience and the ways in which researchers examine the relationship between the mind and the brain.",
-    "times_and_locations": {
-      "PSYC 211 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:10 PM - 03:30 PM",
-            "location": "SCCE C101"
-          }
-        ]
-      },
-      "PSYC 211 - DIS": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:10 PM - 03:30 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Cognitive Neuroscience",
-    "course_codes": [
       "NEUR-211F",
       "PSYC-211F"
     ],
@@ -16055,41 +14401,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "Psychopharmacology",
-    "course_codes": [
-      "NEUR-325",
-      "PSYC-325"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sarah M. Turgeon"
-      ]
-    },
-    "description": "In this course we will examine the ways in which drugs act on the brain to alter behavior. We will review basic principles of brain function and mechanisms of drug action in the brain. We will discuss a variety of legal and illegal recreational drugs as well as the use of psychotherapeutic drugs to treat mental illness. Examples from the primary scientific literature will demonstrate the various methods used to investigate mechanisms of drug action, the biological and behavioral consequences of drug use, and the nature of efforts to prevent or treat drug abuse.",
-    "times_and_locations": {
-      "PSYC 325 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "SCCE D303"
-          },
-          {
-            "day": "W",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "SCCE D303"
-          },
-          {
-            "day": "F",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "SCCE D303"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "Stereotypes and Prejudice",
     "course_codes": [
       "PSYC-337"
@@ -16201,46 +14512,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "Religious Traditions in America: A History of Communities and Their Scriptures",
-    "course_codes": [
-      "AMST-246",
-      "HIST-134",
-      "RELI-134"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Lloyd D. Barba"
-      ]
-    },
-    "description": "This course offers a historical introduction to several of the major religious traditions in America. To unpack the vast diversity of religious traditions in America, this course will take two approaches. First it will map out the roots and routes of communities including, but not limited to, Jews, Catholics, Buddhists, Protestants, Muslims, and various American Originals such as Jehovah's Witnesses, Seventh Day Adventists, Latter Day Saints (Mormons), and Pentecostals. We will also read the scriptures that communities have produced, that is, the primary source literature essential to their understanding of their place among the religious traditions of America and the interpretations offered by historians.",
-    "times_and_locations": {
-      "RELI 134 - TUT": {
-        "Section 01": [
-          {
-            "day": "TBD",
-            "time": "-",
-            "location": "VALT 005"
-          }
-        ]
-      },
-      "RELI 134 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:50 AM - 01:10 PM",
-            "location": "CHAP 101"
-          },
-          {
-            "day": "Th",
-            "time": "11:50 AM - 01:10 PM",
-            "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "Becoming Christian in the Ancient World",
     "course_codes": [
       "RELI-174"
@@ -16272,116 +14543,6 @@
             "day": "F",
             "time": "02:10 PM - 03:30 PM",
             "location": "CHAP 204"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "The Virgin Mary: Image, Cult, Syncretism (ca. 400-1700)",
-    "course_codes": [
-      "ARHA-229",
-      "HIST-229",
-      "RELI-229"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jutta G. Sperling"
-      ]
-    },
-    "description": "When, in 431, the Council of Ephesus declared the Virgin Mary to be Theotokos or God-Bearer, she had already been venerated in Egypt since the third century as a re-instantiation of Isis. The syncretism of her cult explains her ubiquitous popularity in medieval Byzantium and the Latin West, but also in early Islamic Syria and colonial Latin America. Her frequent depiction on moveable wooden panels (icons) and mosaics accompanied her early rise to liturgical prominence. By 1200, she rivaled Jesus Christ in religious importance, not only through her role as intercessor, but also as dispenser of divine grace in the form of breastmilk. She was the most active miracle-working saint in all of Christianity. Her frequent depiction on icons, altarpieces and devotional panels accompanies and, in part, explains the development of figurative art in the West. In colonial America, the introduction of her cult ended prior religious forms of expression, but also helped them to partially survive in a new context. In this seminar, students will produce a 15-page research paper based on a careful analysis of textual and visual sources as well as pertinent scholarship.",
-    "times_and_locations": {
-      "HIST 229 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "03:50 PM - 05:10 PM",
-            "location": "CHAP 203"
-          },
-          {
-            "day": "Th",
-            "time": "03:50 PM - 05:10 PM",
-            "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "The Sanctuary Movement: Religion, Activism, and Social Contestation",
-    "course_codes": [
-      "AMST-234",
-      "LLAS-234",
-      "RELI-234"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Lloyd D. Barba"
-      ]
-    },
-    "description": "From sanctuary cities and states to sanctuary campuses and churches, declarations of sanctuary sites have swept the nation in recent years. The U.S. Sanctuary Movement, established in 1982 to harbor Central American asylum seekers fleeing civil wars, has today assumed broader social implementations in the New Sanctuary Movement. Beginning with an examination of antecedents to the U.S. Sanctuary Movement in global contexts, this course will offer students an in-depth study of the Sanctuary Movement since the 1980s with special attention to the New Sanctuary Movement which is active today throughout the country. Engagement with sanctuary workers outside the Amherst area may occasion one or two field trips, depending on availability.",
-    "times_and_locations": {
-      "RELI 234 - TUT": {
-        "Section 01": [
-          {
-            "day": "TBD",
-            "time": "-",
-            "location": "VALT 002"
-          }
-        ]
-      },
-      "RELI 234 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:10 PM - 03:30 PM",
-            "location": "CHAP 201"
-          },
-          {
-            "day": "W",
-            "time": "02:10 PM - 03:30 PM",
-            "location": "CHAP 201"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Buddhist Ethics",
-    "course_codes": [
-      "ASLC-256",
-      "RELI-255"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Maria R. Heim"
-      ]
-    },
-    "description": "A systematic exploration of the place of ethics and moral reasoning in Buddhist thought and practice. The scope of the course is wide, with examples drawn from the whole Buddhist world, but emphasis is on the particularity of different Buddhist visions of the ideal human life. Attention is given to the problems of the proper description of Buddhist ethics in a comparative perspective.",
-    "times_and_locations": {
-      "RELI 255 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:30 PM - 02:50 PM",
-            "location": "SCCE E208"
-          },
-          {
-            "day": "Th",
-            "time": "01:30 PM - 02:50 PM",
-            "location": "SCCE E208"
-          }
-        ]
-      },
-      "RELI 255 - DIS": {
-        "Section 01": [
-          {
-            "day": "Th",
-            "time": "01:30 PM - 02:50 PM",
-            "location": "ONLI ONLI"
           }
         ]
       }
@@ -16458,36 +14619,6 @@
             "day": "W",
             "time": "12:30 PM - 01:50 PM",
             "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "The Lives of Muslim Saints",
-    "course_codes": [
-      "ASLC-289",
-      "RELI-288"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Tariq Jaffer"
-      ]
-    },
-    "description": "A study of the most venerated saints in the history of Islam. We will read from their biographies, poetry (paying special attention to the themes of love), and theoretical and literary works. We will examine how such literature discloses the dimensions of Islamic mysticism: rituals and practices (some of which were considered socially deviant), theories of the self/soul, epistemologies, cosmologies, and ontologies. We will examine the ways that Sufi theories and practices challenged other self-professed Islamic orthodoxies and orthopraxies. We will ask: what made these aspects of Islamic mysticism (often subsumed under Sufism) so appealing as articulations of Islam? To answer this question, we will attempt to grasp how Muslim saints understood their expressions of Islam in relation to the disciplinesespecially law, theology, and philosophyand to understand how their ways of being Islamic are meaningful expressions and interpretations of Islamic institutions, concepts, principles and values. In this course we will also engage with the theories that scholars of religion in North America and Europe have used to analyze and interpret the various dimensions of Islamic mysticism. In doing so, we will examine the ways that perceptions of Sufism (and Islam more broadly) have been shaped by European theories, paradigms, and methods of interpretation and discuss their value for understanding Sufism and Islam.",
-    "times_and_locations": {
-      "RELI 288 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "03:50 PM - 05:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "Th",
-            "time": "03:50 PM - 05:10 PM",
-            "location": "ONLI ONLI"
           }
         ]
       }
@@ -16776,163 +14907,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "Feminist Science Studies",
-    "course_codes": [
-      "ANTH-211",
-      "SWAG-108"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jennifer A. Hamilton"
-      ]
-    },
-    "description": "This course introduces students to theories and methodologies in the interdisciplinary field of feminist science studies. Specific areas of investigation include scientific cultures, animal models, and science in the media and popular culture. Students will continuously engage larger questions such as: What kinds of knowledge count as \"science?\" What is objectivity? How have cultural assumptions shaped scientific knowledge production in this and other historical periods? What is the relationship between \"the body\" and scientific data? And, finally, is feminist science possible? This course fulfills a requirement for the Five College Reproductive Health, Rights and Justice (RHRJ) certificate.",
-    "times_and_locations": {
-      "SWAG 108 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Greek Civilization",
-    "course_codes": [
-      "CLAS-123",
-      "SWAG-123"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Frederick T. Griffiths"
-      ]
-    },
-    "description": "We read in English the major authors from Homer in the 8th century BCE to Plato in the 4th century in order to trace the emergence of epic, lyric poetry, tragedy, comedy, history, and philosophy. How did the Greek enlightenment, and through it Western culture, emerge from a few generations of people moving around a rocky archipelago? How did folklore and myth develop into various forms of rationality: science, history, and philosophy? What are the implications of male control over public and private life and the written record? What can be inferred about ancient women if they cannot speak for themselves in the texts? How does slavery work in a culture when it is based on capture rather than racial difference? What do we hear when people in bondage are given voice in epic and drama? Other authors include Sappho, Herodotus, Aeschylus, Sophocles, Euripides, Aristophanes, and Thucydides. The course seeks to develop the skills of close reading and persuasive argumentation. The requirements are three essays, the first ungraded, as well as two open-book tests with time and word limits. Three class hours per week.",
-    "times_and_locations": {
-      "CLAS 123 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "F",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Sexualities in International Relations",
-    "course_codes": [
-      "POSC-160",
-      "SWAG-160"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Manuela Picq"
-      ]
-    },
-    "description": "From abortion to gay rights, sexuality is deeply entangled in world politics. As LGBT rights become human rights principles, they not only enter the rights structure of the European Union and the United Nations but are also considered a barometer of political modernity. If some Latin American nations have depicted their recognition of gay rights as symbolic of their progressive character, certain North African nations have depicted their repression of homosexuality symbolic of their opposition to western imperialism. The results of sexual politics are often contradictory, with some countries enabling same-sex marriage but criminalizing abortion and others cutting aid in the name of human rights. This course explores the influence of sexual politics on international relations. We analyze how women and gay rights take shape in the international system, from the UN to security agendas, and evaluate how sexuality shapes the modus operandi of contemporary politics. This course fulfills a requirement for the Five College Reproductive Health, Rights and Justice (RHRJ) certificate.",
-    "times_and_locations": {
-      "POSC 160 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:10 PM - 03:30 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "02:10 PM - 03:30 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Black Feminist Literary Traditions",
-    "course_codes": [
-      "BLST-345",
-      "ENGL-276",
-      "FAMS-379",
-      "SWAG-208"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Aneeka A. Henderson"
-      ]
-    },
-    "description": "Through a close reading of texts by African American authors, we will critically examine the characterization of female protagonists, with a specific focus on how writers negotiate literary forms alongside race, gender, sexuality, and class in their work. Coupled with our explication of poems, short stories, novels, and literary criticism, we will explore the stakes of adaptation in visual culture. Students will analyze the film and television adaptations of twentieth-century fiction. Authors will include Toni Morrison, Lorraine Hansberry, Alice Walker, and Gloria Naylor. Expectations include three writing projects, a group presentation, and various in-class assignments. This course fulfills a requirement for the Five College Reproductive Health, Rights and Justice (RHRJ) certificate.",
-    "times_and_locations": {
-      "SWAG 208 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:50 AM - 01:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "Th",
-            "time": "11:50 AM - 01:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Black Sexualities",
-    "course_codes": [
-      "BLST-236",
-      "SWAG-235"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Khary O. Polk"
-      ]
-    },
-    "description": "From the modern era to the contemporary moment, the intersection of race, gender, and class has been especially salient for people of African descent for men as well as for women. How might the category of sexuality act as an additional optic through which to view and reframe contemporary and historical debates concerning the construction of black identity? In what ways have traditional understandings of masculinity and femininity contributed to an understanding of African American life and culture as invariably heterosexual? How have black lesbian, gay, and transgendered persons effected political change through their theoretical articulations of identity, difference, and power? In this interdisciplinary course, we will address these questions through an examination of the complex roles gender and sexuality play in the lives of people of African descent. Remaining attentive to the ways black people have claimed social and sexual agency in spite of systemic modes of inequality, we will engage with critical race theory, black feminist thought, queer-of-color critique, literature, art, film, new media and erotica, as well as scholarship from anthropology, sociology, and history.",
-    "times_and_locations": {
-      "BLST 236 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "03:50 PM - 05:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "Th",
-            "time": "03:50 PM - 05:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "Contemporary Fashion in a Historical Perspective",
     "course_codes": [
       "SWAG-249",
@@ -16956,37 +14930,6 @@
             "day": "Th",
             "time": "03:50 PM - 05:10 PM",
             "location": "WEBS 8"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Witches, Vampires and Other Monsters",
-    "course_codes": [
-      "ARHA-385",
-      "EUST-385",
-      "SWAG-310"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Natasha Staller"
-      ]
-    },
-    "description": "Our course will explore how evil was imagined, over cultures, centuries and disciplines. With the greatest possible historical and cultural specificity, we will investigate an array of monstrous creatures and plagues -- their terrifying powers, the explanations for why they came to be, and the strategies for how they could be purged -- as we attempt to articulate the kindred qualities they shared. We will study centuries-old witch burning manuals, and note the striking degree to which dangerous tropes -- about women, about pestilence, about dangerous sexuality, and about differences of all kinds -- have continued to our day. Among the artists to be considered are Velazquez, Goya, Picasso, Dali, Bunuel, Dreyer, Wilder, Almodovar, and the community who made the AIDS Quilt. In addition to vibrant discussions, there will be weekly written assignments to deepen students' understanding of the material, as well as to develop the beauty of their writing, the acuity of their sight, their synthetic and analytical powers. There will be frequent one-on-one meetings, and constantly changing mini-groups, as we learn and explore together. This course fulfills a requirement for the Five College Reproductive Health, Rights and Justice (RHRJ) certificate.",
-    "times_and_locations": {
-      "ARHA 385 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:30 PM - 02:50 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "Th",
-            "time": "01:30 PM - 02:50 PM",
-            "location": "ONLI ONLI"
           }
         ]
       }
@@ -17054,32 +14997,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "Women of Color and the Emergence of U.S. Third World Feminist Left",
-    "course_codes": [
-      "AMST-380",
-      "HIST-380",
-      "SWAG-380"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Lili M. Kim"
-      ]
-    },
-    "description": "This research seminar investigates the history of Asian American women and other women of color solidarities and activisms in the emergence of the U.S. Third World Feminist Left during the 1960s and 1970s. This movement saw ending imperialism and colonialism as a necessary part of their fight against racism, sexism, and capitalism in the United States and beyond and drew inspiration from Third World feminism and decolonization activities. Third World feminism posits that women's activisms in the Third World do not originate from the ideologies of the First World and specifically centers Third World women's radicalism in their local/national contexts and struggles. Organizations such as the Third World Womens Alliance (TWWA) in New York City, which grew out of the Student Nonviolent Coordinating Committee (SNCC), brought together Black, Puerto Rican, and Asian American women in the socialist fight to end imperialism, sexism, capitalism, and racism. The images of revolutionary Third World women engaged in anti-colonial struggles in Asia, Africa, Latin America, and the Middle East, especially during the Vietnam War era, inspired U.S.-based feminists of color and helped them embrace leftist Third World solidarity politics. Utilizing the rich archival sources found in the Sophia Smith Collection (TWWA records, Miriam Ching Yoon Louie papers, National Asian Pacific American Women's Forum papers) as well as the Triple Jeopardy newspapers found in the Marshall I. Bloom papers at the Amherst College Archives and Special Collections, students will have an opportunity to work collaboratively to produce a substantial research project.",
-    "times_and_locations": {
-      "HIST 380 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:30 PM - 04:15 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "Contemporary Debates: Gender and Right-Wing Nationalism",
     "course_codes": [
       "POSC-407",
@@ -17098,31 +15015,6 @@
           {
             "day": "W",
             "time": "02:10 PM - 04:50 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Race, Gender, and Sexuality in U.S. History",
-    "course_codes": [
-      "HIST-436",
-      "SWAG-436"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jen Manion"
-      ]
-    },
-    "description": "This course introduces students to critical theories of difference in thinking and writing about the past. We will read major works that chart the history of the very concepts of race, gender, and sexuality. We will explore how these ideas were both advanced and contested by various groups over the years by reading primary sources such as newspaper articles, personal letters, court records, and organizational papers. Movements for womens rights, racial justice, and LGBTQ liberation have dramatically shaped these debates and their implications. In particular, feminist theory, critical race theory, and queer theory provide powerful arguments about how we formulate research questions, what constitutes a legitimate archive, and why writing history matters. Students will learn to identify and work with an archive to craft a major research paper in some aspect of U.S. history while engaging the relevant historic arguments about race, gender, and/or sexuality.",
-    "times_and_locations": {
-      "HIST 436 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:30 PM - 04:15 PM",
             "location": "ONLI ONLI"
           }
         ]
@@ -17427,60 +15319,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "Literature and Culture of the Hispanic World",
-    "course_codes": [
-      "LLAS-301",
-      "SPAN-301"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sony Coranez Bolton"
-      ],
-      "Section 02": [
-        "Catherine V. Infante"
-      ]
-    },
-    "description": "This course provides an introduction to the diverse literatures and cultures of the Spanish-speaking world over the course of six centuries, from the Middle Ages to the twentieth century. Students will learn the tools, language, and critical vocabulary for advanced work reading the canon of Hispanic literatures from Spain, Latin America and the Caribbean Basin, identifying aesthetic trends, historical periods and diverse genres such as poetry, narrative, theater and film. The syllabus will include a wide variety of authors of different national, political, and artistic persuasions and an array of linguistic styles. All work will be conducted in Spanish.",
-    "times_and_locations": {
-      "SPAN 301 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:10 PM - 03:30 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "02:10 PM - 03:30 PM",
-            "location": "ONLI ONLI"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "Tu",
-            "time": "10:10 AM - 11:30 AM",
-            "location": "CHAP 201"
-          },
-          {
-            "day": "Th",
-            "time": "10:10 AM - 11:30 AM",
-            "location": "CHAP 201"
-          }
-        ]
-      },
-      "SPAN 301 - TUT": {
-        "Section 02": [
-          {
-            "day": "TBD",
-            "time": "-",
-            "location": "VALT 002"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "Short Stories from the Hispanic World",
     "course_codes": [
       "SPAN-305"
@@ -17630,262 +15468,6 @@
             "day": "Th",
             "time": "01:30 PM - 02:50 PM",
             "location": "CONV 310"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Introduction to Statistics",
-    "course_codes": [
-      "STAT-111E"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Pamela B. Matheson"
-      ]
-    },
-    "description": "Introduction to Statistics provides a basic foundation in descriptive and inferential statistics, including constructing models from data. Students will learn to think critically about data, produce meaningful graphical and numerical summaries of data, apply basic probability models, and utilize statistical inference procedures using computational tools. Topics include basic descriptive and inferential statistics, visualization, study design, and multiple regression.",
-    "times_and_locations": {
-      "STAT 111E - LEC": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:20 PM - 03:10 PM",
-            "location": "SMUD 206"
-          },
-          {
-            "day": "W",
-            "time": "02:20 PM - 03:10 PM",
-            "location": "SMUD 206"
-          },
-          {
-            "day": "F",
-            "time": "02:20 PM - 03:10 PM",
-            "location": "SMUD 206"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Introduction to Statistics via Modeling",
-    "course_codes": [
-      "MATH-135",
-      "STAT-135"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Brittney E. Bailey",
-        "Ryan P. McShane (Sections 03 and 04)"
-      ]
-    },
-    "description": "(Offered as STAT 135 and MATH 135) This course is an introductory statistics course that uses modeling as a unifying framework. The course provides a basic foundation in statistics with a major emphasis on constructing models from data. Students learn important concepts of statistics by mastering powerful and relatively advanced statistical techniques using computational tools. Topics include descriptive and inferential statistics, visualization, probability, study design, and multiple regression. No prior experience with statistical software is expected.",
-    "times_and_locations": {
-      "STAT 135 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "10:10 AM - 11:00 AM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "10:10 AM - 11:00 AM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "F",
-            "time": "10:10 AM - 11:00 AM",
-            "location": "ONLI ONLI"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "M",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "F",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "Tu",
-            "time": "01:30 PM - 02:50",
-            "location": "PM"
-          },
-          {
-            "day": "Th",
-            "time": "01:30 PM - 02:50",
-            "location": "PM"
-          }
-        ],
-        "Section 04": [
-          {
-            "day": "Tu",
-            "time": "03:50 PM - 05:10",
-            "location": "PM"
-          },
-          {
-            "day": "Th",
-            "time": "03:50 PM - 05:10",
-            "location": "PM"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Intermediate Statistics",
-    "course_codes": [
-      "STAT-230"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Shu-Min Liao"
-      ]
-    },
-    "description": "This course is an intermediate applied statistics course that builds on the statistical data analysis methods introduced in STAT 111/111E or STAT 135. Students will learn how to pose a statistical question, perform appropriate statistical analysis of the data, and properly interpret and communicate their results. Emphasis will be placed on the use of statistical software, data wrangling, model fitting, and assessment. Topics covered will include ethics, experimental design, resampling approaches, analysis of variance models, multiple regression, model selection, and logistic regression. No prior experience with statistical software is expected.",
-    "times_and_locations": {
-      "STAT 230 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:20 PM - 03:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "02:20 PM - 03:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "F",
-            "time": "02:20 PM - 03:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      },
-      "STAT 230 - LEC": {
-        "Section 02": [
-          {
-            "day": "M",
-            "time": "03:50 PM - 04:40 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "03:50 PM - 04:40 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "F",
-            "time": "03:50 PM - 04:40 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Data Science",
-    "course_codes": [
-      "STAT-231"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Katharine F. Correia"
-      ]
-    },
-    "description": "Computational data analysis is an essential part of modern statistics and data science. This course provides a practical foundation for students to think with data by participating in the entire data analysis cycle. Students will generate statistical questions and then address them through data acquisition, cleaning, transforming, modeling, and interpretation. This course will introduce students to tools for data management and wrangling that are common in data science and will apply those tools to real-world applications. Students will undertake practical analyses of large, complex, and messy data sets leveraging modern computing tools.",
-    "times_and_locations": {
-      "STAT 231 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:10 AM - 11:30 AM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "Th",
-            "time": "10:10 AM - 11:30 AM",
-            "location": "ONLI ONLI"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "Tu",
-            "time": "01:30 PM - 02:50 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "Th",
-            "time": "01:30 PM - 02:50 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Multivariate Data Analysis",
-    "course_codes": [
-      "STAT-240"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Amy S. Wagaman"
-      ]
-    },
-    "description": "Making sense of a complex, high-dimensional data set is not an easy task. The analysis chosen is ultimately based on the research question(s) being asked. This course will explore how to visualize and extract meaning from large data sets through a variety of analytical methods. Methods covered include principal components analysis and selected statistical and machine learning techniques, both supervised and unsupervised. Additional methods covered may include factor analysis, dimension reduction methods, or network analysis at instructor discretion. This course will feature hands-on data analysis with statistical software, emphasizing application over theory. The course is expected to include small group work, interactive labs, peer interactions such as peer review and short presentations, and a personal project, to foster student engagement in the course and with each other.",
-    "times_and_locations": {
-      "STAT 240 - LEC": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "F",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "M",
-            "time": "02:20 PM - 03:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "02:20 PM - 03:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "F",
-            "time": "02:20 PM - 03:10 PM",
-            "location": "ONLI ONLI"
           }
         ]
       }
@@ -18291,45 +15873,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "Playwriting I",
-    "course_codes": [
-      "ENGL-222",
-      "THDA-270"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ana Candida Carneiro"
-      ]
-    },
-    "description": "This course explores key aspects of writing for the theater in a workshop style, from a transcultural perspective. Through writing exercises, analysis of scenes, feedback sessions, and the rewriting of materials produced, participants will experience the creative process and start developing their own voice as playwrights.",
-    "times_and_locations": {
-      "THDA 270 - TUT": {
-        "Section 01": [
-          {
-            "day": "TBD",
-            "time": "-",
-            "location": "MAQT 004"
-          }
-        ]
-      },
-      "THDA 270 - LEC": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "WEBS 122"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "WEBS 122"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "Performance Studio",
     "course_codes": [
       "FAMS-345",
@@ -18348,45 +15891,6 @@
             "day": "F",
             "time": "12:00 PM - 03:00 PM",
             "location": "WEBS 117"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Playwriting Studio",
-    "course_codes": [
-      "ENGL-322",
-      "THDA-370"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ana Candida Carneiro"
-      ]
-    },
-    "description": "A workshop for writers who want to complete a full-length play or series of shorter plays. Emphasis will be on bringing a script to a level at which it is ready for the stage. The majority of class time will be devoted to reading and commenting on developing works-in-progress. In addition, we will also hone playwriting skills through class exercises, and study exemplary plays by established writers as a means of exploring a range of dramatic vocabularies.",
-    "times_and_locations": {
-      "THDA 370 - TUT": {
-        "Section 01": [
-          {
-            "day": "TBD",
-            "time": "-",
-            "location": "MAQT 004"
-          }
-        ]
-      },
-      "THDA 370 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:30 PM - 02:50 PM",
-            "location": "WEBS 220"
-          },
-          {
-            "day": "Th",
-            "time": "01:30 PM - 02:50 PM",
-            "location": "WEBS 220"
           }
         ]
       }
@@ -18434,193 +15938,6 @@
             "day": "Th",
             "time": "01:30 PM - 02:50 PM",
             "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Feminist Science Studies",
-    "course_codes": [
-      "ANTH-211",
-      "SWAG-108"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jennifer A. Hamilton"
-      ]
-    },
-    "description": "This course introduces students to theories and methodologies in the interdisciplinary field of feminist science studies. Specific areas of investigation include scientific cultures, animal models, and science in the media and popular culture. Students will continuously engage larger questions such as: What kinds of knowledge count as \"science?\" What is objectivity? How have cultural assumptions shaped scientific knowledge production in this and other historical periods? What is the relationship between \"the body\" and scientific data? And, finally, is feminist science possible? This course fulfills a requirement for the Five College Reproductive Health, Rights and Justice (RHRJ) certificate.",
-    "times_and_locations": {
-      "SWAG 108 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Greek Civilization",
-    "course_codes": [
-      "CLAS-123",
-      "SWAG-123"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Frederick T. Griffiths"
-      ]
-    },
-    "description": "We read in English the major authors from Homer in the 8th century BCE to Plato in the 4th century in order to trace the emergence of epic, lyric poetry, tragedy, comedy, history, and philosophy. How did the Greek enlightenment, and through it Western culture, emerge from a few generations of people moving around a rocky archipelago? How did folklore and myth develop into various forms of rationality: science, history, and philosophy? What are the implications of male control over public and private life and the written record? What can be inferred about ancient women if they cannot speak for themselves in the texts? How does slavery work in a culture when it is based on capture rather than racial difference? What do we hear when people in bondage are given voice in epic and drama? Other authors include Sappho, Herodotus, Aeschylus, Sophocles, Euripides, Aristophanes, and Thucydides. The course seeks to develop the skills of close reading and persuasive argumentation. The requirements are three essays, the first ungraded, as well as two open-book tests with time and word limits. Three class hours per week.",
-    "times_and_locations": {
-      "CLAS 123 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "F",
-            "time": "11:20 AM - 12:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Sexualities in International Relations",
-    "course_codes": [
-      "POSC-160",
-      "SWAG-160"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Manuela Picq"
-      ]
-    },
-    "description": "From abortion to gay rights, sexuality is deeply entangled in world politics. As LGBT rights become human rights principles, they not only enter the rights structure of the European Union and the United Nations but are also considered a barometer of political modernity. If some Latin American nations have depicted their recognition of gay rights as symbolic of their progressive character, certain North African nations have depicted their repression of homosexuality symbolic of their opposition to western imperialism. The results of sexual politics are often contradictory, with some countries enabling same-sex marriage but criminalizing abortion and others cutting aid in the name of human rights. This course explores the influence of sexual politics on international relations. We analyze how women and gay rights take shape in the international system, from the UN to security agendas, and evaluate how sexuality shapes the modus operandi of contemporary politics. This course fulfills a requirement for the Five College Reproductive Health, Rights and Justice (RHRJ) certificate.",
-    "times_and_locations": {
-      "POSC 160 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:10 PM - 03:30 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "W",
-            "time": "02:10 PM - 03:30 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Black Feminist Literary Traditions",
-    "course_codes": [
-      "BLST-345",
-      "ENGL-276",
-      "FAMS-379",
-      "SWAG-208"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Aneeka A. Henderson"
-      ]
-    },
-    "description": "Through a close reading of texts by African American authors, we will critically examine the characterization of female protagonists, with a specific focus on how writers negotiate literary forms alongside race, gender, sexuality, and class in their work. Coupled with our explication of poems, short stories, novels, and literary criticism, we will explore the stakes of adaptation in visual culture. Students will analyze the film and television adaptations of twentieth-century fiction. Authors will include Toni Morrison, Lorraine Hansberry, Alice Walker, and Gloria Naylor. Expectations include three writing projects, a group presentation, and various in-class assignments. This course fulfills a requirement for the Five College Reproductive Health, Rights and Justice (RHRJ) certificate.",
-    "times_and_locations": {
-      "SWAG 208 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:50 AM - 01:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "Th",
-            "time": "11:50 AM - 01:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Black Sexualities",
-    "course_codes": [
-      "BLST-236",
-      "SWAG-235"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Khary O. Polk"
-      ]
-    },
-    "description": "From the modern era to the contemporary moment, the intersection of race, gender, and class has been especially salient for people of African descent for men as well as for women. How might the category of sexuality act as an additional optic through which to view and reframe contemporary and historical debates concerning the construction of black identity? In what ways have traditional understandings of masculinity and femininity contributed to an understanding of African American life and culture as invariably heterosexual? How have black lesbian, gay, and transgendered persons effected political change through their theoretical articulations of identity, difference, and power? In this interdisciplinary course, we will address these questions through an examination of the complex roles gender and sexuality play in the lives of people of African descent. Remaining attentive to the ways black people have claimed social and sexual agency in spite of systemic modes of inequality, we will engage with critical race theory, black feminist thought, queer-of-color critique, literature, art, film, new media and erotica, as well as scholarship from anthropology, sociology, and history.",
-    "times_and_locations": {
-      "BLST 236 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "03:50 PM - 05:10 PM",
-            "location": "ONLI ONLI"
-          },
-          {
-            "day": "Th",
-            "time": "03:50 PM - 05:10 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Contemporary Fashion in a Historical Perspective",
-    "course_codes": [
-      "SWAG-249",
-      "THDA-240"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Suzanne P. Dougan"
-      ]
-    },
-    "description": "Using a seminar format, this course will ask students to choose a topic and explore the relationship between culture and clothing in historical context, addressing issues of race, class, ethnicity, gender, and sexuality and their connection to the aesthetics of self-expression. In addition, students will develop their own contemporary fashion ideas and participate in labs, who will teach the necessary technical skills needed to fabricate a garment. This course will be conducted in a hybrid format, with both in-person and on-line components as needed, supported by appropriate technology. Options for online-only participation will be available for those students unable to participate in person.",
-    "times_and_locations": {
-      "THDA 240 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "03:50 PM - 05:10 PM",
-            "location": "WEBS 8"
-          },
-          {
-            "day": "Th",
-            "time": "03:50 PM - 05:10 PM",
-            "location": "WEBS 8"
           }
         ]
       }
@@ -18694,57 +16011,6 @@
   },
   {
     "semester": "Fall 2020",
-    "course_title": "Indigenous Feminisms",
-    "course_codes": [
-      "AMST-370",
-      "SWAG-372"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jennifer A. Hamilton"
-      ]
-    },
-    "description": "This course introduces students to the interdisciplinary field of Indigenous feminisms, and explores how questions of sex, gender, and sexuality have been articulated in relation to concerns such as sovereignty, colonization, and imperialism. We will explore how Indigenous feminists engage with or challenge other modes of feminist thought and activism. We will focus on how Indigenous ways of knowing and being can challenge how we conduct research and produce knowledge. While we will concentrate on work produced within the context of Native North America, we will also be attentive to transnational dimensions of Indigenous feminist histories, political movements, and world-building. Specific topics include movements to recognize missing and murdered Indigenous women; Indigenous feminist science and technology studies; and, Indigenous futurisms. This course fulfills a requirement for the Five College Reproductive Health, Rights and Justice (RHRJ) certificate.",
-    "times_and_locations": {
-      "SWAG 372 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:10 PM - 04:55 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Women of Color and the Emergence of U.S. Third World Feminist Left",
-    "course_codes": [
-      "AMST-380",
-      "HIST-380",
-      "SWAG-380"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Lili M. Kim"
-      ]
-    },
-    "description": "This research seminar investigates the history of Asian American women and other women of color solidarities and activisms in the emergence of the U.S. Third World Feminist Left during the 1960s and 1970s. This movement saw ending imperialism and colonialism as a necessary part of their fight against racism, sexism, and capitalism in the United States and beyond and drew inspiration from Third World feminism and decolonization activities. Third World feminism posits that women's activisms in the Third World do not originate from the ideologies of the First World and specifically centers Third World women's radicalism in their local/national contexts and struggles. Organizations such as the Third World Womens Alliance (TWWA) in New York City, which grew out of the Student Nonviolent Coordinating Committee (SNCC), brought together Black, Puerto Rican, and Asian American women in the socialist fight to end imperialism, sexism, capitalism, and racism. The images of revolutionary Third World women engaged in anti-colonial struggles in Asia, Africa, Latin America, and the Middle East, especially during the Vietnam War era, inspired U.S.-based feminists of color and helped them embrace leftist Third World solidarity politics. Utilizing the rich archival sources found in the Sophia Smith Collection (TWWA records, Miriam Ching Yoon Louie papers, National Asian Pacific American Women's Forum papers) as well as the Triple Jeopardy newspapers found in the Marshall I. Bloom papers at the Amherst College Archives and Special Collections, students will have an opportunity to work collaboratively to produce a substantial research project.",
-    "times_and_locations": {
-      "HIST 380 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:30 PM - 04:15 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
     "course_title": "Contemporary Debates: Gender and Right-Wing Nationalism",
     "course_codes": [
       "POSC-407",
@@ -18763,31 +16029,6 @@
           {
             "day": "W",
             "time": "02:10 PM - 04:50 PM",
-            "location": "ONLI ONLI"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2020",
-    "course_title": "Race, Gender, and Sexuality in U.S. History",
-    "course_codes": [
-      "HIST-436",
-      "SWAG-436"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jen Manion"
-      ]
-    },
-    "description": "This course introduces students to critical theories of difference in thinking and writing about the past. We will read major works that chart the history of the very concepts of race, gender, and sexuality. We will explore how these ideas were both advanced and contested by various groups over the years by reading primary sources such as newspaper articles, personal letters, court records, and organizational papers. Movements for womens rights, racial justice, and LGBTQ liberation have dramatically shaped these debates and their implications. In particular, feminist theory, critical race theory, and queer theory provide powerful arguments about how we formulate research questions, what constitutes a legitimate archive, and why writing history matters. Students will learn to identify and work with an archive to craft a major research paper in some aspect of U.S. history while engaging the relevant historic arguments about race, gender, and/or sexuality.",
-    "times_and_locations": {
-      "HIST 436 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:30 PM - 04:15 PM",
             "location": "ONLI ONLI"
           }
         ]

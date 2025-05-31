@@ -1081,41 +1081,6 @@
   },
   {
     "semester": "Spring 2010",
-    "course_title": "Arts of Japan",
-    "course_codes": [
-      "ARHA-48",
-      "ASLC-23"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Samuel C. Morse"
-      ]
-    },
-    "description": "A survey of the history of Japanese art from neolithic times to the present. Topics will include Buddhist art and its ritual context, the aristocratic arts of the Heian court, monochromatic ink painting and the arts related to the Zen sect, the prints and paintings of the Floating World and contemporary artists and designers such as Ando Tadao and Miyake Issey. The class will focus on the ways Japan adopts and adapts foreign cultural traditions. There will be field trips to look at works in museums and private collections in the region.",
-    "times_and_locations": {
-      "ARHA 48 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "F",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "FAYE 113"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
     "course_title": "India in Film: Hollywood, Bollywood, Mollywood",
     "course_codes": [
       "ASLC-30"
@@ -1317,36 +1282,6 @@
             "day": "W",
             "time": "12:30 PM - 01:50 PM",
             "location": "WEBS 220"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Religion and Society in the South Asian World",
-    "course_codes": [
-      "ANTH-34",
-      "ASLC-60"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Lawrence A. Babb"
-      ]
-    },
-    "description": "Observers have long marveled at the sheer number of separate religious traditions that flourish and interact with each other in South Asia. In this single ethnographic region, the Indian subcontinent, we find Hindus, Muslims, Sikhs, Buddhists, Jains, Christians, Jews, and others as well. Given this extraordinary diversity, South Asia provides an unparalleled opportunity to study interactions among religious systems in a broad range of social and political contexts. This course takes advantage of this circumstance by exploring, in South Asian settings, a variety of theoretical approaches to the study of religion. Among the subjects to be considered are religion and social hierarchy, religion and gender, religious responses to rapid social change, modern religious movements, religion and modern media, religious nationalism, and South Asian religions in diaspora. Although the course focuses on the South Asian region, it is designed to emphasize theoretical issues of current interest to anthropologists and others who study religion from the perspective of social science.",
-    "times_and_locations": {
-      "ANTH 34 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "ESNH 107"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "ESNH 107"
           }
         ]
       }
@@ -2826,36 +2761,6 @@
   },
   {
     "semester": "Spring 2010",
-    "course_title": "African Cultures and Societies",
-    "course_codes": [
-      "ANTH-26",
-      "BLST-20"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Miriam R. Goheen [d]"
-      ]
-    },
-    "description": "This course explores the cultural meaning of indigenous African institutions and societies. Through the use of ethnographies, novels and films, we will investigate the topics of kinship, religion, social organization, colonialism, ethnicity, nationalism and neocolonialism. The principal objective is to give students an understanding of African society that will enable them better to comprehend current issues and problems confronting African peoples and nations.",
-    "times_and_locations": {
-      "ANTH 26 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MERR 4"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
     "course_title": "The Afro-Postmodern",
     "course_codes": [
       "BLST-23"
@@ -2908,31 +2813,6 @@
             "day": "W",
             "time": "02:00 PM - 03:20 PM",
             "location": "CHAP 201"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Race and Races in American Studies",
-    "course_codes": [
-      "SOCI-38",
-      "BLST-35"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Carleen R. Basler"
-      ]
-    },
-    "description": "This interdisciplinary seminar examines influential scholarship on the race concept and racialized relations in American culture and society. The course will focus on selected themes, approaches, methods, debates, and problems in a variety of scholarly genres. Major topics include the cultural construction of race; race as both an instrument of oppression and an idiom of resistance in American politics; the centrality of race in literary, sociological, anthropological, and legal discourse; the racialization of U.S. foreign policy; race mixing and passing and the vicissitudes of whiteness in American political culture; and race in the realm of popular cultural representation.",
-    "times_and_locations": {
-      "SOCI 38 - L/D": {
-        "Section 01": [
-          {
-            "day": "Th",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "CHAP 101"
           }
         ]
       }
@@ -3022,36 +2902,6 @@
             "day": "W",
             "time": "12:30 PM - 01:50 PM",
             "location": "FAYE 115"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Survey of African Art",
-    "course_codes": [
-      "ARHA-49",
-      "BLST-46"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Rowland O. Abiodun"
-      ]
-    },
-    "description": "An introduction to the ancient and traditional arts of Africa. Special attention will be given to the archaeological importance of the rock art paintings found in such disparate areas as the Sahara and South Africa, achievements in the architectural and sculptural art in clay of the early people in the area now called Zimbabwe and the aesthetic qualities of the terracotta and bronze sculptures of the Nok, Igbo-Ukwe, Ife and Benin cultures in West Africa, which date from the second century B.C.E. to the sixteenth century C.E. The study will also pursue a general socio-cultural survey of traditional arts of the major ethnic groups of Africa.",
-    "times_and_locations": {
-      "ARHA 49 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "FAYE 217A"
-          },
-          {
-            "day": "W",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "FAYE 217A"
           }
         ]
       }
@@ -3984,122 +3834,6 @@
   },
   {
     "semester": "Spring 2010",
-    "course_title": "Biochemistry",
-    "course_codes": [
-      "BIOL-30",
-      "CHEM-30"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sheila S. Jaswal",
-        "Patrick L. Williamson"
-      ]
-    },
-    "description": "Structure and function of biologically important molecules and their role(s) in life processes. Protein conformation, enzymatic mechanisms and selected metabolic pathways will be analyzed. Additional topics may include: nucleic acid conformation, DNA/protein interactions, signal transduction and transport phenomena. Four classroom hours and four hours of laboratory work per week.",
-    "times_and_locations": {
-      "BIOL 30 - LEC": {
-        "Section 02": [
-          {
-            "day": "M",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "F",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 4"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "M",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "F",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 4"
-          }
-        ],
-        "Section 04": [
-          {
-            "day": "M",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "F",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 4"
-          }
-        ]
-      },
-      "BIOL 30 - LAB": {
-        "Section 02": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 06:00 PM",
-            "location": "MERR 404"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 06:00 PM",
-            "location": "MERR 404"
-          }
-        ],
-        "Section 04": [
-          {
-            "day": "Th",
-            "time": "02:00 PM - 06:00 PM",
-            "location": "MERR 404"
-          }
-        ]
-      },
-      "BIOL 30 - DIS": {
-        "Section 02": [
-          {
-            "day": "F",
-            "time": "02:00 PM - 02:50 PM",
-            "location": "MERR 4"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "F",
-            "time": "02:00 PM - 02:50 PM",
-            "location": "MERR 4"
-          }
-        ],
-        "Section 04": [
-          {
-            "day": "F",
-            "time": "02:00 PM - 02:50 PM",
-            "location": "MERR 4"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
     "course_title": "Physical Chemistry",
     "course_codes": [
       "CHEM-43"
@@ -4150,61 +3884,6 @@
             "day": "W",
             "time": "02:00 PM - 06:00 PM",
             "location": "MERR 419"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Senior Departmental Honors",
-    "course_codes": [
-      "CHEM-78",
-      "CHEM-78D"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Anthony C. Bishop"
-      ],
-      "Section 02": [
-        "Sandra Burkett"
-      ],
-      "Section 05": [
-        "Joseph N. Kushick"
-      ],
-      "Section 06": [
-        "Helen O Leung"
-      ],
-      "Section 07": [
-        "Mark D. Marshall"
-      ],
-      "Section 08": [
-        "Karena A. McKinney"
-      ],
-      "Section 09": [
-        "Patricia B. O'Hara"
-      ],
-      "Section 03": [
-        "Gary J. Snyder"
-      ]
-    },
-    "description": "A double course.",
-    "times_and_locations": {
-      "CHEM 78 - TUT": {
-        "Section 00": [
-          {
-            "day": "F",
-            "time": "03:00 PM - 05:00 PM",
-            "location": "MERR 4"
-          }
-        ]
-      },
-      "CHEM 78D - TUT": {
-        "Section 00": [
-          {
-            "day": "F",
-            "time": "03:00 PM - 05:00 PM",
-            "location": "MERR 315"
           }
         ]
       }
@@ -5536,36 +5215,6 @@
   },
   {
     "semester": "Spring 2010",
-    "course_title": "Caribbean Poetry: The Anglophone Tradition",
-    "course_codes": [
-      "BLST-37",
-      "ENGL-52"
-    ],
-    "faculty": {
-      "Section 01": [
-        "C. Rhonda Cobham-Sander"
-      ]
-    },
-    "description": "A survey of the work of Anglophone Caribbean poets, alongside readings about the political, cultural and aesthetic traditions that have influenced their work. Readings will include longer cycles of poems by Derek Walcott and Edward Kamau Brathwaite; dialect and neoclassical poetry from the colonial period, as well as more recent poetry by women writers and performance (dub) poets.",
-    "times_and_locations": {
-      "ENGL 52 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "COOP 101"
-          },
-          {
-            "day": "W",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "COOP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
     "course_title": "Studies in Nineteenth-Century American Literature",
     "course_codes": [
       "ENGL-62"
@@ -5786,31 +5435,6 @@
             "day": "W",
             "time": "02:00 PM - 03:20 PM",
             "location": "BARR 102"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Research Methods in American Culture",
-    "course_codes": [
-      "AMST-68",
-      "ENGL-95"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Robert T. Hayashi"
-      ]
-    },
-    "description": "This course is designed to provide American Studies majors, as well as others interested in interdisciplinary work, the opportunity and support to produce a major piece of research writing on a topic of their choosing. We will examine a wide range of materials, including photographs, paintings, legal documents, journals, poems, and plays. The course will also introduce students to the variety of methodologies utilized by practitioners in the field of American Studies. The specific focus of the course will be the role of place in American culture. By studying discrete geographic locations--their histories, residents, and cultural representations--students will gain appreciation for interdisciplinary work and the development of American Studies.",
-    "times_and_locations": {
-      "AMST 68 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 05:00 PM",
-            "location": "CHAP 210"
           }
         ]
       }
@@ -6196,66 +5820,6 @@
             "day": "Th",
             "time": "11:30 AM - 12:50 PM",
             "location": "CONV 108"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Designing Architecture Across Borders and Time",
-    "course_codes": [
-      "ARHA-16",
-      "EUST-52"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Thom Long"
-      ]
-    },
-    "description": "In this intermediate architectural design studio we will explore the intellectual and creative process of making and representing architectural space. The focus will be to explore the boundaries of architecture--physically and theoretically, historically and presently--through digital media. Our process will prompt us to dissect 20th-century European architectures and urban spaces and to explore their relationships to contemporary, global issues. The capstone of the course will be a significant design project (TBD) requiring rigorous studio practices, resulting in plans, sections, elevations and digital models. This course will introduce students to various digital diagramming, drawing, and modeling software, while challenging students to question the theoretical and practical implications of these interdisciplinary media processes. This course will combine lectures, reading, discussion, and extensive studio design.",
-    "times_and_locations": {
-      "ARHA 16 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "09:00 AM - 12:00 PM",
-            "location": "SMUD 116"
-          },
-          {
-            "day": "W",
-            "time": "09:00 AM - 12:00 PM",
-            "location": "SMUD 116"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Baroque Art in Italy, France, Spain, and the Spanish Netherlands",
-    "course_codes": [
-      "ARHA-56",
-      "EUST-56"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Nicola Courtright"
-      ]
-    },
-    "description": "After the canonization of the notion of artistic genius in the Italian Renaissance and the subsequent imaginative license of artists known as Mannerists, phenomena sponsored throughout Europe by the largesse of merchants, courtiers, aristocrats, princes, and Churchmen alike, a crisis occurred in European society--and art--in the second half of the sixteenth century. Overturned dogmas of faith, accompanied by scientific discoveries and brutal political changes, brought about the reconsideration of fundamental values that had undergirded many facets of life and society in Europe at the beginning of the seventeenth century, the starting point of this course. Unexpectedly, these upheavals led to a renewed proliferation of innovative art. In this century of remarkably varied artistic production, paradoxes abounded. Some artists sought the illusion of reality by imitating unimproved, even base nature through close observation of the human body, of landscape, and of ordinary, humble objects of daily use, as others continued to quest for perfection in a return to the lofty principles implicit in ancient artistic canons of ideality. More than ever before, artists explored the expression of passion through dramatic narratives and sharply revealing portraiture, but, famously, artists also imbued art meant to inspire religious devotion with unbounded eroticism or with the gory details of painful suffering and hideous death. They depicted dominating political leaders as flawed mortals--even satirized them through the new art of caricature--at the same time that they developed a potent and persuasive vocabulary for the expression of the rulers absolutist political power. This class will examine in depth selected works of painting, sculpture, and architecture produced by artists in the countries which remained Catholic after the religious discords of this period-e.g., Caravaggio, Bernini, Poussin, Velazquez, and Rubens in Italy, France, Spain, and the Spanish Netherlands--as well as engaging the cultural, social, and intellectual framework for their accomplishments.",
-    "times_and_locations": {
-      "ARHA 56 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "FAYE 117"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "FAYE 117"
           }
         ]
       }
@@ -7163,36 +6727,6 @@
   },
   {
     "semester": "Spring 2010",
-    "course_title": "Architectures of Disappearance",
-    "course_codes": [
-      "EUST-64",
-      "GERM-64"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Heidi Gilpin"
-      ]
-    },
-    "description": "This course will address a number of developments and transformations in contemporary urban architecture and performance from an international perspective. We will explore issues including, but not limited to, trauma, memory, absence, perception, corporeality, representation, and the senses in our examination of recent work in Germany and elsewhere, and read a number of texts from the fields of philosophy, critical theory, performance studies, and visual and architectural studies, in an attempt to understand how architecture is beginning to develop compositional systems in which to envision dynamic and responsive spaces in specific cultural contexts. We will focus our research on the work of a number of German and international architects, performance, and new media artists, including Jochen Gerz, Renata Stih and Frieder Schnock, Horst Hoheisel, Micha Ullman, Shimon Attie, Daniel Libeskind, Peter Eisenman, Rem Koolhaas, Greg Lynn, Mark Goulthorpe, R & Sie(n), Axel Kilian, Paul Privitera, Hani Rashid and Lise-Ann Couture, Herzog and de Meuron, Archigram, William Forsythe, Jan Fabre, Rachel Whiteread, Rebecca Horn, Sasha Waltz, Richard Siegal, Michael Schumacher, Robert Wilson, the Blix Brothers of Berlin, Pina Bausch, Granular Synthesis, Sponge, Rafael Lozano-Hemmer, Toni Dove, and many others. Conducted in English, with German majors required to do a substantial portion of the reading in German.",
-    "times_and_locations": {
-      "GERM 64 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "CONV 302"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "CONV 302"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
     "course_title": "Britain and British Imperialism Since 1815",
     "course_codes": [
       "HIST-05"
@@ -7274,36 +6808,6 @@
             "day": "Th",
             "time": "11:30 AM - 12:50 PM",
             "location": "BARR 102"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Modern China",
-    "course_codes": [
-      "ASLC-46",
-      "HIST-16"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jerry P. Dennerline"
-      ]
-    },
-    "description": "A survey of Chinese history from the Manchu conquest of 1644 to the present. Beginning with the successes and failures of the imperial state as it faced global economic development, expanding European empires, and internal social change, we will study the Opium War, massive nineteenth-century religious rebellions, Republican revolution and state-building, the New Culture movement, Communist revolution, the anti-Japanese war, Maos Cultural Revolution, and the problems of post-Mao reform, all with comparative reference to current events. Readings, which include a wide variety of documents such as religious and revolutionary tracts, eye-witness accounts, memoirs, and letters, are supplemented by interpretive essays and videos.",
-    "times_and_locations": {
-      "HIST 16 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 203"
-          },
-          {
-            "day": "Th",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 203"
           }
         ]
       }
@@ -7464,40 +6968,6 @@
   },
   {
     "semester": "Spring 2010",
-    "course_title": "Environmental Issues of the Nineteenth Century",
-    "course_codes": [
-      "ENST-20",
-      "HIST-26"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Edward D. Melillo"
-      ]
-    },
-    "description": "This course considers the ways that people in various parts of the world thought about and acted upon nature during the nineteenth century. We look historically at issues that continue to have relevance today, including: invasive species, deforestation, soil-nitrogen availability, water use, desertification, and air pollution. Themes include: the relationship of nineteenth-century colonialism and environmental degradation, gender and environmental change, the racial dimensions of ecological issues, and the spatial aspects of human interactions with nature. We will take at least one field trip. In addition, we will watch three films that approach nineteenth-century environmental issues from different vantage points.",
-    "times_and_locations": {
-      "HIST 26 - LEC": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "MERR 403"
-          }
-        ]
-      },
-      "HIST 26 - L/D": {
-        "Section 01": [
-          {
-            "day": "Th",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "MERR 401"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
     "course_title": "The Reformation Era, 1500-1660",
     "course_codes": [
       "HIST-29"
@@ -7549,66 +7019,6 @@
             "day": "Th",
             "time": "10:00 AM - 11:20 AM",
             "location": "MERR 3"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Afro-Latin America",
-    "course_codes": [
-      "BLST-44",
-      "HIST-56"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Lowell W. Gudmundson"
-      ]
-    },
-    "description": "This course explores the historical experiences of Afro-Latin populations since Independence within and outside the nation-state. The course asks how and why one might study those whose governments define them not as peoples of African descent but as part of a mixed-race majority of Hispanic cultural heritage, who themselves may often have supported this policy, and who may have had compelling reasons to avoid official scrutiny. Materials include early 20th-century racialist theorizing in Latin America; historical works using census, economic, criminal, and marriage records; analysis of race in the textual and musical representations of peoples, regions and nations; as well as autobiographical works.",
-    "times_and_locations": {
-      "HIST 56 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "FAYE 115"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "FAYE 115"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Women in the Middle East",
-    "course_codes": [
-      "ASLC-63",
-      "HIST-62"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Monica M. Ringer"
-      ]
-    },
-    "description": "The course examines the major developments, themes and issues in womens history in the Middle East. The first segment of the course concerns the early Islamic period and discusses the impact of the Quran on the status of women, the development of Islamic religious traditions and Islamic law. Questions concerning the historiography of this formative period of Islamic history, as well as hermeneutics of the Quran will be the focus of this segment. The second segment of the course concerns the 19th- and 20th-century Middle East. We will investigate the emergence and development of the woman question, the role of gender in the construction of Middle Eastern nationalisms, womens political participation, and the debates concerning the connections between women, gender, and religious and cultural traditions. The third segment of the course concerns the contemporary Middle East, and investigates new developments and emerging trends of womens political, social and religious activism in different countries. The course will provide a familiarity with the major primary texts concerning women and the study of women in the Middle East, as well as with the debates concerning the interpretation of texts, law, religion, and history in the shaping of womens status and concerns in the Middle East today.",
-    "times_and_locations": {
-      "HIST 62 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 209"
-          },
-          {
-            "day": "Th",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 209"
           }
         ]
       }
@@ -7691,31 +7101,6 @@
             "day": "M",
             "time": "02:00 PM - 04:00 PM",
             "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Topics in African American History: Race and Educational Opportunity in America",
-    "course_codes": [
-      "BLST-67",
-      "HIST-82"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Hilary J. Moss"
-      ]
-    },
-    "description": "This seminar is an interdisciplinary exploration of the relationship between race and educational opportunity in American history. Students will gain a historical understanding of the divergent educational experiences of various groups within American society. The course is divided into four units: ethnicity and educational access in early America, education and segregation in Jim Crow America, desegregation (implementation and opposition) after Brown v. Board of Education, and contemporary discussions over race and access to education. In the first section of the course, students will pay special attention to trends including northern and southern resistance to African American education, education as assimilation, and vocational vs. classical education. Next, they will delve into twentieth- and twenty-first-century issues involving race and education. For example, they will examine how specific communities-northern, southern, and western-grappled with the desegregation process. Finally, students will assess the extent to which desegregation has been achieved and the transformative effects of this policy on public schools.",
-    "times_and_locations": {
-      "HIST 82 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "WEBS 217"
           }
         ]
       }
@@ -8279,67 +7664,6 @@
   },
   {
     "semester": "Spring 2010",
-    "course_title": "Introduction to Statistics",
-    "course_codes": [
-      "ENST-24",
-      "MATH-17"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Shu-Min Liao"
-      ],
-      "Section 02": [
-        "Amy S. Wagaman"
-      ]
-    },
-    "description": "This course is an introduction to applied statistical methods useful for the analysis of data from all fields. Brief coverage of data summary and graphical techniques will be followed by elementary probability, sampling distributions, the central limit theorem and statistical inference. Inference procedures include confidence intervals and hypothesis testing for both means and proportions, non-parametric alternatives to standard hypothesis tests of the mean, the chi-square test, simple linear regression, and a brief introduction to analysis of variance (ANOVA). Two class hours plus two hours of laboratory per week.",
-    "times_and_locations": {
-      "MATH 17 - LEC": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "SMUD 207"
-          },
-          {
-            "day": "W",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "SMUD 207"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "M",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "SMUD 207"
-          },
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "SMUD 207"
-          }
-        ]
-      },
-      "MATH 17 - LAB": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:00 PM - 03:00 PM",
-            "location": "SMUD 014"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "Th",
-            "time": "01:00 PM - 03:00 PM",
-            "location": "SMUD 014"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
     "course_title": "Regression Modeling and Design of Experiments",
     "course_codes": [
       "MATH-18"
@@ -8548,80 +7872,6 @@
             "day": "Th",
             "time": "01:00 PM - 01:50 PM",
             "location": "SMUD 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "The Blues Muse: African American Music in American Culture",
-    "course_codes": [
-      "BLST-53",
-      "MUSI-08"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jason Robinson"
-      ]
-    },
-    "description": "This course examines the relationship between blues music and American culture. Using Amiri Baraka's influential 1963 book of music criticism Blues People as a central text, we will explore ways in which the \"blues impulse\" has been fundamental to conceptions of African-American identity. At the same time, we will trace the development of African-American music through its connection to West African musical traditions and through its emergence during slavery and the Jim Crow South. Our investigation will survey a number of precursors to the blues work songs, spirituals, and minstrels and see how these impacted early blues styles, including delta blues, classic blues, and early blues-oriented gospel practices. The blues played a fundamental role in the emergence of new popular musics in the 1940s and 1950s, most notably rock and roll. Embedded within these new musical practices were ideas about African American modernism, urbanity, and self-representation. Culminating in an examination of hip-hop culture, we will analyze the connection between African-American musical practices and larger debates about race, class, gender, and ethnicity. We will see how the blues serves as a mode of activism, how blues musicians engage questions about racial and ethnic identity through music making.",
-    "times_and_locations": {
-      "MUSI 08 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "ARMU 212"
-          },
-          {
-            "day": "Th",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "ARMU 212"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Performance and Analysis II",
-    "course_codes": [
-      "MUSI-10",
-      "MUSI-10H"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jenny L. Kallick"
-      ]
-    },
-    "description": "Members of the class will be assigned to chamber ensembles, representing a range of repertoire from the past and present. Ensembles will include both student and artist musicians, who will prepare works for performance in class sessions and private coachings. Intensive class analysis will serve as the basis of musical expression and interpretation. This course is open to singers and instrumentalists. Music 10 may be elected either as a full credit or half credit and may be repeated.",
-    "times_and_locations": {
-      "MUSI 10 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "04:00 PM - 06:00 PM",
-            "location": "ARMU 212"
-          },
-          {
-            "day": "W",
-            "time": "04:00 PM - 06:00 PM",
-            "location": "ARMU 212"
-          }
-        ]
-      },
-      "MUSI 10H - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "04:00 PM - 06:00 PM",
-            "location": "ARMU 212"
-          },
-          {
-            "day": "W",
-            "time": "04:00 PM - 06:00 PM",
-            "location": "ARMU 212"
           }
         ]
       }
@@ -9700,36 +8950,6 @@
   },
   {
     "semester": "Spring 2010",
-    "course_title": "Women and Politics in Africa",
-    "course_codes": [
-      "BLST-25",
-      "POSC-29"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Catharine Newbury"
-      ]
-    },
-    "description": "This course will explore the genesis and effects of political activism by women in Africa, which some believe represents a new African feminism, and its implications for state/civil society relations in contemporary Africa. Topics will include the historical effects of colonialism on the economic, social, and political roles of African women, the nature of urban/rural distinctions, and the diverse responses by women to the economic and political crises of post-colonial African policies. This course will also explore case studies of specific African countries, with readings of novels and womens life histories as well as analyses by social scientists.",
-    "times_and_locations": {
-      "POSC 29 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 201"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 201"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
     "course_title": "Threats and Security in Postwar East Asia",
     "course_codes": [
       "POSC-31"
@@ -9887,36 +9107,6 @@
             "day": "W",
             "time": "02:00 PM - 04:00 PM",
             "location": "CLAR 100"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Culture and Politics in 20th-Century Europe",
-    "course_codes": [
-      "EUST-35",
-      "POSC-72"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ronald S. Tiersky"
-      ]
-    },
-    "description": "This seminar discusses political ideas, ideologies and political culture in 20th-century Europe. Some themes are Nationalism; Marxism, Socialism and Communism; Fascism; anti-Semitism; Existentialism; the Century of Total War; the year 1968; Pope John Paul II; Soccer Hooliganism; The Idea of Europe, and the question of whether there is a European identity. Throughout the course, ideas are connected to historical context. The syllabus is a mix of books and films. This course can be taken as a regular course or it can fulfill the requirement for an advanced seminar in Political Science.",
-    "times_and_locations": {
-      "POSC 72 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 209"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 209"
           }
         ]
       }
@@ -10159,75 +9349,6 @@
             "day": "Th",
             "time": "11:30 AM - 12:50 PM",
             "location": "MERR 131"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Introduction to Neuroscience",
-    "course_codes": [
-      "NEUR-26",
-      "PSYC-26"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Stephen A. George",
-        "Sarah M. Turgeon"
-      ]
-    },
-    "description": "An introduction to the structure and function of the nervous system, this course will explore the neural bases of behavior at the cellular and systems levels. Basic topics in neurobiology, neuroanatomy and physiological psychology will be covered with an emphasis on understanding how neuroscientists approach the study of the nervous system. Three class hours and three hours of laboratory per week.",
-    "times_and_locations": {
-      "NEUR 26 - LEC": {
-        "Section 02": [
-          {
-            "day": "M",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 3"
-          },
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 3"
-          },
-          {
-            "day": "F",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 3"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "M",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 3"
-          },
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 3"
-          },
-          {
-            "day": "F",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 3"
-          }
-        ]
-      },
-      "NEUR 26 - LAB": {
-        "Section 02": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 05:00 PM",
-            "location": "MCLS 145"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 05:00 PM",
-            "location": "MCLS 145"
           }
         ]
       }
@@ -10544,36 +9665,6 @@
   },
   {
     "semester": "Spring 2010",
-    "course_title": "Buddhist Ethics",
-    "course_codes": [
-      "ASLC-58",
-      "RELI-27"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Maria R. Heim"
-      ]
-    },
-    "description": "A systematic exploration of the place of ethics and moral reasoning in Buddhist thought and practice. The scope of the course is wide, with examples drawn from the whole Buddhist world, but emphasis is on the particularity of different Buddhist visions of the ideal human life. Attention is given to the problems of the proper description of Buddhist ethics in a comparative perspective.",
-    "times_and_locations": {
-      "RELI 27 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "WEBS 220"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "WEBS 220"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
     "course_title": "Inquisition, Heresy, and Popular Culture",
     "course_codes": [
       "RELI-46"
@@ -10589,61 +9680,6 @@
         "Section 01": [
           {
             "day": "Tu",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "CHAP 210"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "The Problem of Evil",
-    "course_codes": [
-      "PHIL-29",
-      "RELI-51"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Andrew C. Dole"
-      ]
-    },
-    "description": "If God is omnibenevolent, then God would not want any creature to suffer evil; if God is omniscient, then God would know how to prevent any evil from occurring; and if God is omnipotent, then God would be able to prevent any evil from occurring. Does the obvious fact that there is evil in the world, then, give us reason to think that there is no such God? Alternatively: if an omnibenevolent, omniscient, and omnipotent God does exist, then what could possibly motivate such a God to permit the existence of evil? This course will survey recent philosophical discussions of these questions. We will read works by J. L. Mackie, Nelson Pike, John Hick, Alvin Plantinga, Robert and Marilyn Adams, and others.",
-    "times_and_locations": {
-      "RELI 51 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 101"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "The Islamic Mystical Tradition",
-    "course_codes": [
-      "ASLC-56",
-      "RELI-53"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Tariq Jaffer"
-      ]
-    },
-    "description": "This course is a survey of the large complex of Islamic intellectual and social perspectives subsumed under the term Sufism. Sufi mystical philosophies, liturgical practices, and social organizations have been a major part of the Islamic tradition in all historical periods, and Sufism has also served as a primary creative force behind Islamic aesthetic expression in poetry, music, and the visual arts. In this course, we will attempt to understand the various significations of Sufism by addressing both the world of ideas and socio-cultural practices. The course is divided into four modules: central themes and concepts going back to the earliest individuals who identified themselves as Sufis; the lives and works of two medieval Sufis; Sufi cosmology and metaphysics; Sufism as a global and multifarious trend in the modern world.",
-    "times_and_locations": {
-      "RELI 53 - L/D": {
-        "Section 01": [
-          {
-            "day": "Th",
             "time": "02:00 PM - 04:30 PM",
             "location": "CHAP 210"
           }
@@ -11014,7 +10050,9 @@
   {
     "semester": "Spring 2010",
     "course_title": "Queer Canons",
-    "course_codes": ["WAGS-31"],
+    "course_codes": [
+      "WAGS-31"
+    ],
     "faculty": {
       "Section 01": [
         "Frederick T. Griffiths"
@@ -11064,124 +10102,6 @@
             "day": "Th",
             "time": "02:00 PM - 03:20 PM",
             "location": "FAYE 115"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Medieval Love, Sex, Marriage",
-    "course_codes": [
-      "ENGL-32"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Amanda A. Walling"
-      ]
-    },
-    "description": "This course will examine the literary and cultural meanings of love, sexuality, and marriage in the Middle Ages, with a primary focus on late medieval England. We will explore such phenomena as courtly love, bawdy humor, and the place of romantic love in marriage, while we also consider how various authors use the language and concepts of love to explore deeper questions of power, identity, and literary purpose. We will read and discuss selected texts from the Arthurian tradition and from the works of John Gower and Geoffrey Chaucer, as well as assorted religious texts, love poems, comic tales of adultery, and debates about the sinfulness of women. Readings will be in translation or in Middle English (of which no prior knowledge is required).",
-    "times_and_locations": {
-      "ENGL 32 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 315"
-          },
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 315"
-          },
-          {
-            "day": "F",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 315"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Women and Politics in Africa",
-    "course_codes": [
-      "BLST-25",
-      "POSC-29"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Catharine Newbury"
-      ]
-    },
-    "description": "This course will explore the genesis and effects of political activism by women in Africa, which some believe represents a new African feminism, and its implications for state/civil society relations in contemporary Africa. Topics will include the historical effects of colonialism on the economic, social, and political roles of African women, the nature of urban/rural distinctions, and the diverse responses by women to the economic and political crises of post-colonial African policies. This course will also explore case studies of specific African countries, with readings of novels and womens life histories as well as analyses by social scientists.",
-    "times_and_locations": {
-      "POSC 29 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 201"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 201"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Women in the Middle East",
-    "course_codes": [
-      "ASLC-63",
-      "HIST-62"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Monica M. Ringer"
-      ]
-    },
-    "description": "The course examines the major developments, themes and issues in womens history in the Middle East. The first segment of the course concerns the early Islamic period and discusses the impact of the Quran on the status of women, the development of Islamic religious traditions and Islamic law. Questions concerning the historiography of this formative period of Islamic history, as well as hermeneutics of the Quran will be the focus of this segment. The second segment of the course concerns the 19th- and 20th-century Middle East. We will investigate the emergence and development of the woman question, the role of gender in the construction of Middle Eastern nationalisms, womens political participation, and the debates concerning the connections between women, gender, and religious and cultural traditions. The third segment of the course concerns the contemporary Middle East, and investigates new developments and emerging trends of womens political, social and religious activism in different countries. The course will provide a familiarity with the major primary texts concerning women and the study of women in the Middle East, as well as with the debates concerning the interpretation of texts, law, religion, and history in the shaping of womens status and concerns in the Middle East today.",
-    "times_and_locations": {
-      "HIST 62 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 209"
-          },
-          {
-            "day": "Th",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 209"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "States of Poverty",
-    "course_codes": [
-      "POSC-85"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Kristin Bumiller"
-      ]
-    },
-    "description": "In this course the students will examine the role of the modern welfare state in peoples everyday lives. We will study the historical growth and retrenchment of the modern welfare state in the United States and other Western democracies. The course will critically examine the ideologies of dependency and the role of the state as an agent of social control. In particular, we will study the ways in which state action has implications for gender identities. In this course we will analyze the construction of social problems linked to states of poverty, including hunger, homelessness, health care, disability, discrimination, and violence. We will ask how these conditions disproportionately affect the lives of women and children. We will take a broad view of the interventions of the welfare state by considering not only the impact of public assistance and social service programs, but the role of the police, family courts, therapeutic professionals, and schools in creating and responding to the conditions of impoverishment. The work of the seminar will culminate in the production of a research paper and students will be given the option of incorporating field work into the independent project. This course fulfills the requirement for an advanced seminar in Political Science.",
-    "times_and_locations": {
-      "POSC 85 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "FAYE 217A"
           }
         ]
       }
@@ -11506,7 +10426,9 @@
   {
     "semester": "Spring 2010",
     "course_title": "Numbers Rule the World.",
-    "course_codes": [],
+    "course_codes": [
+      "MELL-16"
+    ],
     "faculty": {
       "Section 01": [
         "Jerome L. Himmelstein"
@@ -11898,34 +10820,10 @@
   },
   {
     "semester": "Spring 2010",
-    "course_title": "Production Seminar in the Moving Image: Performance, Video and Sound",
-    "course_codes": [
-      "ENGL-89",
-      "THDA-96"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Baba Hillman",
-        "Wendy Woodson"
-      ]
-    },
-    "description": "This course will focus on creating a performance, music, and video piece on the themes of migration, displacement, memory and history. The piece will be developed through interdisciplinary experiments that emphasize the exploration of reciprocal relationships within and between the different media. Students will work individually and in collaborative teams and will be involved in the conception, rehearsals and performances of an original performance work. One three-hour class meeting per week plus a lab session.",
-    "times_and_locations": {
-      "ENGL 89 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "01:00 PM - 04:00 PM",
-            "location": "WEBS 117"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
     "course_title": "The Political Economy of Gender in Latin America",
-    "course_codes": ["WAGS-04"],
+    "course_codes": [
+      "WAGS-04"
+    ],
     "faculty": {
       "Section 01": [
         "Manuela Picq"
@@ -11947,7 +10845,9 @@
   {
     "semester": "Spring 2010",
     "course_title": "Gender and the Environment",
-    "course_codes": ["WAGS-07"],
+    "course_codes": [
+      "WAGS-07"
+    ],
     "faculty": {
       "Section 01": [
         "Manuela Picq"
@@ -11974,7 +10874,9 @@
   {
     "semester": "Spring 2010",
     "course_title": "Gender Labor",
-    "course_codes": ["WAGS-24"],
+    "course_codes": [
+      "WAGS-24"
+    ],
     "faculty": {
       "Section 01": [
         "Michele Barale"
@@ -12001,7 +10903,9 @@
   {
     "semester": "Spring 2010",
     "course_title": "Women and the Law in Cross-Cultural Perspective",
-    "course_codes": ["WAGS-26"],
+    "course_codes": [
+      "WAGS-26"
+    ],
     "faculty": {
       "Section 01": [
         "Margaret R. Hunt"
@@ -12027,126 +10931,10 @@
   },
   {
     "semester": "Spring 2010",
-    "course_title": "Medieval Love, Sex, Marriage",
-    "course_codes": [
-      "ENGL-32"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Amanda A. Walling"
-      ]
-    },
-    "description": "This course will examine the literary and cultural meanings of love, sexuality, and marriage in the Middle Ages, with a primary focus on late medieval England. We will explore such phenomena as courtly love, bawdy humor, and the place of romantic love in marriage, while we also consider how various authors use the language and concepts of love to explore deeper questions of power, identity, and literary purpose. We will read and discuss selected texts from the Arthurian tradition and from the works of John Gower and Geoffrey Chaucer, as well as assorted religious texts, love poems, comic tales of adultery, and debates about the sinfulness of women. Readings will be in translation or in Middle English (of which no prior knowledge is required).",
-    "times_and_locations": {
-      "ENGL 32 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 315"
-          },
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 315"
-          },
-          {
-            "day": "F",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 315"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Women and Politics in Africa",
-    "course_codes": [
-      "BLST-25",
-      "POSC-29"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Catharine Newbury"
-      ]
-    },
-    "description": "This course will explore the genesis and effects of political activism by women in Africa, which some believe represents a new African feminism, and its implications for state/civil society relations in contemporary Africa. Topics will include the historical effects of colonialism on the economic, social, and political roles of African women, the nature of urban/rural distinctions, and the diverse responses by women to the economic and political crises of post-colonial African policies. This course will also explore case studies of specific African countries, with readings of novels and womens life histories as well as analyses by social scientists.",
-    "times_and_locations": {
-      "POSC 29 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 201"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 201"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Women in the Middle East",
-    "course_codes": [
-      "ASLC-63",
-      "HIST-62"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Monica M. Ringer"
-      ]
-    },
-    "description": "The course examines the major developments, themes and issues in womens history in the Middle East. The first segment of the course concerns the early Islamic period and discusses the impact of the Quran on the status of women, the development of Islamic religious traditions and Islamic law. Questions concerning the historiography of this formative period of Islamic history, as well as hermeneutics of the Quran will be the focus of this segment. The second segment of the course concerns the 19th- and 20th-century Middle East. We will investigate the emergence and development of the woman question, the role of gender in the construction of Middle Eastern nationalisms, womens political participation, and the debates concerning the connections between women, gender, and religious and cultural traditions. The third segment of the course concerns the contemporary Middle East, and investigates new developments and emerging trends of womens political, social and religious activism in different countries. The course will provide a familiarity with the major primary texts concerning women and the study of women in the Middle East, as well as with the debates concerning the interpretation of texts, law, religion, and history in the shaping of womens status and concerns in the Middle East today.",
-    "times_and_locations": {
-      "HIST 62 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 209"
-          },
-          {
-            "day": "Th",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 209"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "States of Poverty",
-    "course_codes": [
-      "POSC-85"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Kristin Bumiller"
-      ]
-    },
-    "description": "In this course the students will examine the role of the modern welfare state in peoples everyday lives. We will study the historical growth and retrenchment of the modern welfare state in the United States and other Western democracies. The course will critically examine the ideologies of dependency and the role of the state as an agent of social control. In particular, we will study the ways in which state action has implications for gender identities. In this course we will analyze the construction of social problems linked to states of poverty, including hunger, homelessness, health care, disability, discrimination, and violence. We will ask how these conditions disproportionately affect the lives of women and children. We will take a broad view of the interventions of the welfare state by considering not only the impact of public assistance and social service programs, but the role of the police, family courts, therapeutic professionals, and schools in creating and responding to the conditions of impoverishment. The work of the seminar will culminate in the production of a research paper and students will be given the option of incorporating field work into the independent project. This course fulfills the requirement for an advanced seminar in Political Science.",
-    "times_and_locations": {
-      "POSC 85 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "FAYE 217A"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
     "course_title": "Gender Dichotomies in PC",
-    "course_codes": ["WAGS-98"],
+    "course_codes": [
+      "WAGS-98"
+    ],
     "faculty": {
       "Section 05": [
         "Manuela Picq"
