@@ -25,7 +25,7 @@ semester = 'all'
 with open(f'../../../similarity/output_similarity_{semester}.json', 'r') as f:
     data = json.load(f)
 
-out = ['499', '498', '490', '390', '290', '210F']
+out = ['499', '498', '490', '390', '290', '210F', '111F']
 
 # Filter out courses with course codes
 filtered_courses = []
@@ -143,22 +143,22 @@ else:
 
 print(f'Saved t-SNE coordinates for {n} unique courses to precomputed_tsne_coords.json')
 
-# Optional: Add metadata to the output
-course_metadata = {}
-for entry in valid_data:
-    primary_code = entry['course_codes'][0]
-    if primary_code in course_codes:
-        # Store additional metadata if available
-        metadata = {
-            'code': primary_code,
-            'title': entry.get('title', ''),
-            'description': entry.get('description', ''),
-            'department': entry.get('department', '')
-        }
-        course_metadata[primary_code] = metadata
+# # Optional: Add metadata to the output (commented out atm)
+# course_metadata = {}
+# for entry in valid_data:
+#     primary_code = entry['course_codes'][0]
+#     if primary_code in course_codes:
+#         # Store additional metadata if available
+#         metadata = {
+#             'code': primary_code,
+#             'title': entry.get('title', ''),
+#             'description': entry.get('description', ''),
+#             'department': entry.get('department', '')
+#         }
+#         course_metadata[primary_code] = metadata
 
-if course_metadata:
-    # Save course metadata to the 'course_metadata' directory at the workspace root
-    with open(f'../../../course_metadata/course_metadata_{semester}.json', 'w') as f:
-        json.dump(course_metadata, f, indent=2)
-    print(f'Saved course metadata to course_metadata/{semester}.json')
+# if course_metadata:
+#     # Save course metadata to the 'course_metadata' directory at the workspace root
+#     with open(f'../../../course_metadata/course_metadata_{semester}.json', 'w') as f:
+#         json.dump(course_metadata, f, indent=2)
+#     print(f'Saved course metadata to course_metadata/{semester}.json')

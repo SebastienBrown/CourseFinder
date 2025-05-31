@@ -36,7 +36,7 @@
 
 3. Apply t-SNE to compute coordinates for each course
 - `cd ./course-visualization/src/data/`
-- `python ./generate_precomputed_tsne.py`
+- `sbatch ./generate_precomputed_tsne.sbatch` or `python ./generate_precomputed_tsne.py`
 - Output: `./course-visualization/public/precomputed_tsne_coords_{semester}.json`
 
 **Run backend**
