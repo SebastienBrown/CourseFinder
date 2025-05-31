@@ -24,6 +24,7 @@ const TRANCHE_SHAPES = {
   "Humanities": "square",
   "Sciences": "triangle",
   "Social Sciences": "star",
+  "First Year Seminar": "doubleCircle"
 };
 
 const TRANCHES = {
@@ -36,6 +37,7 @@ const TRANCHES = {
     "BLST",
     "CHIN",
     "CLAS",
+    "COLQ",
     "EDST",
     "ENGL",
     "ENST",
@@ -68,6 +70,7 @@ const TRANCHES = {
     "STAT",
   ],
   "Social Sciences": ["ANTH", "ECON", "POSC", "PSYC", "SOCI"],
+  "First Year Seminar": ["FYSE"],
 };
 
 const getTrancheForDept = (dept) => {
@@ -169,10 +172,9 @@ export default function CourseSimilarityPrecomputedGraph({
       for (const tranche of Object.values(TRANCHES)) {
         for (const major of tranche) {
           if (!majorColorMap.has(major)) {
-            majorColorMap.set(
-              major,
-              colorPalette[colorIndex % colorPalette.length]
-            );
+            // Use dark gray for FYSE
+            const color = major === "FYSE" ? "#4a4a4a" : colorPalette[colorIndex % colorPalette.length];
+            majorColorMap.set(major, color);
             colorIndex++;
           }
         }
@@ -199,24 +201,27 @@ export default function CourseSimilarityPrecomputedGraph({
       // Merge nodes with the same coordinates
       const mergedNodes = new Map();
       precomputedTSNECoords.forEach(({ codes, x, y }) => {
+        // Ensure currentCodes is always an array, defaulting to ["TBD"] if codes is not a valid array or is empty
+        const currentCodes = (Array.isArray(codes) && codes.length > 0) ? codes : ["TBD"];
+
         const key = `${x},${y}`;
         if (!mergedNodes.has(key)) {
-          const firstCode = codes[0];
+          const firstCode = currentCodes[0] || "TBD";
           const dept = firstCode.split('-')[0];
           mergedNodes.set(key, {
             id: firstCode,
             x,
             y,
             department: dept,
-            codes: codes,
+            codes: currentCodes,
             shape: getShapeForDept(dept),
             color: majorColorMap.get(dept) || "#999",
-            highlighted: codes.some(code => highlighted.includes(code)),
-            conflicted: codes.some(code => conflicted.includes(code)),
+            highlighted: currentCodes.some(code => highlighted.includes(code)),
+            conflicted: currentCodes.some(code => conflicted.includes(code)),
           });
         } else {
           const node = mergedNodes.get(key);
-          node.codes = [...new Set([...node.codes, ...codes])];
+          node.codes = [...new Set([...node.codes, ...currentCodes])];
           // Update department based on all codes
           const departments = node.codes.map(code => code.split('-')[0]);
           node.department = departments[0]; // Keep first department as primary
@@ -353,6 +358,18 @@ export default function CourseSimilarityPrecomputedGraph({
                   .attr("r", size)
                   .attr("fill", color);
                 break;
+              case "doubleCircle":
+                // Draw outer circle (unfilled)
+                group.append("circle")
+                  .attr("r", size * 1.2)
+                  .attr("fill", "none")
+                  .attr("stroke", color)
+                  .attr("stroke-width", 1.5);
+                // Draw inner circle (filled)
+                group.append("circle")
+                  .attr("r", size * 0.8)
+                  .attr("fill", color);
+                break;
               case "square":
                 size = shapeSize * singleShapeScale; // Apply scale
                  group.append("rect")
@@ -433,6 +450,18 @@ export default function CourseSimilarityPrecomputedGraph({
                   // Circle size remains the same as single-code
                   shapeSegmentGroup.append("circle")
                     .attr("r", currentShapeSize)
+                    .attr("fill", color);
+                  break;
+                case "doubleCircle":
+                  // Draw outer circle (unfilled)
+                  shapeSegmentGroup.append("circle")
+                    .attr("r", currentShapeSize * 1.2)
+                    .attr("fill", "none")
+                    .attr("stroke", color)
+                    .attr("stroke-width", 1.5);
+                  // Draw inner circle (filled)
+                  shapeSegmentGroup.append("circle")
+                    .attr("r", currentShapeSize * 0.8)
                     .attr("fill", color);
                   break;
                 case "square":
@@ -533,6 +562,18 @@ export default function CourseSimilarityPrecomputedGraph({
               .attr("r", size)
               .attr("fill", color);
             break;
+          case "doubleCircle":
+            // Draw outer circle (unfilled)
+            legendItem.append("circle")
+              .attr("r", size * 1.2)
+              .attr("fill", "none")
+              .attr("stroke", color)
+              .attr("stroke-width", 1.5);
+            // Draw inner circle (filled)
+            legendItem.append("circle")
+              .attr("r", size * 0.8)
+              .attr("fill", color);
+            break;
           case "square":
             legendItem
               .append("rect")
@@ -622,6 +663,18 @@ export default function CourseSimilarityPrecomputedGraph({
               .attr("r", size)
               .attr("fill", color);
             break;
+          case "doubleCircle":
+            // Draw outer circle (unfilled)
+            legendItem.append("circle")
+              .attr("r", size * 1.2)
+              .attr("fill", "none")
+              .attr("stroke", color)
+              .attr("stroke-width", 1.5);
+            // Draw inner circle (filled)
+            legendItem.append("circle")
+              .attr("r", size * 0.8)
+              .attr("fill", color);
+            break;
           case "square":
             legendItem
               .append("rect")
@@ -682,7 +735,7 @@ export default function CourseSimilarityPrecomputedGraph({
         .style("font-size", "18px")
         .style("font-weight", "bold")
         .text(
-          `Course Similarity Network`
+          `Course Similarity Graph`
         );
 
       // Add CSS to handle label scaling

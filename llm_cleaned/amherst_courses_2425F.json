@@ -8454,7 +8454,7 @@
   {
     "semester": "Fall 2024",
     "course_title": "Finding Your Roots: Narratives of Self and Community",
-    "course_codes": [],
+    "course_codes": ["FYSE-106"],
     "faculty": {
       "Section 01": [
         "Rick A. Lopez"
@@ -8553,7 +8553,7 @@
   {
     "semester": "Fall 2024",
     "course_title": "The Nuclear Age",
-    "course_codes": [],
+    "course_codes": ["FYSE-113"],
     "faculty": {
       "Section 01": [
         "Vanessa Walker"
@@ -8780,7 +8780,7 @@
   {
     "semester": "Fall 2024",
     "course_title": "Asia in the European Mind",
-    "course_codes": [],
+    "course_codes": ["FYSE-123"],
     "faculty": {
       "Section 01": [
         "Trent E. Maxey"
@@ -8850,7 +8850,7 @@
   {
     "semester": "Fall 2024",
     "course_title": "The Tragic Condition",
-    "course_codes": [],
+    "course_codes": ["FYSE-126"],
     "faculty": {
       "Section 01": [
         "Richard P. Hutchins"

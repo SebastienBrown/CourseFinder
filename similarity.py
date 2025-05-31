@@ -26,10 +26,10 @@ def compute_cosine_similarity(embedding1, embedding2):
 def compute_similarity_matrix(courses):
     """
     Compute a similarity matrix for the courses based on their embeddings.
-
+    
     Args:
         courses (list): A list of course dictionaries, each with an embedding and 'semester' key.
-
+    
     Returns:
         list: A list of dictionaries where each entry includes the main course's details (including semester) and a list of other courses it was compared against (including their semesters).
     """
@@ -43,10 +43,10 @@ def compute_similarity_matrix(courses):
     embeddings = [course['embedding'] for course in valid_courses]
     course_codes = [course['course_codes'] for course in valid_courses]
     semesters = [course['semester'] for course in valid_courses]
-
+    
     # Create a similarity matrix using embeddings of valid courses
     similarity_matrix = cosine_similarity(embeddings)
-
+    
     # Prepare the result format
     result = []
     for idx, course in enumerate(valid_courses):
@@ -54,7 +54,7 @@ def compute_similarity_matrix(courses):
         main_course_codes = course['course_codes']
         main_course_semester = course['semester']
         comparisons = []
-
+        
         # Compare with every other course in the valid_courses list
         for jdx, other_course in enumerate(valid_courses):
             if idx != jdx:  # Skip comparing a course with itself
@@ -68,20 +68,20 @@ def compute_similarity_matrix(courses):
                     "semester": other_course_semester, # Include semester of compared course
                     "similarity_score": similarity_score
                 })
-
+        
         result.append({
             "course_codes": main_course_codes,
             "semester": main_course_semester, # Include semester of main course
             "compared_courses": comparisons
         })
-
+    
     return result
 
 def process_and_compute_similarities(input_file, output_file, semester):
     """
     Process courses from input file, compute cosine similarities, and save results to output file.
     Includes semester information in the output.
-
+    
     Args:
         input_file (str): Path to input file containing courses with embeddings.
         output_file (str): Path to output file where results will be saved.
@@ -93,7 +93,7 @@ def process_and_compute_similarities(input_file, output_file, semester):
         with open(input_file, 'r') as file:
             courses = json.load(file)
             print("Courses loaded successfully.")
-
+        
         # Add semester information to each course dictionary
         for course in courses:
             course['semester'] = semester
@@ -102,20 +102,20 @@ def process_and_compute_similarities(input_file, output_file, semester):
         courses_with_embeddings = [course for course in courses if 'embedding' in course]
         if len(courses_with_embeddings) < len(courses):
             print(f"Warning: {len(courses) - len(courses_with_embeddings)} courses were skipped due to missing embeddings")
-
+        
         if not courses_with_embeddings:
             print(f"Error: No courses with embeddings found in {input_file}")
             return
-
+            
         # Compute the similarity matrix
         result = compute_similarity_matrix(courses_with_embeddings)
         print("done")
-
+        
         # Save the result to the output file
         with open(output_file, 'w') as file:
             json.dump(result, file, indent=4)
             print(f"Similarity results saved to {output_file}")
-
+    
     except Exception as e:
         print(f"Error processing courses: {e}")
 
