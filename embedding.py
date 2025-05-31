@@ -2,6 +2,7 @@ import requests
 import json
 import os
 from dotenv import load_dotenv
+from pathlib import Path
 
 load_dotenv()
 
@@ -94,10 +95,14 @@ def process_courses(input_file, output_file, deployment_name):
 
 
 # Input and output file paths
-semesters = ['2223F', '2223S', '2324F', '2324S']
+# semesters = ['0910F', '0910S', '1011F', '1011S', '1112F', '1112S', '1213F', '1213S', '1314F', '1314S', '1415F', '1415S', '1516F', '1516S', '1617F', '1617S', '1718F', '1718S', '1819F', '1819S', '1920F', '1920S', '2021F', '2021J', '2021S', '2122F', '2122J', '2122S']
+llm_cleaned_dir = Path('llm_cleaned')
+json_files = list(llm_cleaned_dir.glob('amherst_courses_*.json'))
 
-for semester in semesters:
-    input_file = f"llm_cleaned/amherst_courses_{semester}.json"  # Replace with your actual input file
+for file_path in json_files:
+    # Extract semester from filename (e.g., "amherst_courses_2324F.json" -> "2324F")
+    semester = file_path.stem.split('_')[-1]
+    input_file = str(file_path)
     output_file = f'embeddings/output_embeddings_{semester}.json'  # Output file
     deployment_name = "text-embedding-3-small"  # Replace with your actual deployment name
 
