@@ -573,66 +573,6 @@
   },
   {
     "semester": "Fall 2014",
-    "course_title": "Latino Migration: Labor, Lifestyle and Legality",
-    "course_codes": [
-      "AMST-260",
-      "SOCI-260"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Leah C. Schmalzbauer"
-      ]
-    },
-    "description": "Whereas capital, culture, and commerce flow freely in contemporary capitalism, labor does not. Walls--physical, legal and cultural--aim to keep certain people in and others out. In this course we explore the sociological forces behind cross-border labor flows and the parallel reality of immigrant life. We focus specifically on the experience of Latinos in the United States. We pay special attention to the linkages between the demand and supply of Latino immigrant labor, social constructions of (il)legality, and the oft-overlooked privileged lifestyles that immigration supports. While this course has a deep theoretical rooting, we use daily immigrant life as the lens through which to explore migration.",
-    "times_and_locations": {
-      "AMST 260 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CONV 209"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CONV 209"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Globalization, Inequality and Social Change",
-    "course_codes": [
-      "AMST-302",
-      "SOCI-302"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Leah C. Schmalzbauer"
-      ]
-    },
-    "description": "This course is an in-depth exploration of the increasing global interconnectedness of economic, political, and social processes, what many have come to call globalization. We begin by developing a sociological critique of the relationship between inequality, post-World War II global capitalism, and the neoliberal ideology that underlies it. We do this through study of the major institutions and actors that endorse and perpetuate global capitalism. We then explore case studies which critically examine how contemporary globalization is playing out in daily life via experiences of labor, consumption, family and community. We dedicate the last part of the course to investigating diverse examples of grassroots resistance to the current capitalist order. As we strive to achieve a complex analysis of globalization, we will be challenged to grapple seriously with issues of power and social justice and to reflect on our own social positions within an increasingly intricate global web. In accordance, we will focus throughout the course on how intersections of race, class, gender and citizenship influence the human experience of globalization.",
-    "times_and_locations": {
-      "AMST 302 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:00 PM - 02:20 PM",
-            "location": "CHAP 203"
-          },
-          {
-            "day": "Th",
-            "time": "01:00 PM - 02:20 PM",
-            "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
     "course_title": "Foundations of Sociological Theory",
     "course_codes": [
       "SOCI-315"
@@ -1002,37 +942,6 @@
             "day": "Th",
             "time": "01:00 PM - 04:00 PM",
             "location": "FAYE 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Material Culture of American Homes",
-    "course_codes": [
-      "ARCH-242",
-      "ARHA-133",
-      "HIST-242"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Kevin M. Sweeney"
-      ]
-    },
-    "description": "Using architecture, artifacts, visual evidence and documentary sources, the course examines social and cultural forces affecting the design and use of domestic architecture, home furnishings, and domestic technology in the eastern United States from 1600 to 1960. In addition to providing a survey of American domestic architecture, the course provides an introduction to the study of American material culture. Field trips to Historic Deerfield, Old Sturbridge Village, Hartford, Connecticut, and sites in Amherst form an integral part of the course.",
-    "times_and_locations": {
-      "HIST 242 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CHAP 203"
-          },
-          {
-            "day": "Th",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CHAP 203"
           }
         ]
       }
@@ -1835,101 +1744,6 @@
   },
   {
     "semester": "Fall 2014",
-    "course_title": "Public Culture in South Asia",
-    "course_codes": [
-      "ANTH-255",
-      "ASLC-255"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Nusrat S. Chowdhury"
-      ]
-    },
-    "description": "This course on South Asian public culture starts from the premise that modernity today is a global experience. Most societies today possess the means to produce local versions of the modern, as Arjun Appadurai and Carol Breckenridge have argued. In this course, we will collectively approach mass culture in South Asia--a staggeringly complex cultural entity--with an eye towards understanding emergent forms of subjectivity, agency, pleasure, and embodied experience. While rethinking the predominantly European notions of publicity, we will study how popular culture in South Asia reflects the intersecting processes of nationalism, globalization, and economic liberalization. Our focus will be on the interface of media and modernity, and in so doing, on the complex negotiations between cultural producers and consumers. We will discuss film, advertising, spatial politics, and popular art to make sense of the regions postcolonial public life.",
-    "times_and_locations": {
-      "ANTH 255 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "03:00 PM - 04:20 PM",
-            "location": "CHAP 101"
-          },
-          {
-            "day": "W",
-            "time": "03:00 PM - 04:20 PM",
-            "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Buddhist Art of Asia",
-    "course_codes": [
-      "ARHA-261",
-      "ASLC-260"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Samuel C. Morse"
-      ]
-    },
-    "description": "Visual imagery plays a central role in the Buddhist faith. As the religion developed and spread throughout Asia it took many forms. This class will first examine the appearance of the earliest aniconic traditions in ancient India, the development of the Buddha image, and early monastic centers. It will then trace the dissemination and transformation of Buddhist art as the religion reached South-East Asia, Central Asia, and eventually East Asia. In each region indigenous cultural practices and artistic traditions influenced Buddhist art. Among the topics the class will address are the nature of the Buddha image, the political uses of Buddhist art, the development of illustrated hagiographies, and the importance of pilgrimage, both in the past and the present.",
-    "times_and_locations": {
-      "ARHA 261 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "F",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "FAYE 113"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Writing about China",
-    "course_codes": [
-      "ANTH-330",
-      "ASLC-330"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Vanessa L. Fong"
-      ]
-    },
-    "description": "This course teaches students how to write academic papers about China. We will pay attention both to specific elements of writing, such as how to use academic language and citations clearly and appropriately, and to broader issues such as those of how to support claims with evidence; how to use findings from data to engage with arguments presented in the previous scholarship; how to explain why writing about issues concerning a particular Chinese population can expand understandings of similar issues worldwide; how to help readers who may not know much about Chinese language or society understand the meaning and significance of Chinese terms, concepts, and assumptions that may be different from comparable terms, concepts, and assumptions in the English language and Western scholarship; and how to find gaps in the existing scholarship and fill these gaps with findings from interview and survey data from the instructor's longitudinal study of Chinese families. Students will collaborate on projects, complementing and learning from each other. Assignments will be tailored to the interests, skills, and academic background of each student.",
-    "times_and_locations": {
-      "ANTH 330 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "NEWP 100"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "NEWP 100"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
     "course_title": "Asian Capitalism: Historical and Contemporary Views",
     "course_codes": [
       "SOCI-350",
@@ -2009,31 +1823,6 @@
             "day": "Th",
             "time": "02:30 PM - 03:50 PM",
             "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "The Art of the Talisman",
-    "course_codes": [
-      "ARHA-381",
-      "ASLC-381"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Yael R. Rice"
-      ]
-    },
-    "description": "The term talisman, from telesma (Greek) and tilsam (Arabic), has traditionally been defined as a magical object that is believed to repel harmful or evil forces. According to this view, a talisman is more interesting for what it does rather than what it represents or how it looks. Taking the arts of the Near East and South Asia as its primary frame, this course aims to move beyond these standard claims to examine the aesthetic dimensions of the talisman. What forms do talismans assume, and why? How and with what materials, texts, and physical senses (smell, sight, touch) are talismans made? And in what ways does this intersection of multiple systems of knowledge challenge basic assumptions regarding the relationship between art and reality? Among the objects we will explore are amulets, prayer scrolls, astrological materials, illustrated divination manuscripts, books of wonders, and talismanic clothing. While our case studies will be drawn mainly from the Islamic and South Asian spheres, students will have the opportunity to investigate a topic outside these realms for their final research project. Participation in class discussion, a significant component of the course, is expected. All readings will be available in English.",
-    "times_and_locations": {
-      "ARHA 381 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "FAYE 217"
           }
         ]
       }
@@ -3418,36 +3207,6 @@
   },
   {
     "semester": "Fall 2014",
-    "course_title": "African Art and the Diaspora",
-    "course_codes": [
-      "ARHA-270",
-      "BLST-293"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Rowland O. Abiodun"
-      ]
-    },
-    "description": "The course of study will examine those African cultures and their arts that have survived and shaped the aesthetic, philosophic and religious patterns of African descendants in Brazil, Cuba, Haiti and urban centers in North America. We shall explore the modes of transmission of African artistry to the West and examine the significance of the preservation and transformation of artistic forms from the period of slavery to our own day. Through the use of films, slides and objects, we shall explore the depth and diversity of this vital artistic heritage of Afro-Americans.",
-    "times_and_locations": {
-      "ARHA 270 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "FAYE 217"
-          },
-          {
-            "day": "W",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "FAYE 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
     "course_title": "Black Europe",
     "course_codes": [
       "BLST-294",
@@ -3500,36 +3259,6 @@
             "day": "W",
             "time": "12:00 PM - 01:20 PM",
             "location": "MORG 110"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Visual Arts and Orature in Africa",
-    "course_codes": [
-      "ARHA-138",
-      "BLST-313"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Rowland O. Abiodun"
-      ]
-    },
-    "description": "In the traditionally non-literate societies of Africa, verbal and visual arts constitute two systems of communication. The performance of verbal art and the display of visual art are governed by social and cultural rules. We will examine the epistemological process of understanding cultural symbols, of visualizing narratives, or proverbs, and of verbalizing sculptures or designs. Focusing on the Yoruba people of West Africa, the course will attempt to interpret the language of their verbal and visual arts and their interrelations in terms of cultural cosmologies, artistic performances, and historical changes in perception and meaning. We will explore new perspectives in the critical analysis of African verbal and visual arts, and their interdependence as they support each other through mutual references and allusions.",
-    "times_and_locations": {
-      "BLST 313 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "COOP 101"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "COOP 101"
           }
         ]
       }
@@ -5780,36 +5509,6 @@
   },
   {
     "semester": "Fall 2014",
-    "course_title": "Native American Literature: Decolonizing Intellectual Traditions",
-    "course_codes": [
-      "AMST-274",
-      "ENGL-274"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Lisa Brooks"
-      ]
-    },
-    "description": "In 2013, Amherst College acquired one of the most comprehensive collections of Native American writing in the worldnearly 1,500 books ranging from contemporary fiction and poetry to sermons, political tracts, and tribal histories from the eighteenth and nineteenth centuries. Through this course, we will actively engage the literature of this collection, researching Native American intellectual traditions, regional contexts, political debates, creative adaptation, and movements toward decolonization. Students will have the opportunity to make an original contribution to a digital archive and interact with visiting authors. We will begin with oral traditions and the 1772 sermon published by Mohegan author Samson Occom and end with a novel published in 2014.",
-    "times_and_locations": {
-      "ENGL 274 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:00 PM - 02:20 PM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "Th",
-            "time": "01:00 PM - 02:20 PM",
-            "location": "FAYE 113"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
     "course_title": "Foundations of African American Literature",
     "course_codes": [
       "BLST-232",
@@ -6134,62 +5833,6 @@
   },
   {
     "semester": "Fall 2014",
-    "course_title": "Exploring Ralph Ellison's Invisible Man",
-    "course_codes": [
-      "BLST-432",
-      "ENGL-457"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "Ralph Waldo Ellison wrote Invisible Man to confirm the existence of the universal in the particulars of the black American experience. The same can be said of the larger aim of this course. It will provide students with the opportunity to explore the broadest themes of Black Studies through the careful reading of a particular text. Due to its broad range of influence and reference, Invisible Man is one of the most appropriate books in the black tradition for this kind of attention. The course will proceed through a series of comparisons with works that influenced the literary style and the philosophical content of the novel. The first part of the course will focus on comparisons to world literature. Readings will include James Joyce, Portrait of the Artist as a Young Man; Sigmund Freud, Totem and Taboo; and H.G. Wells, The Invisible Man. The second part of the course will focus on comparisons to American literature. The readings in this part of the course will include Herman Melville, The Confidence Man; William Faulkner, The Bear; and some of Emerson's essays. The last part of the course will focus on comparisons with books in the black tradition. Some of the readings in this part of the course will include W.E.B. Du Bois, Souls of Black Folk and Booker T. Washington, Up From Slavery.",
-    "times_and_locations": {
-      "BLST 432 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 05:00 PM",
-            "location": "COOP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Corporeal States: Body, Nation, Text in Modern African Literature",
-    "course_codes": [
-      "BLST-412",
-      "ENGL-471",
-      "SWAG-471"
-    ],
-    "faculty": {
-      "Section 01": [
-        "C. Rhonda Cobham-Sander"
-      ]
-    },
-    "description": "How do literary texts transmute human bodies into subjectsgendered subjects, colonial subjects, disabled subjects, terrorists, cultural icons, cyborgs? And what happens when we use ideas about the body to represent the body politic? In this course we will examine how modern African writers utilize a variety of genres, including ethnographic writing, Kung Fu movies, pornography, traditional epic, and graffiti, to challenge our notions of what counts as a body, as a nation, or as a text. Alongside novels by established writers, we will consider recent books and digital creations by Chimamanda Adichie, Chris Abani, Teju Cole, Zakes Mda, Werewere Liking, and Taiye Selasi.",
-    "times_and_locations": {
-      "ENGL 471 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "COOP 101"
-          },
-          {
-            "day": "W",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "COOP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
     "course_title": "Serial Fictions: The Victorian Novel and Contemporary Television",
     "course_codes": [
       "ENGL-475",
@@ -6241,80 +5884,6 @@
   },
   {
     "semester": "Fall 2014",
-    "course_title": "Ecology",
-    "course_codes": [
-      "BIOL-230",
-      "ENST-210"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ethan J. Temeles"
-      ]
-    },
-    "description": "A study of the relationships of plants and animals (including humans) to each other and to their environment. We'll start by considering the decisions an individual makes in its daily life concerning its use of resources, such as what to eat and where to live, and whether to defend such resources. We'll then move on to populations of individuals, and investigate species population growth, limits to population growth, and why some species are so successful as to become pests whereas others are on the road to extinction. The next level will address communities, and how interactions among populations, such as competition, predation, parasitism, and mutualism, affect the organization and diversity of species within communities. The final stage of the course will focus on ecosystems, and the effects of humans and other organisms on population, community, and global stability. Three hours of lecture per week.",
-    "times_and_locations": {
-      "BIOL 230 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:00 PM - 12:50 PM",
-            "location": "SMUD 206"
-          },
-          {
-            "day": "W",
-            "time": "12:00 PM - 12:50 PM",
-            "location": "SMUD 206"
-          },
-          {
-            "day": "F",
-            "time": "12:00 PM - 12:50 PM",
-            "location": "SMUD 206"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "An Introduction to Economics with Environmental Applications",
-    "course_codes": [
-      "ECON-111E",
-      "ENST-230"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Katharine R. E. Sims"
-      ]
-    },
-    "description": "A study of the central problem of scarcity and of the ways in which micro and macro economic systems allocate scarce resources among competing ends and apportion goods produced among people. Covers the same material as ECON 111 but with special attention to the relationship between economic activity and environmental problems and to the application of micro and macroeconomic theory tools to analyze environmental issues.",
-    "times_and_locations": {
-      "ECON 111E - LEC": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "SMUD 206"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "SMUD 206"
-          }
-        ]
-      },
-      "ECON 111E - DIS": {
-        "Section 01": [
-          {
-            "day": "F",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "CONV 209"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
     "course_title": "Senior Seminar",
     "course_codes": [
       "ENST-495"
@@ -6338,36 +5907,6 @@
             "day": "Th",
             "time": "01:00 PM - 02:20 PM",
             "location": "MERR 401"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Arthurian Literature",
-    "course_codes": [
-      "ENGL-117",
-      "EUST-117"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ingrid L. Nelson"
-      ]
-    },
-    "description": "Knights, monsters, quests, and true love: these are the things we associate with King Arthur and tales of his court. Why has Arthurian literature proved so enchanting to centuries of poets, novelists, and recently, filmmakers? In this introductory English course, we will read and watch Arthurian legends from Chaucer to Monty Python, examining the ways in which they have been represented in different eras. Beginning with the historical foundations of the King Arthur legend, we will examine how it blossomed and took form in later eras. Our focus will be on close literary and visual analysis of British, American, and French (in translation) versions of these legends. We will also discuss what cultural forces lie behind the popularity of Arthurian legend in certain eras: later medieval England and France; the Victorian era; and twentieth-century England and America. There will be frequent writing assignments and presentations, as well as a final creative project.",
-    "times_and_locations": {
-      "ENGL 117 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "WEBS 215"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "WEBS 215"
           }
         ]
       }
@@ -6525,7 +6064,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Early Modern England, 1558-1702: Renaissance, Reformation, and Revolution",
-    "course_codes": [],
+    "course_codes": [
+      "EUST-227"
+    ],
     "faculty": {
       "Section 01": [
         "TBA"
@@ -6677,97 +6218,6 @@
   },
   {
     "semester": "Fall 2014",
-    "course_title": "Dutch and Flemish Painting (The Art of Beholding)",
-    "course_codes": [
-      "ARHA-253",
-      "EUST-253"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Joel M. Upton"
-      ]
-    },
-    "description": "This course means to ask the question: What would it be like to engage with the paintings of Jan van Eyck, Roger van der Weyden, Hieronymous Bosch, Pieter Bruegel, Jan Vermeer and Rembrandt van Rijn as a consciously embodied person and to reclaim in such a direct encounter the rejuvenating powers of eros, insight and wisdom residing within ourselves and in the art of works of art with which we would behold. In addition to reaffirming the practice of artistic contemplation for its own sake, Dutch and Flemish Painting will offer explicit guidance in both the means and the attitude of being that underlie and enable such beholding. In learning how to 'behold', our goal will be to allow a series of exemplary masterpieces including Van Eycks Arnolfini Double Portrait and the Ghent Alterpiece, Rogers Portrait of a Lady, the Prado Deposition, and the Beaune Last Judgment; Boschs Death of a Miser; Brueghal's Seasons; Vermeers Artist in his Studio and Portrait of a Girl with a Pearl Earring; Rembrandts Nightwatch and several intimate Self Portraits to open outward and implicate us in their human aspiration to wholeness.",
-    "times_and_locations": {
-      "ARHA 253 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "FAYE 117"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "FAYE 117"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Women and Art in Early Modern Europe",
-    "course_codes": [
-      "ARHA-284",
-      "EUST-284",
-      "SWAG-206"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Nicola Courtright"
-      ]
-    },
-    "description": "This course will examine the ways in which prevailing ideas about women and gender-shaped visual imagery, and how these images influenced ideas concerning women from the Renaissance to the Enlightenment. It will adopt a comparative perspective, both by identifying regional differences among European nations and tracing changes over time. In addition to considering patronage of art by women and works by women artists, we will look at the depiction of women heroes such as Judith; the portrayal of women rulers, including Elizabeth I and Marie de' Medici; and the imagery of rape. Topics emerging from these categories of art include biological theories about women; humanist defenses of women; the relationship between the exercise of political power and sexuality; differing attitudes toward women in Catholic and Protestant art; and feminine ideals of beauty.",
-    "times_and_locations": {
-      "ARHA 284 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "FAYE 217"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "FAYE 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Black Europe",
-    "course_codes": [
-      "BLST-294",
-      "EUST-294"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Khary O. Polk"
-      ]
-    },
-    "description": "This research-based seminar considers the enduring presence of people of African descent in Europe from the nineteenth century to the contemporary moment, a fact that both confounds and extends canonical theories of African diaspora and black internationalism. Focusing particularly on the histories of black people in Britain, Germany, and France, this course will take an interdisciplinary approach in its study of the African diaspora in Europe. We will examine literature, history, film, art and ephemera, as well as newly available pre-1927 audio recordings from Bear Family Records in effort to better comprehend the materiality of the black European experience. These inquiries will enable us to comment upon the influence black people continue to have upon Europe today. Reading the central texts in the emerging field of Black European Studies including African American expatriate memoirs, Afro-German feminist poetry, and black British cultural theory student work will culminate in an annotated bibliography and a multimedia research project.",
-    "times_and_locations": {
-      "BLST 294 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CONV 209"
-          },
-          {
-            "day": "Th",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CONV 209"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
     "course_title": "European Economic Take-Off in Global Perspective, 750-1750",
     "course_codes": [
       "EUST-321",
@@ -6826,33 +6276,6 @@
             "day": "F",
             "time": "10:00 AM - 10:50 AM",
             "location": "CONV 302"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Traumatic Events",
-    "course_codes": [
-      "ARCH-363",
-      "EUST-363",
-      "FAMS-370",
-      "GERM-363"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Heidi Gilpin"
-      ]
-    },
-    "description": "How is memory constructed and represented? How is it possible to bear witness, and what exactly is involved? Who is authorized to testify, to whom, when? Whose story is it? Is it possible to tell 'the story' of a traumatic event? What are the disorders of testimony, and how and where do they emerge? This course will observe the workings of trauma (the enactment and working-through of collective and individual symptoms of trauma), memory, and witnessing in various modes of everyday life. We will examine notions of catastrophe, disaster, accident, and violence, and explore the possibilities and impossibilities of bearing witness in many forms of cultural production: in fiction, poetry, architecture, critical theory, oral and written testimonies, visual art, monuments, memorials, philosophy, science, cartoons, film, video, theater, television reportage, newspaper documentation, performance, online, and in our public and domestic spaces. We will study various representations of trauma, paying particular attention to events in Germany and Europe from the twentieth century, as well as to 9/11 and other recent international events. Material to be examined will be drawn from the work of Pina Bausch, Joseph Beuys, Christian Boltanski, Cathy Caruth, Paul Celan, Marguerite Duras, Peter Eisenman, Shoshana Felman, Florian Freund, Jochen Gerz, Geoffrey Hartman, Rebecca Horn, Marion Kant, Anselm Kiefer, Ruth Kluger, Dominick LaCapra, Claude Lanzmann, Dori Laub, Daniel Libeskind, W.G. Sebald, Art Spiegelman, Paul Virilio, Peter Weiss, Wim Wenders, Elie Wiesel, Christa Wolf, and others.",
-    "times_and_locations": {
-      "GERM 363 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "12:00 PM - 03:00 PM",
-            "location": "CONV 209"
           }
         ]
       }
@@ -6946,67 +6369,6 @@
   },
   {
     "semester": "Fall 2014",
-    "course_title": "Witches, Vampires and Other Monsters",
-    "course_codes": [
-      "ARHA-385",
-      "EUST-385",
-      "SWAG-310"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Natasha Staller"
-      ]
-    },
-    "description": "This course will explore the construction of the monstrous, over cultures, centuries and disciplines. With the greatest possible historical and cultural specificity, we will investigate the varied forms of monstrous creatures, their putative powers, and the explanations given for their existence-as we attempt to articulate the kindred qualities they share. Among the artists to be considered are Valdes Leal, Velazquez, Goya, Munch, Ensor, Redon, Nolde, Picasso, Dali, Kiki Smith, and Cindy Sherman.",
-    "times_and_locations": {
-      "ARHA 385 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 217"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Film and Writing",
-    "course_codes": [
-      "ENGL-180",
-      "FAMS-110"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Kalisha R. Cornett"
-      ]
-    },
-    "description": "A first course in reading films and writing about them. A varied selection of films for study and criticism, partly to illustrate the main elements of film language and partly to pose challenging texts for reading and writing. Frequent short papers.",
-    "times_and_locations": {
-      "ENGL 180 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:00 PM - 02:20 PM",
-            "location": "CONV 209"
-          },
-          {
-            "day": "Th",
-            "time": "01:00 PM - 02:20 PM",
-            "location": "CONV 209"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
     "course_title": "Knowing Cinema",
     "course_codes": [
       "FAMS-213"
@@ -7045,40 +6407,6 @@
   },
   {
     "semester": "Fall 2014",
-    "course_title": "Foundations in Moving Image Production",
-    "course_codes": [
-      "ARHA-221",
-      "FAMS-221"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Adam R. Levine"
-      ]
-    },
-    "description": "This introductory course is designed for students with no prior experience in moving image production. The aim is both technical and creative. We will begin with the literal foundation of the moving image--the frame--before moving through shot and scene construction, lighting, sound-image concepts and final edit. In addition to instruction in production equipment and facilities, the course will also explore cinematic form and structure through weekly readings, screenings and discussion. Each student will complete a series of exercises, a collaborative project and a final video assignment.",
-    "times_and_locations": {
-      "ARHA 221 - LEC": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "01:00 PM - 04:00 PM",
-            "location": "FAYE 317"
-          }
-        ]
-      },
-      "ARHA 221 - DIS": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "01:00 PM - 04:00 PM",
-            "location": "KECC 8"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
     "course_title": "Pioneer Valley Soundscapes",
     "course_codes": [
       "FAMS-312",
@@ -7102,32 +6430,6 @@
             "day": "Th",
             "time": "02:30 PM - 03:50 PM",
             "location": "ARMU 102"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "South Asian Feminist Cinema",
-    "course_codes": [
-      "ASLC-452",
-      "FAMS-322",
-      "SWAG-469"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Krupa Shandilya"
-      ]
-    },
-    "description": "How do we define the word feminism? Can the term be used to define cinematic texts outside the Euro-American world? In this course we will study a range of issues that have been integral to feminist theory--the body, domesticity, same sex desire, gendered constructions of the nation, feminist utopias and dystopias--through a range of South Asian cinematic texts. Through our viewings and readings we will consider whether the term feminist can be applied to these texts, and we will experiment with new theoretical lenses for exploring these films. Films will range from Satyajit Rays classic masterpiece Charulata to Gurinder Chadhas trendy diasporic film, Bend It Like Beckham . Attendance for screenings on Monday is compulsory.",
-    "times_and_locations": {
-      "SWAG 469 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 05:00 PM",
-            "location": "MERR 403"
           }
         ]
       }
@@ -7190,37 +6492,6 @@
   },
   {
     "semester": "Fall 2014",
-    "course_title": "Hispanic Genre Films",
-    "course_codes": [
-      "EUST-248",
-      "FAMS-352",
-      "SPAN-238"
-    ],
-    "faculty": {
-      "Section 01": [
-        "David Rodriguez-Solas"
-      ]
-    },
-    "description": "This course will be an introduction to genre films from Argentina, Cuba, Mexico, and Spain. We will study Hispanic interpretations of filmic genres such as melodrama, thriller, comedy, horror and musical. How did these genres develop? How stable are genre conventions? Is it possible to study national cinemas in the time of transnational films? This course will include critical readings and mandatory weekly screenings of films by Luis Bunuel, Juan Jose Campanella, Pedro Almodovar, and Alejandro Gonzalez Inarritu. Conducted in Spanish.",
-    "times_and_locations": {
-      "SPAN 238 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CHAP 210"
-          },
-          {
-            "day": "Th",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CHAP 210"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
     "course_title": "Traumatic Events",
     "course_codes": [
       "ARCH-363",
@@ -7241,36 +6512,6 @@
             "day": "W",
             "time": "12:00 PM - 03:00 PM",
             "location": "CONV 209"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Race and Empire: Film and Literature",
-    "course_codes": [
-      "ENGL-378",
-      "FAMS-373"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Matthew A. Tierney"
-      ]
-    },
-    "description": "Anti-racists, dark comics, revolutionary anarchists, queer dystopians, and communitarian futurists have long sought aesthetic means to resist common-sense understandings of racial identity and imperial politics. Exploring film and literature, in texts of both fiction and non-fiction, we will ask how life has been lived in the context of race and empire, as well as how it might be lived otherwise. We will address intimate and local forms of racism but, following Frantz Fanons claim that race is a fundamental component of culture and never a superadded element, we will also theorize ways in which race and empire also structure our present. We will incorporate insights gained through formal analysis with critical readings in history and political theory, in films from Imitation of Life to Born in Flames to Machete, and in literary writing by authors including Richard Wright, Karen Tei Yamashita, and Peter Dimock.",
-    "times_and_locations": {
-      "ENGL 378 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 108"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 108"
           }
         ]
       }
@@ -7312,59 +6553,10 @@
   },
   {
     "semester": "Fall 2014",
-    "course_title": "Rhetorics of New Media",
-    "course_codes": [
-      "ENGL-487",
-      "FAMS-453"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Matthew A. Tierney"
-      ]
-    },
-    "description": "Digital technologies tend to be described as absolutely new, without any precedent in history or culture. But these technologies are just the latest to have shaped culture, as well as the many ways that we talk about culture. Ours is a complex present, filled by technologies that are brand new as well as devices and artforms that survive from earlier periods of innovation. In this way, videogames and surveillance systems coexist with books and movies, and technophobes share their world with technophiles. In this course, we will read literature (both print and electronic), watch films, and discuss games and art, while exploring cultural and political theory that spans the past half-century. Is there progressive potential in the trend toward computerization? Or contrarily, in what ways might technophilia and technocracy obstruct the betterment of society? Well take up these and related questions, and study the legitimating language by which the increasingly digital world has come to make sense. From this rhetorical and historical perspective, well address topics ranging from globalization to media evolution, the aesthetics of code, the newness of new media, technics-out-of-control, gamification of war, technologies of race and gender, and the ideology of computationalism.",
-    "times_and_locations": {
-      "ENGL 487 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 05:30 PM",
-            "location": "SMUD 205"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Serial Fictions: The Victorian Novel and Contemporary Television",
-    "course_codes": [
-      "ENGL-475",
-      "FAMS-475"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Alicia J. Mireles Christoff",
-        "Amelie E. Hastie"
-      ]
-    },
-    "description": "This course examines the similarities in form and content between the Victorian novel and the modern television series. While contemporary TV and fiction from over a century ago might seem like a surprising pairing, the two forms have a great deal in common. Indeed, serial television finds its foundation in nineteenth-century publication practices: the Victorian novels we now read as massive single-volume books were originally published in small weekly or monthly parts. Focusing on case studies in which we place a Victorian novel and a television series side by side, this course interrogates questions of genre, form, medium, and the dubious division of popular entertainment and high art. Through experiments with our own reading, writing, and viewing habits, we will ask how the serial forms of the Victorian novel and TV illuminate each other, what habits of consumption they promote, and what they have to teach us about seriality itself.",
-    "times_and_locations": {
-      "ENGL 475 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 05:00 PM",
-            "location": "MERR 403"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
     "course_title": "Illness and Meaning",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-101"
+    ],
     "faculty": {
       "Section 01": [
         "Judith E. Frank"
@@ -7391,7 +6583,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Archival Explorations: Becoming a Part of College History",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-102"
+    ],
     "faculty": {
       "Section 01": [
         "Mike Kelly",
@@ -7419,7 +6613,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Death and Dying in Islam",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-103"
+    ],
     "faculty": {
       "Section 01": [
         "Tariq Jaffer"
@@ -7446,7 +6642,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Friendship",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-104"
+    ],
     "faculty": {
       "Section 01": [
         "Kim Townsend"
@@ -7473,7 +6671,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Romanticism and the Enlightenment",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-105"
+    ],
     "faculty": {
       "Section 01": [
         "Ute Brandes"
@@ -7505,7 +6705,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Things Matter",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-106"
+    ],
     "faculty": {
       "Section 01": [
         "Amelie E. Hastie"
@@ -7532,7 +6734,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Secrets and Lies",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-107"
+    ],
     "faculty": {
       "Section 01": [
         "Austin D. Sarat"
@@ -7559,7 +6763,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Evolution and Intellectual Revolution",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-108"
+    ],
     "faculty": {
       "Section 01": [
         "Patrick L. Williamson"
@@ -7586,7 +6792,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Political Leadership",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-109"
+    ],
     "faculty": {
       "Section 01": [
         "Ronald S. Tiersky"
@@ -7613,7 +6821,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Authority, Obedience and the Rule of Law",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-110"
+    ],
     "faculty": {
       "Section 01": [
         "Lawrence R. Douglas"
@@ -7640,7 +6850,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Thinking Through Improvisation",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-111"
+    ],
     "faculty": {
       "Section 01": [
         "Dominic L. Poccia"
@@ -7667,7 +6879,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Growing Up in America",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-112"
+    ],
     "faculty": {
       "Section 01": [
         "Elizabeth J. Aries"
@@ -7694,7 +6908,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Liberation",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-113"
+    ],
     "faculty": {
       "Section 01": [
         "Frederick T. Griffiths"
@@ -7721,7 +6937,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Encounters with Nature",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-114"
+    ],
     "faculty": {
       "Section 01": [
         "Nicola Courtright"
@@ -7763,7 +6981,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "The Literature of Love",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-115"
+    ],
     "faculty": {
       "Section 01": [
         "Maria R. Heim"
@@ -7790,7 +7010,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Genes, Genomes and Society",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-116"
+    ],
     "faculty": {
       "Section 01": [
         "David I. Ratner"
@@ -7817,7 +7039,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Big Books",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-117"
+    ],
     "faculty": {
       "Section 01": [
         "Alicia J. Mireles Christoff"
@@ -7844,7 +7068,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Science Fiction or the Posthuman",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-118"
+    ],
     "faculty": {
       "Section 01": [
         "Patrick Pritchett"
@@ -7871,7 +7097,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Justice in Question",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-119"
+    ],
     "faculty": {
       "Section 01": [
         "Andrew Poe"
@@ -7898,7 +7126,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Pariscape: Imagining Paris in the Twentieth Century",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-120"
+    ],
     "faculty": {
       "Section 01": [
         "Ronald C. Rosbottom"
@@ -7925,7 +7155,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Asia in the European Mind: Modern European Discourse on History and Identity",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-121"
+    ],
     "faculty": {
       "Section 01": [
         "Trent E. Maxey"
@@ -7967,7 +7199,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Representing Equality",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-122"
+    ],
     "faculty": {
       "Section 01": [
         "Wendy T. Ewald",
@@ -7999,7 +7233,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Drugs in History",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-123"
+    ],
     "faculty": {
       "Section 01": [
         "Francis G. Couvares"
@@ -8041,7 +7277,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Vienna around 1900: Cradle of Modernity",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-124"
+    ],
     "faculty": {
       "Section 01": [
         "Christian Rogowski"
@@ -8068,7 +7306,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Movement: A Dance and Sociology Collaboration",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-125"
+    ],
     "faculty": {
       "Section 01": [
         "Hannah A. Holleman",
@@ -8096,7 +7336,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Relativism and Toleration",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-126"
+    ],
     "faculty": {
       "Section 01": [
         "Nishiten Shah"
@@ -8123,7 +7365,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Music, Faith, and the Utopian Impulse",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-127"
+    ],
     "faculty": {
       "Section 01": [
         "Jenny L. Kallick"
@@ -8150,7 +7394,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "The Great Schism through Eastern Eyes",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-128"
+    ],
     "faculty": {
       "Section 01": [
         "Bryn I. Geffert"
@@ -8177,7 +7423,9 @@
   {
     "semester": "Fall 2014",
     "course_title": "Understanding Haiti: Memory, Violence, and Resilience",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-129"
+    ],
     "faculty": {
       "Section 01": [
         "Lucia M. Suarez"
@@ -8546,71 +7794,6 @@
             "day": "W",
             "time": "02:00 PM - 03:20 PM",
             "location": "CHAP 205"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "War and Memory",
-    "course_codes": [
-      "EUST-354",
-      "FREN-354"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Leah D. Hewitt"
-      ]
-    },
-    "description": "Through readings of short fiction, historical essays, drama and films, we study how the French have tried to come to terms with their role in World War II, both as individuals and as a nation. We will explore the various myths concerning French heroism and guilt, as well as the challenges to those myths, with particular attention paid to the way wartime memories have become a lightning rod for debate and discord in contemporary French culture and politics. Conducted in French.",
-    "times_and_locations": {
-      "FREN 354 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "CONV 302"
-          },
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "CONV 302"
-          },
-          {
-            "day": "F",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "CONV 302"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Toward the New Wave",
-    "course_codes": [
-      "FAMS-327",
-      "FREN-365"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jay L. Caplan"
-      ]
-    },
-    "description": "The class will study films from the French New Wave (1959-63), as well as earlier French films that influenced many New Wave directors. These films will include: Jean-Luc Godard's A bout de souffle, Vivre sa vie, and Le Mepris; Alain Resnais' Hiroshima Mon Amour and L'annee derniere a Marienbad; Les 400 Coups by Francois Truffaut and Agnes Varda's Cleo de 5 a 7, as well as Zero de conduite and L'Atalante by Jean Vigo; Boudu sauve des eaux, la Grande Illusion and La Regle du jeu by Jean Renoir; Jean-Pierre Melville's Bob le flambeur; and Robert Bresson's Un Condamne a mort s'est echappe. This course will also provide basic training in the analysis of films. Conducted in French.",
-    "times_and_locations": {
-      "FREN 365 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CHAP 119"
-          },
-          {
-            "day": "Th",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CHAP 119"
           }
         ]
       }
@@ -9081,33 +8264,6 @@
   },
   {
     "semester": "Fall 2014",
-    "course_title": "Traumatic Events",
-    "course_codes": [
-      "ARCH-363",
-      "EUST-363",
-      "FAMS-370",
-      "GERM-363"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Heidi Gilpin"
-      ]
-    },
-    "description": "How is memory constructed and represented? How is it possible to bear witness, and what exactly is involved? Who is authorized to testify, to whom, when? Whose story is it? Is it possible to tell \"the story\" of a traumatic event? What are the disorders of testimony, and how and where do they emerge? This course will observe the workings of trauma (the enactment and working-through of collective and individual symptoms of trauma), memory, and witnessing in various modes of everyday life. We will examine notions of catastrophe, disaster, accident, and violence, and explore the possibilities and impossibilities of bearing witness in many forms of cultural production: in fiction, poetry, architecture, critical theory, oral and written testimonies, visual art, monuments, memorials, philosophy, science, cartoons, film, video, theater, television reportage, newspaper documentation, performance, online, and in our public and domestic spaces. We will study various representations of trauma, paying particular attention to events in Germany and Europe from the twentieth century, as well as to 9/11 and other recent international events. Material to be examined will be drawn from the work of Pina Bausch, Joseph Beuys, Christian Boltanski, Cathy Caruth, Paul Celan, Marguerite Duras, Peter Eisenman, Shoshana Felman, Florian Freund, Jochen Gerz, Geoffrey Hartman, Rebecca Horn, Marion Kant, Anselm Kiefer, Ruth Kluger, Dominick LaCapra, Claude Lanzmann, Dori Laub, Daniel Libeskind, W.G. Sebald, Art Spiegelman, Paul Virilio, Peter Weiss, Wim Wenders, Elie Wiesel, Christa Wolf, and others.",
-    "times_and_locations": {
-      "GERM 363 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "12:00 PM - 03:00 PM",
-            "location": "CONV 209"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
     "course_title": "Global Environmental History of the Twentieth Century",
     "course_codes": [
       "HIST-105"
@@ -9182,36 +8338,6 @@
   },
   {
     "semester": "Fall 2014",
-    "course_title": "Modern China",
-    "course_codes": [
-      "ASLC-146",
-      "HIST-172"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jerry P. Dennerline"
-      ]
-    },
-    "description": "A survey of Chinese history from the Manchu conquest of 1644 to the present. Beginning with the successes and failures of the imperial state as it faced global economic development, expanding European empires, and internal social change, we will study the Opium War, massive nineteenth-century religious rebellions, Republican revolution and state-building, the New Culture movement, Communist revolution, the anti-Japanese war, Maos Cultural Revolution, and the problems of post-Mao reform, all with comparative reference to current events. Readings, which include a wide variety of documents such as religious and revolutionary tracts, eye-witness accounts, memoirs, and letters, are supplemented by interpretive essays and videos.",
-    "times_and_locations": {
-      "HIST 172 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "BARR 102"
-          },
-          {
-            "day": "Th",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "BARR 102"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
     "course_title": "Spain and the Pacific World, 1571-1898",
     "course_codes": [
       "HIST-208"
@@ -9234,159 +8360,6 @@
             "day": "Th",
             "time": "10:00 AM - 11:20 AM",
             "location": "JOCH 202"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "The Age of Chivalry, 1000-1500",
-    "course_codes": [
-      "EUST-225",
-      "HIST-225"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jun Hee Cho"
-      ]
-    },
-    "description": "Medieval Europe is often remembered and imagined as a chivalric civilization a time when men were courageous and courteous, ladies were fair and respected, and the clash of arms was also an embodiment of Christian piety. This course seeks to uncover the myths and realities of medieval chivalry and thereby provide a window into the material, social, and cultural life of the Middle Ages. The course will track the beginnings of chivalry as a form of warfare centered on the horseback soldier, to its transformation as a code of conduct and ethos of a ruling class, and its later formalization into rituals and ceremonies to be performed and enacted as a means of social distinction. By examining documentary, fictional and pictorial sources, the course will review how competing ideals of chivalry were depicted and prescribed; how Christian ideals, aristocratic values and commercial realities aligned together; and how a mode of fighting became a way of life that defined an era.",
-    "times_and_locations": {
-      "HIST 225 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "FAYE 115"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "FAYE 115"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Early Modern England, 1558-1702: Renaissance, Reformation, and Revolution",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "This course offers a thematic and methodological survey of English history from the beginning of Elizabeth Is reign in 1558 to the death of William III in 1702, with particular attention to the wider British, European, and Atlantic contexts. What drove Englands transformation from a European backwater to an emerging global and imperial power? How did it transition from a mode of governance centered on the personal authority of the monarch, to one that incorporated party politics and the ideal of 'parliamentary sovereignty'? How can we account for the emergence of a complex commercial society, dependent on foreign trade, overseas expansion, and financial markets, from early modern economic values and practices that had obliged the Crown to 'live of its own' and avoid excessive debt or taxation? What policies, events, and contingencies contributed to the increasing identification of England and 'Englishness' with the Protestant religion? This course will incorporate digital humanities tools, archival research, classroom discussions, and immersive and collaborative activities to train students to evaluate critically primary and secondary sources and to construct their own historical arguments.",
-    "times_and_locations": {
-      "EUST 227 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 401"
-          },
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 401"
-          },
-          {
-            "day": "F",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 401"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "The French Revolution",
-    "course_codes": [
-      "EUST-230",
-      "HIST-230"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ellen R. Boucher"
-      ]
-    },
-    "description": "Often viewed as one of the defining events in modern history, the French Revolution has been debated and discussed, derided and celebrated by generations of politicians, cultural commentators, and historians. This course enters into this on-going conversation by examining the nature of the revolutionary process as it unfolded in late eighteenth-century France and its empire. Beginning in the old regime of kings and commoners, it untangles the social, political, and intellectual roots of the Revolution and investigates the extent to which these factors contributed to the radical overthrow of the French establishment in 1789. It then follows the extension of the Revolution throughout French society and across the seas to the Caribbean, analyzing how popular and colonial upheavals influenced the revolutionary new order of liberty, equality, and brotherhood that was taking shape in France. Finally, the course explores the aftermath of the Revolution by tracing the various ways that its history has been interpreted and reinterpreted from the nineteenth century to the present day.",
-    "times_and_locations": {
-      "HIST 230 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MEAD 115"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MEAD 115"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Childhood and Child Welfare in Modern Europe",
-    "course_codes": [
-      "EUST-243",
-      "HIST-233"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ellen R. Boucher"
-      ]
-    },
-    "description": "The recent trend of big-name celebrities adopting children from the developing world has made international child welfare the subject of rich public debate. Is it right for citizens of wealthier countries to remove children from poorer nations to give them a better life, or does this act constitute a blatant case of cultural imperialism and child stealing? The issue hinges on the question of whether it is possible to define a single, universal standard of child welfare. If the answer is yes, then intervening into other families and societies is justified to give all children a proper childhood. If the answer is no, then all manner of child-centered humanitarianism becomes subject to critique. This course explores the historical roots of these current social issues. It begins by analyzing the creation of a modern definition of childhood in the era of the Enlightenment, then follows the attempts of nineteenth and twentieth century reformers to extend this model of childhood throughout Europe and the European empires. Topics include debates over the limits of parental rights, the role of ethnicity and culture in childrearing, definitions of child abuse, international charities and NGOs, adoption, and child psychology.",
-    "times_and_locations": {
-      "HIST 233 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:00 PM - 01:20 PM",
-            "location": "CHAP 101"
-          },
-          {
-            "day": "W",
-            "time": "12:00 PM - 01:20 PM",
-            "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Material Culture of American Homes",
-    "course_codes": [
-      "ARCH-242",
-      "ARHA-133",
-      "HIST-242"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Kevin M. Sweeney"
-      ]
-    },
-    "description": "Using architecture, artifacts, visual evidence and documentary sources, the course examines social and cultural forces affecting the design and use of domestic architecture, home furnishings, and domestic technology in the eastern United States from 1600 to 1960. In addition to providing a survey of American domestic architecture, the course provides an introduction to the study of American material culture. Field trips to Historic Deerfield, Old Sturbridge Village, Hartford, Connecticut, and sites in Amherst form an integral part of the course.",
-    "times_and_locations": {
-      "HIST 242 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CHAP 203"
-          },
-          {
-            "day": "Th",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CHAP 203"
           }
         ]
       }
@@ -9537,93 +8510,6 @@
   },
   {
     "semester": "Fall 2014",
-    "course_title": "The Local and Global 1970s",
-    "course_codes": [
-      "BLST-342",
-      "HIST-358"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Hilary J. Moss",
-        "Vanessa Walker"
-      ]
-    },
-    "description": "Often overshadowed by the long 1960s and the conservative ascendancy in the 1980s, the 1970s provides an important transitional moment for the United States, one that arguably linked local experiences to global dynamics and social movements in unprecedented ways. It was also a decade fraught with contradictions. On the one hand, Americans experienced widespread disillusionment with the power of the federal government to promote and protect the minority from the majority. Historians seeking to understand the collapse of the welfare state or the origins of white resistance to civil rights initiatives most often point to the 1970s as the time when the Supreme Court abandoned school desegregation and the federal government shifted the burden of the social welfare system onto the market, state and local governments, and onto poor people themselves. And yet, the 1970s also saw an explosion of progressive social activism, as the womens movement, the gay rights movement, and the environmental movement, among others, all came into their own. Likewise, this was also a time of U.S. retreat and military overextension, and a time of new hegemonies of human rights regimes and multinational corporations. This course asks students to consider how connecting the local with the global can help us better understand and resolve these apparent contradictions. How does our understanding of American politics, society, and culture change depending upon our point of view? What are the possibilities and limitations of global and local methods of inquiry? How might historians more fruitfully combine sub-disciplines to understand the ways in which Americans experienced and engaged with their historical realities as members of local, national, and global communities?",
-    "times_and_locations": {
-      "BLST 342 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "WEBS 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Early Islam: Construction of an Historical Tradition",
-    "course_codes": [
-      "ASLC-355",
-      "HIST-393"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Monica M. Ringer"
-      ]
-    },
-    "description": "This course examines in depth the formative period of Islam between c. 500-680. Using predominantly primary material, we will chart the emergence, success, and evolution of Islam, the Islamic community, and the Islamic polity. The focus of this course is on understanding the changing nature over time of peoples understanding of and conception of what Islam was and what Islam implied socially, religiously, culturally and politically. We concentrate on exploring the growth of the historical tradition of Islam and its continued contestations amongst scholars today. This course will familiarize students with the events, persons, ideas, texts and historical debates concerning this period. It is not a course on the religion or beliefs of Islam, but a historical deconstruction and analysis of the period. This class is writing intensive.",
-    "times_and_locations": {
-      "HIST 393 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 119"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 119"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Women in the Middle East",
-    "course_codes": [
-      "ASLC-363",
-      "HIST-397",
-      "SWAG-362"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Monica M. Ringer"
-      ]
-    },
-    "description": "The course examines the major developments, themes and issues in womans history in the Middle East. The first segment of the course concerns the early Islamic period and discusses the impact of the Quran on the status of women, the development of Islamic religious traditions and Islamic law. Questions concerning the historiography of this formative period of Islamic history, as well as hermeneutics of the Quran will be the focus of this segment. The second segment of the course concerns the 19th- and 20th-century Middle East. We will investigate the emergence and development of the woman question, the role of gender in the construction of Middle Eastern nationalisms, womens political participation, and the debates concerning the connections between women, gender, and religious and cultural traditions. The third segment of the course concerns the contemporary Middle East, and investigates new developments and emerging trends of womens political, social and religious activism in different countries. The course will provide a familiarity with the major primary texts concerning women and the study of women in the Middle East, as well as with the debates concerning the interpretation of texts, law, religion, and history in the shaping of womens status and concerns in the Middle East today.",
-    "times_and_locations": {
-      "HIST 397 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CHAP 101"
-          },
-          {
-            "day": "Th",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
     "course_title": "The Era of the American Revolution",
     "course_codes": [
       "HIST-453"
@@ -9646,86 +8532,6 @@
             "day": "W",
             "time": "02:00 PM - 03:20 PM",
             "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "China Research Seminar: From Revolution to Reform",
-    "course_codes": [
-      "ASLC-476",
-      "HIST-476"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jerry P. Dennerline"
-      ]
-    },
-    "description": "Political thinkers and activists inside China and throughout the world continue to puzzle over the relationship between the people and the state. Where do state functions and state control begin and end? How do the global economy, internal migration, NGOs, and the internet influence the relationship between the people and the state? What changes and continuities do we observe in state-society relations over time? Who are the winners and losers of Chinas recent economic growth? How is Chinas national identity similar to or different from those of developed or post-colonial nations? When and how do the national interest, individual interests, and the interests of the Party-state converge or diverge? And how do the spokesmen for these interests appeal to and reconstruct their visions of Chinas past? This interdisciplinary research seminar will focus on issues of legitimacy, authority, resistance, and rights consciousness in the one-party system that has emerged from post-revolutionary reform in China. We will explore these issues with reference to state institutions, local political processes, education, social services, religion, and public expression of opinions and ideas. Research topics will depend on the interests of the students.",
-    "times_and_locations": {
-      "HIST 476 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "CHAP 204"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "The History and Memory of the Asia-Pacific War",
-    "course_codes": [
-      "ASLC-462",
-      "HIST-477"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Trent E. Maxey"
-      ]
-    },
-    "description": "The varied names given to the fifteen years of war conducted by Japan-the Pacific War, the Great East Asian War, the Fifteen-Year War, World War II, and the Asian-Pacific War-reflect the conflicting perspectives from which that war is studied and remembered. How has the experience of a fifteen-year war during the 1930s and 1940s shaped memory and history in Japan, East Asia, and the United States? This seminar begins with this broad question and pursues related questions: How are the memory and history of war intertwined in both national and international politics? What forms of memory have been included and excluded from dominant historical narratives and commemorative devices? How does critical historiography intersect with the politics and passions of memory? We will use oral histories, primary documents, film, and scholarship to guide our thoughts and discussions. We will begin with a brief history of Japans Fifteen-Year War and move on to prominent debates concerning the history and memory of that war. Short response papers and a research paper will be required.",
-    "times_and_locations": {
-      "HIST 477 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "CHAP 210"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Race, Place, and the Law",
-    "course_codes": [
-      "BLST-147",
-      "LJST-105"
-    ],
-    "faculty": {
-      "Section 01": [
-        "David P. Delaney"
-      ]
-    },
-    "description": "Understandings of and conflicts about place are of central significance to the experience and history of race and race relations in America. The shaping and reshaping of places is an important ingredient in the constitution and revision of racial identities: think of the ghetto, Chinatown, or Indian Country. Law, in its various manifestations, has been intimately involved in the processes which have shaped geographies of race from the colonial period to the present day: legally mandated racial segregation was intended to impose and maintain both spatial and social distance between members of different races. The objective of this course is to explore the complex intersections of race, place, and law. Our aim is to gain some understanding of geographies of race on-the-ground in real places, and of the role of legal practices--especially legal argument--in efforts to challenge and reinforce these racial geographies. We will ask, for example, how claims about responsibility, community, rationality, equality, justice, and democracy have been used to justify or resist both racial segregation and integration, access and expulsion. In short, we will ask how moral argument and legal discourse have contributed to the formation of the geographies of race that we all inhabit. Much of our attention will be given to a legal-geographic exploration of African-American experiences. But we will also look at how race, place and the law have shaped the distinctive experiences of Native Americans, Hispanic Americans, and Asian Americans.",
-    "times_and_locations": {
-      "LJST 105 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "OCTA 200"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "OCTA 200"
           }
         ]
       }
@@ -10923,36 +9729,6 @@
   },
   {
     "semester": "Fall 2014",
-    "course_title": "Probability",
-    "course_codes": [
-      "MATH-360",
-      "STAT-360"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Amy S. Wagaman"
-      ]
-    },
-    "description": "This course explores the nature of probability and its use in modeling real world phenomena. The course begins with the development of an intuitive feel for probabilistic thinking, based on the simple yet subtle idea of counting. It then evolves toward the rigorous study of discrete and continuous probability spaces, independence, conditional probability, expectation, and variance. Distributions covered include the Bernoulli and Binomial, Hypergeometric, Poisson, Normal, Gamma, Beta, Multinomial, and bivariate Normal.",
-    "times_and_locations": {
-      "STAT 360 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:50 PM",
-            "location": "SMUD 206"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:50 PM",
-            "location": "SMUD 206"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
     "course_title": "Advanced Data Analysis",
     "course_codes": [
       "STAT-495"
@@ -10980,36 +9756,6 @@
             "day": "F",
             "time": "08:30 AM - 09:50 AM",
             "location": "MERR 401"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Master Musicians of Africa I: West Africa",
-    "course_codes": [
-      "BLST-214",
-      "MUSI-106"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Olabode F. Omojola"
-      ]
-    },
-    "description": "This course concentrates on the lives and music of selected West African musicians. Departing from ethnographic approaches that mask the identity of individual musicians and treat African societies as collectives, this course emphasizes the contributions of individual West African musicians whose stature as master musicians is undisputed within their respective communities. It examines the contributions of individual musicians to the ever continuous process of negotiating the boundaries of African musical practice. Individuals covered include Babatunde Olatunji (Nigerian drummer), Youssou NDour (Senegalese singer), Kandia Kouyate (Malian jelimuso) and Ephraim Amu (Ghanaian composer). The variety of artistic expressions of selected musicians also provides a basis for examining the interrelatedness of different African musical idioms, and the receptivity of African music to non-African styles.",
-    "times_and_locations": {
-      "BLST 214 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CHAP 201"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CHAP 201"
           }
         ]
       }
@@ -11080,45 +9826,6 @@
   },
   {
     "semester": "Fall 2014",
-    "course_title": "Auralized Architectures: Re-Sounding the Ancient Past",
-    "course_codes": [
-      "ARCH-206",
-      "MUSI-114"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Miriam A. Kolar"
-      ]
-    },
-    "description": "Enlivened with sound, ancient sites, structures, and musical instruments are given voice by archaeoacoustics research techniques. How can digital technologies enable us to engage these long-silent traces of past life? How might sonic re-constructions or \"auralizations\" be situated to communicate multiple interpretations of the distant past? How do sonic architectures relate to other archaeological evidence? We will examine such questions through cross-disciplinary readings and discussion of theories and methods commonly and uncommonly employed in archaeology and sound studies. Via computer laboratory and field exercises, we will explore how audio digital signal processing (DSP) techniques can be applied to questions of ancient humanity and musical archaeology. Comparative examples of local, present-day sonic dynamics of the built environment will additionally inform our inquiry.",
-    "times_and_locations": {
-      "ARCH 206 - LAB": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "SMUD 115"
-          },
-          {
-            "day": "Th",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "SMUD 115"
-          }
-        ]
-      },
-      "ARCH 206 - L/D": {
-        "Section 01": [
-          {
-            "day": "F",
-            "time": "12:00 PM - 01:30 PM",
-            "location": "OCTA 200"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
     "course_title": "Music, Human Rights, and Cultural Rights",
     "course_codes": [
       "MUSI-127"
@@ -11141,36 +9848,6 @@
             "day": "Th",
             "time": "10:00 AM - 11:20 AM",
             "location": "ARMU 102"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Music and Culture I",
-    "course_codes": [
-      "EUST-221",
-      "MUSI-221"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Klara Moricz"
-      ]
-    },
-    "description": "One of three courses in which music is studied in relation to issues of history, theory, culture, and performance, with the focus of the course changing from year to year. This course is an introduction to European music in the Medieval, Renaissance, and Baroque eras. We will begin by singing Gregorian chant and will go on to cover such topics as the music of the Troubadours, the polyphonic style associated with Notre Dame, the development of musical notation, Renaissance sacred polyphony, madrigals, court dances, and the birth of opera. Throughout the course we will seek to bring the music we study alive by singing and/or playing. We will also host several professional performers of early music who will help us understand how this music is likely to have sounded at the time of its creation.",
-    "times_and_locations": {
-      "MUSI 221 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "ARMU 212"
-          },
-          {
-            "day": "Th",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "ARMU 212"
           }
         ]
       }
@@ -11201,36 +9878,6 @@
             "day": "Th",
             "time": "10:00 AM - 11:20 AM",
             "location": "ARMU 212"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Pioneer Valley Soundscapes",
-    "course_codes": [
-      "FAMS-312",
-      "MUSI-238"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Maria E. Mendonca"
-      ]
-    },
-    "description": "This course is about exploring, participating in, and documenting the musical communities and acoustic terrain of the Pioneer Valley. The first part of the course will focus on local histories and music scenes, ethnographic methods and technologies, and different techniques of representation. The second part of the course will involve intensive, sustained engagement with musicians and sounds in the Pioneer Valley. Course participants will give weekly updates about their fieldwork projects and are expected to become well-versed in the musics they are studying. There will be a significant amount of work and travel outside of class meetings. The course will culminate in contributions to a web-based documentary archive of Pioneer Valley soundscapes. We will also benefit from visits and interaction with local musicians.",
-    "times_and_locations": {
-      "MUSI 238 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "ARMU 102"
-          },
-          {
-            "day": "Th",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "ARMU 102"
           }
         ]
       }
@@ -11400,68 +10047,6 @@
             "day": "Th",
             "time": "11:30 AM - 12:50 PM",
             "location": "ARMU 212"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Molecular Neurobiology",
-    "course_codes": [
-      "BIOL-301",
-      "NEUR-301"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ethan R. Graf"
-      ]
-    },
-    "description": "An analysis of the molecules and molecular mechanisms underlying nervous system function, development, and disease.  We will explore the proteins that contribute to the unique structure and function of neurons, including an in-depth analysis of synaptic communication and the molecular processes that modify synapses.  We will also study the molecular mechanisms that control brain development, from neurogenesis, neurite growth and synaptogenesis to cell death and degeneration.  In addition to analyzing neural function, throughout the course we will also study nervous system dysfunction resulting when such molecular mechanisms fail, leading to neurodevelopmental and neurodegenerative disease.  Readings from primary literature will emphasize current molecular techniques utilized in the study of the nervous system.  Four classroom hours and three hours of laboratory per week.",
-    "times_and_locations": {
-      "BIOL 301 - LEC": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 403"
-          },
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 403"
-          },
-          {
-            "day": "F",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 403"
-          }
-        ]
-      },
-      "BIOL 301F - DIS": {
-        "Section 01": [
-          {
-            "day": "Th",
-            "time": "12:00 PM - 12:50 PM",
-            "location": "MERR 403"
-          }
-        ]
-      },
-      "BIOL 301L - LAB": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:00 PM - 04:00 PM",
-            "location": "MCLS 145"
-          }
-        ]
-      },
-      "BIOL 301L - DIS": {
-        "Section 02": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 05:00 PM",
-            "location": "MCLS 145"
           }
         ]
       }
@@ -12328,32 +10913,6 @@
   },
   {
     "semester": "Fall 2014",
-    "course_title": "Post-Cold War American Diplomacy",
-    "course_codes": [
-      "HIST-257",
-      "POSC-312"
-    ],
-    "faculty": {
-      "Section 01": [
-        "N. Gordon Levin",
-        "Pavel Machala"
-      ]
-    },
-    "description": "A 1992 still-classified Pentagon Defense Policy Guidance draft asserts that Americas political and military mission in the post-cold war era will be to ensure that no rival superpower be allowed to emerge in world politics. This course will examine American foreign relations from the fall of the Berlin Wall to the present. We will study the similarities and differences in the styles of statecraft of all post-cold war U.S. administrations in producing, managing and sustaining Americas unrivaled international position, which emerged in the aftermath of the collapse of the Soviet Union. While examining the debates between liberals and neoconservatives about Americas role in the world both preceding and following the 9-11 attack, we will also discuss the extent to which these debates not only have shaped American foreign policy but also how they have influenced our domestic politics and vice versa. Among the other main themes to be examined: the strategic, tactical and humanitarian uses of military and other forms of power by each administration (e.g., towards Somalia, the Balkans, Iraq, Afghanistan); U.S. policy towards NATO and towards the world economy; U.S. policy towards Russia, China, the Middle East and Latin America; human, economic and political costs and benefits of American leadership in this period.",
-    "times_and_locations": {
-      "POSC 312 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "MERR 315"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
     "course_title": "Reading Politics",
     "course_codes": [
       "POSC-313"
@@ -12484,36 +11043,6 @@
   },
   {
     "semester": "Fall 2014",
-    "course_title": "Culture and Politics in 20th-Century Europe",
-    "course_codes": [
-      "EUST-372",
-      "POSC-372"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ronald S. Tiersky"
-      ]
-    },
-    "description": "This seminar discusses political and economic ideas and ideologies in 20th-century Europe. Some of the recurring themes are: nationalism; Marxism/socialism/communism; fascism; anti-Semitism; Catholicism and the role of the church in politics; existentialism; the expansion of liberalism and the collapse of Communism; the role of the U.S. and American culture in European societies; the idea of Europe and the reality of European integration; European identity and national identities. Seminar discussion is a free-wheeling mix of politics, economics and culture.",
-    "times_and_locations": {
-      "POSC 372 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 302"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 302"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
     "course_title": "The Moral Turn in Political Theory",
     "course_codes": [
       "POSC-416"
@@ -12556,31 +11085,6 @@
             "day": "W",
             "time": "07:00 PM - 09:30 PM",
             "location": "CLAR 100"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Norms, Rights, and Social Justice: Feminists, Disability Rights Activists and the Poor at the Boundaries of the Law",
-    "course_codes": [
-      "LJST-374",
-      "POSC-474"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Kristin Bumiller"
-      ]
-    },
-    "description": "This seminar explores how the civil rights movement began a process of social change and identity-based activism. We evaluate the successes and failures of excluded groups efforts to use the law. We primarily focus on the recent scholarship of theorists, legal professionals, and activists to define post-identity politics strategies and to counteract the social processes that normalize persons on the basis of gender, sexuality, disability, and class. This course fulfills the requirement for an advanced seminar in Political Science.",
-    "times_and_locations": {
-      "POSC 474 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 05:00 PM",
-            "location": "CONV 207"
           }
         ]
       }
@@ -12838,41 +11342,6 @@
   },
   {
     "semester": "Fall 2014",
-    "course_title": "Psychopharmacology",
-    "course_codes": [
-      "NEUR-325",
-      "PSYC-325"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sarah M. Turgeon"
-      ]
-    },
-    "description": "In this course we will examine the ways in which drugs act on the brain to alter behavior. We will review basic principles of brain function and mechanisms of drug action in the brain. We will discuss a variety of legal and illegal recreational drugs as well as the use of psychotherapeutic drugs to treat mental illness. Examples from the primary scientific literature will demonstrate the various methods used to investigate mechanisms of drug action, the biological and behavioral consequences of drug use, and the nature of efforts to prevent or treat drug abuse.",
-    "times_and_locations": {
-      "PSYC 325 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "MERR 315"
-          },
-          {
-            "day": "W",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "MERR 315"
-          },
-          {
-            "day": "F",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "MERR 315"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
     "course_title": "Personality and Political Leadership",
     "course_codes": [
       "PSYC-338"
@@ -13052,36 +11521,6 @@
   },
   {
     "semester": "Fall 2014",
-    "course_title": "Introduction to Buddhist Traditions",
-    "course_codes": [
-      "ASLC-152",
-      "RELI-152"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Maria R. Heim"
-      ]
-    },
-    "description": "This course is an introduction to the diverse ideals, practices, and traditions of Buddhism from its origins in South Asia to its geographical and historical diffusion throughout Asia and, more recently, into the west. We will explore the Three Jewels--the Buddha, the Dharma, and the Sangha--and how they each provide refuge for those suffering in samsara (the endless cycle of rebirth). We will engage in close readings of the literary and philosophical texts central to Buddhism, as well as recent historical and anthropological studies of Buddhist traditions.",
-    "times_and_locations": {
-      "RELI 152 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "CHAP 101"
-          },
-          {
-            "day": "Th",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
     "course_title": "Religion in Scientific Perspective",
     "course_codes": [
       "RELI-215"
@@ -13132,36 +11571,6 @@
           {
             "day": "W",
             "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 103"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "African-American Religious History",
-    "course_codes": [
-      "BLST-238",
-      "RELI-238"
-    ],
-    "faculty": {
-      "Section 01": [
-        "David W. Wills"
-      ]
-    },
-    "description": "A study of African-American religion, from the time of slavery to the present, in the context of American social, political, and religious history. Consideration will be given to debates concerning the \"Africanity\" of black religion in the United States, to the role of Islam in African-American religious history, and to the religious impact of recent Caribbean immigration. The major emphasis throughout the course, however, will be on the history of African-American Christianity in the United States. Topics covered will include the emergence of African-American Christianity in the slavery era, the founding of the independent black churches (especially the AME church) and their institutional development in the nineteenth century, the predominant role of the black Baptist denominations in the twentieth century, the origins and growth of black Pentecostalism, the increasing importance of African-American Catholicism, the role of the churches in social protest movements (especially the civil rights movement) and electoral politics, the changing forms of black theology, and the distinctive worship traditions of the black churches.",
-    "times_and_locations": {
-      "RELI 238 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CHAP 103"
-          },
-          {
-            "day": "Th",
-            "time": "02:30 PM - 03:50 PM",
             "location": "CHAP 103"
           }
         ]
@@ -13328,31 +11737,6 @@
             "day": "Th",
             "time": "01:00 PM - 01:50 PM",
             "location": "WEBS 219"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Modernism and Revolution",
-    "course_codes": [
-      "EUST-215",
-      "RUSS-215"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Boris Wolfson"
-      ]
-    },
-    "description": "We will examine the revolutionary upheavals of early twentieth-century Russia through the lens of three modernist texts: Andrei Belys experimental novel Petersburg, Isaac Babels story cycle Red Cavalry and Mikhail Bulgakovs phantasmagorical masterpiece The Master and Margarita. Reshaped by the crises that they confronted in their works, these Russian writers reached beyond literature to the images, sounds and ideas of their Russian and European contemporaries to reimagine the place of artistic innovation and esthetic tradition in times of trouble, and so revolutionized the very idea of what literature can do in negotiating the relationship between text and experience. All readings and discussion in English. No familiarity with Russian history or culture is assumed.",
-    "times_and_locations": {
-      "RUSS 215 - L/D": {
-        "Section 01": [
-          {
-            "day": "F",
-            "time": "01:00 PM - 03:40 PM",
-            "location": "CONV 209"
           }
         ]
       }
@@ -13566,276 +11950,6 @@
             "day": "F",
             "time": "12:00 PM - 12:50 PM",
             "location": "CONV 308"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "New Women in America",
-    "course_codes": [
-      "ENGL-153",
-      "SWAG-112"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Wendy H. Bergoffen"
-      ]
-    },
-    "description": "This course will examine the emergence of the New Woman as a category of social theory, political action, and literary representation at the turning of the twentieth century. Early readings will trace the origins of the New Woman as a response to nineteenth-century notions of True Womanhood. Discussions will situate literary representations of women in larger cultural events taking place during the Progressive Era debates over suffrage as well as their relationship to issues of citizenship, immigration, Jim Crow segregation, urbanization, and nativism. The course will focus on texts written by a diverse group of women that present multiple and, at times, conflicting images of the New Woman. Close attention will be paid to the manner in which these women writers constructed their fictions, particularly to issues of language, style, and form. Readings will include texts by Charlotte Perkins Gilman, Kate Chopin, Edith Wharton, Pauline Hopkins, Anzia Yezierska, and Sui Sin Far.",
-    "times_and_locations": {
-      "ENGL 153 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MCLS 428"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MCLS 428"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Women and Art in Early Modern Europe",
-    "course_codes": [
-      "ARHA-284",
-      "EUST-284",
-      "SWAG-206"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Nicola Courtright"
-      ]
-    },
-    "description": "This course will examine the ways in which prevailing ideas about women and gender-shaped visual imagery, and how these images influenced ideas concerning women from the Renaissance to the Enlightenment. It will adopt a comparative perspective, both by identifying regional differences among European nations and tracing changes over time. In addition to considering patronage of art by women and works by women artists, we will look at the depiction of women heroes such as Judith; the portrayal of women rulers, including Elizabeth I and Marie de' Medici; and the imagery of rape. Topics emerging from these categories of art include biological theories about women; humanist defenses of women; the relationship between the exercise of political power and sexuality; differing attitudes toward women in Catholic and Protestant art; and feminine ideals of beauty.",
-    "times_and_locations": {
-      "ARHA 284 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "FAYE 217"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "FAYE 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Black Feminist Literary Traditions",
-    "course_codes": [
-      "BLST-345",
-      "ENGL-276",
-      "SWAG-208"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Aneeka A. Henderson"
-      ]
-    },
-    "description": "Reading the work of black feminist literary theorists and black women writers, we will examine the construction of black female identity in American literature, with a specific focus on how black women writers negotiate race, gender, sexuality, and class in their work. In addition to reading novels, literary criticism, book reviews, and watching documentaries, we will examine the stakes of adaptation and mediation for black female-authored texts. Students will watch and analyze the film and television adaptations of The Color Purple (1985), The Women of Brewster Place (1989), and Their Eyes Were Watching God (2005) as well as examine how Toni Morrisons The Bluest Eye (1970) was mediated and interpreted by Oprah Winfreys book club and daytime talk show. Authors will include Toni Morrison, Zora Neale Hurston, Alice Walker, Gwendolyn Brooks, and Gloria Naylor. Writing Attentive. Expectations include diligent reading, active participation, two writing projects, weekly response papers, a group presentation, and various in-class assignments.",
-    "times_and_locations": {
-      "SWAG 208 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 113"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Anthropology of Sexuality",
-    "course_codes": [
-      "ANTH-210",
-      "SWAG-210"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sahar Sadjadi"
-      ]
-    },
-    "description": "This course draws on anthropological literature to study the socio-cultural making of human sexuality and its variations, including theories of sexuality as a domain of human experience. It seeks to critically examine some of the most intimate and often taken-for-granted aspects of human life and locate sexual acts, desires and relations in particular historical and cultural contexts. The course offers analytical tools to understand and evaluate different methods and approaches to the study of human sexuality. We will examine the relation of sex to kinship/family, to reproduction and to romance. As we read about the bodily experience of sexual pleasure, we will explore how sexual taboos, norms and morality develop in various cultures and why sex acquires explosive political dimensions during certain historical periods. The course will explore the gendered and racial dimensions of human sexual experience in the context of class, nation and empire. How do class divisions produce different sexual culture? What economies of sex are involved in sex work, marriage and immigration? What has been the role of sexuality in projects of nation building and in colonial encounters? When, where and how did sexuality become a matter of identity? In addition to a focus on contemporary ethnographic studies of sexuality in various parts of the world, we will read theoretical and historical texts that have been influential in shaping the anthropological approaches to sexuality. We will also briefly address scientific theories of sexuality.",
-    "times_and_locations": {
-      "SWAG 210 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "09:30 AM - 10:50 AM",
-            "location": "CHAP 101"
-          },
-          {
-            "day": "W",
-            "time": "09:30 AM - 10:50 AM",
-            "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Gender and Work",
-    "course_codes": [
-      "SOCI-237",
-      "SWAG-237"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Eunmi Mun"
-      ]
-    },
-    "description": "How has the rise of working women complicated modern workplaces and the idea of work? One challenge is how to value womens work fairly. One index of this challenge is that in workplaces across the world, women earn significantly less than men and are underrepresented in high status positions. What explains such gender gaps in the workplace? Taking an empirical, social-science perspective, this course will discuss three main aspects of gender and work. First, we will cover major theories of gender inequality, such as psychological stereotyping, social exclusion, structural barriers, and gendered socialization. Second, in learning about the sociological mechanisms of inequality in the workplace, we will expand our discussion to womens work in the family and examine how the conflicts individuals face when trying to have both career and family influence womens lives. Finally, we will discuss the mixed results of public policies proposed to reduce gender inequality and work-family incompatibilities and the possible reasons for those mixed results.",
-    "times_and_locations": {
-      "SOCI 237 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "09:30 AM - 10:50 AM",
-            "location": "MORG 110"
-          },
-          {
-            "day": "W",
-            "time": "09:30 AM - 10:50 AM",
-            "location": "MORG 110"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Witches, Vampires and Other Monsters",
-    "course_codes": [
-      "ARHA-385",
-      "EUST-385",
-      "SWAG-310"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Natasha Staller"
-      ]
-    },
-    "description": "This course will explore the construction of the monstrous, over cultures, centuries and disciplines. With the greatest possible historical and cultural specificity, we will investigate the varied forms of monstrous creatures, their putative powers, and the explanations given for their existence-as we attempt to articulate the kindred qualities they share. Among the artists to be considered are Valdes Leal, Velazquez, Goya, Munch, Ensor, Redon, Nolde, Picasso, Dali, Kiki Smith, and Cindy Sherman.",
-    "times_and_locations": {
-      "ARHA 385 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 217"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Bad Black Women",
-    "course_codes": [
-      "BLST-377",
-      "SWAG-329"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Aneeka A. Henderson"
-      ]
-    },
-    "description": "History has long valorized passive, obedient, and long-suffering black women alongside aggressive and outspoken black male leaders and activists. This course provides an alternative narrative to this misrepresentation, as we will explore how bad is defined by ones race, gender, class, and sexuality as well as how black women have transgressed the boundaries of what it means to be good in U.S. society. We will use an interdisciplinary perspective to examine why black women have used covert and explicit maneuvers to challenge the stereotypical respectable or good black woman and the various risks and rewards they incur for their deviance. In addition to analyzing black womens literature, we will study black womens political activism, prostitution, and rising incarceration as well as black womens nonconformity in art, poetry, music, dance, and film. Students should be aware that part of this course is immersive and consequently, students will be asked to participate in a master class that will provide a space for students to learn and explore how dance has been historically used to defy race, class, and gender norms. Authors, scholars, political activists, and artists include Ida B. Wells, Toni Morrison, Anita Hill, Sapphire, Beth Ritchie, Dorothy West, Lorna Simpson, Donna Kate Rushin, Billie Holiday, and Beyonce among many others. Writing Attentive. Expectations include diligent reading, active participation, master dance class, writing projects, weekly critical response papers, a group presentation, and various in-class assignments.",
-    "times_and_locations": {
-      "SWAG 329 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:00 PM - 02:20 PM",
-            "location": "COOP 101"
-          },
-          {
-            "day": "Th",
-            "time": "01:00 PM - 02:20 PM",
-            "location": "COOP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Women in the Middle East",
-    "course_codes": [
-      "ASLC-363",
-      "HIST-397",
-      "SWAG-362"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Monica M. Ringer"
-      ]
-    },
-    "description": "The course examines the major developments, themes and issues in womans history in the Middle East. The first segment of the course concerns the early Islamic period and discusses the impact of the Quran on the status of women, the development of Islamic religious traditions and Islamic law. Questions concerning the historiography of this formative period of Islamic history, as well as hermeneutics of the Quran will be the focus of this segment. The second segment of the course concerns the 19th- and 20th-century Middle East. We will investigate the emergence and development of the woman question, the role of gender in the construction of Middle Eastern nationalisms, womens political participation, and the debates concerning the connections between women, gender, and religious and cultural traditions. The third segment of the course concerns the contemporary Middle East, and investigates new developments and emerging trends of womens political, social and religious activism in different countries. The course will provide a familiarity with the major primary texts concerning women and the study of women in the Middle East, as well as with the debates concerning the interpretation of texts, law, religion, and history in the shaping of womens status and concerns in the Middle East today.",
-    "times_and_locations": {
-      "HIST 397 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CHAP 101"
-          },
-          {
-            "day": "Th",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "To Sculpt a Modern Woman's Life",
-    "course_codes": [
-      "ARHA-374",
-      "EUST-384",
-      "SWAG-374"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Natasha Staller"
-      ]
-    },
-    "description": "We will revel in dramatically different works by women artists, from Magdalena Abakanowicz, Lynda Benglis and Louise Bourgeois, to Eva Hesse, Jeanne-Claude, Jenny Holzer, Rona Pondick, Doris Salcedo, Kiki Smith and Rachel Whiteread on down, as we explore how they created themselves through their work. As a foil, we will analyze the invented personas of Sarah Bernhardt and Madonna, as well as images of women by Renoir, Cezanne, Picasso, Magritte, de Kooning, Woody Allen, and Saura. While we will focus on original objects and primary texts (such as artists' letters or interviews), we will also critique essays by current feminist scholars and by practitioners of \"the new cultural history,\" in order to investigate possible models for understanding the relationship between a woman and her modern culture at large. Assignments will include a substantial research paper and at least one field trip.",
-    "times_and_locations": {
-      "ARHA 374 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:00 PM - 03:30 PM",
-            "location": "FAYE 217"
           }
         ]
       }
@@ -14373,7 +12487,7 @@
         "Victoria Maillo"
       ]
     },
-    "description": "In this course students will learn how to approach writing as a process. The emphasis is on writing as a communicative act rather than as a mere language exercise. As such, emphasis is given to the interaction between the author and the text, the target audience, and the purpose and message of the final product. In order to develop the necessary skills that good writers should have, the course will focus on expanding vocabulary, exploring rhetorical techniques for organizing information, developing strategies for writing, and characterizing the target audience(s). At the same time we will insist upon critical readings, and the processes of revising and editing. In addition, this course includes the study of written texts (narrative, description, poems, reports, essays, letters, etc.), and of literature’s many genres and subgenres (prose, poetry, drama, etc.).",
+    "description": "In this course students will learn how to approach writing as a process. The emphasis is on writing as a communicative act rather than as a mere language exercise. As such, emphasis is given to the interaction between the author and the text, the target audience, and the purpose and message of the final product. In order to develop the necessary skills that good writers should have, the course will focus on expanding vocabulary, exploring rhetorical techniques for organizing information, developing strategies for writing, and characterizing the target audience(s). At the same time we will insist upon critical readings, and the processes of revising and editing. In addition, this course includes the study of written texts (narrative, description, poems, reports, essays, letters, etc.), and of literature\u2019s many genres and subgenres (prose, poetry, drama, etc.).",
     "times_and_locations": {
       "SPAN 199 - L/D": {
         "Section 01": [
@@ -14461,37 +12575,6 @@
             "day": "Th",
             "time": "11:30 AM - 12:50 PM",
             "location": "SMUD 206"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Hispanic Genre Films",
-    "course_codes": [
-      "EUST-248",
-      "FAMS-352",
-      "SPAN-238"
-    ],
-    "faculty": {
-      "Section 01": [
-        "David Rodriguez-Solas"
-      ]
-    },
-    "description": "This course will be an introduction to genre films from Argentina, Cuba, Mexico, and Spain. We will study Hispanic interpretations of filmic genres such as melodrama, thriller, comedy, horror and musical. How did these genres develop? How stable are genre conventions? Is it possible to study national cinemas in the time of transnational films? This course will include critical readings and mandatory weekly screenings of films by Luis Bunuel, Juan Jose Campanella, Pedro Almodovar, and Alejandro Gonzalez Inarritu. Conducted in Spanish.",
-    "times_and_locations": {
-      "SPAN 238 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CHAP 210"
-          },
-          {
-            "day": "Th",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CHAP 210"
           }
         ]
       }
@@ -14616,36 +12699,6 @@
   },
   {
     "semester": "Fall 2014",
-    "course_title": "Impostors",
-    "course_codes": [
-      "EUST-235",
-      "SPAN-380"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ilan Stavans"
-      ]
-    },
-    "description": "An interdisciplinary exploration of the causes behind the social, racial, artistic, and political act and art of posing, passing, or pretending to be someone else. Blacks passing for whites, Jews passing for gentiles, and women passing for men, and vice versa, are a central motif. Attention is given to biological and scientific patterns such as memory loss, mental illness, and plastic surgery, and to literary strategies like irony. As a supernatural occurrence, the discussion includes mystical experiences, ghost stories, and seance sessions. The course also covers instances pertaining to institutional religion, from prophesy from the Hebrew and Christian Bibles to the Koran and Mormonism. In technology and communications, analysis concentrates on the invention of the telegraph, the telephone, and the Internet. Entertainment, ventriloquism, puppet shows, voice-overs, children's cartoon shows, subtitles, and dubbing in movies and TV are topics of analysis. Posers in Greek mythology, the Arabian Nights, Cervantes, Shakespeare, Lewis Carroll, Mark Twain, Sigmund Freud, Jorge Luis Borges, Philip Roth, Oliver Sacks, and Nella Larsen are examined.",
-    "times_and_locations": {
-      "EUST 235 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "BARR 102"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "BARR 102"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
     "course_title": "Spanglish",
     "course_codes": [
       "SPAN-394"
@@ -14692,196 +12745,6 @@
             "day": "Th",
             "time": "01:00 PM - 03:30 PM",
             "location": "FAYE 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Introduction to Statistics",
-    "course_codes": [
-      "STAT-111"
-    ],
-    "faculty": {
-      "Section 02": [
-        "Joanna M. Jeneralczuk"
-      ],
-      "Section 01": [
-        "Xiaofei S. Wang (Sections 01 and 03)"
-      ]
-    },
-    "description": "This course is an introduction to applied statistical methods useful for the analysis of data from all fields. Brief coverage of data summary and graphical techniques will be followed by elementary probability, sampling distributions, the central limit theorem and statistical inference. Inference procedures include confidence intervals and hypothesis testing for both means and proportions, the chi-square test, simple linear regression, and a brief introduction to analysis of variance (ANOVA). Four class hours per week (two will be held in the computer lab). Labs are not interchangeable between sections due to course content.",
-    "times_and_locations": {
-      "STAT 111 - LAB": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:50 AM",
-            "location": "SMUD 014"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "M",
-            "time": "10:00 AM - 11:50 AM",
-            "location": "MERR 131"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 04:20 PM",
-            "location": "MERR 131"
-          }
-        ]
-      },
-      "STAT 111 - LEC": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 131"
-          },
-          {
-            "day": "F",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MERR 131"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "W",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "MERR 131"
-          },
-          {
-            "day": "F",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "MERR 131"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "W",
-            "time": "01:00 PM - 01:50 PM",
-            "location": "MERR 131"
-          },
-          {
-            "day": "F",
-            "time": "01:00 PM - 01:50 PM",
-            "location": "MERR 131"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Introduction to Statistics via Modeling",
-    "course_codes": [
-      "STAT-135"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Nicholas J. Horton"
-      ]
-    },
-    "description": "Introduction to Statistics via Modeling is an introductory statistics course that uses modeling as a unifying framework for much of statistics. The course provides a basic foundation in statistics with a major emphasis on constructing models from data. Students learn important concepts of statistics by mastering powerful and relatively advanced statistical techniques using computational tools. Topics include descriptive and inferential statistics, probability (including conditional probabilities and Bayes' rule), multiple regression and an introduction to causal inference. This is a more mathematically rigorous version of STAT 111, formerly MATH 130.",
-    "times_and_locations": {
-      "STAT 135 - LEC": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 02:50 PM",
-            "location": "MERR 131"
-          },
-          {
-            "day": "F",
-            "time": "02:00 PM - 02:50 PM",
-            "location": "MERR 131"
-          }
-        ]
-      },
-      "STAT 135 - DIS": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:50 PM",
-            "location": "MERR 131"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Multivariate Data Analysis",
-    "course_codes": [
-      "STAT-330"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Amy S. Wagaman"
-      ]
-    },
-    "description": "Real world experiments often provide data that consist of many variables. When confronted with a large number of variables, there may be many different directions to proceed, but the direction chosen is ultimately based on the question(s) being asked. In biology, one could ask which observed characteristics distinguish females from males in a given species. In archeology, one could examine how the observed characteristics of pottery relate to their location on the site, look for clusters of similar pottery types, and gain valuable information about the location of markets or religious centers in relation to residential housing. This course will explore how to visualize large data sets and study a variety of methods to analyze them. Methods covered include principal components analysis, factor analysis, classification techniques (discriminant analysis and classification trees) and clustering techniques. This course will feature hands-on data analysis in weekly computer labs, emphasizing application over theory.",
-    "times_and_locations": {
-      "STAT 330 - LEC": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "SMUD 205"
-          },
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "SMUD 205"
-          },
-          {
-            "day": "F",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "SMUD 205"
-          }
-        ]
-      },
-      "STAT 330 - LAB": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "SMUD 205"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Probability",
-    "course_codes": [
-      "MATH-360",
-      "STAT-360"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Amy S. Wagaman"
-      ]
-    },
-    "description": "This course explores the nature of probability and its use in modeling real world phenomena. The course begins with the development of an intuitive feel for probabilistic thinking, based on the simple yet subtle idea of counting. It then evolves toward the rigorous study of discrete and continuous probability spaces, independence, conditional probability, expectation, and variance. Distributions covered include the Bernoulli and Binomial, Hypergeometric, Poisson, Normal, Gamma, Beta, Multinomial, and bivariate Normal.",
-    "times_and_locations": {
-      "STAT 360 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:50 PM",
-            "location": "SMUD 206"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:50 PM",
-            "location": "SMUD 206"
           }
         ]
       }
@@ -15072,36 +12935,6 @@
             "day": "Th",
             "time": "04:30 PM - 06:00 PM",
             "location": "WEBS 117"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Performing Modernity in Contemporary Spanish Theatre",
-    "course_codes": [
-      "SPAN-242",
-      "THDA-150"
-    ],
-    "faculty": {
-      "Section 01": [
-        "David Rodriguez-Solas"
-      ]
-    },
-    "description": "Spains recent past has been characterized by its anxiety over becoming a modern European nation. Playwriting has responded by dealing with topics such as drug use, sexualities, youth culture, and social problems. This course examines the social, historical and cultural transformation Spain has undergone over the last thirty years. We will read plays by Jose Luis Alonso de Santos, Juan Mayorga, Paloma Pedrero and Alfredo Sanzol among others. Readings will be supplemented with adaptations of the plays in theatre, film, and television, secondary bibliography, and in-class performances. Conducted in Spanish.",
-    "times_and_locations": {
-      "SPAN 242 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MCLS 428"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MCLS 428"
           }
         ]
       }
@@ -15379,416 +13212,6 @@
   },
   {
     "semester": "Fall 2014",
-    "course_title": "The Cross-Cultural Construction of Gender",
-    "course_codes": [
-      "SWAG-100"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Khary O. Polk",
-        "Krupa Shandilya"
-      ]
-    },
-    "description": "This course introduces students to the issues involved in the social and historical construction of gender and gender roles from a cross-cultural and interdisciplinary perspective. Topics change from year-to-year and have included women and social change; male and female sexualities including homosexualities; the uses and limits of biology in explaining human gender differences; womens participation in production and reproduction; the relationship among gender, race and class as intertwining oppressions; women, men and globalization; and gender and warfare.",
-    "times_and_locations": {
-      "SWAG 100 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 117"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 117"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Realism",
-    "course_codes": [
-      "ENGL-112",
-      "SWAG-106"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ben Lieber"
-      ]
-    },
-    "description": "This course will examine the phenomenon of realism in a variety of artistic media. We will study realism in the visual arts, film, television, and literature with a view towards determining the nature of our interest in the representation of real life and the ways in which works of art are or are not an accurate reflection of that life. Among the works we may consider are classic English novels (Defoe, Austen, Dickens), European and North and South American short fiction (Gogol, Zola, Chekhov, Henry James, Kafka, Borges, Alice Munro), essays and memoirs (Orwell, Frederick Exley, Mary Karr) and films, both documentary and fiction ( Double Indemnity , The Battle of Algiers , Saving Private Ryan ). Two themes will attract special attention: the representation of womens lives and the representation of war. We will address such questions as the following: Is a photograph always more realistic than a painting? In what way can a story about a man who turns into a bug be considered realistic? How real is virtual reality? The course will conclude with an examination of the phenomenon of reality television. This is an intensive writing course. Frequent short papers will be assigned.",
-    "times_and_locations": {
-      "ENGL 112 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:00 PM - 12:50 PM",
-            "location": "CONV 308"
-          },
-          {
-            "day": "W",
-            "time": "12:00 PM - 12:50 PM",
-            "location": "CONV 308"
-          },
-          {
-            "day": "F",
-            "time": "12:00 PM - 12:50 PM",
-            "location": "CONV 308"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "New Women in America",
-    "course_codes": [
-      "ENGL-153",
-      "SWAG-112"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Wendy H. Bergoffen"
-      ]
-    },
-    "description": "This course will examine the emergence of the New Woman as a category of social theory, political action, and literary representation at the turning of the twentieth century. Early readings will trace the origins of the New Woman as a response to nineteenth-century notions of True Womanhood. Discussions will situate literary representations of women in larger cultural events taking place during the Progressive Era debates over suffrage as well as their relationship to issues of citizenship, immigration, Jim Crow segregation, urbanization, and nativism. The course will focus on texts written by a diverse group of women that present multiple and, at times, conflicting images of the New Woman. Close attention will be paid to the manner in which these women writers constructed their fictions, particularly to issues of language, style, and form. Readings will include texts by Charlotte Perkins Gilman, Kate Chopin, Edith Wharton, Pauline Hopkins, Anzia Yezierska, and Sui Sin Far.",
-    "times_and_locations": {
-      "ENGL 153 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MCLS 428"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MCLS 428"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Women and Art in Early Modern Europe",
-    "course_codes": [
-      "ARHA-284",
-      "EUST-284",
-      "SWAG-206"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Nicola Courtright"
-      ]
-    },
-    "description": "This course will examine the ways in which prevailing ideas about women and gender-shaped visual imagery, and how these images influenced ideas concerning women from the Renaissance to the Enlightenment. It will adopt a comparative perspective, both by identifying regional differences among European nations and tracing changes over time. In addition to considering patronage of art by women and works by women artists, we will look at the depiction of women heroes such as Judith; the portrayal of women rulers, including Elizabeth I and Marie de' Medici; and the imagery of rape. Topics emerging from these categories of art include biological theories about women; humanist defenses of women; the relationship between the exercise of political power and sexuality; differing attitudes toward women in Catholic and Protestant art; and feminine ideals of beauty.",
-    "times_and_locations": {
-      "ARHA 284 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "FAYE 217"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "FAYE 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Black Feminist Literary Traditions",
-    "course_codes": [
-      "BLST-345",
-      "ENGL-276",
-      "SWAG-208"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Aneeka A. Henderson"
-      ]
-    },
-    "description": "Reading the work of black feminist literary theorists and black women writers, we will examine the construction of black female identity in American literature, with a specific focus on how black women writers negotiate race, gender, sexuality, and class in their work. In addition to reading novels, literary criticism, book reviews, and watching documentaries, we will examine the stakes of adaptation and mediation for black female-authored texts. Students will watch and analyze the film and television adaptations of The Color Purple (1985), The Women of Brewster Place (1989), and Their Eyes Were Watching God (2005) as well as examine how Toni Morrisons The Bluest Eye (1970) was mediated and interpreted by Oprah Winfreys book club and daytime talk show. Authors will include Toni Morrison, Zora Neale Hurston, Alice Walker, Gwendolyn Brooks, and Gloria Naylor. Writing Attentive. Expectations include diligent reading, active participation, two writing projects, weekly response papers, a group presentation, and various in-class assignments.",
-    "times_and_locations": {
-      "SWAG 208 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 113"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Anthropology of Sexuality",
-    "course_codes": [
-      "ANTH-210",
-      "SWAG-210"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sahar Sadjadi"
-      ]
-    },
-    "description": "This course draws on anthropological literature to study the socio-cultural making of human sexuality and its variations, including theories of sexuality as a domain of human experience. It seeks to critically examine some of the most intimate and often taken-for-granted aspects of human life and locate sexual acts, desires and relations in particular historical and cultural contexts. The course offers analytical tools to understand and evaluate different methods and approaches to the study of human sexuality. We will examine the relation of sex to kinship/family, to reproduction and to romance. As we read about the bodily experience of sexual pleasure, we will explore how sexual taboos, norms and morality develop in various cultures and why sex acquires explosive political dimensions during certain historical periods. The course will explore the gendered and racial dimensions of human sexual experience in the context of class, nation and empire. How do class divisions produce different sexual culture? What economies of sex are involved in sex work, marriage and immigration? What has been the role of sexuality in projects of nation building and in colonial encounters? When, where and how did sexuality become a matter of identity? In addition to a focus on contemporary ethnographic studies of sexuality in various parts of the world, we will read theoretical and historical texts that have been influential in shaping the anthropological approaches to sexuality. We will also briefly address scientific theories of sexuality.",
-    "times_and_locations": {
-      "SWAG 210 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "09:30 AM - 10:50 AM",
-            "location": "CHAP 101"
-          },
-          {
-            "day": "W",
-            "time": "09:30 AM - 10:50 AM",
-            "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Gender and Work",
-    "course_codes": [
-      "SOCI-237",
-      "SWAG-237"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Eunmi Mun"
-      ]
-    },
-    "description": "How has the rise of working women complicated modern workplaces and the idea of work? One challenge is how to value womens work fairly. One index of this challenge is that in workplaces across the world, women earn significantly less than men and are underrepresented in high status positions. What explains such gender gaps in the workplace? Taking an empirical, social-science perspective, this course will discuss three main aspects of gender and work. First, we will cover major theories of gender inequality, such as psychological stereotyping, social exclusion, structural barriers, and gendered socialization. Second, in learning about the sociological mechanisms of inequality in the workplace, we will expand our discussion to womens work in the family and examine how the conflicts individuals face when trying to have both career and family influence womens lives. Finally, we will discuss the mixed results of public policies proposed to reduce gender inequality and work-family incompatibilities and the possible reasons for those mixed results.",
-    "times_and_locations": {
-      "SOCI 237 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "09:30 AM - 10:50 AM",
-            "location": "MORG 110"
-          },
-          {
-            "day": "W",
-            "time": "09:30 AM - 10:50 AM",
-            "location": "MORG 110"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Witches, Vampires and Other Monsters",
-    "course_codes": [
-      "ARHA-385",
-      "EUST-385",
-      "SWAG-310"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Natasha Staller"
-      ]
-    },
-    "description": "This course will explore the construction of the monstrous, over cultures, centuries and disciplines. With the greatest possible historical and cultural specificity, we will investigate the varied forms of monstrous creatures, their putative powers, and the explanations given for their existence-as we attempt to articulate the kindred qualities they share. Among the artists to be considered are Valdes Leal, Velazquez, Goya, Munch, Ensor, Redon, Nolde, Picasso, Dali, Kiki Smith, and Cindy Sherman.",
-    "times_and_locations": {
-      "ARHA 385 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 217"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Bad Black Women",
-    "course_codes": [
-      "BLST-377",
-      "SWAG-329"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Aneeka A. Henderson"
-      ]
-    },
-    "description": "History has long valorized passive, obedient, and long-suffering black women alongside aggressive and outspoken black male leaders and activists. This course provides an alternative narrative to this misrepresentation, as we will explore how bad is defined by ones race, gender, class, and sexuality as well as how black women have transgressed the boundaries of what it means to be good in U.S. society. We will use an interdisciplinary perspective to examine why black women have used covert and explicit maneuvers to challenge the stereotypical respectable or good black woman and the various risks and rewards they incur for their deviance. In addition to analyzing black womens literature, we will study black womens political activism, prostitution, and rising incarceration as well as black womens nonconformity in art, poetry, music, dance, and film. Students should be aware that part of this course is immersive and consequently, students will be asked to participate in a master class that will provide a space for students to learn and explore how dance has been historically used to defy race, class, and gender norms. Authors, scholars, political activists, and artists include Ida B. Wells, Toni Morrison, Anita Hill, Sapphire, Beth Ritchie, Dorothy West, Lorna Simpson, Donna Kate Rushin, Billie Holiday, and Beyonce among many others. Writing Attentive. Expectations include diligent reading, active participation, master dance class, writing projects, weekly critical response papers, a group presentation, and various in-class assignments.",
-    "times_and_locations": {
-      "SWAG 329 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:00 PM - 02:20 PM",
-            "location": "COOP 101"
-          },
-          {
-            "day": "Th",
-            "time": "01:00 PM - 02:20 PM",
-            "location": "COOP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Women in the Middle East",
-    "course_codes": [
-      "ASLC-363",
-      "HIST-397",
-      "SWAG-362"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Monica M. Ringer"
-      ]
-    },
-    "description": "The course examines the major developments, themes and issues in womans history in the Middle East. The first segment of the course concerns the early Islamic period and discusses the impact of the Quran on the status of women, the development of Islamic religious traditions and Islamic law. Questions concerning the historiography of this formative period of Islamic history, as well as hermeneutics of the Quran will be the focus of this segment. The second segment of the course concerns the 19th- and 20th-century Middle East. We will investigate the emergence and development of the woman question, the role of gender in the construction of Middle Eastern nationalisms, womens political participation, and the debates concerning the connections between women, gender, and religious and cultural traditions. The third segment of the course concerns the contemporary Middle East, and investigates new developments and emerging trends of womens political, social and religious activism in different countries. The course will provide a familiarity with the major primary texts concerning women and the study of women in the Middle East, as well as with the debates concerning the interpretation of texts, law, religion, and history in the shaping of womens status and concerns in the Middle East today.",
-    "times_and_locations": {
-      "HIST 397 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CHAP 101"
-          },
-          {
-            "day": "Th",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "To Sculpt a Modern Woman's Life",
-    "course_codes": [
-      "ARHA-374",
-      "EUST-384",
-      "SWAG-374"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Natasha Staller"
-      ]
-    },
-    "description": "We will revel in dramatically different works by women artists, from Magdalena Abakanowicz, Lynda Benglis and Louise Bourgeois, to Eva Hesse, Jeanne-Claude, Jenny Holzer, Rona Pondick, Doris Salcedo, Kiki Smith and Rachel Whiteread on down, as we explore how they created themselves through their work. As a foil, we will analyze the invented personas of Sarah Bernhardt and Madonna, as well as images of women by Renoir, Cezanne, Picasso, Magritte, de Kooning, Woody Allen, and Saura. While we will focus on original objects and primary texts (such as artists' letters or interviews), we will also critique essays by current feminist scholars and by practitioners of 'the new cultural history,' in order to investigate possible models for understanding the relationship between a woman and her modern culture at large. Assignments will include a substantial research paper and at least one field trip.",
-    "times_and_locations": {
-      "ARHA 374 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:00 PM - 03:30 PM",
-            "location": "FAYE 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Gender and HIV/AIDS",
-    "course_codes": [
-      "SWAG-410"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sahar Sadjadi"
-      ]
-    },
-    "description": "This seminar explores the gender dimension of the HIV epidemic in the U.S. and globally, and the role of socio-economic, political and biological factors in the shaping of the epidemic. This course encourages students to think about AIDS and other diseases politically, while remaining attentive to their bodily and social effects. We will engage with AIDS on various scales, from the virus and T cells to the transnational pharmaceutical industry, and from intimate sexual relations to the political economies of health care. We will consider the processes by which some groups of people become more vulnerable to the epidemic than others and we will read about the power dynamics involved in negotiations over condom use. Global processes that guide our investigation include the feminization of poverty, the neoliberal economic restructuring of health systems and the politics of scientific and medical research on AIDS. In addition, the course examines the role of social movements in responding to the epidemic.",
-    "times_and_locations": {
-      "SWAG 410 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "CHAP 210"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Social Movements, Civil Society and Democracy in India",
-    "course_codes": [
-      "POSC-467",
-      "SWAG-467"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Amrita Basu"
-      ]
-    },
-    "description": "The goal of this seminar is illuminate the complex character of social movements and civil society organizations and their vital influence on Indian democracy. Social movements have strengthened democratic processes by forming or allying with political parties and thereby contributed to the growth of a multi-party system. They have increased the political power of previously marginalized and underprivileged groups and pressured the state to address social inequalities. However conservative religious movements and civil society organizations have threatened minority rights and undermined secular, democratic principles. During the semester, we will interact through internet technology with students, scholars and community organizers in India. This seminar counts as an advanced seminar in Political Science.",
-    "times_and_locations": {
-      "POSC 467 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "07:00 PM - 09:30 PM",
-            "location": "CLAR 100"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "South Asian Feminist Cinema",
-    "course_codes": [
-      "ASLC-452",
-      "FAMS-322",
-      "SWAG-469"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Krupa Shandilya"
-      ]
-    },
-    "description": "How do we define the word feminism? Can the term be used to define cinematic texts outside the Euro-American world? In this course we will study a range of issues that have been integral to feminist theory--the body, domesticity, same sex desire, gendered constructions of the nation, feminist utopias and dystopias--through a range of South Asian cinematic texts. Through our viewings and readings we will consider whether the term feminist can be applied to these texts, and we will experiment with new theoretical lenses for exploring these films. Films will range from Satyajit Rays classic masterpiece Charulata to Gurinder Chadhas trendy diasporic film, Bend It Like Beckham.",
-    "times_and_locations": {
-      "SWAG 469 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 05:00 PM",
-            "location": "MERR 403"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
     "course_title": "Corporeal States: Body, Nation, Text in Modern African Literature",
     "course_codes": [
       "BLST-412",
@@ -15813,31 +13236,6 @@
             "day": "W",
             "time": "08:30 AM - 09:50 AM",
             "location": "COOP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2014",
-    "course_title": "Performance Studio",
-    "course_codes": [
-      "FAMS-345",
-      "THDA-353"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Wendy Woodson"
-      ]
-    },
-    "description": "An advanced course in the techniques of creating performance. Each student will create and rehearse a performance piece that develops and incorporates original choreography, text, music, sound and/or video. Experimental and collaborative structures and approaches among and within different media will be stressed. The final performance pieces and events will be presented in the Holden Theater. Can be taken more than once for credit.",
-    "times_and_locations": {
-      "THDA 353 - L/D": {
-        "Section 01": [
-          {
-            "day": "F",
-            "time": "01:00 PM - 04:00 PM",
-            "location": "WEBS 117"
           }
         ]
       }

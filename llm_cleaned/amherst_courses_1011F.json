@@ -944,41 +944,6 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Indian Civilization",
-    "course_codes": [
-      "ANTH-21",
-      "ASLC-22"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Lawrence A. Babb"
-      ]
-    },
-    "description": "A general introduction to Indian civilization. The course will survey South Asia's most important social, political, and religious traditions and institutions. It will emphasize the historical framework within which Indian civilization has developed its most characteristic cultural and social patterns. This course is designed for students who are new to South Asia, or for those who have some knowledge of South Asia but have not studied it at the college level.",
-    "times_and_locations": {
-      "ANTH 21 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "FAYE 117"
-          },
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "FAYE 117"
-          },
-          {
-            "day": "F",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "FAYE 117"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
     "course_title": "Chinese Civilization to 1800",
     "course_codes": [
       "ASLC-24",
@@ -1002,41 +967,6 @@
             "day": "Th",
             "time": "02:00 PM - 03:20 PM",
             "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Arts of China",
-    "course_codes": [
-      "ARHA-47",
-      "ASLC-43"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Samuel C. Morse"
-      ]
-    },
-    "description": "An introduction to the history of Chinese art from its beginnings in neolithic times until the end of the twentieth century. Topics will include the ritual bronze vessels of the Shang and Zhou dynasties, the Chinese transformation of the Buddha image, imperial patronage of painting during the Song dynasty and the development of the literati tradition of painting and calligraphy. Particular weight will be given to understanding the cultural context of Chinese art.",
-    "times_and_locations": {
-      "ARHA 47 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "F",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "FAYE 113"
           }
         ]
       }
@@ -5454,37 +5384,6 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Passing in Literature and Film",
-    "course_codes": [
-      "BLST-17",
-      "ENGL-69",
-      "FAMS-57"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Marisa Parham"
-      ]
-    },
-    "description": "Is identity natural or cultural? This question has persisted through centuries of American writing, and many of the most interesting meditations on this question arise from books and films that deal with passing. Texts about passing, about people who can successfully pass themselves off as something different from what they were born as, form an important subgenre of American culture because they force us to question some strangely consistent inconsistencies in how we define identity. If race, for example, signifies a real and material difference, how could there be such a thing as racial passing? But, at the same time, if race is only a social construction, then why is racial passing so often characterized as a crime against nature? Stories about passing often illustrate a fundamental ambivalence on the personal meaningfulness of biopower in America, and also reveal the nascent virtuality of worldly experiences more generally. That in mind, this course explores a broad range of literary and cultural texts, including novels by Charles Chesnutt, Percival Everett, and Danzy Senna, and film and televisual texts like Gattaca, Avatar, Sirks Imitation of Life, and Eddie Murphys White Like Me.",
-    "times_and_locations": {
-      "ENGL 69 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "FAYE 115"
-          },
-          {
-            "day": "Th",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "FAYE 115"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
     "course_title": "Topics in Film Study: Knowing Television",
     "course_codes": [
       "ENGL-84",
@@ -5712,125 +5611,6 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Topics in Film Study: The Romance",
-    "course_codes": [
-      "ENGL-84",
-      "FAMS-52"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Helen L. von Schmidt"
-      ]
-    },
-    "description": "The topic changes each time the course is taught.  The romance, and the generic forms it has taken, in Hollywood and elsewhere:  classical romance, melodrama, screwball comedy, romantic comedy, the musical.  How has the screen romance variously reflected and/or shaped our own attitudes?  We will look at examples representing a range of cultures and historical eras, from a range of critical positions.  Two screenings per week.",
-    "times_and_locations": {
-      "ENGL 84 - L/D": {
-        "Section 02": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MERR 4"
-          }
-        ]
-      },
-      "ENGL 97 - TUT": {
-        "Section 24": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MERR 4"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Ecology",
-    "course_codes": [
-      "BIOL-23",
-      "ENST-21"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ethan J. Temeles"
-      ]
-    },
-    "description": "A study of the relationships of plants and animals (including humans) to each other and to their environment. We'll start by considering the decisions an individual makes in its daily life concerning its use of resources, such as what to eat and where to live, and whether to defend such resources. We'll then move on to populations of individuals, and investigate species population growth, limits to population growth, and why some species are so successful as to become pests whereas others are on the road to extinction. The next level will address communities, and how interactions among populations, such as competition, predation, parasitism, and mutualism, affect the organization and diversity of species within communities. The final stage of the course will focus on ecosystems, and the effects of humans and other organisms on population, community, and global stability. Three hours of lecture per week.",
-    "times_and_locations": {
-      "BIOL 23 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:00 PM - 12:50 PM",
-            "location": "MERR 2"
-          },
-          {
-            "day": "W",
-            "time": "12:00 PM - 12:50 PM",
-            "location": "MERR 2"
-          },
-          {
-            "day": "F",
-            "time": "12:00 PM - 12:50 PM",
-            "location": "MERR 2"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Introduction to Economics with Environmental Applications",
-    "course_codes": [
-      "ECON-11",
-      "ENST-23"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Christopher G. Kingston",
-        "Katharine R. E. Sims"
-      ]
-    },
-    "description": "A study of the central problem of scarcity and the ways in which the U. S. economic system allocates scarce resources among competing ends and apportions the goods produced among people. We will apply core economic concepts to major environmental/natural resource policy topics such as global climate change, local air and water pollution, over-harvesting of renewable resources, habitat loss, and solid waste management.",
-    "times_and_locations": {
-      "ENST 23 - DIS": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CONV 207"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CONV 207"
-          }
-        ]
-      },
-      "ENST 23 - LEC": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:00 PM - 01:50 PM",
-            "location": "MERR 1"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
     "course_title": "Introduction to Statistics",
     "course_codes": [
       "ENST-24",
@@ -6003,38 +5783,6 @@
             "day": "Th",
             "time": "11:30 AM - 12:50 PM",
             "location": "MERR 403"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Dangerous Reading: The 18th-Century Novel in England and France",
-    "course_codes": [
-      "ENGL-48",
-      "EUST-36",
-      "FREN-62"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Judith E. Frank",
-        "Ronald C. Rosbottom"
-      ]
-    },
-    "description": "Why was reading novels considered dangerous in the eighteenth century, especially for young girls? This course will examine the development, during this period, of the genre of the novel in England and France, in relation to the social and moral dangers it posed and portrayed. Along with the troublesome question of reading fiction itself, we will explore such issues as social class and bastardy, sexuality and self-awareness, the competing values of genealogy and character, and the important role of women--as novelists, readers, and characters--in negotiating these questions. We will examine why the novel was itself considered a bastard genre, and engage formal questions by studying various kinds of novels: picaresque, epistolary, gothic, as well as the novel of ideas. Our approach will combine close textual analysis with historical readings about these two intertwined, yet rival, cultures, and we will pair novels in order to foreground how these cultures may have taken on similar social or representational problems in different ways. Possible pairings might include Prevost and Defoe, Laclos and Richardson, Voltaire and Fielding, Sade and Jane Austen. French novels will be read in translation.",
-    "times_and_locations": {
-      "EUST 36 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 108"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 108"
           }
         ]
       }
@@ -6276,121 +6024,6 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Witches, Vampires and Other Monsters",
-    "course_codes": [
-      "ARHA-85",
-      "EUST-70"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Natasha Staller"
-      ]
-    },
-    "description": "This course will explore the construction of the monstrous, over cultures, centuries and disciplines. With the greatest possible historical and cultural specificity, we will investigate the varied forms of monstrous creatures, their putative powers, and the explanations given for their existence-as we attempt to articulate the kindred qualities they share. Among the artists to be considered are Bosch, Valdes Leal, Velazquez, Goya, Munch, Ensor, Redon, Nolde, Picasso, Dali, Kiki Smith, and Cindy Sherman.",
-    "times_and_locations": {
-      "ARHA 85 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "Th",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "FAYE 113"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "The Monastic Challenge",
-    "course_codes": [
-      "ARHA-50",
-      "EUST-74"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Joel M. Upton"
-      ]
-    },
-    "description": "This course aims to be a visually and spatially attentive search for the art of the monastic and cathedral masterpieces of medieval France. First, by learning how to recognize, define, and respond to the artistic values embodied in several romanesque and gothic monuments including the Abbeys of Fontenay, Vezelay and Mont St. Michel and the Cathedrals of Laon, Paris, Chartres, Amiens and Reims, we will try to engage directly (e.g., architecturally and spatially) the human aspiration these structures embody. Secondly, with the help of two literary masterpieces from the period, The Song of Roland and Tristan and Isolde, we will discover that the heart of the monastic challenge to our own era is not the common opposition of the medieval and modern worlds, but rather the recognition of the potential diminishment of art by an exclusively ratiocinated view of all reality. The tragic love affair of Eloise and Peter Abelard will dramatize a vital existential dilemma too easily forgotten that always (but especially in our time) threatens art, human compassion and spirituality. Our goal is to reclaim the poetic potential of the word cathedral.",
-    "times_and_locations": {
-      "ARHA 50 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "FAYE 117"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "FAYE 117"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Coming to Terms: Cinema",
-    "course_codes": [
-      "ENGL-16",
-      "FAMS-20"
-    ],
-    "faculty": {
-      "Section 01": [
-        "John Cameron"
-      ]
-    },
-    "description": "An introduction to cinema studies through consideration of a few critical and descriptive terms together with a selection of various films (historical and contemporary, foreign and American) for illustration and discussion. The terms for discussion will include, among others: the moving image , montage , mise en scene , sound , genre , authorship , the gaze .",
-    "times_and_locations": {
-      "ENGL 16 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "MEAD 115"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "MEAD 115"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Screenwriting",
-    "course_codes": [
-      "ENGL-24",
-      "FAMS-25"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Chris Mason Johnson"
-      ]
-    },
-    "description": "This course is a first workshop in narrative screenwriting. Through frequent exercises, readings, and in-class screenings, we will analyze the fundamentals of scene and story shape as theyre practiced within the commercial world of filmmaking in the U.S. Well also take a broader look at what a screenplay might be outside of that world. In the process, well examine both the well-established craft of cinematic storytelling (plot structure, character, conflict, action, dialogue, etc.), and the more elastic possibilities of the audio-visual medium itself.",
-    "times_and_locations": {
-      "ENGL 24 - L/D": {
-        "Section 01": [
-          {
-            "day": "Th",
-            "time": "02:00 PM - 05:00 PM",
-            "location": "CONV 302"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
     "course_title": "Mother India: Reading Gender and Nation in South Asia",
     "course_codes": [
       "ASLC-51",
@@ -6447,36 +6080,6 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Topics in Film Study: Knowing Television",
-    "course_codes": [
-      "ENGL-84",
-      "FAMS-50"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Amelie E. Hastie"
-      ]
-    },
-    "description": "The topic changes each time the course is taught.  The topic will be Knowing Television.  For better or worse, U.S. broadcast television is a cultural form that is not commonly associated with knowledge.  This course will take what might seem a radical counter-position to such assumptions--looking at the ways television teaches us what it is and even trains us in potential critical practices for investigating it.  By considering its formal structure, its textual definitions, and the means through which we see it, we will map out how it is that we come to know television.",
-    "times_and_locations": {
-      "ENGL 84 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "MEAD 115"
-          },
-          {
-            "day": "Th",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "MEAD 115"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
     "course_title": "Topics in Film Study: The Romance",
     "course_codes": [
       "ENGL-84",
@@ -6521,37 +6124,6 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Traumatic Events",
-    "course_codes": [
-      "EUST-63",
-      "FAMS-53",
-      "GERM-63"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Heidi Gilpin"
-      ]
-    },
-    "description": "How is memory constructed and represented? How is it possible to bear witness, and what exactly is involved? Who is authorized to testify, to whom, when? Whose story is it? Is it possible to tell \"the story\" of a traumatic event? What are the disorders of testimony, and how and where do they emerge? This course will observe the workings of trauma (the enactment and working-through of collective and individual symptoms of trauma), memory, and witnessing in various modes of everyday life. We will examine notions of catastrophe, disaster, accident, and violence, and explore the possibilities and impossibilities of bearing witness in many forms of cultural production: in fiction, poetry, architecture, critical theory, oral and written testimonies, visual art, monuments, memorials, philosophy, science, cartoons, film, video, theater, television reportage, newspaper documentation, performance, online, and in our public and domestic spaces. We will study various representations of trauma, paying particular attention to events in Germany and Europe from the twentieth century, as well as to 9/11 and other recent international events. Material to be examined will be drawn from the work of Pina Bausch, Joseph Beuys, Christian Boltanski, Cathy Caruth, Paul Celan, Marguerite Duras, Peter Eisenman, Shoshana Felman, Florian Freund, Jochen Gerz, Geoffrey Hartman, Rebecca Horn, Marion Kant, Anselm Kiefer, Ruth Kluger, Dominick LaCapra, Claude Lanzmann, Dori Laub, Daniel Libeskind, W.G. Sebald, Art Spiegelman, Paul Virilio, Peter Weiss, Wim Wenders, Elie Wiesel, Christa Wolf, and others.",
-    "times_and_locations": {
-      "GERM 63 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "CONV 302"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "CONV 302"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
     "course_title": "Global Sound",
     "course_codes": [
       "FAMS-54",
@@ -6575,37 +6147,6 @@
             "day": "W",
             "time": "02:00 PM - 03:20 PM",
             "location": "ARMU 212"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Passing in Literature and Film",
-    "course_codes": [
-      "BLST-17",
-      "ENGL-69",
-      "FAMS-57"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Marisa Parham"
-      ]
-    },
-    "description": "Is identity natural or cultural? This question has persisted through centuries of American writing, and many of the most interesting meditations on this question arise from books and films that deal with passing. Texts about passing, about people who can successfully pass themselves off as something different from what they were born as, form an important subgenre of American culture because they force us to question some strangely consistent inconsistencies in how we define identity. If race, for example, signifies a real and material difference, how could there be such a thing as racial passing? But, at the same time, if race is only a social construction, then why is racial passing so often characterized as a crime against nature? Stories about passing often illustrate a fundamental ambivalence on the personal meaningfulness of biopower in America, and also reveal the nascent virtuality of worldly experiences more generally. That in mind, this course explores a broad range of literary and cultural texts, including novels by Charles Chesnutt, Percival Everett, and Danzy Senna, and film and televisual texts like Gattaca, Avatar, Sirks Imitation of Life, and Eddie Murphys White Like Me.",
-    "times_and_locations": {
-      "ENGL 69 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "FAYE 115"
-          },
-          {
-            "day": "Th",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "FAYE 115"
           }
         ]
       }
@@ -6672,7 +6213,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "The Value of Nature",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-01"
+    ],
     "faculty": {
       "Section 01": [
         "Joseph G. Moore"
@@ -6699,7 +6242,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Human Health: Rights and Wrongs",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-02"
+    ],
     "faculty": {
       "Section 01": [
         "Jyl Gentzler"
@@ -6726,7 +6271,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Evolution and Intellectual Revolution",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-03"
+    ],
     "faculty": {
       "Section 01": [
         "John W. Servos"
@@ -6768,7 +6315,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "The Rule of Law",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-04"
+    ],
     "faculty": {
       "Section 01": [
         "Lawrence R. Douglas"
@@ -6795,7 +6344,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Drugs in History",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-05"
+    ],
     "faculty": {
       "Section 01": [
         "Francis G. Couvares"
@@ -6822,7 +6373,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "From Martin Luther King, Jr., to Barack Obama",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-06"
+    ],
     "faculty": {
       "Section 01": [
         "David W. Wills"
@@ -6849,7 +6402,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Romanticism and the Enlightenment",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-07"
+    ],
     "faculty": {
       "Section 01": [
         "Ute Brandes"
@@ -6901,7 +6456,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Figures of Ill Repute",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-08"
+    ],
     "faculty": {
       "Section 01": [
         "Laure A. Katsaros"
@@ -6943,7 +6500,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Slaveryand the American Imagination",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-09"
+    ],
     "faculty": {
       "Section 01": [
         "Hilary J. Moss"
@@ -6970,7 +6529,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Pariscape: Imagining Paris in the Twentieth Century",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-10"
+    ],
     "faculty": {
       "Section 01": [
         "Ronald C. Rosbottom"
@@ -6997,7 +6558,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Eros and Insight",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-11"
+    ],
     "faculty": {
       "Section 01": [
         "Joel M. Upton",
@@ -7025,7 +6588,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Friendship",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-12"
+    ],
     "faculty": {
       "Section 01": [
         "Kim Townsend"
@@ -7052,7 +6617,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Gender and Science",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-13"
+    ],
     "faculty": {
       "Section 01": [
         "TBA"
@@ -7079,7 +6646,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "The Unseen Universe",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-14"
+    ],
     "faculty": {
       "Section 01": [
         "George S. Greenstein"
@@ -7106,7 +6675,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Secrets and Lies",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-15"
+    ],
     "faculty": {
       "Section 01": [
         "Austin D. Sarat"
@@ -7133,7 +6704,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Liberation",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-16"
+    ],
     "faculty": {
       "Section 01": [
         "Frederick T. Griffiths"
@@ -7160,7 +6733,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Leadership, Citizens and Democracy",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-17"
+    ],
     "faculty": {
       "Section 01": [
         "Ronald S. Tiersky"
@@ -7187,7 +6762,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Arts of Spain",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-18"
+    ],
     "faculty": {
       "Section 01": [
         "Natasha Staller"
@@ -7214,7 +6791,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Growing Up in America",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-19"
+    ],
     "faculty": {
       "Section 01": [
         "Elizabeth J. Aries"
@@ -7241,7 +6820,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Africa: Power and Representation",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-20"
+    ],
     "faculty": {
       "Section 01": [
         "Miriam R. Goheen [d]"
@@ -7268,7 +6849,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Giving",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-21"
+    ],
     "faculty": {
       "Section 01": [
         "Maria R. Heim"
@@ -7295,7 +6878,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Genocide",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-22"
+    ],
     "faculty": {
       "Section 01": [
         "Catherine A. Epstein"
@@ -7337,7 +6922,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Happiness",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-23"
+    ],
     "faculty": {
       "Section 01": [
         "Daniel P. Barbezat"
@@ -7364,7 +6951,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Mozart and His World",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-24"
+    ],
     "faculty": {
       "Section 01": [
         "David E. Schneider"
@@ -7391,7 +6980,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Privacy",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-25"
+    ],
     "faculty": {
       "Section 01": [
         "Martha M. Umphrey"
@@ -7418,7 +7009,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Thinking Through Improvisation",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-26"
+    ],
     "faculty": {
       "Section 01": [
         "Dominic L. Poccia"
@@ -7445,7 +7038,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Thought-Experiments in the Development of Physics",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-27"
+    ],
     "faculty": {
       "Section 01": [
         "Jagu Jagannathan"
@@ -7472,7 +7067,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Reading Nature",
-    "course_codes": [],
+    "course_codes": [
+      "FYSE-28"
+    ],
     "faculty": {
       "Section 01": [
         "Nicola Courtright",
@@ -7992,38 +7589,6 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Dangerous Reading: The 18th-Century Novel in England and France",
-    "course_codes": [
-      "ENGL-48",
-      "EUST-36",
-      "FREN-62"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Judith E. Frank",
-        "Ronald C. Rosbottom"
-      ]
-    },
-    "description": "Why was reading novels considered dangerous in the eighteenth century, especially for young girls? This course will examine the development, during this period, of the genre of the novel in England and France, in relation to the social and moral dangers it posed and portrayed. Along with the troublesome question of reading fiction itself, we will explore such issues as social class and bastardy, sexuality and self-awareness, the competing values of genealogy and character, and the important role of women--as novelists, readers, and characters--in negotiating these questions. We will examine why the novel was itself considered a bastard genre, and engage formal questions by studying various kinds of novels: picaresque, epistolary, gothic, as well as the novel of ideas. Our approach will combine close textual analysis with historical readings about these two intertwined, yet rival, cultures, and we will pair novels in order to foreground how these cultures may have taken on similar social or representational problems in different ways. Possible pairings might include Prevost and Defoe, Laclos and Richardson, Voltaire and Fielding, Sade and Jane Austen. French novels will be read in translation.",
-    "times_and_locations": {
-      "EUST 36 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 108"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 108"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
     "course_title": "Principles of Geology",
     "course_codes": [
       "GEOL-11"
@@ -8310,97 +7875,6 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Traumatic Events",
-    "course_codes": [
-      "EUST-63",
-      "FAMS-53",
-      "GERM-63"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Heidi Gilpin"
-      ]
-    },
-    "description": "How is memory constructed and represented? How is it possible to bear witness, and what exactly is involved? Who is authorized to testify, to whom, when? Whose story is it? Is it possible to tell \"the story\" of a traumatic event? What are the disorders of testimony, and how and where do they emerge? This course will observe the workings of trauma (the enactment and working-through of collective and individual symptoms of trauma), memory, and witnessing in various modes of everyday life. We will examine notions of catastrophe, disaster, accident, and violence, and explore the possibilities and impossibilities of bearing witness in many forms of cultural production: in fiction, poetry, architecture, critical theory, oral and written testimonies, visual art, monuments, memorials, philosophy, science, cartoons, film, video, theater, television reportage, newspaper documentation, performance, online, and in our public and domestic spaces. We will study various representations of trauma, paying particular attention to events in Germany and Europe from the twentieth century, as well as to 9/11 and other recent international events. Material to be examined will be drawn from the work of Pina Bausch, Joseph Beuys, Christian Boltanski, Cathy Caruth, Paul Celan, Marguerite Duras, Peter Eisenman, Shoshana Felman, Florian Freund, Jochen Gerz, Geoffrey Hartman, Rebecca Horn, Marion Kant, Anselm Kiefer, Ruth Kluger, Dominick LaCapra, Claude Lanzmann, Dori Laub, Daniel Libeskind, W.G. Sebald, Art Spiegelman, Paul Virilio, Peter Weiss, Wim Wenders, Elie Wiesel, Christa Wolf, and others.",
-    "times_and_locations": {
-      "GERM 63 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "CONV 302"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "CONV 302"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Early Modern Europe",
-    "course_codes": [
-      "EUST-48",
-      "HIST-04"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Margaret R. Hunt"
-      ]
-    },
-    "description": "This introductory survey covers Western, Central and Eastern Europe and the European parts of the Ottoman Empire during the period from approximately 1500 to 1800. It looks at the main political developments of the period, with special attention to court culture, rebellions and revolutions, colonial expansion and contraction, and the clash of states and empires. It examines new developments in long-distance trade, agriculture, industry, finance, warfare, media and the arts, and their impact on social life, politics and the environment. It looks at the emergent slave systems of Europe and her colonies as well as the Ottoman Empire. And it analyzes religious conflict and accommodation with respect to Catholics, Protestants, the Eastern Orthodox, Jews, Muslims and non-believers. The course aims to uncover the political, ethnic and religious diversity of Early Modern Europe as well as to plumb the roots of present-day conflicts and controversies about the historical definition of Europe and Europeans.",
-    "times_and_locations": {
-      "HIST 04 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "JOCH 21"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "JOCH 21"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Chinese Civilization to 1800",
-    "course_codes": [
-      "ASLC-24",
-      "HIST-15"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jerry P. Dennerline"
-      ]
-    },
-    "description": "A survey of Chinese history from ancient times to the eighteenth century. We will focus on texts and artifacts to explore the classical roots and historical development of Chinese statecraft, philosophy, religion, art, and literature. Using these media for evidence, we will trace the histories of inter-state relations, imperial institutions, global commerce, and family-based society through the ancient Han empire, the great age of Buddhism, the medieval period of global trade, and the Confucian bureaucratic empires that followed the Mongol world conquest. We will also compare these histories to those of European and other civilizations, considering Chinese and non-Chinese views of the past. Readings include the Analects of Confucius and other Confucian and Daoist texts, Buddhist tales and early modern fiction, selections from the classic Records of the Grand Historian (Shiji), and Jonathan Spences Emperor of China: Self-portrait of Kangxi.",
-    "times_and_locations": {
-      "HIST 15 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 203"
-          },
-          {
-            "day": "Th",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
     "course_title": "France in the Twentieth Century",
     "course_codes": [
       "HIST-21"
@@ -8423,119 +7897,6 @@
             "day": "Th",
             "time": "02:00 PM - 03:20 PM",
             "location": "CHAP 204"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Nazi Germany",
-    "course_codes": [
-      "EUST-54",
-      "HIST-34"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Catherine A. Epstein"
-      ]
-    },
-    "description": "This course will explore the history of Nazi Germany from 1933 to 1945. It will examine the emergence of Hitler and Nazism in Germany, Nazi ideology and aesthetics, Nazi racial policies, daily life in the Third Reich, women under Nazism, resistance to the Nazis, Nazi foreign policy and World War II, the Holocaust, and the Nuremberg War Crimes Trial. Class participants will also discuss themes that range beyond the Nazi case: How do dictatorships function? What constitutes resistance? How and why do regimes engage in mass murder? Texts will include films, diaries, memoirs, government and other official documents, and classic and recent scholarly accounts of the era.",
-    "times_and_locations": {
-      "HIST 34 - LEC": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "01:00 PM - 01:50 PM",
-            "location": "FAYE 115"
-          },
-          {
-            "day": "W",
-            "time": "01:00 PM - 01:50 PM",
-            "location": "FAYE 115"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "M",
-            "time": "01:00 PM - 01:50 PM",
-            "location": "FAYE 115"
-          },
-          {
-            "day": "W",
-            "time": "01:00 PM - 01:50 PM",
-            "location": "FAYE 115"
-          }
-        ]
-      },
-      "HIST 34 - DIS": {
-        "Section 01": [
-          {
-            "day": "F",
-            "time": "12:00 PM - 12:50 PM",
-            "location": "CHAP 203"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "F",
-            "time": "01:00 PM - 01:50 PM",
-            "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "The Italian Renaissance",
-    "course_codes": [
-      "EUST-49",
-      "HIST-36"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Werner L. Gundersheimer"
-      ]
-    },
-    "description": "This course provides an introduction to Renaissance Italy and its Mediterranean setting during the fourteenth and fifteenth centuries. Against a background of endemic plague, religious turmoil and chronic warfare, well focus on such diverse Italian cities as Florence, Venice, and Ferrara, considering how people not unlike us dealt with increasingly complex, challenging times. Well also look beyond the peninsula to the Eastern Mediterranean and the immense challenge to European rulers, diplomats, and thinkers posed by the Ottoman conquest of Constantinople (1453) and the spread of Islam into the Balkans. Readings and discussions will also devote close attention to developments in literature, philosophy, and the visual arts, so as to examine the validity of the concept of renaissance. Generations of scholars have labored mightily to jettison terms like medieval and renaissance. But the old vocabulary has proven resilient. What accounts for the vitality of the idea of rebirth? What developments in economics, politics, and the arts and sciences does it help us understand, or serve to conceal? How may it mislead or distract us from equally or more important continuities? Because this field routinely yields impressive scholarship in English, extensive readings in primary sources will be supplemented by some of the best current work.",
-    "times_and_locations": {
-      "HIST 36 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:00 PM",
-            "location": "FAYE 113"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Immigration, Integration and Citizenship in Europe",
-    "course_codes": [
-      "EUST-33",
-      "HIST-40"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Kathryn Edwards"
-      ]
-    },
-    "description": "Immigration, integration, and citizenship challenges are not new to Europe, and in today's European Community, they have sparked heated debates over such issues as headscarves in public schools, \"ethnic ghettos,\" and citizenship for immigrants and their descendants. This course will present a comparative analysis of successive immigration policies and nationality laws from the late nineteenth century to the present, with a particular focus on Britain, France and Germany. In addition to the legal and political aspects of immigration and citizenship, we will also address theories and policies of assimilation and integration, debates over secularism and religious symbols, immigrant experiences and notions of multiculturalism.",
-    "times_and_locations": {
-      "HIST 40 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "MERR 403"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "MERR 403"
           }
         ]
       }
@@ -8586,66 +7947,6 @@
             "day": "W",
             "time": "02:00 PM - 04:30 PM",
             "location": "MORG 111"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "China in the World, 1895-1919",
-    "course_codes": [
-      "ASLC-49",
-      "HIST-57"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jerry P. Dennerline"
-      ]
-    },
-    "description": "In 1895 the emergent Japanese empire imposed a humiliating defeat on the declining Qing empire in China, began the colonization of Korea and Taiwan, and set in motion the reformist and revolutionary trends that would shape the political culture of the Chinese nation in later times. In 1919, concessions by the Chinese warlord regime in Beijing to Japan at Versailles sparked the student movement that would further radicalize the political culture and ultimately divide the nation politically between Nationalist and Communist regimes. This course focuses on the intellectual, cultural, political, and economic issues of the era in between, when, despite the weakness of the state, the creative visions and efforts of all informed people were in line with those of progressives throughout the world. We will explore these visions and efforts, with special reference to national identities, civil society, and global integration, and we will consider their fate in wartime, Cold War, and post-Cold War Asia.",
-    "times_and_locations": {
-      "HIST 57 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CHAP 205"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CHAP 205"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Africa Before the European Conquest",
-    "course_codes": [
-      "BLST-48",
-      "HIST-63"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sean Redding"
-      ]
-    },
-    "description": "The African continent has been called by one historian the social laboratory of humanity. Art, trade, small-scale manufacturing, medical knowledge, religion, state systems, history and legend all flourished before the formal political take-over of the continent by European powers in the late nineteenth century and continue to have a decisive impact on African societies today. It is this varied and sometimes difficult to access history of states and cultures in the period before 1885 that this course will examine. Initially, we will investigate the notion of tribe and its relationship to language, political affiliation and identity. The largest segment of the course will examine historical myths and their impact on the research and construction of historical narratives on precolonial Africa while discussing four topics in depth: domestic, local slave-ownership and the impact of the slave trade; the interaction of religion and power on the rise and fall of the kingdom of Kongo and of the states along the southern border of the Sahara (the sahel); the genesis of the Zulu state in southern Africa and the creation of the legend of Tshaka; and the changing roles of women as economic, political and social actors in the period before 1885. We will also discuss some of the differences between oral historical narratives and written ones while we analyze primary documents and histories written by scholars over the past half-century to understand both the history of the people living on the continent as well as the active process of constructing that history.",
-    "times_and_locations": {
-      "HIST 63 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CHAP 203"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CHAP 203"
           }
         ]
       }
@@ -8748,31 +8049,6 @@
             "day": "W",
             "time": "02:00 PM - 04:30 PM",
             "location": "COOP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "The History and Memory of the Asia-Pacific War",
-    "course_codes": [
-      "ASLC-62",
-      "HIST-90"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Trent E. Maxey"
-      ]
-    },
-    "description": "The varied names given to the fifteen years of war conducted by Japan-the Pacific War, the Great East Asian War, the Fifteen-Year War, World War II, and the Asian-Pacific War-reflect the conflicting perspectives that arise from that war. How has the experience of a fifteen-year war during the 1930s and 1940s shaped memory and history in Japan, East Asia, and the United States? This seminar begins with this broad question and pursues related questions: How are the memory and history of war intertwined in both national and international politics? What forms of memory have been included and excluded from dominant historical narratives and commemorative devices? How does critical historiography intersect with the politics and passions of memory? We will use oral histories, primary documents, film, and scholarship to guide our thoughts and discussions. We will begin with a brief history of Japans Fifteen-Year War and move on to prominent debates concerning the history and memory of that war. Short response papers and a research paper will be required.",
-    "times_and_locations": {
-      "HIST 90 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:00 PM",
-            "location": "CHAP 204"
           }
         ]
       }
@@ -9625,36 +8901,6 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Global Sound",
-    "course_codes": [
-      "FAMS-54",
-      "MUSI-04"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jeffers L. Engelhardt"
-      ]
-    },
-    "description": "This course explores the global scale of much music-making and musical consumption today. Migration, diaspora, war, tourism, postsocialist and postcolonial change, commerce, and digital technology have all profoundly reshaped the way musics are created, circulated, and consumed. These forces have also illuminated important ethical, legal, and aesthetic issues concerning intellectual property rights and the nature of musical authorship, the appropriation of \"traditional\" musics by elites in the global North, and local musical responses to transnational music industries, for instance. Through a series of case studies that will include performances and workshops by visiting musicians, Global Sound will examine how musics animate processes of globalization and how globalization affects musics by establishing new social, cultural, and economic formations.",
-    "times_and_locations": {
-      "MUSI 04 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "ARMU 212"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "ARMU 212"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
     "course_title": "Performance and Analysis I",
     "course_codes": [
       "MUSI-09",
@@ -9806,36 +9052,6 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Music and Culture I",
-    "course_codes": [
-      "EUST-37",
-      "MUSI-21"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Klara Moricz"
-      ]
-    },
-    "description": "One of three courses in which music is studied in relation to issues of history, theory, culture, and performance, with the focus of the course changing from year to year. This course is an introduction to European music in the Medieval, Renaissance, and Baroque eras. We will begin by singing Gregorian chant and will go on to cover such topics as the music of the Troubadours, the polyphonic style associated with Notre Dame, the development of musical notation, Renaissance sacred polyphony, madrigals, court dances, and the birth of opera. Throughout the course we will seek to bring the music we study alive by singing and/or playing. We will also host several professional performers of early music who will help us understand how this music is likely to have sounded at the time of its creation.",
-    "times_and_locations": {
-      "MUSI 21 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "ARMU 102"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "ARMU 102"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
     "course_title": "Jazz History to 1945: Emergence, Early Development, and Innovation",
     "course_codes": [
       "BLST-14",
@@ -9922,36 +9138,6 @@
             "day": "W",
             "time": "02:00 PM - 03:20 PM",
             "location": "ARMU 7"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Music and Revolution: The Symphonies of Mahler and Shostakovich",
-    "course_codes": [
-      "EUST-42",
-      "MUSI-42"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jenny L. Kallick"
-      ]
-    },
-    "description": "Gustav Mahler (1860-1911) and Dmitri Shostakovich (1906-1975) are arguably the two greatest symphonic composers after Beethoven. In this course we will compare and contrast their highly charged music and explore the eras in which they worked--for Mahler, imperial Vienna on the eve of World War I, and for Shostakovich, revolutionary Russia under the tyrannical reign of Joseph Stalin. The class will attend Mahler and Shostakovich performances in New York and Boston, particularly as the musical world marks Mahler's 150th birthday in 2010 and the 100th anniversary of his death in 2011. Fulfills either the departmental seminar requirement or the comprehensive exam requirement for the major.",
-    "times_and_locations": {
-      "MUSI 42 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "ARMU 212"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "ARMU 212"
           }
         ]
       }
@@ -10697,36 +9883,6 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "The Social Organization of Law",
-    "course_codes": [
-      "LJST-01",
-      "POSC-18"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Austin D. Sarat"
-      ]
-    },
-    "description": "Law in the United State is everywhere, ordering the most minute details of daily life while at the same time making life and death judgments.  Our law is many things at once--majestic and ordinary, monstrous and merciful, concerned with morality yet often righteously indifferent to moral argument.  Powerful and important in social life, the law remains elusive and mysterious.  This power and mystery is reflected in, and made possible by, a complex bureaucratic apparatus which translates words into deeds and rhetorical gestures into social practices. This course will examine that apparatus. It will describe how the problems and possibilities of social organization shape law as well as how the social organization of law responds to persons of different classes, races and genders.  We will attend to the peculiar way the American legal system deals with human suffering--with examples ranging from the legal treatment of persons living in poverty to the treatments of victims of sexual assault. How is law organized to cope with their pain?  How are the actions of persons who inflict inquiries on others defined in legal terms? Here we will examine cases on self defense and capital punishment. Throughout, attention will be given to the practices of police, prosecutors, judges, and those who administer law's complex bureaucratic apparatus.",
-    "times_and_locations": {
-      "LJST 01 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "CONV 108"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "CONV 108"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
     "course_title": "American Politics/Foreign Policy",
     "course_codes": [
       "POSC-30"
@@ -10773,31 +9929,6 @@
             "day": "W",
             "time": "02:00 PM - 04:00 PM",
             "location": "SMUD 205"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Debates in Private American Higher Education",
-    "course_codes": [
-      "AMST-38",
-      "POSC-38"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Anthony W. Marx"
-      ]
-    },
-    "description": "Debates continue about the purpose, content, admission and costs in private higher education, which this seminar will explore from varied views. We will begin with some discussion of the mission of universities/colleges (eg., Weber, Whitehead, Ortega y Gasset) and their social impact (Goldin and Katz's The Race between Education and Technology). We will then move into debates about the curriculum (Menand, Kronman, Derek Bok's Our Underachieving Colleges, and Harry Lewis's Excellence without a Soul). On admissions we will use Karabel's The Chosen, Lehman's The Big Test, various Supreme Court decisions, and Golden's The Price of Admission. On financial aid, we will read McPherson and Schapiro's Student Aid Game and works by Richard Kahlenberg.",
-    "times_and_locations": {
-      "AMST 38 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "07:00 PM - 09:30 PM",
-            "location": "PRDT LR"
           }
         ]
       }
@@ -10880,87 +10011,6 @@
             "day": "Th",
             "time": "10:00 AM - 11:20 AM",
             "location": "CLAR 100"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Contemporary Europe",
-    "course_codes": [
-      "EUST-45",
-      "POSC-45"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ronald S. Tiersky"
-      ]
-    },
-    "description": "Decline and renewal of Europe. An analysis of Europes role in the world order and the European Union (EU). What are Europes strengths and weaknesses as an international power? Does Europe meet its responsibilities or is it content to be a free rider on the ambitions and policies of other countries? What is the European Union and what are its successes and failures? What is the relationship between various European countries and the EU, between national sovereignty and European integration? Is more European integration still the future of Europe or is there now enough Europe?",
-    "times_and_locations": {
-      "POSC 45 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 209"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 209"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Case Studies in American Diplomacy",
-    "course_codes": [
-      "HIST-49",
-      "POSC-46"
-    ],
-    "faculty": {
-      "Section 01": [
-        "N. Gordon Levin",
-        "Pavel Machala"
-      ]
-    },
-    "description": "This course will combine the methods of diplomatic history and political science in examining critical moments and themes in American diplomacy. Our overall aim is to better understand the evolving position of the United States in world politics as well as domestic controversies over the character of Americas global role. Specifically, we will assess the combined influence of racism and ethnicity as well as of religious and secular values and class interest on American diplomacy. We shall also investigate the major domestic political, social, economic and intellectual trends and impulses, that have shaped American diplomacy; analyze competing visions for territorial conquests and interventions as advocated by various American elites; examine the methods used to extend the nations borders, foreign trade and international influence and leadership; and seek to understand the impact of key foreign policy involvements and controversies on the character of the Presidency, Congress and party politics. Among the topics to be considered are the Federalist/Anti-Federalist debates over the scope of constitutional constraints on foreign policy, the Monroe Doctrine, the Mexican War, the imperialist/anti-imperialist debate, the great power diplomacies of Theodore Roosevelt, Woodrow Wilson and FDR, as well as key moments of American diplomacy during the Cold War. One class meeting per week.",
-    "times_and_locations": {
-      "HIST 49 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "MORG 111"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Norms, Rights, and Social Justice: Feminists, Disability Rights Activists and the Poor at the Boundaries of the Law",
-    "course_codes": [
-      "LJST-74",
-      "POSC-74"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Kristin Bumiller"
-      ]
-    },
-    "description": "This seminar explores how the civil rights movement began a process of social change and identity-based activism. We evaluate the successes and failures of excluded groups efforts to use the law. We primarily focus on the recent scholarship of theorists, legal professionals, and activists to define post-identity politics strategies and to counteract the social processes that normalize persons on the basis of gender, sexuality, disability, and class. This course fulfills the requirement for an advanced seminar in Political Science.",
-    "times_and_locations": {
-      "POSC 74 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 04:00 PM",
-            "location": "FAYE 217A"
           }
         ]
       }
@@ -11486,61 +10536,6 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Introduction to Buddhist Traditions",
-    "course_codes": [
-      "ASLC-15",
-      "RELI-23"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Maria R. Heim"
-      ]
-    },
-    "description": "This course is an introduction to the diverse ideals, practices, and traditions of Buddhism from its origins in South Asia to its geographical and historical diffusion throughout Asia and, more recently, into the west. We will explore the Three Jewels--the Buddha, the Dharma, and the Sangha--and how they each provide refuge for those suffering in samsara (the endless cycle of rebirth). We will engage in close readings of the literary and philosophical texts central to Buddhism, as well as recent historical and anthropological studies of Buddhist traditions.",
-    "times_and_locations": {
-      "RELI 23 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 101"
-          },
-          {
-            "day": "Th",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Yoga Traditions",
-    "course_codes": [
-      "ASLC-16",
-      "RELI-29"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Steven D. Heim"
-      ]
-    },
-    "description": "While yoga is often practiced today at the gym for health and exercise, it has a long philosophical history in the religions of India. This course traces the intellectual traditions of yoga from early South Asian texts to its modern global and secular forms. Yoga entails training in contemplative, postural, and respiratory techniques as a means to such varied goals as knowing the true self, experiencing nirvana, meeting god, making good karma, and enhancing well-being. We will examine yoga philosophy in the Vedas, the Upanishads, the Bhagavad Gita, and the writings of Patanjali, and then turn to its flowering in the development of medieval and modern Hinduism as we look at tantrism, guru devotion, and bhakti religiosity. Finally, we will explore the history of its modern expressions in physical exercise, stress management, and secular spirituality.",
-    "times_and_locations": {
-      "RELI 29 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "MERR 403"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
     "course_title": "Religion in Mesoamerica",
     "course_codes": [
       "RELI-35"
@@ -12014,62 +11009,10 @@
   },
   {
     "semester": "Fall 2010",
-    "course_title": "Global Politics of Gender",
-    "course_codes": [
-      "POSC-39"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Manuela Picq"
-      ]
-    },
-    "description": "This course is designed to provide students with a solid understanding of the mechanisms by which international norms of gender equality and womens rights develop and are implemented, with a special emphasis on discourses and practices of international human rights. The course analyzes international treaties such as the Universal Declaration of Human Rights and the Convention on the Elimination of All Forms of Discrimination against Women, and addresses issues regarding domestic violence, political participation, reproductive rights, economic opportunities, and modern slavery, among other gendered problems. Bridging gender and global politics, we explore the ways international norms are transported from the United Nations to the daily reality of women throughout the world, and how states, civil society and institutions collaborate (or not) to promote womens rights where they are most needed.",
-    "times_and_locations": {
-      "POSC 39 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Witches, Vampires and Other Monsters",
-    "course_codes": [
-      "ARHA-85",
-      "EUST-70"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Natasha Staller"
-      ]
-    },
-    "description": "This course will explore the construction of the monstrous, over cultures, centuries and disciplines. With the greatest possible historical and cultural specificity, we will investigate the varied forms of monstrous creatures, their putative powers, and the explanations given for their existence-as we attempt to articulate the kindred qualities they share. Among the artists to be considered are Bosch, Valdes Leal, Velazquez, Goya, Munch, Ensor, Redon, Nolde, Picasso, Dali, Kiki Smith, and Cindy Sherman.",
-    "times_and_locations": {
-      "ARHA 85 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "Th",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "FAYE 113"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
     "course_title": "The Cross-Cultural Construction of Gender",
-    "course_codes": ["WAGS-11"],
+    "course_codes": [
+      "WAGS-11"
+    ],
     "faculty": {
       "Section 01": [
         "Margaret R. Hunt",
@@ -12089,54 +11032,6 @@
             "day": "Th",
             "time": "02:00 PM - 03:20 PM",
             "location": "CONV 209"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Women in Judaism",
-    "course_codes": [
-      "RELI-39"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Susan Niditch"
-      ]
-    },
-    "description": "A study of the portrayal of women in Jewish tradition. Readings will include biblical and apocryphal texts; Rabbinic legal (halakic) and non-legal (aggadic) material; selections from medieval commentaries; letters, diaries, and autobiographies written by Jewish women of various periods and settings; and works of fiction and non-fiction concerning the woman in modern Judaism. Employing an inter-disciplinary and cross-cultural approach, we will examine not only the actual roles played by women in particular historical periods and cultural contexts, but also the roles they assume in traditional literary patterns and religious symbol systems.",
-    "times_and_locations": {
-      "RELI 39 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "04:00 PM - 06:30 PM",
-            "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Globalization, Social Movements and Human Rights",
-    "course_codes": [
-      "POSC-86"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Amrita Basu"
-      ]
-    },
-    "description": "This seminar will explore the changing trajectories of social movements amidst economic, political and cultural globalization. Social movements have organized in opposition to the environmental destruction, increased class inequalities and diminished accountability of nation states that have often accompanied the global spread of capitalism. Globalization from above has given rise to globalization from below as activists have organized transnationally, employing new technologies of communication and appealing to universal human rights. However, in organizing transnationally and appealing to universal principles, activists may find their energies displaced from local to transnational arenas, from substantive to procedural inequalities, and from grass roots activism to routinized activity within the judicial process. We will consider the extent to which globalization heightens divisions between universalistic and particularistic movements or contributes to the creation of a global civil society which can protect and extend human rights. We will examine womens movements, environmental movements, and democracy movements in several regions of the world. This course fulfills the requirement of an advanced seminar in Political Science.",
-    "times_and_locations": {
-      "POSC 86 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:00 PM",
-            "location": "CHAP 101"
           }
         ]
       }
@@ -12610,7 +11505,9 @@
   {
     "semester": "Fall 2010",
     "course_title": "Giving",
-    "course_codes": [],
+    "course_codes": [
+      "KENA-24"
+    ],
     "faculty": {
       "Section 01": [
         "C. Rhonda Cobham-Sander",
@@ -13087,140 +11984,6 @@
             "day": "TBD",
             "time": "",
             "location": "-"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Global Politics of Gender",
-    "course_codes": [
-      "POSC-39"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Manuela Picq"
-      ]
-    },
-    "description": "This course is designed to provide students with a solid understanding of the mechanisms by which international norms of gender equality and womens rights develop and are implemented, with a special emphasis on discourses and practices of international human rights. The course analyzes international treaties such as the Universal Declaration of Human Rights and the Convention on the Elimination of All Forms of Discrimination against Women, and addresses issues regarding domestic violence, political participation, reproductive rights, economic opportunities, and modern slavery, among other gendered problems. Bridging gender and global politics, we explore the ways international norms are transported from the United Nations to the daily reality of women throughout the world, and how states, civil society and institutions collaborate (or not) to promote womens rights where they are most needed.",
-    "times_and_locations": {
-      "POSC 39 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Witches, Vampires and Other Monsters",
-    "course_codes": [
-      "ARHA-85",
-      "EUST-70"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Natasha Staller"
-      ]
-    },
-    "description": "This course will explore the construction of the monstrous, over cultures, centuries and disciplines. With the greatest possible historical and cultural specificity, we will investigate the varied forms of monstrous creatures, their putative powers, and the explanations given for their existence-as we attempt to articulate the kindred qualities they share. Among the artists to be considered are Bosch, Valdes Leal, Velazquez, Goya, Munch, Ensor, Redon, Nolde, Picasso, Dali, Kiki Smith, and Cindy Sherman.",
-    "times_and_locations": {
-      "ARHA 85 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "Th",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "FAYE 113"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Women in Judaism",
-    "course_codes": [
-      "RELI-39"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Susan Niditch"
-      ]
-    },
-    "description": "A study of the portrayal of women in Jewish tradition. Readings will include biblical and apocryphal texts; Rabbinic legal (halakic) and non-legal (aggadic) material; selections from medieval commentaries; letters, diaries, and autobiographies written by Jewish women of various periods and settings; and works of fiction and non-fiction concerning the woman in modern Judaism. Employing an inter-disciplinary and cross-cultural approach, we will examine not only the actual roles played by women in particular historical periods and cultural contexts, but also the roles they assume in traditional literary patterns and religious symbol systems.",
-    "times_and_locations": {
-      "RELI 39 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "04:00 PM - 06:30 PM",
-            "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "Globalization, Social Movements and Human Rights",
-    "course_codes": [
-      "POSC-86"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Amrita Basu"
-      ]
-    },
-    "description": "This seminar will explore the changing trajectories of social movements amidst economic, political and cultural globalization. Social movements have organized in opposition to the environmental destruction, increased class inequalities and diminished accountability of nation states that have often accompanied the global spread of capitalism. Globalization from above has given rise to globalization from below as activists have organized transnationally, employing new technologies of communication and appealing to universal human rights. However, in organizing transnationally and appealing to universal principles, activists may find their energies displaced from local to transnational arenas, from substantive to procedural inequalities, and from grass roots activism to routinized activity within the judicial process. We will consider the extent to which globalization heightens divisions between universalistic and particularistic movements or contributes to the creation of a global civil society which can protect and extend human rights. We will examine womens movements, environmental movements, and democracy movements in several regions of the world. This course fulfills the requirement of an advanced seminar in Political Science.",
-    "times_and_locations": {
-      "POSC 86 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:00 PM",
-            "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2010",
-    "course_title": "MEMORY, HAUNTING, AND MIGRATION IN CONTEMPORARY AMERICAN NOVELS BY WOMEN",
-    "course_codes": [
-      "ENGL-95"
-    ],
-    "faculty": {
-      "Section 04": [
-        "Marisa Parham"
-      ],
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "This course examines some of the many ways American authors have written about memorymemories of the past as well as of other places, about memories that refuse to be surfaced and memories that are at times not even of their protagonists own lives. How, for instance, do writers portray the ways painful pasts have influenced their characters senses of self-identity? What does it mean to suffer for a past whose details one does not even know? Is a truth freeing, or does overcoming the hidden and silent increase memorys burdens? What are some of the possibilities and limitations of portraying traumatic experiences in the novel form? And can trauma even mean the same thing across ethnic experiences? With such questions in mind we will look specifically at novels concerned with two of the foundational experiences of American civilization, slavery and migration, and at the pervasive problems of longing, disjuncture, and displacement endemic to such experiences. Authors we may read in this cross-cultural literature course include Maxine Hong Kingston, Edwidge Danticat, Gayl Jones, and Cynthia Ozick.",
-    "times_and_locations": {
-      "ENGL 95 - L/D": {
-        "Section 04": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 217A"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 217A"
           }
         ]
       }
