@@ -163,7 +163,7 @@
   },
   {
     "semester": "Fall 2017",
-    "course_title": "Latino Migration:&nbsp; Labor, Lifestyle and Legality",
+    "course_title": "Latino Migration: Labor, Lifestyle and Legality",
     "course_codes": [
       "AMST-260",
       "SOCI-260"
@@ -252,7 +252,7 @@
   },
   {
     "semester": "Fall 2017",
-    "course_title": "Model Minorities:&nbsp; Jewish and Asian Americans",
+    "course_title": "Model Minorities: Jewish and Asian Americans",
     "course_codes": [
       "AMST-345",
       "SOCI-345"
@@ -670,7 +670,7 @@
   },
   {
     "semester": "Fall 2017",
-    "course_title": "Embodiment, Race Inquiry, and Ethics:&nbsp; An Introduction to Qualitative Research",
+    "course_title": "Embodiment, Race Inquiry, and Ethics: An Introduction to Qualitative Research",
     "course_codes": [
       "SOCI-204",
       "BLST-146"
@@ -730,7 +730,7 @@
   },
   {
     "semester": "Fall 2017",
-    "course_title": "Latino Migration:&nbsp; Labor, Lifestyle and Legality",
+    "course_title": "Latino Migration: Labor, Lifestyle and Legality",
     "course_codes": [
       "AMST-260",
       "SOCI-260"
@@ -874,7 +874,7 @@
   },
   {
     "semester": "Fall 2017",
-    "course_title": "Model Minorities:&nbsp; Jewish and Asian Americans",
+    "course_title": "Model Minorities: Jewish and Asian Americans",
     "course_codes": [
       "AMST-345",
       "SOCI-345"
@@ -1258,7 +1258,7 @@
   },
   {
     "semester": "Fall 2017",
-    "course_title": "Measuring Histories through&nbsp;Materiality and Multiples",
+    "course_title": "Measuring Histories throughMateriality and Multiples",
     "course_codes": [
       "ARHA-201"
     ],
@@ -1825,7 +1825,7 @@
   },
   {
     "semester": "Fall 2017",
-    "course_title": "Fourth-Year Arabic:&nbsp; Media Arabic",
+    "course_title": "Fourth-Year Arabic: Media Arabic",
     "course_codes": [
       "ARAB-401"
     ],
@@ -2307,7 +2307,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "ASLC 490": {
         "Section 06": []
@@ -2994,7 +2994,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "JAPA 390H": {
         "Section 02": []
@@ -3228,7 +3228,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "BCBP 390": {
         "Section 02": []
@@ -3832,7 +3832,7 @@
   },
   {
     "semester": "Fall 2017",
-    "course_title": "Embodiment, Race Inquiry, and Ethics:&nbsp; An Introduction to Qualitative Research",
+    "course_title": "Embodiment, Race Inquiry, and Ethics: An Introduction to Qualitative Research",
     "course_codes": [
       "SOCI-204",
       "BLST-146"
@@ -4800,7 +4800,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "CHEM 290H": {
         "Section 02": []
@@ -6080,7 +6080,7 @@
   },
   {
     "semester": "Fall 2017",
-    "course_title": "Engaging Literature:&nbsp; Close Reading",
+    "course_title": "Engaging Literature: Close Reading",
     "course_codes": [
       "ENGL-105"
     ],
@@ -7315,37 +7315,6 @@
   },
   {
     "semester": "Fall 2017",
-    "course_title": "1917-2017:&nbsp; One Hundred Years in the Story of Labor",
-    "course_codes": [
-      "EUST-251",
-      "FAMS-356",
-      "RUSS-251"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Michael M. Kunichika"
-      ]
-    },
-    "description": "...",
-    "times_and_locations": {
-      "RUSS 251 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "WEBS 219"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "WEBS 219"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2017",
     "course_title": "Literature as Translation",
     "course_codes": [
       "ENGL-320",
@@ -7585,37 +7554,6 @@
   },
   {
     "semester": "Fall 2017",
-    "course_title": "1917-2017:&nbsp; One Hundred Years in the Story of Labor",
-    "course_codes": [
-      "EUST-251",
-      "FAMS-356",
-      "RUSS-251"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Michael M. Kunichika"
-      ]
-    },
-    "description": "...",
-    "times_and_locations": {
-      "RUSS 251 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "WEBS 219"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "WEBS 219"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2017",
     "course_title": "Television and Experience",
     "course_codes": [
       "ENGL-384",
@@ -7845,7 +7783,7 @@
   },
   {
     "semester": "Fall 2017",
-    "course_title": "Language Crossing and Living in Translation\n&nbsp;",
+    "course_title": "Language Crossing and Living in Translation\n",
     "course_codes": [],
     "faculty": {
       "Section 01": [
@@ -8521,7 +8459,7 @@
   },
   {
     "semester": "Fall 2017",
-    "course_title": "A History of the Native Book:&nbsp; Uncovering Indigenous Intellectual Trade-routes",
+    "course_title": "A History of the Native Book: Uncovering Indigenous Intellectual Trade-routes",
     "course_codes": [],
     "faculty": {
       "Section 01": [
@@ -9017,7 +8955,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "FREN 290": {
         "Section 02": []
@@ -9140,7 +9078,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "FREN 490": {
         "Section 02": []
@@ -10425,7 +10363,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "HIST 490": {
         "Section 02": []
@@ -10720,7 +10658,7 @@
         "Harris B. Daniels"
       ]
     },
-    "description": "...",
+    "description": "In addition to covering the usual material of beginning calculus, these courses will have an extensive review of algebra and trigonometry. There will be a special emphasis on solving word problems. Starts with a quick review of algebraic manipulations, inequalities, absolute values and straight lines. Then the basic ideas of calculus--limits, derivatives, and integrals--are introduced, but only in the context of polynomial and rational functions. As various applications are studied, the algebraic techniques involved will be reviewed in more detail. When covering related rates and maximum-minimum problems, time will be spent learning how to approach, analyze and solve word problems.",
     "times_and_locations": {
       "MATH 105 - LEC": {
         "Section 01": [
@@ -11387,7 +11325,7 @@
         "Harris B. Daniels"
       ]
     },
-    "description": "...",
+    "description": "The study of vector spaces over the real and complex numbers, introducing the concepts of subspace, linear independence, basis, and dimension; systems of linear equations and their solution by Gaussian elimination; matrix operations; linear transformations and their representations by matrices; eigenvalues and eigenvectors; and inner product spaces. Will feature both proofs and applications, with special attention paid to the theoretical development of the subject.",
     "times_and_locations": {
       "MATH 271 - LEC": {
         "Section 01": [
@@ -11563,7 +11501,7 @@
         "Robert L. Benedetto"
       ]
     },
-    "description": "...",
+    "description": "An introduction to analytic functions; complex numbers, derivatives, conformal mappings, integrals. Cauchy’s theorem; power series, singularities, Laurent series, analytic continuation; Riemann surfaces; special functions.",
     "times_and_locations": {
       "MATH 345 - LEC": {
         "Section 01": [
@@ -11612,7 +11550,7 @@
         "Yongheng Zhang"
       ]
     },
-    "description": "...",
+    "description": "A brief consideration of properties of sets, mappings, and the system of integers, followed by an introduction to the theory of groups and rings including the principal theorems on homomorphisms and the related quotient structures; integral domains, fields, polynomial rings.",
     "times_and_locations": {
       "MATH 350 - LEC": {
         "Section 01": [
@@ -11703,7 +11641,7 @@
         "Gregory S. Call"
       ]
     },
-    "description": "...",
+    "description": "Completeness of the real numbers; topology of n-space including the Bolzano-Weierstrass and Heine-Borel theorems; sequences, properties of functions continuous on sets; infinite series, uniform convergence. The course may also study the Gamma function, Stirling’s formula, or Fourier series.",
     "times_and_locations": {
       "MATH 355 - LEC": {
         "Section 01": [
@@ -13029,7 +12967,7 @@
         "The Department"
       ]
     },
-    "description": "...",
+    "description": "151H-181H entail individual performance instruction. 151H-181H may be repeated. Students who wish to elect performance for credit must complete Music 111 prior to enrolling in beginner lessons or demonstrate equivalent competency. If you test out of Music 111, you must fulfill the requirement of taking one full-credit course concurrently with beginner enrollment or defer it one semester. 151H-181H may be elected only with the consent of the Department Coordinator. The following arrangements pertain to the study of performance at Amherst College: a. All performance courses will be elected as a half course. Senior Music Majors preparing a recital must register for a thesis course instead of a performance course. b. For 151H-181H, fifty minutes of private instruction (12 lessons per semester) will be given and regular practice is expected. c. Two half courses in performance may be counted as the equivalent of one full course for fulfilling degree requirements. These two half courses must be in the same instrument or voice. Though not strictly required, the Music Department urges that the two semesters be consecutive. d. A student electing a performance course may carry 4.5 courses each semester, or 4.5 the first semester and 3.5 courses the second semester. Students should consult with the Music Department Coordinator to arrange for teachers and auditions. Instruction in performance is also available through the Five Colleges with all of the above conditions pertaining. Half credit.",
     "times_and_locations": {
       "MUSL 182H": {
         "Section 01": []
@@ -13047,7 +12985,7 @@
         "The Department"
       ]
     },
-    "description": "...",
+    "description": "151H-181H entail individual performance instruction. 151H-181H may be repeated. Students who wish to elect performance for credit must complete Music 111 prior to enrolling in beginner lessons or demonstrate equivalent competency. If you test out of Music 111, you must fulfill the requirement of taking one full-credit course concurrently with beginner enrollment or defer it one semester. 151H-181H may be elected only with the consent of the Department Coordinator. The following arrangements pertain to the study of performance at Amherst College: a. All performance courses will be elected as a half course. Senior Music Majors preparing a recital must register for a thesis course instead of a performance course. b. For 151H-181H, fifty minutes of private instruction (12 lessons per semester) will be given and regular practice is expected. c. Two half courses in performance may be counted as the equivalent of one full course for fulfilling degree requirements. These two half courses must be in the same instrument or voice. Though not strictly required, the Music Department urges that the two semesters be consecutive. d. A student electing a performance course may carry 4.5 courses each semester, or 4.5 the first semester and 3.5 courses the second semester. Students should consult with the Music Department Coordinator to arrange for teachers and auditions. Instruction in performance is also available through the Five Colleges with all of the above conditions pertaining. Half credit.",
     "times_and_locations": {
       "MUSL 183H": {
         "Section 01": []
@@ -13623,7 +13561,7 @@
         "The Department"
       ]
     },
-    "description": "...",
+    "description": "351H-381H entail individual intermediate performance instruction. 351H-381H may be repeated. Students who wish to elect performance for credit must meet the following criteria: 1. Instrumental or vocal proficiency of intermediate level as determined by the Music Department. 2. Enrollment in one full-credit Music Department course concurrently with the first semesters enrollment in performance. 351H-381H may be elected only with the consent of the Department Coordinator. The following arrangements pertain to the study of performance at Amherst College: a. All performance courses will be elected as half courses. Senior Music Majors preparing a recital may take 351H-380H as a full course. b. For 351H-381H, fifty minutes of private instruction (12 lessons per semester) will be given and regular practice is expected. c. Two half courses in performance may be counted as the equivalent of one full course for fulfilling degree requirements. These two half courses must be in the same instrument or voice. Though not strictly required, the Music Department urges that the two semesters be consecutive. d. A student electing a performance course may carry 4.5 courses each semester, or 4.5 the first semester and 3.5 courses the second semester. Instruction in performance is also available through the Five Colleges with all of the above conditions pertaining. A student wishing to study under this arrangement must enroll through Five College Interchange. Half credit.",
     "times_and_locations": {
       "MUSL 382H": {
         "Section 01": []
@@ -13641,7 +13579,7 @@
         "The Department"
       ]
     },
-    "description": "...",
+    "description": "351H-381H entail individual intermediate performance instruction. 351H-381H may be repeated. Students who wish to elect performance for credit must meet the following criteria: 1. Instrumental or vocal proficiency of intermediate level as determined by the Music Department. 2. Enrollment in one full-credit Music Department course concurrently with the first semesters enrollment in performance. 351H-381H may be elected only with the consent of the Department Coordinator. The following arrangements pertain to the study of performance at Amherst College: a. All performance courses will be elected as half courses. Senior Music Majors preparing a recital may take 351H-380H as a full course. b. For 351H-381H, fifty minutes of private instruction (12 lessons per semester) will be given and regular practice is expected. c. Two half courses in performance may be counted as the equivalent of one full course for fulfilling degree requirements. These two half courses must be in the same instrument or voice. Though not strictly required, the Music Department urges that the two semesters be consecutive. d. A student electing a performance course may carry 4.5 courses each semester, or 4.5 the first semester and 3.5 courses the second semester. Instruction in performance is also available through the Five Colleges with all of the above conditions pertaining. A student wishing to study under this arrangement must enroll through Five College Interchange. Half credit.",
     "times_and_locations": {
       "MUSL 383H": {
         "Section 01": []
@@ -14217,7 +14155,7 @@
         "The Department"
       ]
     },
-    "description": "...",
+    "description": "Advanced enrollment is reserved for those students who are giving a full recital or an honors recital and must have the chair's approval. Half credit.",
     "times_and_locations": {
       "MUSL 482H": {
         "Section 01": []
@@ -14235,7 +14173,7 @@
         "The Department"
       ]
     },
-    "description": "...",
+    "description": "Advanced enrollment is reserved for those students who are giving a full recital or an honors recital and must have the chair's approval. Half credit.",
     "times_and_locations": {
       "MUSL 483H": {
         "Section 01": []
@@ -14512,7 +14450,7 @@
   },
   {
     "semester": "Fall 2017",
-    "course_title": "Topics in Continental Philosophy: Nietzsche&rsquo;s Critique of Morality",
+    "course_title": "Topics in Continental Philosophy: Nietzsche's Critique of Morality",
     "course_codes": [
       "PHIL-363"
     ],
@@ -14599,7 +14537,7 @@
         "Joseph G. Moore"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "PHIL 497 - TUT": {
         "Section 01": [
@@ -15746,7 +15684,7 @@
   },
   {
     "semester": "Fall 2017",
-    "course_title": "&nbsp;Intergroup Dialogue on Race",
+    "course_title": "Intergroup Dialogue on Race",
     "course_codes": [
       "PSYC-224"
     ],
@@ -15800,7 +15738,7 @@
   },
   {
     "semester": "Fall 2017",
-    "course_title": "&nbsp;Psychology of Play",
+    "course_title": "Psychology of Play",
     "course_codes": [
       "PSYC-262"
     ],
@@ -16390,7 +16328,7 @@
   },
   {
     "semester": "Fall 2017",
-    "course_title": "1917-2017:&nbsp; One Hundred Years in the Story of Labor",
+    "course_title": "1917-2017: One Hundred Years in the Story of Labor",
     "course_codes": [
       "EUST-251",
       "FAMS-356",
@@ -16401,7 +16339,7 @@
         "Michael M. Kunichika"
       ]
     },
-    "description": "...",
+    "description": "In this course, we consider the century that lay between the Russian Revolution of 1917 and the present day by focusing on labor. We reconstruct how labor and work have been represented in primarily Russian and Soviet literature and film, while drawing comparisons from American and European cultural sources. We will consider the Revolution as a historical phenomenon, examining central texts in which its ambitions and significance were contested. We then consider chapters in the on-going career of labor from the 1920s to the present-day. We examine the seminal statements of Marx, Lenin, and Trotsky; the groundbreaking films of Dziga Vertov and Sergei Eisenstein; and the enduring literary works of Andrei Platonov and Alexander Solzhenitsyn, among others. Alongside the Russian texts, we will read or screen works by John Steinbeck, Charlie Chaplin, Fritz Lang, and Eugene O’Neil. Throughout, we will be guided by several questions and concerns: how does an artistic work represent labor and conceive its value? What is the nature of work? How is intellectual labor understood in relation to others forms of labor? How are bodies configured by different labor processes? And, lastly, what might this history tell us about the present state and challenge of labor and social inequity at the centennial of the Revolution? All readings in English.",
     "times_and_locations": {
       "RUSS 251 - L/D": {
         "Section 01": [

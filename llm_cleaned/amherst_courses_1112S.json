@@ -1,7 +1,7 @@
 [
   {
     "semester": "Spring 2012",
-    "course_title": "The City: New York\n&nbsp;",
+    "course_title": "The City: New York\n",
     "course_codes": [
       "AMST-112"
     ],
@@ -100,25 +100,6 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "Special Topics",
-    "course_codes": [],
-    "faculty": {
-      "Section 10": [
-        "Amelie E. Hastie"
-      ],
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "",
-    "times_and_locations": {
-      "AMST 490": {
-        "Section 10": []
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
     "course_title": "The World at Play",
     "course_codes": [
       "ANTH-223"
@@ -172,7 +153,7 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "Law, Science, and Medicine:&nbsp; Ethnographic Investigations",
+    "course_title": "Law, Science, and Medicine: Ethnographic Investigations",
     "course_codes": [
       "ANTH-321"
     ],
@@ -320,7 +301,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "ANTH 490": {
         "Section 08": []
@@ -905,7 +886,7 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "Still and Moving Image Strategies\n<em></em>",
+    "course_title": "Still and Moving Image Strategies",
     "course_codes": [
       "ARHA-303"
     ],
@@ -1100,7 +1081,7 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "The Japanese Image Replicated:&nbsp; Prints, Postcards, and Photographs",
+    "course_title": "The Japanese Image Replicated: Prints, Postcards, and Photographs",
     "course_codes": [
       "ARHA-384",
       "ASLC-384"
@@ -1278,7 +1259,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "ARAB 490": {
         "Section 02": []
@@ -1417,7 +1398,7 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "The Inheritance of Iran: The Iranian World from Antiquity to the Middle Ages\n&nbsp;",
+    "course_title": "The Inheritance of Iran: The Iranian World from Antiquity to the Middle Ages\n",
     "course_codes": [
       "ASLC-292",
       "HIST-292"
@@ -1560,7 +1541,7 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "The Japanese Image Replicated:&nbsp; Prints, Postcards, and Photographs",
+    "course_title": "The Japanese Image Replicated: Prints, Postcards, and Photographs",
     "course_codes": [
       "ARHA-384",
       "ASLC-384"
@@ -1578,31 +1559,6 @@
             "day": "M",
             "time": "02:00 PM - 05:00 PM",
             "location": "FAYE 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "South Asian Feminist Cinema",
-    "course_codes": [
-      "ASLC-452",
-      "FAMS-322"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Krupa Shandilya"
-      ]
-    },
-    "description": "How do we define the word feminism? Can the term be used to define cinematic texts outside the Euro-American world? In this course we will study a range of issues that have been integral to feminist theory--the body, domesticity, same sex desire, gendered constructions of the nation, feminist utopias and dystopias--through a range of South Asian cinematic texts. Through our viewings and readings we will consider whether the term feminist can be applied to these texts, and we will experiment with new theoretical lenses for exploring these films. Films will range from Satyajit Rays classic masterpiece Charulata to Gurinder Chadhas trendy diasporic film, Bend It Like Beckham . Attendance for screenings on Monday is compulsory.",
-    "times_and_locations": {
-      "WAGS 469 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "MERR 403"
           }
         ]
       }
@@ -2253,7 +2209,7 @@
         "Wako Tawa"
       ]
     },
-    "description": "...",
+    "description": "The course is designed for students who possess a high proficiency level of speaking but need training in cover-to-cover reading or film comprehension. Class materials will be selected from well-known books and films. Writing assignments will be given to develop critical and creative writing skills in Japanese. Small groups based on the students' proficiency levels will be formed, so that instruction accords with the needs of each group.",
     "times_and_locations": {
       "JAPA 412": {
         "Section 01": []
@@ -2727,7 +2683,7 @@
         "Michael E. Hood"
       ]
     },
-    "description": "...",
+    "description": "A study of the architecture and interactions of genetic systems. Advances in genomics are providing insights into a variety of important issues, from the structural limits of DNA-based inheritance to the discovery of novel infectious and genetic diseases. We will address how heritable information is organized in different groups of organisms. We will also cover a major challenge of this emerging field--the application of vast amounts of genetic data to understanding genomic integrity and regulation. We will critically assess the genome as a \"cooperative assemblage of genetic elements\" and conclude by discussing the consequences of genomic structure for shaping species traits and long-term evolutionary potential.",
     "times_and_locations": {
       "BIOL 380 - L/D": {
         "Section 01": [
@@ -2756,7 +2712,7 @@
         "Michael E. Hood"
       ]
     },
-    "description": "A study of the architecture and interactions of genetic systems. Advances in genomics are providing insights into a variety of important issues, from the structural limits of DNA-based inheritance to the discovery of novel infectious and genetic diseases. We will address how heritable information is organized in different groups of organisms. We will also cover a major challenge of this emerging field--the application of vast amounts of genetic data to understanding genomic integrity and regulation. We will critically assess the genome as a \"cooperative assemblage of genetic elements\" and conclude by discussing the consequences of genomic structure for shaping species traits and long-term evolutionary potential. Three hours of lecture, and three hours of laboratory per week. Lab activities will require work outside of the scheduled meeting times.",
+    "description": "A study of the architecture and interactions of genetic systems. Advances in genomics are providing insights into a variety of important issues, from the structural limits of DNA-based inheritance to the discovery of novel infectious and genetic diseases. We will address how heritable information is organized in different groups of organisms. We will also cover a major challenge of this emerging field--the application of vast amounts of genetic data to understanding genomic integrity and regulation. We will critically assess the genome as a \"cooperative assemblage of genetic elements\" and conclude by discussing the consequences of genomic structure for shaping species traits and long-term evolutionary potential.",
     "times_and_locations": {
       "BIOL 381 - LEC": {
         "Section 01": [
@@ -3801,7 +3757,7 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "Greek Prose: Plato's <em>Apology</em>",
+    "course_title": "Greek Prose: Plato's Apology",
     "course_codes": [
       "GREE-212"
     ],
@@ -4553,7 +4509,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "ECON 490": {
         "Section 07": []
@@ -4652,33 +4608,6 @@
             "day": "F",
             "time": "11:00 AM - 11:50 AM",
             "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "New Women in America",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Wendy H. Bergoffen"
-      ]
-    },
-    "description": "This course will examine the emergence of the New Woman as a category of social theory, political action, and literary representation at the turning of the twentieth century.  Early readings will trace the origins of the New Woman as a response to nineteenth-century notions of True Womanhood.  Discussions will situate literary representations of women in larger cultural events taking place during the Progressive Era debates over suffrage as well as their relationship to issues of citizenship, immigration, Jim Crow segregation, urbanization, and nativism.  The course will focus on texts written by a diverse group of women that present multiple and, at times, conflicting images of the New Woman.  Close attention will be paid to the manner in which these women writers constructed their fictions, particularly to issues of language, style, and form.  Readings will include texts by Charlotte Perkins Gilman, Kate Chopin, Edith Wharton, Pauline Hopkins, Anzia Yezierska, and Sui Sin Far.",
-    "times_and_locations": {
-      "WAGS 112 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MCLS 428"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MCLS 428"
           }
         ]
       }
@@ -5228,7 +5157,7 @@
         "Anston L. Bosman"
       ]
     },
-    "description": "...",
+    "description": "Readings in the comedies, histories, and tragedies, with attention to their poetic language, dramatic structure, and power in performance.",
     "times_and_locations": {
       "ENGL 338 - L/D": {
         "Section 01": [
@@ -5391,7 +5320,7 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "Poetry and Theory:&nbsp; High Modernism, Late Modernism, Postmodernism",
+    "course_title": "Poetry and Theory: High Modernism, Late Modernism, Postmodernism",
     "course_codes": [
       "ENGL-393"
     ],
@@ -5500,7 +5429,7 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "American Novelists:&nbsp; John Updike and Philip Roth",
+    "course_title": "American Novelists: John Updike and Philip Roth",
     "course_codes": [
       "ENGL-453"
     ],
@@ -5631,7 +5560,7 @@
   {
     "semester": "Spring 2012",
     "course_title": "Special Topics",
-    "course_codes": [],
+    "course_codes": [ "AMST 490"],
     "faculty": {
       "Section 10": [
         "Amelie E. Hastie"
@@ -5640,7 +5569,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "AMST 490": {
         "Section 10": []
@@ -6530,7 +6459,8 @@
     "course_title": "South Asian Feminist Cinema",
     "course_codes": [
       "ASLC-452",
-      "FAMS-322"
+      "FAMS-322",
+      "WAGS-469"
     ],
     "faculty": {
       "Section 01": [
@@ -6703,25 +6633,6 @@
             "location": "CHAP 210"
           }
         ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Special Topics",
-    "course_codes": [],
-    "faculty": {
-      "Section 10": [
-        "Amelie E. Hastie"
-      ],
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "...",
-    "times_and_locations": {
-      "AMST 490": {
-        "Section 10": []
       }
     }
   },
@@ -8175,7 +8086,7 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "The Inheritance of Iran: The Iranian World from Antiquity to the Middle Ages\n&nbsp;",
+    "course_title": "The Inheritance of Iran: The Iranian World from Antiquity to the Middle Ages\n",
     "course_codes": [
       "ASLC-292",
       "HIST-292"
@@ -11673,7 +11584,7 @@
   {
     "semester": "Spring 2012",
     "course_title": "The Cross-Cultural Construction of Gender",
-    "course_codes": [],
+    "course_codes": ["WAGS-100"],
     "faculty": {
       "Section 01": [
         "Margaret R. Hunt",
@@ -11701,7 +11612,7 @@
   {
     "semester": "Spring 2012",
     "course_title": "New Women in America",
-    "course_codes": [],
+    "course_codes": ["WAGS-112"],
     "faculty": {
       "Section 01": [
         "Wendy H. Bergoffen"
@@ -11846,7 +11757,7 @@
   {
     "semester": "Spring 2012",
     "course_title": "Ideas and Methods in the Study of Gender",
-    "course_codes": [],
+    "course_codes": ["WAGS-300"],
     "faculty": {
       "Section 01": [
         "Amrita Basu"
@@ -11868,7 +11779,7 @@
   {
     "semester": "Spring 2012",
     "course_title": "Gendering Political Economy",
-    "course_codes": [],
+    "course_codes": ["WAGS-311"],
     "faculty": {
       "Section 01": [
         "Nancy Folbre"
@@ -11916,31 +11827,6 @@
             "day": "W",
             "time": "02:00 PM - 03:20 PM",
             "location": "MERR 401"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "South Asian Feminist Cinema",
-    "course_codes": [
-      "ASLC-452",
-      "FAMS-322"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Krupa Shandilya"
-      ]
-    },
-    "description": "How do we define the word feminism? Can the term be used to define cinematic texts outside the Euro-American world? In this course we will study a range of issues that have been integral to feminist theory--the body, domesticity, same sex desire, gendered constructions of the nation, feminist utopias and dystopias--through a range of South Asian cinematic texts. Through our viewings and readings we will consider whether the term feminist can be applied to these texts, and we will experiment with new theoretical lenses for exploring these films. Films will range from Satyajit Rays classic masterpiece Charulata to Gurinder Chadhas trendy diasporic film, Bend It Like Beckham. Attendance for screenings on Monday is compulsory.",
-    "times_and_locations": {
-      "WAGS 469 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "MERR 403"
           }
         ]
       }
@@ -12761,7 +12647,7 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "The King James Bible:&nbsp; Readings and Research",
+    "course_title": "The King James Bible: Readings and Research",
     "course_codes": [
       "COLQ-347"
     ],
@@ -13305,61 +13191,6 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "The Cross-Cultural Construction of Gender",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Margaret R. Hunt",
-        "Krupa Shandilya"
-      ]
-    },
-    "description": "This course introduces students to the issues involved in the social and historical construction of gender and gender roles from a cross-cultural and interdisciplinary perspective. Topics change from year-to-year and have included women and social change; male and female sexualities including homosexualities; the uses and limits of biology in explaining human gender differences; womens participation in production and reproduction; the relationship among gender, race and class as intertwining oppressions; women, men and globalization; and gender and warfare.",
-    "times_and_locations": {
-      "WAGS 100 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "WEBS 217"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "WEBS 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "New Women in America",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Wendy H. Bergoffen"
-      ]
-    },
-    "description": "This course will examine the emergence of the New Woman as a category of social theory, political action, and literary representation at the turning of the twentieth century. Early readings will trace the origins of the New Woman as a response to nineteenth-century notions of True Womanhood. Discussions will situate literary representations of women in larger cultural events taking place during the Progressive Era debates over suffrage as well as their relationship to issues of citizenship, immigration, Jim Crow segregation, urbanization, and nativism. The course will focus on texts written by a diverse group of women that present multiple and, at times, conflicting images of the New Woman. Close attention will be paid to the manner in which these women writers constructed their fictions, particularly to issues of language, style, and form. Readings will include texts by Charlotte Perkins Gilman, Kate Chopin, Edith Wharton, Pauline Hopkins, Anzia Yezierska, and Sui Sin Far.",
-    "times_and_locations": {
-      "WAGS 112 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MCLS 428"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MCLS 428"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
     "course_title": "Art From the Realm of Dreams",
     "course_codes": [
       "ARHA-146",
@@ -13478,55 +13309,6 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "Ideas and Methods in the Study of Gender",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Amrita Basu"
-      ]
-    },
-    "description": "This seminar will explore the influence of gender studies and of feminism on our research questions, methods and the way we situate ourselves in relationship to our scholarship. For example, how can we employ ethnography, textual analysis, empirical data and archival sources in studying the complex ties between the local and the global, and the national and the transnational? Which ideas and methods are best suited to analyzing the varied forms of womens resistance across ideological, class, racial and national differences? Our major goal will be to foster students' critical skills as inter-disciplinary, cross cultural writers and researchers.",
-    "times_and_locations": {
-      "WAGS 300 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 04:00 PM",
-            "location": "BARR 102"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Gendering Political Economy",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Nancy Folbre"
-      ]
-    },
-    "description": "This course will explore the interface between feminist theory and political economy. It will ask how the social construction of gender has shaped the discourse of economics, with a strong emphasis on feminist theory's intellectual history in Britain, the U.S., and France. It will also explore a variety of ways that economic theory can help explain the evolution of gender inequality, with particular attention to insights of recent behavioral and experimental research. No formal background in economics is necessary, but participants must have a high level of intellectual curiosity about social science in general, and economics in particular. Students should also be prepared to tackle some technical topics including utility maximization, game theory, statistical analysis, and experimental methodologies. Course pedagogy will emphasize active learning, consistent class participation, a number of small written assignments and oral presentations, and a final research paper.",
-    "times_and_locations": {
-      "WAGS 311 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "WEBS 220"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "WEBS 220"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
     "course_title": "Black Sexualities",
     "course_codes": [
       "BLST-236"
@@ -13549,31 +13331,6 @@
             "day": "W",
             "time": "02:00 PM - 03:20 PM",
             "location": "MERR 401"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "South Asian Feminist Cinema",
-    "course_codes": [
-      "ASLC-452",
-      "FAMS-322"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Krupa Shandilya"
-      ]
-    },
-    "description": "How do we define the word feminism? Can the term be used to define cinematic texts outside the Euro-American world? In this course we will study a range of issues that have been integral to feminist theory--the body, domesticity, same sex desire, gendered constructions of the nation, feminist utopias and dystopias--through a range of South Asian cinematic texts. Through our viewings and readings we will consider whether the term feminist can be applied to these texts, and we will experiment with new theoretical lenses for exploring these films. Films will range from Satyajit Rays classic masterpiece Charulata to Gurinder Chadhas trendy diasporic film, Bend It Like Beckham . Attendance for screenings on Monday is compulsory.",
-    "times_and_locations": {
-      "WAGS 469 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "MERR 403"
           }
         ]
       }

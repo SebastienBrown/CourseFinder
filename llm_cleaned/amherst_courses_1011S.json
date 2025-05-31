@@ -260,7 +260,7 @@
         "Elizabeth Klarich"
       ]
     },
-    "description": "...",
+    "description": "This course explores how and why humans across the globe began to domesticate plant and animal resources approximately 10,000 years ago.  The first half of the course presents the types of archaeological data and analytical methods used to study the \"agricultural revolution.\"  The second half examines case studies from the major centers of domestication in order to investigate the biological, economic, and social implications of these processes.  Special emphasis will be placed on exploring the relationship between agriculture and sedentism, food and gender, the politics of feasting, and methods for integrating archaeological and ethnographic approaches to the study of food.",
     "times_and_locations": {
       "ANTH 33 - L/D": {
         "Section 01": [
@@ -1369,7 +1369,7 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "The World's Oldest Novel: <i>The Tale of Genji</i>&nbsp;and Its Refractions",
+    "course_title": "The World's Oldest Novel: <i>The Tale of Genji</i>and Its Refractions",
     "course_codes": [
       "ASLC-35"
     ],
@@ -5772,7 +5772,7 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Consumption and the Pursuit of Happiness&nbsp;",
+    "course_title": "Consumption and the Pursuit of Happiness",
     "course_codes": [
       "ECON-35"
     ],
@@ -6577,7 +6577,7 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Poetry and Theory:&nbsp; High Modernism, Late Modernism, Postmodernism",
+    "course_title": "Poetry and Theory: High Modernism, Late Modernism, Postmodernism",
     "course_codes": [
       "ENGL-56"
     ],
@@ -6762,7 +6762,7 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Topics in Film Study:&nbsp; A Decade Under the Influence:&nbsp; U.S. Film of the 1970s",
+    "course_title": "Topics in Film Study: A Decade Under the Influence: U.S. Film of the 1970s",
     "course_codes": [
       "ENGL-84",
       "FAMS-37"
@@ -7104,7 +7104,7 @@
         "Paul K. Newlin"
       ]
     },
-    "description": "...",
+    "description": "It is variously acknowledged that humanity is now, and will be for the next several decades, going through an environmental bottleneck; a transition characterized by a growing population and demand on resources.  While much of the new growth and demand for environmental services is taking place in other countries, notably China and India, the United States still imposes the largest ecological footprint on a per capita basis.  Thus, it is imperative that we learn how to more effectively manage ourselves and our environment.Traditionally, policies are outcomes of competition among social groups.  Environmental policy, like most other policy, concerns the translation of values into codes of behavior.  The US political and policy system is often contentious and protracted; change usually comes slowly.  As is often the case in politics, there are winners and losers.  The winners might be well-financed energy and technologically advanced extractive industries, the losers local communities hungry for employment; winners might be organized neighborhood associations taking on city hall or the federal government. This course aims at articulating the human-environment relationship. It is hoped that by learning more about this relationship, students will be better equipped to promote and foster, as citizens and/or policy makers, policies that make winners of both people and our environment.  You will be expected to learn about public policy in general, some history of environmental policy, the current environmental policy environment, and various on-going policy issues using in-class debate and case studies. A goal of this course is for you to integrate material from the past and the present in hopes of enabling you to better predict (and help bring about) possible futures.  Another goal is for you to become an active participant in an actual policy process at the local, state or federal level.  It will require significant effort on your part to assimilate the various threads of environmental politics and policy covered in this course, but, I believe, you will find such effort well worth the work in terms of the perspective and understanding you will gain. Finally, being an effective policy maker or analyst is about being a good communicator.  Policy formulation also requires political and analytical acumen.  If you’re serious about becoming more involved in public policy (of any kind), you should make sure you become proficient in quantitative skills including statistics and economics.  In addition, since policy is all about trying to motivate people’s behavior, a good course in psychology is strongly advised. This course, however, will focus on the more qualitative side of policy: reading, writing, and speaking.",
     "times_and_locations": {
       "ENST 32 - L/D": {
         "Section 01": [
@@ -7622,7 +7622,7 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Topics in Film Study:&nbsp; A Decade Under the Influence:&nbsp; U.S. Film of the 1970s",
+    "course_title": "Topics in Film Study: A Decade Under the Influence: U.S. Film of the 1970s",
     "course_codes": [
       "ENGL-84",
       "FAMS-37"
@@ -9642,7 +9642,7 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "The Social Contract:&nbsp; Rhetoric and Founding Law",
+    "course_title": "The Social Contract: Rhetoric and Founding Law",
     "course_codes": [
       "LJST-33"
     ],
@@ -10837,7 +10837,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "MUSI 98": {
         "Section 08": []
@@ -10858,7 +10858,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "MUSI 98": {
         "Section 09": []
@@ -12073,7 +12073,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "POSC 98": {
         "Section 10": []
@@ -12499,7 +12499,7 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "The End of the World:&nbsp; Utopias and Dystopias",
+    "course_title": "The End of the World: Utopias and Dystopias",
     "course_codes": [
       "RELI-12"
     ],
@@ -13109,7 +13109,7 @@
   {
     "semester": "Spring 2011",
     "course_title": "Gender, Economic Development and Globalization",
-    "course_codes": [],
+    "course_codes": ["WAGS-08"],
     "faculty": {
       "Section 01": [
         "Lynda J. Pickbourn"
@@ -13228,7 +13228,7 @@
   {
     "semester": "Spring 2011",
     "course_title": "Gender Labor",
-    "course_codes": [],
+    "course_codes": ["WAGS-24"],
     "faculty": {
       "Section 01": [
         "Michele Barale"
@@ -13279,7 +13279,7 @@
   {
     "semester": "Spring 2011",
     "course_title": "Other Shakespeares: Gender, Race and Sexuality",
-    "course_codes": [],
+    "course_codes": ["WAGS-35"],
     "faculty": {
       "Section 01": [
         "Krupa Shandilya"
@@ -14225,7 +14225,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "The study and practice of contemporary movement vocabularies, including regional dance forms, contact improvisation and various modern dance techniques. Because the specific genres and techniques will vary, the course may be repeated for credit. Objectives include the intellectual and physical introduction to this discipline as well as increased body awareness, alignment, flexibility, coordination, strength, musical phrasing and the expressive potential of movement. The course material is presented at the beginning/intermediate level.",
     "times_and_locations": {
       "THDA 30H - L/D": {
         "Section 03": [
@@ -14286,7 +14286,7 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "The Craft of Speaking II:&nbsp; Spoken Expression",
+    "course_title": "The Craft of Speaking II: Spoken Expression",
     "course_codes": [
       "THDA-32H"
     ],
@@ -14327,7 +14327,7 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "The Craft of Speaking II:&nbsp; Spoken Expression",
+    "course_title": "The Craft of Speaking II: Spoken Expression",
     "course_codes": [
       "THDA-32H"
     ],
@@ -14368,7 +14368,7 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Experiments in Choreography:&nbsp; Body, Object, Light",
+    "course_title": "Experiments in Choreography: Body, Object, Light",
     "course_codes": [
       "THDA-53"
     ],
@@ -14540,33 +14540,6 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Gender, Economic Development and Globalization",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Lynda J. Pickbourn"
-      ]
-    },
-    "description": "This course uses gender to examine the processes, politics and policies of economic development. We will begin with an introduction to alternative approaches to economics and to economic development, focusing on the neoclassical and feminist approaches, and on the theoretical frameworks that have shaped the gender perspective in economic development. We will also examine the impacts of economic development policy on men and women and on gender relations in Africa, Asia and Latin America, in the context of a globalizing world economy. Special topics will include womens unpaid labor, women in the informal sector; the household as a unit of analysis; the gendered impacts of structural adjustment, neoliberal economic policies and economic crisis; the feminization of migration flows and the global labor force, and the implications of these trends for economic development.",
-    "times_and_locations": {
-      "WAGS 08 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 103"
-          },
-          {
-            "day": "Th",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 103"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "Early Spanish American Women Writers",
     "course_codes": [
       "SPAN-85"
@@ -14659,33 +14632,6 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Gender Labor",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Michele Barale"
-      ]
-    },
-    "description": "In this course we will explore the intimate relations of gender and labor: both the necessary labor of genders production as well as the gendered organization of labor itself. In general the course will use gender to focus on contemporary concerns in the American workplace--class, ethnicity, sexuality, and race--but will also make critical comparisons with developments in other nations. The biological labor of reproduction and its intersection with the labor of production will necessarily be a constant concern in our discussions. We shall have to become familiar with certain terms: glass ceiling, glass escalator, mommy-track, affirmative action, child care, sexual harassment, welfare to workfare. We certainly might want to ask what constitutes work? But we also might need to wonder if work is done for love, is it still work?",
-    "times_and_locations": {
-      "WAGS 24 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MERR 315"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MERR 315"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "Women Writers of Africa and the African Diaspora",
     "course_codes": [
       "BLST-27"
@@ -14703,33 +14649,6 @@
             "day": "M",
             "time": "02:00 PM - 04:30 PM",
             "location": "CONV 308"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Other Shakespeares: Gender, Race and Sexuality",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Krupa Shandilya"
-      ]
-    },
-    "description": "Why do we still read Shakespeare? What relevance does Shakespeare have for us today? In this course we will think through explorations of gender, race, caste and sexuality in modern-day adaptations of Shakespearean texts and continued need to engage with Shakespeare in the present-day. We will draw on a wide variety of both filmic and literary texts from across the world. Texts will range from Merchant Ivorys Shakespeare Wallah to South African activist-novelist Nadine Gordimers My Sons Story and South Asian feminist poet Suniti Namjoshis Snapshots of Caliban .",
-    "times_and_locations": {
-      "WAGS 35 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 217A"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 217A"
           }
         ]
       }

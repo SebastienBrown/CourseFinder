@@ -481,24 +481,6 @@
   },
   {
     "semester": "Fall 2009",
-    "course_title": "Arch Dummy Course (temporary)",
-    "course_codes": [
-      "ARCH-001"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "...",
-    "times_and_locations": {
-      "ARCH 001": {
-        "Section 01": []
-      }
-    }
-  },
-  {
-    "semester": "Fall 2009",
     "course_title": "Basic Drawing",
     "course_codes": [
       "ARHA-04"
@@ -1297,7 +1279,7 @@
   },
   {
     "semester": "Fall 2009",
-    "course_title": "Flowers in the Mirror:&nbsp; Writing Women in Chinese Literature",
+    "course_title": "Flowers in the Mirror: Writing Women in Chinese Literature",
     "course_codes": [
       "ASLC-40"
     ],
@@ -2529,7 +2511,7 @@
         "Patrick L. Williamson"
       ]
     },
-    "description": "...",
+    "description": "This course will concentrate on the structure of proteins at the atomic level. It will include an introduction to methods of structure determination, to databases of structural information, and to publicly available visualization software. These tools will be used to study some class of specific structures, (such as membrane, nucleic acid binding, regulatory, structural, or metabolic proteins). These proteins will provide the framework for discussion of such concepts as domains, motifs, molecular motion, structural homology, etc., as well as addressing how specific biological problems are solved at the atomic level.",
     "times_and_locations": {
       "BIOL 37 - LEC": {
         "Section 01": [
@@ -2849,7 +2831,7 @@
   },
   {
     "semester": "Fall 2009",
-    "course_title": "Master Musicians of Africa I:&nbsp; West Africa",
+    "course_title": "Master Musicians of Africa I: West Africa",
     "course_codes": [
       "BLST-26",
       "MUSI-06"
@@ -5474,7 +5456,7 @@
   },
   {
     "semester": "Fall 2009",
-    "course_title": "THEATER AND ANTHROPOLOGY:&nbsp; READINGS IN PERFORMANCE STUDIES",
+    "course_title": "THEATER AND ANTHROPOLOGY: READINGS IN PERFORMANCE STUDIES",
     "course_codes": [
       "ENGL-95"
     ],
@@ -6136,7 +6118,7 @@
   },
   {
     "semester": "Fall 2009",
-    "course_title": "Slavery&nbsp;and the American Imagination",
+    "course_title": "Slaveryand the American Imagination",
     "course_codes": [],
     "faculty": {
       "Section 01": [
@@ -7053,7 +7035,7 @@
   },
   {
     "semester": "Fall 2009",
-    "course_title": "Mirrors of the World:&nbsp; The Nineteenth-Century French Novel",
+    "course_title": "Mirrors of the World: The Nineteenth-Century French Novel",
     "course_codes": [
       "FREN-44"
     ],
@@ -7204,7 +7186,7 @@
   },
   {
     "semester": "Fall 2009",
-    "course_title": "Geomorphology and Landscape Evolution&nbsp;",
+    "course_title": "Geomorphology and Landscape Evolution",
     "course_codes": [
       "GEOL-25"
     ],
@@ -8400,7 +8382,7 @@
   },
   {
     "semester": "Fall 2009",
-    "course_title": "The Social Contract:&nbsp; Rhetoric and Founding Law",
+    "course_title": "The Social Contract: Rhetoric and Founding Law",
     "course_codes": [
       "LJST-33"
     ],
@@ -9063,7 +9045,7 @@
   },
   {
     "semester": "Fall 2009",
-    "course_title": "Master Musicians of Africa I:&nbsp; West Africa",
+    "course_title": "Master Musicians of Africa I: West Africa",
     "course_codes": [
       "BLST-26",
       "MUSI-06"
@@ -9518,7 +9500,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "This course introduces students to current trends in improvisation-oriented electroacoustic performance. Using laptop computers in dynamic performance situations, we will develop techniques to generate sound and modify and enhance the sound of acoustic instruments. Hardware topics will include audio interfaces, cabling, mixing boards, MIDI controllers, microphone techniques, and networking. A wide variety of specialized software will be explored, including Max/MSP, Ableton Live, Reason, and others. Assignments will focus on preparing students to perform and improvise using new \"instruments\" built through customized hardware and software configurations. Directed listening and reading will introduce students to the development of electroacoustic music since the 1960s. The course culminates with a class performance.",
     "times_and_locations": {
       "MUSI 97": {
         "Section 09": []
@@ -11015,7 +10997,7 @@
   },
   {
     "semester": "Fall 2009",
-    "course_title": "American Religious Thought:&nbsp; From Edwards to Emerson--and Beyond",
+    "course_title": "American Religious Thought: From Edwards to Emerson--and Beyond",
     "course_codes": [
       "RELI-48"
     ],
@@ -11073,7 +11055,7 @@
   },
   {
     "semester": "Fall 2009",
-    "course_title": "The Moral Self:&nbsp; A Comparative Inquiry",
+    "course_title": "The Moral Self: A Comparative Inquiry",
     "course_codes": [
       "RELI-74"
     ],
@@ -11441,30 +11423,8 @@
   },
   {
     "semester": "Fall 2009",
-    "course_title": "Global Politics of Gender",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Manuela Picq"
-      ]
-    },
-    "description": "This course is designed to provide students with a solid understanding of the mechanisms by which international norms of gender equality and womens rights develop and are implemented, with a special emphasis on discourses and practices of international human rights. The course analyzes international treaties such as the Universal Declaration of Human Rights and the Convention on the Elimination of All Forms of Discrimination against Women, and addresses issues regarding domestic violence, political participation, reproductive rights, economic opportunities, and modern slavery, among other gendered problems. Bridging gender and global politics, we explore the ways international norms are transported from the United Nations to the daily reality of women throughout the world, and how states, civil society and institutions collaborate (or not) to promote womens rights where they are most needed.",
-    "times_and_locations": {
-      "WAGS 02 - L/D": {
-        "Section 01": [
-          {
-            "day": "Th",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2009",
     "course_title": "Gender and Ethnicity in Latin America",
-    "course_codes": [],
+    "course_codes": ["WAGS-03"],
     "faculty": {
       "Section 01": [
         "Manuela Picq"
@@ -11491,7 +11451,7 @@
   {
     "semester": "Fall 2009",
     "course_title": "The Cross-Cultural Construction of Gender",
-    "course_codes": [],
+    "course_codes": ["WAGS-11"],
     "faculty": {
       "Section 01": [
         "Kristin Bumiller",
@@ -11576,7 +11536,7 @@
   },
   {
     "semester": "Fall 2009",
-    "course_title": "Flowers in the Mirror:&nbsp; Writing Women in Chinese Literature",
+    "course_title": "Flowers in the Mirror: Writing Women in Chinese Literature",
     "course_codes": [
       "ASLC-40"
     ],
@@ -11754,7 +11714,7 @@
         "Victoria Maillo"
       ]
     },
-    "description": "...",
+    "description": "While expanding on the grammar essentials covered in SPAN 120, this course helps the student further develop listening, speaking, reading, and writing skills in Spanish.  It is directed toward students who already have a good linguistic-communicative competency, broadening their contact with different kinds of texts, deepening their grammatical understanding, and enabling them to communicate through a variety of forms and registers.  Upon completing the course, students should be able to make themselves understood with accuracy and fluency and participate easily in a wide range of formal and informal communicative situations.  An array of literary texts and readings, not ordinarily considered literature and films, will be used.  Three hours a week with lecturer plus one hour with a language assistant.  Conducted entirely in Spanish.",
     "times_and_locations": {
       "SPAN 05 - L/D": {
         "Section 01": [
@@ -12041,7 +12001,7 @@
   },
   {
     "semester": "Fall 2009",
-    "course_title": "Kenan Colloquium.&nbsp; Giving",
+    "course_title": "Kenan Colloquium. Giving",
     "course_codes": [],
     "faculty": {
       "Section 01": [
@@ -12219,7 +12179,7 @@
   },
   {
     "semester": "Fall 2009",
-    "course_title": "Contemporary Dance Techniques:&nbsp; Modern III/IV",
+    "course_title": "Contemporary Dance Techniques: Modern III/IV",
     "course_codes": [
       "THDA-30H"
     ],
@@ -12434,7 +12394,7 @@
   {
     "semester": "Fall 2009",
     "course_title": "Global Politics of Gender",
-    "course_codes": [],
+    "course_codes": ["WAGS-02"],
     "faculty": {
       "Section 01": [
         "Manuela Picq"
@@ -12448,61 +12408,6 @@
             "day": "Th",
             "time": "02:00 PM - 04:30 PM",
             "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2009",
-    "course_title": "Gender and Ethnicity in Latin America",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Manuela Picq"
-      ]
-    },
-    "description": "This course explores gender and ethnicity in Latin America, focusing on the tension between universal rights and cultural rights. The first part maps the daily lives of indigenous women across the region, looking at indigenous women in Central America, the Andes and the Amazon. We look at socio-economic indicators, gender-based violence, and political participation, while taking into consideration history and culture. In the second part of the course, we examine the ways social and political movements have affected them and their communities over time. Through various case studies, we analyze womens capacity to maneuver politics of identity to advance their rights as women and as Indians. The third part pays special attention to the issue of minorities within minorities and the debate between universalism and cultural relativism. This section explores issues such as indigenous justice and the discrepancies between international norms of gender and the inequalities prevailing in indigenous practice. Through the lenses of gender, this course offers a window on the complexity of Latin America.",
-    "times_and_locations": {
-      "WAGS 03 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "SMUD 205"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "SMUD 205"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2009",
-    "course_title": "The Cross-Cultural Construction of Gender",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Kristin Bumiller",
-        "Martha Saxton"
-      ]
-    },
-    "description": "This course introduces students to the issues involved in the social and historical construction of gender and gender roles from a cross-cultural and interdisciplinary perspective. Topics change from year-to-year and have included women and social change; male and female sexualities including homosexualities; the uses and limits of biology in explaining human gender differences; womens participation in production and reproduction; the relationship among gender, race and class as intertwining oppressions; women, men and globalization; and gender and warfare.",
-    "times_and_locations": {
-      "WAGS 11 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CHAP 203"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CHAP 203"
           }
         ]
       }
@@ -12568,7 +12473,7 @@
   },
   {
     "semester": "Fall 2009",
-    "course_title": "Flowers in the Mirror:&nbsp; Writing Women in Chinese Literature",
+    "course_title": "Flowers in the Mirror: Writing Women in Chinese Literature",
     "course_codes": [
       "ASLC-40"
     ],
