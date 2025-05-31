@@ -10,10 +10,10 @@
 
 #SBATCH --mail-type=all                         # send email on job start, end and fault
 #SBATCH --mail-user=hnakazawa@povertyactionlab.org
-#SBATCH --output=CourseFinder/logs/course_scraper_%a.txt
+#SBATCH --output=logs/course_scraper_%a.txt
 
 source /orcd/software/core/001/centos7/pkg/miniforge/24.3.0-0/etc/profile.d/conda.sh
 conda activate course_venv
 
 echo "Scraping Amherst courses..."
-python "CourseFinder/course_scraper.py"
+python "course_scraper.py"

@@ -3,7 +3,7 @@
 #SBATCH --ntasks=1                              # number of scripts that can be run simultaneously
 #SBATCH --cpus-per-task=4                       # Each script gets 16 CPU cores
 
-#SBATCH --mem=32GB                              # Total memory allocation
+#SBATCH --mem=160GB                              # Total memory allocation
 #SBATCH --time=30:00:00                          # Adjust time as needed
 #SBATCH --partition=sched_mit_econ
 
@@ -13,7 +13,7 @@
 
 source /orcd/software/core/001/centos7/pkg/miniforge/24.3.0-0/etc/profile.d/conda.sh
 conda activate course_venv
-pip install -r requirements.txt
+# pip install -r requirements.txt
 
 echo "Computing similarity scores for courses:"
 python "similarity_all.py"
