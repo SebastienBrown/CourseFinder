@@ -221,35 +221,6 @@
   },
   {
     "semester": "Fall 2013",
-    "course_title": "Anthropology of Sexuality",
-    "course_codes": [
-      "ANTH-210"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sahar Sadjadi"
-      ]
-    },
-    "description": "(Offered as WAGS 210 and ANTH 210.)  This course draws on anthropological literature to study the socio-cultural making of human sexuality and its variations, including theories of sexuality as a domain of human experience. It seeks to critically examine some of the most intimate and often taken-for-granted aspects of human life and locate sexual acts, desires and relations in particular historical and cultural contexts. The course offers analytical tools to understand and evaluate different methods and approaches to the study of human sexuality.  We will examine the relation of sex to kinship/family, to reproduction and to romance. As we read about the bodily experience of sexual pleasure, we will explore how sexual taboos, norms and morality develop in various cultures and why sex acquires explosive political dimensions during certain historical periods. The course will explore the gendered and racial dimensions of human sexual experience in the context of class, nation and empire. How do class divisions produce different sexual culture? What economies of sex are involved in sex work, marriage and immigration? What has been the role of sexuality in projects of nation building and in colonial encounters? When, where and how did sexuality become a matter of identity?  In addition to a focus on contemporary ethnographic studies of sexuality in various parts of the world, we will read theoretical and historical texts that have been influential in shaping the anthropological approaches to sexuality. We will also briefly address scientific theories of sexuality.",
-    "times_and_locations": {
-      "WAGS 210 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "WEBS 220"
-          },
-          {
-            "day": "Th",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "WEBS 220"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2013",
     "course_title": "Ethnographic Methods",
     "course_codes": [
       "ANTH-230"
@@ -334,7 +305,7 @@
   },
   {
     "semester": "Fall 2013",
-    "course_title": "Money:&nbsp; Cultural Encounters",
+    "course_title": "Money: Cultural Encounters",
     "course_codes": [
       "ANTH-324"
     ],
@@ -1009,7 +980,7 @@
   },
   {
     "semester": "Fall 2013",
-    "course_title": "Dutch and Flemish Painting (The <em>Art</em> of Beholding)",
+    "course_title": "Dutch and Flemish Painting (The Art of Beholding)",
     "course_codes": [
       "ARHA-253",
       "EUST-253"
@@ -1039,7 +1010,7 @@
   },
   {
     "semester": "Fall 2013",
-    "course_title": "The <em>Art</em> of Beholding",
+    "course_title": "The Art of Beholding",
     "course_codes": [
       "ARHA-301"
     ],
@@ -2493,7 +2464,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "JAPA 290": {
         "Section 02": []
@@ -2515,7 +2486,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "JAPA 290": {
         "Section 03": []
@@ -2737,7 +2708,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "This advanced seminar will focus on the ways in which chemical approaches have been used to study and engineer biological systems. We will explore a series of case studies in which the tools of chemistry have been brought to bear on biological questions and seek to answer the following: Did the application of small molecules that were designed and synthesized by chemists allow the researchers to elucidate biological phenomena that would have remained opaque using genetic and biochemical approaches? Do the findings suggest further experiments? If so, could follow-up experiments be carried out with known techniques, or would development of further chemical tools be required? Topics will include: the design and synthesis of chemical modulators of gene expression, signal transduction, and protein-protein interactions; chemical approaches to protein engineering and drug-target validation; activity-based proteomics; and chemical tagging of biomolecular targets. Readings will draw heavily from the primary scientific literature. Students will be expected to participate actively in class discussions, to write, and to present their work to the class.",
     "times_and_locations": {
       "BCBP 408": {
         "Section 04": []
@@ -3481,7 +3452,7 @@
   },
   {
     "semester": "Fall 2013",
-    "course_title": "&nbsp;New Territory:&nbsp; Introduction to Black Performance Studies\n&nbsp;",
+    "course_title": "New Territory: Introduction to Black Performance Studies\n",
     "course_codes": [
       "BLST-233",
       "THDA-233"
@@ -3541,7 +3512,7 @@
   },
   {
     "semester": "Fall 2013",
-    "course_title": "Reading Popular Culture:&nbsp; Girl Power",
+    "course_title": "Reading Popular Culture: Girl Power",
     "course_codes": [
       "BLST-332",
       "ENGL-271",
@@ -3600,7 +3571,8 @@
     "semester": "Fall 2013",
     "course_title": "Black Feminist Literary Tradition",
     "course_codes": [
-      "BLST-345"
+      "BLST-345",
+      "WAGS-208"
     ],
     "faculty": {
       "Section 01": [
@@ -3657,7 +3629,7 @@
   },
   {
     "semester": "Fall 2013",
-    "course_title": "Panama Silver, Asian Gold:&nbsp; Migration and the Birth of Modern Caribbean Literature",
+    "course_title": "Panama Silver, Asian Gold: Migration and the Birth of Modern Caribbean Literature",
     "course_codes": [
       "BLST-452",
       "ENGL-474"
@@ -5317,7 +5289,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "ECON 490": {
         "Section 02": []
@@ -5759,7 +5731,7 @@
   },
   {
     "semester": "Fall 2013",
-    "course_title": "Reading Popular Culture:&nbsp; Girl Power",
+    "course_title": "Reading Popular Culture: Girl Power",
     "course_codes": [
       "BLST-332",
       "ENGL-271",
@@ -5928,7 +5900,7 @@
   },
   {
     "semester": "Fall 2013",
-    "course_title": "Chaucer: <em>The Canterbury Tales</em>",
+    "course_title": "Chaucer: The Canterbury Tales",
     "course_codes": [
       "ENGL-332"
     ],
@@ -6143,7 +6115,7 @@
   },
   {
     "semester": "Fall 2013",
-    "course_title": "Panama Silver, Asian Gold:&nbsp; Migration and the Birth of Modern Caribbean Literature",
+    "course_title": "Panama Silver, Asian Gold: Migration and the Birth of Modern Caribbean Literature",
     "course_codes": [
       "BLST-452",
       "ENGL-474"
@@ -6205,7 +6177,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "ENGL 490": {
         "Section 02": []
@@ -6226,7 +6198,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "ENGL 490": {
         "Section 03": []
@@ -6247,7 +6219,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "ENGL 490": {
         "Section 04": []
@@ -6653,7 +6625,7 @@
   },
   {
     "semester": "Fall 2013",
-    "course_title": "Dutch and Flemish Painting (The <em>Art</em> of Beholding)",
+    "course_title": "Dutch and Flemish Painting (The Art of Beholding)",
     "course_codes": [
       "ARHA-253",
       "EUST-253"
@@ -7080,7 +7052,7 @@
   },
   {
     "semester": "Fall 2013",
-    "course_title": "Reading Popular Culture:&nbsp; Girl Power",
+    "course_title": "Reading Popular Culture: Girl Power",
     "course_codes": [
       "BLST-332",
       "ENGL-271",
@@ -7200,7 +7172,7 @@
   },
   {
     "semester": "Fall 2013",
-    "course_title": "<em>The Brothers Karamazov</em>: a Multidimensional Approach",
+    "course_title": "The Brothers Karamazov: a Multidimensional Approach",
     "course_codes": [],
     "faculty": {
       "Section 01": [
@@ -8346,7 +8318,7 @@
   },
   {
     "semester": "Fall 2013",
-    "course_title": "<em>Enfants Terribles</em>: Childhood in Nineteenth-Century French Literature and Culture",
+    "course_title": "Enfants Terribles: Childhood in Nineteenth-Century French Literature and Culture",
     "course_codes": [
       "FREN-346"
     ],
@@ -8848,7 +8820,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "GERM 490": {
         "Section 02": []
@@ -8869,7 +8841,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "GERM 490": {
         "Section 03": []
@@ -8878,7 +8850,7 @@
   },
   {
     "semester": "Fall 2013",
-    "course_title": "The Byzantine World: History and Texts\n&nbsp;",
+    "course_title": "The Byzantine World: History and Texts\n",
     "course_codes": [
       "HIST-122"
     ],
@@ -9690,7 +9662,7 @@
   },
   {
     "semester": "Fall 2013",
-    "course_title": "Boundaries of Belonging:&nbsp; Law and Citizenship",
+    "course_title": "Boundaries of Belonging: Law and Citizenship",
     "course_codes": [
       "LJST-223"
     ],
@@ -12821,7 +12793,7 @@
   },
   {
     "semester": "Fall 2013",
-    "course_title": "Close Readings:&nbsp; The Classics of Judaism and Christianity",
+    "course_title": "Close Readings: The Classics of Judaism and Christianity",
     "course_codes": [
       "RELI-370"
     ],
@@ -13171,7 +13143,7 @@
   {
     "semester": "Fall 2013",
     "course_title": "The Cross-Cultural Construction of Gender",
-    "course_codes": [],
+    "course_codes": ["WAGS-100"],
     "faculty": {
       "Section 01": [
         "Khary O. Polk",
@@ -13227,38 +13199,10 @@
   },
   {
     "semester": "Fall 2013",
-    "course_title": "Black Feminist Literary Tradition",
-    "course_codes": [
-      "BLST-345"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Aneeka A. Henderson"
-      ]
-    },
-    "description": "Reading the work of black feminist literary theorists and black women writers, we will examine the construction of black female identity in American literature. How have black women writers negotiated race, gender, sexuality, and class in theory and in literature? What are the fissures and continuities between black feminist literary theory and black women's writing? What was the relationship between black womens literary tradition and the canon? Finally, how has that relationship changed over time? Authors will include Toni Morrison, Hazel Carby, Dorothy West, Barbara Christian, Alice Walker, Gwendolyn Brooks, and Hortense Spillers among others. Writing Attentive. Expectations include diligent reading, active participation, two writing projects, weekly response papers, a group presentation, and various in-class assignments.",
-    "times_and_locations": {
-      "WAGS 208 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:00 PM - 02:20 PM",
-            "location": "CONV 308"
-          },
-          {
-            "day": "Th",
-            "time": "01:00 PM - 02:20 PM",
-            "location": "CONV 308"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2013",
     "course_title": "Anthropology of Sexuality",
     "course_codes": [
-      "ANTH-210"
+      "ANTH-210",
+      "WAGS-210"
     ],
     "faculty": {
       "Section 01": [
@@ -13338,7 +13282,7 @@
   },
   {
     "semester": "Fall 2013",
-    "course_title": "Reading Popular Culture:&nbsp; Girl Power",
+    "course_title": "Reading Popular Culture: Girl Power",
     "course_codes": [
       "BLST-332",
       "ENGL-271",
@@ -13395,7 +13339,7 @@
   {
     "semester": "Fall 2013",
     "course_title": "Gender and HIV/AIDS",
-    "course_codes": [],
+    "course_codes": ["WAGS-410"],
     "faculty": {
       "Section 01": [
         "Sahar Sadjadi"
@@ -14114,7 +14058,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "SPAN 490": {
         "Section 02": []
@@ -14297,7 +14241,7 @@
   },
   {
     "semester": "Fall 2013",
-    "course_title": "Woyzeck:&nbsp; Longing, Beauty and Horror",
+    "course_title": "Woyzeck: Longing, Beauty and Horror",
     "course_codes": [
       "THDA-162"
     ],
@@ -14413,7 +14357,7 @@
   },
   {
     "semester": "Fall 2013",
-    "course_title": "&nbsp;New Territory:&nbsp; Introduction to Black Performance Studies\n&nbsp;",
+    "course_title": "New Territory: Introduction to Black Performance Studies\n",
     "course_codes": [
       "BLST-233",
       "THDA-233"
@@ -14668,34 +14612,6 @@
   },
   {
     "semester": "Fall 2013",
-    "course_title": "The Cross-Cultural Construction of Gender",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Khary O. Polk",
-        "Martha Saxton"
-      ]
-    },
-    "description": "This course introduces students to the issues involved in the social and historical construction of gender and gender roles from a cross-cultural and interdisciplinary perspective. Topics change from year-to-year and have included women and social change; male and female sexualities including homosexualities; the uses and limits of biology in explaining human gender differences; womens participation in production and reproduction; the relationship among gender, race and class as intertwining oppressions; women, men and globalization; and gender and warfare.",
-    "times_and_locations": {
-      "WAGS 100 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CHAP 101"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2013",
     "course_title": "LGBT Perspectives in Popular Music",
     "course_codes": [
       "MUSI-121"
@@ -14718,64 +14634,6 @@
             "day": "Th",
             "time": "02:30 PM - 03:50 PM",
             "location": "ARMU 102"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2013",
-    "course_title": "Black Feminist Literary Tradition",
-    "course_codes": [
-      "BLST-345"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Aneeka A. Henderson"
-      ]
-    },
-    "description": "Reading the work of black feminist literary theorists and black women writers, we will examine the construction of black female identity in American literature. How have black women writers negotiated race, gender, sexuality, and class in theory and in literature? What are the fissures and continuities between black feminist literary theory and black women's writing? What was the relationship between black womens literary tradition and the canon? Finally, how has that relationship changed over time? Authors will include Toni Morrison, Hazel Carby, Dorothy West, Barbara Christian, Alice Walker, Gwendolyn Brooks, and Hortense Spillers among others. Writing Attentive. Expectations include diligent reading, active participation, two writing projects, weekly response papers, a group presentation, and various in-class assignments.",
-    "times_and_locations": {
-      "WAGS 208 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:00 PM - 02:20 PM",
-            "location": "CONV 308"
-          },
-          {
-            "day": "Th",
-            "time": "01:00 PM - 02:20 PM",
-            "location": "CONV 308"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2013",
-    "course_title": "Anthropology of Sexuality",
-    "course_codes": [
-      "ANTH-210"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sahar Sadjadi"
-      ]
-    },
-    "description": "This course draws on anthropological literature to study the socio-cultural making of human sexuality and its variations, including theories of sexuality as a domain of human experience. It seeks to critically examine some of the most intimate and often taken-for-granted aspects of human life and locate sexual acts, desires and relations in particular historical and cultural contexts. The course offers analytical tools to understand and evaluate different methods and approaches to the study of human sexuality. We will examine the relation of sex to kinship/family, to reproduction and to romance. As we read about the bodily experience of sexual pleasure, we will explore how sexual taboos, norms and morality develop in various cultures and why sex acquires explosive political dimensions during certain historical periods. The course will explore the gendered and racial dimensions of human sexual experience in the context of class, nation and empire. How do class divisions produce different sexual culture? What economies of sex are involved in sex work, marriage and immigration? What has been the role of sexuality in projects of nation building and in colonial encounters? When, where and how did sexuality become a matter of identity? In addition to a focus on contemporary ethnographic studies of sexuality in various parts of the world, we will read theoretical and historical texts that have been influential in shaping the anthropological approaches to sexuality. We will also briefly address scientific theories of sexuality.",
-    "times_and_locations": {
-      "WAGS 210 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "WEBS 220"
-          },
-          {
-            "day": "Th",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "WEBS 220"
           }
         ]
       }
@@ -14836,7 +14694,7 @@
   },
   {
     "semester": "Fall 2013",
-    "course_title": "Reading Popular Culture:&nbsp; Girl Power",
+    "course_title": "Reading Popular Culture: Girl Power",
     "course_codes": [
       "BLST-332",
       "ENGL-271",
@@ -14885,28 +14743,6 @@
             "day": "Th",
             "time": "10:00 AM - 11:20 AM",
             "location": "FAYE 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2013",
-    "course_title": "Gender and HIV/AIDS",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Sahar Sadjadi"
-      ]
-    },
-    "description": "This seminar explores the gender dimension of the HIV epidemic in the U.S. and globally, and the role of socio-economic, political and biological factors in the shaping of the epidemic. This course encourages students to think about AIDS and other diseases politically, while remaining attentive to their bodily and social effects. We will engage with AIDS on various scales, from the virus and T cells to the transnational pharmaceutical industry, and from intimate sexual relations to the political economies of health care. We will consider the processes by which some groups of people become more vulnerable to the epidemic than others and we will read about the power dynamics involved in negotiations over condom use. Global processes that guide our investigation include the feminization of poverty, the neoliberal economic restructuring of health systems and the politics of scientific and medical research on AIDS. In addition, the course examines the role of social movements in responding to the epidemic.",
-    "times_and_locations": {
-      "WAGS 410 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:00 PM",
-            "location": "BARR 105"
           }
         ]
       }

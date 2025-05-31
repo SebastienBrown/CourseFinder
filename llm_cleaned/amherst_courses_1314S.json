@@ -31,7 +31,7 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "Inside-Out:&nbsp; A People's History of Immigration",
+    "course_title": "Inside-Out: A People's History of Immigration",
     "course_codes": [
       "AMST-237"
     ],
@@ -55,7 +55,7 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "The War of 1898:&nbsp; U.S. Empire in the Caribbean and Pacific",
+    "course_title": "The War of 1898: U.S. Empire in the Caribbean and Pacific",
     "course_codes": [
       "AMST-315"
     ],
@@ -84,7 +84,7 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "History of Puerto Rico:&nbsp; Colony, Nation, Diaspora",
+    "course_title": "History of Puerto Rico: Colony, Nation, Diaspora",
     "course_codes": [
       "AMST-317"
     ],
@@ -225,7 +225,7 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "Case Studies in Global Health:&nbsp; Biosocial Perspectives",
+    "course_title": "Case Studies in Global Health: Biosocial Perspectives",
     "course_codes": [
       "ANTH-246"
     ],
@@ -571,7 +571,7 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "Asian Capitalism:&nbsp; Historical and Contemporary Views",
+    "course_title": "Asian Capitalism: Historical and Contemporary Views",
     "course_codes": [
       "SOCI-350",
       "ASLC-350"
@@ -1230,7 +1230,7 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "Foundations and Integrations:&nbsp; Film and Media Studies",
+    "course_title": "Foundations and Integrations: Film and Media Studies",
     "course_codes": [
       "ARHA-272",
       "ENGL-281",
@@ -1257,7 +1257,7 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "Experimental Garage Science: The Art of Ubiquitous Material&nbsp;",
+    "course_title": "Experimental Garage Science: The Art of Ubiquitous Material",
     "course_codes": [
       "ARHA-305"
     ],
@@ -1714,31 +1714,6 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "Gender and Nationhood in South Asian Cinema",
-    "course_codes": [
-      "ASLC-229",
-      "FAMS-324"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Catherine S. Masud"
-      ]
-    },
-    "description": "This course will examine the interplay of gender and national identity in post-colonial South Asian cinema. We will begin by tracing the development of the film industry in the region with reference to the historical and political context. We will look at the different streams of South Asian cinema, from mainstream 'Bollywood' movies to regional/national cinema to parallel and diasporic film. Within this framework, we will examine the shifting feminine and masculine representations of nationhood, and the way they intersect with religious identity. Specific topics include a critical analysis of the portrayal of women in the films of Satyajit Ray and Ritwik Ghatak, the mother-goddess construct of Indian nationalism in mainstream cinema, thematic treatments of the relationship between machismo and Hindu/Muslim revivalism, and gender and Muslim identity in the cinema of Bangladesh and Pakistan.",
-    "times_and_locations": {
-      "WAGS 229 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 04:30 PM",
-            "location": "FAYE 117"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2014",
     "course_title": "Japan on Screen",
     "course_codes": [
       "ASLC-234",
@@ -1954,7 +1929,7 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "Asian Capitalism:&nbsp; Historical and Contemporary Views",
+    "course_title": "Asian Capitalism: Historical and Contemporary Views",
     "course_codes": [
       "SOCI-350",
       "ASLC-350"
@@ -2024,31 +1999,6 @@
             "day": "W",
             "time": "02:00 PM - 04:20 PM",
             "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2014",
-    "course_title": "Women Filmmakers of South Asia",
-    "course_codes": [
-      "ASLC-429",
-      "FAMS-429"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Catherine S. Masud"
-      ]
-    },
-    "description": "This course will provide an overview of the major South Asian women filmmakers in the region and the diaspora: their cinematic language and vision, the feminist dimension of their work, and their place within the spectrum of global cinematic trends. Specific topics to be addressed include the challenges women face in the industry, a comparative view of their representations of gender, same sex desire, religious extremism, social conservatism and women's experience. We will examine the work of Deepa Mehta, Mira Nair, Nandita Das, Aparna Sen, Sabiha Sumar, and Gurinder Chadha among others. We have invited some of the filmmakers to lecture after the screenings of their respective films. There will be required film screenings in addition to the regular course meetings.",
-    "times_and_locations": {
-      "WAGS 429 - L/D": {
-        "Section 01": [
-          {
-            "day": "Th",
-            "time": "02:30 PM - 04:30 PM",
-            "location": "FAYE 117"
           }
         ]
       }
@@ -2596,7 +2546,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "JAPA 290": {
         "Section 02": []
@@ -2735,7 +2685,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "JAPA 490": {
         "Section 02": []
@@ -2756,7 +2706,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "JAPA 490": {
         "Section 03": []
@@ -2777,7 +2727,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "JAPA 490H": {
         "Section 02": []
@@ -3382,7 +3332,7 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "Genetics Seminar: Epigenetics\n&nbsp;",
+    "course_title": "Genetics Seminar: Epigenetics\n",
     "course_codes": [
       "BIOL-460"
     ],
@@ -3606,35 +3556,6 @@
             "day": "Th",
             "time": "02:30 PM - 05:10 PM",
             "location": "FAYE 113"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2014",
-    "course_title": "Black Women's Narratives and Counternarratives: Love and the Family",
-    "course_codes": [
-      "BLST-242"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Aneeka A. Henderson"
-      ]
-    },
-    "description": "Love, courtship, and putting a ring on it continue to be a central concern in African American women's literature and contemporary black popular culture.  Do these thematic issues around matrimony signal apolitical yearnings or an allegory for political subjectivity?  In this course we will examine what gender, race, class, and sexuality reveal about the politics of marriage and family.  Surveying the growing discourse in media outlets such as CNN and The Washington Post regarding the 'crisis' of the single black woman, students will analyze the contentious public debates regarding love and marriage and connect them to black women's literature, culture, and black feminist literary theory. We will explore love and family through literature, music, film, documentary, and popular fiction.  Authors and texts covered will range from Nella Larsen to Ann Petry and Bessie Smith to Aretha Franklin. Writing Attentive. Expectations include diligent reading, active participation, two writing projects, weekly response papers, a group presentation, and various in-class assignments.",
-    "times_and_locations": {
-      "WAGS 202 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CHAP 203"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CHAP 203"
           }
         ]
       }
@@ -4358,7 +4279,7 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "Greek Prose: Plato's <em>Apology</em>",
+    "course_title": "Greek Prose: Plato's Apology",
     "course_codes": [
       "GREE-212"
     ],
@@ -4518,7 +4439,7 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "Advanced Readings in Latin Literature II\n&nbsp;",
+    "course_title": "Advanced Readings in Latin Literature II\n",
     "course_codes": [
       "LATI-442"
     ],
@@ -5536,7 +5457,7 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "A Primer to Children&rsquo;s Literature",
+    "course_title": "A Primer to Children's Literature",
     "course_codes": [
       "ENGL-272"
     ],
@@ -5604,7 +5525,7 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "Foundations and Integrations:&nbsp; Film and Media Studies",
+    "course_title": "Foundations and Integrations: Film and Media Studies",
     "course_codes": [
       "ARHA-272",
       "ENGL-281",
@@ -5883,7 +5804,7 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "A Decade Under the Influence:&nbsp; U.S. Film of the 1970s",
+    "course_title": "A Decade Under the Influence: U.S. Film of the 1970s",
     "course_codes": [
       "ENGL-373",
       "FAMS-353"
@@ -5974,7 +5895,7 @@
         "Marisa Parham"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "ENGL 390": {
         "Section 01": []
@@ -6036,7 +5957,7 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "Spenser and Milton:&nbsp; Poetry Inventing a Nation",
+    "course_title": "Spenser and Milton: Poetry Inventing a Nation",
     "course_codes": [
       "ENGL-445"
     ],
@@ -6094,7 +6015,7 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "Paris and the Banlieues:&nbsp; The City and Cinematography in French and Francophone Cinema",
+    "course_title": "Paris and the Banlieues: The City and Cinematography in French and Francophone Cinema",
     "course_codes": [
       "ENGL-489",
       "FAMS-489"
@@ -6270,7 +6191,7 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "Knowing Nature:&nbsp; Examining the Politics of Environmental Knowledge",
+    "course_title": "Knowing Nature: Examining the Politics of Environmental Knowledge",
     "course_codes": [
       "ENST-320"
     ],
@@ -6367,7 +6288,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "ENST 490": {
         "Section 03": []
@@ -6661,7 +6582,7 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "<em>Don Quixote </em>[RC]<em></em>",
+    "course_title": "Don Quixote [RC]",
     "course_codes": [
       "EUST-264",
       "SPAN-364"
@@ -6934,7 +6855,7 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "Foundations and Integrations:&nbsp; Film and Media Studies",
+    "course_title": "Foundations and Integrations: Film and Media Studies",
     "course_codes": [
       "ARHA-272",
       "ENGL-281",
@@ -7104,31 +7025,6 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "Gender and Nationhood in South Asian Cinema",
-    "course_codes": [
-      "ASLC-229",
-      "FAMS-324"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Catherine S. Masud"
-      ]
-    },
-    "description": "This course will examine the interplay of gender and national identity in post-colonial South Asian cinema. We will begin by tracing the development of the film industry in the region with reference to the historical and political context.  We will look at the different streams of South Asian cinema, from mainstream \"Bollywood\" movies to regional/national cinema to parallel and diasporic film. Within this framework, we will examine the shifting feminine and masculine representations of nationhood, and the way they intersect with religious identity. Specific topics include a critical analysis of the portrayal of women in the films of Satyajit Ray and Ritwik Ghatak, the mother-goddess construct of Indian nationalism in mainstream cinema, thematic treatments of the relationship between machismo and Hindu/Muslim revivalism, and gender and Muslim identity in the cinema of Bangladesh and Pakistan.",
-    "times_and_locations": {
-      "WAGS 229 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 04:30 PM",
-            "location": "FAYE 117"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2014",
     "course_title": "Video Production: Bodies in Motion",
     "course_codes": [
       "FAMS-341",
@@ -7154,7 +7050,7 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "A Decade Under the Influence:&nbsp; U.S. Film of the 1970s",
+    "course_title": "A Decade Under the Influence: U.S. Film of the 1970s",
     "course_codes": [
       "ENGL-373",
       "FAMS-353"
@@ -7214,31 +7110,6 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "Women Filmmakers of South Asia",
-    "course_codes": [
-      "ASLC-429",
-      "FAMS-429"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Catherine S. Masud"
-      ]
-    },
-    "description": "This course will provide an overview of the major South Asian women filmmakers in the region and the diaspora: their cinematic language and vision, the feminist dimension of their work, and their place within the spectrum of global cinematic trends. Specific topics to be addressed include the challenges women face in the industry, a comparative view of their representations of gender, same sex desire, religious extremism, social conservatism and women's experience. We will examine the work of Deepa Mehta, Mira Nair, Nandita Das, Aparna Sen, Sabiha Sumar, and Gurinder Chadha among others. We have invited some of the filmmakers to lecture after the screenings of their respective films. There will be required film screenings in addition to the regular course meetings.",
-    "times_and_locations": {
-      "WAGS 429 - L/D": {
-        "Section 01": [
-          {
-            "day": "Th",
-            "time": "02:30 PM - 04:30 PM",
-            "location": "FAYE 117"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2014",
     "course_title": "Cinema Experiments",
     "course_codes": [
       "ARHA-411",
@@ -7273,7 +7144,7 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "Paris and the Banlieues:&nbsp; The City and Cinematography in French and Francophone Cinema",
+    "course_title": "Paris and the Banlieues: The City and Cinematography in French and Francophone Cinema",
     "course_codes": [
       "ENGL-489",
       "FAMS-489"
@@ -8989,7 +8860,7 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "Guantanamo:&nbsp; Law, History, and U.S. Empire (Research Seminar)",
+    "course_title": "Guantanamo: Law, History, and U.S. Empire (Research Seminar)",
     "course_codes": [
       "LJST-353"
     ],
@@ -11883,7 +11754,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "PSYC 490": {
         "Section 04": []
@@ -12509,7 +12380,7 @@
   {
     "semester": "Spring 2014",
     "course_title": "Feminist Theory",
-    "course_codes": [],
+    "course_codes": ["WAGS-200"],
     "faculty": {
       "Section 01": [
         "Sahar Sadjadi"
@@ -12537,7 +12408,8 @@
     "semester": "Spring 2014",
     "course_title": "Black Women's Narratives and Counternarratives: Love and the Family",
     "course_codes": [
-      "BLST-242"
+      "BLST-242",
+      "WAGS-202"
     ],
     "faculty": {
       "Section 01": [
@@ -12592,7 +12464,8 @@
     "course_title": "Gender and Nationhood in South Asian Cinema",
     "course_codes": [
       "ASLC-229",
-      "FAMS-324"
+      "FAMS-324",
+      "WAGS-229"
     ],
     "faculty": {
       "Section 01": [
@@ -12697,13 +12570,13 @@
   {
     "semester": "Spring 2014",
     "course_title": "Ideas and Methods in the Study of Gender",
-    "course_codes": [],
+    "course_codes": ["WAGS-300"],
     "faculty": {
       "Section 01": [
         "Amrita Basu"
       ]
     },
-    "description": "This seminar will explore the influence of gender studies and of feminism on our research questions, methods and the way we situate ourselves in relationship to our scholarship. For example, how can we employ ethnography, textual analysis, empirical data and archival sources in studying the complex ties between the local and the global, and the national and the transnational? Which ideas and methods are best suited to analyzing the varied forms of womens resistance across ideological, class, racial and national differences? Our major goal will be to foster students' critical skills as inter-disciplinary, cross cultural writers and researchers. This course counts as a proseminar designed for juniors and seniors in WAGS.",
+    "description": "This seminar will explore the influence of gender studies and of feminism on our research questions, methods and the way we situate ourselves in relationship to our scholarship. For example, how can we employ ethnography, textual analysis, empirical data and archival sources in studying the complex ties between the local and the global, and the national and the transnational? Which ideas and methods are best suited to analyzing the varied forms of womens resistance across ideological, class, racial and national differences? Our major goal will be to foster students' critical skills as inter-disciplinary, cross cultural writers and researchers.",
     "times_and_locations": {
       "WAGS 300 - L/D": {
         "Section 01": [
@@ -12719,7 +12592,7 @@
   {
     "semester": "Spring 2014",
     "course_title": "Science and Sexuality",
-    "course_codes": [],
+    "course_codes": ["WAGS-328"],
     "faculty": {
       "Section 01": [
         "Sahar Sadjadi"
@@ -12767,7 +12640,8 @@
     "course_title": "Women Filmmakers of South Asia",
     "course_codes": [
       "ASLC-429",
-      "FAMS-429"
+      "FAMS-429",
+      "WAGS-429"
     ],
     "faculty": {
       "Section 01": [
@@ -13368,7 +13242,7 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "<em>Don Quixote </em>[RC]<em></em>",
+    "course_title": "Don Quixote [RC]",
     "course_codes": [
       "EUST-264",
       "SPAN-364"
@@ -14203,62 +14077,6 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "Feminist Theory",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Sahar Sadjadi"
-      ]
-    },
-    "description": "In this course we will investigate contemporary feminist thought from a variety of disciplinary perspectives. We will focus on key issues in feminist theory, such as the sex/gender debate, sexual desire and the body, the political economy of gender, the creation of the 'queer' as subject, and the construction of masculinity, among others. This course aims also to think through the ways in which these concerns intersect with issues of race, class, the environment and the nation. Texts include feminist philosopher Judith Butler's Gender Trouble, anthropologist Kamala Visweswaran's Fictions of Feminist Ethnography, and feminist economist Bina Agarwal's The Structure of Patriarchy.",
-    "times_and_locations": {
-      "WAGS 200 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MERR 401"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MERR 401"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2014",
-    "course_title": "Black Women's Narratives and Counternarratives: Love and the Family",
-    "course_codes": [
-      "BLST-242"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Aneeka A. Henderson"
-      ]
-    },
-    "description": "Love, courtship, and putting a ring on it continue to be a central concern in African American women's literature and contemporary black popular culture. Do these thematic issues around matrimony signal apolitical yearnings or an allegory for political subjectivity? In this course we will examine what gender, race, class, and sexuality reveal about the politics of marriage and family. Surveying the growing discourse in media outlets such as CNN and The Washington Post regarding the \"crisis\" of the single black woman, students will analyze the contentious public debates regarding love and marriage and connect them to black women's literature, culture, and black feminist literary theory. We will explore love and family through literature, music, film, documentary, and popular fiction. Authors and texts covered will range from Nella Larsen to Ann Petry and Bessie Smith to Aretha Franklin. Writing Attentive. Expectations include diligent reading, active participation, two writing projects, weekly response papers, a group presentation, and various in-class assignments.",
-    "times_and_locations": {
-      "WAGS 202 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CHAP 203"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2014",
     "course_title": "Women Writers of Africa and the African Diaspora",
     "course_codes": [
       "BLST-203",
@@ -14277,31 +14095,6 @@
             "day": "M",
             "time": "02:30 PM - 05:00 PM",
             "location": "WEBS 220"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2014",
-    "course_title": "Gender and Nationhood in South Asian Cinema",
-    "course_codes": [
-      "ASLC-229",
-      "FAMS-324"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Catherine S. Masud"
-      ]
-    },
-    "description": "This course will examine the interplay of gender and national identity in post-colonial South Asian cinema. We will begin by tracing the development of the film industry in the region with reference to the historical and political context. We will look at the different streams of South Asian cinema, from mainstream \"Bollywood\" movies to regional/national cinema to parallel and diasporic film. Within this framework, we will examine the shifting feminine and masculine representations of nationhood, and the way they intersect with religious identity. Specific topics include a critical analysis of the portrayal of women in the films of Satyajit Ray and Ritwik Ghatak, the mother-goddess construct of Indian nationalism in mainstream cinema, thematic treatments of the relationship between machismo and Hindu/Muslim revivalism, and gender and Muslim identity in the cinema of Bangladesh and Pakistan.",
-    "times_and_locations": {
-      "WAGS 229 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 04:30 PM",
-            "location": "FAYE 117"
           }
         ]
       }
@@ -14391,50 +14184,6 @@
   },
   {
     "semester": "Spring 2014",
-    "course_title": "Ideas and Methods in the Study of Gender",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Amrita Basu"
-      ]
-    },
-    "description": "This seminar will explore the influence of gender studies and of feminism on our research questions, methods and the way we situate ourselves in relationship to our scholarship. For example, how can we employ ethnography, textual analysis, empirical data and archival sources in studying the complex ties between the local and the global, and the national and the transnational? Which ideas and methods are best suited to analyzing the varied forms of womens resistance across ideological, class, racial and national differences? Our major goal will be to foster students' critical skills as inter-disciplinary, cross cultural writers and researchers. This course counts as a proseminar designed for juniors and seniors in WAGS.",
-    "times_and_locations": {
-      "WAGS 300 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:00 PM",
-            "location": "CLAR 100"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2014",
-    "course_title": "Science and Sexuality",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Sahar Sadjadi"
-      ]
-    },
-    "description": "This seminar explores the role of science in the understanding and making of human sexuality. The notion of sexuality--its emergence and its recent history--has an intimate relation to biology, medicine and psychology. In this course we explore the historical emergence of the scientific model of sexuality and the challenges to this model posed from other worldviews and social forces, mainly religion, social sciences, and political movements. We examine how sex has intersected with race and nationality in the medical model (for instance, in the notion of degeneration), and we look closely at the conceptualization of feminine and masculine sexual difference. We briefly address studies of animal models for human sexuality, and we examine in more depth case histories of perversion, venereal disease, orgasm and sex hormones. We also compare contemporary biological explanations of sexuality with the nineteenth-century ones, for instance, the notion of the gay gene as compared to the hereditary model of sexual inversion. Course readings include historical and contemporary sexological and biological texts (Darwin, Freud, Kinsey, etc.), their critiques, and contemporary literature in science studies, including feminist and queer studies of science. This seminar requires active participation, reading an array of diverse and interdisciplinary texts and preparing research-based papers and presentations.",
-    "times_and_locations": {
-      "WAGS 328 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 04:00 PM",
-            "location": "MORG 110"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2014",
     "course_title": "Black Sexualities",
     "course_codes": [
       "BLST-236"
@@ -14452,31 +14201,6 @@
             "day": "Th",
             "time": "02:30 PM - 05:10 PM",
             "location": "FAYE 113"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2014",
-    "course_title": "Women Filmmakers of South Asia",
-    "course_codes": [
-      "ASLC-429",
-      "FAMS-429"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Catherine S. Masud"
-      ]
-    },
-    "description": "This course will provide an overview of the major South Asian women filmmakers in the region and the diaspora: their cinematic language and vision, the feminist dimension of their work, and their place within the spectrum of global cinematic trends. Specific topics to be addressed include the challenges women face in the industry, a comparative view of their representations of gender, same sex desire, religious extremism, social conservatism and women's experience. We will examine the work of Deepa Mehta, Mira Nair, Nandita Das, Aparna Sen, Sabiha Sumar, and Gurinder Chadha among others. There will be required film screenings in addition to the regular course meetings.",
-    "times_and_locations": {
-      "WAGS 429 - L/D": {
-        "Section 01": [
-          {
-            "day": "Th",
-            "time": "02:30 PM - 04:30 PM",
-            "location": "FAYE 117"
           }
         ]
       }

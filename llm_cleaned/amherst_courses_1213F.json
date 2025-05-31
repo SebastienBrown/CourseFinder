@@ -1232,7 +1232,7 @@
   },
   {
     "semester": "Fall 2012",
-    "course_title": "Dutch and Flemish Painting (The <em>Art</em> of Beholding)",
+    "course_title": "Dutch and Flemish Painting (The Art of Beholding)",
     "course_codes": [
       "ARHA-253",
       "EUST-253"
@@ -1292,7 +1292,7 @@
   },
   {
     "semester": "Fall 2012",
-    "course_title": "The <em>Art</em> of Beholding",
+    "course_title": "The Art of Beholding",
     "course_codes": [
       "ARHA-301"
     ],
@@ -5492,7 +5492,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "ECON 490": {
         "Section 02": []
@@ -6554,7 +6554,7 @@
         "Ethan J. Temeles"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "ENST 495 - L/D": {
         "Section 01": [
@@ -6738,7 +6738,7 @@
   },
   {
     "semester": "Fall 2012",
-    "course_title": "Dutch and Flemish Painting (The <em>Art</em> of Beholding)",
+    "course_title": "Dutch and Flemish Painting (The Art of Beholding)",
     "course_codes": [
       "ARHA-253",
       "EUST-253"
@@ -6797,7 +6797,7 @@
   },
   {
     "semester": "Fall 2012",
-    "course_title": "Spanish Detectives and the<em> g&eacute;nero negro</em>",
+    "course_title": "Spanish Detectives and the g&eacute;nero negro",
     "course_codes": [
       "EUST-312",
       "SPAN-392"
@@ -7647,7 +7647,7 @@
   },
   {
     "semester": "Fall 2012",
-    "course_title": "Christianity &amp; Evolution",
+    "course_title": "Christianity & Evolution",
     "course_codes": [],
     "faculty": {
       "Section 01": [
@@ -9822,7 +9822,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "LJST 490": {
         "Section 02": []
@@ -11725,7 +11725,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "MUSI 490": {
         "Section 03": []
@@ -13896,7 +13896,7 @@
   {
     "semester": "Fall 2012",
     "course_title": "The Cross-Cultural Construction of Gender",
-    "course_codes": [],
+    "course_codes": ["WAGS-100"],
     "faculty": {
       "Section 01": [
         "Krupa Shandilya"
@@ -13923,7 +13923,7 @@
   {
     "semester": "Fall 2012",
     "course_title": "Women, Gender and Popular Culture",
-    "course_codes": [],
+    "course_codes": ["WAGS-105"],
     "faculty": {
       "Section 01": [
         "Aneeka A. Henderson"
@@ -13966,33 +13966,6 @@
             "day": "Tu",
             "time": "02:30 PM - 05:00 PM",
             "location": "CLAR 100"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2012",
-    "course_title": "Queering the History of the Body in Empire, c. 1750-1950",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Onni L Gust"
-      ]
-    },
-    "description": "Whether by categorising and experimenting on bodies, criminalising and incarcerating them or exoticising and desiring them, European imperial power operated through the body. This course looks at how Western European empires constructed and governed colonised bodies both \"at home\" and in the colonies. The course charts the ways in which ideas of masculinity, femininity and able-bodiedness changed as a result of colonial encounter. It looks at a number of case studies, including the history of an enslaved South African woman, Sarah Baartman, who in life and death was displayed in Britain and France as the \"Hottentot Venus.\" The course explores and discusses controversial questions in historical perspective, for example the practice of female circumcision (also referred to as female genital mutilation) during the Mau Mau rebellion in the 1950s. Using queer, post-colonial and feminist theory, this class explores how changing constructions of race, class, disability and gender were used as a tool of imperial governance.",
-    "times_and_locations": {
-      "WAGS 204 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 308"
-          },
-          {
-            "day": "F",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 308"
           }
         ]
       }
@@ -14200,8 +14173,8 @@
   },
   {
     "semester": "Fall 2012",
-    "course_title": "After <em>Midnight&rsquo;s Children</em>: Gender, Genre and the Contemporary South Asian Novel",
-    "course_codes": [],
+    "course_title": "After Midnight's Children: Gender, Genre and the Contemporary South Asian Novel",
+    "course_codes": ["WAGS-367"],
     "faculty": {
       "Section 01": [
         "Krupa Shandilya"
@@ -14700,7 +14673,7 @@
   },
   {
     "semester": "Fall 2012",
-    "course_title": "Spanish Detectives and the<em> g&eacute;nero negro</em>",
+    "course_title": "Spanish Detectives and the g&eacute;nero negro",
     "course_codes": [
       "EUST-312",
       "SPAN-392"
@@ -14939,7 +14912,7 @@
   },
   {
     "semester": "Fall 2012",
-    "course_title": "Contemporary Dance: Modern 4/5 Technique &amp; Repertory",
+    "course_title": "Contemporary Dance: Modern 4/5 Technique & Repertory",
     "course_codes": [
       "THDA-216"
     ],
@@ -15245,60 +15218,6 @@
   },
   {
     "semester": "Fall 2012",
-    "course_title": "The Cross-Cultural Construction of Gender",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Krupa Shandilya"
-      ]
-    },
-    "description": "This course introduces students to the issues involved in the social and historical construction of gender and gender roles from a cross-cultural and interdisciplinary perspective. Topics change from year-to-year and have included women and social change; male and female sexualities including homosexualities; the uses and limits of biology in explaining human gender differences; womens participation in production and reproduction; the relationship among gender, race and class as intertwining oppressions; women, men and globalization; and gender and warfare.",
-    "times_and_locations": {
-      "WAGS 100 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CHAP 101"
-          },
-          {
-            "day": "Th",
-            "time": "02:30 PM - 03:50 PM",
-            "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2012",
-    "course_title": "Women, Gender and Popular Culture",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Aneeka A. Henderson"
-      ]
-    },
-    "description": "We will examine some of the most challenging issues about women and gender in our contemporary postmodern world, through the lens of popular culture.  We will investigate representations of women in popular and material culture in the U.S. through music, television, blogs, fiction, and advertisements.  As we interrogate some of the major theories in cultural criticism, we will use our own expertise as consumers of popular culture as an entryway for exploring the diverse roles mass-mediated popular culture plays in our lives.  Several questions shape the syllabus and provide a framework for approaching the course materials: How do familiar aspects of popular culture reveal broader cultural concerns about women and gender?  In what ways does popular culture blur the boundaries between the highbrow and the lowbrow?  What kinds of fears or anxieties about women and gender does popular culture elicit and how do we negotiate those anxieties?  Expectations include diligent reading, active participation, one presentation, two exams, and two writing projects.",
-    "times_and_locations": {
-      "WAGS 105 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:00 PM - 02:20 PM",
-            "location": "CHAP 101"
-          },
-          {
-            "day": "Th",
-            "time": "01:00 PM - 02:20 PM",
-            "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2012",
     "course_title": "Women Writers of Africa and the African Diaspora",
     "course_codes": [
       "BLST-203"
@@ -15324,7 +15243,7 @@
   {
     "semester": "Fall 2012",
     "course_title": "Queering the History of the Body in Empire, c. 1750-1950",
-    "course_codes": [],
+    "course_codes": ["WAGS-204"],
     "faculty": {
       "Section 01": [
         "Onni L Gust"
@@ -15543,28 +15462,6 @@
             "day": "W",
             "time": "02:00 PM - 04:00 PM",
             "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Fall 2012",
-    "course_title": "After <em>Midnight&rsquo;s Children</em>: Gender, Genre and the Contemporary South Asian Novel",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Krupa Shandilya"
-      ]
-    },
-    "description": "The publication of Salman Rushdies Midnights Children in 1981 produced a radical change in the way that gender and genre were tackled in the South Asian novel. Writers in the post-Rushdie era experimented with genres such as magical realism, the postcolonial science fiction thriller and the postmodern spy novel to re-imagine the nations construction of gendered subjects. This course looks at the intersection of gender and genre in the work of Rushdie himself, namely his Midnights Children and The Moors Last Sigh among others, as well as Amitav Ghoshs The Shadow Lines and Calcutta Chromosome , and Vikram Chandras Sacred Games, Red Earth and Pouring Rain . Through a close reading of the fiction of these writers, literary theory on genre and gender, as well as feminist theory we will examine a range of topics such as the mapping of woman onto nation, the transgendered cyborg body as citizen of the nation and the production of masculinity through state-sponsored violence among others.",
-    "times_and_locations": {
-      "WAGS 367 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "CLAR 100"
           }
         ]
       }

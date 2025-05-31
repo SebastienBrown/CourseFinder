@@ -4684,7 +4684,7 @@
   },
   {
     "semester": "Spring 2010",
-    "course_title": "Consumption and the Pursuit of Happiness&nbsp;",
+    "course_title": "Consumption and the Pursuit of Happiness",
     "course_codes": [
       "ECON-35"
     ],
@@ -5013,7 +5013,7 @@
   },
   {
     "semester": "Spring 2010",
-    "course_title": "WRITING ABOUT LITERATURE:&nbsp; REPRESENTING ILLNESS",
+    "course_title": "WRITING ABOUT LITERATURE: REPRESENTING ILLNESS",
     "course_codes": [
       "ENGL-01"
     ],
@@ -5648,7 +5648,7 @@
   },
   {
     "semester": "Spring 2010",
-    "course_title": "Topics in Film Study:&nbsp; Five Contemporary Filmmakers",
+    "course_title": "Topics in Film Study: Five Contemporary Filmmakers",
     "course_codes": [
       "ENGL-84"
     ],
@@ -5677,7 +5677,7 @@
   },
   {
     "semester": "Spring 2010",
-    "course_title": "Topics in Film Study:&nbsp; Cinema and Everyday Life",
+    "course_title": "Topics in Film Study: Cinema and Everyday Life",
     "course_codes": [
       "ENGL-84"
     ],
@@ -5738,7 +5738,7 @@
   },
   {
     "semester": "Spring 2010",
-    "course_title": "Production Seminar in the Moving Image:&nbsp; Performance, Video and Sound",
+    "course_title": "Production Seminar in the Moving Image: Performance, Video and Sound",
     "course_codes": [
       "ENGL-89",
       "THDA-96"
@@ -6026,7 +6026,7 @@
   },
   {
     "semester": "Spring 2010",
-    "course_title": "Race, Gender&nbsp;and Class in U.S. Environmentalism",
+    "course_title": "Race, Genderand Class in U.S. Environmentalism",
     "course_codes": [
       "ENST-53"
     ],
@@ -9700,36 +9700,6 @@
   },
   {
     "semester": "Spring 2010",
-    "course_title": "Human Rights Activism",
-    "course_codes": [
-      "POSC-24"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Amrita Basu",
-        "Martha Saxton"
-      ]
-    },
-    "description": "This course is intended to give students a sense of the challenges and satisfactions involved in the practice of human rights work as well as a critical sense of how the discourses calling it forth developed and continue to evolve. We intend to provide specific historical and cultural context to selected areas in which human rights abuses of women and men have occurred, and to explore how differing traditions facilitate and inhibit activism within these areas. The semester will begin by exploring the historical growth of human rights discourse in Europe and the United States, culminating in the emergence of the post-World War II Universal Declaration. We will then turn to the proliferation of these discourses since the 1970s, including the growing importance of non-governmental organizations, many of them internationally based, the use of human rights discourse by a wide range of groups, and expanding meanings of human rights including new conceptions of womens human rights. The third part of the course will explore criticisms of human rights discourses, particularly the charge that for all their claims to universalism, these discourses reflect the values of European Enlightenment traditions which are inimical to conceptions of rights and justice that are grounded in culture and religion. Throughout the course, rights workers will discuss their own experiences, abroad and in the U.S., and reflect on the relationship between their work and formal human rights discourse.",
-    "times_and_locations": {
-      "WAGS 32 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "FAYE 115"
-          },
-          {
-            "day": "Th",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "FAYE 115"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
     "course_title": "Women and Politics in Africa",
     "course_codes": [
       "BLST-25",
@@ -11043,111 +11013,8 @@
   },
   {
     "semester": "Spring 2010",
-    "course_title": "The Political Economy of Gender in Latin America",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Manuela Picq"
-      ]
-    },
-    "description": "Latin America has the greatest extremes of wealth of any region in the world, and gender is one of the most important factors leading to this inequality. The study of gender therefore offers a valuable window into the socio-economic structures and political systems of the region. Bringing together the disciplines of comparative politics, political economy, and gender, this course proposes to analyze the gender implications of economic and political reforms at large in Latin America, from the military dictatorships of the 1970s through the democratization of the 1980s, the neoliberal reforms of the 1990s, and the New Left. We will also explore the history and geography of women's rights in terms of political participation, agrarian reform, informal economics, reproductive rights, welfare policies, migration, and human trafficking. Beyond women's rights, the class offers a larger analysis of social movements and the politics of contestation in Latin America, the movements interactions with state actors and the impact of changing markets on women's empowerment.",
-    "times_and_locations": {
-      "WAGS 04 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "CHAP 204"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Gender and the Environment",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Manuela Picq"
-      ]
-    },
-    "description": "This interdisciplinary course lies at the intersection of gender and environmental studies. Exploring different regions of the world from Latin America to South East Asia, we will study the impact of environmental degradation on women's security, dealing with such themes as access to water, resource governance, and how access to resources such as firewood, food, and property affect education and health. The course also explores political ecology and diverging discourses on conservation and resource management by analyzing the engendering of international norms and practices in the U.N. system and beyond. Lastly, the course looks at the securitization of gender in global politics, pointing to the central role of women's agency in promoting environmental security and peace-making.",
-    "times_and_locations": {
-      "WAGS 07 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CLAR 100"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CLAR 100"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Gender Labor",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Michele Barale"
-      ]
-    },
-    "description": "In this course we will explore the intimate relations of gender and labor: both the necessary labor of genders production as well as the gendered organization of labor itself. In general the course will use gender to focus on contemporary concerns in the American workplace--class, ethnicity, sexuality, and race--but will also make critical comparisons with developments in other nations. The biological labor of reproduction and its intersection with the labor of production will necessarily be a constant concern in our discussions. We shall have to become familiar with certain terms: glass ceiling, glass escalator, mommy-track, affirmative action, child care, sexual harassment, welfare to workfare. We certainly might want to ask what constitutes work? But we also might need to wonder if work is done for love, is it still work?",
-    "times_and_locations": {
-      "WAGS 24 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MERR 315"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MERR 315"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Women and the Law in Cross-Cultural Perspective",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Margaret R. Hunt"
-      ]
-    },
-    "description": "Historically the law has functioned as much to differentiate women from men as to assert their similarities. This course will explore the variety of types of laws (natural law, religious law, statute law, customary law, and the like) that have been used to regulate womens lives and try to assess the philosophies that lie behind them. Family law, especially where it pertains to marriage, divorce, married womens property, domestic assault, custody, and so forth, will receive special attention through a comparison of Western European and American legal traditions with Muslim sharia law, both in the past and the present. The course will look closely at the law and law enforcement as they pertain to female sexuality, and assess issues to do with women criminals as well as women as victims of specific types of criminal acts such as rape. It will examine what happens to women when (a) legal structures break down, as in war, and (b) when the law becomes a tool of racial, ethnic, religious, sexual or gender repression. Finally, it will address the extent to which changing the law succeeds as a strategy for empowering women by looking at several key legal campaigns involving women in both Western and non-Western settings. Sources will include religious writing (such as the Book of Leviticus from the Bible and the second and fourth surahs of the Quran), transcripts of court cases from a variety of times and places, historical writings on adultery and prostitution, biographical accounts of female criminals, and contemporary discussions in various media pertaining to the human rights of women and sexual minorities.",
-    "times_and_locations": {
-      "WAGS 26 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CONV 209"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CONV 209"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
     "course_title": "Queer Canons",
-    "course_codes": [],
+    "course_codes": ["WAGS-31"],
     "faculty": {
       "Section 01": [
         "Frederick T. Griffiths"
@@ -11175,7 +11042,8 @@
     "semester": "Spring 2010",
     "course_title": "Human Rights Activism",
     "course_codes": [
-      "POSC-24"
+      "POSC-24",
+      "WAGS-32"
     ],
     "faculty": {
       "Section 01": [
@@ -11316,25 +11184,6 @@
             "location": "FAYE 217A"
           }
         ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Gender Dichotomies in PC",
-    "course_codes": [],
-    "faculty": {
-      "Section 05": [
-        "Manuela Picq"
-      ],
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "...",
-    "times_and_locations": {
-      "WAGS 98": {
-        "Section 05": []
       }
     }
   },
@@ -11746,7 +11595,7 @@
   },
   {
     "semester": "Spring 2010",
-    "course_title": "Contemporary Dance Techniques:&nbsp; Ballet II/III",
+    "course_title": "Contemporary Dance Techniques: Ballet II/III",
     "course_codes": [
       "THDA-30H"
     ],
@@ -11775,7 +11624,7 @@
   },
   {
     "semester": "Spring 2010",
-    "course_title": "Contemporary Dance Techniques:&nbsp; Modern IV/V",
+    "course_title": "Contemporary Dance Techniques: Modern IV/V",
     "course_codes": [
       "THDA-30H"
     ],
@@ -12049,7 +11898,7 @@
   },
   {
     "semester": "Spring 2010",
-    "course_title": "Production Seminar in the Moving Image:&nbsp; Performance, Video and Sound",
+    "course_title": "Production Seminar in the Moving Image: Performance, Video and Sound",
     "course_codes": [
       "ENGL-89",
       "THDA-96"
@@ -12076,7 +11925,7 @@
   {
     "semester": "Spring 2010",
     "course_title": "The Political Economy of Gender in Latin America",
-    "course_codes": [],
+    "course_codes": ["WAGS-04"],
     "faculty": {
       "Section 01": [
         "Manuela Picq"
@@ -12098,7 +11947,7 @@
   {
     "semester": "Spring 2010",
     "course_title": "Gender and the Environment",
-    "course_codes": [],
+    "course_codes": ["WAGS-07"],
     "faculty": {
       "Section 01": [
         "Manuela Picq"
@@ -12125,7 +11974,7 @@
   {
     "semester": "Spring 2010",
     "course_title": "Gender Labor",
-    "course_codes": [],
+    "course_codes": ["WAGS-24"],
     "faculty": {
       "Section 01": [
         "Michele Barale"
@@ -12152,7 +12001,7 @@
   {
     "semester": "Spring 2010",
     "course_title": "Women and the Law in Cross-Cultural Perspective",
-    "course_codes": [],
+    "course_codes": ["WAGS-26"],
     "faculty": {
       "Section 01": [
         "Margaret R. Hunt"
@@ -12171,63 +12020,6 @@
             "day": "Th",
             "time": "10:00 AM - 11:20 AM",
             "location": "CONV 209"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Queer Canons",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Frederick T. Griffiths"
-      ]
-    },
-    "description": "We consider how evolving sexual identities (homosexual/LGBT/queer) have used foundational texts (or classics) to create a shared history without getting trapped in it.  We look at these emerging identities in the context of more visible racial and ethnic communities, and read theory by Sigmund Freud, Michel Foucault, Eve Sedgwick, and others.  Some questions: How are queer kids parented by texts and, since great books tend to be tragic books, do we get more pride than pain from the experience? What do we gain and lose by recruiting earlier authors into identities that they would not have recognized or admitted? Are such canons a relic of the closet or do they still matter amid mainstreaming and the Internet? Authors and directors include: Sappho, Sophocles, Plato, Petronius, William Shakespeare, Oscar Wilde, Radclyffe Hall, Virginia Woolf, Willa Cather, James Baldwin, Audre Lorde, Yukio Mishima, Manuel Puig, and Marlon Riggs.",
-    "times_and_locations": {
-      "WAGS 31 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CHAP 204"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CHAP 204"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2010",
-    "course_title": "Human Rights Activism",
-    "course_codes": [
-      "POSC-24"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Amrita Basu",
-        "Martha Saxton"
-      ]
-    },
-    "description": "This course is intended to give students a sense of the challenges and satisfactions involved in the practice of human rights work as well as a critical sense of how the discourses calling it forth developed and continue to evolve. We intend to provide specific historical and cultural context to selected areas in which human rights abuses of women and men have occurred, and to explore how differing traditions facilitate and inhibit activism within these areas. The semester will begin by exploring the historical growth of human rights discourse in Europe and the United States, culminating in the emergence of the post-World War II Universal Declaration. We will then turn to the proliferation of these discourses since the 1970s, including the growing importance of non-governmental organizations, many of them internationally based, the use of human rights discourse by a wide range of groups, and expanding meanings of human rights including new conceptions of womens human rights. The third part of the course will explore criticisms of human rights discourses, particularly the charge that for all their claims to universalism, these discourses reflect the values of European Enlightenment traditions which are inimical to conceptions of rights and justice that are grounded in culture and religion. Throughout the course, rights workers will discuss their own experiences, abroad and in the U.S., and reflect on the relationship between their work and formal human rights discourse.",
-    "times_and_locations": {
-      "WAGS 32 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "FAYE 115"
-          },
-          {
-            "day": "Th",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "FAYE 115"
           }
         ]
       }
@@ -12354,7 +12146,7 @@
   {
     "semester": "Spring 2010",
     "course_title": "Gender Dichotomies in PC",
-    "course_codes": [],
+    "course_codes": ["WAGS-98"],
     "faculty": {
       "Section 05": [
         "Manuela Picq"
@@ -12363,7 +12155,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {
       "WAGS 98": {
         "Section 05": []

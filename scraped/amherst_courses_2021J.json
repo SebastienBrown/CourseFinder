@@ -378,7 +378,7 @@
                 "John E. Rager"
             ]
         },
-        "description": "",
+        "description": "A continuation of COSC 111. This course will emphasize more complicated problems and their algorithmic solutions. The object-oriented programming paradigm will be discussed in detail, including data abstraction, inheritance, and polymorphism. Other topics will include stacks, queues, linked lists, programming for graphical user interfaces, and basic topics in probability. A laboratory section will meet once a week to give students practice with programming constructs. Requisite: COSC 111 or consent of the instructor. Limited to 30 students with 10 spaces reserved for first-year students in the fall. Fall and Spring semesters: Professor Rosenbaum. January semester: Professor Rager. For the fall, this course will be fully accessible online and may also make use of in-person meetings.",
         "times_and_locations": {
             "COSC 112": {
                 "Section 01": []

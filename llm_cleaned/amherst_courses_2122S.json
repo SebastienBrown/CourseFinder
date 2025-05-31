@@ -1,21 +1,6 @@
 [
   {
     "semester": "Spring 2022",
-    "course_title": "US Social Constructions",
-    "course_codes": [
-      "EDST-201",
-      "AMST-201"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "...",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
     "course_title": "Major Debates in Latinx and Latin American Studies",
     "course_codes": [
       "AMST-206",
@@ -161,7 +146,7 @@
         "Karen J. Sanchez-Eppler"
       ]
     },
-    "description": "...",
+    "description": "Emily Dickinson's poetry is rich in what she called “illocality.” Her writing characteristically dissolves images and refuses specificity of place or event, and yet no writer is more intimately connected to a particular place. Dickinson wrote almost all of her poems in this one house on Main Street, in Amherst. Coursework will include a project done in conjunction with The Emily Dickinson Museum, newly opened and significantly restored after two years of pandemic closure. In this course we will have the extraordinary opportunity to read these poems in Amherst, to study both her individual life and her practices of literary expression in the place where she lived and wrote and with access to her manuscripts and to many of the spaces, artifacts, and records of family and local history. It is a complicated history, and starting with new scholarship on the roles the Dickinson family played in the white settlement of the Connecticut River Valley, this class will be particularly attuned to the inequalities of race, class, and gender that structure Dickinson's poetic practice and legacy. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Close reading of poetry, literary criticism, and historical materials, independent research including archival research and work with material culture objects. Local field trips. Collaborative work on group projects for the Dickinson Museum.",
     "times_and_locations": {}
   },
   {
@@ -212,49 +197,6 @@
   },
   {
     "semester": "Spring 2022",
-    "course_title": "Health and Happiness",
-    "course_codes": [
-      "ANTH-115"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "...",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
-    "course_title": "Building a Better World",
-    "course_codes": [
-      "ANTH-117"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "...",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
-    "course_title": "Religion in Action",
-    "course_codes": [
-      "ANTH-212",
-      "RELI-114"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "...",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
     "course_title": "Feminist Approaches to COVID-19",
     "course_codes": [
       "ANTH-228",
@@ -286,7 +228,7 @@
   },
   {
     "semester": "Spring 2022",
-    "course_title": "Commodifying Nature:&nbsp; An Anthropology of Resource Politics",
+    "course_title": "Commodifying Nature: An Anthropology of Resource Politics",
     "course_codes": [
       "ANTH-251"
     ],
@@ -370,7 +312,7 @@
   },
   {
     "semester": "Spring 2022",
-    "course_title": "Sociology of Work:&nbsp; Discourses on Toil",
+    "course_title": "Sociology of Work: Discourses on Toil",
     "course_codes": [
       "SOCI-208"
     ],
@@ -492,7 +434,7 @@
   },
   {
     "semester": "Spring 2022",
-    "course_title": "Art and Architecture of&nbsp;South Asia",
+    "course_title": "Art and Architecture ofSouth Asia",
     "course_codes": [
       "ARCH-154",
       "ARHA-154",
@@ -707,7 +649,7 @@
   },
   {
     "semester": "Spring 2022",
-    "course_title": "Art and Architecture of&nbsp;South Asia",
+    "course_title": "Art and Architecture ofSouth Asia",
     "course_codes": [
       "ARCH-154",
       "ARHA-154",
@@ -719,20 +661,6 @@
       ]
     },
     "description": "This introductory course surveys the architecture, painting, sculpture, textiles, and other arts of South Asia including India, Afghanistan, Bangladesh, Nepal, Pakistan, and Sri Lanka from 2300 B.C. to the present. Among the diverse materials we will examine are the archaeological remains from one of the world's earliest planned cities; Buddhist monastic complexes carved entirely out of living rock; Hindu temples bearing erotic images; manuscript illustrations made for Muslim emperors; colorful printed and painted textiles produced for domestic, European, Indonesian, and Japanese markets; and twentieth-century works of art that anticipate and respond to India's independence from British colonial rule. We will consider the important roles that South Asian artists, architects, and other makers have played in depicting and housing the divine, establishing political and religious systems, and fueling the exchange of ideas and goods across the globe. Films, musical recordings, museum websites, visits to the Mead Art Museum and Amherst's Archives and Special Collections, and cooking and food-tasting sessions will supplement assigned readings.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
-    "course_title": "Art.com",
-    "course_codes": [
-      "ARHA-190"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Niko Vicario"
-      ]
-    },
-    "description": "...",
     "times_and_locations": {}
   },
   {
@@ -869,21 +797,7 @@
   },
   {
     "semester": "Spring 2022",
-    "course_title": "Critiquing the Critique",
-    "course_codes": [
-      "ARHA-227"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sonya Y. Clark"
-      ]
-    },
-    "description": "...",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
-    "course_title": "Image &amp; Text",
+    "course_title": "Image & Text",
     "course_codes": [
       "ARHA-228"
     ],
@@ -988,7 +902,7 @@
   },
   {
     "semester": "Spring 2022",
-    "course_title": "Sculpture II&nbsp;Miniatures and Monuments&nbsp;",
+    "course_title": "Sculpture IIMiniatures and Monuments",
     "course_codes": [
       "ARHA-324"
     ],
@@ -1152,7 +1066,7 @@
   },
   {
     "semester": "Spring 2022",
-    "course_title": "Art and Architecture of&nbsp;South Asia",
+    "course_title": "Art and Architecture ofSouth Asia",
     "course_codes": [
       "ARCH-154",
       "ARHA-154",
@@ -1228,20 +1142,6 @@
   },
   {
     "semester": "Spring 2022",
-    "course_title": "Lu Xun",
-    "course_codes": [
-      "ASLC-262"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Lei Ying"
-      ]
-    },
-    "description": "",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
     "course_title": "Fascism, War, and Freedom: Spain and Japan On Screen",
     "course_codes": [
       "ASLC-327",
@@ -1301,21 +1201,6 @@
       ]
     },
     "description": "This course explores how categories of sex, gender, and the body have been configured in South Asian history. We will draw upon primary sources including texts, images, films, and documentaries. We will also read scholarly literature that explores South Asian history through the analytics of sex, gender, and body. We will begin by exploring gender in early South Asian history through poetry in translation as well as selections from epic texts, including sections of the Kamasutra that may be widely known but are rarely analyzed within their original historical and courtly contexts in South Asia. Through these poetic and literary texts, we will explore notions of pleasure, love, and intimacy, analyze the intersections between imperialism, sexuality, gendered bodies and colonial rule, and critically examine colonial debates and legal regimes around widow burning or sati in colonial South Asia. Finally, we will examine connections between masculinity and the operation of exclusionary nationalisms through the policing of bodies, agency, and love in contemporary South Asia. Throughout, we will pay attention to how social, political, and ethical formations have interacted with gendered bodies and selves in South Asian history.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
-    "course_title": "Health Policy in China",
-    "course_codes": [
-      "ASLC-431",
-      "POSC-431"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Kerry E. Ratigan"
-      ]
-    },
-    "description": "...",
     "times_and_locations": {}
   },
   {
@@ -1628,7 +1513,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "This is an interactive course that combines academic inquiry and community engagement to investigate identity, inequality and representation within Science Technology Engineering and Mathematics (STEM) fields--at Amherst and beyond. We begin the course by grounding our understanding of the STEM experience at Amherst in national and global contexts. We will survey the interdisciplinary literature on the ways in which identity - race, gender, class, ability, sexuality- and geographic context shape STEM persistence and belonging. We will bring this literature into conversation with our own Amherst experiences. These challenging conversations require vulnerability, openness and the ability to tolerate discomfort. We will work from day one to build a brave space whose foundation is trust, accountability and growth. Students will design group projects that apply themes from the literature and our seminar discussions to develop resources and engage the STEM community, whether at the college, local, or national level. Course work includes critical reading and discussion, reflective writing, and collaborative work culminating in community engagement proposals which students will share with the campus and the broader public.",
     "times_and_locations": {}
   },
   {
@@ -2121,7 +2006,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "As a bridge to prior learning, we will begin with the study of intermolecular forces and their ubiquitous role in chemistry and biology. We will then introduce chemical kinetics to understand the role temperature, concentration, and catalysts play in determining the speeds at which chemical reactions occur and to introduce the concept of chemical equilibrium. Through a thorough treatment of the laws of thermodynamics, we will develop a quantitative understanding of the factors which determine the extent to which chemical reactions can occur before reaching the state of equilibrium. The course will consist of asynchronous lectures and synchronous group work, discussion, problem solving, and labs. Appropriate laboratory experiments supplement the lecture material.",
     "times_and_locations": {}
   },
   {
@@ -2178,21 +2063,7 @@
         "TBA"
       ]
     },
-    "description": "...",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
-    "course_title": "Organic Synthesis Lab",
-    "course_codes": [
-      "CHEM-321"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "...",
+    "description": "This is an interactive course that combines academic inquiry and community engagement to investigate identity, inequality and representation within Science Technology Engineering and Mathematics (STEM) fields--at Amherst and beyond. We begin the course by grounding our understanding of the STEM experience at Amherst in national and global contexts. We will survey the interdisciplinary literature on the ways in which identity - race, gender, class, ability, sexuality- and geographic context shape STEM persistence and belonging. We will bring this literature into conversation with our own Amherst experiences. These challenging conversations require vulnerability, openness and the ability to tolerate discomfort. We will work from day one to build a brave space whose foundation is trust, accountability and growth. Students will design group projects that apply themes from the literature and our seminar discussions to develop resources and engage the STEM community, whether at the college, local, or national level. Course work includes critical reading and discussion, reflective writing, and collaborative work culminating in community engagement proposals which students will share with the campus and the broader public.",
     "times_and_locations": {}
   },
   {
@@ -2269,7 +2140,7 @@
         "Lee Spector"
       ]
     },
-    "description": "...",
+    "description": "This course introduces ideas and techniques that are fundamental to computer science. The course emphasizes procedural abstraction, algorithmic methods, and structured design techniques. Students will gain a working knowledge of a block-structured programming language and will use the language to solve a variety of problems illustrating ideas in computer science. A selection of other elementary topics will be presented. A laboratory section will meet once a week to give students practice with programming constructs.",
     "times_and_locations": {}
   },
   {
@@ -2286,7 +2157,7 @@
         "Mihaela Malita"
       ]
     },
-    "description": "...",
+    "description": "This course will emphasize more complicated problems and their algorithmic solutions. The object-oriented programming paradigm will be discussed in detail, including data abstraction, inheritance, and polymorphism. Other topics will include stacks, queues, linked lists, programming for graphical user interfaces, and basic topics in probability. A laboratory section will meet once a week to give students practice with programming constructs.",
     "times_and_locations": {}
   },
   {
@@ -2361,7 +2232,7 @@
   },
   {
     "semester": "Spring 2022",
-    "course_title": "Seminar in Computer Science: Evolutionary Computation&nbsp;",
+    "course_title": "Seminar in Computer Science: Evolutionary Computation",
     "course_codes": [
       "COSC-452"
     ],
@@ -2439,7 +2310,7 @@
         "Tyler Porter"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {}
   },
   {
@@ -2481,7 +2352,7 @@
         "Christopher G. Kingston"
       ]
     },
-    "description": "...",
+    "description": "The state plays a large role in the economy, employing a substantial fraction of the labor force, producing and consuming a wide variety of goods and services, building infrastructure, taxing economic activity, enforcing contracts, redistributing wealth, regulating industries, and so on. Therefore, the allocation of societys resources - the subject matter of economics - depends crucially on how political decisions are made. This course is an introduction to rational-choice and game-theoretic analysis of collective decision-making in the public sphere: voting systems and democratic governance; legislative bargaining and policymaking; the role of interest groups and collective action; corruption, rent seeking and government failure; constitutional change; and the economic analysis of law.",
     "times_and_locations": {}
   },
   {
@@ -2696,21 +2567,6 @@
       ]
     },
     "description": "This course will explore the meaning of justice and its realization in everyday life. We will consider individuals perceptions of justice and the significance of the concept in the relationship between citizens and government. We will examine how social movements attempt to seek justice and how this quest for justice defines their strategies and goals. And finally we consider how efforts to seek justice are realized, delayed, or blocked in institutional settings, such as in workplace organizations, prisons, state bureaucracies, and the courts.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
-    "course_title": "US Social Constructions",
-    "course_codes": [
-      "EDST-201",
-      "AMST-201"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "...",
     "times_and_locations": {}
   },
   {
@@ -2972,21 +2828,6 @@
   },
   {
     "semester": "Spring 2022",
-    "course_title": "Livestreaming Studio",
-    "course_codes": [
-      "ENGL-228",
-      "THDA-251"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Dan Bernitt (Section 01J)"
-      ]
-    },
-    "description": "...",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
     "course_title": "Three, Two, One: Reading Small Drama",
     "course_codes": [
       "ENGL-231"
@@ -3025,20 +2866,6 @@
       ]
     },
     "description": "What has Orientalism got to do with speculative science fiction? How does the history of Asia intersect with French and British colonialism? What does the Asian Century have in store for us? This course surveys the emerging field of Transnational Asian Studies through the lens of gender, empire, capitalism and migration. The course traces the historical flows and contemporary exchanges rising out of the vast and diverse Asian continent through literary texts, scholarly writing, and visual media. The course will explore categories such as Asian/American, Afro-Asian, coolie and transnational among others, while critiquing early iterations of the field for its United States-centric focus.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
-    "course_title": "Letter Writing",
-    "course_codes": [
-      "ENGL-270"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Benigno R. Sanchez-Eppler"
-      ]
-    },
-    "description": "...",
     "times_and_locations": {}
   },
   {
@@ -3212,7 +3039,7 @@
         "Karen J. Sanchez-Eppler"
       ]
     },
-    "description": "",
+    "description": "Emily Dickinson's poetry is rich in what she called “illocality.” Her writing characteristically dissolves images and refuses specificity of place or event, and yet no writer is more intimately connected to a particular place. Dickinson wrote almost all of her poems in this one house on Main Street, in Amherst. Coursework will include a project done in conjunction with The Emily Dickinson Museum, newly opened and significantly restored after two years of pandemic closure. In this course we will have the extraordinary opportunity to read these poems in Amherst, to study both her individual life and her practices of literary expression in the place where she lived and wrote and with access to her manuscripts and to many of the spaces, artifacts, and records of family and local history. It is a complicated history, and starting with new scholarship on the roles the Dickinson family played in the white settlement of the Connecticut River Valley, this class will be particularly attuned to the inequalities of race, class, and gender that structure Dickinson's poetic practice and legacy. Students who enroll in this course will likely encounter and be expected to engage in the following intellectual skills, modes of learning, and assessment: Close reading of poetry, literary criticism, and historical materials, independent research including archival research and work with material culture objects. Local field trips. Collaborative work on group projects for the Dickinson Museum.",
     "times_and_locations": {}
   },
   {
@@ -3232,7 +3059,7 @@
   },
   {
     "semester": "Spring 2022",
-    "course_title": "After <em>COPS</em>: Police, Media, and Prison Abolition",
+    "course_title": "After COPS: Police, Media, and Prison Abolition",
     "course_codes": [
       "ENGL-378",
       "FAMS-382"
@@ -3288,20 +3115,6 @@
       ]
     },
     "description": "This is a class all about the art of noticing. Our primary texts fixate on what Amit Chaudhuri calls the moment of noticing: heightened attention to the (seemingly) small, the ordinary, the routine. Many readings will be day-in-the-life novels set over a 24-hour period; others dwell on single moments, fleeting impressions, or routine rhythms of daily life. We will discuss questions such as: What formal and stylistic strategies do writers employ to capture everyday life? What happens to narrative conventions of plot and the event when writers are more interested in the textures, rhythms, and background environments of everyday life? How does the ordinary become extraordinary? How does one narrate history in the making, as it unfolds in everyday life? How are major historical events and political structures felt over the course of a typical day? Is it a privilege to think about the everyday as either boring or beautiful? Does it even make sense to talk about everyday literature when experiences of daily life are so diverse and varied? This class will pair novels and short stories with select critical readings from affect theory, urban studies, modernist studies, cultural studies, and ecocriticism. Possible authors include James Baldwin, Amit Chaudhuri, Anton Chekhov, Christopher Isherwood, James Joyce, Kathleen Stewart, Madeleine Thien, and Virginia Woolf.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
-    "course_title": "Performance of Politics",
-    "course_codes": [
-      "ENGL-392"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Christopher A. Grobe"
-      ]
-    },
-    "description": "...",
     "times_and_locations": {}
   },
   {
@@ -3445,7 +3258,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {}
   },
   {
@@ -3575,7 +3388,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "This course is designed to introduce students to the impact that World War II (1939-1945) had and continues to have on the society and culture of several European nations. As the last of the generation that lived during the war passes on, their grandchildren persist in raising questions about the reasons and effects of this political cataclysm. During the war, and afterwards with more or less intensity, writers and filmmakers made and have made attempts to analyze and represent the memories, the guilt, and the false histories that the war left behind in every involved nation. The course will examine the ethics of historical memory, the sincerity of representation, the clever use of history for political purposes. It will also probe and analyze persistent myths of the war as well as discover stories and facts that have been ignored or forgotten. Finally, the course will look at alternative scenarios, that is, “what if” narratives. Readings might include works by Camus, The Plague, Fallada, Every Man is Alone, Modiano, Dora Bruder, Junger, On the Marble Cliffs, Semprun, The Long Journey, De Gaulle's and Churchill's memoirs, Nemirovsky, La Suite francaise, and Levi, The Periodic Table. Films might include Rossellini's Rome: Open City and Germany: Year Zero, Bresson's Pickpocket, Holland's Europa, Europa, Clouzot's Le Corbeau, Reed's The Third Man, Wyler, Mrs. Miniver, and Peterson, Das Boot. The class will study how nations too have attempted to make sense of this hecatomb, seeking explanation, expiation, and often excuses. We will also study how the Second World War's legacy still affects contemporary European culture and politics.",
     "times_and_locations": {}
   },
   {
@@ -3590,7 +3403,7 @@
         "Klara Moricz"
       ]
     },
-    "description": "...",
+    "description": "Two World Wars, the Holocaust, the Cold War, and the dropping of the atomic bomb were cataclysmic events that made the twentieth century one of the most traumatizing time periods in human history. And yet music did not fall silent. Composers continued writing music, giving aural expression to symptoms characteristic of the condition of modernism. How did Richard Strauss's opera Salome about a necrophiliac princess lusting for a severed head become one of the most successful operas in Europe? Why did Stalin alternately persecute and reward the Soviet Union's most talented composer, Dmitri Shostakovich? Why did composers insist on writing unlistenable, incomprehensibly complex music after World War II? Listening to a wide variety of music from Mahler to Kaija Saariaho, reading historical documents and other relevant essays, we'll explore symptoms of modernism and how composers and their music interacted with their culture milieu and historical context. Assignments will include regular listening, periodic short papers, and a culminating project.",
     "times_and_locations": {}
   },
   {
@@ -3688,7 +3501,7 @@
   },
   {
     "semester": "Spring 2022",
-    "course_title": "Trial and Error: An Interdisciplinary Experiment with Montaigne's <em>Essais</em>",
+    "course_title": "Trial and Error: An Interdisciplinary Experiment with Montaigne's Essais",
     "course_codes": [
       "EUST-328",
       "FREN-328"
@@ -3873,7 +3686,7 @@
   },
   {
     "semester": "Spring 2022",
-    "course_title": "After <em>COPS</em>: Police, Media, and Prison Abolition",
+    "course_title": "After COPS: Police, Media, and Prison Abolition",
     "course_codes": [
       "ENGL-378",
       "FAMS-382"
@@ -4005,7 +3818,7 @@
   },
   {
     "semester": "Spring 2022",
-    "course_title": "Trial and Error: An Interdisciplinary Experiment with Montaigne's <em>Essais</em>",
+    "course_title": "Trial and Error: An Interdisciplinary Experiment with Montaigne's Essais",
     "course_codes": [
       "EUST-328",
       "FREN-328"
@@ -4275,7 +4088,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {}
   },
   {
@@ -4337,21 +4150,6 @@
       ]
     },
     "description": "The course traces United States political, social, and cultural history from 1900 to the present. Among the topics covered are the rise of the modern corporation, class conflict and the Progressive movement; immigration, ethnic pluralism, and the rise of mass culture; the Great Depression and the New Deal; World War II, the Cold War, and McCarthyism; the civil rights, womens and environmental movements, the New Left, the New Right, and the continuing inequalities of race and class. Films and videos will regularly supplement class readings.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
-    "course_title": "LGBTQ Hist Pop Culture",
-    "course_codes": [
-      "HIST-163",
-      "SWAG-163"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jen Manion"
-      ]
-    },
-    "description": "...",
     "times_and_locations": {}
   },
   {
@@ -4770,20 +4568,6 @@
   },
   {
     "semester": "Spring 2022",
-    "course_title": "Latin Lit in Translation",
-    "course_codes": [
-      "LLAS-225"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "...",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
     "course_title": "Theorizing the Black Queer Americas",
     "course_codes": [
       "BLST-226",
@@ -4886,20 +4670,6 @@
       ]
     },
     "description": "Murder is the most serious offense against the legal order and is subject to its most punitive responses. It gives meaning to law by establishing the limits of laws authority and its capacity to tame violence. Murder is, in addition, a persistent theme in literature and popular culture where it is used to organize narratives of heroism and corruption, good and evil, fate and irrational misfortune. This course uses law, literature, and popular culture to develop their skills in reading, critical analysis of texts, and writing We will examine the legal definition of homicide and compare that crime with other killings which law condemns as well as those it tolerates or itself carries out. We will explore various types of murders and inquire into the motives of those who commit these acts. In addition, we will consider representations of murder in literature and film. Can such representations ever adequately capture murder, the murderer, and the fear that both arouse? In addition to numerous court cases course materials will include Truman Capote, In Cold Blood, Toni Morrison, Beloved, and Hannah Arendt, Eichmann in Jerusalem as well as such films as Menace 2 Society, Unforgiven, and Silence of the Lambs. Throughout, we will ask what we can learn about law and culture from the way both imagine, represent, and respond to murder. This is an intensive writing course. We will focus on the fundamentals of writing style and of helping students develop clear and persuasive writing styles. Along with regular in class writing, frequent short papers will be assigned. Students will be expected to attend regular writing consultations.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
-    "course_title": "Legal Science Fiction",
-    "course_codes": [
-      "LJST-132"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Michaela J. Brangan"
-      ]
-    },
-    "description": "...",
     "times_and_locations": {}
   },
   {
@@ -5404,7 +5174,7 @@
   },
   {
     "semester": "Spring 2022",
-    "course_title": "Generalized Linear Models and&nbsp;Mixed Models",
+    "course_title": "Generalized Linear Models andMixed Models",
     "course_codes": [
       "STAT-456"
     ],
@@ -5517,7 +5287,7 @@
         "Klara Moricz"
       ]
     },
-    "description": "...",
+    "description": "Two World Wars, the Holocaust, the Cold War, and the dropping of the atomic bomb were cataclysmic events that made the twentieth century one of the most traumatizing time periods in human history. And yet music did not fall silent. Composers continued writing music, giving aural expression to symptoms characteristic of the condition of modernism. How did Richard Strauss's opera Salome about a necrophiliac princess lusting for a severed head become one of the most successful operas in Europe? Why did Stalin alternately persecute and reward the Soviet Union's most talented composer, Dmitri Shostakovich? Why did composers insist on writing unlistenable, incomprehensibly complex music after World War II? Listening to a wide variety of music from Mahler to Kaija Saariaho, reading historical documents and other relevant essays, we'll explore symptoms of modernism and how composers and their music interacted with their culture milieu and historical context. Assignments will include regular listening, periodic short papers, and a culminating project.",
     "times_and_locations": {}
   },
   {
@@ -5673,7 +5443,7 @@
         "Mark L. Swanson"
       ]
     },
-    "description": "...",
+    "description": "136H-140H entail the study of musical performance through ensemble participation. Repertoire will include compositions programmed by directors each semester. Work for the course will include thorough preparation of ones individual part, intensive listening preparation, and other projects. These courses will culminate in public performances. Performance courses will be elected as a half course and may be repeated. Two half courses in performance may be counted as the equivalent of one full course for fulfilling major requirements. These two half courses must be in the same ensemble. Though not strictly required, the Music Department urges that the two semesters be consecutive. Half credit.",
     "times_and_locations": {}
   },
   {
@@ -5869,7 +5639,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "MUSL 151H-183H entail individual beginner performance instruction. MUSL 151H-183H may be repeated. Students must complete MUSI 111 concurrently or prior to enrolling in beginner lessons or demonstrate equivalent competency. If a student places out of MUSI 111, they must complete one full Music Department course before, concurrently, or one semester after beginning individual instruction. MUSL 151H-183H may be elected only with the consent of the Department Coordinator and will consist of 12 weekly lessons of 50 minutes. A minimum of 5 hours of weekly individual practice is expected. Two half courses in performance may be counted as the equivalent of one full course toward fulfilling major requirements. These two half courses must be in the same instrument. Though not strictly required, the Music Department urges that the two semesters be consecutive. Non-majors or majors not using performance courses to fulfill major requirements may combine performance half-courses with other half courses to fulfill degree requirements. Students should consult with the Department Coordinator to arrange for teachers and auditions. Instruction in performance is also available through the Five Colleges with all of the above conditions pertaining. A student wishing to study under this arrangement must enroll through Five College Interchange. Half credit.",
     "times_and_locations": {}
   },
   {
@@ -5883,7 +5653,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "MUSL 151H-183H entail individual beginner performance instruction. MUSL 151H-183H may be repeated. Students must complete MUSI 111 concurrently or prior to enrolling in beginner lessons or demonstrate equivalent competency. If a student places out of MUSI 111, they must complete one full Music Department course before, concurrently, or one semester after beginning individual instruction. MUSL 151H-183H may be elected only with the consent of the Department Coordinator and will consist of 12 weekly lessons of 50 minutes. A minimum of 5 hours of weekly individual practice is expected. Two half courses in performance may be counted as the equivalent of one full course toward fulfilling major requirements. These two half courses must be in the same instrument. Though not strictly required, the Music Department urges that the two semesters be consecutive. Non-majors or majors not using performance courses to fulfill major requirements may combine performance half-courses with other half courses to fulfill degree requirements. Students should consult with the Department Coordinator to arrange for teachers and auditions. Instruction in performance is also available through the Five Colleges with all of the above conditions pertaining. A student wishing to study under this arrangement must enroll through Five College Interchange. Half credit.",
     "times_and_locations": {}
   },
   {
@@ -6121,7 +5891,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "MUSL 151H-183H entail individual beginner performance instruction. MUSL 151H-183H may be repeated. Students must complete MUSI 111 concurrently or prior to enrolling in beginner lessons or demonstrate equivalent competency. If a student places out of MUSI 111, they must complete one full Music Department course before, concurrently, or one semester after beginning individual instruction. MUSL 151H-183H may be elected only with the consent of the Department Coordinator and will consist of 12 weekly lessons of 50 minutes. A minimum of 5 hours of weekly individual practice is expected. Two half courses in performance may be counted as the equivalent of one full course toward fulfilling major requirements. These two half courses must be in the same instrument. Though not strictly required, the Music Department urges that the two semesters be consecutive. Non-majors or majors not using performance courses to fulfill major requirements may combine performance half-courses with other half courses to fulfill degree requirements. Students should consult with the Department Coordinator to arrange for teachers and auditions. Instruction in performance is also available through the Five Colleges with all of the above conditions pertaining. A student wishing to study under this arrangement must enroll through Five College Interchange. Half credit.",
     "times_and_locations": {}
   },
   {
@@ -6149,7 +5919,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "MUSL 151H-183H entail individual beginner performance instruction. MUSL 151H-183H may be repeated. Students must complete MUSI 111 concurrently or prior to enrolling in beginner lessons or demonstrate equivalent competency. If a student places out of MUSI 111, they must complete one full Music Department course before, concurrently, or one semester after beginning individual instruction. MUSL 151H-183H may be elected only with the consent of the Department Coordinator and will consist of 12 weekly lessons of 50 minutes. A minimum of 5 hours of weekly individual practice is expected. Two half courses in performance may be counted as the equivalent of one full course toward fulfilling major requirements. These two half courses must be in the same instrument. Though not strictly required, the Music Department urges that the two semesters be consecutive. Non-majors or majors not using performance courses to fulfill major requirements may combine performance half-courses with other half courses to fulfill degree requirements. Students should consult with the Department Coordinator to arrange for teachers and auditions. Instruction in performance is also available through the Five Colleges with all of the above conditions pertaining. A student wishing to study under this arrangement must enroll through Five College Interchange. Half credit.",
     "times_and_locations": {}
   },
   {
@@ -6345,7 +6115,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "MUSL 351H-384H entail individual intermediate performance instruction. MUSL 351H-384H may be repeated and will consist of 12 weekly lessons of 50 minutes. A minimum of 5 hours of weekly individual practice is expected. Instrumental or vocal proficiency at the intermediate level is determined by the Music Department. Two half courses in performance may be counted as the equivalent of one full course for fulfilling major requirements. These two half courses must be in the same instrument. Though not strictly required, the Music Department urges that the two semesters be consecutive. Non-majors or majors not using performance courses to fulfill major requirements may combine performance half-courses with other half courses to fulfill degree requirements. Instruction in performance is also available through the Five Colleges with all of the above conditions pertaining. Half credit.",
     "times_and_locations": {}
   },
   {
@@ -6359,7 +6129,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "MUSL 351H-384H entail individual intermediate performance instruction. MUSL 351H-384H may be repeated and will consist of 12 weekly lessons of 50 minutes. A minimum of 5 hours of weekly individual practice is expected. Instrumental or vocal proficiency at the intermediate level is determined by the Music Department. Two half courses in performance may be counted as the equivalent of one full course for fulfilling major requirements. These two half courses must be in the same instrument. Though not strictly required, the Music Department urges that the two semesters be consecutive. Non-majors or majors not using performance courses to fulfill major requirements may combine performance half-courses with other half courses to fulfill degree requirements. Instruction in performance is also available through the Five Colleges with all of the above conditions pertaining. Half credit.",
     "times_and_locations": {}
   },
   {
@@ -6597,7 +6367,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "MUSL 351H-384H entail individual intermediate performance instruction. MUSL 351H-384H may be repeated and will consist of 12 weekly lessons of 50 minutes. A minimum of 5 hours of weekly individual practice is expected. Instrumental or vocal proficiency at the intermediate level is determined by the Music Department. Two half courses in performance may be counted as the equivalent of one full course for fulfilling major requirements. These two half courses must be in the same instrument. Though not strictly required, the Music Department urges that the two semesters be consecutive. Non-majors or majors not using performance courses to fulfill major requirements may combine performance half-courses with other half courses to fulfill degree requirements. Instruction in performance is also available through the Five Colleges with all of the above conditions pertaining. Half credit.",
     "times_and_locations": {}
   },
   {
@@ -6821,7 +6591,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "MUSL 451H-483H is reserved for students giving a senior recital or an honors recital in their final year and must have the Department Chair's approval. MUSL 451H-483H may be repeated. Half credit.",
     "times_and_locations": {}
   },
   {
@@ -7073,7 +6843,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "MUSL 451H-483H is reserved for students giving a senior recital or an honors recital in their final year and must have the Department Chair's approval. MUSL 451H-483H may be repeated. Half credit.",
     "times_and_locations": {}
   },
   {
@@ -7231,7 +7001,7 @@
         "Alexander George"
       ]
     },
-    "description": "",
+    "description": "Language and the nature of meaning, the search for a philosophical method, and the limits of logic and of what can be thought—these are the central topics that drove the pioneers of analytic philosophy. We shall explore these themes through classic readings by some of the major figures of the tradition: Gottlob Frege, Bertrand Russell, Ludwig Wittgenstein, Rudolf Carnap, and W. V. Quine.",
     "times_and_locations": {}
   },
   {
@@ -7242,10 +7012,10 @@
     ],
     "faculty": {
       "Section 01": [
-        "TBA"
+        "Jyl Gentzler"
       ]
     },
-    "description": "",
+    "description": "Citizens of the United States are currently engaged in heated debates about access to health care. Is it okay that some of us find it much easier than others to access quality health care that can save our lives? How much access do any of us have a right to? These debates have been informed by our understanding of what a just society guarantees for its different members as well as our understanding of how a just society distributes advantages and burdens among its members when all needs cannot be met. These debates are also informed by our understanding of the nature of health and its value to our lives, as well as our understanding of how different people are responsible for their own health and that of others. Recent research and scholarship have challenged the common view that access to health care is the most relevant factor in determining health outcomes. In particular, recent research has suggested that in addition to access to health care, the following factors play a significant role in our long-term health: our relative status in the groups to which we belong; our access to loving parents, partners, family members, and friends; our access to challenging, stimulating, and inclusive education; our sense of safety in our homes and neighborhoods; our access to meaningful work and engaging play; among other things. Recent research in philosophy has also challenged our assumptions about the most reasonable principles for determining whether certain actions, policies, or emotional dispositions are just or unjust. Putting all of these considerations and observations together, we as scholars are faced with the challenge of providing justified answers to the questions: Do we have any obligation of justice to protect the health of others? If so, in which cases and why? To answer these questions, we will explore and assess recent philosophers’ efforts to understand the general nature of our obligations to one another, the various situations of privilege and disadvantage that we humans experience in relation to one another, and the effects of these relations on our long term health. We will then apply our best understanding of the nature of justice to particular cases to determine whether a given health disparity is a matter of justice, or instead, of good or bad fortune that no one has a moral obligation to change.",
     "times_and_locations": {}
   },
   {
@@ -7467,20 +7237,6 @@
   },
   {
     "semester": "Spring 2022",
-    "course_title": "Race and Punishment",
-    "course_codes": [
-      "POSC-221"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "...",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
     "course_title": "European Union Politics: Integration and Disintegration",
     "course_codes": [
       "POSC-270"
@@ -7564,21 +7320,6 @@
       ]
     },
     "description": "The topic will vary from year to year. The past decade has witnessed the dramatic rise of populist parties, movements, and leaders. One of their defining attributes, and a key reason for their success, is their affective character. Rather than laying out policy proposals for rational deliberation and critical consent, they touch and excite people in an intimate way through their oratory and bodily comportment. Gender and sexuality play a key role in these visceral appeals. We will explore the ways populists enact hegemonic forms of masculinity and femininity and employ binary constructions of gender to differentiate allies from enemies. Although we sometimes mistakenly assume that populist leaders draw on a common script, populist performances are most effective when they mine national memories, anxieties, and aspirations. We will analyze significant differences in the gendered styles of male and female populist leaders within and across nations. We will also examine how progressive movements among LGBTQ groups, feminists, and racial/religious minorities have employed gender and sexuality to challenge right-wing populists. Our approach will be comparative, cross-national, and interdisciplinary. The seminar will culminate in a final research paper.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
-    "course_title": "Health Policy in China",
-    "course_codes": [
-      "ASLC-431",
-      "POSC-431"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Kerry E. Ratigan"
-      ]
-    },
-    "description": "...",
     "times_and_locations": {}
   },
   {
@@ -7752,20 +7493,6 @@
   },
   {
     "semester": "Spring 2022",
-    "course_title": "Health Psychology",
-    "course_codes": [
-      "PSYC-247"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "...",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
     "course_title": "Childhood and Adolescence",
     "course_codes": [
       "EDST-331",
@@ -7810,20 +7537,6 @@
   },
   {
     "semester": "Spring 2022",
-    "course_title": "Psychological Assessment",
-    "course_codes": [
-      "PSYC-353"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Amy P. Demorest"
-      ]
-    },
-    "description": "...",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
     "course_title": "Close Relationships",
     "course_codes": [
       "PSYC-354"
@@ -7834,21 +7547,6 @@
       ]
     },
     "description": "An introduction to the study of close relationships using social-psychological theory and research. Topics will include interpersonal attraction, love and romance, sexuality, relationship development, communication, jealousy, conflict and dissolution, selfishness and altruism, loneliness, and therapeutic interventions. This is an upper-level seminar for the major requirement that requires intensive participation in class discussion and many written assignments.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
-    "course_title": "Religion in Action",
-    "course_codes": [
-      "ANTH-212",
-      "RELI-114"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "...",
     "times_and_locations": {}
   },
   {
@@ -8126,36 +7824,7 @@
         "TBA"
       ]
     },
-    "description": "...",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
-    "course_title": "Vladimir Nabokov",
-    "course_codes": [
-      "ENGL-315",
-      "RUSS-225"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "...",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
-    "course_title": "Chekhov",
-    "course_codes": [
-      "RUSS-229"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "...",
+    "description": "",
     "times_and_locations": {}
   },
   {
@@ -8169,7 +7838,7 @@
         "Boris Wolfson"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {}
   },
   {
@@ -8183,7 +7852,7 @@
         "Tatyana Babyonyshev"
       ]
     },
-    "description": "...",
+    "description": "A half course designed for intermediate-level students who wish to develop their fluency, pronunciation, oral comprehension, and writing skills. We will study and discuss Russian films of various genres.",
     "times_and_locations": {}
   },
   {
@@ -8211,37 +7880,7 @@
         "TBA"
       ]
     },
-    "description": "...",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
-    "course_title": "The Bodies of Tragedy",
-    "course_codes": [
-      "CLAS-111",
-      "SWAG-110"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Frederick T. Griffiths"
-      ]
-    },
-    "description": "...",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
-    "course_title": "LGBTQ Hist Pop Culture",
-    "course_codes": [
-      "HIST-163",
-      "SWAG-163"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jen Manion"
-      ]
-    },
-    "description": "...",
+    "description": "",
     "times_and_locations": {}
   },
   {
@@ -8763,7 +8402,7 @@
   },
   {
     "semester": "Spring 2022",
-    "course_title": "Generalized Linear Models and&nbsp;Mixed Models",
+    "course_title": "Generalized Linear Models andMixed Models",
     "course_codes": [
       "STAT-456"
     ],
@@ -8800,7 +8439,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "An introduction to methods of visual research and visual creativity for textual, narrative, and performance interpretation. The course is conducted in a format combining discussions, creative play, student presentations, and collaborative critique. Class discussions and readings include the theoretical basis of a range of historical theatrical conventions, from Aristotle through Robert Wilson. Class exercises in perception and analysis build skills culminating in the realization of three-dimensional and story-boarding projects. In addition to two two-hour class meetings per week, students participate in the equivalent of a two-hour per week laboratory experience coordinated with the department's production season.",
     "times_and_locations": {}
   },
   {
@@ -8814,7 +8453,7 @@
         "TBA"
       ]
     },
-    "description": "...",
+    "description": "This is an intermediate-level course in contemporary dance technique with a primary focus on movement practice. Using the studio as a laboratory, we will embody increasingly complex and dynamic movement that investigates clarity, freedom, adaptability, and artistry and challenges stamina. Additionally, contemporary dance’s roots and influences will be acknowledged and applied through movement exploration. These include the borrowing and fusing of movement vocabularies from jazz, modern, hip hop and improvisational dance forms like Contact Improvisation. Occasional writing assignments will allow us to reflect on our movement histories and articulate personal progress within the course. This course meets twice a week. Pre-requisite: two or more college-level courses in dance techniques, or equivalent experience. Because the study of dance technique requires ongoing practice, this course may be repeated for credit.",
     "times_and_locations": {}
   },
   {
@@ -8828,7 +8467,7 @@
         "Ashton Lites"
       ]
     },
-    "description": "...",
+    "description": "",
     "times_and_locations": {}
   },
   {
@@ -8919,21 +8558,6 @@
   },
   {
     "semester": "Spring 2022",
-    "course_title": "Livestreaming Studio",
-    "course_codes": [
-      "ENGL-228",
-      "THDA-251"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Dan Bernitt (Section 01J)"
-      ]
-    },
-    "description": "...",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
     "course_title": "On The Edge: Writing for Performance",
     "course_codes": [
       "ENGL-323",
@@ -8965,7 +8589,7 @@
   },
   {
     "semester": "Spring 2022",
-    "course_title": "Solo Performance:&nbsp;Movement, Text, Sound, Video&nbsp;",
+    "course_title": "Solo Performance:Movement, Text, Sound, Video",
     "course_codes": [
       "THDA-355"
     ],
@@ -8989,21 +8613,6 @@
       ]
     },
     "description": "A course in integrating previously studied skills, while developing collaborative and leadership roles in the making of Theater and Dance works, within the Departments producing structure.  With permission, enrolled student will accept a specific assignment within a departmental production team. A half course.",
-    "times_and_locations": {}
-  },
-  {
-    "semester": "Spring 2022",
-    "course_title": "The Bodies of Tragedy",
-    "course_codes": [
-      "CLAS-111",
-      "SWAG-110"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Frederick T. Griffiths"
-      ]
-    },
-    "description": "...",
     "times_and_locations": {}
   },
   {
