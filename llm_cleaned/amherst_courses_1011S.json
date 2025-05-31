@@ -1369,7 +1369,7 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "The World's Oldest Novel: <i>The Tale of Genji</i>and Its Refractions",
+    "course_title": "The World's Oldest Novel: The Tale of Genjiand Its Refractions",
     "course_codes": [
       "ASLC-35"
     ],
@@ -1391,41 +1391,6 @@
             "day": "W",
             "time": "12:30 PM - 01:50 PM",
             "location": "CONV 302"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "From Edo to Tokyo: Japanese Art from 1600 to the Present",
-    "course_codes": [
-      "ARHA-62",
-      "ASLC-38"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Samuel C. Morse"
-      ]
-    },
-    "description": "In 1590 the Tokugawa family founded its provincial headquarters in eastern Japan. By the eighteenth century, this castle town, named Edo (now known as Tokyo), had become the worlds largest city. This class will focus on the appearance of artistic traditions in the new urban center and compare them with concurrent developments in the old capital of Kyoto. Topics of discussion will include the revival of classical imagery during the seventeenth century, the rise of an urban bourgeois culture during the eighteenth century, the conflicts brought on by the opening of Japan to the West in the nineteenth century, the reconstruction of Tokyo and its artistic practices after the Second World War, and impact of Japanese architecture, design and popular culture over the past twenty years.",
-    "times_and_locations": {
-      "ARHA 62 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "F",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "FAYE 113"
           }
         ]
       }
@@ -3248,40 +3213,6 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Molecular and Cellular Biophysics",
-    "course_codes": [
-      "BCBP-46",
-      "BIOL-40",
-      "CHEM-46",
-      "PHYS-46"
-    ],
-    "faculty": {
-      "Section 01": [
-        "William A. Loinaz",
-        "Patricia B. O'Hara",
-        "Patrick L. Williamson"
-      ]
-    },
-    "description": "How do the physical laws that dominate our lives change at the small length and energy scales of individual molecules? What design principles break down at the sub-cellular level and what new chemistry and physics becomes important? We will answer these questions by looking at bio-molecules, cellular substructures, and control mechanisms that work effectively in the microscopic world. How can we understand both the static and dynamic shape of proteins using the laws of thermodynamics and kinetics? How has the basic understanding of the smallest molecular motor in the world, ATP synthase, changed our understanding of friction and torque? We will explore new technologies, such as atomic force and single molecule microscopy that have allowed research into these areas. This course will address topics in each of the three major divisions of Biophysics: bio-molecular structure, biophysical techniques, and biological mechanisms.",
-    "times_and_locations": {
-      "PHYS 46 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MERR 403"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MERR 403"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "Seminar in Disease Biology",
     "course_codes": [
       "BIOL-44"
@@ -3298,31 +3229,6 @@
         "Section 01": [
           {
             "day": "Tu",
-            "time": "02:00 PM - 05:00 PM",
-            "location": "MCLS 428"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Seminar in Biochemistry",
-    "course_codes": [
-      "BCBP-58",
-      "BIOL-58"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Patrick L. Williamson"
-      ]
-    },
-    "description": "The topic of this advanced seminar will be cholesterol. It has been said that more Nobel prizes have been awarded for the study of cholesterol than any other biological topic, yet it is astonishing how much we have learned only in the last few years, and how much we still don't understand. The topics in this course will include biosynthesis, transport, regulation, physiology, and biophyics of cholesterol. In many cases, these subjects illuminate or are illuminated by cholesterol-related diseases, so the biochemical bases for high cholesterol medications and for a genetic propensity for getting heart disease from eating broccoli are likely to come up. The course will be based on the scientific literature, and will include writing and presentation assignments.",
-    "times_and_locations": {
-      "BIOL 58 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
             "time": "02:00 PM - 05:00 PM",
             "location": "MCLS 428"
           }
@@ -3403,36 +3309,6 @@
             "day": "M",
             "time": "02:00 PM - 04:30 PM",
             "location": "COOP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "African Cultures and Societies",
-    "course_codes": [
-      "ANTH-26",
-      "BLST-20"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Miriam R. Goheen [d]"
-      ]
-    },
-    "description": "This course explores the cultural meaning of indigenous African institutions and societies. Through the use of ethnographies, novels and films, we will investigate the topics of kinship, religion, social organization, colonialism, ethnicity, nationalism and neocolonialism. The principal objective is to give students an understanding of African society that will enable them better to comprehend current issues and problems confronting African peoples and nations.",
-    "times_and_locations": {
-      "ANTH 26 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MEAD 115"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MEAD 115"
           }
         ]
       }
@@ -3605,36 +3481,6 @@
             "day": "W",
             "time": "12:30 PM - 01:50 PM",
             "location": "COOP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Survey of African Art",
-    "course_codes": [
-      "ARHA-49",
-      "BLST-46"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Rowland O. Abiodun"
-      ]
-    },
-    "description": "An introduction to the ancient and traditional arts of Africa. Special attention will be given to the archaeological importance of the rock art paintings found in such disparate areas as the Sahara and South Africa, achievements in the architectural and sculptural art in clay of the early people in the area now called Zimbabwe and the aesthetic qualities of the terracotta and bronze sculptures of the Nok, Igbo-Ukwe, Ife and Benin cultures in West Africa, which date from the second century B.C.E. to the sixteenth century C.E. The study will also pursue a general socio-cultural survey of traditional arts of the major ethnic groups of Africa.",
-    "times_and_locations": {
-      "ARHA 49 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "FAYE 217A"
-          },
-          {
-            "day": "W",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "FAYE 217A"
           }
         ]
       }
@@ -4643,122 +4489,6 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Biochemistry",
-    "course_codes": [
-      "BIOL-30",
-      "CHEM-30"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sheila S. Jaswal",
-        "Amy L. Springer (Sections 02, 03 and 04)"
-      ]
-    },
-    "description": "Structure and function of biologically important molecules and their role(s) in life processes. Protein conformation, enzymatic mechanisms and selected metabolic pathways will be analyzed. Additional topics may include: nucleic acid conformation, DNA/protein interactions, signal transduction and transport phenomena. Four classroom hours and four hours of laboratory work per week.",
-    "times_and_locations": {
-      "BIOL 30 - LEC": {
-        "Section 02": [
-          {
-            "day": "M",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "W",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "F",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "MERR 4"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "M",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "W",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "F",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "MERR 4"
-          }
-        ],
-        "Section 04": [
-          {
-            "day": "M",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "W",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "F",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "MERR 4"
-          }
-        ]
-      },
-      "BIOL 30 - LAB": {
-        "Section 02": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 06:00 PM",
-            "location": "MERR 404"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 06:00 PM",
-            "location": "MERR 404"
-          }
-        ],
-        "Section 04": [
-          {
-            "day": "Th",
-            "time": "02:00 PM - 06:00 PM",
-            "location": "MERR 404"
-          }
-        ]
-      },
-      "BIOL 30 - DIS": {
-        "Section 02": [
-          {
-            "day": "F",
-            "time": "02:00 PM - 02:50 PM",
-            "location": "MERR 4"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "F",
-            "time": "02:00 PM - 02:50 PM",
-            "location": "MERR 4"
-          }
-        ],
-        "Section 04": [
-          {
-            "day": "F",
-            "time": "02:00 PM - 02:50 PM",
-            "location": "MERR 4"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "Atmospheric Chemistry",
     "course_codes": [
       "CHEM-38"
@@ -4835,98 +4565,6 @@
             "day": "W",
             "time": "02:00 PM - 05:00 PM",
             "location": "MERR 419"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Molecular and Cellular Biophysics",
-    "course_codes": [
-      "BCBP-46",
-      "BIOL-40",
-      "CHEM-46",
-      "PHYS-46"
-    ],
-    "faculty": {
-      "Section 01": [
-        "William A. Loinaz",
-        "Patricia B. O'Hara",
-        "Patrick L. Williamson"
-      ]
-    },
-    "description": "How do the physical laws that dominate our lives change at the small length and energy scales of individual molecules? What design principles break down at the sub-cellular level and what new chemistry and physics becomes important? We will answer these questions by looking at bio-molecules, cellular substructures, and control mechanisms that work effectively in the microscopic world. How can we understand both the static and dynamic shape of proteins using the laws of thermodynamics and kinetics? How has the basic understanding of the smallest molecular motor in the world, ATP synthase, changed our understanding of friction and torque? We will explore new technologies, such as atomic force and single molecule microscopy that have allowed research into these areas. This course will address topics in each of the three major divisions of Biophysics: bio-molecular structure, biophysical techniques, and biological mechanisms.",
-    "times_and_locations": {
-      "PHYS 46 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MERR 403"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MERR 403"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Senior Departmental Honors",
-    "course_codes": [
-      "CHEM-78D",
-      "CHEM-78"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Anthony C. Bishop"
-      ],
-      "Section 02": [
-        "Sandra Burkett"
-      ],
-      "Section 04": [
-        "Sheila S. Jaswal"
-      ],
-      "Section 05": [
-        "Joseph N. Kushick"
-      ],
-      "Section 06": [
-        "Helen O Leung"
-      ],
-      "Section 07": [
-        "Mark D. Marshall"
-      ],
-      "Section 08": [
-        "Karena A. McKinney"
-      ],
-      "Section 09": [
-        "Patricia B. O'Hara"
-      ],
-      "Section 03": [
-        "Gary J. Snyder"
-      ]
-    },
-    "description": "A double course.",
-    "times_and_locations": {
-      "CHEM 78 - TUT": {
-        "Section 00": [
-          {
-            "day": "F",
-            "time": "03:00 PM - 05:00 PM",
-            "location": "MERR 4"
-          }
-        ]
-      },
-      "CHEM 78D - TUT": {
-        "Section 00": [
-          {
-            "day": "F",
-            "time": "03:00 PM - 05:00 PM",
-            "location": "MERR 4"
           }
         ]
       }
@@ -5136,7 +4774,7 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Greek Prose: Plato's <i>Apology</i>",
+    "course_title": "Greek Prose: Plato's Apology",
     "course_codes": [
       "GREE-12"
     ],
@@ -6186,52 +5824,6 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Colonies, Empires, and a New Republic",
-    "course_codes": [
-      "ENGL-10"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Barry O'Connell"
-      ]
-    },
-    "description": "Once American literature began with the Pilgrims and Puritans, though they were latecomers among the Europeans in the Americas. In this course we will begin with the oral traditions of some of the native inhabitants and then read accounts from the European discovery and conquest, Spanish, French, and English: Columbus, Verrazano, Cartier, Cortes, Bradford, and others. Then we will read the literature of the settlers: diaries, sermons, captivity narratives, and autobiographies. In the eighteenth century we will follow the emerging literature of independence, not only that written by Anglo-Americans, but also the writings of Africans and African Americans like Olaudah Equiano. We will end the course with the literature of post-independence: novels by Charles Brockden Brown and Rebecca Rush.",
-    "times_and_locations": {
-      "ENGL 10 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "CHAP 101"
-          },
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "CHAP 101"
-          },
-          {
-            "day": "F",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "CHAP 101"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "CHAP 103"
-          },
-          {
-            "day": "F",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "CHAP 103"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "Reading Poetry",
     "course_codes": [
       "ENGL-12"
@@ -6547,36 +6139,6 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Childhood in African and Caribbean Literature",
-    "course_codes": [
-      "BLST-29",
-      "ENGL-55"
-    ],
-    "faculty": {
-      "Section 01": [
-        "C. Rhonda Cobham-Sander"
-      ]
-    },
-    "description": "The course will concentrate on Caribbean authors. It explores the process of self-definition in literary works from Africa and the Caribbean that are built around child protagonists. We will examine the authors various methods of ordering experience through the choice of literary form and narrative technique, as well as the child/authors perception of his or her society. French texts will be read in translation.",
-    "times_and_locations": {
-      "ENGL 55 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "WEBS 220"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "WEBS 220"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "Poetry and Theory: High Modernism, Late Modernism, Postmodernism",
     "course_codes": [
       "ENGL-56"
@@ -6635,37 +6197,7 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Studies in African American Literature",
-    "course_codes": [
-      "BLST-39",
-      "ENGL-66"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Marisa Parham"
-      ]
-    },
-    "description": "The topic changes each time the course is taught. In spring 2011 the topic will be The Weary Blues: Mourning in African American Literature and Culture. As a population generally familiar with the facts of living too hard and dying too soon, how have African Americans used their literary and cultural traditions to memorialize-to articulate and often to work through conditions of pain and loss? Using a variety of literary and cultural texts, including RIP murals, poetry, and music, this semesters topic examines the various ways African Americans express and aestheticize loss; how mourning often works as a foundation for militancy; and, most importantly, how loss is often recuperated through ideologies of art, love, and memory.",
-    "times_and_locations": {
-      "ENGL 66 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CONV 208"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "CONV 208"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Old English and <i>Beowulf</i>",
+    "course_title": "Old English and Beowulf",
     "course_codes": [
       "ENGL-76"
     ],
@@ -6887,31 +6419,6 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Research Methods in American Culture",
-    "course_codes": [
-      "AMST-68",
-      "ENGL-95"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Robert T. Hayashi"
-      ]
-    },
-    "description": "This course is designed to provide American Studies majors, as well as others interested in interdisciplinary work, the opportunity and support to produce a major piece of research writing on a topic of their choosing. We will examine a wide range of materials, including photographs, paintings, legal documents, journals, poems, and plays. The course will also introduce students to the variety of methodologies utilized by practitioners in the field of American Studies. The specific focus of the course will be the role of place in American culture. By studying discrete geographic locations--their histories, residents, and cultural representations--students will gain appreciation for interdisciplinary work and the development of American Studies.",
-    "times_and_locations": {
-      "AMST 68 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 05:00 PM",
-            "location": "WEBS 219"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "Autobiography in the Middle Ages and Renaissance",
     "course_codes": [
       "ENGL-95"
@@ -7104,7 +6611,7 @@
         "Paul K. Newlin"
       ]
     },
-    "description": "It is variously acknowledged that humanity is now, and will be for the next several decades, going through an environmental bottleneck; a transition characterized by a growing population and demand on resources.  While much of the new growth and demand for environmental services is taking place in other countries, notably China and India, the United States still imposes the largest ecological footprint on a per capita basis.  Thus, it is imperative that we learn how to more effectively manage ourselves and our environment.Traditionally, policies are outcomes of competition among social groups.  Environmental policy, like most other policy, concerns the translation of values into codes of behavior.  The US political and policy system is often contentious and protracted; change usually comes slowly.  As is often the case in politics, there are winners and losers.  The winners might be well-financed energy and technologically advanced extractive industries, the losers local communities hungry for employment; winners might be organized neighborhood associations taking on city hall or the federal government. This course aims at articulating the human-environment relationship. It is hoped that by learning more about this relationship, students will be better equipped to promote and foster, as citizens and/or policy makers, policies that make winners of both people and our environment.  You will be expected to learn about public policy in general, some history of environmental policy, the current environmental policy environment, and various on-going policy issues using in-class debate and case studies. A goal of this course is for you to integrate material from the past and the present in hopes of enabling you to better predict (and help bring about) possible futures.  Another goal is for you to become an active participant in an actual policy process at the local, state or federal level.  It will require significant effort on your part to assimilate the various threads of environmental politics and policy covered in this course, but, I believe, you will find such effort well worth the work in terms of the perspective and understanding you will gain. Finally, being an effective policy maker or analyst is about being a good communicator.  Policy formulation also requires political and analytical acumen.  If you’re serious about becoming more involved in public policy (of any kind), you should make sure you become proficient in quantitative skills including statistics and economics.  In addition, since policy is all about trying to motivate people’s behavior, a good course in psychology is strongly advised. This course, however, will focus on the more qualitative side of policy: reading, writing, and speaking.",
+    "description": "It is variously acknowledged that humanity is now, and will be for the next several decades, going through an environmental bottleneck; a transition characterized by a growing population and demand on resources.  While much of the new growth and demand for environmental services is taking place in other countries, notably China and India, the United States still imposes the largest ecological footprint on a per capita basis.  Thus, it is imperative that we learn how to more effectively manage ourselves and our environment.Traditionally, policies are outcomes of competition among social groups.  Environmental policy, like most other policy, concerns the translation of values into codes of behavior.  The US political and policy system is often contentious and protracted; change usually comes slowly.  As is often the case in politics, there are winners and losers.  The winners might be well-financed energy and technologically advanced extractive industries, the losers local communities hungry for employment; winners might be organized neighborhood associations taking on city hall or the federal government. This course aims at articulating the human-environment relationship. It is hoped that by learning more about this relationship, students will be better equipped to promote and foster, as citizens and/or policy makers, policies that make winners of both people and our environment.  You will be expected to learn about public policy in general, some history of environmental policy, the current environmental policy environment, and various on-going policy issues using in-class debate and case studies. A goal of this course is for you to integrate material from the past and the present in hopes of enabling you to better predict (and help bring about) possible futures.  Another goal is for you to become an active participant in an actual policy process at the local, state or federal level.  It will require significant effort on your part to assimilate the various threads of environmental politics and policy covered in this course, but, I believe, you will find such effort well worth the work in terms of the perspective and understanding you will gain. Finally, being an effective policy maker or analyst is about being a good communicator.  Policy formulation also requires political and analytical acumen.  If you\u2019re serious about becoming more involved in public policy (of any kind), you should make sure you become proficient in quantitative skills including statistics and economics.  In addition, since policy is all about trying to motivate people\u2019s behavior, a good course in psychology is strongly advised. This course, however, will focus on the more qualitative side of policy: reading, writing, and speaking.",
     "times_and_locations": {
       "ENST 32 - L/D": {
         "Section 01": [
@@ -7301,64 +6808,6 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Art and Architecture of Europe from 1400 to 1800",
-    "course_codes": [
-      "ARHA-35",
-      "EUST-38"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Nicola Courtright"
-      ]
-    },
-    "description": "This course is an introduction to painting, sculpture, and architecture of the early modern period. The goal of the course is to identify artistic innovations that characterize European art from the Renaissance to the French Revolution, and to situate the works of art historically, by examining the intellectual, political, religious, and social currents that contributed to their creation. In addition to tracing stylistic change within the oeuvre of individual artists and understanding its meaning, we will investigate the varied character of art, its interpretation, and its context in different regions, including Italy, France, Spain, Germany and the Netherlands.",
-    "times_and_locations": {
-      "ARHA 35 - LEC": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 115"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 115"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 115"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 115"
-          }
-        ]
-      },
-      "ARHA 35 - DIS": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "MEAD 111"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "W",
-            "time": "01:00 PM - 01:50 PM",
-            "location": "MEAD 111"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "Music and Culture II",
     "course_codes": [
       "EUST-39",
@@ -7382,66 +6831,6 @@
             "day": "W",
             "time": "12:30 PM - 01:50 PM",
             "location": "ARMU 212"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Digital Constructions: Intermediate Architectural Design Studio",
-    "course_codes": [
-      "ARHA-16",
-      "EUST-52"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Thom Long"
-      ]
-    },
-    "description": "In this intermediate architectural design studio we will explore the intellectual and creative process of making and representing architectural space. The focus will be to explore the boundaries of architecture--physically and theoretically, historically and presently--through digital media. Our process will prompt us to dissect 20th-century European architectures and urban spaces and to explore their relationships to contemporary, global issues. The capstone of the course will be a significant design project (TBD) requiring rigorous studio practices, resulting in plans, sections, elevations and digital models. This course will introduce students to various digital diagramming, drawing, and modeling software, while challenging students to question the theoretical and practical implications of these interdisciplinary media processes. This course will combine lectures, reading, discussion, and extensive studio design.",
-    "times_and_locations": {
-      "EUST 52 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "09:00 AM - 12:00 PM",
-            "location": "SMUD 116"
-          },
-          {
-            "day": "W",
-            "time": "09:00 AM - 12:00 PM",
-            "location": "SMUD 116"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "The Modern World",
-    "course_codes": [
-      "ARHA-45",
-      "EUST-59"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Natasha Staller"
-      ]
-    },
-    "description": "This course will explore the self-conscious invention of modernism in painting, sculpture and architecture, from the visual clarion calls of the French Revolution to the performance art and earthworks of 'art now.' As we move from Goya, David, Monet and Picasso to Kahlo, Kiefer and beyond, we will be attentive to changing responses toward a historical past or societal present, the stance toward popular and alien cultures, the radical redefinition of all artistic media, changing representations of nature and gender, as well as the larger problem of mythologies and meaning in the modern period. Study of original objects and a range of primary texts (artists letters, diaries, manifestos, contemporary criticism) will be enhanced with readings from recent historical and theoretical secondary sources.",
-    "times_and_locations": {
-      "ARHA 45 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "FAYE 115"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "FAYE 115"
           }
         ]
       }
@@ -7559,39 +6948,6 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Film and Writing",
-    "course_codes": [
-      "ENGL-01",
-      "FAMS-10"
-    ],
-    "faculty": {
-      "Section 05": [
-        "Helen L. von Schmidt"
-      ],
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "A first course in reading films and writing about them. A varied selection of films for study and criticism, partly to illustrate the main elements of film language and partly to pose challenging texts for reading and writing. Frequent short papers.",
-    "times_and_locations": {
-      "ENGL 01 - L/D": {
-        "Section 05": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "MERR 4"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "Japan on Screen",
     "course_codes": [
       "ASLC-34",
@@ -7682,40 +7038,6 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Production Workshop in the Moving Image",
-    "course_codes": [
-      "ENGL-82",
-      "FAMS-40"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Baba Hillman"
-      ]
-    },
-    "description": "The topic changes each time the course is taught.  This course will introduce students to a diverse range of approaches to narrative filmmaking.  Students will gain skills in videomaking and criticism through project assignments, readings and analysis of critical discourses that ground issues of production.  The course will include workshops in cinematography, sound recording, lighting and editing.  Screenings will include works by Jia Zhangke, Claire Denis, Charles Burnett, and Lucrecia Martel.  Students will complete three video projects.",
-    "times_and_locations": {
-      "ENGL 82 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 05:00 PM",
-            "location": "WEBS 217"
-          }
-        ]
-      },
-      "ENGL 82 - LAB": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "06:30 PM - 09:00",
-            "location": "PM"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "Pioneer Valley Soundscapes",
     "course_codes": [
       "FAMS-42",
@@ -7798,64 +7120,6 @@
             "day": "W",
             "time": "08:30 AM - 10:30 AM",
             "location": "CLAR 100"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Feminist Cinema",
-    "course_codes": [
-      "ASLC-52",
-      "FAMS-58"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Krupa Shandilya"
-      ]
-    },
-    "description": "How do we define the word feminism? Can the term be used to define cinematic texts outside the Euro-American world? In this course we will study a range of issues that have been integral to feminist theory--the body, domesticity, same sex desire, gendered constructions of the nation, feminist utopias and dystopias--through a range of South Asian cinematic texts. Through our viewings and readings we will consider whether the term feminist can be applied to these texts, and we will experiment with new theoretical lenses for exploring these films. Films will range from Satyajit Rays classic masterpiece Charulata to Gurinder Chadhas trendy diasporic film, Bend It Like Beckham . Attendance for screenings on Monday is compulsory.",
-    "times_and_locations": {
-      "ASLC 52 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "CONV 308"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Television, Criminality, Seriality",
-    "course_codes": [
-      "ENGL-95",
-      "FAMS-72"
-    ],
-    "faculty": {
-      "Section 06": [
-        "Amelie E. Hastie"
-      ],
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "As an upper-division seminar in television studies, this course will offer an in-depth examination of television textuality through the rubric of the crime and detective series. Focusing on the serial as one of the definitive forms of television, we will consider how the detective series utilizes that form to engage viewers in their own processes of investigation of television itself and of criminality. Grounding the course will be U.S. and British television series; we will look at entire seasons of almost all of the series we study in order to best understand serial form. Included in our exploration will be U.K. series Edge of Darkness, Prime Suspect, and Cracker and U.S. series The Sunday Night Mystery Movie, Hill Street Blues, The Wire, and Damages. We will also consider the U.K. series Life on Mars and its U.S. remake. Engaged in theoretical and interdisciplinary readings, throughout the course we will ask how might murder be a delivery platform for television and how is television a delivery system for murder.",
-    "times_and_locations": {
-      "ENGL 95 - L/D": {
-        "Section 06": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "FAYE 217A"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "FAYE 217A"
           }
         ]
       }
@@ -8312,7 +7576,7 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "<i>Enfants Terribles</i>: Childhood in Nineteenth-Century French Literature and Art",
+    "course_title": "Enfants Terribles: Childhood in Nineteenth-Century French Literature and Art",
     "course_codes": [
       "FREN-46"
     ],
@@ -8837,131 +8101,6 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Black Diaspora from Emancipation to the Present",
-    "course_codes": [
-      "BLST-33",
-      "HIST-12"
-    ],
-    "faculty": {
-      "Section 01": [
-        "J. Celso Castro Alves"
-      ]
-    },
-    "description": "This course explores the historical roots of contemporary racial formations in Latin America and the Caribbean. It focuses particularly on the black experiences, inter-ethnic conflicts and racial solidarities in Brazil, Cuba, Jamaica, Haiti and Puerto Rico from the mid-nineteenth century to the present. Topics of discussion will include the struggles for emancipation from slavery, black notions of sovereignty, forms of black nationalism, Pan-Africanism, and political radicalism. We will examine a multiplicity of historical sources, including novels, music, film, personal testimonies, and historical monographs in order to understand the black diaspora as both an historical process and as a seedbed for various identities, racial cultures and political projects.",
-    "times_and_locations": {
-      "HIST 12 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "COOP 101"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "COOP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Modern China",
-    "course_codes": [
-      "ASLC-46",
-      "HIST-16"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jerry P. Dennerline"
-      ]
-    },
-    "description": "A survey of Chinese history from the Manchu conquest of 1644 to the present. Beginning with the successes and failures of the imperial state as it faced global economic development, expanding European empires, and internal social change, we will study the Opium War, massive nineteenth-century religious rebellions, Republican revolution and state-building, the New Culture movement, Communist revolution, the anti-Japanese war, Maos Cultural Revolution, and the problems of post-Mao reform, all with comparative reference to current events. Readings, which include a wide variety of documents such as religious and revolutionary tracts, eye-witness accounts, memoirs, and letters, are supplemented by interpretive essays and videos.",
-    "times_and_locations": {
-      "HIST 16 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 101"
-          },
-          {
-            "day": "Th",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Middle Eastern History: 600-1800",
-    "course_codes": [
-      "ASLC-26",
-      "HIST-19"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Monica M. Ringer"
-      ]
-    },
-    "description": "This course surveys the history of the Middle East from the outset of the Islamic period to the beginning of the modern period. It is divided into the following segments: the formative period of Islam, the classical caliphates, the classical courts, the Mongols, and the great empires of the Ottomans and the Safavids. The course is organized chronologically and follows the making and breaking of empires and political centers; however, the focus of the course is on the intellectual, social, cultural and religious developments in these periods.",
-    "times_and_locations": {
-      "HIST 19 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CHAP 201"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CHAP 201"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Colonial and Post-Colonial Africa",
-    "course_codes": [
-      "BLST-47",
-      "HIST-22"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sean Redding"
-      ]
-    },
-    "description": "This is a history of Africa from the late nineteenth century to the present day. In the first half of the course, we will study the imperial scramble to colonize Africa; the broader integration of African societies into the world economy; the social, political and medical impact of imperial policies; Western popular images of Africa in the colonial period; the nationalist struggles that resulted in the independent African states; and the persistent problems faced by those post-colonial states. In the final half of the course, we will investigate three cases: Congo-Zaire and the state as a source of chaos through the Second Congo War; violence, liberation and memories of childhood in late colonial Rhodesia and postcolonial Zimbabwe; the political history of economic development programs and the advent of resource conflicts, particularly those involving diamonds.",
-    "times_and_locations": {
-      "HIST 22 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "CHAP 201"
-          },
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "CHAP 201"
-          },
-          {
-            "day": "F",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "CHAP 201"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "The French Empire (1830-1962)",
     "course_codes": [
       "EUST-23",
@@ -9081,66 +8220,6 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Environmental Issues of the Nineteenth Century",
-    "course_codes": [
-      "ENST-20",
-      "HIST-26"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Edward D. Melillo"
-      ]
-    },
-    "description": "This course considers the ways that people in various parts of the world thought about and acted upon nature during the nineteenth century. We look historically at issues that continue to have relevance today, including: invasive species, deforestation, soil-nitrogen availability, water use, desertification, and air pollution. Themes include: the relationship of nineteenth-century colonialism and environmental degradation, gender and environmental change, the racial dimensions of ecological issues, and the spatial aspects of human interactions with nature. We will take at least one field trip. In addition, we will watch three films that approach nineteenth-century environmental issues from different vantage points.",
-    "times_and_locations": {
-      "HIST 26 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "JOCH 21"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "JOCH 21"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Poland: Heart of Europe's Twentieth Century",
-    "course_codes": [
-      "EUST-71",
-      "HIST-33"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Catherine A. Epstein"
-      ]
-    },
-    "description": "Few places experienced the drama of Europes twentieth century as did Polanda country imagined before World War I, created anew in 1918, and shifted west after World War II. This course will cover the legacy of Polands eighteenth-century partitions; World War I; the Polish-Soviet war of 1919-1921; the interwar Polish state; World War II (including the Katyn massacre, the Holocaust, and the Warsaw Uprising); the imposition of communism after World War II; the growth of Solidarity; and revolution and the transition to post-communist society after 1989. Themes will include nationalism and state-building; the role of Catholicism in Polish society; Polands attempts to assert itself against both Germany and Russia; and ethnic relations between Poles and Germans, Jews, Ukrainians, and Lithuanians. Throughout, we will explore historical controversies surrounding these events and themes. Sources will include films, novels, memoirs, eyewitness accounts, government and other documents, and secondary sources.",
-    "times_and_locations": {
-      "HIST 33 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 203"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "Fascism",
     "course_codes": [
       "EUST-72",
@@ -9164,36 +8243,6 @@
             "day": "Th",
             "time": "10:00 AM - 11:20 AM",
             "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Material Cultr: Am Homes",
-    "course_codes": [
-      "ARHA-33",
-      "HIST-37"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Kevin M. Sweeney"
-      ]
-    },
-    "description": "Using architecture, artifacts, visual evidence and documentary sources, the course examines social and cultural forces affecting the design and use of domestic architecture, home furnishings, and domestic technology in the eastern United States from 1600 to 1960. In addition to providing a survey of American domestic architecture, the course provides an introduction to the study of American material culture. Field trips to Historic Deerfield, Old Sturbridge Village, Hartford, Connecticut, and sites in Amherst form an integral part of the course.",
-    "times_and_locations": {
-      "ARHA 33 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 203"
-          },
-          {
-            "day": "Th",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 203"
           }
         ]
       }
@@ -9314,36 +8363,6 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Introduction to South African History",
-    "course_codes": [
-      "BLST-49",
-      "HIST-64"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sean Redding"
-      ]
-    },
-    "description": "South African history is undergoing radical shifts in the way it is being written, read and interpreted, and this course will explore established and emerging themes in the history of this intriguing country. The time period covered will span the precolonial indigenous cultures and move on to study the initiation and expansion of white settlement and its early dependence on slave labor. The course will also investigate African resistance, both in its political and cultural forms, as well as the social effects of gold-mining and migrant labor. African nationalism, including the ANC, the Black Consciousness Movement, and the United Democratic Front, will be the focus of our study of the responses to apartheid and the ultimate collapse of the apartheid state. The course will end with discussions of recent events in South Africa, particularly the Truth and Reconciliation Commission and its aftermath as well as the developing AIDS epidemic and the growing problem of crime.",
-    "times_and_locations": {
-      "HIST 64 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 201"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 201"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "Turning Points in the History of Science",
     "course_codes": [
       "HIST-67"
@@ -9373,61 +8392,6 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Seminar on Modern China: The People and the State",
-    "course_codes": [
-      "ASLC-70",
-      "HIST-75"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jerry P. Dennerline"
-      ]
-    },
-    "description": "Political thinkers and activists inside China and throughout the world today puzzle over the relationship between the people and the state. Where do state functions and state control begin and end? How do the global economy, Chinas increasing regional hegemony, internal migration, NGOs, rural protest, and the internet influence the relationship between the people and the state? Fundamental questions about the relationship between the people and the state have occupied thinkers and activists since the beginning of the twentieth century. Reformers in China tried to transform the imperial state into a constitutional monarchy, revolutionaries tried to create a Republic, Nationalists tried to build a corporatist state, and Communists tried to create a Socialist one. At each stage, the state-makers imagined the people, mobilized them, categorized them, and tried to control them. The people became subjects, citizens, nationals, and the masses. They divided themselves by native place, region, language, ethnicity, political party, class, and educational status. Chinese people in Southeast Asia, Japan, Hong Kong, and Taiwan, have imagined themselves in relation to both the ancestral land and the colonial or national states under which they live. The process is by no means over. This seminar will focus on the problem of imagining and mobilizing people in China and these other states over the past century. General topics will include the ideas, the intellectual and educational context, and the mobilizations of urban and rural communities, commercial and religious groups, and NGOs. Research topics will depend on the interests of students.",
-    "times_and_locations": {
-      "HIST 75 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:00 PM",
-            "location": "MCLS 230"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Inside Iran",
-    "course_codes": [
-      "ASLC-59",
-      "HIST-80"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Monica M. Ringer"
-      ]
-    },
-    "description": "This seminar explores contemporary Iran from a historical and interdisciplinary perspective. The aim of the course is both to provide an overall understanding of the history of Iran, as well as those key elements of religion, literature, legend, and politics that together shape Iran's understanding of itself. We will utilize a wide variety of sources, including Islamic and local histories, Persian literature, architecture, painting and ceramics, film, political treatises, Shiite theological writing, foreign travel accounts, and U.S. state department documents, in addition to secondary sources.",
-    "times_and_locations": {
-      "HIST 80 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 119"
-          },
-          {
-            "day": "Th",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 119"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "War and Remembrance: Comparing the Algerian and Vietnam Wars",
     "course_codes": [
       "EUST-76",
@@ -9446,31 +8410,6 @@
             "day": "Th",
             "time": "02:00 PM - 04:00 PM",
             "location": "CHAP 205"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Topics in African American History: Race and Educational Opportunity in America",
-    "course_codes": [
-      "BLST-67",
-      "HIST-82"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Hilary J. Moss"
-      ]
-    },
-    "description": "This seminar is an interdisciplinary exploration of the relationship between race and educational opportunity in American history. Students will gain a historical understanding of the divergent educational experiences of various groups within American society. The course is divided into four units: ethnicity and educational access in early America, education and segregation in Jim Crow America, desegregation (implementation and opposition) after Brown v. Board of Education, and contemporary discussions over race and access to education. In the first section of the course, students will pay special attention to trends including northern and southern resistance to African American education, education as assimilation, and vocational vs. classical education. Next, they will delve into twentieth- and twenty-first-century issues involving race and education. For example, they will examine how specific communities--northern, southern, and western--grappled with the desegregation process. Finally, students will assess the extent to which desegregation has been achieved and the transformative effects of this policy on public schools.",
-    "times_and_locations": {
-      "HIST 82 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "WEBS 217"
           }
         ]
       }
@@ -10596,66 +9535,6 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Pioneer Valley Soundscapes",
-    "course_codes": [
-      "FAMS-42",
-      "MUSI-19"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jeffers L. Engelhardt"
-      ]
-    },
-    "description": "This course is about exploring, participating in, and documenting the musical communities and acoustic terrain of the Pioneer Valley. The first part of the course will focus on local histories and music scenes, ethnographic methods and technologies, and different techniques of representation. The second part of the course will involve intensive, sustained engagement with musicians and sounds in the Pioneer Valley. Course participants will give weekly updates about their fieldwork projects and are expected to become well-versed in the musics they are studying. There will be a significant amount of work and travel outside of class meetings. The course will culminate in contributions to a web-based documentary archive of Pioneer Valley soundscapes. We will also benefit from visits and interaction with local musicians.",
-    "times_and_locations": {
-      "MUSI 19 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "ARMU 102"
-          },
-          {
-            "day": "Th",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "ARMU 102"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Music and Culture II",
-    "course_codes": [
-      "EUST-39",
-      "MUSI-22"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jenny L. Kallick"
-      ]
-    },
-    "description": "One of three courses in which the development of Western music is studied in its cultural-historical context. As practical, in-class performance and attendance at public concerts in Amherst and elsewhere will be crucial to our work. Composers to be studied include Beethoven, Rossini, Schubert, Mendelssohn, Schumann, Chopin, Liszt, Berlioz, Wagner, Verdi, Musorgsky, and Brahms. Regular listening assignments will broaden the repertoire we encounter and include a wide sampling of Classical and Romantic music. Periodic writing assignments will provide opportunities to connect detailed musical analysis with historical-cultural interpretation. A variety of readings will include music-historical-aesthetic documents as well as selected critical and analytical studies. Class presentations will contribute to a seminar-style class environment. This course may be elected individually or in conjunction with other Music and Culture courses. Two class meetings per week.",
-    "times_and_locations": {
-      "MUSI 22 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "ARMU 212"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "ARMU 212"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "Tonal Harmony and Counterpoint",
     "course_codes": [
       "MUSI-31"
@@ -11435,40 +10314,6 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Molecular and Cellular Biophysics",
-    "course_codes": [
-      "BCBP-46",
-      "BIOL-40",
-      "CHEM-46",
-      "PHYS-46"
-    ],
-    "faculty": {
-      "Section 01": [
-        "William A. Loinaz",
-        "Patricia B. O'Hara",
-        "Patrick L. Williamson"
-      ]
-    },
-    "description": "How do the physical laws that dominate our lives change at the small length and energy scales of individual molecules? What design principles break down at the sub-cellular level and what new chemistry and physics becomes important? We will answer these questions by looking at bio-molecules, cellular substructures, and control mechanisms that work effectively in the microscopic world. How can we understand both the static and dynamic shape of proteins using the laws of thermodynamics and kinetics? How has the basic understanding of the smallest molecular motor in the world, ATP synthase, changed our understanding of friction and torque? We will explore new technologies, such as atomic force and single molecule microscopy that have allowed research into these areas. This course will address topics in each of the three major divisions of Biophysics: bio-molecular structure, biophysical techniques, and biological mechanisms.",
-    "times_and_locations": {
-      "PHYS 46 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MERR 403"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MERR 403"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "Quantum Mechanics I",
     "course_codes": [
       "PHYS-48"
@@ -11726,32 +10571,6 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Post-Cold War American Diplomacy",
-    "course_codes": [
-      "HIST-50",
-      "POSC-55"
-    ],
-    "faculty": {
-      "Section 01": [
-        "N. Gordon Levin",
-        "Pavel Machala"
-      ]
-    },
-    "description": "A 1992 still-classified Pentagon Defense Policy Guidance draft asserts that Americas political and military mission in the post-cold war era will be to ensure that no rival superpower be allowed to emerge in world politics. This course will examine American foreign relations from the fall of the Berlin Wall to the present. We will study the similarities and differences in the styles of statecraft of all post-cold war U.S. administrations in producing, managing and sustaining Americas unrivaled international position, which emerged in the aftermath of the collapse of the Soviet Union. While examining the debates between liberals and neoconservatives about Americas role in the world both preceding and following the 9-11 attack, we will also discuss the extent to which these debates not only have shaped American foreign policy but also how they have influenced our domestic politics and vice versa. Among the other main themes to be examined: the strategic, tactical and humanitarian uses of military and other forms of power by each administration (e.g., towards Somalia, the Balkans, Iraq, Afghanistan); U.S. policy towards NATO and towards the world economy; U.S. policy towards Russia, China, the Middle East and Latin America; human, economic and political costs and benefits of American leadership in this period.",
-    "times_and_locations": {
-      "POSC 55 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "MORG 111"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "Regulating Citizenship",
     "course_codes": [
       "POSC-56"
@@ -11846,36 +10665,6 @@
             "day": "Th",
             "time": "10:00 AM - 11:20 AM",
             "location": "CLAR 100"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Culture and Politics in 20th-Century Europe",
-    "course_codes": [
-      "EUST-35",
-      "POSC-72"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ronald S. Tiersky"
-      ]
-    },
-    "description": "This seminar discusses political ideas, ideologies and political culture in 20th-century Europe. Some themes are Nationalism; Marxism, Socialism and Communism; Fascism; anti-Semitism; Existentialism; the Century of Total War; the year 1968; Pope John Paul II; Soccer Hooliganism; The Idea of Europe, and the question of whether there is a European identity. Throughout the course, ideas are connected to historical context. The syllabus is a mix of books and films.",
-    "times_and_locations": {
-      "POSC 72 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 209"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CONV 209"
           }
         ]
       }
@@ -12271,75 +11060,6 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Introduction to Neuroscience",
-    "course_codes": [
-      "NEUR-26",
-      "PSYC-26"
-    ],
-    "faculty": {
-      "Section 01": [
-        "John-Paul Baird",
-        "Stephen A. George"
-      ]
-    },
-    "description": "An introduction to the structure and function of the nervous system, this course will explore the neural bases of behavior at the cellular and systems levels. Basic topics in neurobiology, neuroanatomy and physiological psychology will be covered with an emphasis on understanding how neuroscientists approach the study of the nervous system. Three class hours and three hours of laboratory per week.",
-    "times_and_locations": {
-      "NEUR 26 - LEC": {
-        "Section 02": [
-          {
-            "day": "M",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "MERR 3"
-          },
-          {
-            "day": "W",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "MERR 3"
-          },
-          {
-            "day": "F",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "MERR 3"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "M",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "MERR 3"
-          },
-          {
-            "day": "W",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "MERR 3"
-          },
-          {
-            "day": "F",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "MERR 3"
-          }
-        ]
-      },
-      "NEUR 26 - LAB": {
-        "Section 02": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 05:00 PM",
-            "location": "MCLS 145"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 05:00 PM",
-            "location": "MCLS 145"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "Developmental Psychology",
     "course_codes": [
       "PSYC-27"
@@ -12621,66 +11341,6 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Theravada Buddhism",
-    "course_codes": [
-      "ASLC-69",
-      "RELI-26"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Maria R. Heim"
-      ]
-    },
-    "description": "This course introduces the history and civilization of Theravada Buddhism. The Theravada (the Doctrine of the Elders) is the dominant form of Buddhism in Sri Lanka, Cambodia, Laos, Thailand, and Myanmar (Burma); in recent decades it has also found a following in other regions in Asia and the west. We will trace the Theravadas origins as one of the earliest sectarian movements in India to its success and prestige as a religious civilization bridging South and Southeast Asia. We will also consider this traditions encounter with modernity and its various adaptations and responses to challenges in the contemporary world. No previous background in Buddhism is required.",
-    "times_and_locations": {
-      "RELI 26 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "MERR 314"
-          },
-          {
-            "day": "Th",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "MERR 314"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Buddhist Ethics",
-    "course_codes": [
-      "ASLC-58",
-      "RELI-27"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Maria R. Heim"
-      ]
-    },
-    "description": "A systematic exploration of the place of ethics and moral reasoning in Buddhist thought and practice. The scope of the course is wide, with examples drawn from the whole Buddhist world, but emphasis is on the particularity of different Buddhist visions of the ideal human life. Attention is given to the problems of the proper description of Buddhist ethics in a comparative perspective.",
-    "times_and_locations": {
-      "RELI 27 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MERR 401"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MERR 401"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "The Body in Ancient Judaism",
     "course_codes": [
       "RELI-37"
@@ -12732,31 +11392,6 @@
             "day": "W",
             "time": "02:00 PM - 03:20 PM",
             "location": "CHAP 204"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "The Islamic Mystical Tradition",
-    "course_codes": [
-      "ASLC-56",
-      "RELI-53"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Tariq Jaffer"
-      ]
-    },
-    "description": "This course is a survey of the large complex of Islamic intellectual and social perspectives subsumed under the term Sufism. Sufi mystical philosophies, liturgical practices, and social organizations have been a major part of the Islamic tradition in all historical periods, and Sufism has also served as a primary creative force behind Islamic aesthetic expression in poetry, music, and the visual arts. In this course, we will attempt to understand the various significations of Sufism by addressing both the world of ideas and socio-cultural practices. The course is divided into four modules: central themes and concepts going back to the earliest individuals who identified themselves as Sufis; the lives and works of two medieval Sufis; Sufi cosmology and metaphysics; Sufism as a global and multifarious trend in the modern world.",
-    "times_and_locations": {
-      "RELI 53 - L/D": {
-        "Section 01": [
-          {
-            "day": "Th",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "CHAP 210"
           }
         ]
       }
@@ -13084,32 +11719,10 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "The Political Economy of Gender in Latin America",
-    "course_codes": [
-      "POSC-44"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Manuela Picq"
-      ]
-    },
-    "description": "Latin America has the greatest extremes of wealth of any region in the world, and gender is one of the most important factors leading to this inequality. The study of gender therefore offers a valuable window into the socio-economic structures and political systems of the region. Bringing together the disciplines of comparative politics, political economy, and gender, this course proposes to analyze the gender implications of economic and political reforms at large in Latin America, from the military dictatorships of the 1970s through the democratization of the 1980s, the neoliberal reforms of the 1990s, and the New Left. We will also explore the history and geography of women's rights in terms of political participation, agrarian reform, informal economics, reproductive rights, welfare policies, migration, and human trafficking. Beyond women's rights, the class analyzes social movements and the politics of contestation in Latin America, movements interactions with state actors and the impact of changing markets on women's empowerment.",
-    "times_and_locations": {
-      "POSC 44 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "CHAP 103"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "Gender, Economic Development and Globalization",
-    "course_codes": ["WAGS-08"],
+    "course_codes": [
+      "WAGS-08"
+    ],
     "faculty": {
       "Section 01": [
         "Lynda J. Pickbourn"
@@ -13164,35 +11777,6 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "New Women in America",
-    "course_codes": [
-      "ENGL-01"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Wendy H. Bergoffen"
-      ]
-    },
-    "description": "This course will examine the emergence of the New Woman as a category of social theory, political action, and literary representation at the turning of the twentieth century. Early readings will trace the origins of the New Woman as a response to nineteenth-century notions of True Womanhood. Discussions will situate literary representations of women in larger cultural events taking place during the Progressive Era debates over suffrage as well as their relationship to issues of citizenship, immigration, Jim Crow segregation, urbanization, and nativism. The course will focus on texts written by a diverse group of women that present multiple and, at times, conflicting images of the New Woman. Close attention will be paid to the manner in which these women writers constructed their fictions, particularly to issues of language, style, and form. Readings will include texts by Charlotte Perkins Gilman, Kate Chopin, Edith Wharton, Pauline Hopkins, Anzia Yezierska, and Sui Sin Far.",
-    "times_and_locations": {
-      "ENGL 01 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MCLS 428"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MCLS 428"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "Greek Civilization",
     "course_codes": [
       "CLAS-23"
@@ -13228,7 +11812,9 @@
   {
     "semester": "Spring 2011",
     "course_title": "Gender Labor",
-    "course_codes": ["WAGS-24"],
+    "course_codes": [
+      "WAGS-24"
+    ],
     "faculty": {
       "Section 01": [
         "Michele Barale"
@@ -13254,32 +11840,10 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Women Writers of Africa and the African Diaspora",
-    "course_codes": [
-      "BLST-27"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Carol Y. Bailey"
-      ]
-    },
-    "description": "The course focuses on twentieth and twenty-first century texts by black women writers based in Africa and the Americas. We will consider how these writers' stylistic choices respond to the broad range of challenges confronting them in the modern and postcolonial contexts out of which they write. The reading list varies from year to year. This year we will read works by Edwidge Danticat, Marie Elena John, Buchi Emecheta, Chimamanda Adichie and Suzan-Lori Parks.",
-    "times_and_locations": {
-      "BLST 27 - LEC": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "CONV 308"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "Other Shakespeares: Gender, Race and Sexuality",
-    "course_codes": ["WAGS-35"],
+    "course_codes": [
+      "WAGS-35"
+    ],
     "faculty": {
       "Section 01": [
         "Krupa Shandilya"
@@ -13297,113 +11861,6 @@
           {
             "day": "Th",
             "time": "10:00 AM - 11:20 AM",
-            "location": "FAYE 217A"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Women's History, America: 1865 to Present",
-    "course_codes": [
-      "HIST-46"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Martha Saxton"
-      ]
-    },
-    "description": "This course begins with an examination of the experience of women from different racial, ethnic and economic backgrounds during Reconstruction. It will look at changes in family life as a result of increasing industrialization and the westward movement of settler families, and will also look at the settlers impact on Native American women and families. Topics will include the work and familial experiences of immigrant women (including Irish, Polish, and Italian), womens reform movements (particularly suffrage, temperance, and anti-lynching), the expansion of educational opportunities, and the origins and programs of the Progressives. The course will examine the agitation for suffrage and the subsequent splits among feminists, womens experiences in the labor force, and participation in the world wars. Finally, we will look at the origins of the Second Wave and its struggles to transcend its white middle-class origins.",
-    "times_and_locations": {
-      "HIST 46 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CHAP 204"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CHAP 204"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Feminist Cinema",
-    "course_codes": [
-      "ASLC-52",
-      "FAMS-58"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Krupa Shandilya"
-      ]
-    },
-    "description": "How do we define the word feminism? Can the term be used to define cinematic texts outside the Euro-American world? In this course we will study a range of issues that have been integral to feminist theory--the body, domesticity, same sex desire, gendered constructions of the nation, feminist utopias and dystopias--through a range of South Asian cinematic texts. Through our viewings and readings we will consider whether the term feminist can be applied to these texts, and we will experiment with new theoretical lenses for exploring these films. Films will range from Satyajit Rays classic masterpiece Charulata to Gurinder Chadhas trendy diasporic film, Bend It Like Beckham . Attendance for screenings on Monday is compulsory.",
-    "times_and_locations": {
-      "ASLC 52 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "CONV 308"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Feminism, Theater, and Performance",
-    "course_codes": [
-      "ENGL-79"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jennifer A. Cayer"
-      ]
-    },
-    "description": "Why feminism? Isnt feminism outmoded and passe? What is feminism today, and how is it relevant for theater and performance work? This class will explore the relationship between feminist history, theory, and practice. It will serve as an introduction to the work of twentieth-century women playwrights, performance artists, and critical thinkers. We will first confront feminism as a tool for reading and interpreting issues of gender and sexuality in plays and performances. We will also consider how, and to what extent, feminism influences practices of writing, performing, and spectatorship. We will then mobilize a global and inclusive definition of feminism in order to explore how the social and political aims of early feminisms influenced thinking about racial, national, post-colonial, queer, and ethnic representation in performance. Central debates will include the distinctions and shifts between theater and performance; textuality and embodiment; essentialism and social construction; and identity and representation. Course materials will include plays, performances, and visual art as well as feminist theoretical texts. We will aim to understand the diverse political and personal ambitions, risks, and power of womens theoretical, theatrical, and performance work.",
-    "times_and_locations": {
-      "ENGL 79 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CHAP 205"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CHAP 205"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "States of Poverty",
-    "course_codes": [
-      "POSC-85"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Kristin Bumiller"
-      ]
-    },
-    "description": "In this course the students will examine the role of the modern welfare state in peoples everyday lives. We will study the historical growth and retrenchment of the modern welfare state in the United States and other Western democracies. The course will critically examine the ideologies of dependency and the role of the state as an agent of social control. In particular, we will study the ways in which state action has implications for gender identities. In this course we will analyze the construction of social problems linked to states of poverty, including hunger, homelessness, health care, disability, discrimination, and violence. We will ask how these conditions disproportionately affect the lives of women and children. We will take a broad view of the interventions of the welfare state by considering not only the impact of public assistance and social service programs, but the role of the police, family courts, therapeutic professionals, and schools in creating and responding to the conditions of impoverishment. The work of the seminar will culminate in the production of a research paper and students will be given the option of incorporating field work into the independent project. This course fulfills the requirement for an advanced seminar in Political Science.",
-    "times_and_locations": {
-      "POSC 85 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 04:30 PM",
             "location": "FAYE 217A"
           }
         ]
@@ -13785,37 +12242,10 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Early Spanish American Women Writers",
-    "course_codes": [
-      "SPAN-85"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "In this course we will study the writings of women of Spanish America from 1556 to the end of the 19 th century, focusing on writers who came from Spain, Mexico, Argentina, Cuba, Peru and Colombia. Their writings cover the colonial period as well as that of post-independence, and trace the ever-strengthening role of the female voice in Spanish American literature. There are the voices of an early settler in Argentina and Paraguay, three nuns (Catalina de Erauso, transvestite and soldier; the incomparable Sor Juana Ines de la Cruz; and the visionary Madre Castillo) followed by an important group of 19 th century women who were finally able to make a living by their pen. The most famous of these is Gertrudis Gomez de Avellaneda, who wrote the first antislavery novel of the Americas, eleven years ahead of Harriet Beecher Stowes Uncle Toms Cabin. Most of them knew and supported each other by ties of friendship and a strong professional network. In all of these voices one will hear articulated the desire for the right to express themselves as women and to be heard in a field that was decidedly masculine and often hostile to their efforts. Conducted in Spanish.",
-    "times_and_locations": {
-      "SPAN 85 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "CHAP 210"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "CHAP 210"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "Gender and the Environment",
-    "course_codes": [],
+    "course_codes": [
+      "BRUS-33"
+    ],
     "faculty": {
       "Section 01": [
         "Amrita Basu",
@@ -13963,7 +12393,7 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "Concepts and Representations of <i>Fortuna</i> in Ancient Rome",
+    "course_title": "Concepts and Representations of Fortuna in Ancient Rome",
     "course_codes": [
       "COLQ-35"
     ],
@@ -13993,7 +12423,9 @@
   {
     "semester": "Spring 2011",
     "course_title": "Numbers Rule the World.",
-    "course_codes": [],
+    "course_codes": [
+      "MELL-16"
+    ],
     "faculty": {
       "Section 01": [
         "Jerome L. Himmelstein"
@@ -14327,47 +12759,6 @@
   },
   {
     "semester": "Spring 2011",
-    "course_title": "The Craft of Speaking II: Spoken Expression",
-    "course_codes": [
-      "THDA-32H"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ron Bashford"
-      ]
-    },
-    "description": "In this second course in the craft of speaking, students learn to shape and speak text to powerful effect. Students build on prior work to extend vocal range and capacity while learning component principles of spoken expression. Articulation, inflection, methods of contrast and interpretation, tone, verbal imaging and aural structures of poetry and rhetoric are practiced in a studio setting. Emphasis is placed on personal engagement and presence to others while speaking. Assignments in text scoring and memorization support class work. The course culminates in a public presentation of student work.",
-    "times_and_locations": {
-      "THDA 32H - L/D": {
-        "Section 02": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "WEBS 122"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "WEBS 122"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "Tu",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "WEBS 122"
-          },
-          {
-            "day": "Th",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "WEBS 122"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
     "course_title": "Experiments in Choreography: Body, Object, Light",
     "course_codes": [
       "THDA-53"
@@ -14511,253 +12902,6 @@
     "times_and_locations": {
       "THDA 76H": {
         "Section 01": []
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "The Political Economy of Gender in Latin America",
-    "course_codes": [
-      "POSC-44"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Manuela Picq"
-      ]
-    },
-    "description": "Latin America has the greatest extremes of wealth of any region in the world, and gender is one of the most important factors leading to this inequality. The study of gender therefore offers a valuable window into the socio-economic structures and political systems of the region. Bringing together the disciplines of comparative politics, political economy, and gender, this course proposes to analyze the gender implications of economic and political reforms at large in Latin America, from the military dictatorships of the 1970s through the democratization of the 1980s, the neoliberal reforms of the 1990s, and the New Left. We will also explore the history and geography of women's rights in terms of political participation, agrarian reform, informal economics, reproductive rights, welfare policies, migration, and human trafficking. Beyond women's rights, the class analyzes social movements and the politics of contestation in Latin America, movements interactions with state actors and the impact of changing markets on women's empowerment.",
-    "times_and_locations": {
-      "POSC 44 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "CHAP 103"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Early Spanish American Women Writers",
-    "course_codes": [
-      "SPAN-85"
-    ],
-    "faculty": {
-      "Section 01": [
-        "TBA"
-      ]
-    },
-    "description": "In this course we will study the writings of women of Spanish America from 1556 to the end of the 19 th century, focusing on writers who came from Spain, Mexico, Argentina, Cuba, Peru and Colombia. Their writings cover the colonial period as well as that of post-independence, and trace the ever-strengthening role of the female voice in Spanish American literature. There are the voices of an early settler in Argentina and Paraguay, three nuns (Catalina de Erauso, transvestite and soldier; the incomparable Sor Juana Ines de la Cruz; and the visionary Madre Castillo) followed by an important group of 19 th century women who were finally able to make a living by their pen. The most famous of these is Gertrudis Gomez de Avellaneda, who wrote the first antislavery novel of the Americas, eleven years ahead of Harriet Beecher Stowes Uncle Toms Cabin. Most of them knew and supported each other by ties of friendship and a strong professional network. In all of these voices one will hear articulated the desire for the right to express themselves as women and to be heard in a field that was decidedly masculine and often hostile to their efforts. Conducted in Spanish.",
-    "times_and_locations": {
-      "SPAN 85 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "CHAP 210"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "CHAP 210"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "New Women in America",
-    "course_codes": [
-      "ENGL-01"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Wendy H. Bergoffen"
-      ]
-    },
-    "description": "This course will examine the emergence of the New Woman as a category of social theory, political action, and literary representation at the turning of the twentieth century. Early readings will trace the origins of the New Woman as a response to nineteenth-century notions of True Womanhood. Discussions will situate literary representations of women in larger cultural events taking place during the Progressive Era debates over suffrage as well as their relationship to issues of citizenship, immigration, Jim Crow segregation, urbanization, and nativism. The course will focus on texts written by a diverse group of women that present multiple and, at times, conflicting images of the New Woman. Close attention will be paid to the manner in which these women writers constructed their fictions, particularly to issues of language, style, and form. Readings will include texts by Charlotte Perkins Gilman, Kate Chopin, Edith Wharton, Pauline Hopkins, Anzia Yezierska, and Sui Sin Far.",
-    "times_and_locations": {
-      "ENGL 01 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MCLS 428"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "MCLS 428"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Greek Civilization",
-    "course_codes": [
-      "CLAS-23"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Frederick T. Griffiths"
-      ]
-    },
-    "description": "We read in English the major authors from Homer in the 8 th century BCE to Plato in the 4 th century in order to trace the emergence of epic, lyric poetry, tragedy, comedy, history, and philosophy. How did the Greek enlightenment, and through it Western culture, emerge from a few generations of people moving around a rocky archipelago? How did oral and mythological traditions develop into various forms of rationality: science, history, and philosophy? What are the implications of male control over public and private life and the written record? What can be inferred about ancient women if they cannot speak for themselves in the texts? Other authors include Sappho, Herodotus, Aeschylus, Sophocles, Euripides, Aristophanes, and Thucydides. The course seeks to develop the skills of close reading and persuasive argumentation.",
-    "times_and_locations": {
-      "CLAS 23 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "ESNH 107"
-          },
-          {
-            "day": "W",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "ESNH 107"
-          },
-          {
-            "day": "F",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "ESNH 107"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Women Writers of Africa and the African Diaspora",
-    "course_codes": [
-      "BLST-27"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Carol Y. Bailey"
-      ]
-    },
-    "description": "The course focuses on twentieth and twenty-first century texts by black women writers based in Africa and the Americas. We will consider how these writers' stylistic choices respond to the broad range of challenges confronting them in the modern and postcolonial contexts out of which they write. The reading list varies from year to year. This year we will read works by Edwidge Danticat, Marie Elena John, Buchi Emecheta, Chimamanda Adichie and Suzan-Lori Parks.",
-    "times_and_locations": {
-      "BLST 27 - LEC": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "CONV 308"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Women's History, America: 1865 to Present",
-    "course_codes": [
-      "HIST-46"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Martha Saxton"
-      ]
-    },
-    "description": "This course begins with an examination of the experience of women from different racial, ethnic and economic backgrounds during Reconstruction. It will look at changes in family life as a result of increasing industrialization and the westward movement of settler families, and will also look at the settlers impact on Native American women and families. Topics will include the work and familial experiences of immigrant women (including Irish, Polish, and Italian), womens reform movements (particularly suffrage, temperance, and anti-lynching), the expansion of educational opportunities, and the origins and programs of the Progressives. The course will examine the agitation for suffrage and the subsequent splits among feminists, womens experiences in the labor force, and participation in the world wars. Finally, we will look at the origins of the Second Wave and its struggles to transcend its white middle-class origins.",
-    "times_and_locations": {
-      "HIST 46 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CHAP 204"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CHAP 204"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Feminist Cinema",
-    "course_codes": [
-      "ASLC-52",
-      "FAMS-58"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Krupa Shandilya"
-      ]
-    },
-    "description": "How do we define the word feminism? Can the term be used to define cinematic texts outside the Euro-American world? In this course we will study a range of issues that have been integral to feminist theory--the body, domesticity, same sex desire, gendered constructions of the nation, feminist utopias and dystopias--through a range of South Asian cinematic texts. Through our viewings and readings we will consider whether the term feminist can be applied to these texts, and we will experiment with new theoretical lenses for exploring these films. Films will range from Satyajit Rays classic masterpiece Charulata to Gurinder Chadhas trendy diasporic film, Bend It Like Beckham . Attendance for screenings on Monday is compulsory.",
-    "times_and_locations": {
-      "ASLC 52 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "CONV 308"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "Feminism, Theater, and Performance",
-    "course_codes": [
-      "ENGL-79"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jennifer A. Cayer"
-      ]
-    },
-    "description": "Why feminism? Isnt feminism outmoded and passe? What is feminism today, and how is it relevant for theater and performance work? This class will explore the relationship between feminist history, theory, and practice. It will serve as an introduction to the work of twentieth-century women playwrights, performance artists, and critical thinkers. We will first confront feminism as a tool for reading and interpreting issues of gender and sexuality in plays and performances. We will also consider how, and to what extent, feminism influences practices of writing, performing, and spectatorship. We will then mobilize a global and inclusive definition of feminism in order to explore how the social and political aims of early feminisms influenced thinking about racial, national, post-colonial, queer, and ethnic representation in performance. Central debates will include the distinctions and shifts between theater and performance; textuality and embodiment; essentialism and social construction; and identity and representation. Course materials will include plays, performances, and visual art as well as feminist theoretical texts. We will aim to understand the diverse political and personal ambitions, risks, and power of womens theoretical, theatrical, and performance work.",
-    "times_and_locations": {
-      "ENGL 79 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CHAP 205"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CHAP 205"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2011",
-    "course_title": "States of Poverty",
-    "course_codes": [
-      "POSC-85"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Kristin Bumiller"
-      ]
-    },
-    "description": "In this course the students will examine the role of the modern welfare state in peoples everyday lives. We will study the historical growth and retrenchment of the modern welfare state in the United States and other Western democracies. The course will critically examine the ideologies of dependency and the role of the state as an agent of social control. In particular, we will study the ways in which state action has implications for gender identities. In this course we will analyze the construction of social problems linked to states of poverty, including hunger, homelessness, health care, disability, discrimination, and violence. We will ask how these conditions disproportionately affect the lives of women and children. We will take a broad view of the interventions of the welfare state by considering not only the impact of public assistance and social service programs, but the role of the police, family courts, therapeutic professionals, and schools in creating and responding to the conditions of impoverishment. The work of the seminar will culminate in the production of a research paper and students will be given the option of incorporating field work into the independent project. This course fulfills the requirement for an advanced seminar in Political Science.",
-    "times_and_locations": {
-      "POSC 85 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "FAYE 217A"
-          }
-        ]
       }
     }
   },

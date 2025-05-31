@@ -1363,41 +1363,6 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "Sacred Images and Sacred Space: The Visual Culture of Religion in Japan",
-    "course_codes": [
-      "ARHA-266",
-      "ASLC-261"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Samuel C. Morse"
-      ]
-    },
-    "description": "An interdisciplinary study of the visual culture of the Buddhist and Shinto religious traditions in Japan. The class will examine in depth a number of Japan's most important sacred places, including Ise Shrine, Todaiji, Daitokuji and Mount Fuji, and will also look at the way contemporary architects such as Ando Tadao and Takamatsu Shin have attempted to create new sacred places in Japan today. Particular emphasis will be placed on the ways by which the Japanese have given distinctive form to their religious beliefs through architecture, painting and sculpture, and the ways these objects have been used in religious ritual.",
-    "times_and_locations": {
-      "ARHA 266 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "W",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "F",
-            "time": "10:00 AM - 10:50 AM",
-            "location": "FAYE 113"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
     "course_title": "The Inheritance of Iran: The Iranian World from Antiquity to the Middle Ages\n",
     "course_codes": [
       "ASLC-292",
@@ -1486,36 +1451,6 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "Anthropology and the Middle East",
-    "course_codes": [
-      "ANTH-331",
-      "ASLC-341"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Christopher T. Dole"
-      ]
-    },
-    "description": "In an era where terrorism has eclipsed the nuclear fears of the Cold War and become associated with a radicalism that is portrayed as at once militant, anti-Western, and bound to a particular region and religion, the task of this seminar--to examine the everyday realities of people living throughout the Middle East--has become all the more critical. Beginning with an historical eye toward the ways that the West has discovered, translated, and written about the Orient, this seminar will use anthropological readings, documentary film, and literary accounts to consider a range of perspectives on the region commonly referred to as the Middle East. Rather than attempting a survey of the entire region, the course will take a thematic approach and explore such topics as: Islam and secularism, colonialism and postcoloniality, gender and political mobilization, media and globalization, and the politics and ethics of nation building. As an anthropology course, the class will take up these themes through richly contextualized accounts of life within the region. While it is recognized that the Middle East is incredibly heterogeneous, particular attention will given to the influence and role of Islam. By the end of the seminar, students will have gained a broad understanding of some of the most pressing issues faced within the area, while at the same time grappling with advanced theoretical readings. No previous knowledge of the Middle East is assumed.",
-    "times_and_locations": {
-      "ANTH 331 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "CHAP 101"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
     "course_title": "The Islamic Mystical Tradition",
     "course_codes": [
       "ASLC-356",
@@ -1534,31 +1469,6 @@
             "day": "Tu",
             "time": "02:00 PM - 04:30 PM",
             "location": "CHAP 205"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "The Japanese Image Replicated: Prints, Postcards, and Photographs",
-    "course_codes": [
-      "ARHA-384",
-      "ASLC-384"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Anne N. Morse"
-      ]
-    },
-    "description": "An image that can be replicated serves a very different function from a single unique work of art; it addresses new audiences and elicits a wider range of responses. This seminar will explore three different types of replication in Japanwoodblock printing, lithography, and photography. Japanese prints have captured the imaginations of Westerners since the mid-nineteenth century. With the unprecedented achievement of literacy among urban populations during the early sixteenth century, Japan developed highly inventive woodblock texts and images. This seminar will investigate the history of the Japanese print in the Edo period (1615 -1868) through the works of artists such as Suzuki Harunobu, Kitagawa Utamaro, Katsushika Hokusai, and Utagawa Hiroshige. It will also examine how the postcard replaced the print as the favored format for the dissemination of images during the early twentieth century, becoming the primary visual means for communicating Japans modernity before the advent of World War II. In Japan, photography evolved from studio productions for tourist souvenirs to extremely creative compositions that transcend national boundaries. The course will make extensive use of the collection at the Mead Art Museum as well as that at the Boston Museum of Fine Arts.",
-    "times_and_locations": {
-      "ARHA 384 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 05:00 PM",
-            "location": "FAYE 217"
           }
         ]
       }
@@ -2544,136 +2454,6 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "Cell Structure and Function",
-    "course_codes": [
-      "BCBP-291",
-      "BIOL-291"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ethan R. Graf"
-      ]
-    },
-    "description": "An analysis of the structure and function of cells in plants, animals, and bacteria. Topics to be discussed include the cell surface and membranes, cytoskeletal elements and motility, cytoplasmic organelles and bioenergetics, the interphase nucleus and chromosomes, mitosis, meiosis, and cell cycle regulation. Four classroom hours and three hours of laboratory per week.",
-    "times_and_locations": {
-      "BIOL 291 - LEC": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:00 PM - 12:50 PM",
-            "location": "MERR 220"
-          },
-          {
-            "day": "W",
-            "time": "12:00 PM - 12:50 PM",
-            "location": "MERR 220"
-          },
-          {
-            "day": "F",
-            "time": "12:00 PM - 12:50 PM",
-            "location": "MERR 220"
-          }
-        ]
-      },
-      "BIOL 291F - DIS": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:00 PM - 01:50 PM",
-            "location": "MERR 220"
-          }
-        ]
-      },
-      "BIOL 291L - LAB": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 05:00 PM",
-            "location": "MCLS 336"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 05:00 PM",
-            "location": "MCLS 336"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Biochemistry",
-    "course_codes": [
-      "BCBP-331",
-      "BIOL-331",
-      "CHEM-331"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sheila S. Jaswal",
-        "Amy L. Springer",
-        "Patrick L. Williamson"
-      ]
-    },
-    "description": "Structure and function of biologically important molecules and their role(s) in life processes. Protein conformation, enzymatic mechanisms and selected metabolic pathways will be analyzed. Additional topics may include: nucleic acid conformation, DNA/protein interactions, signal transduction and transport phenomena. Four classroom hours and four hours of laboratory work per week.",
-    "times_and_locations": {
-      "BIOL 331 - LEC": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "W",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "F",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "MERR 4"
-          }
-        ]
-      },
-      "BIOL 331F - DIS": {
-        "Section 01": [
-          {
-            "day": "F",
-            "time": "02:00 PM - 02:50 PM",
-            "location": "MERR 4"
-          }
-        ]
-      },
-      "BIOL 331L - LAB": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 06:00 PM",
-            "location": "MERR 404"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 06:00 PM",
-            "location": "MERR 404"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "Th",
-            "time": "02:00 PM - 06:00 PM",
-            "location": "MERR 404"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
     "course_title": "Genome Biology",
     "course_codes": [
       "BIOL-380"
@@ -2891,36 +2671,6 @@
             "day": "W",
             "time": "12:30 PM - 01:50 PM",
             "location": "CHAP 201"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Survey of African Art",
-    "course_codes": [
-      "ARHA-149",
-      "BLST-123"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Rowland O. Abiodun"
-      ]
-    },
-    "description": "An introduction to the ancient and traditional arts of Africa. Special attention will be given to the archaeological importance of the rock art paintings found in such disparate areas as the Sahara and South Africa, achievements in the architectural and sculptural art in clay of the early people in the area now called Zimbabwe and the aesthetic qualities of the terracotta and bronze sculptures of the Nok, Igbo-Ukwe, Ife and Benin cultures in West Africa, which date from the second century B.C.E. to the sixteenth century C.E. The study will also pursue a general socio-cultural survey of traditional arts of the major ethnic groups of Africa.",
-    "times_and_locations": {
-      "ARHA 149 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "FAYE 217A"
-          },
-          {
-            "day": "W",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "FAYE 217A"
           }
         ]
       }
@@ -3470,76 +3220,6 @@
             "day": "Th",
             "time": "02:00 PM - 05:20 PM",
             "location": "MERR 421"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Biochemistry",
-    "course_codes": [
-      "BCBP-331",
-      "BIOL-331",
-      "CHEM-331"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sheila S. Jaswal",
-        "Amy L. Springer",
-        "Patrick L. Williamson"
-      ]
-    },
-    "description": "Structure and function of biologically important molecules and their role(s) in life processes. Protein conformation, enzymatic mechanisms and selected metabolic pathways will be analyzed. Additional topics may include: nucleic acid conformation, DNA/protein interactions, signal transduction and transport phenomena. Four classroom hours and four hours of laboratory work per week.",
-    "times_and_locations": {
-      "BIOL 331 - LEC": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "W",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "MERR 4"
-          },
-          {
-            "day": "F",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "MERR 4"
-          }
-        ]
-      },
-      "BIOL 331F - DIS": {
-        "Section 01": [
-          {
-            "day": "F",
-            "time": "02:00 PM - 02:50 PM",
-            "location": "MERR 4"
-          }
-        ]
-      },
-      "BIOL 331L - LAB": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 06:00 PM",
-            "location": "MERR 404"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 06:00 PM",
-            "location": "MERR 404"
-          }
-        ],
-        "Section 03": [
-          {
-            "day": "Th",
-            "time": "02:00 PM - 06:00 PM",
-            "location": "MERR 404"
           }
         ]
       }
@@ -5065,36 +4745,6 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "Childhood in African and Caribbean Literature",
-    "course_codes": [
-      "BLST-362",
-      "ENGL-318"
-    ],
-    "faculty": {
-      "Section 01": [
-        "C. Rhonda Cobham-Sander"
-      ]
-    },
-    "description": "The course will concentrate on Caribbean authors. It explores the process of self-definition in literary works from Africa and the Caribbean that are built around child protagonists. We will examine the authors various methods of ordering experience through the choice of literary form and narrative technique, as well as the child/authors perception of his or her society. French texts will be read in translation.",
-    "times_and_locations": {
-      "ENGL 318 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "COOP 101"
-          },
-          {
-            "day": "W",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "COOP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
     "course_title": "Writing Poetry II",
     "course_codes": [
       "ENGL-324"
@@ -5294,7 +4944,9 @@
   {
     "semester": "Spring 2012",
     "course_title": "Screenwriting",
-    "course_codes": [],
+    "course_codes": [
+      "FAMS-240"
+    ],
     "faculty": {
       "Section 01": [
         "Chris Mason Johnson"
@@ -5408,7 +5060,9 @@
   {
     "semester": "Spring 2012",
     "course_title": "Lyrics Before the Lyric",
-    "course_codes": [],
+    "course_codes": [
+      "EUST-441"
+    ],
     "faculty": {
       "Section 01": [
         "Ingrid L. Nelson"
@@ -5560,7 +5214,9 @@
   {
     "semester": "Spring 2012",
     "course_title": "Special Topics",
-    "course_codes": [ "AMST 490"],
+    "course_codes": [
+      "AMST 490"
+    ],
     "faculty": {
       "Section 10": [
         "Amelie E. Hastie"
@@ -5632,41 +5288,6 @@
             "day": "Th",
             "time": "10:00 AM - 11:20 AM",
             "location": "MERR 4"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Ecology",
-    "course_codes": [
-      "BIOL-230",
-      "ENST-210"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ethan J. Temeles"
-      ]
-    },
-    "description": "A study of the relationships of plants and animals (including humans) to each other and to their environment. We'll start by considering the decisions an individual makes in its daily life concerning its use of resources, such as what to eat and where to live, and whether to defend such resources. We'll then move on to populations of individuals, and investigate species population growth, limits to population growth, and why some species are so successful as to become pests whereas others are on the road to extinction. The next level will address communities, and how interactions among populations, such as competition, predation, parasitism, and mutualism, affect the organization and diversity of species within communities. The final stage of the course will focus on ecosytems, and the effects of humans and other organisms on population, community, and global stability. Three hours of lecture per week.",
-    "times_and_locations": {
-      "BIOL 230 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:00 PM - 12:50 PM",
-            "location": "MERR 2"
-          },
-          {
-            "day": "W",
-            "time": "12:00 PM - 12:50 PM",
-            "location": "MERR 2"
-          },
-          {
-            "day": "F",
-            "time": "12:00 PM - 12:50 PM",
-            "location": "MERR 2"
           }
         ]
       }
@@ -5802,82 +5423,6 @@
             "day": "F",
             "time": "01:00 PM - 01:50 PM",
             "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Art and Architecture of Europe from 1400 to 1800",
-    "course_codes": [
-      "ARHA-135",
-      "EUST-135"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Nicola Courtright"
-      ]
-    },
-    "description": "This course is an introduction to painting, sculpture, and architecture of the early modern period. The goal of the course is to identify artistic innovations that characterize European art from the Renaissance to the French Revolution, and to situate the works of art historically, by examining the intellectual, political, religious, and social currents that contributed to their creation. In addition to tracing stylistic change within the oeuvre of individual artists and understanding its meaning, we will investigate the varied character of art, its interpretation, and its context in different regions, including Italy, France, Spain, Germany and the Netherlands.",
-    "times_and_locations": {
-      "ARHA 135 - LEC": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "FAYE 115"
-          },
-          {
-            "day": "Th",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "FAYE 115"
-          }
-        ]
-      },
-      "ARHA 135F - DIS": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "09:00 AM - 09:50 AM",
-            "location": "MEAD 111"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "W",
-            "time": "01:00 PM - 01:50 PM",
-            "location": "MEAD 111"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Art From the Realm of Dreams",
-    "course_codes": [
-      "ARHA-146",
-      "EUST-146"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Natasha Staller"
-      ]
-    },
-    "description": "We begin with a long-standing Spanish obsession with dreams, analyzing images and texts by Calderon, Quevedo and Goya. We next will consider a range of dream workers from a range of cultures, centuries, and disciplines--among them Apollinaire, Freud, Breton, Dali, Carrington, and Kahlo--as well as others working around the globe in our own time.",
-    "times_and_locations": {
-      "ARHA 146 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "FAYE 217A"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "FAYE 217A"
           }
         ]
       }
@@ -6094,36 +5639,6 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "Women and Art in Early Modern Europe",
-    "course_codes": [
-      "ARHA-284",
-      "EUST-284"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Nicola Courtright"
-      ]
-    },
-    "description": "This course will examine the ways in which prevailing ideas about women and gender-shaped visual imagery, and how these images influenced ideas concerning women from the Renaissance to the Enlightenment. It will adopt a comparative perspective, both by identifying regional differences among European nations and tracing changes over time. In addition to considering patronage of art by women and works by women artists, we will look at the depiction of women heroes such as Judith; the portrayal of women rulers, including Elizabeth I and Marie de' Medici; and the imagery of rape. Topics emerging from these categories of art include biological theories about women; humanist defenses of women; the relationship between the exercise of political power and sexuality; differing attitudes toward women in Catholic and Protestant art; and feminine ideals of beauty.",
-    "times_and_locations": {
-      "ARHA 284 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "FAYE 113"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
     "course_title": "SPACE",
     "course_codes": [
       "EUST-368",
@@ -6168,82 +5683,6 @@
             "day": "M",
             "time": "02:00 PM - 04:00 PM",
             "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Lyrics Before the Lyric",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Ingrid L. Nelson"
-      ]
-    },
-    "description": "No word for lyric poetry is in use in Europe until the sixteenth century.  This course examines the poems written before and at the dawn of the definition of lyric poetry, in order to form our own working definition of a short, musical poem.  We will read poetry by Sappho, Horace, Pindar, anonymous medieval writers, Richard Rolle, William Dunbar, and others, along with classical and medieval tracts on poetry and poetics.  The course will conclude with readings from sixteenth- and seventeenth-century lyric poets (Wyatt, Surrey, Shakespeare, Donne) alongside the treatises that defined lyric for the first time (such as Sidneys Defense of Poesy ).  Does the lyric poem change once it is defined?  How do later works speak to the earlier tradition?",
-    "times_and_locations": {
-      "EUST 441 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "CONV 208"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Film and Writing",
-    "course_codes": [
-      "ENGL-180",
-      "FAMS-110"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Helen L. von Schmidt"
-      ]
-    },
-    "description": "A first course in reading films and writing about them. A varied selection of films for study and criticism, partly to illustrate the main elements of film language and partly to pose challenging texts for reading and writing. Frequent short papers.",
-    "times_and_locations": {
-      "ENGL 180 - FIL": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "04:00 PM - 06:30",
-            "location": "PM"
-          },
-          {
-            "day": "M",
-            "time": "07:30 PM - 10:30",
-            "location": "PM"
-          },
-          {
-            "day": "W",
-            "time": "04:00 PM - 06:30",
-            "location": "PM"
-          },
-          {
-            "day": "W",
-            "time": "07:30 PM - 10:30",
-            "location": "PM"
-          }
-        ]
-      },
-      "ENGL 180 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MEAD 115"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "MEAD 115"
           }
         ]
       }
@@ -6313,67 +5752,6 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "Introduction to Super 8 Film and Digital Video",
-    "course_codes": [
-      "ENGL-287",
-      "FAMS-228"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Baba Hillman"
-      ]
-    },
-    "description": "This course will introduce students to basic Super 8 film and digital video techniques. The course will include workshops in shooting for film and video, Super 8 film editing, Final Cut Pro video editing, lighting, stop motion animation, sound recording and mixing. Students will learn to think about and look critically at the moving and still image. Students will complete three moving image projects, including one Super 8 film, one video project, and one mixed media project. Weekly screenings will introduce students to a wide range of approaches to editing, writing, and directing in experimental, documentary, narrative, and hybrid cinematic forms. Screenings include works by Martha Rosler, Bill Viola, the Yes Men, Jennifer Reeves, Mona Hatoum, Guillermo Gomez-Pena, Dziga Vertov, D.A. Pennebaker, Jean-Pierre Gorin, Cecile Fontaine, and Johanna Vaude.",
-    "times_and_locations": {
-      "ENGL 287 - FIL": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "06:30 PM - 09:00 PM",
-            "location": "FAYE 117"
-          }
-        ]
-      },
-      "ENGL 287 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 05:00 PM",
-            "location": "FAYE 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Screenwriting",
-    "course_codes": [],
-    "faculty": {
-      "Section 01": [
-        "Chris Mason Johnson"
-      ]
-    },
-    "description": "A first workshop in narrative screenwriting. Through frequent exercises, readings, and screenings we will explore the fundamentals of scene and story shape as theyre practiced in mainstream commercial filmmaking, while taking a broader look at what a screenplay might be outside of that world. In the process, well juxtapose two modes of writing that are not mutually exclusive but are often at odds with each other, both historically (within the industry) and aesthetically: the well-established craft of three-act screenwriting, on the one hand, and the more elastic possibilities of the audio-visual medium as exemplified by the art film, on the other.",
-    "times_and_locations": {
-      "FAMS 240 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "BARR 102"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "BARR 102"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
     "course_title": "Pioneer Valley Soundscapes",
     "course_codes": [
       "FAMS-312",
@@ -6397,32 +5775,6 @@
             "day": "Th",
             "time": "08:30 AM - 09:50 AM",
             "location": "ARMU 212"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Representing Slavery",
-    "course_codes": [
-      "BLST-435",
-      "ENGL-466",
-      "FAMS-314"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Marisa Parham"
-      ]
-    },
-    "description": "Mining a variety of archives in search of captivity narratives created by American slaves and their progeny, this class will use its materials to consider larger questions regarding the overlapping roles of voice, testimony, trauma, and narrative in cultural and historical understanding. Work will culminate in the production of a multimedia research project, but no previous familiarity with media production is required.",
-    "times_and_locations": {
-      "ENGL 466 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "08:30 AM - 11:20 AM",
-            "location": "FAYE 217"
           }
         ]
       }
@@ -6606,31 +5958,6 @@
             "day": "Th",
             "time": "02:00 PM - 05:00 PM",
             "location": "CONV 302"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Animating Cinema and New Media",
-    "course_codes": [
-      "ENGL-484",
-      "FAMS-484"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Andrew R. Johnston"
-      ]
-    },
-    "description": "This seminar will explore theories of animation and new media in moving image culture. While animation is many times considered childrens entertainment, this course situates it as the technical coincidence of life and movement while examining its relation to the nature of cinema and other media. Cinema is a privileged type of animation in the class, but one that exists in a long history of moving images that we will interrogate along with the roles different techniques and technologies play in that historys formation. We will begin with an examination of nineteenth-century optical devices like zoetropes and phenakistoscopes and then study handmade and industrial animation practices, finally working our way to digital special effects technology, machinima, and algorithmic cinema. Particular attention will be paid to the role of motion in the aesthetics of cinema and the sense of vitality objects and figures take on in film. How is life attributed to this illusion of movement? How is the threshold between the animate and inanimate used to define our understandings of media and mediation? To answer these questions we will read theoretical and historical texts by Donald Crafton, Sergei Eisenstein, Tom Gunning, Esther Leslie, and Lev Manovich and view films by artists such as Emile Cohl, Lotte Reiniger, Mary Ellen Bute, Chuck Jones, the Quay Brothers, Lewis Klahr, Cory Arcangel, Marjane Satrapi, and Takeshi Murata.",
-    "times_and_locations": {
-      "ENGL 484 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "01:00 PM - 03:40 PM",
-            "location": "CHAP 210"
           }
         ]
       }
@@ -7443,36 +6770,6 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "Weimar Cinema: The \"Golden Age\" of German Film",
-    "course_codes": [
-      "FAMS-323",
-      "GERM-347"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Christian Rogowski"
-      ]
-    },
-    "description": "This course examines the German contribution to the emergence of film as both a distinctly modern art form and as a product of mass culture. The international success of Robert Wienes Expressionist phantasmagoria, The Cabinet of Dr. Caligari (1920), heralded the beginning of a period of unparalleled artistic exploration, prior to the advent of Hitler, during which the ground was laid for many of the filmic genres familiar today: horror film (F.W. Murnaus Nosferatu ), detective thriller (Fritz Langs M ), satirical comedy (Ernst Lubitschs The Oyster Princess ), psychological drama (G.W. Pabsts Pandoras Box ), science fiction (Langs Metropolis ), social melodrama  (Pabsts The Joyless Street ), historical costume film (Lubitschs Passion ), political propaganda (Slatan Dudows Kuhle Wampe ), anti-war epic (Pabsts Westfront 1918 ), a documentary montage (Walther Ruttmanns Berlin  Symphony of a Big City ), and the distinctly German genre of the mountain film (Leni Riefenstahls The Blue Light ). Readings, including Siegried Kracauer, Walter Benjamin, Lotte H. Eisner, Bela Balazs, and Rudolf Arnheim, will address questions of technology and modernity, gender relations after World War I, the intersection of politics and film, and the impact of German and Austrian exiles on Hollywood. Conducted in English, with German majors required to do a substantial portion of the reading in German.",
-    "times_and_locations": {
-      "GERM 347 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 119"
-          },
-          {
-            "day": "Th",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "CHAP 119"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
     "course_title": "Kafka, Brecht, and Thomas Mann",
     "course_codes": [
       "GERM-352"
@@ -7521,36 +6818,6 @@
             "day": "W",
             "time": "12:00 PM - 03:00 PM",
             "location": "CONV 302"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Environmental Issues of the Nineteenth Century",
-    "course_codes": [
-      "ENST-220",
-      "HIST-104"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Edward D. Melillo"
-      ]
-    },
-    "description": "This course considers the ways that people in various parts of the world thought about and acted upon nature during the nineteenth century. We look historically at issues that continue to have relevance today, including: invasive species, deforestation, soil-nitrogen availability, water use, desertification, and air pollution. Themes include: the relationship of nineteenth-century colonialism and environmental degradation, gender and environmental change, the racial dimensions of ecological issues, and the spatial aspects of human interactions with nature. We will take at least one field trip. In addition, we will watch three films that approach nineteenth-century environmental issues from different vantage points.",
-    "times_and_locations": {
-      "HIST 104 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "JOCH 21"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "JOCH 21"
           }
         ]
       }
@@ -7697,71 +6964,6 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "Black Diaspora from Emancipation to the Present",
-    "course_codes": [
-      "BLST-101",
-      "HIST-161"
-    ],
-    "faculty": {
-      "Section 01": [
-        "J. Celso Castro Alves"
-      ]
-    },
-    "description": "This course explores the historical roots of contemporary racial formations in Latin America and the Caribbean. It focuses particularly on the black experiences, inter-ethnic conflicts and racial solidarities in Brazil, Cuba, Jamaica, Haiti and Puerto Rico from the mid-nineteenth century to the present. Topics of discussion will include the struggles for emancipation from slavery, black notions of sovereignty, forms of black nationalism, Pan-Africanism, and political radicalism. We will examine a multiplicity of historical sources, including novels, music, film, personal testimonies, and historical monographs in order to understand the black diaspora as both an historical process and as a seedbed for various identities, racial cultures and political projects.",
-    "times_and_locations": {
-      "HIST 161 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "COOP 101"
-          },
-          {
-            "day": "Th",
-            "time": "10:00 AM - 11:20 AM",
-            "location": "COOP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Modern Japanese History from 1800 to the 2000s",
-    "course_codes": [
-      "ASLC-247",
-      "HIST-176"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Trent E. Maxey"
-      ]
-    },
-    "description": "This course surveys the modern history of the Japanese archipelago, from the late-Tokugawa period through the rise of the modern Meiji nation-state, colonial expansion and total war. We will conclude with the postwar economic recovery and the socio-political challenges facing the Japanese nation-state in the early-2000s. Through primary documents, fiction, and film, we will explore themes including the disestablishment of the samurai class, industrialization, imperialism, feminism, nationalism, war, democracy, and consumerism. Requirements include short response papers and topical essays.",
-    "times_and_locations": {
-      "HIST 176 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "W",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "F",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "FAYE 113"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
     "course_title": "Spain and the Pacific World, 1571-1898",
     "course_codes": [
       "HIST-208"
@@ -7878,126 +7080,6 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "The European Enlightenment",
-    "course_codes": [
-      "EUST-229",
-      "HIST-229"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Margaret R. Hunt"
-      ]
-    },
-    "description": "This course begins with the political, social, cultural and economic upheavals of late seventeenth-century England, France, and the Netherlands. The second part of the course will look at the Enlightenment as a distinctive philosophical movement, evaluating its relationship to science, to classical antiquity, to organized religion, to new conceptions of justice, and to the changing character of European politics. The final part will look at the Enlightenment as a broad-based cultural movement. Among the topics discussed here will be the role played by Enlightened ideas in the French Revolution, women and non-elites in the Enlightenment, scientific racism, pornography and libertinism, orientalism, and the impact of press censorship. Readings for the course will include works by Descartes, Locke, Montesquieu, Voltaire, Rousseau, Diderot, Hume, Adam Smith, Choderlos de Laclos, Kant and others.",
-    "times_and_locations": {
-      "HIST 229 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "FAYE 117"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "FAYE 117"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "The French Revolution",
-    "course_codes": [
-      "EUST-230",
-      "HIST-230"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ellen R. Boucher"
-      ]
-    },
-    "description": "Often viewed as one of the defining events in modern history, the French Revolution has been debated and discussed, derided and celebrated by generations of politicians, cultural commentators, and historians. This course enters into this on-going conversation by examining the nature of the revolutionary process as it unfolded in late eighteenth-century France and its empire. Beginning in the old regime of kings and commoners, it untangles the social, political, and intellectual roots of the Revolution and investigates the extent to which these factors contributed to the radical overthrow of the French establishment in 1789. It then follows the extension of the Revolution throughout French society and across the seas to the Caribbean, analyzing how popular and colonial upheavals influenced the revolutionary new order of liberty, equality, and brotherhood that was taking shape in France. Finally, the course explores the aftermath of the Revolution by tracing the various ways that its history has been interpreted and reinterpreted from the nineteenth century to the present day.",
-    "times_and_locations": {
-      "HIST 230 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "CONV 209"
-          },
-          {
-            "day": "Th",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "CONV 209"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Race and Empire: The British Experience from 1760",
-    "course_codes": [
-      "EUST-231",
-      "HIST-231"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Ellen R. Boucher"
-      ]
-    },
-    "description": "From the mid-eighteenth century through the 1960s, Britain presided over the most powerful empire in the world. At its height, this small island nation ruled one-quarter of the earths surface and more than 450 million of its inhabitants. Not only did British imperialism play a decisive role in shaping world politics, economics, and cultures in its day, it also left a number of profound legacies that continue to affect our lives in the present. This course traces the rise, fall, and lasting influence of the British empire, and pays particular attention to questions of race and ethnicity. Through a series of colonial encounters --such as the first contacts made between explorers and Pacific Islanders in the 18th century, the interactions between missionaries and Africans in the 19th century, or the migration of South Asians to Britain in the 20th century--it examines what race meant in different historical contexts. The course thus explores the institutionalization of racism in government, law, and society, and analyzes moments in which racism has been combated and overturned. Readings and course materials will be drawn from secondary and primary sources, including newspapers, novels, photographs, artwork, oral histories, and films.",
-    "times_and_locations": {
-      "HIST 231 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CONV 209"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CONV 209"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "African American History from Reconstruction to the Present",
-    "course_codes": [
-      "BLST-241",
-      "HIST-248"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Julia A. Rabig"
-      ]
-    },
-    "description": "This course is a survey of the social, cultural, and political history of African American men and women since the 1870s. Among the major topics addressed: the legacies of Reconstruction; the political and economic origins of Jim Crow; the new racism of the 1890s; black leadership and organizational strategies; the Great Migration of the World War I era; the Harlem Renaissance; the urbanization of black life and culture; the impact of the Great Depression and the New Deal; the social and military experience of World War II; the causes, course and consequences of the modern civil rights movement; the experience of blacks in the Vietnam War; and issues of race and class in the 1970s and 1980s. Readings and materials include historical monographs, fiction, and documentary films.",
-    "times_and_locations": {
-      "BLST 241 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "WEBS 217"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "WEBS 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
     "course_title": "Asian-Pacific American History, 1850 to Present",
     "course_codes": [
       "HIST-249"
@@ -8049,66 +7131,6 @@
             "day": "Th",
             "time": "02:00 PM - 03:20 PM",
             "location": "CHAP 101"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Introduction to South African History",
-    "course_codes": [
-      "BLST-121",
-      "HIST-283"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sean Redding"
-      ]
-    },
-    "description": "South African history is undergoing radical shifts in the way it is being written, read and interpreted, and this course will explore established and emerging themes in the history of this intriguing country. The time period covered will span the precolonial indigenous cultures and move on to study the initiation and expansion of white settlement and its early dependence on slave labor. The course will also investigate African resistance, both in its political and cultural forms, as well as the social effects of gold-mining and migrant labor. African nationalism, including the ANC, the Black Consciousness Movement, and the United Democratic Front, will be the focus of our study of the responses to apartheid and the ultimate collapse of the apartheid state. The course will end with discussions of recent events in South Africa, particularly the Truth and Reconciliation Commission and its aftermath as well as the developing AIDS epidemic and the growing problem of crime.",
-    "times_and_locations": {
-      "HIST 283 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "CHAP 201"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "CHAP 201"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "The Inheritance of Iran: The Iranian World from Antiquity to the Middle Ages\n",
-    "course_codes": [
-      "ASLC-292",
-      "HIST-292"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Richard Payne"
-      ]
-    },
-    "description": "This course examines the equally profound continuities and discontinuities in the history of Iran from the Achaemenids to the Mongols. We will trace the rise of the ancient Iranian empires and their promotion of Zoroastrianism before turning to the Arab, Turkish, and Mongol conquests and the Islamization of Iranian society. In addition to exploring patterns of religious, cultural and social change in Iranian history, we will discuss the extent to which the inheritance of antiquity in Iran, Central Asia, and beyond constituted a discrete unity--an Iranian world--within the medieval Middle East. Sources will include classics of Persian and Arabic literature, not least the Book of Kings.",
-    "times_and_locations": {
-      "HIST 292 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CHAP 203"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CHAP 203"
           }
         ]
       }
@@ -8191,31 +7213,6 @@
             "day": "W",
             "time": "01:00 PM - 04:00",
             "location": "PM"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Topics in European History: The Politics of Memory in Twentieth-Century Europe",
-    "course_codes": [
-      "EUST-438",
-      "HIST-438"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Catherine A. Epstein"
-      ]
-    },
-    "description": "This course will explore the role of historical memory in the politics of twentieth-century Europe. It will examine how evolving memories of major historical events have been articulated and exploited in the political cultures of England, France, Germany, Eastern Europe, and the Soviet Union/Russia. Topics will include the politics of memory surrounding World Wars I and II, Vichy France, the Holocaust, Soviet Stalinism, and Eastern European communism. Seminar participants will also discuss general issues concerning collective memory: why societies remember and forget historical events, how collective memories resurface, the relationship between memory and authenticity, and the pitfalls of politicizing historical memory. Finally, seminar participants will analyze different sites of memory including film, ritual, monuments, legal proceedings, and state-sponsored cults.",
-    "times_and_locations": {
-      "HIST 438 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 04:00 PM",
-            "location": "CHAP 101"
           }
         ]
       }
@@ -8499,31 +7496,6 @@
             "day": "Tu",
             "time": "02:00 PM - 04:30 PM",
             "location": "CONV 208"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Film, Myth, and the Law",
-    "course_codes": [
-      "FAMS-371",
-      "LJST-352"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Austin D. Sarat"
-      ]
-    },
-    "description": "The proliferation of law in film and on television has expanded the sphere of legal life itself. Law lives in images that today saturate our culture and have a power all their own, and the moving image provides a domain in which legal power operates independently of laws formal institutions. This course will consider what happens when legal events are re-narrated in film and examine films treatment of legal officials, events, and institutions (e.g., police, lawyers, judges, trials, executions, prisons). Does film open up new possibilities of judgment, model new modes of interpretation, and provide new insights into laws violence? We will discuss ways in which myths about law are reproduced and contested in film. Moreover, attending to the visual dimensions of laws imagined lives, we ask whether law provides a template for film spectatorship, positioning viewers as detectives and as jurors, and whether film, in turn, sponsors a distinctive visual aesthetics of law. Among the films we may consider are Inherit the Wind, Call Northside 777, Judgment at Nuremberg, Rear Window, Silence of the Lambs, A Question of Silence, The Sweet Hereafter, Dead Man Walking, Basic Instinct, and Unforgiven. Throughout we will draw upon film theory and criticism as well as the scholarly literature on law, myth, and film.",
-    "times_and_locations": {
-      "LJST 352 - L/D": {
-        "Section 01": [
-          {
-            "day": "W",
-            "time": "08:30 AM - 10:30 AM",
-            "location": "CLAR 100"
           }
         ]
       }
@@ -9375,66 +8347,6 @@
     "times_and_locations": {
       "MUSI 140H": {
         "Section 1": []
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Music and Culture II",
-    "course_codes": [
-      "EUST-222",
-      "MUSI-222"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jenny L. Kallick"
-      ]
-    },
-    "description": "One of three courses in which the development of Western music is studied in its cultural-historical context. As practical, in-class performance and attendance at public concerts in Amherst and elsewhere will be crucial to our work. Composers to be studied include Beethoven, Rossini, Schubert, Mendelssohn, Schumann, Chopin, Liszt, Berlioz, Wagner, Verdi, Musorgsky, and Brahms. Regular listening assignments will broaden the repertoire we encounter and include a wide sampling of Classical and Romantic music. Periodic writing assignments will provide opportunities to connect detailed musical analysis with historical-cultural interpretation. A variety of readings will include music-historical-aesthetic documents as well as selected critical and analytical studies. Class presentations will contribute to a seminar-style class environment. This course may be elected individually or in conjunction with other Music and Culture courses. Two class meetings per week.",
-    "times_and_locations": {
-      "MUSI 222 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "ARMU 212"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "ARMU 212"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Pioneer Valley Soundscapes",
-    "course_codes": [
-      "FAMS-312",
-      "MUSI-238"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Jason Robinson"
-      ]
-    },
-    "description": "This course is about exploring, participating in, and documenting the musical communities and acoustic terrain of the Pioneer Valley. The first part of the course will focus on local histories and music scenes, ethnographic methods and technologies, and different techniques of representation. The second part of the course will involve intensive, sustained engagement with musicians and sounds in the Pioneer Valley. Course participants will give weekly updates about their fieldwork projects and are expected to become well-versed in the musics they are studying. There will be a significant amount of work and travel outside of class meetings. The course will culminate in contributions to a web-based documentary archive of Pioneer Valley soundscapes. We will also benefit from visits and interaction with local musicians.",
-    "times_and_locations": {
-      "MUSI 238 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "ARMU 212"
-          },
-          {
-            "day": "Th",
-            "time": "08:30 AM - 09:50 AM",
-            "location": "ARMU 212"
-          }
-        ]
       }
     }
   },
@@ -10801,67 +9713,6 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "Introduction to Neuroscience",
-    "course_codes": [
-      "NEUR-226",
-      "PSYC-226"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Josef G. Trapani",
-        "Sarah M. Turgeon"
-      ]
-    },
-    "description": "An introduction to the structure and function of the nervous system, this course will explore the neural bases of behavior at the cellular and systems levels. Basic topics in neurobiology, neuroanatomy and physiological psychology will be covered with an emphasis on understanding how neuroscientists approach the study of the nervous system. Three class hours and four hours of laboratory per week.",
-    "times_and_locations": {
-      "NEUR 226 - LEC": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "MERR 3"
-          },
-          {
-            "day": "W",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "MERR 3"
-          },
-          {
-            "day": "F",
-            "time": "11:00 AM - 11:50 AM",
-            "location": "MERR 3"
-          }
-        ]
-      },
-      "NEUR 226F - DIS": {
-        "Section 01": [
-          {
-            "day": "Th",
-            "time": "01:00 PM - 01:50 PM",
-            "location": "MERR 3"
-          }
-        ]
-      },
-      "NEUR 226L - LAB": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 05:00 PM",
-            "location": "MCLS 145"
-          }
-        ],
-        "Section 02": [
-          {
-            "day": "W",
-            "time": "02:00 PM - 05:00 PM",
-            "location": "MCLS 145"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
     "course_title": "Psychology of Adolescence",
     "course_codes": [
       "PSYC-232"
@@ -11080,36 +9931,6 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "Yoga Traditions",
-    "course_codes": [
-      "ASLC-242",
-      "RELI-242"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Steven D. Heim"
-      ]
-    },
-    "description": "While yoga is often practiced today at the gym for health and exercise, it has a long philosophical history in the religions of India. This course traces the intellectual traditions of yoga from early South Asian texts to its modern global and secular forms. Yoga entails training in contemplative, postural, and respiratory techniques as a means to such varied goals as knowing the true self, experiencing nirvana, meeting god, making good karma, and enhancing well-being. We will examine yoga philosophy in the Vedas, the Upanishads, the Bhagavad Gita, and the writings of Patanjali, and then turn to its flowering in the development of medieval and modern Hinduism as we look at tantrism, guru devotion, and bhakti religiosity. Finally, we will explore the history of its modern expressions in physical exercise, stress management, and secular spirituality.",
-    "times_and_locations": {
-      "RELI 242 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 03:30 PM",
-            "location": "CHAP 203"
-          },
-          {
-            "day": "Th",
-            "time": "02:00 PM - 03:30 PM",
-            "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
     "course_title": "Theravada Buddhism",
     "course_codes": [
       "ASLC-253",
@@ -11259,31 +10080,6 @@
             "day": "F",
             "time": "10:00 AM - 10:50 AM",
             "location": "CHAP 203"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "The Islamic Mystical Tradition",
-    "course_codes": [
-      "ASLC-356",
-      "RELI-285"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Mentor Mustafa"
-      ]
-    },
-    "description": "This course is a survey of the large complex of Islamic intellectual and social perspectives subsumed under the term Sufism. Sufi mystical philosophies, liturgical practices, and social organizations have been a major part of the Islamic tradition in all historical periods, and Sufism has also served as a primary creative force behind Islamic aesthetic expression in poetry, music, and the visual arts. In this course, we will attempt to understand the various significations of Sufism by addressing both the world of ideas and socio-cultural practices. The course is divided into four modules: central themes and concepts going back to the earliest individuals who identified themselves as Sufis; the lives and works of two medieval Sufis; Sufi cosmology and metaphysics; Sufism as a global and multifarious trend in the modern world.",
-    "times_and_locations": {
-      "RELI 285 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "02:00 PM - 04:30 PM",
-            "location": "CHAP 205"
           }
         ]
       }
@@ -11495,36 +10291,6 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "Russian Empire in Eurasia",
-    "course_codes": [
-      "HIST-112",
-      "RUSS-230"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sergey Glebov"
-      ]
-    },
-    "description": "In the course of five hundred years, the Russian empire in Eurasia evolved as the largest territorial polity in the world. In this course, we will explore the medieval foundations of the imperial state and look at its predecessors and models (Kievan Rus and the empire of the Mongols), discuss ways in which cooperation and resistance shaped the imperial state and society, and study cultural and political entanglements among different ethnic, linguistic and confessional groups in Eurasia. Chronologically, we will cover the period from the 10th century to the crisis of the empire in the early 20th century. Thematically, we will focus on structures of imperial state and society (the imperial house, peasantry, nobility, confessions, intelligentsia, revolutionary movement) and most important regions of the Russian Empire (Ukraine, the Caucasus, the Baltics, Siberia, Central Asia). The course serves as the core course to the Five College REEES Certificate. Requirements will include several reaction papers, map quiz, mid-term exam and final research paper.",
-    "times_and_locations": {
-      "HIST 112 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "BARR 105"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "BARR 105"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
     "course_title": "Third-Year Russian: Studies in Russian Language and Culture II",
     "course_codes": [
       "RUSS-302"
@@ -11584,7 +10350,9 @@
   {
     "semester": "Spring 2012",
     "course_title": "The Cross-Cultural Construction of Gender",
-    "course_codes": ["WAGS-100"],
+    "course_codes": [
+      "WAGS-100"
+    ],
     "faculty": {
       "Section 01": [
         "Margaret R. Hunt",
@@ -11612,7 +10380,9 @@
   {
     "semester": "Spring 2012",
     "course_title": "New Women in America",
-    "course_codes": ["WAGS-112"],
+    "course_codes": [
+      "WAGS-112"
+    ],
     "faculty": {
       "Section 01": [
         "Wendy H. Bergoffen"
@@ -11631,95 +10401,6 @@
             "day": "W",
             "time": "12:30 PM - 01:50 PM",
             "location": "MCLS 428"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Art From the Realm of Dreams",
-    "course_codes": [
-      "ARHA-146",
-      "EUST-146"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Natasha Staller"
-      ]
-    },
-    "description": "We begin with a long-standing Spanish obsession with dreams, analyzing images and texts by Calderon, Quevedo and Goya. We next will consider a range of dream workers from a range of cultures, centuries, and disciplines--among them Apollinaire, Freud, Breton, Dali, Carrington, and Kahlo--as well as others working around the globe in our own time.",
-    "times_and_locations": {
-      "ARHA 146 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "FAYE 217A"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "FAYE 217A"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "The Dao of Sex: Sexuality in China, Past and Present",
-    "course_codes": [
-      "ASLC-328"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Paola Zamperini"
-      ]
-    },
-    "description": "This survey course will focus on sexual culture in China, from pre-Qin times to the present. Using various sources such as ancient medical texts, Daoist manuals, court poetry and Confucian classics, paintings and illustrated books, movies and documentaries, as well as modern and pre-modern fiction written both in the classic and vernacular languages, we will explore notions of sex, sexuality, and desire. Through the lens of cultural history and gender studies, we will try to reconstruct the genealogy of the discourses centered around sex that developed in China, at all levels of society, throughout 5,000 years. Among the topics covered will be sexual yoga, prostitution, pornography, and sex-tourism.",
-    "times_and_locations": {
-      "ASLC 328 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "WEBS 217"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "WEBS 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Women and Art in Early Modern Europe",
-    "course_codes": [
-      "ARHA-284",
-      "EUST-284"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Nicola Courtright"
-      ]
-    },
-    "description": "This course will examine the ways in which prevailing ideas about women and gender-shaped visual imagery, and how these images influenced ideas concerning women from the Renaissance to the Enlightenment. It will adopt a comparative perspective, both by identifying regional differences among European nations and tracing changes over time. In addition to considering patronage of art by women and works by women artists, we will look at the depiction of women heroes such as Judith; the portrayal of women rulers, including Elizabeth I and Marie de' Medici; and the imagery of rape. Topics emerging from these categories of art include biological theories about women; humanist defenses of women; the relationship between the exercise of political power and sexuality; differing attitudes toward women in Catholic and Protestant art; and feminine ideals of beauty.",
-    "times_and_locations": {
-      "ARHA 284 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "FAYE 113"
           }
         ]
       }
@@ -11757,7 +10438,9 @@
   {
     "semester": "Spring 2012",
     "course_title": "Ideas and Methods in the Study of Gender",
-    "course_codes": ["WAGS-300"],
+    "course_codes": [
+      "WAGS-300"
+    ],
     "faculty": {
       "Section 01": [
         "Amrita Basu"
@@ -11779,7 +10462,9 @@
   {
     "semester": "Spring 2012",
     "course_title": "Gendering Political Economy",
-    "course_codes": ["WAGS-311"],
+    "course_codes": [
+      "WAGS-311"
+    ],
     "faculty": {
       "Section 01": [
         "Nancy Folbre"
@@ -11798,35 +10483,6 @@
             "day": "W",
             "time": "02:00 PM - 03:20 PM",
             "location": "WEBS 220"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Black Sexualities",
-    "course_codes": [
-      "BLST-236"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Khary O. Polk"
-      ]
-    },
-    "description": "From the modern era to the contemporary moment, the intersection of race, gender, and class has been especially salient for people of African descent for men as well as for women. How might the category of sexuality act as an additional optic through which to view and reframe contemporary and historical debates concerning the construction of black identity? In what ways have traditional understandings of masculinity and femininity contributed to an understanding of African American life and culture as invariably heterosexual? How have black lesbian, gay, and transgendered persons effected political change through their theoretical articulations of identity, difference, and power? In this interdisciplinary course, we will address these questions through an examination of the complex roles gender and sexuality play in the lives of people of African descent. Remaining attentive to the ways black people have claimed social and sexual agency in spite of systemic modes of inequality, we will engage with critical race theory, black feminist thought, queer-of-color critique, literature, art, film, new media and erotica, as well as scholarship from anthropology, sociology, and history.",
-    "times_and_locations": {
-      "BLST 236 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "MERR 401"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "MERR 401"
           }
         ]
       }
@@ -12327,35 +10983,6 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "Women Writers of Spain",
-    "course_codes": [
-      "SPAN-232"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sara J. Brenneis"
-      ]
-    },
-    "description": "Twentieth-century Spanish women writers have carved out a particular niche in the canon of Spanish literature. Often envisioned as a single entity, they have distinguished themselves as individual writers, just as their male counterparts have. In reading contemporary novels, short fiction, essays and poetry authored by women, this course will consider how one defines an escritura femenina in Spain and what, if anything, differentiates the escritura femenina as a gendered space from other modes of writing. Conducted in Spanish.",
-    "times_and_locations": {
-      "SPAN 232 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CONV 304"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CONV 304"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
     "course_title": "Madrid",
     "course_codes": [
       "SPAN-355"
@@ -12672,7 +11299,9 @@
   {
     "semester": "Spring 2012",
     "course_title": "Numbers Rule the World.",
-    "course_codes": [],
+    "course_codes": [
+      "MELL-116"
+    ],
     "faculty": {
       "Section 01": [
         "Jerome L. Himmelstein"
@@ -12935,57 +11564,6 @@
   },
   {
     "semester": "Spring 2012",
-    "course_title": "Chekhov And His Theater",
-    "course_codes": [
-      "RUSS-229",
-      "THDA-229"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Catherine A. Ciepiela",
-        "Connie Congdon"
-      ]
-    },
-    "description": "Anton Chekhov's reputation rests as much on his dramaturgy as on his fiction. His plays, whose staging by the Moscow Art Theater helped revolutionize Russian and world theater, endure in the modern repertoire. In this course, we will study his dramatic oeuvre in its cultural and historical context, drawing on the biographical and critical literature on Chekhov, printed and visual materials concerning the late nineteenth-century European theater, and the writings of figures like Constantin Stanislavsky, who developed a new acting method in response to Chekhov's art. We also will examine key moments in the production history of Chekhov's plays in Russian, English, and American theater and film.",
-    "times_and_locations": {
-      "RUSS 229 - L/D": {
-        "Section 01": [
-          {
-            "day": "F",
-            "time": "01:00 PM - 04:00 PM",
-            "location": "MEAD 115"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Video Production: Bodies in Motion",
-    "course_codes": [
-      "FAMS-341",
-      "THDA-250"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Wendy Woodson"
-      ]
-    },
-    "description": "This studio production class will focus on multiple ways of tracking, viewing, and capturing bodies in motion. The course will emphasize working with the camera as an extension of the body to explore radically different points of view and senses of focus. We will experiment with different techniques and different kinds of bodies (human, animal, and object) to bring a heightened awareness of kinesthetic involvement, animation and emotional immediacy to the bodies on screen and behind the camera. In addition, we will interject and follow bodies into different perceptions of time, progression, place and relationship. In the process, we will express various experiences and theories of embodiment and question what constitutes a body. Depending on student interests, final projects can range from choreographies for the camera to fictional narratives to documentary studies. The class will alternate between camera sessions, both in the studio and on location, and sessions in the editing suite working with Final Cut Pro.",
-    "times_and_locations": {
-      "THDA 250 - L/D": {
-        "Section 01": [
-          {
-            "day": "F",
-            "time": "01:00 PM - 04:00 PM",
-            "location": "WEBS 117"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
     "course_title": "Scripts and Scores",
     "course_codes": [
       "THDA-252"
@@ -13184,153 +11762,6 @@
             "day": "M",
             "time": "04:15 PM - 05:30",
             "location": "PM"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Art From the Realm of Dreams",
-    "course_codes": [
-      "ARHA-146",
-      "EUST-146"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Natasha Staller"
-      ]
-    },
-    "description": "We begin with a long-standing Spanish obsession with dreams, analyzing images and texts by Calderon, Quevedo and Goya. We next will consider a range of dream workers from a range of cultures, centuries, and disciplines--among them Apollinaire, Freud, Breton, Dali, Carrington, and Kahlo--as well as others working around the globe in our own time.",
-    "times_and_locations": {
-      "ARHA 146 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "FAYE 217A"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "FAYE 217A"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "The Dao of Sex: Sexuality in China, Past and Present",
-    "course_codes": [
-      "ASLC-328"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Paola Zamperini"
-      ]
-    },
-    "description": "This survey course will focus on sexual culture in China, from pre-Qin times to the present. Using various sources such as ancient medical texts, Daoist manuals, court poetry and Confucian classics, paintings and illustrated books, movies and documentaries, as well as modern and pre-modern fiction written both in the classic and vernacular languages, we will explore notions of sex, sexuality, and desire. Through the lens of cultural history and gender studies, we will try to reconstruct the genealogy of the discourses centered around sex that developed in China, at all levels of society, throughout 5,000 years. Among the topics covered will be sexual yoga, prostitution, pornography, and sex-tourism.",
-    "times_and_locations": {
-      "ASLC 328 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "WEBS 217"
-          },
-          {
-            "day": "W",
-            "time": "12:30 PM - 01:50 PM",
-            "location": "WEBS 217"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Women and Art in Early Modern Europe",
-    "course_codes": [
-      "ARHA-284",
-      "EUST-284"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Nicola Courtright"
-      ]
-    },
-    "description": "This course will examine the ways in which prevailing ideas about women and gender-shaped visual imagery, and how these images influenced ideas concerning women from the Renaissance to the Enlightenment. It will adopt a comparative perspective, both by identifying regional differences among European nations and tracing changes over time. In addition to considering patronage of art by women and works by women artists, we will look at the depiction of women heroes such as Judith; the portrayal of women rulers, including Elizabeth I and Marie de' Medici; and the imagery of rape. Topics emerging from these categories of art include biological theories about women; humanist defenses of women; the relationship between the exercise of political power and sexuality; differing attitudes toward women in Catholic and Protestant art; and feminine ideals of beauty.",
-    "times_and_locations": {
-      "ARHA 284 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "FAYE 113"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "FAYE 113"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Women Writers of Spain",
-    "course_codes": [
-      "SPAN-232"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Sara J. Brenneis"
-      ]
-    },
-    "description": "Twentieth-century Spanish women writers have carved out a particular niche in the canon of Spanish literature. Often envisioned as a single entity, they have distinguished themselves as individual writers, just as their male counterparts have. In reading contemporary novels, short fiction, essays and poetry authored by women, this course will consider how one defines an escritura femenina in Spain and what, if anything, differentiates the escritura femenina as a gendered space from other modes of writing. Conducted in Spanish.",
-    "times_and_locations": {
-      "SPAN 232 - L/D": {
-        "Section 01": [
-          {
-            "day": "Tu",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CONV 304"
-          },
-          {
-            "day": "Th",
-            "time": "11:30 AM - 12:50 PM",
-            "location": "CONV 304"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "semester": "Spring 2012",
-    "course_title": "Black Sexualities",
-    "course_codes": [
-      "BLST-236"
-    ],
-    "faculty": {
-      "Section 01": [
-        "Khary O. Polk"
-      ]
-    },
-    "description": "From the modern era to the contemporary moment, the intersection of race, gender, and class has been especially salient for people of African descent for men as well as for women. How might the category of sexuality act as an additional optic through which to view and reframe contemporary and historical debates concerning the construction of black identity? In what ways have traditional understandings of masculinity and femininity contributed to an understanding of African American life and culture as invariably heterosexual? How have black lesbian, gay, and transgendered persons effected political change through their theoretical articulations of identity, difference, and power? In this interdisciplinary course, we will address these questions through an examination of the complex roles gender and sexuality play in the lives of people of African descent. Remaining attentive to the ways black people have claimed social and sexual agency in spite of systemic modes of inequality, we will engage with critical race theory, black feminist thought, queer-of-color critique, literature, art, film, new media and erotica, as well as scholarship from anthropology, sociology, and history.",
-    "times_and_locations": {
-      "BLST 236 - L/D": {
-        "Section 01": [
-          {
-            "day": "M",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "MERR 401"
-          },
-          {
-            "day": "W",
-            "time": "02:00 PM - 03:20 PM",
-            "location": "MERR 401"
           }
         ]
       }
