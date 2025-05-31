@@ -731,7 +731,7 @@
   {
     "semester": "Fall 2020",
     "course_title": "Sustainable Design: Principles, Practice, Critique",
-    "course_codes": [],
+    "course_codes": ["ARCH-205", "ARHA-205"],
     "faculty": {
       "Section 01": [
         "TBA"

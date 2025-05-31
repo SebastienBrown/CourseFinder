@@ -3346,7 +3346,7 @@
   {
     "semester": "Fall 2025",
     "course_title": "Secrets and Lies",
-    "course_codes": [],
+    "course_codes": ["FYSE-107"],
     "faculty": {
       "Section 01": [
         "Austin D. Sarat"
@@ -3370,7 +3370,7 @@
   {
     "semester": "Fall 2025",
     "course_title": "Investigating Objects",
-    "course_codes": [],
+    "course_codes": ["FYSE-111"],
     "faculty": {
       "Section 01": [
         "Douglas Culhane"
@@ -3382,7 +3382,7 @@
   {
     "semester": "Fall 2025",
     "course_title": "The Nuclear Age",
-    "course_codes": [],
+    "course_codes": ["FYSE-113"],
     "faculty": {
       "Section 01": [
         "Ellen R. Boucher"
@@ -3397,7 +3397,7 @@
   {
     "semester": "Fall 2025",
     "course_title": "Goya and His World",
-    "course_codes": [],
+    "course_codes": ["FYSE-115"],
     "faculty": {
       "Section 01": [
         "Natasha Staller"
@@ -3409,7 +3409,7 @@
   {
     "semester": "Fall 2025",
     "course_title": "The Anatomy of Pictures",
-    "course_codes": [],
+    "course_codes": ["FYSE-116"],
     "faculty": {
       "Section 01": [
         "Lorne Falk"
@@ -3421,7 +3421,7 @@
   {
     "semester": "Fall 2025",
     "course_title": "Coexistence: Christians, Muslims and Jews in Spain",
-    "course_codes": [],
+    "course_codes": ["FYSE-119"],
     "faculty": {
       "Section 01": [
         "Catherine V. Infante"
@@ -3433,7 +3433,7 @@
   {
     "semester": "Fall 2025",
     "course_title": "Modern China",
-    "course_codes": [],
+    "course_codes": ["FYSE-124"],
     "faculty": {
       "Section 01": [
         "Lei Ying"
@@ -3445,7 +3445,7 @@
   {
     "semester": "Fall 2025",
     "course_title": "The Tragic Condition",
-    "course_codes": [],
+    "course_codes": ["FYSE-126"],
     "faculty": {
       "Section 01": [
         "Richard P. Hutchins"
@@ -3457,7 +3457,7 @@
   {
     "semester": "Fall 2025",
     "course_title": "Music and Totalitarianism",
-    "course_codes": [],
+    "course_codes": ["FYSE-127"],
     "faculty": {
       "Section 01": [
         "Klara Moricz"
@@ -3469,7 +3469,7 @@
   {
     "semester": "Fall 2025",
     "course_title": "War and Peace",
-    "course_codes": [],
+    "course_codes": ["FYSE-128"],
     "faculty": {
       "Section 01": [
         "Michael M. Kunichika"
@@ -3481,7 +3481,7 @@
   {
     "semester": "Fall 2025",
     "course_title": "The Implications of Origins: Incipit vita nova",
-    "course_codes": [],
+    "course_codes": ["FYSE-133"],
     "faculty": {
       "Section 01": [
         "Paul V. Rockwell"
