@@ -7783,7 +7783,7 @@
   {
     "semester": "Fall 2023",
     "course_title": "Existentialism",
-    "course_codes": [],
+    "course_codes": ["FYSE-104"],
     "faculty": {
       "Section 01": [
         "Jaeyoon Park"
@@ -7882,7 +7882,7 @@
   {
     "semester": "Fall 2023",
     "course_title": "The Crowd",
-    "course_codes": [],
+    "course_codes": ["FYSE-108"],
     "faculty": {
       "Section 01": [
         "Nusrat S. Chowdhury"
@@ -7981,7 +7981,7 @@
   {
     "semester": "Fall 2023",
     "course_title": "Violence and Politics",
-    "course_codes": [],
+    "course_codes": ["FYSE-112"],
     "faculty": {
       "Section 01": [
         "Jonathan M. Obert"
@@ -8489,7 +8489,7 @@
   {
     "semester": "Fall 2023",
     "course_title": "Incipit vita nova: The Implications of Origins",
-    "course_codes": [],
+    "course_codes": ["FYSE-133"],
     "faculty": {
       "Section 01": [
         "Paul V. Rockwell"

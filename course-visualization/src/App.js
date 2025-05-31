@@ -12,7 +12,7 @@ export default function App() {
       {/* Title + Search Bar */}
       <div className="w-full max-w-[1200px] mx-auto space-y-6 mb-4 px-4">
         <h1 className="text-3xl font-bold text-[#3f1f69] text-center mt-6">
-          Amherst Course Scheduler
+          The Visual Open Curriculum
         </h1>
         <CourseInput
           onHighlight={setHighlighted}
