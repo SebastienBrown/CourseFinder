@@ -87,6 +87,7 @@ export default function CourseSimilarityPrecomputedGraph({
   mode,
   highlighted = [],
   conflicted = [],
+  onSemesterChange
 }) {
   const svgRef = useRef(null);
   const [svgReady, setSvgReady] = useState(false);
@@ -101,6 +102,11 @@ export default function CourseSimilarityPrecomputedGraph({
   });
   const [selectedCourse, setSelectedCourse] = useState(null);
   const [selectedSemester, setSelectedSemester] = useState(CURRENT_SEMESTER);
+
+  // Call onSemesterChange when selectedSemester changes
+  useEffect(() => {
+    onSemesterChange?.(selectedSemester);
+  }, [selectedSemester, onSemesterChange]);
 
   const setSvgRef = useCallback((node) => {
     svgRef.current = node;

@@ -47,6 +47,10 @@
 - `export FLASK_APP=schedule.py` or `set FLASK_APP=schedule.py` on Windows
 - `flask run`
 
+If the search bar returns a "fetch" error, try changing the port.
+- Find all instances of the number 5000 in the following files and replace all with 5001.
+   - `course-visualization/src/CourseInput.jsx` and `./backend/schedule.py`
+
 **Run frontend**
 - `cd course-visualization/src`
 - `npm install`
