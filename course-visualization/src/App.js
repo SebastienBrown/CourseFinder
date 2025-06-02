@@ -6,6 +6,7 @@ export default function App() {
   const [mode] = useState("precomputed-tsne");
   const [highlighted, setHighlighted] = useState([]);
   const [conflicted, setConflicted] = useState([]);
+  const [currentSemester, setCurrentSemester] = useState("Spring 2024"); // Default semester
 
   return (
     <div className="flex flex-col min-h-screen bg-[#f9f7fb]">
@@ -17,6 +18,7 @@ export default function App() {
         <CourseInput
           onHighlight={setHighlighted}
           onConflicted={setConflicted}
+          currentSemester={currentSemester}
         />
       </div>
 
@@ -26,6 +28,7 @@ export default function App() {
           mode="tsne"
           highlighted={highlighted}
           conflicted={conflicted}
+          onSemesterChange={setCurrentSemester}
         />
       </div>
     </div>
