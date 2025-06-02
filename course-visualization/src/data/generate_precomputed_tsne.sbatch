@@ -4,7 +4,7 @@
 #SBATCH --cpus-per-task=4                       # Each script gets 16 CPU cores
 
 #SBATCH --mem=160GB                              # Total memory allocation
-#SBATCH --time=30:00:00                          # Adjust time as needed
+#SBATCH --time=12:00:00                          # Adjust time as needed
 #SBATCH --partition=sched_mit_econ
 
 #SBATCH --mail-type=all                         # send email on job start, end and fault
