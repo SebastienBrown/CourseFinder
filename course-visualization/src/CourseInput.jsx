@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function CourseInput({ onHighlight, onConflicted }) {
+export default function CourseInput({ onHighlight, onConflicted, currentSemester }) {
   const [input, setInput] = useState("");
 
   const handleSubmit = async (e) => {
@@ -19,7 +19,10 @@ export default function CourseInput({ onHighlight, onConflicted }) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ taken_courses: codes }),
+        body: JSON.stringify({ 
+          taken_courses: codes,
+          semester: currentSemester 
+        }),
       }
     );
 
