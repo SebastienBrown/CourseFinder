@@ -4,7 +4,7 @@ from sklearn.manifold import TSNE
 
 def separate_overlapping_points(coords, similarity_matrix, course_codes, min_dist=1.0, step_size=0.1, num_iterations=100):
     """
-    Iteratively separates points that are closer than min_dist, except for exact duplicates from the same semester.
+    Iteratively separates points that are closer than min_dist, except for exact duplicates across different semesters.
     Args:
         coords: numpy array of shape (n, 2) containing the coordinates
         similarity_matrix: numpy array of shape (n, n) containing similarity scores
@@ -40,10 +40,10 @@ def separate_overlapping_points(coords, similarity_matrix, course_codes, min_dis
     return coords
 
 # Load your similarity data
-with open(f'../../../similarity/output_similarity_all.json', 'r') as f:
+with open(f'../../../similarity/output_similarity_2324S.json', 'r') as f:
     data = json.load(f)
 
-out = ['499', '498', '490', '390', '290', '210F', '111F']
+out = ['499', '498', '496', '490', '390', '290', '210F', '111F']
 
 # Filter out courses with course codes
 filtered_courses = []
@@ -120,7 +120,7 @@ assert np.all(dist_matrix >= 0), "Distance matrix has negative values!"
 
 # Run t-SNE
 print(f'Running t-SNE on {n} courses...')
-perplexity = min(30, max(5, n//3))  # Ensure perplexity is appropriate for dataset size
+perplexity = 200  # Ensure perplexity is appropriate for dataset size
 tsne = TSNE(
     n_components=2, 
     metric='precomputed', 
@@ -132,7 +132,7 @@ coords = tsne.fit_transform(dist_matrix)
 
 # Separate overlapping points
 print(f'Separating overlapping points with min_dist={1.0}...')
-coords = separate_overlapping_points(coords, sim_matrix, course_codes, min_dist=1.0)
+# coords = separate_overlapping_points(coords, sim_matrix, course_codes, min_dist=1.0)
 
 # Save coordinates and course codes
 output = []
@@ -156,18 +156,18 @@ for entry in valid_data:
     })
 
 # Save results
-with open(f'../../public/precomputed_tsne_coords_all_v2.json', 'w') as f:
+with open(f'../../public/precomputed_tsne_coords_2324S_200_overlap.json', 'w') as f:
     json.dump(output, f, indent=2)
-with open(f'../../../backend/data/precomputed_tsne_coords_all_v2.json', 'w') as f:
+with open(f'../../../backend/data/precomputed_tsne_coords_2324S_200_overlap.json', 'w') as f:
     json.dump(output, f, indent=2)
 
-if skipped_entries:
-    # Save skipped entries to the 'skipped' directory at the workspace root
-    with open(f'../../../skipped/skipped_entries_all.json', 'w') as f:
-        json.dump(skipped_entries, f, indent=2)
-    print(f"Skipped {len(skipped_entries)} entries with empty course_codes. See skipped/skipped_entries_all.json for details.")
-else:
-    print("No entries with empty course_codes were skipped.")
+# if skipped_entries:
+#     # Save skipped entries to the 'skipped' directory at the workspace root
+#     with open(f'../../../skipped/skipped_entries_all.json', 'w') as f:
+#         json.dump(skipped_entries, f, indent=2)
+#     print(f"Skipped {len(skipped_entries)} entries with empty course_codes. See skipped/skipped_entries_all.json for details.")
+# else:
+#     print("No entries with empty course_codes were skipped.")
 
 print(f'Saved t-SNE coordinates for {n} unique courses to precomputed_tsne_coords.json')
 

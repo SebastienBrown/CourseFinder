@@ -44,18 +44,14 @@ export async function loadPrecomputedCourseData(semester) {
   if (!courseDetailsResponse.ok) {
     throw new Error(`HTTP error! status: ${courseDetailsResponse.status}`);
   }
-  const allCourseDetails = await courseDetailsResponse.json();
+  const courseDetails = await courseDetailsResponse.json();
   
-  // Filter courses for the selected semester
-  const courseDetails = allCourseDetails.filter(course => course.semester === semester);
-  
-  // Fetch and filter t-SNE coordinates
+  // Fetch t-SNE coordinates
   const tsneCoordsResponse = await fetch(getSemesterDataPaths(semester).tsneCoords);
   if (!tsneCoordsResponse.ok) {
     throw new Error(`HTTP error! status: ${tsneCoordsResponse.status}`);
   }
-  const allTsneCoords = await tsneCoordsResponse.json();
-  const tsneCoords = allTsneCoords.filter(coord => coord.semester === semester);
+  const tsneCoords = await tsneCoordsResponse.json();
 
   // Prepare a simplified list of courses from the details for graph node generation
   const courses = courseDetails.map(course => {
