@@ -56,3 +56,7 @@ If the search bar returns a "fetch" error, try changing the port.
 - `npm install`
 - `npm install tsne-js`
 - `npm run start`
+
+**Descriptive Analysis**
+- `cd analysis`
+- Make a semester-department panel with `sbatch descriptives.sbatch`
