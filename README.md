@@ -58,5 +58,5 @@ If the search bar returns a "fetch" error, try changing the port.
 - `npm run start`
 
 **Descriptive Analysis**
-- `cd analysis`
+- `cd analysis/code`
 - Make a semester-department panel with `sbatch descriptives.sbatch`
