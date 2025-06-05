@@ -9,11 +9,11 @@
 
 #SBATCH --mail-type=all                         # send email on job start, end and fault
 #SBATCH --mail-user=hnakazawa@povertyactionlab.org
-#SBATCH --output=../logs/descriptives_%A.txt
+#SBATCH --output=../../logs/descriptives_%A.txt
 
 source /orcd/software/core/001/centos7/pkg/miniforge/24.3.0-0/etc/profile.d/conda.sh
 conda activate course_venv
-# pip install -r ../requirements.txt
+# pip install -r ../../requirements.txt
 
 echo "Making dataset for descriptive analysis:"
 python "descriptives.py"

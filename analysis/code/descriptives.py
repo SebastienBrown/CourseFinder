@@ -58,5 +58,5 @@ df = df.set_index(['semester', 'year', 'dept'])
 df = df.sort_index()
 
 # Save to CSV
-df.to_csv('course_counts_by_semester_dept.csv')
+df.to_csv('../data/course_counts_by_semester_dept.csv')
 print("Done!")
