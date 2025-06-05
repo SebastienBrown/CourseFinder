@@ -1,5 +1,5 @@
 appdirs==1.4.4
-archspec @ file:///home/conda/feedstock_root/build_artifacts/archspec_1708969572489/work
+# archspec @ file:///home/conda/feedstock_root/build_artifacts/archspec_1708969572489/work
 attrs==25.1.0
 beautifulsoup4==4.13.3
 boltons @ file:///home/conda/feedstock_root/build_artifacts/boltons_1711936407380/work
