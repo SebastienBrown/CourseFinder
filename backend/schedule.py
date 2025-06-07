@@ -5,6 +5,7 @@ import os
 from flask_cors import CORS
 import requests
 from dotenv import load_dotenv
+from config import PORT
 
 # Load env
 load_dotenv()
@@ -197,14 +198,7 @@ def submit_courses():
     # Prepare row for Supabase
     row_data = {"id": user_id}
 
-    semester_columns = [
-        "2223F", "2223S", "2324F", "2324S",
-        "2425F", "2425S", "2526F", "2526S"
-    ]
-
-    row_data = {"id": user_id}
-
-    for semester in semester_columns:
+    for semester in SEMESTER_COLUMNS:
         if semester in semester_courses:
             courses_list = semester_courses[semester]
             if courses_list:  # Only include if non-empty list
@@ -220,9 +214,7 @@ def submit_courses():
         "Prefer": "resolution=merge-duplicates"  # enables upsert
     }
 
-    patch_url = f"{SUPABASE_TABLE_URL}?id=eq.{user_id}"
-
-    response = requests.patch(patch_url, json=row_data, headers=headers)
+    response = requests.post(SUPABASE_TABLE_URL, json=[row_data], headers=headers)
 
     print("Supabase response:", response.status_code, response.text)
 
@@ -250,21 +242,33 @@ def retrieve_courses():
 
     # Build GET URL with filter to retrieve row by user id
     get_url = f"{SUPABASE_TABLE_URL}?id=eq.{user_id}"
+    
+    try:
+        response = requests.get(get_url, headers=headers)
+        print("Supabase response:", response.status_code, response.text)
 
-    response = requests.get(get_url, headers=headers)
-
-    print("Supabase response:", response.status_code, response.text)
-
-    if response.status_code != 200:
-        return jsonify({"error": "Failed to fetch from Supabase", "details": response.text}), response.status_code
-
-    data = response.json()
-    if not data:
-        return jsonify({"error": "No data found for user_id"}), 404
-
-    # Return the first matching record
-    return jsonify(data[0]), 200
+        if response.status_code == 200:
+            data = response.json()
+            if data:
+                # Create a list of courses with their semester information
+                courses_with_semesters = []
+                for semester in SEMESTER_COLUMNS:
+                    if semester in data[0] and data[0][semester] is not None:
+                        for course in data[0][semester]:
+                            courses_with_semesters.append({
+                                "course_code": course,
+                                "semester": semester
+                            })
+                return jsonify(courses_with_semesters)
+            else:
+                return jsonify([])  # No data found
+        else:
+            return jsonify({"error": "Failed to retrieve from Supabase", "details": response.text}), 500
+            
+    except Exception as e:
+        print("Error retrieving courses:", str(e))
+        return jsonify({"error": str(e)}), 500
     
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", PORT)))
