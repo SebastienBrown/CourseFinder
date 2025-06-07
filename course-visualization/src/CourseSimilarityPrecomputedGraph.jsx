@@ -14,6 +14,7 @@ import {
 } from "./CourseSimilarityPrecomputedProcessor";
 import { CURRENT_SEMESTER, AVAILABLE_SEMESTERS, getSemesterDataPaths } from "./config/semesterConfig";
 import CoursePopup from "./CoursePopup";
+import { supabase } from "./supabaseClient"; // make sure this points to your initialized Supabase client
 
 // Use the globally defined current semester
 const semester = CURRENT_SEMESTER;
@@ -102,6 +103,10 @@ export default function CourseSimilarityPrecomputedGraph({
   });
   const [selectedCourse, setSelectedCourse] = useState(null);
   const [selectedSemester, setSelectedSemester] = useState(CURRENT_SEMESTER);
+  const [userId, setUserId] = useState(null);
+
+  // Add a new state variable to hold backend output data
+const [backendOutputData, setBackendOutputData] = useState(null); 
 
   // Call onSemesterChange when selectedSemester changes
   useEffect(() => {
@@ -112,6 +117,12 @@ export default function CourseSimilarityPrecomputedGraph({
     svgRef.current = node;
     if (node) setSvgReady(true);
   }, []);
+
+  useEffect(() => {
+    if (backendOutputData) {
+      console.log("backendOutputData variable contents:", backendOutputData);
+    }
+  }, [backendOutputData]);
 
   useEffect(() => {
     function handleResize() {
@@ -141,6 +152,58 @@ export default function CourseSimilarityPrecomputedGraph({
     }
     loadData();
   }, [selectedSemester]);
+
+  useEffect(() => {
+    async function fetchUser() {
+      const {
+        data: { user },
+        error,
+      } = await supabase.auth.getUser();
+
+      if (error) {
+        console.error("Error fetching user:", error);
+      } else if (user) {
+        setUserId(user.id);
+      } else {
+        console.warn("No user logged in.");
+      }
+    }
+    fetchUser();
+  }, []);
+
+
+  async function fetchBackendData() {
+    try {
+      // Adjust URL and payload as per your backend
+      const response = await fetch("http://127.0.0.1:8000/retrieve_courses", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,            // send user ID here
+          // include other data you want to send to backend
+        }),
+      });
+  
+      if (!response.ok) {
+        throw new Error(`Backend error: ${response.status}`);
+      }
+  
+      const data = await response.json();
+      console.log("Backend response data:", data); // <-- log the response here
+      setBackendOutputData(data);  // store output here
+    } catch (err) {
+      setError(err.message);
+      console.error("Error fetching backend data:", err);
+    }
+  }
+  
+  useEffect(() => {
+    if (!svgReady || !userId) return; // wait for svgReady and userId before fetching
+    fetchBackendData();
+  }, [svgReady, tsneCoords, selectedSemester, userId]);
+
 
   useLayoutEffect(() => {
     // Ensure SVG is ready and all necessary data is loaded and in expected format

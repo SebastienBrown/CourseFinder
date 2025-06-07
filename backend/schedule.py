@@ -3,6 +3,18 @@ from datetime import datetime
 import json
 import os
 from flask_cors import CORS
+import requests
+from dotenv import load_dotenv
+
+# Load env
+load_dotenv()
+
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+print(SUPABASE_KEY)
+print(SUPABASE_URL)
+
+SUPABASE_TABLE_URL = f"{SUPABASE_URL}/rest/v1/user_courses"  # Example table path
 
 
 app = Flask(__name__)
@@ -157,6 +169,102 @@ def conflicted_courses():
     print("Conflicted:", conflicted_courses[:5])  # sample output
 
     return jsonify({"conflicted_courses": conflicted_courses})
+
+
+# List of allowed semester columns
+SEMESTER_COLUMNS = [
+    "2223F",
+    "2223S",
+    "2324F",
+    "2324S",
+    "2425F",
+    "2425S",
+    "2526F",
+    "2526S"
+]
+
+@app.route("/submit_courses", methods=["POST"])
+def submit_courses():
+    data = request.json
+    print("Incoming request data:", data)
+
+    user_id = data.get("user_id")
+    semester_courses = data.get("semester_courses")
+
+    if not user_id or not semester_courses:
+        return jsonify({"error": "Missing user_id or semester_courses"}), 400
+
+    # Prepare row for Supabase
+    row_data = {"id": user_id}
+
+    semester_columns = [
+        "2223F", "2223S", "2324F", "2324S",
+        "2425F", "2425S", "2526F", "2526S"
+    ]
+
+    row_data = {"id": user_id}
+
+    for semester in semester_columns:
+        if semester in semester_courses:
+            courses_list = semester_courses[semester]
+            if courses_list:  # Only include if non-empty list
+                row_data[semester] = courses_list
+
+    print("Prepared row data:", row_data)
+
+    # Send upsert to Supabase REST API
+    headers = {
+        "apikey": SUPABASE_KEY,
+        "Authorization": f"Bearer {SUPABASE_KEY}",
+        "Content-Type": "application/json",
+        "Prefer": "resolution=merge-duplicates"  # enables upsert
+    }
+
+    patch_url = f"{SUPABASE_TABLE_URL}?id=eq.{user_id}"
+
+    response = requests.patch(patch_url, json=row_data, headers=headers)
+
+    print("Supabase response:", response.status_code, response.text)
+
+    if response.status_code in [200, 201]:
+        return jsonify({"status": "success"}), 200
+    else:
+        return jsonify({"error": "Failed to write to Supabase", "details": response.text}), 500
+    
+
+@app.route("/retrieve_courses", methods=["POST"])
+def retrieve_courses():
+    data = request.json
+    print("Incoming request data:", data)
+
+    user_id = data.get("user_id")
+    if not user_id:
+        return jsonify({"error": "Missing user_id"}), 400
+
+    headers = {
+        "apikey": SUPABASE_KEY,
+        "Authorization": f"Bearer {SUPABASE_KEY}",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+    }
+
+    # Build GET URL with filter to retrieve row by user id
+    get_url = f"{SUPABASE_TABLE_URL}?id=eq.{user_id}"
+
+    response = requests.get(get_url, headers=headers)
+
+    print("Supabase response:", response.status_code, response.text)
+
+    if response.status_code != 200:
+        return jsonify({"error": "Failed to fetch from Supabase", "details": response.text}), response.status_code
+
+    data = response.json()
+    if not data:
+        return jsonify({"error": "No data found for user_id"}), 404
+
+    # Return the first matching record
+    return jsonify(data[0]), 200
+    
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
