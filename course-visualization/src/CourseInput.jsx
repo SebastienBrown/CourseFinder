@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { API_BASE_URL } from './config';
 
 export default function CourseInput({ onHighlight, onConflicted, currentSemester }) {
   const [input, setInput] = useState("");
@@ -12,19 +13,16 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
 
     onHighlight(codes); // Highlight user input courses
 
-    const response = await fetch(
-      "http://127.0.0.1:8000/conflicted_courses",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ 
-          taken_courses: codes,
-          semester: currentSemester 
-        }),
-      }
-    );
+    const response = await fetch(`${API_BASE_URL}/conflicted_courses`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ 
+        taken_courses: codes,
+        semester: currentSemester 
+      }),
+    });
 
     const data = await response.json();
     onConflicted(data.conflicted_courses);

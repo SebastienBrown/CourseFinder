@@ -1,6 +1,6 @@
 # Creating the virtual environment:
 
-- `python3.10 -m venv course_venv`
+- `python -m venv course_venv` or `python3.10 -m venv course_venv`
 - `source course_venv/bin/activate`
 - `pip install requirements.txt`
 
@@ -48,14 +48,15 @@
 - `flask run`
 
 If the search bar returns a "fetch" error, try changing the port.
-- Find all instances of the number 5000 in the following files and replace all with 5001.
-   - `course-visualization/src/CourseInput.jsx` and `./backend/schedule.py`
+- If you are a new user, add your username and preferred port number to `course-visualization/src/config.js`
 
 **Run frontend**
 - `cd course-visualization/src`
 - `npm install`
 - `npm install tsne-js`
 - `npm run start`
+
+`npm install react-router-dom` may fix some issues if the error is related to react-router-dom.
 
 **Descriptive Analysis**
 - `cd analysis/code`
