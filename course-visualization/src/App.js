@@ -6,6 +6,59 @@ import { supabase } from "./supabaseClient";
 import Auth from "./Auth";
 import Intake from "./Intake"; // intake semester checklist
 import SemesterCourseIntake from "./SemesterCourseIntake"; // per-semester course selector
+import { useNavigate } from "react-router-dom";
+
+// Separate component for the Graph Page
+function GraphPage({
+  logout,
+  highlighted,
+  conflicted,
+  setHighlighted,
+  setConflicted,
+  currentSemester,
+  setCurrentSemester,
+}) {
+  const navigate = useNavigate();
+
+  return (
+    <div className="flex flex-col min-h-screen bg-[#f9f7fb]">
+      <div className="w-full max-w-[1200px] mx-auto space-y-6 mb-4 px-4">
+        <div className="flex justify-between items-center mt-6">
+          <h1 className="text-3xl font-bold text-[#3f1f69] text-center">
+            The Visual Open Curriculum
+          </h1>
+          <div className="flex space-x-2">
+            <button
+              onClick={logout}
+              className="bg-red-500 text-white px-4 py-2 rounded"
+            >
+              Sign Out
+            </button>
+            <button
+              onClick={() => navigate("/intake")}
+              className="bg-blue-500 text-white px-4 py-2 rounded"
+            >
+              Back to Intake
+            </button>
+          </div>
+        </div>
+        <CourseInput
+          onHighlight={setHighlighted}
+          onConflicted={setConflicted}
+          currentSemester={currentSemester}
+        />
+      </div>
+      <div className="flex-grow relative px-4">
+        <CourseSimilarityPrecomputedGraph
+          mode="tsne"
+          highlighted={highlighted}
+          conflicted={conflicted}
+          onSemesterChange={setCurrentSemester}
+        />
+      </div>
+    </div>
+  );
+}
 
 export default function App() {
   const [user, setUser] = useState(null);
@@ -35,34 +88,15 @@ export default function App() {
         <Route
           path="/graph"
           element={
-            <div className="flex flex-col min-h-screen bg-[#f9f7fb]">
-              <div className="w-full max-w-[1200px] mx-auto space-y-6 mb-4 px-4">
-                <div className="flex justify-between items-center mt-6">
-                  <h1 className="text-3xl font-bold text-[#3f1f69] text-center">
-                    The Visual Open Curriculum
-                  </h1>
-                  <button
-                    onClick={logout}
-                    className="bg-red-500 text-white px-4 py-2 rounded"
-                  >
-                    Sign Out
-                  </button>
-                </div>
-                <CourseInput
-                  onHighlight={setHighlighted}
-                  onConflicted={setConflicted}
-                  currentSemester={currentSemester}
-                />
-              </div>
-              <div className="flex-grow relative px-4">
-                <CourseSimilarityPrecomputedGraph
-                  mode="tsne"
-                  highlighted={highlighted}
-                  conflicted={conflicted}
-                  onSemesterChange={setCurrentSemester}
-                />
-              </div>
-            </div>
+            <GraphPage
+              logout={logout}
+              highlighted={highlighted}
+              conflicted={conflicted}
+              setHighlighted={setHighlighted}
+              setConflicted={setConflicted}
+              currentSemester={currentSemester}
+              setCurrentSemester={setCurrentSemester}
+            />
           }
         />
         <Route path="*" element={<Navigate to="/intake" replace />} />

@@ -13,7 +13,7 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
     onHighlight(codes); // Highlight user input courses
 
     const response = await fetch(
-      "http://localhost:5000/api/conflicted_courses",
+      "http://127.0.0.1:8000/conflicted_courses",
       {
         method: "POST",
         headers: {

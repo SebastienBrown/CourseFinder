@@ -94,8 +94,8 @@ const getShapeForDept = (dept) =>
 
 export default function CourseSimilarityPrecomputedGraph({
   mode,
-  highlighted = [],
-  conflicted = [],
+  highlighted,
+  conflicted,
   onSemesterChange
 }) {
   const svgRef = useRef(null);
@@ -126,6 +126,7 @@ const [backendOutputData, setBackendOutputData] = useState(null);
     if (node) setSvgReady(true);
   }, []);
 
+  console.log("Conflicted array:", conflicted);
   
 
   useEffect(() => {
@@ -274,34 +275,35 @@ const [backendOutputData, setBackendOutputData] = useState(null);
       // Merge nodes with the same coordinates
       const mergedNodes = new Map();
       precomputedTSNECoords.forEach(({ codes, x, y }) => {
-        // Ensure currentCodes is always an array, defaulting to ["TBD"] if codes is not a valid array or is empty
-        const currentCodes = (Array.isArray(codes) && codes.length > 0) ? codes : ["TBD"];
-
+        // Filter out conflicted codes here:
+        const filteredCodes = codes.filter(code => !conflicted.includes(code));
+      
+        if (filteredCodes.length === 0) return; // skip node entirely if no codes left
+      
         const key = `${x},${y}`;
         if (!mergedNodes.has(key)) {
-          const firstCode = currentCodes[0] || "TBD";
+          const firstCode = filteredCodes[0] || "TBD";
           const dept = firstCode.split('-')[0];
           mergedNodes.set(key, {
             id: firstCode,
             x,
             y,
             department: dept,
-            codes: currentCodes,
+            codes: filteredCodes,
             shape: getShapeForDept(dept),
             color: majorColorMap.get(dept) || "#999",
-            highlighted: currentCodes.some(code => highlighted.includes(code)),
-            conflicted: currentCodes.some(code => conflicted.includes(code)),
+            highlighted: filteredCodes.some(code => highlighted.includes(code)),
+            conflicted: false, // We already filtered conflicted codes
           });
         } else {
           const node = mergedNodes.get(key);
-          node.codes = [...new Set([...node.codes, ...currentCodes])];
-          // Update department based on all codes
+          node.codes = [...new Set([...node.codes, ...filteredCodes])];
           const departments = node.codes.map(code => code.split('-')[0]);
-          node.department = departments[0]; // Keep first department as primary
+          node.department = departments[0];
           node.shape = getShapeForDept(node.department);
           node.color = majorColorMap.get(node.department) || "#999";
           node.highlighted = node.codes.some(code => highlighted.includes(code));
-          node.conflicted = node.codes.some(code => conflicted.includes(code));
+          node.conflicted = false; // We already filtered conflicted codes
         }
       });
 
