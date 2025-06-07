@@ -126,11 +126,7 @@ const [backendOutputData, setBackendOutputData] = useState(null);
     if (node) setSvgReady(true);
   }, []);
 
-  useEffect(() => {
-    if (backendOutputData) {
-      console.log("backendOutputData variable contents:", backendOutputData);
-    }
-  }, [backendOutputData]);
+  
 
   useEffect(() => {
     function handleResize() {
@@ -208,9 +204,9 @@ const [backendOutputData, setBackendOutputData] = useState(null);
   }
   
   useEffect(() => {
-    if (!svgReady || !userId) return; // wait for svgReady and userId before fetching
+    if (!userId) return;
     fetchBackendData();
-  }, [svgReady, tsneCoords, selectedSemester, userId]);
+  }, [userId]);
 
 
   useLayoutEffect(() => {
