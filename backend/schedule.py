@@ -220,9 +220,8 @@ def submit_courses():
         "Prefer": "resolution=merge-duplicates"  # enables upsert
     }
 
-    patch_url = f"{SUPABASE_TABLE_URL}?id=eq.{user_id}"
-
-    response = requests.patch(patch_url, json=row_data, headers=headers)
+    # Note — POST to table endpoint, no ?id filter
+    response = requests.post(SUPABASE_TABLE_URL, json=[row_data], headers=headers)
 
     print("Supabase response:", response.status_code, response.text)
 
