@@ -57,11 +57,18 @@ export default function SemesterCourseIntake() {
     fetchUserId(); // Fetch user ID when component mounts
   }, [semester, navigate]);
 
-  const filteredCourses = allCourses.filter(
-    (course) =>
-      course.course_title &&
-      course.course_title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredCourses = allCourses.filter((course) => {
+    const codesArray = Array.isArray(course.course_codes)
+      ? course.course_codes
+      : [course.course_codes];
+  
+    const codesMatch = codesArray.some((code) =>
+      code.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  
+    // You can decide if you want OR (either match) or just codesMatch
+    return codesMatch;
+  });
 
   const toggleCourse = (courseCode) => {
     setSelectedCourses((prev) =>

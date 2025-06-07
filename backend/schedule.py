@@ -95,7 +95,7 @@ def home():
     return "Flask backend is running!"
 
 
-@app.route("/api/conflicted_courses", methods=["POST"])
+@app.route("/conflicted_courses", methods=["POST"])
 def conflicted_courses():
     data = request.get_json()
     taken_course_codes = data.get("taken_courses", [])
@@ -166,7 +166,7 @@ def conflicted_courses():
 
     print("Current Semester:", current_semester)
     print("Taken courses in semester:", taken_courses_in_semester)
-    print("Conflicted:", conflicted_courses[:5])  # sample output
+    print("Conflicted:", conflicted_courses)  # sample output
 
     return jsonify({"conflicted_courses": conflicted_courses})
 
@@ -226,7 +226,7 @@ def submit_courses():
 
     print("Supabase response:", response.status_code, response.text)
 
-    if response.status_code in [200, 201]:
+    if response.status_code in [200, 201, 204]:
         return jsonify({"status": "success"}), 200
     else:
         return jsonify({"error": "Failed to write to Supabase", "details": response.text}), 500
