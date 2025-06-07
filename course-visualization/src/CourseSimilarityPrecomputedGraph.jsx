@@ -28,6 +28,12 @@ const TRANCHE_SHAPES = {
   "First Year Seminar": "doubleCircle"
 };
 
+// Helper function to normalize department codes
+const normalizeDepartment = (dept) => {
+  if (dept === "WAGS") return "SWAG";
+  return dept;
+};
+
 const TRANCHES = {
   "Arts": ["ARCH", "ARHA", "MUSI", "MUSL", "THDA"],
   "Humanities": [
@@ -57,6 +63,7 @@ const TRANCHES = {
     "RUSS",
     "SPAN",
     "SWAG",
+    "WAGS",
   ],
   "Sciences": [
     "ASTR",
@@ -75,8 +82,9 @@ const TRANCHES = {
 };
 
 const getTrancheForDept = (dept) => {
+  const normalizedDept = normalizeDepartment(dept);
   for (const [tranche, majors] of Object.entries(TRANCHES)) {
-    if (majors.includes(dept)) return tranche;
+    if (majors.includes(normalizedDept)) return tranche;
   }
   return "other";
 };
@@ -682,7 +690,7 @@ const [backendOutputData, setBackendOutputData] = useState(null);
           .append("text")
           .attr("x", 10)
           .attr("y", 5)
-          .text(dept)
+          .text(dept === "SWAG" ? "SWAG/WAGS" : dept)
           .style("font-size", "10px");
       });
 
