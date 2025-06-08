@@ -186,6 +186,12 @@ export default function CourseSimilarityPrecomputedGraph({
               }));
             setUserCourseCodes(userCourses);
 
+            // Identify semesters where the user took an FYSE course
+            const userFyseSemesters = new Set(userCourses
+              .filter(course => course.code.startsWith('FYSE-'))
+              .map(course => course.semester)
+            );
+
             // Load all courses and coordinates for all semesters in history
             const allCourses = [];
             const allCourseDetailsMap = new Map();
@@ -193,12 +199,18 @@ export default function CourseSimilarityPrecomputedGraph({
 
             for (const semester of historySemesters) {
               const { courses, courseDetails, tsneCoords } = await loadPrecomputedCourseData(semester);
-              console.log(`Data for semester ${semester}:`, { courses, courseDetails, tsneCoords }); // Add this line
-              // Add semester information to each course
-              const coursesWithSemester = courses.map(course => ({
-                ...course,
-                semester
-              }));
+              console.log(`Data for semester ${semester}:`, { courses, courseDetails, tsneCoords });
+
+              // Filter FYSE courses if the user did not take an FYSE course in this semester
+              const shouldIncludeFyse = userFyseSemesters.has(semester);
+
+              // Add semester information to each course and apply FYSE filter
+              const coursesWithSemester = courses
+                .filter(course => shouldIncludeFyse || !course.code.startsWith('FYSE-'))
+                .map(course => ({
+                  ...course,
+                  semester
+                }));
               allCourses.push(...coursesWithSemester);
 
               // Accumulate unique course details using a Map for robustness
@@ -206,16 +218,21 @@ export default function CourseSimilarityPrecomputedGraph({
               courseDetails.forEach(cd => {
                 if (cd.course_codes && Array.isArray(cd.course_codes)) {
                   cd.course_codes.forEach(code => {
-                    allCourseDetailsMap.set(code, cd);
+                    // Apply FYSE filter to courseDetails as well
+                    if (shouldIncludeFyse || !code.startsWith('FYSE-')) {
+                      allCourseDetailsMap.set(code, cd);
+                    }
                   });
                 }
               });
 
-              // Add semester information to each tsneCoord
-              const tsneCoordsWithSemester = tsneCoords.map(coord => ({
-                ...coord,
-                semester
-              }));
+              // Add semester information to each tsneCoord and apply FYSE filter
+              const tsneCoordsWithSemester = tsneCoords
+                .filter(coord => shouldIncludeFyse || !coord.codes.some(code => code.startsWith('FYSE-')))
+                .map(coord => ({
+                  ...coord,
+                  semester
+                }));
               allTsneCoords.push(...tsneCoordsWithSemester);
             }
 
