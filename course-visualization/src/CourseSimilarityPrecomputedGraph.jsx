@@ -17,6 +17,7 @@ import CoursePopup from "./CoursePopup";
 import { supabase } from "./supabaseClient"; // make sure this points to your initialized Supabase client
 import { API_BASE_URL } from './config';
 import Settings from './Settings';
+import html2canvas from 'html2canvas'; // Import html2canvas
 
 // Use the globally defined current semester
 const semester = CURRENT_SEMESTER;
@@ -116,6 +117,8 @@ export default function CourseSimilarityPrecomputedGraph({
   const [userId, setUserId] = useState(null);
   const [activeTab, setActiveTab] = useState('thisSemester'); // Add state for active tab
   const [showConflicts, setShowConflicts] = useState(true); // New state for conflict toggle
+  const mapContainerRef = useRef(null); // New ref for the main map container
+  const contentToCaptureRef = useRef(null); // New ref for the content to be captured
 
   // Add a new state variable to hold backend output data
   const [backendOutputData, setBackendOutputData] = useState(null);
@@ -1025,6 +1028,43 @@ export default function CourseSimilarityPrecomputedGraph({
     showConflicts,
   ]);
 
+  // Function to handle image download
+  const handleDownloadImage = async () => {
+    const mapContainer = contentToCaptureRef.current; // Use the new ref to get the actual DOM element for capture
+    if (mapContainer) {
+      try {
+        // Temporarily adjust scroll to top if needed, though html2canvas handles scrolling usually
+        const originalScrollY = window.scrollY;
+        window.scrollTo(0, 0);
+
+        const canvas = await html2canvas(mapContainer, {
+          useCORS: true, // If images/elements are loaded from different origins
+          scale: 8, // Increase scale for higher resolution
+          scrollY: -window.scrollY, // Correct scrolling issue
+          width: mapContainer.offsetWidth, // Capture the element's actual width
+          height: mapContainer.offsetHeight, // Capture the element's actual height
+        });
+
+        const image = canvas.toDataURL('image/jpeg', 1); // Convert to JPEG with quality 0.9
+        const link = document.createElement('a');
+        link.href = image;
+        link.download = `amherst_curriculum_${selectedSemester}.jpeg`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        // Restore original scroll position
+        window.scrollTo(0, originalScrollY);
+
+      } catch (err) {
+        console.error('Error downloading map as image:', err);
+        alert('Failed to download image.');
+      }
+    } else {
+      alert('Map container not found.');
+    }
+  };
+
   // Add a function to check if there's any history data
   const hasHistoryData = () => {
     return backendOutputData && backendOutputData.length > 0;
@@ -1046,7 +1086,10 @@ export default function CourseSimilarityPrecomputedGraph({
   };
 
   return (
-    <div className="relative w-full max-w-[1200px] mx-auto h-[80vh] bg-[#f9f7fb] shadow-md rounded-xl overflow-hidden border border-[#e8e2f2]">
+    <div
+      ref={mapContainerRef} // Assign the ref to the main container div
+      className="relative w-full max-w-[1200px] mx-auto h-[80vh] bg-[#f9f7fb] shadow-md rounded-xl overflow-hidden border border-[#e8e2f2]"
+    >
       {/* Tab Navigation */}
       <div className="absolute top-0 left-0 w-full bg-white/90 border-b border-[#e8e2f2] z-10">
         <div className="flex justify-between items-center">
@@ -1072,13 +1115,42 @@ export default function CourseSimilarityPrecomputedGraph({
               My Course History
             </button>
           </div>
-          {activeTab === 'thisSemester' && (
+          {/* Download Map button moved to the right, alongside Eliminate Conflicts */}
+          {activeTab === 'yourHistory' && (
             <button
-              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900"
-              onClick={() => setShowConflicts(!showConflicts)}
+              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 ml-4 flex items-center"
+              onClick={handleDownloadImage}
             >
-              Eliminate Conflicts: {showConflicts ? 'On' : 'Off'}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-4 h-4 mr-1"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+                />
+              </svg>
+              Download as Image
             </button>
+          )}
+          {activeTab === 'thisSemester' && (
+            <div className="flex items-center px-4 py-2 ml-auto">
+              <span className="text-sm font-medium text-gray-700 mr-2">Eliminate Conflicts:</span>
+              <button
+                className={`relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#3f1f69] ${showConflicts ? 'bg-[#3f1f69]' : 'bg-gray-300'}`}
+                onClick={() => setShowConflicts(!showConflicts)}
+              >
+                <span className="sr-only">Eliminate Conflicts</span>
+                <span
+                  className={`pointer-events-none relative inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200 ${showConflicts ? 'translate-x-5' : 'translate-x-0'}`}
+                ></span>
+              </button>
+            </div>
           )}
         </div>
       </div>
@@ -1094,85 +1166,87 @@ export default function CourseSimilarityPrecomputedGraph({
           </button>
         </div>
       ) : (
-        <>
-          <svg
-            ref={setSvgRef}
-            className="w-full h-full absolute top-0 left-0"
-            style={{ top: '0px' }}
-          ></svg>
+        <div className="relative w-full h-full">
+          <div ref={contentToCaptureRef} className="relative w-full h-full bg-[#f9f7fb]" style={{ top: '0px' }}>
+            <svg
+              ref={setSvgRef}
+              className="w-full h-full absolute top-0 left-0"
+              style={{ top: '0px' }}
+            ></svg>
 
-          {loading && (
-            <div className="absolute inset-0 flex items-center justify-center bg-white/50" style={{ top: '40px' }}>
-              <div className="text-lg font-medium">Loading visualization...</div>
-            </div>
-          )}
+            {loading && (
+              <div className="absolute inset-0 flex items-center justify-center bg-white/50">
+                <div className="text-lg font-medium">Loading visualization...</div>
+              </div>
+            )}
 
-          {error && (
-            <div className="absolute inset-0 flex items-center justify-center bg-white/80" style={{ top: '40px' }}>
-              <div className="text-red-500 text-lg font-medium">Error: {error}</div>
-            </div>
-          )}
+            {error && (
+              <div className="absolute inset-0 flex items-center justify-center bg-white/80">
+                <div className="text-red-500 text-lg font-medium">Error: {error}</div>
+              </div>
+            )}
 
-          <CoursePopup
-            course={selectedCourse}
-            onClose={() => setSelectedCourse(null)}
-          />
+            <CoursePopup
+              course={selectedCourse}
+              onClose={() => setSelectedCourse(null)}
+            />
 
-          {/* Semester Display - Only show in My Course History tab */}
-          {activeTab === 'yourHistory' && historyData && (
-            <div className="absolute bottom-0 left-0 w-full bg-white/90 p-4 border-t border-[#e8e2f2]">
-              <div className="flex flex-wrap gap-4">
-                {getSemestersWithData().map(semester => (
-                  <div key={semester} className="flex-1 min-w-[200px]">
-                    <h3 className="text-sm font-medium text-gray-700 mb-2">{semester}</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {historyData[semester].map(course => (
-                        <span
-                          key={course.code}
-                          className="px-2 py-1 bg-[#f9f7fb] text-sm text-gray-600 rounded"
-                        >
-                          {course.code}
-                        </span>
-                      ))}
+            {/* Semester Display - Only show in My Course History tab */}
+            {activeTab === 'yourHistory' && historyData && (
+              <div className="absolute bottom-0 left-0 w-full bg-white/90 p-4 border-t border-[#e8e2f2]">
+                <div className="flex flex-wrap gap-4">
+                  {getSemestersWithData().map(semester => (
+                    <div key={semester} className="flex-1 min-w-[200px]">
+                      <h3 className="text-sm font-medium text-gray-700 mb-2">{semester}</h3>
+                      <div className="flex flex-wrap gap-2">
+                        {historyData[semester].map(course => (
+                          <span
+                            key={course.code}
+                            className="px-2 py-1 bg-[#f9f7fb] text-sm text-gray-600 rounded"
+                          >
+                            {course.code}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
+            )}
 
-          {/* Semester Slider - Only show in Single Semester View tab */}
-          {activeTab === 'thisSemester' && (
-            <div className="absolute bottom-0 left-0 w-full bg-white/90 p-4 border-t border-[#e8e2f2]">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-sm font-medium text-gray-700">Semester:</span>
-                <span className="text-sm text-gray-600">{selectedSemester}</span>
+            {/* Semester Slider - Only show in Single Semester View tab */}
+            {activeTab === 'thisSemester' && (
+              <div className="absolute bottom-0 left-0 w-full bg-white/90 p-4 border-t border-[#e8e2f2]">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-medium text-gray-700">Semester:</span>
+                  <span className="text-sm text-gray-600">{selectedSemester}</span>
+                </div>
+                <input
+                  type="range"
+                  min="0"
+                  max={AVAILABLE_SEMESTERS.length - 1}
+                  value={AVAILABLE_SEMESTERS.indexOf(selectedSemester)}
+                  onChange={(e) => setSelectedSemester(AVAILABLE_SEMESTERS[e.target.value])}
+                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                />
+                <div className="flex justify-between mt-1">
+                  {AVAILABLE_SEMESTERS.map((sem) => (
+                    <span
+                      key={sem}
+                      className="text-xs text-gray-500"
+                      style={{
+                        color: sem === selectedSemester ? '#3f1f69' : '#6b7280',
+                        fontWeight: sem === selectedSemester ? 'bold' : 'normal'
+                      }}
+                    >
+                      {sem}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <input
-                type="range"
-                min="0"
-                max={AVAILABLE_SEMESTERS.length - 1}
-                value={AVAILABLE_SEMESTERS.indexOf(selectedSemester)}
-                onChange={(e) => setSelectedSemester(AVAILABLE_SEMESTERS[e.target.value])}
-                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
-              />
-              <div className="flex justify-between mt-1">
-                {AVAILABLE_SEMESTERS.map((sem) => (
-                  <span
-                    key={sem}
-                    className="text-xs text-gray-500"
-                    style={{
-                      color: sem === selectedSemester ? '#3f1f69' : '#6b7280',
-                      fontWeight: sem === selectedSemester ? 'bold' : 'normal'
-                    }}
-                  >
-                    {sem}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
-        </>
+            )}
+          </div>
+        </div>
       )}
 
       {showSettings && (
