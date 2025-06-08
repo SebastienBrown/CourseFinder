@@ -1,7 +1,14 @@
 import React from "react";
 
-export default function CoursePopup({ course, onClose }) {
+export default function CoursePopup({ course, onClose, onHighlight, highlighted, activeTab, onSelect, selectedCourses }) {
   if (!course) return null;
+
+  // Check if any of the course codes are already selected
+  const isSelected = course.course_codes && 
+    (Array.isArray(course.course_codes) 
+      ? course.course_codes.some(code => selectedCourses.includes(code)) ||
+        selectedCourses.includes(course.course_codes.join('/'))
+      : selectedCourses.includes(course.course_codes));
 
   return (
     <div
@@ -52,6 +59,22 @@ export default function CoursePopup({ course, onClose }) {
                 .join(", ") || "Unavailable"
             : "Unavailable"}
         </p>
+
+        {activeTab === 'thisSemester' && (
+          <div className="flex justify-end pt-4">
+            <button
+              onClick={() => onSelect(course)}
+              disabled={isSelected}
+              className={`px-4 py-2 rounded-md font-medium transition-colors ${
+                isSelected
+                  ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                  : 'bg-[#3f1f69] text-white hover:bg-[#311a4d]'
+              }`}
+            >
+              {isSelected ? 'Already Selected' : 'Select Course'}
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
