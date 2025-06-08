@@ -25,8 +25,12 @@ export default function SemesterCourseIntake() {
 
     async function fetchCourses() {
       try {
-        const res = await fetch(`/llm_cleaned/amherst_courses_${semester}.json`);
-        const data = await res.json();
+        const res = await fetch(`/amherst_courses_all.json`);
+        const allData = await res.json();
+        // Filter courses by the current semester
+        const data = allData.filter(course => 
+          course.semester && course.semester.includes(semester)
+        );
         setAllCourses(data);
         setSelectedCourses(semesterCourses[semester] || []);
       } catch (error) {
