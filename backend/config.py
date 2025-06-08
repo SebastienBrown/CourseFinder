@@ -10,7 +10,9 @@ USER_PORTS = {
 }
 
 # Get the current user's username
-username = os.getlogin()
-
-# Get the port for the current user, or use default
-PORT = USER_PORTS.get(username, DEFAULT_PORT) 
+try:
+    username = os.getlogin()
+    # Get the port for the current user, or use default
+    PORT = USER_PORTS.get(username, DEFAULT_PORT) 
+except:
+    PORT = DEFAULT_PORT
