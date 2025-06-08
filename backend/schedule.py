@@ -240,6 +240,7 @@ def submit_courses():
         "Prefer": "resolution=merge-duplicates"  # enables upsert
     }
 
+    # Note — POST to table endpoint, no ?id filter
     response = requests.post(SUPABASE_TABLE_URL, json=[row_data], headers=headers)
 
     print("Supabase response:", response.status_code, response.text)
