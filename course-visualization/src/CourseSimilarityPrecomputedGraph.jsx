@@ -12,7 +12,7 @@ import {
   applyTSNE,
   useLoadData,
 } from "./CourseSimilarityPrecomputedProcessor";
-import { CURRENT_SEMESTER, AVAILABLE_SEMESTERS, getSemesterDataPaths } from "./config/semesterConfig";
+import { CURRENT_SEMESTER, AVAILABLE_SEMESTERS, getSemesterDataPaths } from "./config";
 import CoursePopup from "./CoursePopup";
 import { supabase } from "./supabaseClient"; // make sure this points to your initialized Supabase client
 import { API_BASE_URL } from './config';
@@ -459,8 +459,8 @@ export default function CourseSimilarityPrecomputedGraph({
 
       // Calculate the legend space requirements
       const deptEntries = [...majorColorMap.entries()];
-      const legendItemHeight = 20;
-      const legendItemWidth = 80; // Width for each column (reduced)
+      const legendItemHeight = 25;
+      const legendItemWidth = 90; // Width for each column (reduced)
       const colCount = 2; // Left legend columns
       
       // Left legend dimensions
@@ -471,7 +471,7 @@ export default function CourseSimilarityPrecomputedGraph({
       const rightLegendWidth = leftLegendWidth; // Reduced width
       
       // Create padding for chart area
-      const topPadding = 80; // Title space
+      const topPadding = 0; // Title space
       const bottomPadding = 40; // Footer space
       const leftPadding = leftLegendWidth;
       const rightPadding = rightLegendWidth + 20;
@@ -738,7 +738,7 @@ export default function CourseSimilarityPrecomputedGraph({
             }
           });
       } else {
-        // Add labels for all courses in the this semester tab
+        // Add labels for all courses in the single semester tab
         nodeGroup
           .append("text")
           .attr("text-anchor", "middle")
@@ -847,7 +847,7 @@ export default function CourseSimilarityPrecomputedGraph({
           .attr("x", 10)
           .attr("y", 5)
           .text(dept === "SWAG" ? "SWAG/WAGS" : dept)
-          .style("font-size", "10px");
+          .style("font-size", "12px");
       });
 
       // === TRANCHE SHAPE LEGEND (RIGHT SIDE) ===
@@ -946,7 +946,7 @@ export default function CourseSimilarityPrecomputedGraph({
           .attr("x", 12)
           .attr("y", 5)
           .text(tranche.charAt(0).toUpperCase() + tranche.slice(1)) // Capitalize
-          .style("font-size", "10px");
+          .style("font-size", "12px");
       });
 
       // Optional: Add a visual separator between legends and graph
@@ -1065,7 +1065,7 @@ export default function CourseSimilarityPrecomputedGraph({
           <svg
             ref={setSvgRef}
             className="w-full h-full absolute top-0 left-0"
-            style={{ top: '40px' }}
+            style={{ top: '0px' }}
           ></svg>
 
           {loading && (
@@ -1085,7 +1085,7 @@ export default function CourseSimilarityPrecomputedGraph({
             onClose={() => setSelectedCourse(null)}
           />
 
-          {/* Semester Display - Only show in Your History tab */}
+          {/* Semester Display - Only show in My Course History tab */}
           {activeTab === 'yourHistory' && historyData && (
             <div className="absolute bottom-0 left-0 w-full bg-white/90 p-4 border-t border-[#e8e2f2]">
               <div className="flex flex-wrap gap-4">
@@ -1108,7 +1108,7 @@ export default function CourseSimilarityPrecomputedGraph({
             </div>
           )}
 
-          {/* Semester Slider - Only show in This Semester tab */}
+          {/* Semester Slider - Only show in Single Semester View tab */}
           {activeTab === 'thisSemester' && (
             <div className="absolute bottom-0 left-0 w-full bg-white/90 p-4 border-t border-[#e8e2f2]">
               <div className="flex items-center justify-between mb-2">
