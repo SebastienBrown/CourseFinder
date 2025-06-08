@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { supabase } from "./supabaseClient"; // make sure this points to your initialized Supabase client
+import { API_BASE_URL } from './config';
 
 export default function SemesterCourseIntake() {
   const navigate = useNavigate();
@@ -24,8 +25,12 @@ export default function SemesterCourseIntake() {
 
     async function fetchCourses() {
       try {
-        const res = await fetch(`/llm_cleaned/amherst_courses_${semester}.json`);
-        const data = await res.json();
+        const res = await fetch(`/amherst_courses_all.json`);
+        const allData = await res.json();
+        // Filter courses by the current semester
+        const data = allData.filter(course => 
+          course.semester && course.semester.includes(semester)
+        );
         setAllCourses(data);
         setSelectedCourses(semesterCourses[semester] || []);
       } catch (error) {
@@ -94,7 +99,7 @@ export default function SemesterCourseIntake() {
       }
 
       try {
-        const response = await fetch("http://127.0.0.1:8000/submit_courses", {
+        const response = await fetch(`${API_BASE_URL}/submit_courses`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
