@@ -53,7 +53,7 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
         type="submit"
         className="px-4 py-2 text-sm font-semibold bg-[#3f1f69] text-white rounded-md hover:bg-[#311a4d] transition"
       >
-        Submit
+        Search
       </button>
     </form>
   );
