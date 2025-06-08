@@ -16,6 +16,8 @@ export default function SemesterCourseIntake() {
   const semesterCourses = JSON.parse(localStorage.getItem("semesterCourses") || "{}");
   const semester = selectedSemesters[parseInt(index)];
 
+  const backendUrl=process.env.REACT_APP_BACKEND_URL;
+
   // Load courses JSON dynamically on mount or semester change
   useEffect(() => {
     if (!semester) {
@@ -101,7 +103,7 @@ export default function SemesterCourseIntake() {
       }
 
       try {
-        const response = await fetch(`${API_BASE_URL}/submit_courses`, {
+        const response = await fetch(`${backendUrl}/submit_courses`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
