@@ -3,6 +3,7 @@ import { API_BASE_URL } from './config';
 
 export default function CourseInput({ onHighlight, onConflicted, currentSemester }) {
   const [input, setInput] = useState("");
+  const backendUrl=process.env.REACT_APP_BACKEND_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -13,7 +14,7 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
 
     onHighlight(codes); // Highlight user input courses
 
-    const response = await fetch(`${API_BASE_URL}/conflicted_courses`, {
+    const response = await fetch(`${backendUrl}/conflicted_courses`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
