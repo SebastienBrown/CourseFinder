@@ -39,7 +39,7 @@
 - `sbatch generate_precomputed_tsne.sbatch` or `python generate_precomputed_tsne.py`
 - Output: `course-visualization/public/precomputed_tsne_coords_{semester}.json`
 
-**Run backend**
+**Run Backend**
 - `cd backend`
 - `python3 -m venv venv` optional but recommended
 - `source venv/bin/activate` or `venv\Scripts\activate` on Windows
@@ -50,13 +50,16 @@
 If the search bar returns a "fetch" error, try changing the port.
 - If you are a new user, add your username and preferred port number to `course-visualization/src/config.js` AND `backend/config.py`
 
-**Run frontend**
+**Run Frontend**
 - `cd course-visualization/src`
 - `npm install`
 - `npm install tsne-js`
 - `npm run start`
 
 `npm install react-router-dom` may fix some issues if the error is related to react-router-dom.
+
+**Download Image Function**
+`npm install html2canvas` is necessary.
 
 **Descriptive Analysis**
 - `cd analysis/code`
