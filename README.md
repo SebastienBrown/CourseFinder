@@ -61,6 +61,9 @@ If the search bar returns a "fetch" error, try changing the port.
 **Download Image Function**
 `npm install html2canvas` is necessary.
 
+**Deploying the Website**
+- Both `requirements.txt` and `backend/requirements.txt` are necessary.
+
 **Descriptive Analysis**
 - `cd analysis/code`
 - Make a semester-department panel with `sbatch descriptives.sbatch`

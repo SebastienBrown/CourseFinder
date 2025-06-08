@@ -447,6 +447,21 @@ export default function CourseSimilarityPrecomputedGraph({
 
       svg.call(zoom);
 
+      const getFontSize = (baseSize) => {
+        // Scale font size based on width, with a minimum and maximum for readability
+        const minWidth = 800; // Minimum width where baseSize is applied
+        const maxWidth = 1600; // Maximum width where scaling stops
+        const minFactor = 0.3; // Minimum scaling factor (was 0.8)
+        const maxFactor = 1.0; // Maximum scaling factor (was 1.2)
+
+        if (width <= minWidth) return `${baseSize * minFactor}px`;
+        if (width >= maxWidth) return `${baseSize * maxFactor}px`;
+
+        // Linear interpolation between min and max factor
+        const factor = minFactor + (maxFactor - minFactor) * ((width - minWidth) / (maxWidth - minWidth));
+        return `${baseSize * factor}px`;
+      };
+
       // Add a reset zoom button
       const resetButton = svg.append("g")
         .attr("class", "reset-zoom")
@@ -466,7 +481,7 @@ export default function CourseSimilarityPrecomputedGraph({
         .attr("y", 20)
         .attr("text-anchor", "middle")
         .attr("dominant-baseline", "middle")
-        .style("font-size", "12px")
+        .style("font-size", getFontSize(12))
         .text("Reset View");
 
       resetButton.on("click", () => {
@@ -489,17 +504,17 @@ export default function CourseSimilarityPrecomputedGraph({
       const colCount = 2; // Left legend columns
       
       // Left legend dimensions
-      const leftLegendWidth = legendItemWidth * colCount + 30; // Added padding (reduced)
+      const leftLegendWidth = legendItemWidth * colCount + 0.02 * width; // Added padding (reduced)
       const leftLegendHeight = Math.ceil(deptEntries.length / colCount) * legendItemHeight + 40;
       
-      // Right legend dimensions
-      const rightLegendWidth = leftLegendWidth; // Reduced width
+      // Right legend dimensions (there is nothing now so set to 0)
+      const rightLegendWidth = 0//leftLegendWidth; // Reduced width
       
       // Create padding for chart area
-      const topPadding = 0; // Title space
+      const topPadding = 40; // Title space
       const bottomPadding = 40; // Footer space
       const leftPadding = leftLegendWidth;
-      const rightPadding = rightLegendWidth + 20;
+      const rightPadding = rightLegendWidth;
       
       const xExtent = d3.extent(finalNodes, (d) => d.x);
       const yExtent = d3.extent(finalNodes, (d) => d.y);
@@ -747,7 +762,7 @@ export default function CourseSimilarityPrecomputedGraph({
           .append("text")
           .attr("text-anchor", "middle")
           .attr("dy", -12)
-          .attr("font-size", "8px")
+          .attr("font-size", getFontSize(8))
           .attr("fill", "#000")
           .attr("class", "node-label")
           // For labels, if multiple user courses at the same point, show the first one or indicate multiple
@@ -770,7 +785,7 @@ export default function CourseSimilarityPrecomputedGraph({
           .append("text")
           .attr("text-anchor", "middle")
           .attr("dy", d => d.highlighted ? -12 : -8)
-          .attr("font-size", d => d.highlighted ? "8px" : "7px")
+          .attr("font-size", d => d.highlighted ? getFontSize(8) : getFontSize(7))
           .attr("fill", d => d.highlighted ? "#000" : "#333")
           .attr("class", "node-label")
           .text(d => d.codes.length > 1 ? `${d.codes[0]}...` : d.codes[0]);
@@ -796,7 +811,7 @@ export default function CourseSimilarityPrecomputedGraph({
         .attr("y", legendPadding + 15)
         .attr("text-anchor", "start")
         .style("font-weight", "bold")
-        .style("font-size", "14px")
+        .style("font-size", getFontSize(14))
         .text("Departments");
         
       const legend = svg
@@ -874,20 +889,20 @@ export default function CourseSimilarityPrecomputedGraph({
           .attr("x", 10)
           .attr("y", 5)
           .text(dept === "SWAG" ? "SWAG/WAGS" : dept)
-          .style("font-size", "12px");
+          .style("font-size", getFontSize(12));
       });
 
       // === TRANCHE SHAPE LEGEND (RIGHT SIDE) ===
       const shapeEntries = Object.entries(TRANCHE_SHAPES);
       const shapeLegendX = legendPadding;
-      const shapeLegendY = leftLegendHeight+25;
-      const shapeLegendHeight = shapeEntries.length * legendItemHeight + 30;
+      const shapeLegendY = leftLegendHeight + 25;
+      const shapeLegendHeight = shapeEntries.length * legendItemHeight + 50; // Adjusted height for disclaimer text
       
       // Background for shape legend
       svg.append("rect")
         .attr("x", shapeLegendX - 10)
         .attr("y", shapeLegendY - 10)
-        .attr("width", leftLegendWidth-20)
+        .attr("width", leftLegendWidth - 20)
         .attr("height", shapeLegendHeight)
         .attr("fill", "rgba(249, 247, 251, 0.95)")
         .attr("rx", 5);
@@ -904,7 +919,7 @@ export default function CourseSimilarityPrecomputedGraph({
         .attr("y", 5)
         .text("Department Groups")
         .style("font-weight", "bold")
-        .style("font-size", "14px");
+        .style("font-size", getFontSize(14));
 
       shapeEntries.forEach(([tranche, shapeType], i) => {
         const legendItem = shapeLegend
@@ -973,15 +988,15 @@ export default function CourseSimilarityPrecomputedGraph({
           .attr("x", 12)
           .attr("y", 5)
           .text(tranche.charAt(0).toUpperCase() + tranche.slice(1)) // Capitalize
-          .style("font-size", "14px");
+          .style("font-size", getFontSize(14));
       });
 
       // Add small text below the Department Groups legend
       const disclaimerText = shapeLegend
         .append("text")
         .attr("x", -3)
-        .attr("y", shapeLegendHeight + 10)
-        .style("font-size", "14px")
+        .attr("y", shapeLegendHeight + 13) // Adjusted Y position to be inside the background
+        .style("font-size", getFontSize(14))
         .style("fill", "#666");
 
       disclaimerText.append("tspan")
@@ -1004,9 +1019,9 @@ export default function CourseSimilarityPrecomputedGraph({
       svg
         .append("text")
         .attr("x", leftPadding + (width - leftPadding - rightPadding) / 2)
-        .attr("y", topPadding * 0.6)
+        .attr("y", topPadding * 2)
         .attr("text-anchor", "middle")
-        .style("font-size", "18px")
+        .style("font-size", getFontSize(18))
         .style("font-weight", "bold")
         .text(
           activeTab === 'thisSemester' 
