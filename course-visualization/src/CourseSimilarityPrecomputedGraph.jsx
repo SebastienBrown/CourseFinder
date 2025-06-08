@@ -99,7 +99,9 @@ export default function CourseSimilarityPrecomputedGraph({
   mode,
   highlighted,
   conflicted,
-  onSemesterChange
+  onSemesterChange,
+  onHighlight,
+  onConflicted
 }) {
   const svgRef = useRef(null);
   const [svgReady, setSvgReady] = useState(false);
@@ -115,10 +117,11 @@ export default function CourseSimilarityPrecomputedGraph({
   const [selectedCourse, setSelectedCourse] = useState(null);
   const [selectedSemester, setSelectedSemester] = useState(CURRENT_SEMESTER);
   const [userId, setUserId] = useState(null);
-  const [activeTab, setActiveTab] = useState('thisSemester'); // Add state for active tab
-  const [showConflicts, setShowConflicts] = useState(true); // New state for conflict toggle
-  const mapContainerRef = useRef(null); // New ref for the main map container
-  const contentToCaptureRef = useRef(null); // New ref for the content to be captured
+  const [activeTab, setActiveTab] = useState('thisSemester');
+  const [showConflicts, setShowConflicts] = useState(true);
+  const mapContainerRef = useRef(null);
+  const contentToCaptureRef = useRef(null);
+  const [selectedCourses, setSelectedCourses] = useState([]);
 
   // Add a new state variable to hold backend output data
   const [backendOutputData, setBackendOutputData] = useState(null);
@@ -169,8 +172,11 @@ export default function CourseSimilarityPrecomputedGraph({
         } else {
           // Load history data
           if (backendOutputData) {
+            console.log("Processing backend data for history:", backendOutputData);
+            
             // Get unique semesters from the history data
             const historySemesters = [...new Set(backendOutputData.map(course => course.semester))];
+            console.log("Found history semesters:", historySemesters);
             
             // Group courses by semester for the history display
             const coursesBySemester = backendOutputData.reduce((acc, course) => {
@@ -185,6 +191,7 @@ export default function CourseSimilarityPrecomputedGraph({
               });
               return acc;
             }, {});
+            console.log("Grouped courses by semester:", coursesBySemester);
 
             // Get the user's course codes with their semesters for highlighting
             const userCourses = backendOutputData
@@ -193,6 +200,7 @@ export default function CourseSimilarityPrecomputedGraph({
                 code: course.course_code,
                 semester: course.semester
               }));
+            console.log("User course codes:", userCourses);
             setUserCourseCodes(userCourses);
 
             // Identify semesters where the user took an FYSE course
@@ -200,6 +208,7 @@ export default function CourseSimilarityPrecomputedGraph({
               .filter(course => course.code.startsWith('FYSE-'))
               .map(course => course.semester)
             );
+            console.log("User FYSE semesters:", Array.from(userFyseSemesters));
 
             // Load all courses and coordinates for all semesters in history
             const allCourses = [];
@@ -223,7 +232,6 @@ export default function CourseSimilarityPrecomputedGraph({
               allCourses.push(...coursesWithSemester);
 
               // Accumulate unique course details using a Map for robustness
-              // Map each individual course_code from courseDetail to the courseDetail object
               courseDetails.forEach(cd => {
                 if (cd.course_codes && Array.isArray(cd.course_codes)) {
                   cd.course_codes.forEach(code => {
@@ -245,16 +253,21 @@ export default function CourseSimilarityPrecomputedGraph({
               allTsneCoords.push(...tsneCoordsWithSemester);
             }
 
+            console.log("Final processed data:", {
+              allCourses,
+              courseDetails: Array.from(allCourseDetailsMap.values()),
+              tsneCoords: allTsneCoords
+            });
+
             setGraphData({ courses: allCourses, similarityMatrix: null });
-            // Convert Map values back to array for state, as d3.js uses array data
-            setCourseDetailsData(Array.from(allCourseDetailsMap.values())); 
+            setCourseDetailsData(Array.from(allCourseDetailsMap.values()));
             setTsneCoords(allTsneCoords);
 
             // Store the semester information for display
             setHistoryData(coursesBySemester);
           }
         }
-  
+
         setLoading(false);
       } catch (err) {
         console.error("Error loading data:", err);
@@ -262,6 +275,7 @@ export default function CourseSimilarityPrecomputedGraph({
         setLoading(false);
       }
     }
+
     loadData();
   }, [selectedSemester, activeTab, backendOutputData]);
 
@@ -314,6 +328,18 @@ export default function CourseSimilarityPrecomputedGraph({
     fetchBackendData();
   }, [userId]);
 
+  // Add a function to check if there's any history data
+  const hasHistoryData = () => {
+    console.log("Checking history data:", backendOutputData); // <-- log the data check
+    return backendOutputData && backendOutputData.length > 0;
+  };
+
+  // Add a function to get semesters with data
+  const getSemestersWithData = () => {
+    console.log("Getting semesters with data:", historyData); // <-- log the history data
+    if (!historyData) return [];
+    return Object.keys(historyData).sort();
+  };
 
   useLayoutEffect(() => {
     // Ensure SVG is ready and all necessary data is loaded and in expected format
@@ -505,8 +531,17 @@ export default function CourseSimilarityPrecomputedGraph({
       // Calculate the legend space requirements
       const deptEntries = [...majorColorMap.entries()];
       const legendItemHeight = 25;
-      const legendItemWidth = 90; // Width for each column (reduced)
-      const colCount = 2; // Left legend columns
+      
+      // Conditional legend column and item width for Department Legend
+      let legendItemWidth;
+      let colCount;
+      if (width > 1600) {
+        legendItemWidth = 90; // Reduced width for fewer columns
+        colCount = 2;
+      } else {
+        legendItemWidth = 100; // Original width for more columns
+        colCount = 3;
+      }
       
       // Left legend dimensions
       const leftLegendWidth = legendItemWidth * colCount + 0.02 * width;
@@ -554,11 +589,23 @@ export default function CourseSimilarityPrecomputedGraph({
         // Check if this node contains any of the user's courses in the correct semester
         // Now using d.coursesAtPoint for accurate check
         
+        // Calculate highlighted codes count first (needed for both tabs)
+        const highlightedCodes = d.codes.filter(code => 
+          highlighted.some(highlightedCode => {
+            // If the highlighted code contains a slash, split it and check each part
+            if (highlightedCode.includes('/')) {
+              return highlightedCode.split('/').includes(code);
+            }
+            return highlightedCode === code;
+          })
+        );
+        const highlightedCount = highlightedCodes.length;
+        
         // Adjust size and opacity based on whether it's a user's course and which tab we're in
         let baseSize, opacity;
         if (activeTab === 'yourHistory') {
           if (d.highlighted) { // If course is highlighted by search, give it the largest size
-              baseSize = 14;
+              baseSize = 15;
           } else if (d.historyHighlighted) { // If it's a historical user course (and not also highlighted by search), give it a medium size
               baseSize = 14;
           } else { // Default size for other courses
@@ -567,10 +614,16 @@ export default function CourseSimilarityPrecomputedGraph({
           // Opacity: full for search-highlighted or historical courses, half for others
           opacity = (d.highlighted || d.historyHighlighted) ? 1 : 0.5;
         } else {
-          baseSize = d.highlighted ? 12 : 6;
+          // Single Semester View: Adjust base sizes for single vs multi-code courses
+          if (d.codes.length === 1) {
+            // Single code courses: slightly larger base size
+            baseSize = highlightedCount > 0 ? 18 : 8;
+          } else {
+            // Multi-code courses: slightly smaller base size
+            baseSize = highlightedCount > 0 ? 18 : 5;
+          }
           opacity = 1;
         }
-        const shapeSize = d.highlighted ? baseSize * 1.5 : baseSize;
 
         // Get all departments for this course
         const departments = d.codes.map(code => code.split('-')[0]);
@@ -587,20 +640,34 @@ export default function CourseSimilarityPrecomputedGraph({
           let color = majorColorMap.get(dept) || "#999";
           
           // Make colors more vibrant for user's courses in history tab or highlighted courses in single semester view
-          if ((activeTab === 'yourHistory' && d.historyHighlighted) || (activeTab === 'thisSemester' && d.highlighted)) {
-            // Convert the color to a more vibrant version
-            const vibrantColor = d3.color(color);
-            if (vibrantColor) {
-              vibrantColor.opacity = 1;
-              // Increase saturation and brightness
-              const hsl = d3.hsl(vibrantColor);
-              hsl.s = Math.min(1, hsl.s * 1.5); // Increase saturation
-              hsl.l = Math.min(0.7, hsl.l * 1.2); // Increase brightness but keep it dark enough
-              color = hsl.toString();
+          if (activeTab === 'yourHistory') {
+            if (d.historyHighlighted) {
+              // Convert the color to a more vibrant version
+              const vibrantColor = d3.color(color);
+              if (vibrantColor) {
+                vibrantColor.opacity = 1;
+                // Increase saturation and brightness
+                const hsl = d3.hsl(vibrantColor);
+                hsl.s = Math.min(1, hsl.s * 1.5); // Increase saturation
+                hsl.l = Math.min(0.7, hsl.l * 1.2); // Increase brightness but keep it dark enough
+                color = hsl.toString();
+              }
+            }
+          } else {
+            // Single semester view highlighting
+            if (highlightedCount > 0) {
+              const vibrantColor = d3.color(color);
+              if (vibrantColor) {
+                vibrantColor.opacity = 1;
+                const hsl = d3.hsl(vibrantColor);
+                hsl.s = Math.min(1, hsl.s * 1.5); // Increase saturation
+                hsl.l = Math.min(0.7, hsl.l * 1.2); // Increase brightness but keep it dark enough
+                color = hsl.toString();
+              }
             }
           }
 
-          let size = shapeSize;
+          let size = baseSize;
           switch (shape) {
             case "circle":
               group.append("circle")
@@ -623,7 +690,7 @@ export default function CourseSimilarityPrecomputedGraph({
                 .attr("fill-opacity", opacity);
               break;
             case "square":
-              size = shapeSize * singleShapeScale;
+              size = baseSize * singleShapeScale;
               group.append("rect")
                 .attr("x", -size)
                 .attr("y", -size)
@@ -633,7 +700,7 @@ export default function CourseSimilarityPrecomputedGraph({
                 .attr("fill-opacity", opacity);
               break;
             case "triangle":
-              size = shapeSize * singleShapeScale;
+              size = baseSize * singleShapeScale;
               const triangleSymbolSize = size * size * 3;
               group.append("path")
                 .attr("d", d3.symbol().type(d3.symbolTriangle).size(triangleSymbolSize)())
@@ -641,7 +708,7 @@ export default function CourseSimilarityPrecomputedGraph({
                 .attr("fill-opacity", opacity);
               break;
             case "star":
-              size = shapeSize * singleShapeScale;
+              size = baseSize * singleShapeScale;
               const starSymbolSize = size * size * 3;
               group.append("path")
                 .attr("d", d3.symbol().type(d3.symbolStar).size(starSymbolSize)())
@@ -675,7 +742,34 @@ export default function CourseSimilarityPrecomputedGraph({
             const endAngle = startAngle + portion * 360;
 
             const shape = getShapeForDept(dept);
-            const color = majorColorMap.get(dept) || "#999";
+            let color = majorColorMap.get(dept) || "#999";
+            
+            // Make colors more vibrant based on tab and highlighting state
+            if (activeTab === 'yourHistory') {
+              if (d.historyHighlighted) {
+                const vibrantColor = d3.color(color);
+                if (vibrantColor) {
+                  vibrantColor.opacity = 1;
+                  const hsl = d3.hsl(vibrantColor);
+                  hsl.s = Math.min(1, hsl.s * 1.5);
+                  hsl.l = Math.min(0.7, hsl.l * 1.2);
+                  color = hsl.toString();
+                }
+              }
+            } else {
+              // Single semester view highlighting
+              if (highlightedCount > 0) {
+                const vibrantColor = d3.color(color);
+                if (vibrantColor) {
+                  vibrantColor.opacity = 1;
+                  const hsl = d3.hsl(vibrantColor);
+                  // Increase vibrancy based on number of highlighted codes
+                  hsl.s = Math.min(1, hsl.s * (1.5 + (highlightedCount * 0.2))); // More saturation for more highlighted codes
+                  hsl.l = Math.min(0.7, hsl.l * (1.2 + (highlightedCount * 0.1))); // More brightness for more highlighted codes
+                  color = hsl.toString();
+                }
+              }
+            }
             
             // Create a clip path for this portion (pie slice)
             const clipPathId = `clip-${d.id}-${dept}-${startAngle}`;
@@ -684,7 +778,7 @@ export default function CourseSimilarityPrecomputedGraph({
             
             const arc = d3.arc()
               .innerRadius(0)
-              .outerRadius(shapeSize)
+              .outerRadius(baseSize)
               .startAngle(startAngle * Math.PI / 180)
               .endAngle(endAngle * Math.PI / 180);
             
@@ -696,7 +790,7 @@ export default function CourseSimilarityPrecomputedGraph({
                .attr("clip-path", `url(#${clipPathId})`);
 
             // Draw the full shape within the clipped area with adjusted size for non-circles
-            let currentShapeSize = shapeSize; // Start with base size
+            let currentShapeSize = baseSize; // Start with base size
              switch (shape) {
                 case "circle":
                   // Circle size remains the same as single-code
@@ -721,7 +815,7 @@ export default function CourseSimilarityPrecomputedGraph({
                   break;
                 case "square":
                   // Scale down square size for multi-code
-                  currentShapeSize = shapeSize * multiShapeScale; // Apply multi-shape scale
+                  currentShapeSize = baseSize * multiShapeScale; // Apply multi-shape scale
                   shapeSegmentGroup.append("rect")
                     .attr("x", -currentShapeSize)
                     .attr("y", -currentShapeSize)
@@ -732,7 +826,7 @@ export default function CourseSimilarityPrecomputedGraph({
                   break;
                 case "triangle":
                   // Scale down triangle size for multi-code, maintaining visual proportion
-                  currentShapeSize = shapeSize * multiShapeScale; // Apply multi-shape scale
+                  currentShapeSize = baseSize * multiShapeScale; // Apply multi-shape scale
                   const multiTriangleSymbolSize = currentShapeSize * currentShapeSize * 3; // Use same area multiplier as single-code
                    shapeSegmentGroup.append("path")
                     .attr("d", d3.symbol().type(d3.symbolTriangle).size(multiTriangleSymbolSize)())
@@ -741,7 +835,7 @@ export default function CourseSimilarityPrecomputedGraph({
                   break;
                 case "star":
                   // Scale down star size for multi-code, maintaining visual proportion
-                  currentShapeSize = shapeSize * multiShapeScale; // Apply multi-shape scale
+                  currentShapeSize = baseSize * multiShapeScale; // Apply multi-shape scale
                   const multiStarSymbolSize = currentShapeSize * currentShapeSize * 2.7; // Use same area multiplier as single-code
                    shapeSegmentGroup.append("path")
                     .attr("d", d3.symbol().type(d3.symbolStar).size(multiStarSymbolSize)())
@@ -799,7 +893,7 @@ export default function CourseSimilarityPrecomputedGraph({
       }
 
       // === DEPARTMENT LEGEND (2-COLUMN LAYOUT) ===
-      const legendPaddingY = 280 - width * 0.15;
+      const legendPaddingY = 290 - width * 0.15;
       const legendPaddingX = width * 0.01;
       console.log('legendPadding:', legendPaddingX)
 
@@ -902,12 +996,26 @@ export default function CourseSimilarityPrecomputedGraph({
           .style("font-size", getFontSize(12));
       });
 
-      // === TRANCHE SHAPE LEGEND (RIGHT SIDE) ===
-      const shapeEntries = Object.entries(TRANCHE_SHAPES);
+      // === TRANCHE SHAPE LEGEND ===
+      const shapeEntries = Object.entries(TRANCHE_SHAPES).filter(([tranche]) => tranche !== "First Year Seminar");
       const shapeLegendX = legendPaddingX;
       const shapeLegendY = legendPaddingY + leftLegendHeight;
-      const shapeLegendHeight = shapeEntries.length * legendItemHeight; // Adjusted height for disclaimer text
+      let shapeLegendHeight;
+      if (width > 1600) {
+        shapeLegendHeight = shapeEntries.length * legendItemHeight + width * 0.02; // Adjusted height for disclaimer text
+      } else {
+        shapeLegendHeight = shapeEntries.length * legendItemHeight;
+      }
       
+      // Define column count for shape legend (e.g., 2 columns)
+      let shapeColCount;
+      if (width > 1600) {
+        shapeColCount = 1; // Single column for large screens
+      } else {
+        shapeColCount = 2; // Two columns for smaller screens
+      }
+      const shapeLegendRows = Math.ceil(shapeEntries.length / shapeColCount);
+
       // Background for shape legend
       svg.append("rect")
         .attr("x", shapeLegendX - 10)
@@ -931,10 +1039,15 @@ export default function CourseSimilarityPrecomputedGraph({
         .style("font-weight", "bold")
         .style("font-size", getFontSize(14));
 
+      const shapeLegendItemVerticalOffset = 25;
+
       shapeEntries.forEach(([tranche, shapeType], i) => {
+        const col = Math.floor(i / shapeLegendRows);
+        const row = i % shapeLegendRows;
+
         const legendItem = shapeLegend
           .append("g")
-          .attr("transform", `translate(0, ${i * legendItemHeight + 25})`);
+          .attr("transform", `translate(${col * legendItemWidth}, ${row * legendItemHeight + shapeLegendItemVerticalOffset})`);
 
         const size = 6;
         // Use a standard color for the shape legend
@@ -1005,7 +1118,7 @@ export default function CourseSimilarityPrecomputedGraph({
       const disclaimerText = shapeLegend
         .append("text")
         .attr("x", -3)
-        .attr("y", shapeLegendHeight + width * 0.02) // Adjusted Y position to be inside the background
+        .attr("y", shapeLegendHeight) // Adjusted Y position to be inside the background
         .style("font-size", getFontSize(14))
         .style("fill", "#666");
 
@@ -1106,17 +1219,6 @@ export default function CourseSimilarityPrecomputedGraph({
     }
   };
 
-  // Add a function to check if there's any history data
-  const hasHistoryData = () => {
-    return backendOutputData && backendOutputData.length > 0;
-  };
-
-  // Add a function to get semesters with data
-  const getSemestersWithData = () => {
-    if (!historyData) return [];
-    return Object.keys(historyData).sort();
-  };
-
   // Add a function to get the title based on the active tab
   const getTitle = () => {
     if (activeTab === 'thisSemester') {
@@ -1126,9 +1228,63 @@ export default function CourseSimilarityPrecomputedGraph({
     }
   };
 
+  // Function to handle adding a course to selected courses
+  const handleAddSelectedCourse = async (course) => {
+    if (!course.course_codes) return;
+    
+    const codes = Array.isArray(course.course_codes) 
+      ? course.course_codes 
+      : [course.course_codes];
+    
+    // If there are multiple codes, combine them with a slash
+    const codeToAdd = codes.length > 1 ? codes.join('/') : codes[0];
+    
+    // Add only if not already selected
+    if (!selectedCourses.includes(codeToAdd)) {
+      const newSelectedCourses = [...selectedCourses, codeToAdd];
+      setSelectedCourses(newSelectedCourses);
+      
+      // Check for conflicts with the new selection
+      const response = await fetch(`${API_BASE_URL}/conflicted_courses`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ 
+          taken_courses: newSelectedCourses,
+          semester: selectedSemester 
+        }),
+      });
+
+      const data = await response.json();
+      onConflicted(data.conflicted_courses);
+    }
+  };
+
+  // Function to handle removing a course from selected courses
+  const handleRemoveSelectedCourse = async (codeToRemove) => {
+    const newSelectedCourses = selectedCourses.filter(code => code !== codeToRemove);
+    setSelectedCourses(newSelectedCourses);
+    
+    // Update conflicts after removal
+    const response = await fetch(`${API_BASE_URL}/conflicted_courses`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ 
+        taken_courses: newSelectedCourses,
+        semester: selectedSemester 
+      }),
+    });
+
+    const data = await response.json();
+    onConflicted(data.conflicted_courses);
+  };
+
   return (
     <div
-      ref={mapContainerRef} // Assign the ref to the main container div
+      ref={mapContainerRef}
       className="relative w-full max-w-[1200px] mx-auto h-[80vh] bg-[#f9f7fb] shadow-md rounded-xl overflow-hidden border border-[#e8e2f2]"
     >
       {/* Tab Navigation */}
@@ -1230,6 +1386,11 @@ export default function CourseSimilarityPrecomputedGraph({
             <CoursePopup
               course={selectedCourse}
               onClose={() => setSelectedCourse(null)}
+              onHighlight={onHighlight}
+              highlighted={highlighted}
+              activeTab={activeTab}
+              onSelect={handleAddSelectedCourse}
+              selectedCourses={selectedCourses}
             />
 
             {/* Semester Display - Only show in My Course History tab */}
@@ -1259,8 +1420,47 @@ export default function CourseSimilarityPrecomputedGraph({
             {activeTab === 'thisSemester' && (
               <div className="absolute bottom-0 left-0 w-full bg-white/90 p-4 border-t border-[#e8e2f2]">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-gray-700">Semester:</span>
-                  <span className="text-sm text-gray-600">{selectedSemester}</span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm font-medium text-gray-700">Semester:</span>
+                    <span className="text-sm text-gray-600">{selectedSemester}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm font-medium text-gray-700">Selected Courses:</span>
+                    <div className="flex gap-1">
+                      {selectedCourses.length > 0 ? (
+                        selectedCourses.map((code) => (
+                          <div
+                            key={code}
+                            className="group relative px-2 py-0.5 bg-[#f4f0fa] text-sm text-[#3f1f69] rounded border border-[#eae6f4] hover:bg-[#eae6f4] transition-colors"
+                          >
+                            {code}
+                            <button
+                              onClick={() => handleRemoveSelectedCourse(code)}
+                              className="absolute -top-1 -right-1 w-4 h-4 bg-white rounded-full border border-[#eae6f4] 
+                                flex items-center justify-center text-[#3f1f69] opacity-0 group-hover:opacity-100 
+                                transition-opacity hover:bg-[#f4f0fa]"
+                              aria-label={`Remove ${code}`}
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                className="w-3 h-3"
+                              >
+                                <path
+                                  fillRule="evenodd"
+                                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                  clipRule="evenodd"
+                                />
+                              </svg>
+                            </button>
+                          </div>
+                        ))
+                      ) : (
+                        <span className="text-sm text-gray-500 italic">None</span>
+                      )}
+                    </div>
+                  </div>
                 </div>
                 <input
                   type="range"
