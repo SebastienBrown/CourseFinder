@@ -21,6 +21,7 @@ import html2canvas from 'html2canvas'; // Import html2canvas
 
 // Use the globally defined current semester
 const semester = CURRENT_SEMESTER;
+const backendUrl=process.env.REACT_APP_BACKEND_URL;
 
 // === Tranche & Shape Definitions ===
 const TRANCHE_SHAPES = {
@@ -300,7 +301,8 @@ export default function CourseSimilarityPrecomputedGraph({
 
   async function fetchBackendData() {
     try {
-      const response = await fetch(`${API_BASE_URL}/retrieve_courses`, {
+      console.log("Using backend URL:", backendUrl); // Add this for debugging!
+      const response = await fetch(`${backendUrl}/retrieve_courses`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
