@@ -36,7 +36,7 @@ export default function Intake() {
   return (
     <div className="max-w-xl mx-auto mt-12 p-6 bg-white shadow rounded space-y-6">
       <h2 className="text-2xl font-bold text-center text-[#3f1f69]">
-        Select Semesters
+        Select Completed Semesters
       </h2>
 
       <div className="space-y-2">
@@ -59,7 +59,7 @@ export default function Intake() {
         disabled={selectedSemesters.length === 0}
         className="w-full bg-[#3f1f69] text-white py-2 rounded hover:bg-[#5b2ca0] transition"
       >
-        Submit
+        Next
       </button>
     </div>
   );
