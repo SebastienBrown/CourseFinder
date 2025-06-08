@@ -71,8 +71,10 @@ export default function SemesterCourseIntake() {
       code.toLowerCase().includes(searchTerm.toLowerCase())
     );
   
-    // You can decide if you want OR (either match) or just codesMatch
-    return codesMatch;
+    const titleMatch = course.course_title && 
+      course.course_title.toLowerCase().includes(searchTerm.toLowerCase());
+  
+    return codesMatch || titleMatch;
   });
 
   const toggleCourse = (courseCode) => {
@@ -142,7 +144,7 @@ filteredCourses.forEach((course) => {
 const uniqueCourses = Array.from(uniqueCoursesMap.values());
 
   return (
-    <div className="max-w-xl mx-auto mt-12 p-6 bg-white shadow rounded space-y-6">
+    <div className="max-w-3xl mx-auto mt-12 p-6 bg-white shadow rounded space-y-6">
       <h2 className="text-2xl font-bold text-center text-[#3f1f69]">
         Select Courses for Semester {semester}
       </h2>
@@ -155,7 +157,7 @@ const uniqueCourses = Array.from(uniqueCoursesMap.values());
         className="w-full border rounded px-3 py-2"
       />
 
-      <div className="max-h-96 overflow-y-auto border rounded p-2 space-y-2">
+      <div className="max-h-96 overflow-y-auto border rounded p-4 space-y-2">
         {uniqueCourses.map((course) => {
           const courseCodesArray = Array.isArray(course.course_codes)
             ? course.course_codes
@@ -172,7 +174,9 @@ const uniqueCourses = Array.from(uniqueCoursesMap.values());
                 onChange={() => toggleCourse(courseCode)}
                 className="mr-2"
               />
-              <label htmlFor={courseCode}>{courseCodesDisplay}</label>
+              <label htmlFor={courseCode} className="flex-1">
+                {courseCodesDisplay}: {course.course_title || 'No title available'}
+              </label>
             </div>
           );
         })}
@@ -182,12 +186,26 @@ const uniqueCourses = Array.from(uniqueCoursesMap.values());
         )}
       </div>
 
-      <button
-        onClick={handleSubmit}
-        className="w-full bg-[#3f1f69] text-white py-2 rounded hover:bg-[#5b2ca0] transition"
-      >
-        {parseInt(index) + 1 < selectedSemesters.length ? "Next Semester" : "Finish"}
-      </button>
+      <div className="flex gap-4">
+        <button
+          onClick={() => {
+            if (parseInt(index) === 0) {
+              navigate('/intake');
+            } else {
+              navigate(`/intake/courses/${parseInt(index) - 1}`);
+            }
+          }}
+          className="flex-1 bg-gray-500 text-white py-2 rounded hover:bg-gray-600 transition"
+        >
+          Back
+        </button>
+        <button
+          onClick={handleSubmit}
+          className="flex-1 bg-[#3f1f69] text-white py-2 rounded hover:bg-[#5b2ca0] transition"
+        >
+          {parseInt(index) + 1 < selectedSemesters.length ? "Next Semester" : "Finish"}
+        </button>
+      </div>
     </div>
   );
 }
