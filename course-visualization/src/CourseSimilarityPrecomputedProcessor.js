@@ -1,6 +1,6 @@
 import * as d3 from 'd3';
 import TSNE from 'tsne-js';
-import { CURRENT_SEMESTER, getSemesterDataPaths } from './config/semesterConfig';
+import { getSemesterDataPaths } from "./config";
 
 // Extract unique course codes
 function getUniqueCourseCodes(data) {
