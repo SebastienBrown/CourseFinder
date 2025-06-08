@@ -1,4 +1,3 @@
-// src/Auth.js
 import React, { useState } from "react";
 import { supabase } from "./supabaseClient";
 
@@ -9,27 +8,30 @@ export default function Auth({ onLogin }) {
 
   const signUp = async () => {
     setMessage("");
-  
-    const { error: signUpError } = await supabase.auth.signUp({ email, password });
-  
+
+    const { data, error: signUpError } = await supabase.auth.signUp({ email, password });
+
     if (!signUpError) {
       setMessage("Check your email to confirm your sign-up!");
     } else if (signUpError.message.includes("User already registered")) {
       // User exists — prompt to log in instead
       setMessage("This email is already registered. Please sign in.");
     } else {
-      setMessage(signUpError.message);
+      console.error("SignUp Error:", signUpError); // Log full error for debugging
+      setMessage(`Error: ${signUpError.message} (Status: ${signUpError.status || 'unknown'})`);
     }
   };
-  
+
   const signIn = async () => {
     setMessage("");
-  
+
+    console.log("Attempting signIn with:", email, password); // Helpful debug log
+
     const { data, error: signInError } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
-  
+
     if (!signInError) {
       if (data.user && !data.user.confirmed_at) {
         // User exists but not confirmed
@@ -39,10 +41,14 @@ export default function Auth({ onLogin }) {
         setMessage("");
         onLogin(data.user);
       }
-    } else if (signInError.message.includes("Invalid login credentials")) {
-      setMessage("Invalid email or password.");
     } else {
-      setMessage(signInError.message);
+      console.error("SignIn Error:", signInError); // Log full error for debugging
+
+      if (signInError.message.includes("Invalid login credentials")) {
+        setMessage(`Invalid email or password. (Status: ${signInError.status || 'unknown'})`);
+      } else {
+        setMessage(`Error: ${signInError.message} (Status: ${signInError.status || 'unknown'})`);
+      }
     }
   };
 
