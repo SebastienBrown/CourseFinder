@@ -513,11 +513,11 @@ export default function CourseSimilarityPrecomputedGraph({
         // Adjust size and opacity based on whether it's a user's course and which tab we're in
         let baseSize, opacity;
         if (activeTab === 'yourHistory') {
-          baseSize = isUserCourse ? 10 : 6; // Keep non-user courses same size as This Semester tab
-          opacity = isUserCourse ? 1 : 0.5; // Less transparent for non-user courses
+          baseSize = isUserCourse ? 9 : 6; // User courses 90% of original 10 -> 9
+          opacity = isUserCourse ? 1 : 0.5;
         } else {
-          baseSize = 6; // Default size for this semester tab
-          opacity = 1; // Full opacity for this semester tab
+          baseSize = 6;
+          opacity = 1;
         }
         const shapeSize = d.highlighted ? baseSize * 1.5 : baseSize;
 
@@ -761,8 +761,6 @@ export default function CourseSimilarityPrecomputedGraph({
         .attr("width", leftLegendWidth - 20)
         .attr("height", leftLegendHeight)
         .attr("fill", "rgba(249, 247, 251, 0.95)")
-        .attr("stroke", "#e8e2f2")
-        .attr("stroke-width", 1)
         .attr("rx", 5);
       
       // Add title to legend
@@ -865,8 +863,6 @@ export default function CourseSimilarityPrecomputedGraph({
         .attr("width", leftLegendWidth-20)
         .attr("height", shapeLegendHeight)
         .attr("fill", "rgba(249, 247, 251, 0.95)")
-        .attr("stroke", "#e8e2f2")
-        .attr("stroke-width", 1)
         .attr("rx", 5);
         
       const shapeLegend = svg
@@ -972,7 +968,7 @@ export default function CourseSimilarityPrecomputedGraph({
         .text(
           activeTab === 'thisSemester' 
             ? `Course Similarity Graph - ${selectedSemester}`
-            : 'Your Course History'
+            : 'My Amherst Curriculum'
         );
 
       // Add CSS to handle label scaling
@@ -1038,7 +1034,7 @@ export default function CourseSimilarityPrecomputedGraph({
               }`}
               onClick={() => setActiveTab('thisSemester')}
             >
-              This Semester
+              Single Semester View
             </button>
             <button
               className={`px-4 py-2 text-sm font-medium ${
@@ -1048,7 +1044,7 @@ export default function CourseSimilarityPrecomputedGraph({
               }`}
               onClick={() => setActiveTab('yourHistory')}
             >
-              Your History
+              My Course History
             </button>
           </div>
         </div>
