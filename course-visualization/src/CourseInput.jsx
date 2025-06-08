@@ -37,7 +37,7 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
         htmlFor="course-input"
         className="font-semibold text-[#3f1f69] text-sm"
       >
-        Enter Your Current Courses:
+        Search Courses:
       </label>
 
       <input
