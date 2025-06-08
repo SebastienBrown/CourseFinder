@@ -115,6 +115,7 @@ export default function CourseSimilarityPrecomputedGraph({
   const [selectedSemester, setSelectedSemester] = useState(CURRENT_SEMESTER);
   const [userId, setUserId] = useState(null);
   const [activeTab, setActiveTab] = useState('thisSemester'); // Add state for active tab
+  const [showConflicts, setShowConflicts] = useState(true); // New state for conflict toggle
 
   // Add a new state variable to hold backend output data
   const [backendOutputData, setBackendOutputData] = useState(null);
@@ -357,8 +358,10 @@ export default function CourseSimilarityPrecomputedGraph({
       const mergedNodes = new Map();
       precomputedTSNECoords.forEach(({ codes: tsneCoordCodes, x, y, semester: coordSemester }) => {
         const currentTsneCodes = Array.isArray(tsneCoordCodes) ? tsneCoordCodes : [tsneCoordCodes]; // Ensure 'codes' is always an array
-        // Filter out conflicted codes here:
-        const filteredCodes = currentTsneCodes.filter(code => code && !conflicted.includes(code));
+        // Filter out conflicted codes only if in 'thisSemester' tab AND showConflicts is true
+        const filteredCodes = currentTsneCodes.filter(code => 
+            code && (activeTab === 'yourHistory' || !showConflicts || !conflicted.includes(code))
+        );
         
         if (filteredCodes.length === 0) return;
 
@@ -385,8 +388,9 @@ export default function CourseSimilarityPrecomputedGraph({
                 coursesAtPoint: coursesAtPoint, // New: list of {code, semester} for this point
                 shape: getShapeForDept(dept),
                 color: majorColorMap.get(dept) || "#999",
-                // Highlight if any course at this point is in user history
-                highlighted: coursesAtPoint.some(ca => 
+                // Separate highlighting for history vs search
+                highlighted: filteredCodes.some(code => highlighted.includes(code)),
+                historyHighlighted: coursesAtPoint.some(ca => 
                     userCourseCodes.some(uc => uc.code === ca.code && uc.semester === ca.semester)
                 ),
                 conflicted: false, // We already filtered conflicted codes
@@ -412,7 +416,8 @@ export default function CourseSimilarityPrecomputedGraph({
             });
 
             // Re-evaluate highlighting for existing node
-            node.highlighted = node.coursesAtPoint.some(ca => 
+            node.highlighted = filteredCodes.some(code => highlighted.includes(code));
+            node.historyHighlighted = node.coursesAtPoint.some(ca => 
                 userCourseCodes.some(uc => uc.code === ca.code && uc.semester === ca.semester)
             );
             node.conflicted = false; // We already filtered conflicted codes
@@ -523,17 +528,21 @@ export default function CourseSimilarityPrecomputedGraph({
         const group = d3.select(this);
         // Check if this node contains any of the user's courses in the correct semester
         // Now using d.coursesAtPoint for accurate check
-        const isUserCourse = d.coursesAtPoint.some(ca => 
-          userCourseCodes.some(uc => uc.code === ca.code && uc.semester === ca.semester)
-        );
         
         // Adjust size and opacity based on whether it's a user's course and which tab we're in
         let baseSize, opacity;
         if (activeTab === 'yourHistory') {
-          baseSize = isUserCourse ? 9 : 6; // User courses 90% of original 10 -> 9
-          opacity = isUserCourse ? 1 : 0.5;
+          if (d.highlighted) { // If course is highlighted by search, give it the largest size
+              baseSize = 14;
+          } else if (d.historyHighlighted) { // If it's a historical user course (and not also highlighted by search), give it a medium size
+              baseSize = 14;
+          } else { // Default size for other courses
+              baseSize = 7;
+          }
+          // Opacity: full for search-highlighted or historical courses, half for others
+          opacity = (d.highlighted || d.historyHighlighted) ? 1 : 0.5;
         } else {
-          baseSize = 6;
+          baseSize = d.highlighted ? 12 : 6;
           opacity = 1;
         }
         const shapeSize = d.highlighted ? baseSize * 1.5 : baseSize;
@@ -549,11 +558,11 @@ export default function CourseSimilarityPrecomputedGraph({
         if (d.codes.length === 1) {
           // Single code: Draw a single, unclipped shape
           const dept = departments[0];
-          const shape = getShapeForDept(dept);
+          let shape = getShapeForDept(dept);
           let color = majorColorMap.get(dept) || "#999";
           
-          // Make colors more vibrant for user's courses in history tab
-          if (activeTab === 'yourHistory' && isUserCourse) {
+          // Make colors more vibrant for user's courses in history tab or highlighted courses in single semester view
+          if ((activeTab === 'yourHistory' && d.historyHighlighted) || (activeTab === 'thisSemester' && d.highlighted)) {
             // Convert the color to a more vibrant version
             const vibrantColor = d3.color(color);
             if (vibrantColor) {
@@ -731,9 +740,7 @@ export default function CourseSimilarityPrecomputedGraph({
       // Only add labels for user's courses in the history tab
       if (activeTab === 'yourHistory') {
         nodeGroup
-          .filter(d => d.coursesAtPoint.some(ca => 
-            userCourseCodes.some(uc => uc.code === ca.code && uc.semester === ca.semester)
-          ))
+          .filter(d => d.historyHighlighted)
           .append("text")
           .attr("text-anchor", "middle")
           .attr("dy", -12)
@@ -759,9 +766,9 @@ export default function CourseSimilarityPrecomputedGraph({
         nodeGroup
           .append("text")
           .attr("text-anchor", "middle")
-          .attr("dy", -8)
-          .attr("font-size", "7px")
-          .attr("fill", "#333")
+          .attr("dy", d => d.highlighted ? -12 : -8)
+          .attr("font-size", d => d.highlighted ? "8px" : "7px")
+          .attr("fill", d => d.highlighted ? "#000" : "#333")
           .attr("class", "node-label")
           .text(d => d.codes.length > 1 ? `${d.codes[0]}...` : d.codes[0]);
       }
@@ -1015,6 +1022,7 @@ export default function CourseSimilarityPrecomputedGraph({
     tsneCoords,
     selectedSemester,
     activeTab,
+    showConflicts,
   ]);
 
   // Add a function to check if there's any history data
@@ -1064,6 +1072,14 @@ export default function CourseSimilarityPrecomputedGraph({
               My Course History
             </button>
           </div>
+          {activeTab === 'thisSemester' && (
+            <button
+              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900"
+              onClick={() => setShowConflicts(!showConflicts)}
+            >
+              Eliminate Conflicts: {showConflicts ? 'On' : 'Off'}
+            </button>
+          )}
         </div>
       </div>
 
