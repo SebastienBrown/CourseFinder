@@ -973,8 +973,24 @@ export default function CourseSimilarityPrecomputedGraph({
           .attr("x", 12)
           .attr("y", 5)
           .text(tranche.charAt(0).toUpperCase() + tranche.slice(1)) // Capitalize
-          .style("font-size", "12px");
+          .style("font-size", "14px");
       });
+
+      // Add small text below the Department Groups legend
+      const disclaimerText = shapeLegend
+        .append("text")
+        .attr("x", -3)
+        .attr("y", shapeLegendHeight + 10)
+        .style("font-size", "14px")
+        .style("fill", "#666");
+
+      disclaimerText.append("tspan")
+        .text("Special topics and thesis");
+
+      disclaimerText.append("tspan")
+        .attr("x", -3) // Align with the x of the parent text element
+        .attr("dy", "1.2em") // Move to the next line below the previous tspan
+        .text("courses are not displayed.");
 
       // Optional: Add a visual separator between legends and graph
       svg.append("rect")
@@ -1045,10 +1061,10 @@ export default function CourseSimilarityPrecomputedGraph({
           height: mapContainer.offsetHeight, // Capture the element's actual height
         });
 
-        const image = canvas.toDataURL('image/jpeg', 1); // Convert to JPEG with quality 0.9
+        const image = canvas.toDataURL('image/jpeg', 1); // Convert to JPEG with quality 1
         const link = document.createElement('a');
         link.href = image;
-        link.download = `amherst_curriculum_${selectedSemester}.jpeg`;
+        link.download = `my_open_curriculum.jpeg`;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
