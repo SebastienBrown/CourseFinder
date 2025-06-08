@@ -1,18 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
-const fixedSemesters = [
-  "2223F",
-  "2223S",
-  "2324F",
-  "2324S",
-  "2425F",
-  "2425S",
-  "2526F",
-  "2526S",
-];
+import { supabase } from "./supabaseClient";
+import { AVAILABLE_SEMESTERS, API_BASE_URL } from "./config";
 
 export default function Intake() {
+  const [userId, setUserId] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [selectedCourses, setSelectedCourses] = useState({});
+  const [selectedSemester, setSelectedSemester] = useState(null);
+  const [backendOutput, setBackendOutput] = useState(null);
+
+  const [error, setError] = useState(null);
+
+  // Use AVAILABLE_SEMESTERS from config.js
+  const semesters = AVAILABLE_SEMESTERS;
+
   const [selectedSemesters, setSelectedSemesters] = useState([]);
   const navigate = useNavigate();
 
@@ -24,14 +26,12 @@ export default function Intake() {
     );
   };
 
-  // ... same as before, except
-const handleSubmit = () => {
+  const handleSubmit = () => {
     localStorage.setItem("selectedSemesters", JSON.stringify(selectedSemesters));
     // initialize empty selections dictionary
     localStorage.setItem("semesterCourses", JSON.stringify({}));
     navigate("/intake/courses/0"); // start course intake at first semester
   };
-  
 
   return (
     <div className="max-w-xl mx-auto mt-12 p-6 bg-white shadow rounded space-y-6">
@@ -40,7 +40,7 @@ const handleSubmit = () => {
       </h2>
 
       <div className="space-y-2">
-        {fixedSemesters.map((semester) => (
+        {semesters.map((semester) => (
           <div key={semester} className="flex items-center">
             <input
               type="checkbox"
