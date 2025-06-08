@@ -5,14 +5,17 @@ import os
 from flask_cors import CORS
 import requests
 from dotenv import load_dotenv
+#from supabase import create_client, Client
 
 # Load env
 load_dotenv()
 
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
-print(SUPABASE_KEY)
-print(SUPABASE_URL)
+#print(SUPABASE_KEY)
+#print(SUPABASE_URL)
+
+#supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 SUPABASE_TABLE_URL = f"{SUPABASE_URL}/rest/v1/user_courses"  # Example table path
 
