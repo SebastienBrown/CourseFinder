@@ -1,23 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import CourseSimilarityPrecomputedGraph from "./CourseSimilarityPrecomputedGraph";
-import CourseInput from "./CourseInput";
 import { supabase } from "./supabaseClient";
+import CourseSimilarityPrecomputedGraph from "./CourseSimilarityPrecomputedGraph";
 import Auth from "./Auth";
 import Intake from "./Intake"; // intake semester checklist
 import SemesterCourseIntake from "./SemesterCourseIntake"; // per-semester course selector
 import { useNavigate } from "react-router-dom";
+import CourseInput from "./CourseInput";
+import { CURRENT_SEMESTER } from "./config";
 
-// Separate component for the Graph Page
-function GraphPage({
-  logout,
-  highlighted,
-  conflicted,
-  setHighlighted,
-  setConflicted,
-  currentSemester,
-  setCurrentSemester,
-}) {
+// Layout component for shared UI elements
+function Layout({ children, logout }) {
   const navigate = useNavigate();
 
   return (
@@ -42,29 +35,17 @@ function GraphPage({
             </button>
           </div>
         </div>
-        <CourseInput
-          onHighlight={setHighlighted}
-          onConflicted={setConflicted}
-          currentSemester={currentSemester}
-        />
       </div>
-      <div className="flex-grow relative px-4">
-        <CourseSimilarityPrecomputedGraph
-          mode="tsne"
-          highlighted={highlighted}
-          conflicted={conflicted}
-          onSemesterChange={setCurrentSemester}
-        />
-      </div>
+      {children}
     </div>
   );
 }
 
-export default function App() {
+function App() {
   const [user, setUser] = useState(null);
   const [highlighted, setHighlighted] = useState([]);
   const [conflicted, setConflicted] = useState([]);
-  const [currentSemester, setCurrentSemester] = useState("Spring 2024");
+  const [currentSemester, setCurrentSemester] = useState(CURRENT_SEMESTER);
 
   useEffect(() => {
     supabase.auth.getUser().then(({ data: { user } }) => setUser(user));
@@ -88,15 +69,22 @@ export default function App() {
         <Route
           path="/graph"
           element={
-            <GraphPage
-              logout={logout}
-              highlighted={highlighted}
-              conflicted={conflicted}
-              setHighlighted={setHighlighted}
-              setConflicted={setConflicted}
-              currentSemester={currentSemester}
-              setCurrentSemester={setCurrentSemester}
-            />
+            <Layout logout={logout}>
+              <CourseInput
+                onHighlight={setHighlighted}
+                onConflicted={setConflicted}
+                currentSemester={currentSemester}
+              />
+              <CourseSimilarityPrecomputedGraph
+                highlighted={highlighted}
+                conflicted={conflicted}
+                setHighlighted={setHighlighted}
+                setConflicted={setConflicted}
+                currentSemester={currentSemester}
+                setCurrentSemester={setCurrentSemester}
+                onConflicted={setConflicted}
+              />
+            </Layout>
           }
         />
         <Route path="*" element={<Navigate to="/intake" replace />} />
@@ -104,3 +92,5 @@ export default function App() {
     </Router>
   );
 }
+
+export default App;
