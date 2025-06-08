@@ -129,6 +129,11 @@ export default function CourseSimilarityPrecomputedGraph({
 
   const [showSettings, setShowSettings] = useState(false);
 
+  // Log dimensions when they change
+  useEffect(() => {
+    console.log('Current dimensions:', dimensions);
+  }, [dimensions]);
+
   // Call onSemesterChange when selectedSemester changes
   useEffect(() => {
     onSemesterChange?.(selectedSemester);
@@ -450,8 +455,8 @@ export default function CourseSimilarityPrecomputedGraph({
       const getFontSize = (baseSize) => {
         // Scale font size based on width, with a minimum and maximum for readability
         const minWidth = 800; // Minimum width where baseSize is applied
-        const maxWidth = 1600; // Maximum width where scaling stops
-        const minFactor = 0.3; // Minimum scaling factor (was 0.8)
+        const maxWidth = 1920; // Maximum width where scaling stops
+        const minFactor = 0.5; // Minimum scaling factor (was 0.8)
         const maxFactor = 1.0; // Maximum scaling factor (was 1.2)
 
         if (width <= minWidth) return `${baseSize * minFactor}px`;
@@ -504,15 +509,17 @@ export default function CourseSimilarityPrecomputedGraph({
       const colCount = 2; // Left legend columns
       
       // Left legend dimensions
-      const leftLegendWidth = legendItemWidth * colCount + 0.02 * width; // Added padding (reduced)
-      const leftLegendHeight = Math.ceil(deptEntries.length / colCount) * legendItemHeight + 40;
+      const leftLegendWidth = legendItemWidth * colCount + 0.02 * width;
+      const leftLegendHeight = Math.ceil(deptEntries.length / colCount) * legendItemHeight + width * width * 0.00001;
+      console.log('width', width * width * 0.00001)
       
       // Right legend dimensions (there is nothing now so set to 0)
       const rightLegendWidth = 0//leftLegendWidth; // Reduced width
       
       // Create padding for chart area
-      const topPadding = 40; // Title space
-      const bottomPadding = 40; // Footer space
+      const topPadding = 270 - width * 0.15; // Title space
+      console.log('topPadding:', topPadding)
+      const bottomPadding = 200 - width * 0.07; // Footer space
       const leftPadding = leftLegendWidth;
       const rightPadding = rightLegendWidth;
       
@@ -792,14 +799,17 @@ export default function CourseSimilarityPrecomputedGraph({
       }
 
       // === DEPARTMENT LEGEND (2-COLUMN LAYOUT) ===
-      const legendPadding = 20;
+      const legendPaddingY = 280 - width * 0.15;
+      const legendPaddingX = width * 0.01;
+      console.log('legendPadding:', legendPaddingX)
+
       const legendItemCount = deptEntries.length;
       const legendRows = Math.ceil(legendItemCount / colCount);
       
       // Create background for legend
       svg.append("rect")
-        .attr("x", legendPadding - 10)
-        .attr("y", legendPadding - 10)
+        .attr("x", legendPaddingX)
+        .attr("y", legendPaddingY - 10)
         .attr("width", leftLegendWidth - 20)
         .attr("height", leftLegendHeight)
         .attr("fill", "rgba(249, 247, 251, 0.95)")
@@ -807,8 +817,8 @@ export default function CourseSimilarityPrecomputedGraph({
       
       // Add title to legend
       svg.append("text")
-        .attr("x", legendPadding)
-        .attr("y", legendPadding + 15)
+        .attr("x", legendPaddingX)
+        .attr("y", legendPaddingY)
         .attr("text-anchor", "start")
         .style("font-weight", "bold")
         .style("font-size", getFontSize(14))
@@ -816,7 +826,7 @@ export default function CourseSimilarityPrecomputedGraph({
         
       const legend = svg
         .append("g")
-        .attr("transform", `translate(${legendPadding}, ${legendPadding + 30})`)
+        .attr("transform", `translate(${legendPaddingX}, ${legendPaddingY + width * 0.01})`)
         .attr("class", "legend");
 
       deptEntries.forEach((entry, i) => {
@@ -894,9 +904,9 @@ export default function CourseSimilarityPrecomputedGraph({
 
       // === TRANCHE SHAPE LEGEND (RIGHT SIDE) ===
       const shapeEntries = Object.entries(TRANCHE_SHAPES);
-      const shapeLegendX = legendPadding;
-      const shapeLegendY = leftLegendHeight + 25;
-      const shapeLegendHeight = shapeEntries.length * legendItemHeight + 50; // Adjusted height for disclaimer text
+      const shapeLegendX = legendPaddingX;
+      const shapeLegendY = legendPaddingY + leftLegendHeight;
+      const shapeLegendHeight = shapeEntries.length * legendItemHeight; // Adjusted height for disclaimer text
       
       // Background for shape legend
       svg.append("rect")
@@ -995,7 +1005,7 @@ export default function CourseSimilarityPrecomputedGraph({
       const disclaimerText = shapeLegend
         .append("text")
         .attr("x", -3)
-        .attr("y", shapeLegendHeight + 13) // Adjusted Y position to be inside the background
+        .attr("y", shapeLegendHeight + width * 0.02) // Adjusted Y position to be inside the background
         .style("font-size", getFontSize(14))
         .style("fill", "#666");
 
@@ -1019,7 +1029,7 @@ export default function CourseSimilarityPrecomputedGraph({
       svg
         .append("text")
         .attr("x", leftPadding + (width - leftPadding - rightPadding) / 2)
-        .attr("y", topPadding * 2)
+        .attr("y", 290 - width * 0.15)
         .attr("text-anchor", "middle")
         .style("font-size", getFontSize(18))
         .style("font-weight", "bold")
