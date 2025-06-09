@@ -20,14 +20,30 @@ export default function CoursePopup({ course, onClose, onHighlight, highlighted,
     // If there are multiple codes, combine them with a slash
     const codeToAdd = codes.length > 1 ? codes.join('/') : codes[0];
     
-    // Add to highlighted courses using onHighlight
+    // Add or remove from highlighted courses using onHighlight
     onHighlight(prevHighlighted => {
-      // Only add if not already in the array
-      if (!prevHighlighted.includes(codeToAdd)) {
-        return [...prevHighlighted, codeToAdd];
+      if (isSelected) {
+        // Remove the course if it's already selected
+        // Check for both individual codes and the combined code
+        return prevHighlighted.filter(code => {
+          // If the code contains a slash, it's a combined code
+          if (code.includes('/')) {
+            return code !== codeToAdd;
+          }
+          // For individual codes, check if they're part of the course's codes
+          return !codes.includes(code);
+        });
+      } else {
+        // Add the course if it's not selected
+        if (!prevHighlighted.includes(codeToAdd)) {
+          return [...prevHighlighted, codeToAdd];
+        }
+        return prevHighlighted;
       }
-      return prevHighlighted;
     });
+
+    // Close the popup after updating the highlighted courses
+    onClose();
   };
 
   return (
@@ -84,14 +100,13 @@ export default function CoursePopup({ course, onClose, onHighlight, highlighted,
           <div className="flex justify-end pt-4">
             <button
               onClick={handleSelect}
-              disabled={isSelected}
               className={`px-4 py-2 rounded-md font-medium transition-colors ${
                 isSelected
-                  ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                  ? 'bg-red-100 text-red-700 hover:bg-red-200'
                   : 'bg-[#3f1f69] text-white hover:bg-[#311a4d]'
               }`}
             >
-              {isSelected ? 'Already Selected' : 'Select Course'}
+              {isSelected ? 'Deselect Course' : 'Select Course'}
             </button>
           </div>
         )}
