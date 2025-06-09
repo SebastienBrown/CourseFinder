@@ -122,7 +122,6 @@ export default function CourseSimilarityPrecomputedGraph({
   const [showConflicts, setShowConflicts] = useState(true);
   const mapContainerRef = useRef(null);
   const contentToCaptureRef = useRef(null);
-  const [selectedCourses, setSelectedCourses] = useState([]);
 
   // Add a new state variable to hold backend output data
   const [backendOutputData, setBackendOutputData] = useState(null);
@@ -1241,32 +1240,35 @@ export default function CourseSimilarityPrecomputedGraph({
     // If there are multiple codes, combine them with a slash
     const codeToAdd = codes.length > 1 ? codes.join('/') : codes[0];
     
-    // Add only if not already selected
-    if (!selectedCourses.includes(codeToAdd)) {
-      const newSelectedCourses = [...selectedCourses, codeToAdd];
-      setSelectedCourses(newSelectedCourses);
-      
-      // Check for conflicts with the new selection
-      const response = await fetch(`${API_BASE_URL}/conflicted_courses`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ 
-          taken_courses: newSelectedCourses,
-          semester: selectedSemester 
-        }),
-      });
+    // Add to highlighted courses using onHighlight
+    onHighlight(prevHighlighted => {
+      // Only add if not already in the array
+      if (!prevHighlighted.includes(codeToAdd)) {
+        return [...prevHighlighted, codeToAdd];
+      }
+      return prevHighlighted;
+    });
+    
+    // Check for conflicts with the new selection
+    const response = await fetch(`${API_BASE_URL}/conflicted_courses`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ 
+        taken_courses: [...highlighted, codeToAdd], // Use highlighted array for conflict check
+        semester: selectedSemester 
+      }),
+    });
 
-      const data = await response.json();
-      onConflicted(data.conflicted_courses);
-    }
+    const data = await response.json();
+    onConflicted(data.conflicted_courses);
   };
 
   // Function to handle removing a course from selected courses
   const handleRemoveSelectedCourse = async (codeToRemove) => {
-    const newSelectedCourses = selectedCourses.filter(code => code !== codeToRemove);
-    setSelectedCourses(newSelectedCourses);
+    // Remove from highlighted courses
+    onHighlight(prevHighlighted => prevHighlighted.filter(code => code !== codeToRemove));
     
     // Update conflicts after removal
     const response = await fetch(`${API_BASE_URL}/conflicted_courses`, {
@@ -1275,7 +1277,7 @@ export default function CourseSimilarityPrecomputedGraph({
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ 
-        taken_courses: newSelectedCourses,
+        taken_courses: highlighted.filter(code => code !== codeToRemove),
         semester: selectedSemester 
       }),
     });
@@ -1391,8 +1393,6 @@ export default function CourseSimilarityPrecomputedGraph({
               onHighlight={onHighlight}
               highlighted={highlighted}
               activeTab={activeTab}
-              onSelect={handleAddSelectedCourse}
-              selectedCourses={selectedCourses}
             />
 
             {/* Semester Display - Only show in My Course History tab */}
@@ -1429,8 +1429,8 @@ export default function CourseSimilarityPrecomputedGraph({
                   <div className="flex items-center gap-2">
                     <span className="text-sm font-medium text-gray-700">Selected Courses:</span>
                     <div className="flex gap-1">
-                      {selectedCourses.length > 0 ? (
-                        selectedCourses.map((code) => (
+                      {highlighted.length > 0 ? (
+                        highlighted.map((code) => (
                           <div
                             key={code}
                             className="group relative px-2 py-0.5 bg-[#f4f0fa] text-sm text-[#3f1f69] rounded border border-[#eae6f4] hover:bg-[#eae6f4] transition-colors"
