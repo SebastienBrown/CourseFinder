@@ -47,12 +47,14 @@ function App() {
   const [conflicted, setConflicted] = useState([]);
   const [currentSemester, setCurrentSemester] = useState(CURRENT_SEMESTER);
 
-  // Add onHighlight function that can handle both direct values and callbacks
-  const onHighlight = (valueOrCallback) => {
-    if (typeof valueOrCallback === 'function') {
-      setHighlighted(valueOrCallback);
+  const handleHighlight = (newHighlighted) => {
+    // Check if newHighlighted is a function
+    if (typeof newHighlighted === 'function') {
+      // If it is, call it with the current state
+      setHighlighted(newHighlighted);
     } else {
-      setHighlighted(valueOrCallback);
+      // If not, use it directly as the new state
+      setHighlighted(newHighlighted);
     }
   };
 
@@ -80,7 +82,7 @@ function App() {
           element={
             <Layout logout={logout}>
               <CourseInput
-                onHighlight={onHighlight}
+                onHighlight={handleHighlight}
                 onConflicted={setConflicted}
                 currentSemester={currentSemester}
               />
@@ -92,7 +94,7 @@ function App() {
                 currentSemester={currentSemester}
                 onSemesterChange={setCurrentSemester}
                 onConflicted={setConflicted}
-                onHighlight={onHighlight}
+                onHighlight={handleHighlight}
               />
             </Layout>
           }
