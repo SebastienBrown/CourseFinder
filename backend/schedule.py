@@ -165,6 +165,7 @@ def conflicted_courses():
             continue  # no times to compare
 
         if has_conflict(course_times, taken_schedule):
+            print("Course",course,"has a conflict with these times ",course_times)
             conflicted_courses.extend(codes)  # Add all codes for this course
 
     print("Current Semester:", current_semester)
