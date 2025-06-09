@@ -7,7 +7,7 @@ import Intake from "./Intake"; // intake semester checklist
 import SemesterCourseIntake from "./SemesterCourseIntake"; // per-semester course selector
 import { useNavigate } from "react-router-dom";
 import CourseInput from "./CourseInput";
-import { CURRENT_SEMESTER } from "./config";
+import { CURRENT_SEMESTER, API_BASE_URL } from "./config";
 
 // Layout component for shared UI elements
 function Layout({ children, logout }) {
@@ -58,6 +58,33 @@ function App() {
     }
   };
 
+  // Function to check conflicts with the backend
+  const checkConflicts = async (courses, semester) => {
+    try {
+      const response = await fetch(`${API_BASE_URL}/conflicted_courses`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ 
+          taken_courses: courses,
+          semester: semester 
+        }),
+      });
+      const data = await response.json();
+      setConflicted(data.conflicted_courses);
+    } catch (error) {
+      console.error('Error checking conflicts:', error);
+      setConflicted([]);
+    }
+  };
+
+  // Effect to handle semester changes
+  useEffect(() => {
+    // When semester changes, check conflicts with empty highlighted list
+    checkConflicts(highlighted, currentSemester);
+  }, [currentSemester]);
+
   useEffect(() => {
     supabase.auth.getUser().then(({ data: { user } }) => setUser(user));
     supabase.auth.onAuthStateChange((_, session) => {
@@ -85,6 +112,7 @@ function App() {
                 onHighlight={handleHighlight}
                 onConflicted={setConflicted}
                 currentSemester={currentSemester}
+                highlighted={highlighted}
               />
               <CourseSimilarityPrecomputedGraph
                 highlighted={highlighted}
