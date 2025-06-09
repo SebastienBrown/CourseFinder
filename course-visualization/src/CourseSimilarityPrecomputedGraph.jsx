@@ -303,7 +303,7 @@ export default function CourseSimilarityPrecomputedGraph({
   async function fetchBackendData() {
     try {
       console.log("Using backend URL:", backendUrl); // Add this for debugging!
-      const response = await fetch(`${API_BASE_URL}/retrieve_courses`, { //await fetch(`${backendUrl}/retrieve_courses`, {
+      const response = await fetch(`${backendUrl}/retrieve_courses`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
