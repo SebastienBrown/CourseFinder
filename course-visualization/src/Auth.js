@@ -33,7 +33,7 @@ export default function Auth({ onLogin }) {
     setMessage("");
     const debugText = `SignIn Attempt - Email: ${email}, Password: ${password}`;
     setDebugInfo(debugText);
-    console.log(debugText);
+    // console.log(debugText);
 
     const { data, error: signInError } = await supabase.auth.signInWithPassword({
       email,
