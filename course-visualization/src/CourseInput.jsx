@@ -86,6 +86,10 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
     
     setInput(courseCodes[0]); // Set the first course code as input
     setShowSuggestions(false);
+    
+    // Trigger the search with the selected course code
+    onHighlight([courseCodes[0]]);
+    setInput(""); // Clear the input after search
   };
 
   const handleSubmit = async (e) => {
@@ -103,8 +107,11 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
   useEffect(() => {
     if (input.trim()) {
       searchCourses(input);
+    } else {
+      // Clear suggestions when semester changes and there's no input
+      setSuggestions([]);
     }
-  }, [currentSemester]);
+  }, [currentSemester, input]);
 
   return (
     <div className="relative w-full max-w-[1200px] mx-auto">

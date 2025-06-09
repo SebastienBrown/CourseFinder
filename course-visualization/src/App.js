@@ -81,7 +81,7 @@ function App() {
                 setHighlighted={setHighlighted}
                 setConflicted={setConflicted}
                 currentSemester={currentSemester}
-                setCurrentSemester={setCurrentSemester}
+                onSemesterChange={setCurrentSemester}
                 onConflicted={setConflicted}
               />
             </Layout>
