@@ -1264,7 +1264,7 @@ export default function CourseSimilarityPrecomputedGraph({
     onHighlight(newHighlighted);
     
     // Check for conflicts with the new selection
-    const response = await fetch(`${API_BASE_URL}/conflicted_courses`, {
+    const response = await fetch(`${backendUrl}/conflicted_courses`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
