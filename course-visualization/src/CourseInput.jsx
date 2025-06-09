@@ -87,8 +87,8 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
     setInput(courseCodes[0]); // Set the first course code as input
     setShowSuggestions(false);
     
-    // Trigger the search with the selected course code
-    onHighlight([courseCodes[0]]);
+    // Append to highlighted courses instead of replacing
+    onHighlight(prevHighlighted => [...prevHighlighted, courseCodes[0]]);
     setInput(""); // Clear the input after search
   };
 
@@ -99,7 +99,8 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
       .map((code) => code.trim().toUpperCase())
       .filter((code) => code.length > 0);
 
-    onHighlight(codes); // Only highlight the searched courses
+    // Append new codes to existing highlighted courses instead of replacing
+    onHighlight(prevHighlighted => [...prevHighlighted, ...codes]);
     setInput(""); // Clear the input after search
   };
 

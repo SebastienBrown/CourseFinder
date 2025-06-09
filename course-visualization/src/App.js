@@ -47,6 +47,15 @@ function App() {
   const [conflicted, setConflicted] = useState([]);
   const [currentSemester, setCurrentSemester] = useState(CURRENT_SEMESTER);
 
+  // Add onHighlight function that can handle both direct values and callbacks
+  const onHighlight = (valueOrCallback) => {
+    if (typeof valueOrCallback === 'function') {
+      setHighlighted(valueOrCallback);
+    } else {
+      setHighlighted(valueOrCallback);
+    }
+  };
+
   useEffect(() => {
     supabase.auth.getUser().then(({ data: { user } }) => setUser(user));
     supabase.auth.onAuthStateChange((_, session) => {
@@ -71,7 +80,7 @@ function App() {
           element={
             <Layout logout={logout}>
               <CourseInput
-                onHighlight={setHighlighted}
+                onHighlight={onHighlight}
                 onConflicted={setConflicted}
                 currentSemester={currentSemester}
               />
@@ -83,6 +92,7 @@ function App() {
                 currentSemester={currentSemester}
                 onSemesterChange={setCurrentSemester}
                 onConflicted={setConflicted}
+                onHighlight={onHighlight}
               />
             </Layout>
           }

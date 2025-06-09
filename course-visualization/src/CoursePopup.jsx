@@ -1,14 +1,34 @@
 import React from "react";
 
-export default function CoursePopup({ course, onClose, onHighlight, highlighted, activeTab, onSelect, selectedCourses }) {
+export default function CoursePopup({ course, onClose, onHighlight, highlighted, activeTab }) {
   if (!course) return null;
 
-  // Check if any of the course codes are already selected
+  // Check if any of the course codes are already highlighted
   const isSelected = course.course_codes && 
     (Array.isArray(course.course_codes) 
-      ? course.course_codes.some(code => selectedCourses.includes(code)) ||
-        selectedCourses.includes(course.course_codes.join('/'))
-      : selectedCourses.includes(course.course_codes));
+      ? course.course_codes.some(code => highlighted.includes(code)) ||
+        highlighted.includes(course.course_codes.join('/'))
+      : highlighted.includes(course.course_codes));
+
+  const handleSelect = () => {
+    if (!course.course_codes) return;
+    
+    const codes = Array.isArray(course.course_codes) 
+      ? course.course_codes 
+      : [course.course_codes];
+    
+    // If there are multiple codes, combine them with a slash
+    const codeToAdd = codes.length > 1 ? codes.join('/') : codes[0];
+    
+    // Add to highlighted courses using onHighlight
+    onHighlight(prevHighlighted => {
+      // Only add if not already in the array
+      if (!prevHighlighted.includes(codeToAdd)) {
+        return [...prevHighlighted, codeToAdd];
+      }
+      return prevHighlighted;
+    });
+  };
 
   return (
     <div
@@ -63,7 +83,7 @@ export default function CoursePopup({ course, onClose, onHighlight, highlighted,
         {activeTab === 'thisSemester' && (
           <div className="flex justify-end pt-4">
             <button
-              onClick={() => onSelect(course)}
+              onClick={handleSelect}
               disabled={isSelected}
               className={`px-4 py-2 rounded-md font-medium transition-colors ${
                 isSelected
