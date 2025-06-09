@@ -140,6 +140,8 @@ export default function CourseSimilarityPrecomputedGraph({
   // Call onSemesterChange when selectedSemester changes
   useEffect(() => {
     onSemesterChange?.(selectedSemester);
+    // Reset highlighted courses when semester changes using functional update
+    onHighlight(() => []);
   }, [selectedSemester, onSemesterChange]);
 
   const setSvgRef = useCallback((node) => {
