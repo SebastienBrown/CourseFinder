@@ -1390,7 +1390,7 @@ export default function CourseSimilarityPrecomputedGraph({
             />
 
             {/* Semester Display - Only show in My Course History tab */}
-            {activeTab === 'yourHistory' && historyData && (
+            {/* {activeTab === 'yourHistory' && historyData && (
               <div className="absolute bottom-0 left-0 w-full bg-white/90 p-4 border-t border-[#e8e2f2]">
                 <div className="flex flex-wrap gap-4">
                   {getSemestersWithData().map(semester => (
@@ -1410,7 +1410,7 @@ export default function CourseSimilarityPrecomputedGraph({
                   ))}
                 </div>
               </div>
-            )}
+            )} */}
 
             {/* Semester Slider - Only show in Single Semester View tab */}
             {activeTab === 'thisSemester' && (
