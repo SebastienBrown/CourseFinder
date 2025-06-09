@@ -303,7 +303,7 @@ export default function CourseSimilarityPrecomputedGraph({
   async function fetchBackendData() {
     try {
       console.log("Using backend URL:", backendUrl); // Add this for debugging!
-      const response = await fetch(`${backendUrl}/retrieve_courses`, {
+      const response = await fetch(`${backendUrl}/retrieve_courses`, { // await fetch(`${API_BASE_URL}/retrieve_courses`
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -377,7 +377,7 @@ export default function CourseSimilarityPrecomputedGraph({
       }
 
       const allMajors = Object.values(TRANCHES).flat();
-      const colorPalette = d3.schemePastel1.concat(d3.schemePastel2);
+      const colorPalette = d3.schemePastel1.slice(0, 8).concat(d3.schemePastel2);
       const majorColorMap = new Map();
       let colorIndex = 0;
       for (const tranche of Object.values(TRANCHES)) {
@@ -620,10 +620,10 @@ export default function CourseSimilarityPrecomputedGraph({
           // Single Semester View: Adjust base sizes for single vs multi-code courses
           if (d.codes.length === 1) {
             // Single code courses: slightly larger base size
-            baseSize = highlightedCount > 0 ? 18 : 8;
+            baseSize = highlightedCount > 0 ? 18 : 7;
           } else {
             // Multi-code courses: slightly smaller base size
-            baseSize = highlightedCount > 0 ? 18 : 5;
+            baseSize = highlightedCount > 0 ? 18 : 7;
           }
           opacity = 1;
         }
