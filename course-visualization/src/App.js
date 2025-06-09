@@ -10,11 +10,13 @@ import CourseInput from "./CourseInput";
 import { CURRENT_SEMESTER, API_BASE_URL } from "./config";
 
 
+console.log("🟢 Using backend URL:", process.env.REACT_APP_BACKEND_URL);
+
+
 // Layout component for shared UI elements
 function Layout({ children, logout }) {
   const navigate = useNavigate();
-  const backendUrl=process.env.REACT_APP_BACKEND_URL;
-
+  
   return (
     <div className="flex flex-col min-h-screen bg-[#f9f7fb]">
       <div className="w-full max-w-[1200px] mx-auto space-y-6 mb-4 px-4">
@@ -48,6 +50,7 @@ function App() {
   const [highlighted, setHighlighted] = useState([]);
   const [conflicted, setConflicted] = useState([]);
   const [currentSemester, setCurrentSemester] = useState(CURRENT_SEMESTER);
+  const backendUrl=process.env.REACT_APP_BACKEND_URL;
 
   const handleHighlight = (newHighlighted) => {
     // Check if newHighlighted is a function
