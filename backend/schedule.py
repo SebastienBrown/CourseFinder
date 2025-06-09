@@ -36,7 +36,7 @@ with open('./data/amherst_courses_all.json') as f:
         print(f"Unexpected error loading amherst_courses_all.json: {e}")
         amherst_data = []
 
-with open('./data/precomputed_tsne_coords_all.json') as f:
+with open('./data/precomputed_tsne_coords_all_v3.json') as f:
     try:
         coords_data = json.load(f)
         if not isinstance(coords_data, list):
