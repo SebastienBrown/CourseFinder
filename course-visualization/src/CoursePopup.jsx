@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CoursePopup({ course, onClose, onHighlight, highlighted, activeTab }) {
+export default function CoursePopup({ course, onClose, onHighlight, highlighted, activeTab, onSelect }) {
   if (!course) return null;
 
   // Check if any of the course codes are already highlighted
@@ -13,36 +13,8 @@ export default function CoursePopup({ course, onClose, onHighlight, highlighted,
   const handleSelect = () => {
     if (!course.course_codes) return;
     
-    const codes = Array.isArray(course.course_codes) 
-      ? course.course_codes 
-      : [course.course_codes];
-    
-    // If there are multiple codes, combine them with a slash
-    const codeToAdd = codes.length > 1 ? codes.join('/') : codes[0];
-    
-    // Add or remove from highlighted courses using onHighlight
-    onHighlight(prevHighlighted => {
-      if (isSelected) {
-        // Remove the course if it's already selected
-        // Check for both individual codes and the combined code
-        return prevHighlighted.filter(code => {
-          // If the code contains a slash, it's a combined code
-          if (code.includes('/')) {
-            return code !== codeToAdd;
-          }
-          // For individual codes, check if they're part of the course's codes
-          return !codes.includes(code);
-        });
-      } else {
-        // Add the course if it's not selected
-        if (!prevHighlighted.includes(codeToAdd)) {
-          return [...prevHighlighted, codeToAdd];
-        }
-        return prevHighlighted;
-      }
-    });
-
-    // Close the popup after updating the highlighted courses
+    // Use onSelect (handleAddSelectedCourse) instead of onHighlight
+    onSelect(course);
     onClose();
   };
 
