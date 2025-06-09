@@ -6,6 +6,7 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
   const [allCourses, setAllCourses] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const backendUrl=process.env.REACT_APP_BACKEND_URL;
 
   // Load course data on component mount
   useEffect(() => {
@@ -96,7 +97,7 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
     
     // Check for conflicts
     try {
-      const response = await fetch(`${API_BASE_URL}/conflicted_courses`, {
+      const response = await fetch(`${backendUrl}/conflicted_courses`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -131,7 +132,7 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
     
     // Check for conflicts
     try {
-      const response = await fetch(`${API_BASE_URL}/conflicted_courses`, {
+      const response = await fetch(`${backendUrl}/conflicted_courses`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

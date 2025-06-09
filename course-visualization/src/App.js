@@ -9,9 +9,11 @@ import { useNavigate } from "react-router-dom";
 import CourseInput from "./CourseInput";
 import { CURRENT_SEMESTER, API_BASE_URL } from "./config";
 
+
 // Layout component for shared UI elements
 function Layout({ children, logout }) {
   const navigate = useNavigate();
+  const backendUrl=process.env.REACT_APP_BACKEND_URL;
 
   return (
     <div className="flex flex-col min-h-screen bg-[#f9f7fb]">
@@ -61,7 +63,7 @@ function App() {
   // Function to check conflicts with the backend
   const checkConflicts = async (courses, semester) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/conflicted_courses`, {
+      const response = await fetch(`${backendUrl}/conflicted_courses`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
