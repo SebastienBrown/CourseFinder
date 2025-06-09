@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { API_BASE_URL } from './config';
 
-export default function CourseInput({ onHighlight, onConflicted, currentSemester }) {
+export default function CourseInput({ onHighlight, onConflicted, currentSemester, highlighted }) {
   const [input, setInput] = useState("");
   const [allCourses, setAllCourses] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
@@ -79,7 +79,7 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
     console.log('Show suggestions:', showSuggestions);
   };
 
-  const handleSuggestionClick = (course) => {
+  const handleSuggestionClick = async (course) => {
     const courseCodes = Array.isArray(course.course_codes) 
       ? course.course_codes 
       : [course.course_codes];
@@ -87,8 +87,31 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
     setInput(courseCodes[0]); // Set the first course code as input
     setShowSuggestions(false);
     
-    // Append to highlighted courses instead of replacing
-    onHighlight(prevHighlighted => [...prevHighlighted, courseCodes[0]]);
+    // Ensure highlighted is an array before spreading
+    const currentHighlighted = Array.isArray(highlighted) ? highlighted : [];
+    console.log('Current highlighted courses:', currentHighlighted);
+    const newHighlighted = [...currentHighlighted, courseCodes[0]];
+    console.log('New highlighted courses after adding:', newHighlighted);
+    onHighlight(newHighlighted);
+    
+    // Check for conflicts
+    try {
+      const response = await fetch(`${API_BASE_URL}/conflicted_courses`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ 
+          taken_courses: newHighlighted,
+          semester: currentSemester 
+        }),
+      });
+      const data = await response.json();
+      onConflicted(data.conflicted_courses);
+    } catch (error) {
+      console.error('Error checking conflicts:', error);
+    }
+    
     setInput(""); // Clear the input after search
   };
 
@@ -99,8 +122,31 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
       .map((code) => code.trim().toUpperCase())
       .filter((code) => code.length > 0);
 
-    // Append new codes to existing highlighted courses instead of replacing
-    onHighlight(prevHighlighted => [...prevHighlighted, ...codes]);
+    // Ensure highlighted is an array before spreading
+    const currentHighlighted = Array.isArray(highlighted) ? highlighted : [];
+    console.log('Current highlighted courses:', currentHighlighted);
+    const newHighlighted = [...currentHighlighted, ...codes];
+    console.log('New highlighted courses after adding:', newHighlighted);
+    onHighlight(newHighlighted);
+    
+    // Check for conflicts
+    try {
+      const response = await fetch(`${API_BASE_URL}/conflicted_courses`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ 
+          taken_courses: newHighlighted,
+          semester: currentSemester 
+        }),
+      });
+      const data = await response.json();
+      onConflicted(data.conflicted_courses);
+    } catch (error) {
+      console.error('Error checking conflicts:', error);
+    }
+    
     setInput(""); // Clear the input after search
   };
 
