@@ -1242,14 +1242,26 @@ export default function CourseSimilarityPrecomputedGraph({
     // If there are multiple codes, combine them with a slash
     const codeToAdd = codes.length > 1 ? codes.join('/') : codes[0];
     
-    // Add to highlighted courses using onHighlight
-    onHighlight(prevHighlighted => {
-      // Only add if not already in the array
-      if (!prevHighlighted.includes(codeToAdd)) {
-        return [...prevHighlighted, codeToAdd];
+    // Check if the course is already selected
+    const isSelected = highlighted.some(code => {
+      if (code.includes('/')) {
+        return code === codeToAdd;
       }
-      return prevHighlighted;
+      return codes.includes(code);
     });
+
+    // Update highlighted courses and get the new state
+    const newHighlighted = isSelected
+      ? highlighted.filter(code => {
+          if (code.includes('/')) {
+            return code !== codeToAdd;
+          }
+          return !codes.includes(code);
+        })
+      : [...highlighted, codeToAdd];
+
+    // Update highlighted courses
+    onHighlight(newHighlighted);
     
     // Check for conflicts with the new selection
     const response = await fetch(`${API_BASE_URL}/conflicted_courses`, {
@@ -1258,28 +1270,7 @@ export default function CourseSimilarityPrecomputedGraph({
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ 
-        taken_courses: [...highlighted, codeToAdd], // Use highlighted array for conflict check
-        semester: selectedSemester 
-      }),
-    });
-
-    const data = await response.json();
-    onConflicted(data.conflicted_courses);
-  };
-
-  // Function to handle removing a course from selected courses
-  const handleRemoveSelectedCourse = async (codeToRemove) => {
-    // Remove from highlighted courses
-    onHighlight(prevHighlighted => prevHighlighted.filter(code => code !== codeToRemove));
-    
-    // Update conflicts after removal
-    const response = await fetch(`${API_BASE_URL}/conflicted_courses`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ 
-        taken_courses: highlighted.filter(code => code !== codeToRemove),
+        taken_courses: newHighlighted, // Use the new state directly
         semester: selectedSemester 
       }),
     });
@@ -1395,6 +1386,7 @@ export default function CourseSimilarityPrecomputedGraph({
               onHighlight={onHighlight}
               highlighted={highlighted}
               activeTab={activeTab}
+              onSelect={handleAddSelectedCourse}
             />
 
             {/* Semester Display - Only show in My Course History tab */}
@@ -1439,7 +1431,7 @@ export default function CourseSimilarityPrecomputedGraph({
                           >
                             {code}
                             <button
-                              onClick={() => handleRemoveSelectedCourse(code)}
+                              onClick={() => handleAddSelectedCourse({ course_codes: [code] })}
                               className="absolute -top-1 -right-1 w-4 h-4 bg-white rounded-full border border-[#eae6f4] 
                                 flex items-center justify-center text-[#3f1f69] opacity-0 group-hover:opacity-100 
                                 transition-opacity hover:bg-[#f4f0fa]"
