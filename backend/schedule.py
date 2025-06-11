@@ -174,12 +174,12 @@ def conflicted_courses():
         if has_conflict(course_times, taken_schedule):
             #print("Course",course,"has a conflict with these times ",course_times)
             conflicted_courses.extend(codes)  # Add all codes for this course
-            print("Conflicts with ",course_times)
+            #print("Course",codes,"conflicts with ",course_times)
 
-    print("Taken schedule is ",taken_schedule)
-    print("Current Semester:", current_semester)
-    print("Taken courses in semester:", taken_courses_in_semester)
-    print("Conflicted:", conflicted_courses)  # sample output
+    #print("Taken schedule is ",taken_schedule)
+    #print("Current Semester:", current_semester)
+    #print("Taken courses in semester:", taken_courses_in_semester)
+    #print("Conflicted:", conflicted_courses)  # sample output
 
     return jsonify({"conflicted_courses": conflicted_courses})
 
