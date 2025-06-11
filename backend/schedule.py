@@ -69,10 +69,14 @@ def parse_time_range(time_str):
     except Exception:
         return None
     
-def extract_schedule(course_codes):
-    # Extract scheduled time slots for taken courses
+def extract_schedule(course_codes, current_semester):
+    # Extract scheduled time slots for taken courses in the current semester only
     taken_schedule = []
     for course in amherst_data:
+        # Only process courses from the current semester
+        if course.get("semester") != current_semester:
+            continue
+            
         for code in course.get("course_codes", []):
             if code in course_codes:
                 times_and_locations = course.get("times_and_locations", {})
@@ -111,16 +115,19 @@ def conflicted_courses():
     semester_courses = [course for course in amherst_data if course.get("semester") == current_semester]
     print(f"Found {len(semester_courses)} courses in semester {current_semester}")
 
-    # Find the taken courses in the current semester
-    taken_courses_in_semester = []
+        # Find the taken courses in the current semester
+    taken_courses_in_semester = set()
     for course in semester_courses:
-        if any(code in course.get("course_codes", []) for code in taken_course_codes):
-            taken_courses_in_semester.extend(course.get("course_codes", []))
+        for code in course.get("course_codes", []):
+            if code in taken_course_codes:
+                taken_courses_in_semester.add(code)
+
+    taken_courses_in_semester = list(taken_courses_in_semester)  # Convert back to list if needed
 
     if not taken_courses_in_semester:
         return jsonify({"conflicted_courses": []})
 
-    taken_schedule = extract_schedule(taken_courses_in_semester)
+    taken_schedule = extract_schedule(taken_courses_in_semester, current_semester)
     conflicted_courses = []
 
     for entry in coords_data:
@@ -165,9 +172,11 @@ def conflicted_courses():
             continue  # no times to compare
 
         if has_conflict(course_times, taken_schedule):
-            print("Course",course,"has a conflict with these times ",course_times)
+            #print("Course",course,"has a conflict with these times ",course_times)
             conflicted_courses.extend(codes)  # Add all codes for this course
+            print("Conflicts with ",course_times)
 
+    print("Taken schedule is ",taken_schedule)
     print("Current Semester:", current_semester)
     print("Taken courses in semester:", taken_courses_in_semester)
     print("Conflicted:", conflicted_courses)  # sample output
