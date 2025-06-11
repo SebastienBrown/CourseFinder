@@ -12,14 +12,14 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
   useEffect(() => {
     const loadCourses = async () => {
       try {
-        console.log('Attempting to load courses...');
+        //console.log('Attempting to load courses...');
         const response = await fetch('/amherst_courses_all.json');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        console.log('Loaded courses:', data.length);
-        console.log('First course:', data[0]);
+        //console.log('Loaded courses:', data.length);
+        //console.log('First course:', data[0]);
         setAllCourses(data);
       } catch (error) {
         console.error('Error loading courses:', error);
@@ -34,9 +34,9 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
 
   // Search function to find matching courses
   const searchCourses = (searchTerm) => {
-    console.log('Searching with term:', searchTerm);
-    console.log('Current semester:', currentSemester);
-    console.log('Number of courses available:', allCourses.length);
+    //console.log('Searching with term:', searchTerm);
+    //console.log('Current semester:', currentSemester);
+    //console.log('Number of courses available:', allCourses.length);
     
     if (!searchTerm.trim()) {
       setSuggestions([]);
@@ -66,7 +66,7 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
       })
       .slice(0, 5); // Limit to 5 suggestions
 
-    console.log('Found matches:', matches);
+    //console.log('Found matches:', matches);
     setSuggestions(matches);
   };
 
@@ -75,9 +75,9 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
     setInput(value);
     searchCourses(value);
     setShowSuggestions(true);
-    console.log('Input changed:', value);
-    console.log('Suggestions:', suggestions);
-    console.log('Show suggestions:', showSuggestions);
+    //console.log('Input changed:', value);
+   // console.log('Suggestions:', suggestions);
+    //console.log('Show suggestions:', showSuggestions);
   };
 
   const handleSuggestionClick = async (course) => {
@@ -90,9 +90,9 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
     
     // Ensure highlighted is an array before spreading
     const currentHighlighted = Array.isArray(highlighted) ? highlighted : [];
-    console.log('Current highlighted courses:', currentHighlighted);
+    //('Current highlighted courses:', currentHighlighted);
     const newHighlighted = [...currentHighlighted, courseCodes[0]];
-    console.log('New highlighted courses after adding:', newHighlighted);
+    //console.log('New highlighted courses after adding:', newHighlighted);
     onHighlight(newHighlighted);
     
     // Check for conflicts
@@ -125,9 +125,9 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
 
     // Ensure highlighted is an array before spreading
     const currentHighlighted = Array.isArray(highlighted) ? highlighted : [];
-    console.log('Current highlighted courses:', currentHighlighted);
+    //console.log('Current highlighted courses:', currentHighlighted);
     const newHighlighted = [...currentHighlighted, ...codes];
-    console.log('New highlighted courses after adding:', newHighlighted);
+    //console.log('New highlighted courses after adding:', newHighlighted);
     onHighlight(newHighlighted);
     
     // Check for conflicts
@@ -181,7 +181,7 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
             value={input}
             onChange={handleInputChange}
             onFocus={() => {
-              console.log('Input focused');
+              //console.log('Input focused');
               setShowSuggestions(true);
             }}
             placeholder={`Search by course code or title for ${currentSemester} (e.g. MATH-111 or Introduction to Legal Theory)`}
