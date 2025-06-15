@@ -15,12 +15,12 @@ import {
 import { CURRENT_SEMESTER, AVAILABLE_SEMESTERS, getSemesterDataPaths } from "./config";
 import CoursePopup from "./CoursePopup";
 import { supabase } from "./supabaseClient"; // make sure this points to your initialized Supabase client
-import { API_BASE_URL } from './config';
+// import { API_BASE_URL } from './config';
 import Settings from './Settings';
 import html2canvas from 'html2canvas'; // Import html2canvas
 
 // Use the globally defined current semester
-const semester = CURRENT_SEMESTER;
+// const semester = CURRENT_SEMESTER;
 const backendUrl=process.env.REACT_APP_BACKEND_URL;
 
 // === Tranche & Shape Definitions ===
@@ -1387,6 +1387,8 @@ export default function CourseSimilarityPrecomputedGraph({
               highlighted={highlighted}
               activeTab={activeTab}
               onSelect={handleAddSelectedCourse}
+              courseDetailsData={courseDetailsData}
+              setSelectedCourse={setSelectedCourse}
             />
 
             {/* Semester Display - Only show in My Course History tab */}
