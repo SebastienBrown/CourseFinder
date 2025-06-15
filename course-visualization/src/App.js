@@ -10,7 +10,7 @@ import CourseInput from "./CourseInput";
 import { CURRENT_SEMESTER, API_BASE_URL } from "./config";
 
 
-//console.log("🟢 Using backend URL:", process.env.REACT_APP_BACKEND_URL);
+console.log("🟢 Using backend URL:", process.env.REACT_APP_BACKEND_URL);
 
 
 // Layout component for shared UI elements
