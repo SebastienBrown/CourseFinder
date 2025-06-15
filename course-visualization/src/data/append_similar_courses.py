@@ -2,71 +2,118 @@ import json
 from collections import defaultdict
 
 # Constants for file paths
-COORDINATES_FILE = 'precomputed_tsne_coords_all_v3.json'
+COORDINATES_FILE = 'precomputed_tsne_coords_all_v4.json'
 
-def get_top_similar_courses(similarity_data, num_similar=3):
-    """
-    For each course, find the top N most similar courses within the same semester.
-    Returns a dictionary mapping (semester, course_code) to a list of (course_code, similarity_score) tuples.
-    """
-    # Group courses by semester
-    semester_courses = defaultdict(list)
-    for entry in similarity_data:
-        semester = entry.get('semester', 'unknown')
-        for code in entry['course_codes']:
-            semester_courses[semester].append((code, entry))
-    
-    # For each course, find top similar courses within same semester
-    top_similar = {}
-    
-    for semester, courses in semester_courses.items():
-        for code, entry in courses:
-            # Get all compared courses from the same semester
-            similar_courses = []
-            for comp in entry.get('compared_courses', []):
-                comp_semester = comp.get('semester', 'unknown')
-                if comp_semester == semester and comp.get('course_codes'):
-                    for comp_code in comp['course_codes']:
-                        similar_courses.append((comp_code, comp['similarity_score']))
+# Load similarity data
+with open('../../../similarity/output_similarity_all.json', 'r') as f:
+    similarity_data = json.load(f)
+
+# Remove senior honors courses and special topics
+out = ['499', '498', '490', '390', '290', '210F', '111F', '-77', '-78', '-77D']
+
+# Filter out courses with course codes
+filtered_courses = []
+for course in similarity_data:
+    # Handle course_codes whether it's a string or a list
+    course_codes = course.get('course_codes', [])
+    if isinstance(course_codes, str):
+        course_codes = [course_codes]
+    elif not isinstance(course_codes, list):
+        course_codes = []
+        
+    # Check if any of the main course codes contain the excluded numbers
+    if any(any(code.endswith(excluded) for excluded in out) for code in course_codes):
+        continue
+        
+    # Filter out specific comparisons that contain excluded numbers
+    filtered_compared = []
+    for comp in course.get('compared_courses', []):
+        comp_codes = comp.get('course_codes', [])
+        if isinstance(comp_codes, str):
+            comp_codes = [comp_codes]
+        elif not isinstance(comp_codes, list):
+            comp_codes = []
             
-            # Sort by similarity score and take top N
-            similar_courses.sort(key=lambda x: x[1], reverse=True)
-            top_similar[(semester, code)] = similar_courses[:num_similar]
+        # Only keep this comparison if none of its codes end with excluded numbers
+        if not any(any(code.endswith(excluded) for excluded in out) for code in comp_codes):
+            filtered_compared.append(comp)
     
-    return top_similar
+    # Update the course with filtered comparisons
+    course['compared_courses'] = filtered_compared
+    filtered_courses.append(course)
 
-def append_similar_courses_to_tsne():
-    # Load similarity data
-    with open('../../../similarity/output_similarity_all.json', 'r') as f:
-        similarity_data = json.load(f)
-    
-    # Load t-SNE coordinates
-    with open(f'../../public/{COORDINATES_FILE}', 'r') as f:
-        tsne_data = json.load(f)
-    
-    # Get top similar courses
-    top_similar = get_top_similar_courses(similarity_data)
-    
-    # Add similar_courses field to each entry
-    for entry in tsne_data:
-        semester = entry['semester']
-        for code in entry['codes']:
-            key = (semester, code)
-            if key in top_similar:
-                # Only add the similar_courses field, preserving all other data
-                entry['similar_courses'] = [
-                    {'code': code, 'similarity': score}
-                    for code, score in top_similar[key]
-                ]
-                break  # Only add similar courses for the first code in the list
-    
-    # Save updated data back to the same file
-    with open(f'../../public/{COORDINATES_FILE}', 'w') as f:
-        json.dump(tsne_data, f, indent=2)
-    with open(f'../../../backend/data/{COORDINATES_FILE}', 'w') as f:
-        json.dump(tsne_data, f, indent=2)
-    
-    print(f"Successfully added similar_courses field to {len(tsne_data)} entries")
+print(f"Filtered out {len(similarity_data) - len(filtered_courses)} courses with course codes containing {out}.")
+similarity_data = filtered_courses
 
-if __name__ == "__main__":
-    append_similar_courses_to_tsne() 
+# Get top similar courses for each course
+top_similar = {}
+for entry in similarity_data:
+    course_codes = entry['course_codes']
+    semester = entry['semester']
+    
+    # Skip if no compared courses
+    if not entry.get('compared_courses'):
+        continue
+        
+    # First filter courses by semester, then sort by similarity score
+    same_semester_courses = [
+        course for course in entry['compared_courses']
+        if course['semester'] == semester
+    ]
+    
+    # Filter out self-comparisons (where a course is compared with its own other codes)
+    filtered_courses = []
+    seen_courses = set()  # Keep track of courses we've already seen
+    for course in same_semester_courses:
+        # Skip if any of the compared course codes are in the original course's codes
+        if not any(code in course_codes for code in course['course_codes']):
+            # Create a unique identifier for this course using its first code
+            course_id = course['course_codes'][0]
+            if course_id not in seen_courses:
+                seen_courses.add(course_id)
+                filtered_courses.append(course)
+    
+    # Sort filtered courses by similarity score
+    sorted_courses = sorted(
+        filtered_courses,
+        key=lambda x: x['similarity_score'],
+        reverse=True
+    )
+    
+    # Take top 3 similar courses
+    similar_courses = []
+    for course in sorted_courses[:3]:
+        similar_courses.append({
+            'code': course['course_codes'],
+            'similarity': course['similarity_score']
+        })
+    
+    # Store the similar courses under the course codes list and semester
+    top_similar[(tuple(course_codes), semester)] = similar_courses
+
+# Load t-SNE coordinates
+with open(f'../../public/{COORDINATES_FILE}', 'r') as f:
+    tsne_data = json.load(f)
+
+# Remove any existing similar_courses field
+for entry in tsne_data:
+    if 'similar_courses' in entry:
+        del entry['similar_courses']
+
+# Add similar_courses field to each entry
+for entry in tsne_data:
+    course_codes = tuple(entry['codes'])  # Convert to tuple for dictionary lookup
+    semester = entry['semester']
+    key = (course_codes, semester)
+    if key in top_similar:
+        entry['similar_courses'] = top_similar[key]
+    else:
+        entry['similar_courses'] = []
+
+# Save updated data back to the same file
+with open(f'../../public/{COORDINATES_FILE}', 'w') as f:
+    json.dump(tsne_data, f, indent=2)
+with open(f'../../../backend/data/{COORDINATES_FILE}', 'w') as f:
+    json.dump(tsne_data, f, indent=2)
+
+print(f"Successfully added similar_courses field to {len(tsne_data)} entries") 
