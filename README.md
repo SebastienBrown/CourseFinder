@@ -39,6 +39,11 @@
 - `sbatch generate_precomputed_tsne.sbatch` or `python generate_precomputed_tsne.py`
 - Output: `course-visualization/public/precomputed_tsne_coords_{semester}.json`
 
+4. Add three most similar courses in the same semester
+- `cd course-visualization/src/data/`
+- `python append_similar_courses.py`
+- Output: `course-visualization/public/precomputed_tsne_coords_{semester}.json` (appends to same file as 3)
+
 **Run Backend**
 - `cd backend`
 - `python3 -m venv venv` optional but recommended
