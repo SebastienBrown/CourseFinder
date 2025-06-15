@@ -68,6 +68,16 @@ If the search bar returns a "fetch" error, try changing the port.
 
 **Deploying the Website**
 - Both `requirements.txt` and `backend/requirements.txt` are necessary.
+- Two `.env` files are necessary: in `course-visualization` and in `backend`. Both should have the following elements:
+   ```
+   SUPABASE_URL=
+   SUPABASE_KEY=
+   REACT_APP_SUPABASE_URL=
+   REACT_APP_SUPABASE_KEY=
+   REACT_APP_BACKEND_URL="http://127.0.0.1:5000" # this should be your backend port
+   ```
+   all should have the elements in straight double quotes "", without spaces and no curly quotes.
+   If it loads the wrong backend url, try quitting both your browser and terminal, fix the above issues and try again.
 
 **Descriptive Analysis**
 - `cd analysis/code`
