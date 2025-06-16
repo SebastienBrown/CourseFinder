@@ -39,6 +39,11 @@
 - `sbatch generate_precomputed_tsne.sbatch` or `python generate_precomputed_tsne.py`
 - Output: `course-visualization/public/precomputed_tsne_coords_{semester}.json`
 
+4. Add three most similar courses in the same semester
+- `cd course-visualization/src/data/`
+- `python append_similar_courses.py`
+- Output: `course-visualization/public/precomputed_tsne_coords_{semester}.json` (appends to same file as 3)
+
 **Run Backend**
 - `cd backend`
 - `python3 -m venv venv` optional but recommended
@@ -63,6 +68,16 @@ If the search bar returns a "fetch" error, try changing the port.
 
 **Deploying the Website**
 - Both `requirements.txt` and `backend/requirements.txt` are necessary.
+- Two `.env` files are necessary: in `course-visualization` and in `backend`. Both should have the following elements:
+   ```
+   SUPABASE_URL=
+   SUPABASE_KEY=
+   REACT_APP_SUPABASE_URL=
+   REACT_APP_SUPABASE_KEY=
+   REACT_APP_BACKEND_URL="http://127.0.0.1:5000" # this should be your backend port
+   ```
+   all should have the elements in straight double quotes "", without spaces and no curly quotes.
+   If it loads the wrong backend url, try quitting both your browser and terminal, fix the above issues and try again.
 
 **Descriptive Analysis**
 - `cd analysis/code`
