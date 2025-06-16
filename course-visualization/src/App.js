@@ -8,6 +8,8 @@ import SemesterCourseIntake from "./SemesterCourseIntake"; // per-semester cours
 import { useNavigate } from "react-router-dom";
 import CourseInput from "./CourseInput";
 import { CURRENT_SEMESTER, API_BASE_URL } from "./config";
+import Upload from "./Upload";
+import IntakePrompt from "./IntakePrompt";
 
 
 //console.log("🟢 Using backend URL:", process.env.REACT_APP_BACKEND_URL);
@@ -107,6 +109,8 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<IntakePrompt />} /> {/* ✅ New landing page */}
+        <Route path="/upload" element={<Upload />} />
         <Route path="/intake" element={<Intake />} />
         <Route path="/intake/courses/:index" element={<SemesterCourseIntake />} />
         <Route
@@ -132,7 +136,7 @@ function App() {
             </Layout>
           }
         />
-        <Route path="*" element={<Navigate to="/intake" replace />} />
+        <Route path="*" element={<Navigate to="/" replace />} /> {/* ✅ catch-all to IntakePrompt */}
       </Routes>
     </Router>
   );
