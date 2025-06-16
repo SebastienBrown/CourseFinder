@@ -51,14 +51,12 @@ def extract_courses_from_transcript(pdf_file_obj):
             # Extract words from right column
             right_words = page.within_bbox(right_bbox).extract_words()
 
-            # Helper function to convert list of words to lines preserving order
             def words_to_lines(words):
                 lines = []
                 current_line_y = None
                 current_line_words = []
 
                 for word in words:
-                    # Consider a new line if y0 differs significantly
                     if current_line_y is None or abs(word['top'] - current_line_y) > 3:
                         if current_line_words:
                             line_text = " ".join(w['text'] for w in current_line_words)
@@ -68,7 +66,6 @@ def extract_courses_from_transcript(pdf_file_obj):
                     else:
                         current_line_words.append(word)
 
-                # Add last line
                 if current_line_words:
                     line_text = " ".join(w['text'] for w in current_line_words)
                     lines.append(line_text)
@@ -86,6 +83,9 @@ def extract_courses_from_transcript(pdf_file_obj):
 
                 for line_num, line in enumerate(col_lines):
                     line_clean = line.strip()
+
+                    # Print each line with info about page and column
+                    print(f"[Page {page_num}][{col_name} column][Line {line_num+1}]: {line_clean}")
 
                     if "accreditation" in line_clean.lower():
                         logger.info(f"Found 'accreditation' at line {line_num} in {col_name} column. Stopping parse.")
@@ -106,7 +106,9 @@ def extract_courses_from_transcript(pdf_file_obj):
                             logger.debug(f"Stopping collection for semester: {current_semester}")
                             continue
 
-                        codes = course_code_pattern.findall(line_clean)
+                        # Remove all lowercase letters before running regex
+                        line_clean_no_lower = re.sub(r'[a-z]', '', line_clean)
+                        codes = course_code_pattern.findall(line_clean_no_lower)
                         if current_semester and codes:
                             normalized_codes = [code.strip().replace(" ", "-") for code in codes]
                             semesters[current_semester].extend(normalized_codes)
