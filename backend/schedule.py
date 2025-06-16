@@ -6,6 +6,7 @@ from flask_cors import CORS
 import requests
 from dotenv import load_dotenv
 from config import PORT
+from transcript_scrape import extract_courses_from_transcript
 
 # Load env
 load_dotenv()
@@ -307,6 +308,28 @@ def retrieve_courses():
     except Exception as e:
         print("Error retrieving courses:", str(e))
         return jsonify({"error": str(e)}), 500
+
+
+@app.route("/transcript_parsing", methods=["POST"])
+def transcript_parsing():
+    if "transcript" not in request.files:
+        return jsonify({"error": "No file part in request"}), 400
+
+    pdf_file = request.files["transcript"]
+    
+    if pdf_file.filename == "":
+        return jsonify({"error": "No selected file"}), 400
+
+    try:
+        # Pass the file-like object directly
+        result = extract_courses_from_transcript(pdf_file)
+        print(result)
+        return jsonify(result), 200
+    except Exception as e:
+        print("Error:", str(e))
+        return jsonify({"error": str(e)}), 500
+
+
     
 
 if __name__ == "__main__":
