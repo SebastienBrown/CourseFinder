@@ -12,7 +12,7 @@ import Upload from "./Upload";
 import IntakePrompt from "./IntakePrompt";
 
 
-//console.log("🟢 Using backend URL:", process.env.REACT_APP_BACKEND_URL);
+console.log("🟢 Using backend URL:", process.env.REACT_APP_BACKEND_URL);
 
 
 // Layout component for shared UI elements
