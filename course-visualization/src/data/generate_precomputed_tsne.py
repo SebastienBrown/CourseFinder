@@ -43,18 +43,40 @@ def separate_overlapping_points(coords, similarity_matrix, course_codes, min_dis
 with open(f'../../../similarity/output_similarity_all.json', 'r') as f:
     data = json.load(f)
 
-out = ['499', '498', '490', '390', '290', '210F', '111F']
+# Remove senior honors courses and special topics
+out = ['499', '498', '490', '390', '290', '210F', '111F', '-77', '-78', '-77D']
 
 # Filter out courses with course codes
 filtered_courses = []
 for course in data:
+    # Handle course_codes whether it's a string or a list
+    course_codes = course.get('course_codes', [])
+    if isinstance(course_codes, str):
+        course_codes = [course_codes]
+    elif not isinstance(course_codes, list):
+        course_codes = []
+        
     # Check if any of the main course codes contain the excluded numbers
-    if any(code in course['course_codes'] for code in out):
+    if any(any(code.endswith(excluded) for excluded in out) for code in course_codes):
         continue
-    # Check if any of the compared courses contain the excluded numbers
-    if any(any(code in comp.get('course_codes', []) for code in out) for comp in course.get('compared_courses', [])):
-        continue
+        
+    # Filter out specific comparisons that contain excluded numbers
+    filtered_compared = []
+    for comp in course.get('compared_courses', []):
+        comp_codes = comp.get('course_codes', [])
+        if isinstance(comp_codes, str):
+            comp_codes = [comp_codes]
+        elif not isinstance(comp_codes, list):
+            comp_codes = []
+            
+        # Only keep this comparison if none of its codes end with excluded numbers
+        if not any(any(code.endswith(excluded) for excluded in out) for code in comp_codes):
+            filtered_compared.append(comp)
+    
+    # Update the course with filtered comparisons
+    course['compared_courses'] = filtered_compared
     filtered_courses.append(course)
+
 print(f"Filtered out {len(data) - len(filtered_courses)} courses with course codes containing {out}.")
 data = filtered_courses
 
@@ -120,7 +142,7 @@ assert np.all(dist_matrix >= 0), "Distance matrix has negative values!"
 
 # Run t-SNE
 print(f'Running t-SNE on {n} courses...')
-perplexity = min(30, max(5, n//3))  # Ensure perplexity is appropriate for dataset size
+perplexity = 50 #min(30, max(5, n//3))  # Ensure perplexity is appropriate for dataset size
 tsne = TSNE(
     n_components=2, 
     metric='precomputed', 
@@ -156,9 +178,9 @@ for entry in valid_data:
     })
 
 # Save results
-with open(f'../../public/precomputed_tsne_coords_all_v2.json', 'w') as f:
+with open(f'../../public/precomputed_tsne_coords_all_v4.json', 'w') as f:
     json.dump(output, f, indent=2)
-with open(f'../../../backend/data/precomputed_tsne_coords_all_v2.json', 'w') as f:
+with open(f'../../../backend/data/precomputed_tsne_coords_all_v4.json', 'w') as f:
     json.dump(output, f, indent=2)
 
 if skipped_entries:
