@@ -16,6 +16,10 @@ export default function SemesterCourseIntake() {
   const semesterCourses = JSON.parse(localStorage.getItem("semesterCourses") || "{}");
   const semester = selectedSemesters[parseInt(index)];
 
+  // Check if we came from transcript upload
+  const fromTranscriptUpload = localStorage.getItem('fromTranscriptUpload') === 'true';
+  const editingSemesterIndex = localStorage.getItem('editingSemesterIndex');
+
   const backendUrl=process.env.REACT_APP_BACKEND_URL;
 
   // Load courses JSON dynamically on mount or semester change
@@ -154,7 +158,34 @@ export default function SemesterCourseIntake() {
     }
   };
 
+  const handleReturnToTranscriptUpload = () => {
+    // Update the semester courses with current selection
+    const updatedSemesterCourses = { ...semesterCourses };
+    updatedSemesterCourses[semester] = selectedCourses;
+    localStorage.setItem("semesterCourses", JSON.stringify(updatedSemesterCourses));
+
+    // Update the transcript data structure
+    const editingTranscriptData = JSON.parse(localStorage.getItem('editingTranscriptData') || '{}');
+    if (editingTranscriptData.semesters && editingTranscriptData.semesters[parseInt(editingSemesterIndex)]) {
+      editingTranscriptData.semesters[parseInt(editingSemesterIndex)].courses = selectedCourses;
+      localStorage.setItem('editingTranscriptData', JSON.stringify(editingTranscriptData));
+    }
+
+    // Set flag to indicate return from edit
+    localStorage.setItem('returnFromTranscriptEdit', 'true');
+    
+    // Navigate back to transcript upload
+    navigate('/upload');
+  };
+
   const handleSubmit = async () => {
+    // If we came from transcript upload, handle return differently
+    if (fromTranscriptUpload) {
+      handleReturnToTranscriptUpload();
+      return;
+    }
+
+    // Original submit logic for normal flow
     semesterCourses[semester] = selectedCourses;
     localStorage.setItem("semesterCourses", JSON.stringify(semesterCourses));
 
@@ -195,13 +226,35 @@ export default function SemesterCourseIntake() {
     }
   };
 
+  const handleBack = () => {
+    if (fromTranscriptUpload) {
+      // If we came from transcript upload, go back to transcript upload
+      handleReturnToTranscriptUpload();
+    } else {
+      // Original back logic
+      if (parseInt(index) === 0) {
+        navigate('/intake');
+      } else {
+        navigate(`/intake/courses/${parseInt(index) - 1}`);
+      }
+    }
+  };
+
   if (!semester) return null;
 
   return (
     <div className="max-w-3xl mx-auto mt-12 p-6 bg-white shadow rounded space-y-6">
       <h2 className="text-2xl font-bold text-center text-[#3f1f69]">
-        Select Courses for Semester {semester}
+        {fromTranscriptUpload ? `Edit Courses for ${semester}` : `Select Courses for Semester ${semester}`}
       </h2>
+
+      {fromTranscriptUpload && (
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
+          <p className="text-blue-800 text-sm">
+            You are editing courses from your transcript. Click "Save Changes" when done to return to the validation page.
+          </p>
+        </div>
+      )}
 
       <input
         type="text"
@@ -305,22 +358,19 @@ export default function SemesterCourseIntake() {
 
       <div className="flex gap-4">
         <button
-          onClick={() => {
-            if (parseInt(index) === 0) {
-              navigate('/intake');
-            } else {
-              navigate(`/intake/courses/${parseInt(index) - 1}`);
-            }
-          }}
+          onClick={handleBack}
           className="flex-1 bg-gray-500 text-white py-2 rounded hover:bg-gray-600 transition"
         >
-          Back
+          {fromTranscriptUpload ? "Cancel" : "Back"}
         </button>
         <button
           onClick={handleSubmit}
           className="flex-1 bg-[#3f1f69] text-white py-2 rounded hover:bg-[#5b2ca0] transition"
         >
-          {parseInt(index) + 1 < selectedSemesters.length ? "Next Semester" : "Finish"}
+          {fromTranscriptUpload 
+            ? "Save Changes" 
+            : (parseInt(index) + 1 < selectedSemesters.length ? "Next Semester" : "Finish")
+          }
         </button>
       </div>
     </div>
