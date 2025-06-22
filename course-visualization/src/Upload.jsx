@@ -72,36 +72,49 @@ export default function TranscriptUpload() {
       alert('Please upload a transcript file first.');
       return;
     }
-
+  
+    console.log("[handleSubmit] File ready to upload:", uploadedFile);
     setIsSubmitting(true);
-    
+  
     try {
-      // Create FormData to send the file
       const formData = new FormData();
       formData.append('transcript', uploadedFile);
-      
-      // Make the backend request
+  
+      console.log("[handleSubmit] Sending request to backend:", `${backendUrl}/transcript_parsing`);
+  
       const response = await fetch(`${backendUrl}/transcript_parsing`, {
         method: 'POST',
         body: formData,
       });
-      
+  
+      console.log("[handleSubmit] Response received:", response.status);
+  
       if (response.ok) {
-        const data = await response.json(); // Get the response body
-        console.log('Parsed course data:', data); // 👈 This prints the response body
+        const data = await response.json();
+        console.log("[handleSubmit] Parsed transcript data:", data);
+  
+        if (!data || Object.keys(data).length === 0) {
+          console.warn("[handleSubmit] Backend returned empty or invalid data.");
+          alert("No data was extracted from the transcript.");
+          return;
+        }
+  
         setTranscriptData(data);
         setShowPopup(true);
-        alert('Transcript uploaded successfully!');
+        console.log("[handleSubmit] Popup should now be visible. showPopup =", true);
       } else {
-        throw new Error('Upload failed');
+        const errText = await response.text();
+        console.error("[handleSubmit] Upload failed. Response text:", errText);
+        throw new Error("Upload failed");
       }
     } catch (error) {
-      console.error('Error uploading transcript:', error);
-      alert('Failed to upload transcript. Please try again.');
+      console.error("[handleSubmit] Error uploading transcript:", error);
+      alert("Failed to upload transcript. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
   };
+  
 
   const handleEditSemester = (semesterIndex) => {
     setEditingSemester(semesterIndex);
@@ -199,19 +212,18 @@ export default function TranscriptUpload() {
   };
 
  
- // Replace the existing useEffect with this transformation
-React.useEffect(() => {
+  React.useEffect(() => {
+    console.log("[useEffect] showPopup:", showPopup);
+    console.log("[useEffect] transcriptData:", transcriptData);
+
     if (showPopup && transcriptData && !transcriptData.semesters) {
-      // Transform backend data format to frontend format
       const transformedData = {
-        semesters: Object.entries(transcriptData).map(([semesterKey, semesterData]) => {
-          return {
-            name: semesterKey, // Keep semester key as is
-            courses: semesterData.courses || []
-          };
-        })
+        semesters: Object.entries(transcriptData).map(([semesterKey, semesterData]) => ({
+          name: semesterKey,
+          courses: semesterData.courses || []
+        }))
       };
-      console.log("Transformed Data:", transformedData);
+      console.log("[useEffect] Transformed transcriptData:", transformedData);
       setTranscriptData(transformedData);
     }
   }, [showPopup, transcriptData]);
@@ -339,6 +351,8 @@ React.useEffect(() => {
 
       {/* Review Popup */}
       {showPopup && (
+        console.log("[TranscriptUpload] Component rendered. showPopup =", showPopup, "transcriptData =", transcriptData),
+        console.log("[Popup Render] showPopup is X and semesters exist:", transcriptData.semesters),
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[80vh] overflow-hidden">
             {/* Popup Header */}
