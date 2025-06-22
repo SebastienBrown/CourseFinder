@@ -211,7 +211,7 @@ React.useEffect(() => {
           };
         })
       };
-      
+      console.log("Transformed Data:", transformedData);
       setTranscriptData(transformedData);
     }
   }, [showPopup, transcriptData]);
@@ -338,7 +338,7 @@ React.useEffect(() => {
       </div>
 
       {/* Review Popup */}
-      {showPopup && transcriptData?.semesters && (
+      {showPopup && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[80vh] overflow-hidden">
             {/* Popup Header */}
