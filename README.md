@@ -57,14 +57,16 @@ If the search bar returns a "fetch" error, try changing the port.
 
 **Run Frontend**
 - `cd course-visualization/src`
-- `npm install`
-- `npm install tsne-js`
+- The first time:
+   ```
+   npm install
+   npm install tsne-js
+   npm install html2canvas
+   npm install lucide-react
+   ```
 - `npm run start`
 
-`npm install react-router-dom` may fix some issues if the error is related to react-router-dom.
-
-**Download Image Function**
-`npm install html2canvas` is necessary.
+`npm install react-router-dom` may fix some issues if the error is related to react-router-dom (should be installed automatically with `npm install`)
 
 **Deploying the Website**
 - Both `requirements.txt` and `backend/requirements.txt` are necessary.

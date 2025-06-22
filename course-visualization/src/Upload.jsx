@@ -1,7 +1,10 @@
 import React, { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Upload, FileText, CheckCircle, X, Edit2, Save, Plus, Trash2 } from 'lucide-react';
+import { supabase } from "./supabaseClient";
 
 export default function TranscriptUpload() {
+  const navigate = useNavigate();
   const [uploadedFile, setUploadedFile] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
   const [isDragOver, setIsDragOver] = useState(false);
@@ -136,25 +139,59 @@ export default function TranscriptUpload() {
   };
 
   const handleFinalSubmit = async () => {
-    try {
-      // Submit the validated transcript data
-      const response = await fetch(`${backendUrl}/transcript_validate`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(transcriptData),
-      });
-
-      if (response.ok) {
+      try {
+        console.log('Starting final submit...');
+        console.log('Backend URL:', backendUrl);
+        console.log('Transcript data:', transcriptData);
+    
+        // Get user ID from Supabase (similar to your working code)
+        const { data: { user }, error } = await supabase.auth.getUser();
+        
+        if (error) {
+          console.error("Error fetching user:", error);
+          throw new Error("Failed to get user information");
+        }
+    
+        if (!user) {
+          throw new Error("No user logged in");
+        }
+    
+        // Build the payload similar to your working code
+        const payload = {
+          user_id: user.id,
+          semester_courses: {}
+        };
+    
+        // Convert transcriptData to the format your backend expects
+        if (transcriptData?.semesters) {
+          transcriptData.semesters.forEach(semester => {
+            payload.semester_courses[semester.name] = semester.courses || [];
+          });
+        }
+    
+        console.log('Payload being sent:', payload);
+    
+        // Use the same endpoint as your working code
+        const response = await fetch(`${backendUrl}/submit_courses`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payload),
+        });
+    
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+    
+        console.log('Successfully sent data to backend!');
         alert('Transcript validated and saved successfully!');
         setShowPopup(false);
         setTranscriptData(null);
         setUploadedFile(null);
         setImagePreview(null);
-      } else {
-        throw new Error('Validation failed');
-      }
+
+        navigate("/graph");
     } catch (error) {
       console.error('Error validating transcript:', error);
       alert('Failed to validate transcript. Please try again.');
@@ -185,9 +222,14 @@ React.useEffect(() => {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-800 mb-2">
-            Upload your Amherst Academic transcript here to automatically build your course history
+            Automatically Input Your Course History with Transcript
           </h1>
-          <p className="text-gray-600">Drag and drop your transcript file or click to browse</p>
+          <p className="text-sm text-gray-500 mt-2">
+            Both official and unofficial transcripts of Amherst College are accepted.
+          </p>
+          <p className="text-sm text-gray-500">
+            Only course codes are parsed, and no grade information will be collected.
+          </p>
         </div>
 
         {/* Upload Area */}
@@ -393,7 +435,7 @@ React.useEffect(() => {
                 onClick={handleFinalSubmit}
                 className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
               >
-                Submit Validated Transcript
+                Submit Course History
               </button>
             </div>
           </div>
