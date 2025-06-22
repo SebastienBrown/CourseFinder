@@ -16,6 +16,39 @@ export default function TranscriptUpload() {
   const fileInputRef = useRef(null);
   const backendUrl=process.env.REACT_APP_BACKEND_URL; // Replace with your actual backend URL
 
+  // Check if returning from edit mode
+  React.useEffect(() => {
+    const editingTranscriptData = localStorage.getItem('editingTranscriptData');
+    const returnFromEdit = localStorage.getItem('returnFromTranscriptEdit');
+    
+    if (editingTranscriptData && returnFromEdit === 'true') {
+      setTranscriptData(JSON.parse(editingTranscriptData));
+      setShowPopup(true);
+      
+      // Clean up localStorage
+      localStorage.removeItem('returnFromTranscriptEdit');
+    }
+  }, []);
+
+  // Update transcript data when returning from edit
+  React.useEffect(() => {
+    const handleStorageChange = () => {
+      const editingTranscriptData = localStorage.getItem('editingTranscriptData');
+      const returnFromEdit = localStorage.getItem('returnFromTranscriptEdit');
+      
+      if (editingTranscriptData && returnFromEdit === 'true') {
+        const updatedData = JSON.parse(editingTranscriptData);
+        setTranscriptData(updatedData);
+        
+        // Clean up the return flag
+        localStorage.removeItem('returnFromTranscriptEdit');
+      }
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+    return () => window.removeEventListener('storage', handleStorageChange);
+  }, []);
+
   const handleFileSelect = (file) => {
     if (file && (file.type.startsWith('image/') || file.type === 'application/pdf')) {
       setUploadedFile(file);
@@ -115,10 +148,26 @@ export default function TranscriptUpload() {
     }
   };
   
-
   const handleEditSemester = (semesterIndex) => {
-    setEditingSemester(semesterIndex);
-    setEditingCourses([...(transcriptData?.semesters?.[semesterIndex]?.courses || [])]);
+    // Store the current transcript data and editing state in localStorage
+    localStorage.setItem('editingTranscriptData', JSON.stringify(transcriptData));
+    localStorage.setItem('editingSemesterIndex', semesterIndex.toString());
+    localStorage.setItem('fromTranscriptUpload', 'true');
+    
+    // Set up the semester courses data for the intake page
+    const semesterCourses = {};
+    const selectedSemesters = [];
+    
+    transcriptData.semesters.forEach((semester, index) => {
+      selectedSemesters.push(semester.name);
+      semesterCourses[semester.name] = semester.courses || [];
+    });
+    
+    localStorage.setItem('selectedSemesters', JSON.stringify(selectedSemesters));
+    localStorage.setItem('semesterCourses', JSON.stringify(semesterCourses));
+    
+    // Navigate to the specific semester intake page
+    navigate(`/intake/courses/${semesterIndex}`);
   };
 
   const handleSaveEdit = () => {
@@ -199,6 +248,14 @@ export default function TranscriptUpload() {
     
         console.log('Successfully sent data to backend!');
         alert('Transcript validated and saved successfully!');
+        
+        // Clean up localStorage
+        localStorage.removeItem('editingTranscriptData');
+        localStorage.removeItem('editingSemesterIndex');
+        localStorage.removeItem('fromTranscriptUpload');
+        localStorage.removeItem('selectedSemesters');
+        localStorage.removeItem('semesterCourses');
+        
         setShowPopup(false);
         setTranscriptData(null);
         setUploadedFile(null);
