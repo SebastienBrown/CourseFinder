@@ -16,7 +16,7 @@ console.log("🟢 Using backend URL:", process.env.REACT_APP_BACKEND_URL);
 
 
 // Layout component for shared UI elements
-function Layout({ children, logout }) {
+function Layout({ children, logout, onShowHelp }) {
   const navigate = useNavigate();
   
   return (
@@ -34,10 +34,48 @@ function Layout({ children, logout }) {
               Sign Out
             </button>
             <button
+              onClick={onShowHelp}
+              className="bg-gray-500 text-white px-4 py-2 rounded"
+            >
+              Help
+            </button>
+            <button
               onClick={() => navigate("/intake")}
               className="bg-blue-500 text-white px-4 py-2 rounded"
             >
               Add Courses
+            </button>
+          </div>
+        </div>
+      </div>
+      {children}
+    </div>
+  );
+}
+
+// Public layout component without authentication controls
+function PublicLayout({ children, onShowHelp }) {
+  const navigate = useNavigate();
+  
+  return (
+    <div className="flex flex-col min-h-screen bg-[#f9f7fb]">
+      <div className="w-full max-w-[1200px] mx-auto space-y-6 mb-4 px-4">
+        <div className="flex justify-between items-center mt-6">
+          <h1 className="text-3xl font-bold text-[#3f1f69] text-center">
+            The Visual Open Curriculum
+          </h1>
+          <div className="flex space-x-2">
+            <button
+              onClick={onShowHelp}
+              className="bg-gray-500 text-white px-4 py-2 rounded"
+            >
+              Help
+            </button>
+            <button
+              onClick={() => navigate("/")}
+              className="bg-blue-500 text-white px-4 py-2 rounded"
+            >
+              Sign In
             </button>
           </div>
         </div>
@@ -52,6 +90,7 @@ function App() {
   const [highlighted, setHighlighted] = useState([]);
   const [conflicted, setConflicted] = useState([]);
   const [currentSemester, setCurrentSemester] = useState(CURRENT_SEMESTER);
+  const [showOnboarding, setShowOnboarding] = useState(false);
   const backendUrl=process.env.REACT_APP_BACKEND_URL;
 
   const handleHighlight = (newHighlighted) => {
@@ -104,7 +143,10 @@ function App() {
     setUser(null);
   };
 
-  if (!user) return <Auth onLogin={setUser} />;
+  // Only show Auth component if no user and not on public routes
+  const isPublicRoute = window.location.pathname === '/public-graph';
+  
+  if (!user && !isPublicRoute) return <Auth onLogin={setUser} />;
 
   return (
     <Router>
@@ -116,7 +158,7 @@ function App() {
         <Route
           path="/graph"
           element={
-            <Layout logout={logout}>
+            <Layout logout={logout} onShowHelp={() => setShowOnboarding(true)}>
               <CourseInput
                 onHighlight={handleHighlight}
                 onConflicted={setConflicted}
@@ -132,8 +174,31 @@ function App() {
                 onSemesterChange={setCurrentSemester}
                 onConflicted={setConflicted}
                 onHighlight={handleHighlight}
+                showOnboarding={showOnboarding}
+                setShowOnboarding={setShowOnboarding}
               />
             </Layout>
+          }
+        />
+        {/* Public route that bypasses authentication */}
+        <Route
+          path="/public-graph"
+          element={
+            <PublicLayout onShowHelp={() => setShowOnboarding(true)}>
+              <CourseSimilarityPrecomputedGraph
+                highlighted={[]}
+                conflicted={[]}
+                setHighlighted={() => {}}
+                setConflicted={() => {}}
+                currentSemester={CURRENT_SEMESTER}
+                onSemesterChange={() => {}}
+                onConflicted={() => {}}
+                onHighlight={() => {}}
+                isPublicMode={true}
+                showOnboarding={showOnboarding}
+                setShowOnboarding={setShowOnboarding}
+              />
+            </PublicLayout>
           }
         />
         <Route path="*" element={<Navigate to="/" replace />} /> {/* ✅ catch-all to IntakePrompt */}
