@@ -107,8 +107,11 @@ export default function SemesterCourseIntake() {
         : [course.course_codes];
       const courseCode = courseCodesArray[0];
 
+      // Check if any of the course codes are in selectedCourses
+      const isSelected = courseCodesArray.some(code => selectedCourses.includes(code));
+
       // If this course is selected but not already in the map, add it
-      if (selectedCourses.includes(courseCode) && !uniqueCoursesMap.has(courseCode)) {
+      if (isSelected && !uniqueCoursesMap.has(courseCode)) {
         uniqueCoursesMap.set(courseCode, course);
       }
     });
@@ -120,8 +123,13 @@ export default function SemesterCourseIntake() {
     const unselected = [];
     
     coursesArray.forEach(course => {
-      const courseCode = Array.isArray(course.course_codes) ? course.course_codes[0] : course.course_codes;
-      if (selectedCourses.includes(courseCode)) {
+      const courseCodesArray = Array.isArray(course.course_codes) ? course.course_codes : [course.course_codes];
+      const courseCode = courseCodesArray[0];
+      
+      // Check if any of the course codes are in selectedCourses
+      const isSelected = courseCodesArray.some(code => selectedCourses.includes(code));
+      
+      if (isSelected) {
         selected.push(course);
       } else {
         unselected.push(course);
@@ -141,20 +149,30 @@ export default function SemesterCourseIntake() {
     };
   }, [allCourses, selectedCourses, filteredCourses]);
 
-  const toggleCourse = (courseCode) => {
-    setSelectedCourses((prev) =>
-      prev.includes(courseCode) ? prev.filter((c) => c !== courseCode) : [...prev, courseCode]
-    );
+  const toggleCourse = (course) => {
+    const courseCodesArray = Array.isArray(course.course_codes) 
+      ? course.course_codes 
+      : [course.course_codes];
+    
+    setSelectedCourses((prev) => {
+      // Check if any of the course codes are currently selected
+      const isCurrentlySelected = courseCodesArray.some(code => prev.includes(code));
+      
+      if (isCurrentlySelected) {
+        // Remove all course codes for this course
+        return prev.filter(code => !courseCodesArray.includes(code));
+      } else {
+        // Add all course codes for this course
+        return [...prev, ...courseCodesArray];
+      }
+    });
   };
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter' && unselectedCourses.length > 0) {
       e.preventDefault(); // Prevent form submission if this input is in a form
       const topCourse = unselectedCourses[0];
-      const courseCode = Array.isArray(topCourse.course_codes) 
-        ? topCourse.course_codes[0] 
-        : topCourse.course_codes;
-      toggleCourse(courseCode);
+      toggleCourse(topCourse);
     }
   };
 
@@ -290,7 +308,7 @@ export default function SemesterCourseIntake() {
                     checked={true}
                     onChange={(e) => {
                       e.preventDefault();
-                      toggleCourse(courseCode);
+                      toggleCourse(course);
                     }}
                     className="mr-3 h-4 w-4 text-[#3f1f69] focus:ring-[#3f1f69] border-gray-300 rounded"
                   />
@@ -338,7 +356,7 @@ export default function SemesterCourseIntake() {
                 checked={false}
                 onChange={(e) => {
                   e.preventDefault();
-                  toggleCourse(courseCode);
+                  toggleCourse(course);
                 }}
                 className="mr-3 h-4 w-4 text-[#3f1f69] focus:ring-[#3f1f69] border-gray-300 rounded"
               />

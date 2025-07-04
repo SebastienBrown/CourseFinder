@@ -18,6 +18,7 @@ import { supabase } from "./supabaseClient"; // make sure this points to your in
 // import { API_BASE_URL } from './config';
 import Settings from './Settings';
 import html2canvas from 'html2canvas'; // Import html2canvas
+import OnboardingPopup from './OnboardingPopup';
 
 // Use the globally defined current semester
 // const semester = CURRENT_SEMESTER;
@@ -102,7 +103,10 @@ export default function CourseSimilarityPrecomputedGraph({
   conflicted,
   onSemesterChange,
   onHighlight,
-  onConflicted
+  onConflicted,
+  isPublicMode = false,
+  showOnboarding,
+  setShowOnboarding
 }) {
   const svgRef = useRef(null);
   const [svgReady, setSvgReady] = useState(false);
@@ -118,7 +122,7 @@ export default function CourseSimilarityPrecomputedGraph({
   const [selectedCourse, setSelectedCourse] = useState(null);
   const [selectedSemester, setSelectedSemester] = useState(CURRENT_SEMESTER);
   const [userId, setUserId] = useState(null);
-  const [activeTab, setActiveTab] = useState('thisSemester');
+  const [activeTab, setActiveTab] = useState(isPublicMode ? 'thisSemester' : 'thisSemester');
   const [showConflicts, setShowConflicts] = useState(true);
   const mapContainerRef = useRef(null);
   const contentToCaptureRef = useRef(null);
@@ -132,6 +136,14 @@ export default function CourseSimilarityPrecomputedGraph({
 
   const [showSettings, setShowSettings] = useState(false);
 
+  // Check if this is the user's first visit
+  useEffect(() => {
+    const hasSeenOnboarding = localStorage.getItem('hasSeenOnboarding');
+    if (!hasSeenOnboarding) {
+      setShowOnboarding(true);
+    }
+  }, []);
+
   // Log dimensions when they change
   useEffect(() => {
     console.log('Current dimensions:', dimensions);
@@ -142,7 +154,49 @@ export default function CourseSimilarityPrecomputedGraph({
     onSemesterChange?.(selectedSemester);
     // Reset highlighted courses when semester changes using functional update
     onHighlight(() => []);
-  }, [selectedSemester, onSemesterChange]);
+    
+    // If we're in Single Semester View and not in public mode, populate user courses for the new semester
+    if (activeTab === 'thisSemester' && !isPublicMode) {
+      console.log('Semester changed in Single Semester View, populating user courses');
+      // Use setTimeout to ensure this runs after the highlighted state is reset
+      setTimeout(() => {
+        // Inline the logic here to avoid circular dependency
+        if (userCourseCodes && userCourseCodes.length > 0) {
+          const userCoursesForSemester = userCourseCodes
+            .filter(uc => uc.semester === selectedSemester)
+            .map(uc => uc.code);
+          
+          console.log(`Populating user courses for semester ${selectedSemester}:`, userCoursesForSemester);
+          
+          if (userCoursesForSemester.length > 0) {
+            onHighlight(userCoursesForSemester);
+          }
+        }
+      }, 0);
+    }
+  }, [selectedSemester, onSemesterChange, activeTab, isPublicMode, userCourseCodes, onHighlight]);
+
+
+
+  // Effect to populate user courses when switching to Single Semester View
+  useEffect(() => {
+    console.log('Tab/UserCourses effect triggered:', { activeTab, selectedSemester, userCourseCodesLength: userCourseCodes?.length, isPublicMode });
+    if (activeTab === 'thisSemester' && !isPublicMode) {
+      console.log('Switching to Single Semester View, populating user courses');
+      // Inline the logic here to avoid circular dependency
+      if (userCourseCodes && userCourseCodes.length > 0) {
+        const userCoursesForSemester = userCourseCodes
+          .filter(uc => uc.semester === selectedSemester)
+          .map(uc => uc.code);
+        
+        console.log(`Populating user courses for semester ${selectedSemester}:`, userCoursesForSemester);
+        
+        if (userCoursesForSemester.length > 0) {
+          onHighlight(userCoursesForSemester);
+        }
+      }
+    }
+  }, [activeTab, selectedSemester, userCourseCodes, isPublicMode, onHighlight]);
 
   const setSvgRef = useCallback((node) => {
     svgRef.current = node;
@@ -160,10 +214,32 @@ export default function CourseSimilarityPrecomputedGraph({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Effect to extract user course codes whenever backend data is available
+  useEffect(() => {
+    if (backendOutputData && !isPublicMode) {
+      console.log("Extracting user course codes from backend data:", backendOutputData);
+      
+      // Get the user's course codes with their semesters for highlighting
+      const userCourses = backendOutputData
+        .filter(course => course && course.course_code)
+        .map(course => ({
+          code: course.course_code,
+          semester: course.semester
+        }));
+      console.log("User course codes extracted:", userCourses);
+      setUserCourseCodes(userCourses);
+    }
+  }, [backendOutputData, isPublicMode]);
+
   useEffect(() => {
     async function loadData() {
       try {
         setLoading(true);
+        
+        // In public mode, force single semester view
+        if (isPublicMode) {
+          setActiveTab('thisSemester');
+        }
         
         if (activeTab === 'thisSemester') {
           // Load single semester data
@@ -172,8 +248,8 @@ export default function CourseSimilarityPrecomputedGraph({
           setCourseDetailsData(courseDetails);
           setTsneCoords(filteredTsneCoords);
         } else {
-          // Load history data
-          if (backendOutputData) {
+          // Load history data (only if not in public mode)
+          if (backendOutputData && !isPublicMode) {
             console.log("Processing backend data for history:", backendOutputData);
             
             // Get unique semesters from the history data
@@ -195,18 +271,8 @@ export default function CourseSimilarityPrecomputedGraph({
             }, {});
             console.log("Grouped courses by semester:", coursesBySemester);
 
-            // Get the user's course codes with their semesters for highlighting
-            const userCourses = backendOutputData
-              .filter(course => course && course.course_code)
-              .map(course => ({
-                code: course.course_code,
-                semester: course.semester
-              }));
-            console.log("User course codes:", userCourses);
-            setUserCourseCodes(userCourses);
-
             // Identify semesters where the user took an FYSE course
-            const userFyseSemesters = new Set(userCourses
+            const userFyseSemesters = new Set(userCourseCodes
               .filter(course => course.code.startsWith('FYSE-'))
               .map(course => course.semester)
             );
@@ -279,10 +345,16 @@ export default function CourseSimilarityPrecomputedGraph({
     }
 
     loadData();
-  }, [selectedSemester, activeTab, backendOutputData]);
+  }, [selectedSemester, activeTab, backendOutputData, isPublicMode, userCourseCodes]);
 
   useEffect(() => {
     async function fetchUser() {
+      // Skip authentication in public mode
+      if (isPublicMode) {
+        console.log("Public mode - skipping authentication");
+        return;
+      }
+      
       const {
         data: { user },
         error,
@@ -297,10 +369,17 @@ export default function CourseSimilarityPrecomputedGraph({
       }
     }
     fetchUser();
-  }, []);
+  }, [isPublicMode]);
 
 
   async function fetchBackendData() {
+    // Skip backend calls in public mode
+    if (isPublicMode) {
+      console.log("Public mode - skipping backend data fetch");
+      setBackendOutputData([]);
+      return;
+    }
+    
     try {
       console.log("Using backend URL:", backendUrl); // Add this for debugging!
       const response = await fetch(`${backendUrl}/retrieve_courses`, { // await fetch(`${API_BASE_URL}/retrieve_courses`
@@ -327,9 +406,15 @@ export default function CourseSimilarityPrecomputedGraph({
   }
   
   useEffect(() => {
+    if (isPublicMode) {
+      // In public mode, set empty backend data immediately
+      setBackendOutputData([]);
+      return;
+    }
+    
     if (!userId) return;
     fetchBackendData();
-  }, [userId]);
+  }, [userId, isPublicMode]);
 
   // Add a function to check if there's any history data
   const hasHistoryData = () => {
@@ -463,6 +548,18 @@ export default function CourseSimilarityPrecomputedGraph({
 
       const finalNodes = Array.from(mergedNodes.values());
 
+      // --- Z-ORDER: Render highlighted nodes last (on top) ---
+      let nodesToRender = finalNodes;
+      if (activeTab === 'yourHistory') {
+        const highlightedNodes = finalNodes.filter(d => d.historyHighlighted);
+        const otherNodes = finalNodes.filter(d => !d.historyHighlighted);
+        nodesToRender = [...otherNodes, ...highlightedNodes];
+      } else {
+        const highlightedNodes = finalNodes.filter(d => d.highlighted);
+        const otherNodes = finalNodes.filter(d => !d.highlighted);
+        nodesToRender = [...otherNodes, ...highlightedNodes];
+      }
+
       const width = dimensions.width;
       const height = dimensions.height;
       const svg = d3.select(svgRef.current);
@@ -579,10 +676,11 @@ export default function CourseSimilarityPrecomputedGraph({
         .range([topPadding, height - bottomPadding]);
 
 
+      // Use nodesToRender instead of finalNodes
       const nodeGroup = g
         .append("g")
         .selectAll("g")
-        .data(finalNodes)
+        .data(nodesToRender)
         .enter()
         .append("g")
         .attr("transform", (d) => `translate(${xScale(d.x)},${yScale(d.y)})`);
@@ -1231,6 +1329,12 @@ export default function CourseSimilarityPrecomputedGraph({
     }
   };
 
+  // Function to handle onboarding popup close
+  const handleOnboardingClose = () => {
+    setShowOnboarding(false);
+    localStorage.setItem('hasSeenOnboarding', 'true');
+  };
+
   // Function to handle adding a course to selected courses
   const handleAddSelectedCourse = async (course) => {
     if (!course.course_codes) return;
@@ -1262,6 +1366,11 @@ export default function CourseSimilarityPrecomputedGraph({
 
     // Update highlighted courses
     onHighlight(newHighlighted);
+    
+    // Skip conflict checking in public mode
+    if (isPublicMode) {
+      return;
+    }
     
     // Check for conflicts with the new selection
     const response = await fetch(`${backendUrl}/conflicted_courses`, {
@@ -1298,19 +1407,24 @@ export default function CourseSimilarityPrecomputedGraph({
             >
               Single Semester View
             </button>
-            <button
-              className={`px-4 py-2 text-sm font-medium ${
-                activeTab === 'yourHistory'
-                  ? 'text-[#3f1f69] border-b-2 border-[#3f1f69]'
-                  : 'text-gray-500 hover:text-gray-700'
-              }`}
-              onClick={() => setActiveTab('yourHistory')}
-            >
-              My Course History
-            </button>
+            {!isPublicMode && (
+              <button
+                className={`px-4 py-2 text-sm font-medium ${
+                  activeTab === 'yourHistory'
+                    ? 'text-[#3f1f69] border-b-2 border-[#3f1f69]'
+                    : 'text-gray-500 hover:text-gray-700'
+                }`}
+                onClick={() => setActiveTab('yourHistory')}
+              >
+                My Course History
+              </button>
+            )}
           </div>
+          
+
+          
           {/* Download Map button moved to the right, alongside Eliminate Conflicts */}
-          {activeTab === 'yourHistory' && (
+          {activeTab === 'yourHistory' && !isPublicMode && (
             <button
               className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 ml-4 flex items-center"
               onClick={handleDownloadImage}
@@ -1332,6 +1446,8 @@ export default function CourseSimilarityPrecomputedGraph({
               Download as Image
             </button>
           )}
+          
+
           {activeTab === 'thisSemester' && (
             <div className="flex items-center px-4 py-2 ml-auto">
               <span className="text-sm font-medium text-gray-700 mr-2">Eliminate Conflicts:</span>
@@ -1349,7 +1465,7 @@ export default function CourseSimilarityPrecomputedGraph({
         </div>
       </div>
 
-      {activeTab === 'yourHistory' && !hasHistoryData() ? (
+      {activeTab === 'yourHistory' && !hasHistoryData() && !isPublicMode ? (
         <div className="absolute inset-0 flex flex-col items-center justify-center" style={{ top: '40px' }}>
           <div className="text-lg font-medium text-gray-600 mb-4">No History to Show</div>
           <button
@@ -1491,6 +1607,12 @@ export default function CourseSimilarityPrecomputedGraph({
       {showSettings && (
         <Settings onClose={() => setShowSettings(false)} />
       )}
+
+      <OnboardingPopup 
+        isOpen={showOnboarding}
+        onClose={handleOnboardingClose}
+        isPublicMode={isPublicMode}
+      />
     </div>
   );
 }
