@@ -51,7 +51,6 @@ skipped/*
 course_metadata/*
 **/csv/*
 **/log/*
-*.csv
 *.xlsx
 *.dta
 *.db
