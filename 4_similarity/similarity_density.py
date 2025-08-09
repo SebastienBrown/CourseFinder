@@ -3,10 +3,16 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 
-# Path to the similarity data
-SIMILARITY_FILE = 'similarity/output_similarity_all.json'
-OUTPUT_PDF = '4_similarity/similarity_density.pdf'
+# ==== Configuration ====
+dropbox = '/Users/hnaka24/Dropbox (Personal)/AmherstCourses/'
+code = '/Users/hnaka24/Desktop/code/CourseFinder/'
+model = "sbert"
+mode = "off_the_shelf"
 
+SIMILARITY_FILE = dropbox + f'data/2_intermediate/3_similarity/{model}_{mode}/output_similarity_2324S.json'
+OUTPUT_PDF = dropbox + 'output/4_similarity/similarity_density_sbert_offshelf.pdf'
+
+# ==== Script ====
 # Load the similarity data
 with open(SIMILARITY_FILE, 'r') as f:
     data = json.load(f)

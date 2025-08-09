@@ -12,11 +12,16 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ========== Configuration ==========
-save_dir = "/Users/hnaka24/Desktop/code/CourseFinder/3_embedding/sbert_contrastive_model"
+dropbox = '/Users/hnaka24/Dropbox (Personal)/AmherstCourses/'
+code = '/Users/hnaka24/Desktop/code/CourseFinder/'
+
+JSON_PATH = dropbox + 'data/2_intermediate/1_llm_cleaned/amherst_courses_2324S.json'
+# JSON_PATH = code + 'backend/data/amherst_courses_2324S.json'
+save_dir = code + "3_embedding/sbert_contrastive_model"
+
 MODEL_NAME = 'sentence-transformers/all-MiniLM-L6-v2'
 DROPOUT_RATE = 0.1
 ALPHA = 0          # Weight for supervised loss (set to 0 for self-supervised only)
-JSON_PATH = 'backend/data/amherst_courses_all.json'
 MAX_SELF_SUPERVISED = 10000  # Cap how many course descriptions to use
 NUM_EPOCHS = 10
 LR = 1e-5
@@ -129,14 +134,15 @@ def combined_loss(model, triplets, texts, alpha=ALPHA):
 # ========== Optimizer ==========
 optimizer = torch.optim.Adam(model.parameters(), lr=LR)
 model.train()
+print("Model loaded")
 
 # ========== Training Loop ==========
-for epoch in range(NUM_EPOCHS):
+for epoch in tqdm(range(NUM_EPOCHS), desc="Training"):
     optimizer.zero_grad()
     loss, loss_sup, loss_self = combined_loss(model, manual_triplets, self_supervised_texts, alpha=ALPHA)
     loss.backward()
     optimizer.step()
-    print(f"Epoch {epoch+1}: Total={loss.item():.4f} | Supervised={loss_sup.item():.4f} | Self-supervised={loss_self.item():.4f}")
+    tqdm.write(f"Epoch {epoch+1}: Total={loss.item():.4f} | Supervised={loss_sup.item():.4f} | Self-supervised={loss_self.item():.4f}")
 
 # ========== Save Fine-tuned Model ==========
 model.encoder.save_pretrained(save_dir)
