@@ -40,11 +40,11 @@ def separate_overlapping_points(coords, similarity_matrix, course_codes, min_dis
     return coords
 
 # Load your similarity data
-with open(f'../../../similarity/output_similarity_all.json', 'r') as f:
+with open('similarity/output_similarity_all.json', 'r') as f:
     data = json.load(f)
 
 # Remove senior honors courses and special topics
-out = ['499', '498', '490', '390', '290', '210F', '111F', '-77', '-78', '-77D']
+out = ['499', '498', '490', '390', '290', '210F', '111F', '-77', '-78', '-77D', 'ENST-495', 'GERM-495', 'SPAN-495', 'AMST-496', 'POSC-410']
 
 # Filter out courses with course codes
 filtered_courses = []
@@ -178,14 +178,14 @@ for entry in valid_data:
     })
 
 # Save results
-with open(f'../../public/precomputed_tsne_coords_all_v4.json', 'w') as f:
+with open('course-visualization/public/precomputed_tsne_coords_all_v4.json', 'w') as f:
     json.dump(output, f, indent=2)
-with open(f'../../../backend/data/precomputed_tsne_coords_all_v4.json', 'w') as f:
+with open('backend/data/precomputed_tsne_coords_all_v4.json', 'w') as f:
     json.dump(output, f, indent=2)
 
 if skipped_entries:
     # Save skipped entries to the 'skipped' directory at the workspace root
-    with open(f'../../../skipped/skipped_entries_all.json', 'w') as f:
+    with open('skipped/skipped_entries_all.json', 'w') as f:
         json.dump(skipped_entries, f, indent=2)
     print(f"Skipped {len(skipped_entries)} entries with empty course_codes. See skipped/skipped_entries_all.json for details.")
 else:

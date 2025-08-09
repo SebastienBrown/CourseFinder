@@ -2,7 +2,7 @@
 
 - `python -m venv course_venv` or `python3.10 -m venv course_venv`
 - `source course_venv/bin/activate`
-- `pip install requirements.txt`
+- `pip install -r requirements.txt`
 
 # Workflow:
 
@@ -35,12 +35,12 @@
 - Output: `similarity/output_similarity_{semester}.json`, where semester = 'all' for the latter
 
 3. Apply t-SNE to compute coordinates for each course
-- `cd course-visualization/src/data/`
+- `cd 5_webapp`
 - `sbatch generate_precomputed_tsne.sbatch` or `python generate_precomputed_tsne.py`
 - Output: `course-visualization/public/precomputed_tsne_coords_{semester}.json`
 
 4. Add three most similar courses in the same semester
-- `cd course-visualization/src/data/`
+- `cd 5_webapp`
 - `python append_similar_courses.py`
 - Output: `course-visualization/public/precomputed_tsne_coords_{semester}.json` (appends to same file as 3)
 
@@ -82,5 +82,5 @@ If the search bar returns a "fetch" error, try changing the port.
    If it loads the wrong backend url, try quitting both your browser and terminal, fix the above issues and try again.
 
 **Descriptive Analysis**
-- `cd analysis/code`
+- `cd 6_analysis/code`
 - Make a semester-department panel with `sbatch descriptives.sbatch`

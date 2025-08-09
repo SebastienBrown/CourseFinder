@@ -5,7 +5,7 @@ from collections import defaultdict
 COORDINATES_FILE = 'precomputed_tsne_coords_all_v4.json'
 
 # Load similarity data
-with open('../../../similarity/output_similarity_all.json', 'r') as f:
+with open('similarity/output_similarity_all.json', 'r') as f:
     similarity_data = json.load(f)
 
 # Remove senior honors courses and special topics
@@ -92,7 +92,7 @@ for entry in similarity_data:
     top_similar[(tuple(course_codes), semester)] = similar_courses
 
 # Load t-SNE coordinates
-with open(f'../../public/{COORDINATES_FILE}', 'r') as f:
+with open(f'course-visualization/public/{COORDINATES_FILE}', 'r') as f:
     tsne_data = json.load(f)
 
 # Remove any existing similar_courses field
@@ -111,9 +111,9 @@ for entry in tsne_data:
         entry['similar_courses'] = []
 
 # Save updated data back to the same file
-with open(f'../../public/{COORDINATES_FILE}', 'w') as f:
+with open(f'course-visualization/public/{COORDINATES_FILE}', 'w') as f:
     json.dump(tsne_data, f, indent=2)
-with open(f'../../../backend/data/{COORDINATES_FILE}', 'w') as f:
+with open(f'backend/data/{COORDINATES_FILE}', 'w') as f:
     json.dump(tsne_data, f, indent=2)
 
 print(f"Successfully added similar_courses field to {len(tsne_data)} entries") 

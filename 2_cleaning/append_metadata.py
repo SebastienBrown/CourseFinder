@@ -33,12 +33,16 @@ for semester in semesters:
     # Add processed courses to the main list
     all_courses.extend(courses)
 
-# Create output directory if it doesn't exist
-os.makedirs('course-visualization/public', exist_ok=True)
-
 # Write the combined data to the output file
+os.makedirs('course-visualization/public', exist_ok=True)
 output_file = 'course-visualization/public/amherst_courses_all.json'
 with open(output_file, 'w') as f:
+    json.dump(all_courses, f, indent=2)
+
+# Also write to backend/data with the same filename
+os.makedirs('backend/data', exist_ok=True)
+backend_output_file = 'backend/data/amherst_courses_all.json'
+with open(backend_output_file, 'w') as f:
     json.dump(all_courses, f, indent=2)
 
 print(f"Successfully combined {len(all_courses)} courses from {len(semesters)} semesters")
