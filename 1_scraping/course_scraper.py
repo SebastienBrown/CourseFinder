@@ -197,7 +197,7 @@ output_path = "/orcd/home/002/hnaka24/CourseFinder/scraped/"
 options = Options()
 options.add_argument("--headless")  # Run browser in headless mode (no UI)
 os.environ["WDM_LOCAL"] = "1"
-service1=Service("/home/hnaka24/.cache/selenium/geckodriver/linux64/0.35.0/geckodriver")
+service1=Service("/home/hnaka24/selenium/geckodriver/linux64/0.35.0/geckodriver")
 driver = webdriver.Firefox(service=service1, options=options)
 
 # Fetch the URL -- changed to jobs approved in the past 3 months
