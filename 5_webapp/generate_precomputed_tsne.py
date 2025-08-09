@@ -2,6 +2,22 @@ import json
 import numpy as np
 from sklearn.manifold import TSNE
 
+# ==== Configuration ====
+dropbox = '/Users/hnaka24/Dropbox (Personal)/AmherstCourses/'
+code = '/Users/hnaka24/Desktop/code/CourseFinder/'
+model = "sbert"
+mode = "off_the_shelf"
+
+# input_path = code + 'similarity/output_similarity_all.json'
+# output_frontend = code + 'course-visualization/public/precomputed_tsne_coords_all_v4.json'
+# output_backend = code + 'backend/data/precomputed_tsne_coords_all_v4.json'
+input_path = dropbox + f'data/2_intermediate/3_similarity/{model}_{mode}/output_similarity_2324S.json'
+output_frontend = dropbox + 'data/2_intermediate/4_coordinates/tsne_coords_2324S_sbert_offshelf.json'
+
+# List of courses to remove: senior honors courses and special topics
+out = ['499', '498', '490', '390', '290', '210F', '111F', '-77', '-78', '-77D', 'ENST-495', 'GERM-495', 'SPAN-495', 'AMST-496', 'POSC-410']
+
+# ==== Functions ====
 def separate_overlapping_points(coords, similarity_matrix, course_codes, min_dist=1.0, step_size=0.1, num_iterations=100):
     """
     Iteratively separates points that are closer than min_dist, except for exact duplicates from the same semester.
@@ -40,11 +56,8 @@ def separate_overlapping_points(coords, similarity_matrix, course_codes, min_dis
     return coords
 
 # Load your similarity data
-with open('similarity/output_similarity_all.json', 'r') as f:
+with open(input_path, 'r') as f:
     data = json.load(f)
-
-# Remove senior honors courses and special topics
-out = ['499', '498', '490', '390', '290', '210F', '111F', '-77', '-78', '-77D', 'ENST-495', 'GERM-495', 'SPAN-495', 'AMST-496', 'POSC-410']
 
 # Filter out courses with course codes
 filtered_courses = []
@@ -178,22 +191,26 @@ for entry in valid_data:
     })
 
 # Save results
-with open('course-visualization/public/precomputed_tsne_coords_all_v4.json', 'w') as f:
+with open(output_frontend, 'w') as f:
     json.dump(output, f, indent=2)
-with open('backend/data/precomputed_tsne_coords_all_v4.json', 'w') as f:
-    json.dump(output, f, indent=2)
-
-if skipped_entries:
-    # Save skipped entries to the 'skipped' directory at the workspace root
-    with open('skipped/skipped_entries_all.json', 'w') as f:
-        json.dump(skipped_entries, f, indent=2)
-    print(f"Skipped {len(skipped_entries)} entries with empty course_codes. See skipped/skipped_entries_all.json for details.")
-else:
-    print("No entries with empty course_codes were skipped.")
+try:
+    if output_backend:
+        with open(output_backend, 'w') as f:
+            json.dump(output, f, indent=4)
+except NameError:
+    pass
 
 print(f'Saved t-SNE coordinates for {n} unique courses to precomputed_tsne_coords.json')
 
-# # Optional: Add metadata to the output (commented out atm)
+# # Optional: Add skipped entries and metadata to the output (commented out atm)
+# if skipped_entries:
+#     # Save skipped entries to the 'skipped' directory at the workspace root
+#     with open('skipped/skipped_entries_all.json', 'w') as f:
+#         json.dump(skipped_entries, f, indent=2)
+#     print(f"Skipped {len(skipped_entries)} entries with empty course_codes. See skipped/skipped_entries_all.json for details.")
+# else:
+#     print("No entries with empty course_codes were skipped.")
+
 # course_metadata = {}
 # for entry in valid_data:
 #     primary_code = entry['course_codes'][0]
