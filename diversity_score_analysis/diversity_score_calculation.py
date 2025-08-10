@@ -2,12 +2,18 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 import json, ast, re
+import matplotlib.pyplot as plt
 
 # -----------------------------
 # Paths
 # -----------------------------
-INPUT_PATH  = Path("./user_courses_20250720.csv")
-OUTPUT_PATH = Path("./student_entropy_scores.csv")
+filedate = '20250720'
+INPUT_PATH  = Path(f"6_analysis/data/raw/user_courses_{filedate}.csv")
+# OUTPUT_PATH = Path("./student_entropy_scores.csv")
+
+dropbox = '/Users/hnaka24/Dropbox (Personal)/AmherstCourses/'
+OUTPUT_PATH = Path(dropbox + f'data/2_intermediate/5_scores/student_entropy_scores_{filedate}.csv')
+output_plot = dropbox + f'output/6_scores/student_scores_scatter_{filedate}.pdf'
 
 # -----------------------------
 # Config
@@ -181,6 +187,9 @@ for original_idx, row in course_df.iterrows():
 
 results_df = pd.DataFrame(results)
 
+# -----------------------------
+# Save output csv
+# -----------------------------
 # Sort by normalized entropy (desc), then raw entropy, then StudentID
 if not results_df.empty:
     results_df = results_df.sort_values(
@@ -191,5 +200,49 @@ if not results_df.empty:
 
 results_df.to_csv(OUTPUT_PATH, index=False)
 
+# -----------------------------
+# Export scatter plot
+# -----------------------------
 print(f"Wrote {len(results_df)} rows to {OUTPUT_PATH.resolve()}")
 print(results_df.head(10))
+
+# Select the columns you want to include in the pairwise scatter plot
+plot_vars = ["NumDisciplines", "EntropyNormalized", "HHIIndex"]
+
+n_vars = len(plot_vars)
+fig, axes = plt.subplots(n_vars, n_vars, figsize=(4 * n_vars, 4 * n_vars))
+
+for i in range(n_vars):
+    for j in range(n_vars):
+        ax = axes[i, j]
+        if i == j:
+            # Diagonal: histogram
+            ax.hist(results_df[plot_vars[i]], bins=20, color="skyblue", edgecolor="black")
+        elif i > j:
+            # Lower triangle: scatter with best-fit line
+            x = results_df[plot_vars[j]]
+            y = results_df[plot_vars[i]]
+            ax.scatter(x, y, alpha=0.6, edgecolors="w", s=40)
+
+            # Fit and plot regression line
+            m, b = np.polyfit(x, y, deg=1)
+            ax.plot(x, m * x + b, color="red", linewidth=2)
+        else:
+            # Upper triangle: leave blank
+            ax.axis("off")
+
+        # Axis labels
+        if i == n_vars - 1:
+            ax.set_xlabel(plot_vars[j], fontsize=14)
+        else:
+            ax.set_xlabel("")
+        if j == 0:
+            ax.set_ylabel(plot_vars[i], fontsize=14)
+        else:
+            ax.set_ylabel("")
+
+plt.tight_layout()
+plt.savefig(output_plot, format="pdf")
+plt.close()
+
+print(f"Saved pairwise scatter plot to {output_plot}")
