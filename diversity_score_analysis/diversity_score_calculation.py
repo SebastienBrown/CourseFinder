@@ -161,16 +161,24 @@ course_df = df.drop(columns=["created_at", "id"], errors="ignore")
 results = []
 for original_idx, row in course_df.iterrows():
     courses = parse_courses_row(row)
-    courses = filter_courses(courses)
 
-    # Skip incomplete rows (no valid courses)
-    if not courses:
+    # Return dict of {discipline: probability} (here, just to get list of departments)
+    depts = _discipline_probs(courses)
+
+    # Filter courses and skip if row has no valid courses left
+    filtered_courses = filter_courses(courses)
+    if not filtered_courses:
         continue
 
-    probs = _discipline_probs(courses)
+    # Return dict of {discipline: probability}
+    probs = _discipline_probs(filtered_courses)
     if not probs:
         continue
 
+    # Return matrix of pairwise distance for the student
+    
+
+    # Compute diversity metrics
     H = shannon_entropy(probs, base=entropy_base)
     H_norm = normalized_entropy(probs, base=entropy_base)
     HHI = hhi_index(probs)    # 0..1, higher = less diverse
@@ -178,7 +186,7 @@ for original_idx, row in course_df.iterrows():
     results.append({
         "StudentID": original_idx + 1,
         "NumCourses": len(courses),
-        "NumDisciplines": len(probs),
+        "NumDisciplines": len(depts),
         "EntropyScore": H,
         "EntropyNormalized": H_norm,
         "HHIIndex": HHI,
