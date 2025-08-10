@@ -89,7 +89,7 @@ export default function Auth({ onLogin }) {
       {/* Show debug info */}
       {debugInfo && (
         <div className="text-sm text-gray-500 mt-4">
-          Debug Info: {debugInfo}
+          {/* Debug Info: {debugInfo} */}
         </div>
       )}
     </div>

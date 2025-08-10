@@ -9,30 +9,29 @@
 **Data Collection and Cleaning**
 
 1. Scraping:
-   `sbatch course_scraper.sbatch`
+   `sbatch 1_scraping/course_scraper.sbatch`
 
 2. To complete the scraping,
-- `sbatch failed_links.sbatch`
+- `sbatch 1_scraping/failed_links.sbatch`
 - Manually check the log of failed_links and add courses
 - Find course AMST 224 in amherst_courses_2526F.json and manually add course codes EDST/PSYC/AMST/AAPI 224
 
 3. To clean scraped data:
-- `sbatch llm_parsing.sbatch` uses LLM to extract a clean subset of the original.
+- `sbatch 2_cleaning/llm_parsing.sbatch` uses LLM to extract a clean subset of the original.
 - Manually clean the courses printed under `Courses that caused errors`.
-- Run `python clean_json.py` to remove duplicates, special characters, and fill in missing course codes.
+- Run `python 2_cleaning/clean_json.py` to remove duplicates, special characters, and fill in missing course codes.
 
 4. Append the cleaned files together
-- Run `python append_metadata.py` to output `course-visualization/public/amherst_courses_all.json`.
+- Run `python 2_cleaning/append_metadata.py` to output `course-visualization/public/amherst_courses_all.json`.
 
 **Network Graph**
 1. Create embeddings for each course
-- `sbatch embedding.sbatch`
-- Output: `embeddings/output_embeddings_{semester}.json`
+- `sbatch 3_embedding/embedding.sbatch`
+- Output: `output_embeddings_{semester}.json` in data folder
 
 2. Compute pairwise similarity scores
-- Run `python similarity.py` to process semesters individually
-- Run `sbatch similarity.sbatch`  or `python similarity_all.py` to process all semester courses pairwise
-- Output: `similarity/output_similarity_{semester}.json`, where semester = 'all' for the latter
+- Run `sbatch 4_similarity/similarity.sbatch` or `python 4_similarity/similarity_all.py`. Make sure to change the list of semesters you want to include.
+- Output: `output_similarity_{semester}.json`, where semester = 'all' for the latter
 
 3. Apply t-SNE to compute coordinates for each course
 - `cd 5_webapp`
