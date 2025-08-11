@@ -8,6 +8,11 @@ export default function IntakePrompt() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen gap-6">
       <h1 className="text-2xl font-bold">What would you like to do?</h1>
+      <p className="max-w-xl text-center text-gray-600">
+        First, let us know what courses you have taken at Amherst. You can upload
+        your transcript to auto-populate your courses, or manually input them
+        yourself.
+      </p>
       <div className="flex gap-4">
         <button
           onClick={() => navigate("/upload")}
