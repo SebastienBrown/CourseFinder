@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { supabase } from "./supabaseClient";
 import CourseSimilarityPrecomputedGraph from "./CourseSimilarityPrecomputedGraph";
@@ -93,7 +93,7 @@ function App() {
   const [showOnboarding, setShowOnboarding] = useState(false);
   const backendUrl=process.env.REACT_APP_BACKEND_URL;
 
-  const handleHighlight = (newHighlighted) => {
+  const handleHighlight = useCallback((newHighlighted) => {
     // Check if newHighlighted is a function
     if (typeof newHighlighted === 'function') {
       // If it is, call it with the current state
@@ -102,10 +102,10 @@ function App() {
       // If not, use it directly as the new state
       setHighlighted(newHighlighted);
     }
-  };
+  }, []);
 
   // Function to check conflicts with the backend
-  const checkConflicts = async (courses, semester) => {
+  const checkConflicts = useCallback(async (courses, semester) => {
     try {
       const response = await fetch(`${backendUrl}/conflicted_courses`, {
         method: "POST",
@@ -123,13 +123,13 @@ function App() {
       console.error('Error checking conflicts:', error);
       setConflicted([]);
     }
-  };
+  }, [backendUrl]);
 
   // Effect to handle semester changes
   useEffect(() => {
-    // When semester changes, check conflicts with empty highlighted list
+    // When semester changes, check conflicts with current highlighted list
     checkConflicts(highlighted, currentSemester);
-  }, [currentSemester]);
+  }, [currentSemester, highlighted, checkConflicts]);
 
   useEffect(() => {
     supabase.auth.getUser().then(({ data: { user } }) => setUser(user));

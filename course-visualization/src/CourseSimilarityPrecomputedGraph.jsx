@@ -149,54 +149,28 @@ export default function CourseSimilarityPrecomputedGraph({
     console.log('Current dimensions:', dimensions);
   }, [dimensions]);
 
-  // Call onSemesterChange when selectedSemester changes
+  // Combined effect to handle semester changes and tab switches
   useEffect(() => {
     onSemesterChange?.(selectedSemester);
-    // Reset highlighted courses when semester changes using functional update
-    onHighlight(() => []);
     
-    // If we're in Single Semester View and not in public mode, populate user courses for the new semester
-    if (activeTab === 'thisSemester' && !isPublicMode) {
-      console.log('Semester changed in Single Semester View, populating user courses');
-      // Use setTimeout to ensure this runs after the highlighted state is reset
-      setTimeout(() => {
-        // Inline the logic here to avoid circular dependency
-        if (userCourseCodes && userCourseCodes.length > 0) {
-          const userCoursesForSemester = userCourseCodes
-            .filter(uc => uc.semester === selectedSemester)
-            .map(uc => uc.code);
-          
-          console.log(`Populating user courses for semester ${selectedSemester}:`, userCoursesForSemester);
-          
-          if (userCoursesForSemester.length > 0) {
-            onHighlight(userCoursesForSemester);
-          }
-        }
-      }, 0);
-    }
-  }, [selectedSemester, onSemesterChange, activeTab, isPublicMode, userCourseCodes, onHighlight]);
-
-
-
-  // Effect to populate user courses when switching to Single Semester View
-  useEffect(() => {
-    console.log('Tab/UserCourses effect triggered:', { activeTab, selectedSemester, userCourseCodesLength: userCourseCodes?.length, isPublicMode });
-    if (activeTab === 'thisSemester' && !isPublicMode) {
-      console.log('Switching to Single Semester View, populating user courses');
-      // Inline the logic here to avoid circular dependency
-      if (userCourseCodes && userCourseCodes.length > 0) {
-        const userCoursesForSemester = userCourseCodes
-          .filter(uc => uc.semester === selectedSemester)
-          .map(uc => uc.code);
-        
-        console.log(`Populating user courses for semester ${selectedSemester}:`, userCoursesForSemester);
-        
-        if (userCoursesForSemester.length > 0) {
-          onHighlight(userCoursesForSemester);
-        }
+    // Only populate user courses if we're in Single Semester View and not in public mode
+    if (activeTab === 'thisSemester' && !isPublicMode && userCourseCodes && userCourseCodes.length > 0) {
+      console.log('Tab/UserCourses effect triggered:', { activeTab, selectedSemester, userCourseCodesLength: userCourseCodes?.length, isPublicMode });
+      
+      const userCoursesForSemester = userCourseCodes
+        .filter(uc => uc.semester === selectedSemester)
+        .map(uc => uc.code);
+      
+      console.log(`Populating user courses for semester ${selectedSemester}:`, userCoursesForSemester);
+      
+      if (userCoursesForSemester.length > 0) {
+        onHighlight(userCoursesForSemester);
+      } else {
+        // Clear highlights if no courses for this semester
+        onHighlight([]);
       }
     }
-  }, [activeTab, selectedSemester, userCourseCodes, isPublicMode, onHighlight]);
+  }, [selectedSemester, activeTab, userCourseCodes, isPublicMode, onSemesterChange, onHighlight]);
 
   const setSvgRef = useCallback((node) => {
     svgRef.current = node;
@@ -1273,8 +1247,8 @@ export default function CourseSimilarityPrecomputedGraph({
     dimensions,
     mode,
     svgReady,
-    JSON.stringify(highlighted),
-    JSON.stringify(conflicted),
+    highlighted,
+    conflicted,
     graphData,
     courseDetailsData,
     tsneCoords,
