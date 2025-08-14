@@ -45,59 +45,47 @@ print("Starting master analysis pipeline...")
 print(f"User: {os.getenv('USER')}")
 print(f"Date: {filedate}")
 
+# -----------------------------
+# Main Script
+# -----------------------------
 # Step 1: Diversity score calculation
 print("\n" + "="*50)
 print("Running diversity score calculation...")
 print("="*50)
-with open(LOG_PATH, 'w') as log_file:
-    result = subprocess.run([sys.executable, '1_department_scores.py'], 
-                          capture_output=True, text=True)
-    log_file.write(result.stdout)
-    if result.stderr:
-        log_file.write("STDERR: " + result.stderr + "\n")
-    if result.returncode == 0:
-        log_file.write("✓ Diversity score calculation completed\n")
-    else:
-        log_file.write(f"✗ Diversity score calculation failed with return code {result.returncode}\n")
-        print(f"✗ Diversity score calculation failed with return code {result.returncode}")
-        print(f"Check {LOG_PATH} for details")
-        sys.exit(1)
+
+result = subprocess.run([sys.executable, '1_department_scores.py'])
+
+if result.returncode == 0:
+    print("✓ Diversity score calculation completed")
+else:
+    print(f"✗ Diversity score calculation failed with return code {result.returncode}")
+    sys.exit(1)
 
 # Step 2: Graph analysis
 print("\n" + "="*50)
 print("Running graph analysis...")
 print("="*50)
-with open(LOG_PATH, 'a') as log_file:
-    result = subprocess.run([sys.executable, '2_graph_analysis.py'], 
-                          capture_output=True, text=True)
-    log_file.write(result.stdout)
-    if result.stderr:
-        log_file.write("STDERR: " + result.stderr + "\n")
-    if result.returncode == 0:
-        log_file.write("✓ Graph analysis completed\n")
-    else:
-        log_file.write(f"✗ Graph analysis failed with return code {result.returncode}\n")
-        print(f"✗ Graph analysis failed with return code {result.returncode}")
-        print(f"Check {LOG_PATH} for details")
-        sys.exit(1)
+
+result = subprocess.run([sys.executable, '2_graph_analysis.py'])
+
+if result.returncode == 0:
+    print("✓ Graph analysis completed")
+else:
+    print(f"✗ Graph analysis failed with return code {result.returncode}")
+    sys.exit(1)
 
 # Step 3: Scatter plot generation
 print("\n" + "="*50)
 print("Running scatter plot generation...")
 print("="*50)
-with open(LOG_PATH, 'a') as log_file:
-    result = subprocess.run([sys.executable, '3_scatter_plot.py'], 
-                          capture_output=True, text=True)
-    log_file.write(result.stdout)
-    if result.stderr:
-        log_file.write("STDERR: " + result.stderr + "\n")
-    if result.returncode == 0:
-        log_file.write("✓ Scatter plot generation completed\n")
-    else:
-        log_file.write(f"✗ Scatter plot generation failed with return code {result.returncode}\n")
-        print(f"✗ Scatter plot generation failed with return code {result.returncode}")
-        print(f"Check {LOG_PATH} for details")
-        sys.exit(1)
+
+result = subprocess.run([sys.executable, '3_scatter_plot.py'])
+
+if result.returncode == 0:
+    print("✓ Scatter plot generation completed")
+else:
+    print(f"✗ Scatter plot generation failed with return code {result.returncode}")
+    sys.exit(1)
 
 print("\n" + "="*50)
 print("🎉 Master analysis pipeline completed successfully!")
