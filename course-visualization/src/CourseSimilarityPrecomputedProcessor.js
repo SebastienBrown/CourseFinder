@@ -1,6 +1,6 @@
 import * as d3 from 'd3';
 import TSNE from 'tsne-js';
-import { CURRENT_SEMESTER, getSemesterDataPaths } from './config/semesterConfig';
+import { getSemesterDataPaths } from "./config";
 
 // Extract unique course codes
 function getUniqueCourseCodes(data) {
@@ -39,37 +39,87 @@ function buildSimilarityMatrix(data, uniqueCodes, codeToIdx) {
 }
 
 export async function loadPrecomputedCourseData(semester) {
-  // Fetch course details from the public directory
-  const courseDetailsResponse = await fetch(getSemesterDataPaths(semester).courseDetails);
-  if (!courseDetailsResponse.ok) {
-    throw new Error(`HTTP error! status: ${courseDetailsResponse.status}`);
-  }
-  const allCourseDetails = await courseDetailsResponse.json();
-  
-  // Filter courses for the selected semester
-  const courseDetails = allCourseDetails.filter(course => course.semester === semester);
-  
-  // Fetch and filter t-SNE coordinates
-  const tsneCoordsResponse = await fetch(getSemesterDataPaths(semester).tsneCoords);
-  if (!tsneCoordsResponse.ok) {
-    throw new Error(`HTTP error! status: ${tsneCoordsResponse.status}`);
-  }
-  const allTsneCoords = await tsneCoordsResponse.json();
-  const tsneCoords = allTsneCoords.filter(coord => coord.semester === semester);
-
-  // Prepare a simplified list of courses from the details for graph node generation
-  const courses = courseDetails.map(course => {
-    if (!course.course_codes || !course.course_codes[0]) {
-      console.error('Invalid course data:', course);
-      return null;
+  try {
+    // Fetch course details from the public directory
+    const courseDetailsResponse = await fetch(getSemesterDataPaths(semester).courseDetails);
+    if (!courseDetailsResponse.ok) {
+      throw new Error(`HTTP error! status: ${courseDetailsResponse.status}`);
     }
-    return {
-      code: course.course_codes[0], // Use the first code as a primary identifier
-      department: course.course_codes[0].split('-')[0], // Derive department
-    };
-  }).filter(Boolean); // Remove any null entries
+    const allCourseDetails = await courseDetailsResponse.json();
+    
+    // Fetch and filter t-SNE coordinates (which contains similar courses data)
+    const tsneCoordsResponse = await fetch(getSemesterDataPaths(semester).tsneCoords);
+    if (!tsneCoordsResponse.ok) {
+      throw new Error(`HTTP error! status: ${tsneCoordsResponse.status}`);
+    }
+    const allTsneCoords = await tsneCoordsResponse.json();
 
-  return { courses, courseDetails, tsneCoords };
+    // Create a map of similar courses data for efficient lookup
+    const similarCoursesMap = new Map();
+    allTsneCoords.forEach(coord => {
+      if (coord.similar_courses) {
+        const codes = Array.isArray(coord.codes) ? coord.codes : [coord.codes];
+        codes.forEach(code => {
+          similarCoursesMap.set(`${coord.semester}-${code}`, coord.similar_courses);
+        });
+      }
+    });
+
+    // Create a map of course codes to their details for title lookup
+    const courseDetailsMap = new Map();
+    allCourseDetails.forEach(course => {
+      const courseCodes = Array.isArray(course.course_codes) ? course.course_codes : [course.course_codes];
+      courseCodes.forEach(code => {
+        courseDetailsMap.set(`${course.semester}-${code}`, course);
+      });
+    });
+
+    // Filter courses for the selected semester and merge with similar courses data
+    const courseDetails = allCourseDetails
+      .filter(course => course.semester === semester)
+      .map(course => {
+        const courseCodes = Array.isArray(course.course_codes) ? course.course_codes : [course.course_codes];
+        // Try to find similar courses for each course code
+        for (const code of courseCodes) {
+          const similarCourses = similarCoursesMap.get(`${semester}-${code}`);
+          if (similarCourses) {
+            // Add titles to similar courses
+            const similarCoursesWithTitles = similarCourses.map(similar => {
+              const similarCourseDetails = courseDetailsMap.get(`${semester}-${similar.code}`);
+              return {
+                ...similar,
+                title: similarCourseDetails?.course_title || 'Course Title Unavailable'
+              };
+            });
+            return {
+              ...course,
+              similar_courses: similarCoursesWithTitles
+            };
+          }
+        }
+        return course;
+      });
+
+    // Filter t-SNE coordinates for the selected semester
+    const tsneCoords = allTsneCoords.filter(coord => coord.semester === semester);
+
+    // Prepare a simplified list of courses from the details for graph node generation
+    const courses = courseDetails.map(course => {
+      if (!course.course_codes || !course.course_codes[0]) {
+        console.error('Invalid course data:', course);
+        return null;
+      }
+      return {
+        code: course.course_codes[0], // Use the first code as a primary identifier
+        department: course.course_codes[0].split('-')[0], // Derive department
+      };
+    }).filter(Boolean); // Remove any null entries
+
+    return { courses, courseDetails, tsneCoords };
+  } catch (error) {
+    console.error('Error in loadPrecomputedCourseData:', error);
+    throw error;
+  }
 }
 
 // PCA logic (same as before)
