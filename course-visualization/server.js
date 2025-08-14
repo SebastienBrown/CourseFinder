@@ -11,18 +11,11 @@ app.use(express.static(path.join(__dirname, 'build')));
 // API endpoint to get all course data
 app.get('/api/courses', async (req, res) => {
   try {
-    const coursesDir = path.join(__dirname, '..', 'llm_cleaned');
-    const files = await fs.readdir(coursesDir);
+    // Point to the amherst_courses_all.json in the public directory
+    const coursesFilePath = path.join(__dirname, 'public', 'amherst_courses_all.json');
     
-    // Read all JSON files and combine their contents
-    const allCourses = [];
-    for (const file of files) {
-      if (file.endsWith('.json')) {
-        const content = await fs.readFile(path.join(coursesDir, file), 'utf8');
-        const courses = JSON.parse(content);
-        allCourses.push(...courses);
-      }
-    }
+    const content = await fs.readFile(coursesFilePath, 'utf8');
+    const allCourses = JSON.parse(content);
     
     res.json(allCourses);
   } catch (error) {

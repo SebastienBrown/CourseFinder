@@ -1,7 +1,25 @@
 import React from "react";
 
-export default function CoursePopup({ course, onClose }) {
+export default function CoursePopup({ course, onClose, onHighlight, highlighted, activeTab, onSelect, courseDetailsData, setSelectedCourse }) {
   if (!course) return null;
+
+  // Ensure highlighted is an array
+  const highlightedArray = Array.isArray(highlighted) ? highlighted : [];
+
+  // Check if any of the course codes are already highlighted
+  const isSelected = course.course_codes && 
+    (Array.isArray(course.course_codes) 
+      ? course.course_codes.some(code => highlightedArray.includes(code)) ||
+        highlightedArray.includes(course.course_codes.join('/'))
+      : highlightedArray.includes(course.course_codes));
+
+  const handleSelect = () => {
+    if (!course.course_codes) return;
+    
+    // Use onSelect (handleAddSelectedCourse) instead of onHighlight
+    onSelect(course);
+    onClose();
+  };
 
   return (
     <div
@@ -52,6 +70,58 @@ export default function CoursePopup({ course, onClose }) {
                 .join(", ") || "Unavailable"
             : "Unavailable"}
         </p>
+
+        {course.similar_courses && course.similar_courses.length > 0 && (
+          <div className="border-t pt-4">
+            <h3 className="text-lg font-semibold text-[#3f1f69] mb-2">Similar Courses</h3>
+            <div className="space-y-2">
+              {course.similar_courses.map((similar, index) => {
+                // Determine if similar.code is an array or string
+                const similarCodes = Array.isArray(similar.code) ? similar.code : [similar.code];
+                // Find the course data for this similar course code(s)
+                const similarCourse = courseDetailsData.find(c => {
+                  const courseCodes = Array.isArray(c.course_codes) ? c.course_codes : [c.course_codes];
+                  return courseCodes.some(code => similarCodes.includes(code));
+                });
+                return (
+                  <button
+                    key={index}
+                    onClick={() => {
+                      onClose();
+                      if (similarCourse) {
+                        setSelectedCourse(similarCourse);
+                      }
+                    }}
+                    className="block w-full text-left px-3 py-2 rounded-md hover:bg-gray-100 transition-colors"
+                  >
+                    <span className="font-medium text-[#3f1f69]">
+                      {similarCourse?.course_codes?.join(', ') || 
+                       (Array.isArray(similar.code) ? similar.code.join(', ') : similar.code)}
+                    </span>
+                    <span className="text-gray-600 ml-2">
+                      {similarCourse?.course_title || 'Course Title Unavailable'}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'thisSemester' && (
+          <div className="flex justify-end pt-4">
+            <button
+              onClick={handleSelect}
+              className={`px-4 py-2 rounded-md font-medium transition-colors ${
+                isSelected
+                  ? 'bg-red-100 text-red-700 hover:bg-red-200'
+                  : 'bg-[#3f1f69] text-white hover:bg-[#311a4d]'
+              }`}
+            >
+              {isSelected ? 'Deselect Course' : 'Select Course'}
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
