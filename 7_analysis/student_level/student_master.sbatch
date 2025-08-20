@@ -21,7 +21,7 @@ cd /orcd/home/002/hnaka24/CourseFinder/diversity_score_analysis
 # -----------------------------
 # Configuration and Environment Variables
 # -----------------------------
-export FILEDATE='20250813'
+export FILEDATE='20250820'
 
 # HPC paths
 export DROPBOX='/orcd/pool/003/hnaka24/CourseFinder'
@@ -30,7 +30,9 @@ export CODE='/orcd/home/002/hnaka24/CourseFinder'
 # Set all the environment variables your Python scripts need
 export INPUT_JSON="${DROPBOX}/data/2_intermediate/3_similarity/gpt_off_the_shelf/output_similarity_all.json"
 export INPUT_PATH="${DROPBOX}/data/1_raw/user_courses/user_courses_${FILEDATE}.csv"
-export OUTPUT_DATA="${DROPBOX}/data/2_intermediate/5_scores/student_scores_${FILEDATE}.csv"
+export OUTPUT_GRAPH_UNFIL="${DROPBOX}/output/6_scores/graph_all_unfiltered.gexf"
+export OUTPUT_STUDENT_DATA="${DROPBOX}/data/2_intermediate/5_scores/student_scores_${FILEDATE}.csv"
+export OUTPUT_MAJOR_DATA="${DROPBOX}/data/2_intermediate/5_scores/major_scores_panel.csv"
 export OUTPUT_PLOT="${DROPBOX}/output/6_scores/student_scores_scatter_${FILEDATE}.pdf"
 export MIN_SIM='0.75'
 export KEEP_TOP_K='None'
@@ -49,13 +51,11 @@ echo "Date: $FILEDATE"
 echo "==============================================="
 
 # -----------------------------
-# Run Scripts Sequentially
+# Step 1: Calculate discrete measures for students
 # -----------------------------
-
-# Step 1: Diversity score calculation
 echo ""
 echo "==== Running diversity score calculation... ===="
-python 1_department_scores.py
+python 1_discrete_scores.py
 if [ $? -ne 0 ]; then
     echo "✗ Diversity score calculation failed"
     exit 1
@@ -63,19 +63,23 @@ fi
 echo "✓ Diversity score calculation completed"
 
 
+# -----------------------------
 # Step 2: Graph analysis
+# -----------------------------
 echo ""
 echo "==== Running graph analysis... ===="
 
-python 2_graph_analysis.py
+# Students
+python 2_student_graph.py
 if [ $? -ne 0 ]; then
-    echo "✗ Graph analysis failed"
+    echo "✗ Student-level graph analysis failed"
     exit 1
 fi
-echo "✓ Graph analysis completed"
+echo "✓ Student-level graph analysis completed"
 
-
-# Step 3: Scatter plot generation
+# -----------------------------
+# Step 3: Scatter plots
+# -----------------------------
 echo ""
 
 echo "==== Running scatter plot generation... ===="
