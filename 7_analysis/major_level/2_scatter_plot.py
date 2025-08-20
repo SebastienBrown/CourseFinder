@@ -8,23 +8,23 @@ import os
 # Paths
 # -----------------------------
 filedate = os.getenv('FILEDATE', '20250813')
-OUTPUT_DATA = Path(os.getenv('OUTPUT_DATA', f'/Users/hnaka24/Dropbox (Personal)/AmherstCourses/data/2_intermediate/5_scores/student_scores_{filedate}.csv'))
-OUTPUT_PLOT = os.getenv('OUTPUT_PLOT', f'/Users/hnaka24/Dropbox (Personal)/AmherstCourses/output/6_scores/student_scores_scatter_{filedate}.pdf')
+OUTPUT_MAJOR_DATA = Path(os.getenv('OUTPUT_MAJOR_DATA', f'/Users/hnaka24/Dropbox (Personal)/AmherstCourses/data/2_intermediate/5_scores/major_scores_panel.csv'))
+OUTPUT_PLOT = os.getenv('OUTPUT_PLOT', f'/Users/hnaka24/Dropbox (Personal)/AmherstCourses/output/6_scores/major_scores_scatter_{filedate}.pdf')
 
 # -----------------------------
 # Load data
 # -----------------------------
-print(f"Loading data from {OUTPUT_DATA}")
-results_df = pd.read_csv(OUTPUT_DATA)
+print(f"Loading data from {OUTPUT_MAJOR_DATA}")
+results_df = pd.read_csv(OUTPUT_MAJOR_DATA)
 
 # -----------------------------
 # Export scatter plot
 # -----------------------------
-print(f"Loaded {len(results_df)} rows from {OUTPUT_DATA.resolve()}")
+print(f"Loaded {len(results_df)} rows from {OUTPUT_MAJOR_DATA.resolve()}")
 print(results_df.head(10))
 
 # Select the columns you want to include in the pairwise scatter plot
-plot_vars = ["NumDisciplines", "EntropyNormalized", "HHIIndex", "n_components", "avg_distance", "max_distance"]
+plot_vars = ["NumCourses", "n_components", "avg_distance", "max_distance"]
 
 n_vars = len(plot_vars)
 fig, axes = plt.subplots(n_vars, n_vars, figsize=(4 * n_vars, 4 * n_vars))
