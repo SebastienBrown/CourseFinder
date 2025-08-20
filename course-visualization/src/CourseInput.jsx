@@ -8,6 +8,26 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
   const [showSuggestions, setShowSuggestions] = useState(false);
   const backendUrl=process.env.REACT_APP_BACKEND_URL;
 
+  // Helper function to calculate semester distance
+  const calculateSemesterDistance = (semester1, semester2) => {
+    // Parse semester format: YYMMT (e.g., "2324S")
+    const parseSemester = (sem) => {
+      const year = parseInt(sem.substring(0, 2) + sem.substring(2, 4)); // Convert YYMM to full year
+      const term = sem.charAt(4);
+      const termOrder = { 'F': 0, 'J': 1, 'S': 2 }; // Fall, January, Spring
+      return { year, termOrder: termOrder[term] || 0 };
+    };
+
+    const sem1 = parseSemester(semester1);
+    const sem2 = parseSemester(semester2);
+
+    // Calculate distance: (year difference * 3) + term difference
+    const yearDiff = Math.abs(sem1.year - sem2.year);
+    const termDiff = Math.abs(sem1.termOrder - sem2.termOrder);
+    
+    return (yearDiff * 3) + termDiff;
+  };
+
   // Load course data on component mount
   useEffect(() => {
     const loadCourses = async () => {
@@ -44,13 +64,11 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
     }
 
     const searchTermLower = searchTerm.toLowerCase();
-    const matches = allCourses
+    
+    // First, find all matching courses across all semesters
+    const allMatches = allCourses
       .filter(course => {
-        // Filter by current semester first
         if (!course.semester) return false;
-        if (!course.semester.includes(currentSemester)) {
-          return false;
-        }
 
         const courseCodes = Array.isArray(course.course_codes) 
           ? course.course_codes 
@@ -64,7 +82,59 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
         
         return codeMatch || titleMatch;
       })
-      .slice(0, 5); // Limit to 5 suggestions
+      .map(course => ({
+        ...course,
+        semesterDistance: calculateSemesterDistance(currentSemester, course.semester)
+      }));
+
+    // Sort by relevance first (exact matches, then partial matches), then by semester distance
+    const sortedMatches = allMatches.sort((a, b) => {
+      // First, prioritize exact matches in course codes
+      const aCodes = Array.isArray(a.course_codes) ? a.course_codes : [a.course_codes];
+      const bCodes = Array.isArray(b.course_codes) ? b.course_codes : [b.course_codes];
+      
+      const aExactMatch = aCodes.some(code => code.toLowerCase() === searchTermLower);
+      const bExactMatch = bCodes.some(code => code.toLowerCase() === searchTermLower);
+      
+      if (aExactMatch && !bExactMatch) return -1;
+      if (!aExactMatch && bExactMatch) return 1;
+      
+      // Then prioritize exact matches in titles
+      const aTitleExact = a.course_title && a.course_title.toLowerCase() === searchTermLower;
+      const bTitleExact = b.course_title && b.course_title.toLowerCase() === searchTermLower;
+      
+      if (aTitleExact && !bTitleExact) return -1;
+      if (!aTitleExact && bTitleExact) return 1;
+      
+      // Then prioritize starts-with matches
+      const aStartsWith = aCodes.some(code => code.toLowerCase().startsWith(searchTermLower)) ||
+                         (a.course_title && a.course_title.toLowerCase().startsWith(searchTermLower));
+      const bStartsWith = bCodes.some(code => code.toLowerCase().startsWith(searchTermLower)) ||
+                         (b.course_title && b.course_title.toLowerCase().startsWith(searchTermLower));
+      
+      if (aStartsWith && !bStartsWith) return -1;
+      if (!aStartsWith && bStartsWith) return 1;
+      
+      // Finally, sort by semester distance (closer semesters first)
+      return a.semesterDistance - b.semesterDistance;
+    });
+
+    // Remove duplicates based on course code, keeping the first occurrence (which will be from the closest semester)
+    const uniqueMatches = [];
+    const seenCodes = new Set();
+    
+    for (const course of sortedMatches) {
+      const courseCodes = Array.isArray(course.course_codes) ? course.course_codes : [course.course_codes];
+      const primaryCode = courseCodes[0];
+      
+      if (!seenCodes.has(primaryCode)) {
+        seenCodes.add(primaryCode);
+        uniqueMatches.push(course);
+      }
+    }
+
+    // Limit to 5 suggestions
+    const matches = uniqueMatches.slice(0, 5);
 
     //console.log('Found matches:', matches);
     setSuggestions(matches);
@@ -184,7 +254,7 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
               //console.log('Input focused');
               setShowSuggestions(true);
             }}
-            placeholder={`Search by course code or title for ${currentSemester} (e.g. MATH-111 or Introduction to Legal Theory)`}
+            placeholder={`Search by course code or title across all semesters (e.g. MATH-111 or Introduction to Legal Theory)`}
             className="w-full px-3 py-2 border border-[#5d3c85] bg-[#f4f0fa] text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-[#3f1f69]"
           />
           
