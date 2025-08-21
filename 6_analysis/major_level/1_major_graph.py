@@ -1,14 +1,12 @@
 import json, os
-import re
-import ast
 import pandas as pd
 import networkx as nx
 import numpy as np
+from utils import canon_node_id, normalize_codes, dept_replacements
 
 # -----------------------------
 # Config
 # -----------------------------
-filedate = os.getenv('FILEDATE', '20250813')
 INPUT_JSON = os.getenv('INPUT_JSON', '/Users/hnaka24/Dropbox (Personal)/AmherstCourses/data/2_intermediate/3_similarity/gpt_off_the_shelf/output_similarity_all.json')
 # OUTPUT_GRAPH_UNFIL = os.getenv('OUTPUT_GRAPH_UNFIL', '/Users/hnaka24/Dropbox (Personal)/AmherstCourses/output/6_scores/graph_all_unfiltered.gexf')
 OUTPUT_MAJOR_DATA = os.getenv('OUTPUT_MAJOR_DATA', f'/Users/hnaka24/Dropbox (Personal)/AmherstCourses/data/2_intermediate/5_scores/major_scores_panel.csv')
@@ -17,51 +15,6 @@ OUTPUT_MAJOR_DATA = os.getenv('OUTPUT_MAJOR_DATA', f'/Users/hnaka24/Dropbox (Per
 keep_top_k_str = os.getenv('KEEP_TOP_K', 'None')
 KEEP_TOP_K = None if keep_top_k_str == 'None' else int(keep_top_k_str)  # If set to an integer (e.g., 20), keep only the top-K neighbors per node.
 MIN_SIM = float(os.getenv('MIN_SIM', '0.75'))     # Minimum similarity threshold for keeping edges
-
-# -----------------------------
-# Functions
-# -----------------------------
-def canon_node_id(codes, semester):
-    """
-    Given a list like ['EDST-200','AMST-200','SOCI-200'] and semester like '2223F',
-    return a stable, canonical node ID string that includes both course codes and semester.
-
-    Why do this?
-    - We want the same combination of codes AND semester to map to the same node,
-      regardless of their order in the list. This allows us to parse cross-listed courses
-      while distinguishing between different semesters of the same course.
-    """
-    # Build a cleaned list:
-    # - str(c): ensure each element is a string
-    # - .strip(): remove surrounding whitespace
-    # - if c and str(c).strip(): skip Nones/empties
-    cleaned = [str(c).strip() for c in codes if c and str(c).strip()]
-    # Sort for order-independence (['B','A'] -> ['A','B'])
-    cleaned_sorted = sorted(cleaned)
-    # Join with '|' to create a single canonical ID, e.g., 'AMST-200|EDST-200|SOCI-200|2223F'
-    return "|".join(cleaned_sorted + [str(semester).strip()])
-
-dept_replacements = {
-    "MUSL": "MUSI",
-    "LATI": "CLAS",
-    "GREE": "CLAS",
-    "WAGS": "SWAG",
-    "ARAB": "ASLC",
-    "CHIN": "ASLC",
-    "JAPA": "ASLC"
-}
-
-def normalize_codes(codes):
-    """Apply department replacements to a list of course codes."""
-    normalized = []
-    for code in codes:
-        if "-" in code:
-            dept, rest = code.split("-", 1)
-            dept = dept_replacements.get(dept, dept)  # replace if in dict
-            normalized.append(f"{dept}-{rest}")
-        else:
-            normalized.append(code)
-    return normalized
 
 # -----------------------------
 # Read JSON
@@ -283,7 +236,7 @@ for semester in sorted(semesters):
     subG_all = G.subgraph(all_nodes).copy()
 
     # Count cross-listed
-    n_crosslisted = sum(1 for node_id in mapped_nodes if '|' in subG_all.nodes[node_id]['codes'])
+    n_crosslisted = sum(1 for node_id in all_nodes if '|' in subG_all.nodes[node_id]['codes'])
 
     # Distances
     distances = []
@@ -356,7 +309,7 @@ for major in sorted(majors):
     subG_major = G.subgraph(major_nodes).copy()
 
     # Count cross-listed
-    n_crosslisted = sum(1 for node_id in mapped_nodes if '|' in subG_major.nodes[node_id]['codes'])
+    n_crosslisted = sum(1 for node_id in major_nodes if '|' in subG_major.nodes[node_id]['codes'])
     
     # Calculate average and max distances between courses using unfiltered graph
     distances = []
