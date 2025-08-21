@@ -4,9 +4,9 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --ntasks=1
 #SBATCH --time=08:00:00
-#SBATCH --mem=240G
+#SBATCH --mem=160G
 
-#SBATCH --output=/orcd/home/002/hnaka24/CourseFinder/logs/6_major_master_%j.txt
+#SBATCH --output=/orcd/home/002/hnaka24/CourseFinder/logs/6_student_master_%j.txt
 #SBATCH --mail-user=hnakazawa@povertyactionlab.org
 #SBATCH --mail-type=all
 
@@ -16,20 +16,24 @@ conda activate course_venv
 module load python/3.9.4
 
 # Change to your code directory
-cd /orcd/home/002/hnaka24/CourseFinder/7_analysis/major_level
+cd /orcd/home/002/hnaka24/CourseFinder/6_analysis/student_level
 
 # -----------------------------
 # Configuration and Environment Variables
 # -----------------------------
+export FILEDATE='20250820'
+
 # HPC paths
 export DROPBOX='/orcd/pool/003/hnaka24/CourseFinder'
 export CODE='/orcd/home/002/hnaka24/CourseFinder'
 
 # Set all the environment variables your Python scripts need
 export INPUT_JSON="${DROPBOX}/data/2_intermediate/3_similarity/gpt_off_the_shelf/output_similarity_all.json"
+export INPUT_PATH="${DROPBOX}/data/1_raw/user_courses/user_courses_${FILEDATE}.csv"
 export OUTPUT_GRAPH_UNFIL="${DROPBOX}/output/6_scores/graph_all_unfiltered.gexf"
+export OUTPUT_STUDENT_DATA="${DROPBOX}/data/2_intermediate/5_scores/student_scores_${FILEDATE}.csv"
 export OUTPUT_MAJOR_DATA="${DROPBOX}/data/2_intermediate/5_scores/major_scores_panel.csv"
-export OUTPUT_PLOT="${DROPBOX}/output/6_scores/major_scores_scatter.pdf"
+export OUTPUT_PLOT="${DROPBOX}/output/6_scores/student_scores_scatter_${FILEDATE}.pdf"
 export MIN_SIM='0.75'
 export KEEP_TOP_K='None'
 
@@ -45,29 +49,41 @@ echo "Node: $SLURMD_NODENAME"
 echo "Date: $FILEDATE"
 echo "==============================================="
 
+# -----------------------------
+# Step 1: Calculate discrete measures for students
+# -----------------------------
+echo ""
+echo "==== Running diversity score calculation... ===="
+python 1_discrete_scores.py
+if [ $? -ne 0 ]; then
+    echo "✗ Diversity score calculation failed"
+    exit 1
+fi
+echo "✓ Diversity score calculation completed"
+
 
 # -----------------------------
-# Step 1: Graph analysis
+# Step 2: Graph analysis
 # -----------------------------
 echo ""
 echo "==== Running graph analysis... ===="
 
-# Majors
-python 1_major_graph.py
+# Students
+python 2_student_graph.py
 if [ $? -ne 0 ]; then
-    echo "✗ Major-level graph analysis failed"
+    echo "✗ Student-level graph analysis failed"
     exit 1
 fi
-echo "✓ Major-level graph analysis completed"
+echo "✓ Student-level graph analysis completed"
 
 # -----------------------------
-# Step 2: Scatter plots
+# Step 3: Scatter plots
 # -----------------------------
 echo ""
 
 echo "==== Running scatter plot generation... ===="
 
-python 2_scatter_plot.py
+python 3_scatter_plot.py
 if [ $? -ne 0 ]; then
     echo "✗ Scatter plot generation failed"
     exit 1
