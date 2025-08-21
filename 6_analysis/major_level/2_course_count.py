@@ -78,8 +78,8 @@ df_semester_totals['year'] = df_semester_totals['semester'].apply(lambda s: s[:4
 df_full = pd.concat([df, df_major_totals, df_semester_totals], ignore_index=True, sort=False)
 
 # Sort the index
-df = df.set_index(['semester', 'year', 'major'])
-df = df.sort_index()
+df_full = df_full.set_index(['semester', 'year', 'major'])
+df_full = df_full.sort_index()
 
 # -----------------------------
 # Merge to major panel
@@ -90,7 +90,7 @@ df_existing = pd.read_csv(OUTPUT_MAJOR_DATA)
 # Merge on semester and major
 df_merged = pd.merge(
     df_existing,
-    df,
+    df_full,
     on=["semester", "major"],
     how="outer"
 )

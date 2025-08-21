@@ -50,16 +50,16 @@ echo "==============================================="
 # -----------------------------
 # Step 1: Graph analysis
 # -----------------------------
-# echo ""
-# echo "==== Running graph analysis... ===="
+echo ""
+echo "==== Running graph analysis... ===="
 
-# # Majors
-# python 1_major_graph.py
-# if [ $? -ne 0 ]; then
-#     echo "✗ Major-level graph analysis failed"
-#     exit 1
-# fi
-# echo "✓ Major-level graph analysis completed"
+# Majors
+python 1_major_graph.py
+if [ $? -ne 0 ]; then
+    echo "✗ Major-level graph analysis failed"
+    exit 1
+fi
+echo "✓ Major-level graph analysis completed"
 
 # -----------------------------
 # Step 2: Course counts
