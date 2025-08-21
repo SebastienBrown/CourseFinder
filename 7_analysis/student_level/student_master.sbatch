@@ -6,17 +6,17 @@
 #SBATCH --time=08:00:00
 #SBATCH --mem=160G
 
-#SBATCH --output=/orcd/home/002/hnaka24/CourseFinder/logs/6_master_%j.txt
+#SBATCH --output=/orcd/home/002/hnaka24/CourseFinder/logs/6_student_master_%j.txt
 #SBATCH --mail-user=hnakazawa@povertyactionlab.org
 #SBATCH --mail-type=all
 
 source /orcd/software/core/001/centos7/pkg/miniforge/24.3.0-0/etc/profile.d/conda.sh
 conda activate course_venv
-pip install -r requirements.txt
+# pip install -r requirements.txt
 module load python/3.9.4
 
 # Change to your code directory
-cd /orcd/home/002/hnaka24/CourseFinder/diversity_score_analysis
+cd /orcd/home/002/hnaka24/CourseFinder/7_analysis/student_level
 
 # -----------------------------
 # Configuration and Environment Variables
@@ -40,7 +40,6 @@ export KEEP_TOP_K='None'
 # Create necessary directories
 mkdir -p "${DROPBOX}/data/2_intermediate/5_scores/"
 mkdir -p "${DROPBOX}/output/6_scores/"
-mkdir -p logs
 
 # Print job information
 echo "==============================================="

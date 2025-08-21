@@ -21,10 +21,13 @@ results_df = pd.read_csv(OUTPUT_MAJOR_DATA)
 # Export scatter plot
 # -----------------------------
 print(f"Loaded {len(results_df)} rows from {OUTPUT_MAJOR_DATA.resolve()}")
-print(results_df.head(10))
+print(results_df.head(10).to_string())
+print(results_df.tail(10).to_string())
+exit()
 
-# Select the columns you want to include in the pairwise scatter plot
-plot_vars = ["NumCourses", "n_components", "avg_distance", "max_distance"]
+# Select the columns and rows you want to include in the pairwise scatter plot
+results_df = results_df[results_df["semester"] == "ALL"]
+plot_vars = ["n_courses", "n_components", "avg_distance", "max_distance"]
 
 n_vars = len(plot_vars)
 fig, axes = plt.subplots(n_vars, n_vars, figsize=(4 * n_vars, 4 * n_vars))
