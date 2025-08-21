@@ -9,7 +9,8 @@ import numpy as np
 # Config
 # -----------------------------
 filedate = os.getenv('FILEDATE', '20250813')
-OUTPUT_GRAPH_UNFIL = os.getenv('OUTPUT_GRAPH_UNFIL', '/Users/hnaka24/Dropbox (Personal)/AmherstCourses/output/6_scores/graph_all_unfiltered.gexf')
+INPUT_JSON = os.getenv('INPUT_JSON', '/Users/hnaka24/Dropbox (Personal)/AmherstCourses/data/2_intermediate/3_similarity/gpt_off_the_shelf/output_similarity_all.json')
+# OUTPUT_GRAPH_UNFIL = os.getenv('OUTPUT_GRAPH_UNFIL', '/Users/hnaka24/Dropbox (Personal)/AmherstCourses/output/6_scores/graph_all_unfiltered.gexf')
 OUTPUT_MAJOR_DATA = os.getenv('OUTPUT_MAJOR_DATA', f'/Users/hnaka24/Dropbox (Personal)/AmherstCourses/data/2_intermediate/5_scores/major_scores_panel.csv')
 
 # Convert environment variables to proper types
@@ -20,47 +21,180 @@ MIN_SIM = float(os.getenv('MIN_SIM', '0.75'))     # Minimum similarity threshold
 # -----------------------------
 # Functions
 # -----------------------------
-# Regular expression to find course codes like "ECON-111" or "PSYC-498D"
-pat = re.compile(r"[A-Za-z]{2,5}-\d{2,4}[A-Za-z]?")
+def canon_node_id(codes, semester):
+    """
+    Given a list like ['EDST-200','AMST-200','SOCI-200'] and semester like '2223F',
+    return a stable, canonical node ID string that includes both course codes and semester.
 
-def parse_courses_from_cell(s):
+    Why do this?
+    - We want the same combination of codes AND semester to map to the same node,
+      regardless of their order in the list. This allows us to parse cross-listed courses
+      while distinguishing between different semesters of the same course.
     """
-    Parse a cell containing course codes and return a list of course codes.
-    First try: evaluate it as a Python list.
-    Fallback: extract codes using regex.
-    """
-    try:
-        # Try to interpret the string as a Python literal (e.g., list)
-        lst = ast.literal_eval(s)
-        if isinstance(lst, list):
-            # Standardize all strings: strip spaces, uppercase
-            return [str(x).strip().upper() for x in lst if isinstance(x, str)]
-    except Exception:
-        pass  # If that fails, continue to regex extraction
-    # Fallback: use regex to find all codes in the string
-    return [m.group(0).upper() for m in pat.finditer(str(s))]
+    # Build a cleaned list:
+    # - str(c): ensure each element is a string
+    # - .strip(): remove surrounding whitespace
+    # - if c and str(c).strip(): skip Nones/empties
+    cleaned = [str(c).strip() for c in codes if c and str(c).strip()]
+    # Sort for order-independence (['B','A'] -> ['A','B'])
+    cleaned_sorted = sorted(cleaned)
+    # Join with '|' to create a single canonical ID, e.g., 'AMST-200|EDST-200|SOCI-200|2223F'
+    return "|".join(cleaned_sorted + [str(semester).strip()])
+
+dept_replacements = {
+    "MUSL": "MUSI",
+    "LATI": "CLAS",
+    "GREE": "CLAS",
+    "WAGS": "SWAG",
+    "ARAB": "ASLC",
+    "CHIN": "ASLC",
+    "JAPA": "ASLC"
+}
+
+def normalize_codes(codes):
+    """Apply department replacements to a list of course codes."""
+    normalized = []
+    for code in codes:
+        if "-" in code:
+            dept, rest = code.split("-", 1)
+            dept = dept_replacements.get(dept, dept)  # replace if in dict
+            normalized.append(f"{dept}-{rest}")
+        else:
+            normalized.append(code)
+    return normalized
+
+# -----------------------------
+# Read JSON
+# -----------------------------
+# Parse the entire JSON file into a Python object.
+# We expect a list of dicts, each roughly like:
+# [
+#     {
+#         "course_codes": [
+#             "EDST-203",
+#             "AMST-203",
+#             "SOCI-203"
+#         ],
+#         "semester": "2223F",
+#         "compared_courses": [
+#             {
+#                 "course_codes": [
+#                     "AMST-205"
+#                 ],
+#                 "semester": "2223F",
+#                 "similarity_score": 0.757240453712485
+#             },
+
+with open(INPUT_JSON, "r") as f:
+    data = json.load(f)
+print(f"Number of courses: {len(data)}")
+
+# -----------------------------
+# Build unfiltered graph for distance calculations
+# -----------------------------
+print("Building unfiltered graph for distance calculations...")
+edges_acc_unfiltered = {}
+node_codes = {}
+
+# Iterate over each entry (row) in the input data.
+for entry in data:
+    # Extract the "source" course code list; if missing, use [].
+    src_codes = entry.get("course_codes", [])
+    if isinstance(src_codes, str):
+        src_codes = [src_codes]
+
+    # Normalize major codes
+    src_codes = normalize_codes(src_codes)
+    
+    # Extract the source semester; if missing, use empty string.
+    src_semester = entry.get("semester", "")
+
+    if not src_codes:
+        continue
+
+    # Create a canonical node ID for the source node.
+    u = canon_node_id(src_codes, src_semester)
+
+    # Ensure the node is recorded in node_codes.
+    node_codes.setdefault(u, (tuple(sorted(src_codes)), src_semester))
+
+    # Extract the list of comparisons from this source entry.
+    compared = entry.get("compared_courses", []) or []
+
+    # Loop over all compared items for this source node.
+    for comp in compared:
+        # Destination (neighbor) course codes for this comparison.
+        dst_codes = comp.get("course_codes", [])
+        if isinstance(dst_codes, str):
+            dst_codes = [dst_codes]
+
+        # Normalize major codes
+        dst_codes = normalize_codes(dst_codes)
+
+        # Destination semester for this comparison.
+        dst_semester = comp.get("semester", "")
+
+        if not dst_codes:
+            continue
+
+        # Canonical node ID for the neighbor.
+        v = canon_node_id(dst_codes, dst_semester)
+
+        # Make sure the neighbor node is recorded with its readable codes and semester.
+        node_codes.setdefault(v, (tuple(sorted(dst_codes)), dst_semester))
+
+        # Extract similarity score; could be absent -> None.
+        sim = comp.get("similarity_score", None)
+        # If similarity is missing, skip this pair.
+        if sim is None:
+            continue
+
+        # Store the neighbor and similarity (cast to float for safety).
+        # Avoid self-loops (u -> u).
+        if u == v:
+            continue
+        # Sort the two node IDs so (u, v) and (v, u) become the same edge key.
+        a, b = sorted((u, v))
+
+        # If we already saw an edge for (a, b), keep the maximum similarity encountered.
+        prev = edges_acc_unfiltered.get((a, b))
+        edges_acc_unfiltered[(a, b)] = sim if prev is None else max(prev, sim)
+
+# Create unfiltered graph
+G = nx.Graph()
+
+# Add all nodes first.
+for node, (codes, semester) in node_codes.items():
+    G.add_node(node, codes=codes, semester=semester) #codes="|".join(codes)
+
+# Add all edges (no filtering)
+for (u, v), sim in edges_acc_unfiltered.items():
+    G.add_edge(u, v, similarity=sim, weight=(1.0 - sim))
+
+print(f"Unfiltered graph: {G.number_of_nodes()} nodes, {G.number_of_edges()} edges")
 
 # -----------------------------
 # Load graph
 # -----------------------------
-G = nx.read_gexf(OUTPUT_GRAPH_UNFIL)
+# G = nx.read_gexf(OUTPUT_GRAPH_UNFIL)
 
 # Create a lookup dict for course codes
 code_to_node = {}
-semesters = set()
-majors = set()
+semesters = set()  # semesters = {'2324S', '2324F', ...}
+majors = set()     # majors = {'EDST', 'MATH', 'HIST', ...}
 
 for node_id in G.nodes():
-    node_codes = G.nodes[node_id]['codes'].split('|')
+    node_codes = G.nodes[node_id]['codes']
     node_semester = G.nodes[node_id]['semester']
     semesters.add(node_semester)
     for code in node_codes:
+        major = code.split("-")[0]
+        if len(major) != 4:
+            print(f"Major: {code}, Node ID: {node_id}, Attributes: {G.nodes[node_id]}")  # <-- debug line
         code_to_node[(code, node_semester)] = node_id
-        majors.add(code[:4])  # first 4 chars = major
+        majors.add(major)
 
-# Now you have:
-# semesters = {'2324S', '2324F', ...}
-# majors = {'EDST', 'MATH', 'HIST', ...}
+print(majors)
 
 # -----------------------------
 # Create graph for each semester-major
@@ -71,7 +205,7 @@ for semester in sorted(semesters):
     majors_in_sem = []
 
     for major in sorted(majors):
-        mapped_nodes, missing = [], []
+        mapped_nodes = []
         majors_in_sem.append(major)
 
         # Collect all nodes that belong to this semester-major
@@ -79,14 +213,14 @@ for semester in sorted(semesters):
             if sem == semester and code.startswith(major):
                 mapped_nodes.append(node_id)
 
-        if not mapped_nodes:
-            missing.append(f"{major} ({semester})")
-
         # Deduplicate and sort
         mapped_nodes = sorted(set(mapped_nodes))
 
         # Create a subgraph containing only the major-semester's courses (from unfiltered graph for distances)
         subG = G.subgraph(mapped_nodes).copy()
+
+        # Count cross-listed
+        n_crosslisted = sum(1 for node_id in mapped_nodes if '|' in subG.nodes[node_id]['codes'])
         
         # Calculate average and max distances between courses using unfiltered graph
         distances = []
@@ -104,8 +238,8 @@ for semester in sorted(semesters):
                         # If no edge exists in unfiltered graph, assume max distance (similarity = 0)
                         distances.append(1.0)
         
-        avg_distance = np.mean(distances) if distances else 1.0
-        max_distance = np.max(distances) if distances else 1.0
+        avg_distance = np.mean(distances) if distances else np.nan
+        max_distance = np.max(distances) if distances else np.nan
         
         ###### Filter by minimum similarity ######
         for u, v, d in list(subG.edges(data=True)):
@@ -130,15 +264,15 @@ for semester in sorted(semesters):
             "semester": semester,
             "major": major,
             "n_majors": 1,
-            "n_courses_listed": len(mapped_nodes) + len(missing),  # Total courses attempted
-            "n_nodes_mapped": len(mapped_nodes),         # How many matched to graph nodes
-            "n_unmapped": len(missing),                  # How many didn't match
+            "n_semesters": 1,
+            "n_crosslisted": n_crosslisted,              # How many were cross-listed
+            "n_courses_mapped": len(mapped_nodes),         # How many matched to graph nodes
             "n_components": len(comp_sizes),             # How many connected components
-            "largest_component": (comp_sizes[0] if comp_sizes else 0),  # Size of largest
+            "largest_component": (comp_sizes[0] if comp_sizes else np.nan),  # Size of largest
             "avg_distance": avg_distance,                # Average distance between all course pairs
             "max_distance": max_distance,                # Maximum distance between any course pair
             "component_sizes_sorted": comp_sizes[:10],   # Preview first 10 sizes
-            "unmapped_example": ", ".join(missing),      # Unmapped courses (if any)
+            "unmapped_example": "",      # Unmapped courses (if any)
         })
         # end of loop through majors #
     
@@ -147,6 +281,11 @@ for semester in sorted(semesters):
     all_nodes = sorted(set(all_nodes))
 
     subG_all = G.subgraph(all_nodes).copy()
+
+    # Count cross-listed
+    n_crosslisted = sum(1 for node_id in mapped_nodes if '|' in subG_all.nodes[node_id]['codes'])
+
+    # Distances
     distances = []
     for i, node1 in enumerate(all_nodes):
         for j, node2 in enumerate(all_nodes):
@@ -175,11 +314,11 @@ for semester in sorted(semesters):
         "semester": semester,
         "major": "ALL",
         "n_majors": len(majors_in_sem),
-        "n_courses_listed": len(all_nodes),
-        "n_nodes_mapped": len(all_nodes),
-        "n_unmapped": 0,
+        "n_semesters": 1,
+        "n_crosslisted": n_crosslisted,
+        "n_courses_mapped": len(all_nodes),
         "n_components": len(comp_sizes),
-        "largest_component": (comp_sizes[0] if comp_sizes else 0),
+        "largest_component": (comp_sizes[0] if comp_sizes else np.nan),
         "avg_distance": avg_distance,
         "max_distance": max_distance,
         "component_sizes_sorted": comp_sizes[:10],
@@ -201,11 +340,11 @@ for major in sorted(majors):
             "semester": "ALL",
             "major": major,
             "n_majors": 1,
-            "n_courses_listed": 0,
-            "n_nodes_mapped": 0,
-            "n_unmapped": 0,
+            "n_semesters": 0,
+            "n_crosslisted": 0,
+            "n_courses_mapped": 0,
             "n_components": 0,
-            "largest_component": 0,
+            "largest_component": np.nan,
             "avg_distance": 1.0,
             "max_distance": 1.0,
             "component_sizes_sorted": [],
@@ -215,6 +354,9 @@ for major in sorted(majors):
     
     # Create a subgraph containing all the major's courses across all semesters
     subG_major = G.subgraph(major_nodes).copy()
+
+    # Count cross-listed
+    n_crosslisted = sum(1 for node_id in mapped_nodes if '|' in subG_major.nodes[node_id]['codes'])
     
     # Calculate average and max distances between courses using unfiltered graph
     distances = []
@@ -255,12 +397,12 @@ for major in sorted(majors):
     rows.append({
         "semester": "ALL",
         "major": major,
-        "n_majors": len(semesters_with_major),  # Number of semesters this major appears in
-        "n_courses_listed": len(major_nodes),
-        "n_nodes_mapped": len(major_nodes),
-        "n_unmapped": 0,  # No unmapped since we're working with existing nodes
+        "n_majors": 1,
+        "n_semesters": len(semesters_with_major),  # Number of semesters this major appears in
+        "n_crosslisted": n_crosslisted,
+        "n_courses_mapped": len(major_nodes),
         "n_components": len(comp_sizes),
-        "largest_component": (comp_sizes[0] if comp_sizes else 0),
+        "largest_component": (comp_sizes[0] if comp_sizes else np.nan),
         "avg_distance": avg_distance,
         "max_distance": max_distance,
         "component_sizes_sorted": comp_sizes[:10],
@@ -278,7 +420,7 @@ print(f"Saved: {OUTPUT_MAJOR_DATA}")
 
 # Show the first 10 rows in the console
 print("\nFirst 10 rows:")
-print(analysis_df.head(10))
+print(analysis_df.head(10).to_string())
 
 print(f"\nAnalysis complete!")
 
