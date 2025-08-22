@@ -7,9 +7,8 @@ import os
 # -----------------------------
 # Paths
 # -----------------------------
-filedate = os.getenv('FILEDATE', '20250813')
 OUTPUT_MAJOR_DATA = Path(os.getenv('OUTPUT_MAJOR_DATA', f'/Users/hnaka24/Dropbox (Personal)/AmherstCourses/data/2_intermediate/5_scores/major_scores_panel.csv'))
-OUTPUT_PLOT = os.getenv('OUTPUT_PLOT', f'/Users/hnaka24/Dropbox (Personal)/AmherstCourses/output/6_scores/major_scores_scatter_{filedate}.pdf')
+OUTPUT_PLOT = os.getenv('OUTPUT_PLOT', f'/Users/hnaka24/Dropbox (Personal)/AmherstCourses/output/6_scores/major_scores_scatter.pdf')
 
 # -----------------------------
 # Load data
@@ -26,7 +25,8 @@ print(results_df.tail(10).to_string())
 
 # Select the columns and rows you want to include in the pairwise scatter plot
 results_df = results_df[results_df["semester"] == "ALL"]
-plot_vars = ["n_components", "avg_distance", "max_distance"] #"n_courses", 
+results_df = results_df[~results_df["major"].isin(["ALL", "MIXD"])]
+plot_vars = ["n_courses", "n_components", "avg_distance", "max_distance"]
 
 n_vars = len(plot_vars)
 fig, axes = plt.subplots(n_vars, n_vars, figsize=(4 * n_vars, 4 * n_vars))
@@ -41,11 +41,28 @@ for i in range(n_vars):
             # Lower triangle: scatter with best-fit line
             x = results_df[plot_vars[j]]
             y = results_df[plot_vars[i]]
+
+            # Mask for valid data
+            mask = (~np.isnan(x)) & (~np.isnan(y)) & (~np.isinf(x)) & (~np.isinf(y))
+
+            # Report dropped rows
+            dropped = results_df.loc[~mask, ["semester", "major", plot_vars[j], plot_vars[i]]]
+            if not dropped.empty:
+                print(f"\nDropped data for plot ({plot_vars[j]} vs {plot_vars[i]}):")
+                print(dropped)
+
+            # Apply mask
+            x = x[mask]
+            y = y[mask]
+
+            # Scatter
             ax.scatter(x, y, alpha=0.6, edgecolors="w", s=40)
 
-            # Fit and plot regression line
-            m, b = np.polyfit(x, y, deg=1)
-            ax.plot(x, m * x + b, color="red", linewidth=2)
+            # Fit regression line
+            if len(x) > 1 and len(y) > 1:
+                m, b = np.polyfit(x, y, deg=1)
+                ax.plot(x, m * x + b, color="red", linewidth=2)
+
         else:
             # Upper triangle: leave blank
             ax.axis("off")
