@@ -40,7 +40,7 @@ function Layout({ children, logout, onShowHelp }) {
               Help
             </button>
             <button
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/intake-prompt")}
               className="bg-blue-500 text-white px-4 py-2 rounded"
             >
               Add Courses
@@ -150,60 +150,67 @@ function App() {
 
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<IntakePrompt />} /> {/* ✅ New landing page */}
-        <Route path="/upload" element={<Upload />} />
-        <Route path="/intake" element={<Intake />} />
-        <Route path="/intake/courses/:index" element={<SemesterCourseIntake />} />
-        <Route
-          path="/graph"
-          element={
-            <Layout logout={logout} onShowHelp={() => setShowOnboarding(true)}>
-              <CourseInput
-                onHighlight={handleHighlight}
-                onConflicted={setConflicted}
-                currentSemester={currentSemester}
-                highlighted={highlighted}
-              />
-              <CourseSimilarityPrecomputedGraph
-                highlighted={highlighted}
-                conflicted={conflicted}
-                setHighlighted={setHighlighted}
-                setConflicted={setConflicted}
-                currentSemester={currentSemester}
-                onSemesterChange={setCurrentSemester}
-                onConflicted={setConflicted}
-                onHighlight={handleHighlight}
-                showOnboarding={showOnboarding}
-                setShowOnboarding={setShowOnboarding}
-              />
-            </Layout>
-          }
-        />
-        {/* Public route that bypasses authentication */}
-        <Route
-          path="/public-graph"
-          element={
-            <PublicLayout onShowHelp={() => setShowOnboarding(true)}>
-              <CourseSimilarityPrecomputedGraph
-                highlighted={[]}
-                conflicted={[]}
-                setHighlighted={() => {}}
-                setConflicted={() => {}}
-                currentSemester={CURRENT_SEMESTER}
-                onSemesterChange={() => {}}
-                onConflicted={() => {}}
-                onHighlight={() => {}}
-                isPublicMode={true}
-                showOnboarding={showOnboarding}
-                setShowOnboarding={setShowOnboarding}
-              />
-            </PublicLayout>
-          }
-        />
-        <Route path="*" element={<Navigate to="/" replace />} /> {/* ✅ catch-all to IntakePrompt */}
-      </Routes>
-    </Router>
+  <Routes>
+    {/* ✅ Default landing page is now Graph */}
+    <Route
+      path="/"
+      element={
+        <Layout logout={logout} onShowHelp={() => setShowOnboarding(true)}>
+          <CourseInput
+            onHighlight={handleHighlight}
+            onConflicted={setConflicted}
+            currentSemester={currentSemester}
+            highlighted={highlighted}
+          />
+          <CourseSimilarityPrecomputedGraph
+            highlighted={highlighted}
+            conflicted={conflicted}
+            setHighlighted={setHighlighted}
+            setConflicted={setConflicted}
+            currentSemester={currentSemester}
+            onSemesterChange={setCurrentSemester}
+            onConflicted={setConflicted}
+            onHighlight={handleHighlight}
+            showOnboarding={showOnboarding}
+            setShowOnboarding={setShowOnboarding}
+          />
+        </Layout>
+      }
+    />
+
+    {/* ✅ IntakePrompt moved to its own route */}
+    <Route path="/intake-prompt" element={<IntakePrompt />} />
+
+    <Route path="/upload" element={<Upload />} />
+    <Route path="/intake" element={<Intake />} />
+    <Route path="/intake/courses/:index" element={<SemesterCourseIntake />} />
+
+    {/* Public route */}
+    <Route
+      path="/public-graph"
+      element={
+        <PublicLayout onShowHelp={() => setShowOnboarding(true)}>
+          <CourseSimilarityPrecomputedGraph
+            highlighted={[]}
+            conflicted={[]}
+            setHighlighted={() => {}}
+            setConflicted={() => {}}
+            currentSemester={CURRENT_SEMESTER}
+            onSemesterChange={() => {}}
+            onConflicted={() => {}}
+            onHighlight={() => {}}
+            isPublicMode={true}
+            showOnboarding={showOnboarding}
+            setShowOnboarding={setShowOnboarding}
+          />
+        </PublicLayout>
+      }
+    />
+
+    {/* ✅ catch-all redirects to graph */}
+    <Route path="*" element={<Navigate to="/" replace />} />
+  </Routes>
+</Router>
   );
 }
 
