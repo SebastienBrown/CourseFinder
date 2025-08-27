@@ -7,6 +7,7 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const backendUrl=process.env.REACT_APP_BACKEND_URL;
+  const [useSemanticSearch, setUseSemanticSearch] = useState(false); // toggle state
 
   // Helper function to calculate semester distance
   const calculateSemesterDistance = (semester1, semester2) => {
@@ -143,11 +144,34 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
   const handleInputChange = (e) => {
     const value = e.target.value;
     setInput(value);
-    searchCourses(value);
+    if (useSemanticSearch) {
+      searchSemanticCourse(value);
+    } else {
+      searchCourses(value);
+    }
     setShowSuggestions(true);
-    //console.log('Input changed:', value);
-   // console.log('Suggestions:', suggestions);
-    //console.log('Show suggestions:', showSuggestions);
+  };
+
+  const handleToggle = () => setUseSemanticSearch(!useSemanticSearch);
+
+  const searchSemanticCourse = async (searchTerm) => {
+    if (!searchTerm.trim()) {
+      setSuggestions([]);
+      return;
+    }
+    try {
+      console.log("attempted semantic search");
+      const response = await fetch(`${backendUrl}/semantic_course_search`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query: searchTerm, semester: currentSemester }),
+      });
+      const data = await response.json();
+      setSuggestions(data.slice(0, 5)); // limit to top 5
+    } catch (err) {
+      console.error("Semantic search error:", err);
+      setSuggestions([]);
+    }
   };
 
   const handleSuggestionClick = async (course) => {
@@ -192,13 +216,27 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
       .split(",")
       .map((code) => code.trim().toUpperCase())
       .filter((code) => code.length > 0);
+    
+  if (codes.length === 0) return; // nothing to process
 
-    // Ensure highlighted is an array before spreading
-    const currentHighlighted = Array.isArray(highlighted) ? highlighted : [];
-    //console.log('Current highlighted courses:', currentHighlighted);
-    const newHighlighted = [...currentHighlighted, ...codes];
-    //console.log('New highlighted courses after adding:', newHighlighted);
-    onHighlight(newHighlighted);
+    // Create a set of all valid course codes
+  const allCourseCodes = new Set(
+    allCourses.flatMap(course => 
+      Array.isArray(course.course_codes) 
+        ? course.course_codes 
+        : [course.course_codes]
+    )
+  );
+
+// Filter input codes to only keep valid ones
+const validCodes = codes.filter(code => allCourseCodes.has(code));
+
+if (validCodes.length === 0) return; // no valid codes, do nothing
+
+    // Combine with current highlighted courses
+  const currentHighlighted = Array.isArray(highlighted) ? highlighted : [];
+  const newHighlighted = [...currentHighlighted, ...validCodes];
+  onHighlight(newHighlighted);
     
     // Check for conflicts
     try {
@@ -233,10 +271,24 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
 
   return (
     <div className="relative w-full max-w-[1200px] mx-auto">
+      
+      
+
       <form
         onSubmit={handleSubmit}
         className="w-full flex flex-wrap items-center gap-4 bg-[#f9f7fb] border border-[#eae6f4] rounded-xl px-6 py-4 mb-6"
       >
+        <div className="flex justify-end mb-4">
+      <button
+        onClick={() => setUseSemanticSearch(!useSemanticSearch)}
+        className={`px-4 py-2 rounded-md font-semibold transition ${
+          useSemanticSearch ? "bg-[#3f1f69] text-white" : "bg-gray-200 text-black"
+        }`}
+      >
+        {useSemanticSearch ? "Semantic Search" : "Default Search"}
+      </button>
+    </div>
+
         <label
           htmlFor="course-input"
           className="font-semibold text-[#3f1f69] text-sm"

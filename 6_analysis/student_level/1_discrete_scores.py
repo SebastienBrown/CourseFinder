@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 # -----------------------------
 filedate = os.getenv('FILEDATE', '20250813')
 INPUT_PATH = os.getenv('INPUT_PATH', f"/Users/hnaka24/Dropbox (Personal)/AmherstCourses/data/raw/user_courses/user_courses_{filedate}.csv")
-OUTPUT_DATA = os.getenv('OUTPUT_DATA', f"/Users/hnaka24/Dropbox (Personal)/AmherstCourses/data/2_intermediate/5_scores/student_scores_{filedate}.csv")
+OUTPUT_STUDENT_DATA = os.getenv('OUTPUT_STUDENT_DATA', f"/Users/hnaka24/Dropbox (Personal)/AmherstCourses/data/2_intermediate/5_scores/student_scores_{filedate}.csv")
 OUTPUT_PLOT = os.getenv('OUTPUT_PLOT', f"/Users/hnaka24/Dropbox (Personal)/AmherstCourses/output/6_scores/student_scores_scatter_{filedate}.pdf")
 
 # -----------------------------
@@ -210,4 +210,5 @@ if not results_df.empty:
         kind="mergesort"
     ).reset_index(drop=True)
 
-results_df.to_csv(OUTPUT_DATA, index=False)
+results_df.to_csv(OUTPUT_STUDENT_DATA, index=False)
+print("Student-level discrete breadth scores saved to csv.")

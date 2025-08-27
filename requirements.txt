@@ -34,7 +34,6 @@ langchain-core>=0.3.58
 langchain-openai>=0.3.16
 langsmith>=0.3.42
 lazy_loader>=0.4
-logging>=0.4.9.6
 lxml>=5.4.0
 MarkupSafe>=3.0.2
 matplotlib>=3.10.3
