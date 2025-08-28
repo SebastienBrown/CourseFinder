@@ -144,16 +144,26 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
   const handleInputChange = (e) => {
     const value = e.target.value;
     setInput(value);
-    if (useSemanticSearch) {
-      searchSemanticCourse(value);
-    } else {
+    
+    if (!useSemanticSearch) {
+      // Default behavior: live search as usual
       searchCourses(value);
+      setShowSuggestions(true);
+    } else {
+      // In semantic mode: no live search
+      setShowSuggestions(false);
     }
-    setShowSuggestions(true);
   };
 
-  const handleToggle = () => setUseSemanticSearch(!useSemanticSearch);
+  const handleToggle = () => {
+    setUseSemanticSearch(prev => !prev);
+  };
+  
+  useEffect(() => {
+    console.log("useSemanticSearch is now:", useSemanticSearch);
+  }, [useSemanticSearch]);
 
+  
   const searchSemanticCourse = async (searchTerm) => {
     if (!searchTerm.trim()) {
       setSuggestions([]);
@@ -212,6 +222,14 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (useSemanticSearch) {
+      // Trigger semantic search on submit
+      await searchSemanticCourse(input);
+      setShowSuggestions(true); // Show semantic search results
+      return;
+    }
+
     const codes = input
       .split(",")
       .map((code) => code.trim().toUpperCase())
