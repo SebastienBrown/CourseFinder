@@ -15,7 +15,6 @@ from functools import wraps
 import time
 from datetime import datetime
 from query_validation import QueryValidator
-from jose import jwt, JWTError
 import jwt
 
 
