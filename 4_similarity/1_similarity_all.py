@@ -1,18 +1,19 @@
 import json
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
+import os
 
 # ==== Configuration ====
-dropbox = '/Users/hnaka24/Dropbox (Personal)/AmherstCourses/'
-code = '/Users/hnaka24/Desktop/code/CourseFinder/'
-model = "gpt" # "gpt" "sbert"
-mode = "off_the_shelf" # "self_supervised" "off_the_shelf"
+dropbox = os.environ.get("DROPBOX", '/Users/hnaka24/Dropbox (Personal)/AmherstCourses/')
+code = os.environ.get("CODE", '/Users/hnaka24/Desktop/code/CourseFinder/')
+model = os.environ.get("MODEL", "gpt")  # "gpt" "sbert"
+mode = os.environ.get("MODE", "off_the_shelf")  # "self_supervised" "off_the_shelf"
 
-semesters = ['0910F', '0910S', '1011F', '1011S', '1112F', '1112S', '1213F', '1213S', '1314F', '1314S', '1415F', '1415S', '1516F', '1516S', '1617F', '1617S', '1718F', '1718S', '1819F', '1819S', '1920F', '1920S', '2021F', '2021J', '2021S', '2122F', '2122J', '2122S', '2223F', '2223S', '2324F', '2324S', '2425F', '2425S', '2526F', '2526S']
+semesters = os.environ.get("SEMESTERS", "0910F,0910S,1011F,1011S,1112F,1112S,1213F,1213S,1314F,1314S,1415F,1415S,1516F,1516S,1617F,1617S,1718F,1718S,1819F,1819S,1920F,1920S,2021F,2021J,2021S,2122F,2122J,2122S,2223F,2223S,2324F,2324S,2425F,2425S,2526F,2526S").split(',')
 # embeddings_path = 'embeddings/'
-embeddings_path = dropbox + f'data/2_intermediate/2_embeddings/{model}_{mode}/'
+embeddings_path = os.environ.get("EMBEDDINGS_PATH", dropbox + f'data/2_intermediate/2_embeddings/{model}_{mode}/')
 
-output_file = dropbox + f'data/2_intermediate/3_similarity/{model}_{mode}/output_similarity_all.json'
+output_file = os.environ.get("SIMILARITY_OUTPUT_FILE", dropbox + f'data/2_intermediate/3_similarity/{model}_{mode}/output_similarity_all.json')
 
 # ==== Functions ====
 def compute_cosine_similarity(embedding1, embedding2):
