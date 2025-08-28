@@ -15,11 +15,11 @@ from functools import wraps
 import time
 from datetime import datetime
 from query_validation import QueryValidator
+import jwt
+
 
 # Load env
 load_dotenv()
-
-
 
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
@@ -57,6 +57,70 @@ ALLOWED_ORIGINS = os.getenv('ALLOWED_ORIGINS', 'http://localhost:3000').split(',
 
 CORS(app)
 
+# Get Supabase JWT Secret (NOT JWKS!)
+# Find this in: Settings → Configuration → Data API
+SUPABASE_JWT_SECRET = os.getenv("SUPABASE_JWT_SECRET")
+
+if not SUPABASE_JWT_SECRET:
+    raise ValueError("SUPABASE_JWT_SECRET environment variable is required")
+
+print("Using Supabase JWT Secret for HS256 verification")
+
+def jwt_required(f):
+    @wraps(f)
+    def wrapper(*args, **kwargs):
+        auth_header = request.headers.get("Authorization")
+        if not auth_header or not auth_header.startswith("Bearer "):
+            return jsonify({"error": "Missing or invalid Authorization header"}), 401
+
+        token = auth_header.split(" ")[1]
+        #print("Token received:", token[:20] + "...")  # Only print first 20 chars for security
+
+        try:
+
+            # First, decode without verification to see the audience claim
+            unverified_payload = jwt.decode(token, options={"verify_signature": False})
+            audience = unverified_payload.get("aud")
+            #print(f"Token audience: {audience}")
+
+            # Decode JWT using HS256 algorithm with Supabase JWT secret
+            payload = jwt.decode(
+                token,
+                SUPABASE_JWT_SECRET,
+                algorithms=["HS256"],  # Supabase uses HS256, not RS256!
+                audience=audience,  # Use the audience from the token
+                options={
+                    "verify_exp": True,  # Verify expiration
+                    "verify_iat": True,  # Verify issued at
+                    "verify_signature": True
+                }
+            )
+            
+            #print("JWT payload verified successfully")
+            #print(f"User ID: {payload.get('sub')}")
+            #print(f"Email: {payload.get('email')}")
+            
+            # Add user info to kwargs
+            kwargs["payload"] = payload
+            kwargs["user_id"] = payload.get("sub")
+            kwargs["user_email"] = payload.get("email")
+            
+        except jwt.ExpiredSignatureError:
+            print("JWT verification error: Token has expired")
+            return jsonify({"error": "Token has expired"}), 401
+        except jwt.InvalidSignatureError:
+            print("JWT verification error: Invalid signature")
+            return jsonify({"error": "Invalid token signature"}), 401
+        except jwt.DecodeError:
+            print("JWT verification error: Token decode failed")
+            return jsonify({"error": "Invalid token format"}), 401
+        except Exception as e:
+            #print(f"JWT verification error: {str(e)}")
+            return jsonify({"error": f"Invalid token: {str(e)}"}), 401
+
+        return f(*args, **kwargs)
+    return wrapper
+
 def get_openai_embedding(text):
     """Get embedding from Azure OpenAI using full 1536 dimensions."""
     response = client.embeddings.create(
@@ -65,7 +129,7 @@ def get_openai_embedding(text):
         encoding_format="float" 
     )
 
-    print(f'Azure open ai deployment name: {AZURE_OPENAI_DEPLOYMENT}')
+    #print(f'Azure open ai deployment name: {AZURE_OPENAI_DEPLOYMENT}')
 
 
     embedding = np.array(response.data[0].embedding, dtype=np.float32)  # Ensure FAISS-compatible float32 format
@@ -361,11 +425,12 @@ def semantic_search():
 
 
 @app.route("/submit_courses", methods=["POST"])
-def submit_courses():
+@jwt_required
+def submit_courses(payload=None, user_id=None, user_email=None):
     data = request.json
-    print("Incoming request data:", data)
+    #print("Incoming request data:", data)
 
-    user_id = data.get("user_id")
+    user_id = payload["sub"]  # trusted Supabase user ID
     semester_courses = data.get("semester_courses")
 
     if not user_id or not semester_courses:
@@ -402,11 +467,13 @@ def submit_courses():
     
 
 @app.route("/retrieve_courses", methods=["POST"])
-def retrieve_courses():
+@jwt_required
+def retrieve_courses(payload=None, user_id=None, user_email=None):
     data = request.json
     print("Incoming request data:", data)
 
-    user_id = data.get("user_id")
+    user_id = payload["sub"]  # trusted Supabase user ID
+    print("USER ID IS: ",user_id)
     if not user_id:
         return jsonify({"error": "Missing user_id"}), 400
 

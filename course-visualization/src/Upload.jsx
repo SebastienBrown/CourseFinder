@@ -201,6 +201,15 @@ export default function TranscriptUpload() {
   };
 
   const handleFinalSubmit = async () => {
+
+    const { data: { session } } = await supabase.auth.getSession();
+      const token = session?.access_token;
+      
+      if (!token) {
+        console.error("No valid session token found");
+        return;
+      }
+
       try {
         console.log('Starting final submit...');
         console.log('Backend URL:', backendUrl);
@@ -234,13 +243,14 @@ export default function TranscriptUpload() {
         console.log('Payload being sent:', payload);
     
         // Use the same endpoint as your working code
-        const response = await fetch(`${backendUrl}/submit_courses`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(payload),
-        });
+        const response = await fetch(`${backendUrl}/submit_courses`, { // await fetch(`${API_BASE_URL}/retrieve_courses`
+        method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`,
+      },
+      body: JSON.stringify(payload) // no user_id
+      });
     
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);

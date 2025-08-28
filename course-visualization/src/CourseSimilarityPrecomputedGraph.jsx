@@ -347,6 +347,15 @@ export default function CourseSimilarityPrecomputedGraph({
 
 
   async function fetchBackendData() {
+
+  const { data: { session } } = await supabase.auth.getSession();
+  const token = session?.access_token;
+  
+  if (!token) {
+    console.error("No valid session token found");
+    return;
+  }
+
     // Skip backend calls in public mode
     if (isPublicMode) {
       console.log("Public mode - skipping backend data fetch");
@@ -358,12 +367,11 @@ export default function CourseSimilarityPrecomputedGraph({
       console.log("Using backend URL:", backendUrl); // Add this for debugging!
       const response = await fetch(`${backendUrl}/retrieve_courses`, { // await fetch(`${API_BASE_URL}/retrieve_courses`
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          user_id: userId,
-        }),
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`,
+      },
+      body: JSON.stringify({}) // no user_id
       });
   
       if (!response.ok) {
