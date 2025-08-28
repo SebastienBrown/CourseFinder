@@ -532,8 +532,14 @@ def transcript_parsing():
     except Exception as e:
         print("Error:", str(e))
         return jsonify({"error": str(e)}), 500
-
-
+    
+@app.route('/health')
+def health_check():
+    return jsonify({
+        "status": "ok", 
+        "timestamp": datetime.now().isoformat(),
+        "service": "course-finder-backend"
+    })
     
 
 if __name__ == "__main__":
