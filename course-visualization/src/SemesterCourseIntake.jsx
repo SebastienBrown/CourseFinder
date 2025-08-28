@@ -197,6 +197,15 @@ export default function SemesterCourseIntake() {
   };
 
   const handleSubmit = async () => {
+
+    const { data: { session } } = await supabase.auth.getSession();
+      const token = session?.access_token;
+      
+      if (!token) {
+        console.error("No valid session token found");
+        return;
+      }
+
     // If we came from transcript upload, handle return differently
     if (fromTranscriptUpload) {
       handleReturnToTranscriptUpload();
@@ -212,7 +221,7 @@ export default function SemesterCourseIntake() {
     if (isLastSemester) {
       // Build the dictionary payload
       const payload = {
-        user_id: userId,
+        //user_id: userId,
         semester_courses: {}
       };
 
@@ -225,6 +234,7 @@ export default function SemesterCourseIntake() {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            "Authorization": `Bearer ${session.access_token}` // Add JWT token
           },
           body: JSON.stringify(payload),
         });
