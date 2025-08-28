@@ -7,22 +7,74 @@ import requests
 from dotenv import load_dotenv
 from config import PORT
 from transcript_scrape import extract_courses_from_transcript
+import openai
+import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
+from collections import Counter
+from functools import wraps
+import time
+from datetime import datetime
+from query_validation import QueryValidator
 
 # Load env
 load_dotenv()
 
+
+
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
-#print(SUPABASE_KEY)
-#print(SUPABASE_URL)
+
+# Create global validator instance
+validator = QueryValidator()
 
 #supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 SUPABASE_TABLE_URL = f"{SUPABASE_URL}/rest/v1/user_courses"  # Example table path
 
+# Azure OpenAI Configuration from .env
+AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY")
+AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
+AZURE_OPENAI_DEPLOYMENT = os.getenv("AZURE_OPENAI_DEPLOYMENT")
+AZURE_OPENAI_API_VERSION = "2023-05-15"
+
+
+client = openai.AzureOpenAI(
+    api_key=AZURE_OPENAI_API_KEY,
+    azure_endpoint=AZURE_OPENAI_ENDPOINT,
+    api_version=AZURE_OPENAI_API_VERSION
+)
+
 
 app = Flask(__name__)
+
+# Load allowed origins from environment variables
+ALLOWED_ORIGINS = os.getenv('ALLOWED_ORIGINS', 'http://localhost:3000').split(',')
+
+# Configure CORS with specific origins
+#CORS(app, origins=ALLOWED_ORIGINS, 
+     #methods=['GET', 'POST'],
+     #allow_headers=['Content-Type', 'Authorization'])
+
 CORS(app)
+
+def get_openai_embedding(text):
+    """Get embedding from Azure OpenAI using full 1536 dimensions."""
+    response = client.embeddings.create(
+        model=AZURE_OPENAI_DEPLOYMENT,
+        input=text,
+        encoding_format="float" 
+    )
+
+    print(f'Azure open ai deployment name: {AZURE_OPENAI_DEPLOYMENT}')
+
+
+    embedding = np.array(response.data[0].embedding, dtype=np.float32)  # Ensure FAISS-compatible float32 format
+
+    #take out this statement later
+    assert embedding.shape[0] == 1536, f"Unexpected embedding dimension: {embedding.shape[0]}"
+
+    return embedding.reshape(1, -1)  
+
 
 with open('./data/amherst_courses_all.json') as f:
     try:
@@ -222,6 +274,91 @@ SEMESTER_COLUMNS = [
     "2425F",
     "2425S"
 ]
+
+
+
+@app.route("/semantic_course_search", methods=["POST"])
+def semantic_search():
+    data=request.json
+    print("Incoming semantic input data: ",data)
+
+    query=data.get("query")
+    print(query)
+
+    # Check if query is safe to use
+    is_valid, error = validator.validate(query)
+    
+    if not is_valid:
+        # Don't process bad input
+        print("invalid query")
+        return jsonify({"error": error}), 400
+
+    query_embedding=get_openai_embedding(query)
+    print(query_embedding)
+
+    # Input and output paths
+    file1_path = "data/gpt_off_the_shelf/output_embeddings_2526F.json"
+    file2_path = "data/gpt_off_the_shelf/output_embeddings_2526S.json"
+    output_path = "combined.json"
+
+    # Load both JSON lists
+    with open(file1_path, 'r', encoding='utf-8') as f1:
+        list1 = json.load(f1)
+
+    with open(file2_path, 'r', encoding='utf-8') as f2:
+        list2 = json.load(f2)
+
+    # Ensure both are lists
+    if not isinstance(list1, list) or not isinstance(list2, list):
+        raise ValueError("Both JSON files must contain lists.")
+
+    # Concatenate lists
+    combined_list = list1 + list2
+
+    seen_titles = set()
+    deduped = []
+    for course in combined_list:
+        title = course.get("course_title", "").strip().lower()
+        if title and title not in seen_titles:
+            deduped.append(course)
+            seen_titles.add(title)
+
+    combined_list = deduped
+
+        # Extract all course names
+    course_names = [course["course_title"] for course in combined_list]
+
+    # Count frequencies
+    name_counts = Counter(course_names)
+
+    # Print frequencies
+    for name, count in name_counts.items():
+        print(f"{name}: {count}")
+
+    # Step 2: Prepare course embeddings matrix
+    course_embeddings = np.array([course["embedding"] for course in combined_list])
+    print(course_embeddings)
+
+    # Step 3: Compute cosine similarity
+    similarities = cosine_similarity(query_embedding, course_embeddings)[0]  # [0] to flatten
+
+    # Step 4: Assign similarity scores and rank courses
+    for course, sim in zip(combined_list, similarities):
+        course["similarity"] = sim
+
+    ranked_courses = sorted(combined_list, key=lambda x: x["similarity"], reverse=True)
+
+    # Print only the course codes
+    #print("RANKED COURSE CODES:")
+    #for course in ranked_courses:
+        #print(course["course_codes"])
+
+    # Step 5: Print top 5
+    for course in ranked_courses[:5]:
+        print(f"{course['course_codes']} - {course['course_title']} (similarity: {course['similarity']:.4f})")
+
+    return ranked_courses[:5]
+
 
 @app.route("/submit_courses", methods=["POST"])
 def submit_courses():
