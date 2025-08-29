@@ -51,11 +51,11 @@ app = Flask(__name__)
 ALLOWED_ORIGINS = os.getenv('ALLOWED_ORIGINS', 'http://localhost:3000').split(',')
 
 # Configure CORS with specific origins
-#CORS(app, origins=ALLOWED_ORIGINS, 
-     #methods=['GET', 'POST'],
-     #allow_headers=['Content-Type', 'Authorization'])
+CORS(app, origins=ALLOWED_ORIGINS, 
+     methods=['GET', 'POST'],
+     allow_headers=['Content-Type', 'Authorization'])
 
-CORS(app)
+#CORS(app)
 
 # Get Supabase JWT Secret (NOT JWKS!)
 # Find this in: Settings → Configuration → Data API
