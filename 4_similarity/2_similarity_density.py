@@ -208,6 +208,7 @@ for course in data:
 # ========================================
 # Create side-by-side plots
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 6))
+fig.suptitle(f'{model.upper()}, {mode.replace("_", " ").title()}', fontsize=16)
 
 # Plot 1: Within vs Across Department
 if same_dept_scores:
@@ -215,7 +216,7 @@ if same_dept_scores:
                 label=f'Within Department (n={len(same_dept_scores)})', ax=ax1)
 
 if diff_dept_scores:
-    sns.kdeplot(diff_dept_scores, fill=False, bw_adjust=0.2, color='magenta', alpha=0.6, 
+    sns.kdeplot(diff_dept_scores, fill=False, bw_adjust=0.2, color='pink', alpha=0.6, 
                 label=f'Across Departments (n={len(diff_dept_scores)})', ax=ax1)
 
 ax1.set_title('Similarity Scores by Department')
@@ -231,7 +232,7 @@ if diagnostics_pos_scores:
                 label=f'Diagnostics Positive (n={len(diagnostics_pos_scores)})', ax=ax2)
 
 if diagnostics_neg_scores:
-    sns.kdeplot(diagnostics_neg_scores, fill=False, bw_adjust=0.2, color='magenta', alpha=0.6, 
+    sns.kdeplot(diagnostics_neg_scores, fill=False, bw_adjust=0.2, color='pink', alpha=0.6, 
                 label=f'Diagnostics Negative (n={len(diagnostics_neg_scores)})', ax=ax2)
 
 ax2.set_title('Similarity Scores by Diagnostics Pairs')

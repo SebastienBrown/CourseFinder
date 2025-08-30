@@ -186,7 +186,7 @@ with PdfPages(pdf_path) as pdf:
         # Create new page if needed
         if plot_position == 0:
             fig, axes = plt.subplots(2, 2, figsize=(16, 12))  # Landscape layout
-            fig.suptitle(f'Diagnostic Plots - Page {(successful_plots // plots_per_page) + 1}', fontsize=16)
+            fig.suptitle(f'{model.upper()}, {mode.replace("_", " ").title()} - Page {(successful_plots // plots_per_page) + 1}', fontsize=16)
             axes = axes.flatten()  # Flatten to 1D array for easier indexing
         
         ax = axes[plot_position]
@@ -230,15 +230,22 @@ with PdfPages(pdf_path) as pdf:
         ax.set_ylabel('PC2', fontsize=9)
         ax.set_title(f'Row {i + 1}', fontsize=10)
         
-        # Add custom legend below the plot
+        # Add small in-graph legend for ABCD
+        legend_elements = [plt.Line2D([0], [0], marker='o', color='w', 
+                                     markerfacecolor=color, markersize=8, label=courses[j])
+                          for j, color in enumerate(colors)]
+        ax.legend(handles=legend_elements, title='Courses', fontsize=8, title_fontsize=9, 
+                 loc='upper right', bbox_to_anchor=(0.98, 0.98))
+        
+        # Add custom legend below the plot with course titles
         legend_y = ax.get_ylim()[0] - (ax.get_ylim()[1] - ax.get_ylim()[0]) * 0.15  # Position below plot
         for j, (color, title) in enumerate(zip(colors, course_titles)):
             # Add colored dot
             ax.scatter(ax.get_xlim()[0] + (ax.get_xlim()[1] - ax.get_xlim()[0]) * 0.1, legend_y, 
                       c=color, s=60, alpha=0.7, zorder=5)
-            # Add course title text
+            # Add course title text (just colored dot + title, no letter)
             ax.text(ax.get_xlim()[0] + (ax.get_xlim()[1] - ax.get_xlim()[0]) * 0.15, legend_y, 
-                   f"{courses[j]}: {title}", fontsize=8, va='center', ha='left')
+                   title, fontsize=8, va='center', ha='left')
             legend_y -= (ax.get_ylim()[1] - ax.get_ylim()[0]) * 0.08  # Space between legend items
         
         successful_plots += 1

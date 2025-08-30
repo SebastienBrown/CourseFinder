@@ -31,7 +31,7 @@ export CONTRASTIVE_DIAGNOSTICS_PATH="${DROPBOX}/data/1_raw/diagnostics/diagnosti
 
 # Model and mode for similarity calculations
 export MODEL="sbert"  # "gpt" or "sbert"
-export MODE="off_the_shelf"  # "self_supervised" or "off_the_shelf"
+export MODE="off_the_shelf"  # "by-major" "manual" or "off_the_shelf"
 
 # Only for GPT
 export GPT_MODEL_NAME="text-embedding-3-small"
@@ -76,8 +76,7 @@ echo "Starting embedding and similarity pipeline..."
 echo "Job ID: $SLURM_JOB_ID"
 echo "Node: $SLURMD_NODENAME"
 echo "Run Contrastive Learning: $RUN_CONTRASTIVE_LEARNING"
-echo "Embedding Model: $EMBEDDING_MODEL"
-echo "Similarity Model: $MODEL"
+echo "Embedding Model: $MODEL"
 echo "Mode: $MODE"
 echo "==============================================="
 
@@ -100,14 +99,14 @@ else
 fi
 
 # Step 1: Compute embeddings for courses
-echo ""
-echo "==== Computing embeddings for courses... ===="
-python "3_embedding/1_embedding.py"
-if [ $? -ne 0 ]; then
-    echo "✗ Embedding computation failed"
-    exit 1
-fi
-echo "✓ Embedding computation completed"
+# echo ""
+# echo "==== Computing embeddings for courses... ===="
+# python "3_embedding/1_embedding.py"
+# if [ $? -ne 0 ]; then
+#     echo "✗ Embedding computation failed"
+#     exit 1
+# fi
+# echo "✓ Embedding computation completed"
 
 # Step 2: Generate diagnostic plots
 echo ""
@@ -124,14 +123,14 @@ echo "✓ Diagnostic plots generation completed"
 # Compute Similarity Scores
 # -----------------------------
 # Step 1: Compute similarity scores for courses
-echo ""
-echo "==== Computing similarity scores for courses... ===="
-python "4_similarity/1_similarity_all.py"
-if [ $? -ne 0 ]; then
-    echo "✗ Similarity computation failed"
-    exit 1
-fi
-echo "✓ Similarity computation completed"
+# echo ""
+# echo "==== Computing similarity scores for courses... ===="
+# python "4_similarity/1_similarity_all.py"
+# if [ $? -ne 0 ]; then
+#     echo "✗ Similarity computation failed"
+#     exit 1
+# fi
+# echo "✓ Similarity computation completed"
 
 # Step 2: Create density plot of similarity scores
 echo ""

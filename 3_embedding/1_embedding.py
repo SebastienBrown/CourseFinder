@@ -25,7 +25,7 @@ sbert_model_dir = os.environ.get("SBERT_MODEL_DIR", "3_embedding/sbert_contrasti
 
 # Input File Paths
 llm_cleaned_dir = Path(os.environ.get("LLM_CLEANED_DIR", "llm_cleaned"))
-json_files = list(llm_cleaned_dir.glob('amherst_courses_*.json'))
+json_files = sorted(list(llm_cleaned_dir.glob('amherst_courses_*.json')))
 
 # Output File Paths
 embeddings_path = os.environ.get("EMBEDDINGS_PATH", "embeddings/")
@@ -140,8 +140,7 @@ def process_courses(input_file, output_file, gpt_model_name):
         # Debug: Read the file as text and print its contents
         with open(input_file, 'r') as file:
             file_content = file.read()
-            print("File content read successfully. Checking content...")
-            print(file_content[:200])  # Print the first 200 characters for inspection
+            print("File content read successfully.")
             
             # Attempt to load the JSON content
             courses = json.loads(file_content)
