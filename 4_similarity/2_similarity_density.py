@@ -242,7 +242,7 @@ ax2.legend()
 ax2.set_xlim(0, 1)
 ax2.set_xticks(np.arange(0, 1.1, 0.1))
 
-plt.tight_layout()
+plt.tight_layout(rect=[0, 0, 1, 0.95])  # Leave room for the title
 plt.savefig(output_pdf, bbox_inches='tight', dpi=300)
 print(f"Density plots saved to {output_pdf}")
 print(f"Same department pairs: {len(same_dept_scores)}")

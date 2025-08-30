@@ -230,19 +230,19 @@ with PdfPages(pdf_path) as pdf:
         ax.set_ylabel('PC2', fontsize=9)
         ax.set_title(f'Row {i + 1}', fontsize=10)
         
-        # Add small in-graph legend for ABCD
+        # Add small in-graph legend for ABCD with smart positioning
         legend_elements = [plt.Line2D([0], [0], marker='o', color='w', 
                                      markerfacecolor=color, markersize=8, label=courses[j])
                           for j, color in enumerate(colors)]
         ax.legend(handles=legend_elements, title='Courses', fontsize=8, title_fontsize=9, 
-                 loc='upper right', bbox_to_anchor=(0.98, 0.98))
+                 loc='best')
         
         # Add custom legend below the plot with course titles
         legend_y = ax.get_ylim()[0] - (ax.get_ylim()[1] - ax.get_ylim()[0]) * 0.15  # Position below plot
         for j, (color, title) in enumerate(zip(colors, course_titles)):
-            # Add colored dot
+            # Add colored dot with higher zorder to ensure visibility
             ax.scatter(ax.get_xlim()[0] + (ax.get_xlim()[1] - ax.get_xlim()[0]) * 0.1, legend_y, 
-                      c=color, s=60, alpha=0.7, zorder=5)
+                      c=color, s=60, alpha=0.7, zorder=10, edgecolors='black', linewidth=0.5)
             # Add course title text (just colored dot + title, no letter)
             ax.text(ax.get_xlim()[0] + (ax.get_xlim()[1] - ax.get_xlim()[0]) * 0.15, legend_y, 
                    title, fontsize=8, va='center', ha='left')
@@ -252,10 +252,14 @@ with PdfPages(pdf_path) as pdf:
         
         # Save page if it's full or if it's the last plot
         if plot_position == plots_per_page - 1 or i == len(all_rows) - 1:
-            # Hide unused subplots on the last page
+            # Keep unused subplots visible but empty to maintain consistent page size
             if i == len(all_rows) - 1 and plot_position < plots_per_page - 1:
                 for unused_pos in range(plot_position + 1, plots_per_page):
-                    axes[unused_pos].set_visible(False)
+                    # Make the subplot completely empty but keep it in the layout
+                    axes[unused_pos].set_xticks([])
+                    axes[unused_pos].set_yticks([])
+                    axes[unused_pos].set_frame_on(False)
+                    axes[unused_pos].text(0.5, 0.5, '', ha='center', va='center', transform=axes[unused_pos].transAxes)
             
             plt.tight_layout()
             pdf.savefig(fig, dpi=300, bbox_inches='tight')
