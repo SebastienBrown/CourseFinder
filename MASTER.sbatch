@@ -124,14 +124,14 @@ echo "✓ Diagnostic plots generation completed"
 # Compute Similarity Scores
 # -----------------------------
 # Step 1: Compute similarity scores for courses
-echo ""
-echo "==== Computing similarity scores for courses... ===="
-python "4_similarity/1_similarity_all.py"
-if [ $? -ne 0 ]; then
-    echo "✗ Similarity computation failed"
-    exit 1
-fi
-echo "✓ Similarity computation completed"
+# echo ""
+# echo "==== Computing similarity scores for courses... ===="
+# python "4_similarity/1_similarity_all.py"
+# if [ $? -ne 0 ]; then
+#     echo "✗ Similarity computation failed"
+#     exit 1
+# fi
+# echo "✓ Similarity computation completed"
 
 # Step 2: Create density plot of similarity scores
 echo ""
@@ -148,24 +148,24 @@ echo "✓ Density plot creation completed"
 # Compute Coordinates and Similar Courses
 # -----------------------------
 # Step 1: Compute coordinates
-echo ""
-echo "==== Computing coordinates... ===="
-python "5_webapp/1_tsne_coords.py"
-if [ $? -ne 0 ]; then
-    echo "✗ Coordinates computation failed"
-    exit 1
-fi
-echo "✓ Coordinates computation completed"
+# echo ""
+# echo "==== Computing coordinates... ===="
+# python "5_webapp/1_tsne_coords.py"
+# if [ $? -ne 0 ]; then
+#     echo "✗ Coordinates computation failed"
+#     exit 1
+# fi
+# echo "✓ Coordinates computation completed"
 
-# Step 2: Append similar courses
-echo ""
-echo "==== Appending similar courses... ===="
-python "5_webapp/2_append_similar_courses.py"
-if [ $? -ne 0 ]; then
-    echo "✗ Appending similar courses failed"
-    exit 1
-fi
-echo "✓ Appending similar courses completed"
+# # Step 2: Append similar courses
+# echo ""
+# echo "==== Appending similar courses... ===="
+# python "5_webapp/2_append_similar_courses.py"
+# if [ $? -ne 0 ]; then
+#     echo "✗ Appending similar courses failed"
+#     exit 1
+# fi
+# echo "✓ Appending similar courses completed"
 
 
 # -----------------------------# -----------------------------

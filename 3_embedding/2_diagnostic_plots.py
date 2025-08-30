@@ -23,7 +23,8 @@ code = os.environ.get("CODE", '/Users/hnaka24/Desktop/code/CourseFinder/')
 json_path = os.environ.get("CONTRASTIVE_JSON_PATH", dropbox + 'data/2_intermediate/1_llm_cleaned/amherst_courses_2324S.json')
 embeddings_path = os.environ.get("EMBEDDINGS_PATH", dropbox + 'data/2_intermediate/2_embeddings/amherst_courses_2324S.json')
 diagnostics_path = os.environ.get("CONTRASTIVE_DIAGNOSTICS_PATH", dropbox + 'data/1_raw/diagnostics/diagnostics_20250827.csv')
-output_dir = os.environ.get("DIAGNOSTIC_PLOTS_DIR", dropbox + 'data/3_final/1_diagnostic_plots/')
+output_dir = os.environ.get("DIAGNOSTIC_PLOTS_DIR", dropbox + 'output/3_embedding/')
+os.makedirs(output_dir, exist_ok=True)
 
 model_name = os.environ.get("CONTRASTIVE_MODEL_NAME", 'sentence-transformers/all-MiniLM-L6-v2')
 sbert_mode = os.environ.get("SBERT_MODE", "off_the_shelf")
@@ -147,7 +148,7 @@ for i, row_data in enumerate(test_rows):
                 if course_code in course_codes:
                     title = course.get('title', course_code)
                     break
-        course_labels.append(f"{course_code}\n{title}")
+        course_labels.append(f"{course_code}\n{semester}\n{title}")
     
     if len(embeddings_list) != 4:
         continue
@@ -210,9 +211,8 @@ for i, row_data in enumerate(test_rows):
     ax.legend(handles=legend_elements, title='Courses')
     
     # Save plot
-    os.makedirs(output_dir, exist_ok=True)
     plt.tight_layout()
-    plt.savefig(f"{output_dir}/diagnostic_row_{i + 1}.png", dpi=300, bbox_inches='tight')
+    plt.savefig(f'{output_dir}diagnostic_plots_{model_name}_{sbert_mode}_{i+1}.pdf', dpi=300, bbox_inches='tight')
     plt.close()
     
     successful_plots += 1
