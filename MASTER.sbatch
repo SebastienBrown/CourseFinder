@@ -39,7 +39,7 @@ export CONTRASTIVE_LR="1e-5"
 export CONTRASTIVE_RANDOM_SEED="42"  # Random seed for reproducible splits
 
 # Annotated Diagnostics Dataset
-export FILEDATE='20250820'
+export FILEDATE='20250827'
 export CONTRASTIVE_DIAGNOSTICS_PATH="${DROPBOX}/data/1_raw/diagnostics/diagnostics_${FILEDATE}.csv"
 
 # Embedding model configuration
