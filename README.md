@@ -22,25 +22,40 @@
 - Run `python 2_cleaning/clean_json.py` to remove duplicates, special characters, and fill in missing course codes.
 
 4. Append the cleaned files together
-- Run `python 2_cleaning/append_metadata.py` to output `course-visualization/public/amherst_courses_all.json`.
+- Run `python 2_cleaning/append_metadata.py`
+- Output: `course-visualization/public/amherst_courses_all.json`.
 
-**Network Graph**
+**Embeddings, Similarity Scores, Mapping, Similar Courses**
+`sbatch MASTER.sh` runs the entire pipeline from top to bottom. The `MASTER.sh` file declares all of the global variables, including file paths, LLM to be used, configuration for fine-tuning, etc. If you wish to run only certain sections, simply comment out the other sections. A brief outline of the pipeline is provided below.
+
+0. Contrastive learning
+- `3_embedding/0_contrastive_learning.py` 
+- Input: manually annotated sets of four courses () and `amherst_courses_all.json`.
+- Output: fine-tuned model in `3_embedding/sbert_contrastive_model/`.
+
 1. Create embeddings for each course
-- `sbatch 3_embedding/embedding.sbatch`
-- Output: `output_embeddings_{semester}.json` in data folder
+- `3_embedding/1_embeddings.py` computes the embeddings.
+- Output: `output_embeddings_{semester}.json` in the data folder (`data/2_intermediate/2_embeddings/{model}/`) and `backend/data/{model}/`.
 
-2. Compute pairwise similarity scores
-- Run `sbatch 4_similarity/similarity.sbatch` or `python 4_similarity/similarity_all.py`. Make sure to change the list of semesters you want to include.
-- Output: `output_similarity_{semester}.json`, where semester = 'all' for the latter
+2. Create diagnostic plots of 4-course sets
+- `3_embedding/2_diagnostic_plots.py`
+- Output:
 
-3. Apply t-SNE to compute coordinates for each course
-- `cd 5_webapp`
-- `sbatch generate_precomputed_tsne.sbatch` or `python generate_precomputed_tsne.py`
+3. Compute pairwise similarity scores
+- `4_similarity/1_similarity_all.py` computes the pairwise similarity scores.
+- Output: `output_similarity_{semester}.json`, where semester = 'all' when running for all semesters
+
+4. Create density plots of similarity scores
+- `4_similarity/2_similarity_density.py` plots the density of similarity scores by i) within and across departments, and ii) positive and negative pairs from the manual annotated list.
+- Input: `output_similarity_{semester}.json`
+- Output: 
+
+5. Apply t-SNE to compute coordinates for each course
+- `5_webapp/1_tsne_coords.py` computes the coordinates for the App map.
 - Output: `course-visualization/public/precomputed_tsne_coords_{semester}.json`
 
-4. Add three most similar courses in the same semester
-- `cd 5_webapp`
-- `python append_similar_courses.py`
+6. Add three most similar courses in the same semester
+- `5_webapp/2_append_similar_courses.py` appends for each course the three most similar course in the same semester.
 - Output: `course-visualization/public/precomputed_tsne_coords_{semester}.json` (appends to same file as 3)
 
 **Run Backend**
@@ -80,6 +95,7 @@ If the search bar returns a "fetch" error, try changing the port.
    all should have the elements in straight double quotes "", without spaces and no curly quotes.
    If it loads the wrong backend url, try quitting both your browser and terminal, fix the above issues and try again.
 
-**Descriptive Analysis**
-- `cd 6_analysis/code`
-- Make a semester-department panel with `sbatch descriptives.sbatch`
+**Analysis**
+- `cd 6_analysis`
+- Run major (department)-level analysis with `sbatch major_master.sbatch`
+- Run student-level analysis with `sbatch student_master.sbatch`
