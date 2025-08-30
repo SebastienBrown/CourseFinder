@@ -24,14 +24,10 @@ json_path = os.environ.get("CONTRASTIVE_JSON_PATH", dropbox + 'data/2_intermedia
 embeddings_path = os.environ.get("EMBEDDINGS_PATH", dropbox + 'data/2_intermediate/2_embeddings/')
 diagnostics_path = os.environ.get("CONTRASTIVE_DIAGNOSTICS_PATH", dropbox + 'data/1_raw/diagnostics/diagnostics_20250827.csv')
 output_dir = os.environ.get("DIAGNOSTIC_PLOTS_DIR", dropbox + 'output/3_embedding/')
-os.makedirs(output_dir, exist_ok=True)
 
 model = os.environ.get("MODEL", "gpt")
 mode = os.environ.get("MODE", "off_the_shelf")
 
-model_name = os.environ.get("CONTRASTIVE_MODEL_NAME", 'sentence-transformers/all-MiniLM-L6-v2')
-sbert_mode = os.environ.get("SBERT_MODE", "off_the_shelf")
-sbert_model_dir = os.environ.get("SBERT_MODEL_DIR", code + "3_embedding/sbert_contrastive_model")
 random_seed = int(os.environ.get("CONTRASTIVE_RANDOM_SEED", "42"))
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
