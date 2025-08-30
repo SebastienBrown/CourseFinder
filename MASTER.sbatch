@@ -39,7 +39,7 @@ export CONTRASTIVE_LR="1e-5"
 export CONTRASTIVE_RANDOM_SEED="42"  # Random seed for reproducible splits
 
 # Annotated Diagnostics Dataset
-export FILEDATE='20250827'
+export FILEDATE='20250830'
 export CONTRASTIVE_DIAGNOSTICS_PATH="${DROPBOX}/data/1_raw/diagnostics/diagnostics_${FILEDATE}.csv"
 
 # Embedding model configuration
@@ -49,7 +49,7 @@ export SBERT_MODEL_NAME="sentence-transformers/all-MiniLM-L6-v2"
 export SBERT_MODEL_DIR="${CODE}/3_embedding/sbert_contrastive_model"
 
 # Model and mode for similarity calculations
-export MODEL="gpt"  # "gpt" or "sbert"
+export MODEL="sbert"  # "gpt" or "sbert"
 export MODE="off_the_shelf"  # "self_supervised" or "off_the_shelf"
 
 # Semester list
