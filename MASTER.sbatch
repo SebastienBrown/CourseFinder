@@ -30,7 +30,7 @@ export FILEDATE='20250830'
 export CONTRASTIVE_DIAGNOSTICS_PATH="${DROPBOX}/data/1_raw/diagnostics/diagnostics_${FILEDATE}.csv"
 
 # Model and mode for similarity calculations
-export MODEL="sbert"  # "gpt" or "sbert"
+export MODEL="gpt"  # "gpt" or "sbert"
 export MODE="off_the_shelf"  # "by-major" "manual" or "off_the_shelf"
 
 # Only for GPT
