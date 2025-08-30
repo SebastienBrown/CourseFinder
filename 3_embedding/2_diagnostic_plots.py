@@ -26,6 +26,9 @@ diagnostics_path = os.environ.get("CONTRASTIVE_DIAGNOSTICS_PATH", dropbox + 'dat
 output_dir = os.environ.get("DIAGNOSTIC_PLOTS_DIR", dropbox + 'output/3_embedding/')
 os.makedirs(output_dir, exist_ok=True)
 
+model = os.environ.get("MODEL", "gpt")
+mode = os.environ.get("MODE", "off_the_shelf")
+
 model_name = os.environ.get("CONTRASTIVE_MODEL_NAME", 'sentence-transformers/all-MiniLM-L6-v2')
 sbert_mode = os.environ.get("SBERT_MODE", "off_the_shelf")
 sbert_model_dir = os.environ.get("SBERT_MODEL_DIR", code + "3_embedding/sbert_contrastive_model")
@@ -212,7 +215,7 @@ for i, row_data in enumerate(test_rows):
     
     # Save plot
     plt.tight_layout()
-    plt.savefig(f'{output_dir}diagnostic_plots_{model_name}_{sbert_mode}_{i+1}.pdf', dpi=300, bbox_inches='tight')
+    plt.savefig(f'{output_dir}diagnostic_plots_{model}_{mode}_{i+1}.pdf', dpi=300, bbox_inches='tight')
     plt.close()
     
     successful_plots += 1
