@@ -102,14 +102,14 @@ else
 fi
 
 # Step 1: Compute embeddings for courses
-# echo ""
-# echo "==== Computing embeddings for courses... ===="
-# python "3_embedding/1_embedding.py"
-# if [ $? -ne 0 ]; then
-#     echo "✗ Embedding computation failed"
-#     exit 1
-# fi
-# echo "✓ Embedding computation completed"
+echo ""
+echo "==== Computing embeddings for courses... ===="
+python "3_embedding/1_embedding.py"
+if [ $? -ne 0 ]; then
+    echo "✗ Embedding computation failed"
+    exit 1
+fi
+echo "✓ Embedding computation completed"
 
 # Step 2: Generate diagnostic plots
 echo ""
@@ -126,14 +126,14 @@ echo "✓ Diagnostic plots generation completed"
 # Compute Similarity Scores
 # -----------------------------
 # Step 1: Compute similarity scores for courses
-# echo ""
-# echo "==== Computing similarity scores for courses... ===="
-# python "4_similarity/1_similarity_all.py"
-# if [ $? -ne 0 ]; then
-#     echo "✗ Similarity computation failed"
-#     exit 1
-# fi
-# echo "✓ Similarity computation completed"
+echo ""
+echo "==== Computing similarity scores for courses... ===="
+python "4_similarity/1_similarity_all.py"
+if [ $? -ne 0 ]; then
+    echo "✗ Similarity computation failed"
+    exit 1
+fi
+echo "✓ Similarity computation completed"
 
 # Step 2: Create density plot of similarity scores
 echo ""
