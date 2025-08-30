@@ -127,6 +127,7 @@ with PdfPages(pdf_path) as pdf:
         # Get embeddings for each course
         embeddings_list = []
         course_labels = []
+        course_titles = []
         
         for j, course_info in enumerate(course_infos):
             semester, course_code = course_info.split(', ')
@@ -148,7 +149,9 @@ with PdfPages(pdf_path) as pdf:
                     if course_code in course_codes:
                         title = course.get('course_title', course_code)
                         break
-            course_labels.append(f"{course_code}\n{semester}\n{title}")
+            course_labels.append(f"{course_code}\n{semester}")
+            # Store titles separately for legend
+            course_titles.append(title)
         
         if len(embeddings_list) != 4:
             continue
@@ -186,7 +189,7 @@ with PdfPages(pdf_path) as pdf:
         
         # Create new page if needed
         if plot_position == 0:
-            fig, axes = plt.subplots(2, 2, figsize=(12, 12))  # Square layout
+            fig, axes = plt.subplots(2, 2, figsize=(16, 12))  # Landscape layout
             fig.suptitle(f'Diagnostic Plots - Page {(successful_plots // plots_per_page) + 1}', fontsize=16)
             axes = axes.flatten()  # Flatten to 1D array for easier indexing
         
@@ -231,16 +234,26 @@ with PdfPages(pdf_path) as pdf:
         ax.set_ylabel('PC2', fontsize=9)
         ax.set_title(f'Row {i + 1}', fontsize=10)
         
-        # Add legend
-        legend_elements = [plt.Line2D([0], [0], marker='o', color='w', 
-                                     markerfacecolor=color, markersize=8, label=courses[j])
-                          for j, color in enumerate(colors)]
-        ax.legend(handles=legend_elements, title='Courses', fontsize=8, title_fontsize=9)
+        # Add custom legend below the plot
+        legend_y = ax.get_ylim()[0] - (ax.get_ylim()[1] - ax.get_ylim()[0]) * 0.15  # Position below plot
+        for j, (color, title) in enumerate(zip(colors, course_titles)):
+            # Add colored dot
+            ax.scatter(ax.get_xlim()[0] + (ax.get_xlim()[1] - ax.get_xlim()[0]) * 0.1, legend_y, 
+                      c=color, s=60, alpha=0.7, zorder=5)
+            # Add course title text
+            ax.text(ax.get_xlim()[0] + (ax.get_xlim()[1] - ax.get_xlim()[0]) * 0.15, legend_y, 
+                   f"{courses[j]}: {title}", fontsize=8, va='center', ha='left')
+            legend_y -= (ax.get_ylim()[1] - ax.get_ylim()[0]) * 0.08  # Space between legend items
         
         successful_plots += 1
         
         # Save page if it's full or if it's the last plot
         if plot_position == plots_per_page - 1 or i == len(all_rows) - 1:
+            # Hide unused subplots on the last page
+            if i == len(all_rows) - 1 and plot_position < plots_per_page - 1:
+                for unused_pos in range(plot_position + 1, plots_per_page):
+                    axes[unused_pos].set_visible(False)
+            
             plt.tight_layout()
             pdf.savefig(fig, dpi=300, bbox_inches='tight')
             plt.close()
