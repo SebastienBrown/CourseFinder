@@ -1,15 +1,15 @@
 #!/bin/bash
 #SBATCH --job-name=courses
-#SBATCH --ntasks=1                              # number of scripts that can be run simultaneously
-#SBATCH --cpus-per-task=4                       # Each script gets 16 CPU cores
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
 
-#SBATCH --mem=160GB                              # Total memory allocation
-#SBATCH --time=30:00:00                          # Adjust time as needed
+#SBATCH --mem=160GB
+#SBATCH --time=30:00:00
 #SBATCH --partition=sched_mit_econ
 
-#SBATCH --mail-type=all                         # send email on job start, end and fault
+#SBATCH --mail-type=all
 #SBATCH --mail-user=hnakazawa@povertyactionlab.org
-#SBATCH --output=logs/embedding_%A.txt
+#SBATCH --output=logs/MASTER_%A.txt
 
 source /orcd/software/core/001/centos7/pkg/miniforge/24.3.0-0/etc/profile.d/conda.sh
 conda activate course_venv
@@ -100,14 +100,14 @@ else
 fi
 
 # Step 1: Compute embeddings for courses
-echo ""
-echo "==== Computing embeddings for courses... ===="
-python "3_embedding/1_embedding.py"
-if [ $? -ne 0 ]; then
-    echo "✗ Embedding computation failed"
-    exit 1
-fi
-echo "✓ Embedding computation completed"
+# echo ""
+# echo "==== Computing embeddings for courses... ===="
+# python "3_embedding/1_embedding.py"
+# if [ $? -ne 0 ]; then
+#     echo "✗ Embedding computation failed"
+#     exit 1
+# fi
+# echo "✓ Embedding computation completed"
 
 # Step 2: Generate diagnostic plots
 echo ""

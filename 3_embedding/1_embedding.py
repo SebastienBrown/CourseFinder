@@ -9,15 +9,28 @@ from tqdm import tqdm
 
 load_dotenv()
 
-# ==== Configuration ====
+# ========================================
+# Configuration
+# ========================================
 # Choose embedding model: "azure_openai" or "sbert"
 embedding_model = os.environ.get("EMBEDDING_MODEL", "azure_openai")  # Default to azure_openai if not set
+deployment_name = os.environ.get("DEPLOYMENT_NAME", "text-embedding-3-small") # Only for GPT
 
 # SBERT Configuration (only used if embedding_model = "sbert")
 sbert_mode = os.environ.get("SBERT_MODE", "off_the_shelf")  # "off_the_shelf" or "self_supervised"
 sbert_model_name = os.environ.get("SBERT_MODEL_NAME", 'sentence-transformers/all-MiniLM-L6-v2')
 sbert_model_dir = os.environ.get("SBERT_MODEL_DIR", "3_embedding/sbert_contrastive_model")  # folder where your fine-tuned model and tokenizer are saved
 
+# Input File Paths
+llm_cleaned_dir = Path(os.environ.get("LLM_CLEANED_DIR", "llm_cleaned"))
+json_files = list(llm_cleaned_dir.glob('amherst_courses_*.json'))
+
+# Output File Paths
+embeddings_path = os.environ.get("EMBEDDINGS_PATH", "embeddings/")
+
+# ========================================
+# Prepare Models
+# ========================================
 # Azure OpenAI Configuration (only used if embedding_model = "azure_openai")
 if embedding_model == "azure_openai":
     endpoint = os.environ["AZURE_OPENAI_ENDPOINT"]
@@ -57,6 +70,9 @@ if embedding_model == "sbert":
     sbert_model = InferenceModel(base_model).to(device)
     sbert_model.eval()
 
+# ========================================
+# Functions to generate embeddings
+# ========================================
 def azure_openai_generate_embeddings(text, deployment_name):
     """
     Generate embeddings using Azure OpenAI service.
@@ -188,19 +204,15 @@ def process_courses(input_file, output_file, deployment_name):
     except Exception as e:
         print(f"Error saving updated courses: {e}")
 
-
-# Input and output file paths
-# semesters = ['0910F', '0910S', '1011F', '1011S', '1112F', '1112S', '1213F', '1213S', '1314F', '1314S', '1415F', '1415S', '1516F', '1516S', '1617F', '1617S', '1718F', '1718S', '1819F', '1819S', '1920F', '1920S', '2021F', '2021J', '2021S', '2122F', '2122J', '2122S', '2223F', '2223S', '2324F', '2324S', '2425F', '2425S', '2526F', '2526S']
-llm_cleaned_dir = Path(os.environ.get("LLM_CLEANED_DIR", "llm_cleaned"))
-json_files = list(llm_cleaned_dir.glob('amherst_courses_*.json'))
+# ========================================
+# Main Script
+# ========================================
 
 for file_path in json_files:
     # Extract semester from filename (e.g., "amherst_courses_2324F.json" -> "2324F")
     semester = file_path.stem.split('_')[-1]
     input_file = str(file_path)
-    embeddings_path = os.environ.get("EMBEDDINGS_PATH", "embeddings/")
     output_file = f'{embeddings_path}output_embeddings_{semester}.json'  # Output file
-    deployment_name = os.environ.get("DEPLOYMENT_NAME", "text-embedding-3-small")  # Replace with your actual deployment name
 
     # Process courses and generate embeddings
     process_courses(input_file, output_file, deployment_name)
