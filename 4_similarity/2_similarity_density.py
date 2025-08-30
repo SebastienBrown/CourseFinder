@@ -60,16 +60,6 @@ def find_course_description(course_info, course_data):
 with open(similarity_file, 'r') as f:
     data = json.load(f)
 
-# Debug: Print sample similarity data format
-print("Sample similarity data format:")
-if data:
-    sample_course = data[0]
-    print(f"  Course: {sample_course.get('course_codes', 'N/A')} from {sample_course.get('semester', 'N/A')}")
-    if sample_course.get('compared_courses'):
-        sample_comp = sample_course['compared_courses'][0]
-        print(f"  Compared to: {sample_comp.get('course_codes', 'N/A')} from {sample_comp.get('semester', 'N/A')}")
-        print(f"  Similarity score: {sample_comp.get('similarity_score', 'N/A')}")
-
 # Load diagnostics data
 df = pd.read_csv(diagnostics_file)
 print(f"Loaded diagnostics dataset with {len(df)} rows")
@@ -129,23 +119,22 @@ for i, pair in enumerate(diagnostics_neg_pairs[:3]):
 # Extract similarity scores for diagnostics pairs
 diagnostics_pos_scores = []
 diagnostics_neg_scores = []
-seen_pairs = set()
 
+# Create a lookup dictionary for faster access
+data_lookup = {}
 for course in data:
     main_codes = course.get('course_codes', [])
     main_semester = course.get('semester', None)
+    
+    # Handle case where course_codes might be a string or list
+    main_codes_list = main_codes if isinstance(main_codes, list) else [main_codes]
     
     for comp in course.get('compared_courses', []):
         comp_codes = comp.get('course_codes', [])
         comp_semester = comp.get('semester', None)
         
-        # Create course info strings for comparison
-        main_codes_list = main_codes if isinstance(main_codes, list) else [main_codes]
+        # Handle case where comp_codes might be a string or list
         comp_codes_list = comp_codes if isinstance(comp_codes, list) else [comp_codes]
-        
-        # Debug: Print course codes format
-        if len(diagnostics_pos_scores) + len(diagnostics_neg_scores) < 3:
-            print(f"Main codes: {main_codes_list}, Comp codes: {comp_codes_list}")
         
         # Check all combinations of course codes
         for main_code in main_codes_list:
@@ -155,22 +144,21 @@ for course in data:
                 
                 # Create a unique, order-independent key for the pair
                 pair_key = tuple(sorted([main_info, comp_info]))
+                score = comp.get('similarity_score')
                 
-                if pair_key not in seen_pairs:
-                    score = comp.get('similarity_score')
-                    if score is not None:
-                        # Debug: Print a few examples of course info strings being compared
-                        if len(diagnostics_pos_scores) + len(diagnostics_neg_scores) < 5:
-                            print(f"Checking pair: {main_info} <-> {comp_info}")
-                            print(f"  In pos pairs: {(main_info, comp_info) in diagnostics_pos_pairs or (comp_info, main_info) in diagnostics_pos_pairs}")
-                            print(f"  In neg pairs: {(main_info, comp_info) in diagnostics_neg_pairs or (comp_info, main_info) in diagnostics_neg_pairs}")
-                        
-                        # Check if this pair is in diagnostics positive or negative pairs
-                        if (main_info, comp_info) in diagnostics_pos_pairs or (comp_info, main_info) in diagnostics_pos_pairs:
-                            diagnostics_pos_scores.append(score)
-                        elif (main_info, comp_info) in diagnostics_neg_pairs or (comp_info, main_info) in diagnostics_neg_pairs:
-                            diagnostics_neg_scores.append(score)
-                    seen_pairs.add(pair_key)
+                if score is not None:
+                    data_lookup[pair_key] = score
+
+# Now loop through diagnostics pairs and look up scores
+for pair in diagnostics_pos_pairs:
+    pair_key = tuple(sorted([pair[0], pair[1]]))
+    if pair_key in data_lookup:
+        diagnostics_pos_scores.append(data_lookup[pair_key])
+
+for pair in diagnostics_neg_pairs:
+    pair_key = tuple(sorted([pair[0], pair[1]]))
+    if pair_key in data_lookup:
+        diagnostics_neg_scores.append(data_lookup[pair_key])
 
 print(f"Found {len(diagnostics_pos_scores)} diagnostics positive scores and {len(diagnostics_neg_scores)} negative scores")
 
