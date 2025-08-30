@@ -45,5 +45,11 @@ backend_output_file = 'backend/data/amherst_courses_all.json'
 with open(backend_output_file, 'w') as f:
     json.dump(all_courses, f, indent=2)
 
+# Also write to the same data folder
+os.makedirs('/orcd/pool/003/hnaka24/CourseFinder/data/2_intermediate/1_llm_cleaned', exist_ok=True)
+backend_output_file = '/orcd/pool/003/hnaka24/CourseFinder/data/2_intermediate/1_llm_cleaned/amherst_courses_all.json'
+with open(backend_output_file, 'w') as f:
+    json.dump(all_courses, f, indent=2)
+
 print(f"Successfully combined {len(all_courses)} courses from {len(semesters)} semesters")
 print(f"Output written to {output_file}") 
