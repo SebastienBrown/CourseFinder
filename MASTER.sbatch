@@ -28,7 +28,7 @@ export CODE='/orcd/home/002/hnaka24/CourseFinder'
 # Contrastive learning configuration
 export RUN_CONTRASTIVE_LEARNING="false"  # Set to "true" to run Step 0, "false" to skip
 
-export CONTRASTIVE_JSON_PATH="${DROPBOX}/data/2_intermediate/1_llm_cleaned/amherst_courses_2324S.json"
+export CONTRASTIVE_JSON_PATH="${DROPBOX}/data/2_intermediate/1_llm_cleaned/amherst_courses_all.json"
 export CONTRASTIVE_SAVE_DIR="${CODE}/3_embedding/sbert_contrastive_model"
 export CONTRASTIVE_MODEL_NAME="sentence-transformers/all-MiniLM-L6-v2"
 export CONTRASTIVE_DROPOUT_RATE="0.1"
@@ -37,7 +37,10 @@ export CONTRASTIVE_MAX_SELF_SUPERVISED="10000"  # Cap how many course descriptio
 export CONTRASTIVE_NUM_EPOCHS="10"
 export CONTRASTIVE_LR="1e-5"
 export CONTRASTIVE_RANDOM_SEED="42"  # Random seed for reproducible splits
-export CONTRASTIVE_DIAGNOSTICS_PATH="${DROPBOX}/data/1_raw/diagnostics/diagnostics_20250827.csv"
+
+# Annotated Diagnostics Dataset
+export FILEDATE='20250820'
+export CONTRASTIVE_DIAGNOSTICS_PATH="${DROPBOX}/data/1_raw/diagnostics/diagnostics_${FILEDATE}.csv"
 
 # Embedding model configuration
 export EMBEDDING_MODEL="azure_openai"  # "azure_openai" or "sbert"
@@ -56,9 +59,8 @@ export SEMESTERS="0910F,0910S,1011F,1011S,1112F,1112S,1213F,1213S,1314F,1314S,14
 export LLM_CLEANED_DIR="${CODE}/llm_cleaned"
 export EMBEDDINGS_PATH="${DROPBOX}/data/2_intermediate/2_embeddings/${MODEL}_${MODE}/"
 export SIMILARITY_OUTPUT_FILE="${DROPBOX}/data/2_intermediate/3_similarity/${MODEL}_${MODE}/output_similarity_all.json"
-export SIMILARITY_DENSITY_FILE="${DROPBOX}/data/2_intermediate/3_similarity/${MODEL}_${MODE}/output_similarity_2324S.json"
 export OUTPUT_PDF="${DROPBOX}/output/4_similarity/similarity_density_${MODEL}_${MODE}.pdf"
-export DIAGNOSTIC_PLOTS_DIR="${DROPBOX}/data/3_final/1_diagnostic_plots/"
+export DIAGNOSTIC_PLOTS_DIR="${DROPBOX}/output/3_embedding/"
 
 # Azure OpenAI configuration (only used if EMBEDDING_MODEL = "azure_openai")
 export DEPLOYMENT_NAME="text-embedding-3-small"
