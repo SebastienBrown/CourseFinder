@@ -60,6 +60,16 @@ def find_course_description(course_info, course_data):
 with open(similarity_file, 'r') as f:
     data = json.load(f)
 
+# Debug: Print sample similarity data format
+print("Sample similarity data format:")
+if data:
+    sample_course = data[0]
+    print(f"  Course: {sample_course.get('course_codes', 'N/A')} from {sample_course.get('semester', 'N/A')}")
+    if sample_course.get('compared_courses'):
+        sample_comp = sample_course['compared_courses'][0]
+        print(f"  Compared to: {sample_comp.get('course_codes', 'N/A')} from {sample_comp.get('semester', 'N/A')}")
+        print(f"  Similarity score: {sample_comp.get('similarity_score', 'N/A')}")
+
 # Load diagnostics data
 df = pd.read_csv(diagnostics_file)
 print(f"Loaded diagnostics dataset with {len(df)} rows")
@@ -108,6 +118,14 @@ for row in all_courses:
 
 print(f"Created {len(diagnostics_pos_pairs)} diagnostics positive pairs and {len(diagnostics_neg_pairs)} negative pairs")
 
+# Debug: Print a few examples of diagnostics pairs
+print("Sample diagnostics positive pairs:")
+for i, pair in enumerate(diagnostics_pos_pairs[:3]):
+    print(f"  {pair[0]} <-> {pair[1]}")
+print("Sample diagnostics negative pairs:")
+for i, pair in enumerate(diagnostics_neg_pairs[:3]):
+    print(f"  {pair[0]} <-> {pair[1]}")
+
 # Extract similarity scores for diagnostics pairs
 diagnostics_pos_scores = []
 diagnostics_neg_scores = []
@@ -125,6 +143,10 @@ for course in data:
         main_codes_list = main_codes if isinstance(main_codes, list) else [main_codes]
         comp_codes_list = comp_codes if isinstance(comp_codes, list) else [comp_codes]
         
+        # Debug: Print course codes format
+        if len(diagnostics_pos_scores) + len(diagnostics_neg_scores) < 3:
+            print(f"Main codes: {main_codes_list}, Comp codes: {comp_codes_list}")
+        
         # Check all combinations of course codes
         for main_code in main_codes_list:
             for comp_code in comp_codes_list:
@@ -137,6 +159,12 @@ for course in data:
                 if pair_key not in seen_pairs:
                     score = comp.get('similarity_score')
                     if score is not None:
+                        # Debug: Print a few examples of course info strings being compared
+                        if len(diagnostics_pos_scores) + len(diagnostics_neg_scores) < 5:
+                            print(f"Checking pair: {main_info} <-> {comp_info}")
+                            print(f"  In pos pairs: {(main_info, comp_info) in diagnostics_pos_pairs or (comp_info, main_info) in diagnostics_pos_pairs}")
+                            print(f"  In neg pairs: {(main_info, comp_info) in diagnostics_neg_pairs or (comp_info, main_info) in diagnostics_neg_pairs}")
+                        
                         # Check if this pair is in diagnostics positive or negative pairs
                         if (main_info, comp_info) in diagnostics_pos_pairs or (comp_info, main_info) in diagnostics_pos_pairs:
                             diagnostics_pos_scores.append(score)
@@ -183,11 +211,11 @@ fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 6))
 
 # Plot 1: Within vs Across Department
 if same_dept_scores:
-    sns.kdeplot(same_dept_scores, fill=True, bw_adjust=0.2, color='blue', alpha=0.6, 
+    sns.kdeplot(same_dept_scores, fill=False, bw_adjust=0.2, color='blue', alpha=0.6, 
                 label=f'Within Department (n={len(same_dept_scores)})', ax=ax1)
 
 if diff_dept_scores:
-    sns.kdeplot(diff_dept_scores, fill=True, bw_adjust=0.2, color='magenta', alpha=0.6, 
+    sns.kdeplot(diff_dept_scores, fill=False, bw_adjust=0.2, color='magenta', alpha=0.6, 
                 label=f'Across Departments (n={len(diff_dept_scores)})', ax=ax1)
 
 ax1.set_title('Similarity Scores by Department')
@@ -199,11 +227,11 @@ ax1.set_xticks(np.arange(0, 1.1, 0.1))
 
 # Plot 2: Diagnostics Positive vs Negative Pairs
 if diagnostics_pos_scores:
-    sns.kdeplot(diagnostics_pos_scores, fill=True, bw_adjust=0.2, color='green', alpha=0.6, 
+    sns.kdeplot(diagnostics_pos_scores, fill=False, bw_adjust=0.2, color='blue', alpha=0.6, 
                 label=f'Diagnostics Positive (n={len(diagnostics_pos_scores)})', ax=ax2)
 
 if diagnostics_neg_scores:
-    sns.kdeplot(diagnostics_neg_scores, fill=True, bw_adjust=0.2, color='red', alpha=0.6, 
+    sns.kdeplot(diagnostics_neg_scores, fill=False, bw_adjust=0.2, color='magenta', alpha=0.6, 
                 label=f'Diagnostics Negative (n={len(diagnostics_neg_scores)})', ax=ax2)
 
 ax2.set_title('Similarity Scores by Diagnostics Pairs')
