@@ -146,7 +146,7 @@ with PdfPages(pdf_path) as pdf:
                     if isinstance(course_codes, str):
                         course_codes = [course_codes]
                     if course_code in course_codes:
-                        title = course.get('title', course_code)
+                        title = course.get('course_title', course_code)
                         break
             course_labels.append(f"{course_code}\n{semester}\n{title}")
         
@@ -186,7 +186,7 @@ with PdfPages(pdf_path) as pdf:
         
         # Create new page if needed
         if plot_position == 0:
-            fig, axes = plt.subplots(2, 2, figsize=(12, 16))  # Portrait orientation
+            fig, axes = plt.subplots(2, 2, figsize=(12, 12))  # Square layout
             fig.suptitle(f'Diagnostic Plots - Page {(successful_plots // plots_per_page) + 1}', fontsize=16)
             axes = axes.flatten()  # Flatten to 1D array for easier indexing
         
@@ -195,6 +195,9 @@ with PdfPages(pdf_path) as pdf:
         # Remove top and right spines (box around figure)
         ax.spines['top'].set_visible(False)
         ax.spines['right'].set_visible(False)
+        
+        # Make the plot square
+        ax.set_aspect('equal')
         
         # Plot points
         colors = ['red', 'blue', 'green', 'orange']
@@ -208,6 +211,19 @@ with PdfPages(pdf_path) as pdf:
         ax.plot([transformed_2d[2][0], transformed_2d[3][0]], 
                 [transformed_2d[2][1], transformed_2d[3][1]], 
                 'k--', alpha=0.5, linewidth=1.5)
+        
+        # Make x and y axes span the same distance
+        x_min, x_max = ax.get_xlim()
+        y_min, y_max = ax.get_ylim()
+        x_range = x_max - x_min
+        y_range = y_max - y_min
+        max_range = max(x_range, y_range)
+        
+        # Center the ranges and set equal spans
+        x_center = (x_min + x_max) / 2
+        y_center = (y_min + y_max) / 2
+        ax.set_xlim(x_center - max_range/2, x_center + max_range/2)
+        ax.set_ylim(y_center - max_range/2, y_center + max_range/2)
         
         # Add grid and labels
         ax.grid(True, alpha=0.3)
