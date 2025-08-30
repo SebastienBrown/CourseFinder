@@ -7,6 +7,7 @@ from transformers import AutoTokenizer, AutoModel
 import random
 import json
 import pandas as pd
+import glob
 import numpy as np
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
@@ -41,21 +42,31 @@ torch.manual_seed(random_seed)
 # ========================================
 # Load embeddings
 print("Loading embeddings...")
-with open(embeddings_path, 'r') as f:
-    embeddings_data = json.load(f)
-
-# Create a mapping from (semester, course_code) to embedding
 embeddings_map = {}
-for course in embeddings_data:
-    semester = course['semester']
-    course_codes = course.get('course_codes', [])
-    if isinstance(course_codes, str):
-        course_codes = [course_codes]
+
+# Load from multiple files in directory
+embedding_files = glob.glob(os.path.join(embeddings_path, "output_embeddings_*.json"))
+print(f"Found {len(embedding_files)} embedding files")
+
+for file_path in embedding_files:
+    # Extract semester from filename
+    filename = os.path.basename(file_path)
+    semester = filename.replace("output_embeddings_", "").replace(".json", "")
+    print(f"Loading embeddings for semester: {semester}")
     
-    embedding = course.get('embedding', [])
-    if embedding:
-        for course_code in course_codes:
-            embeddings_map[(semester, course_code)] = embedding
+    with open(file_path, 'r') as f:
+        embeddings_data = json.load(f)
+    
+    # Create a mapping from (semester, course_code) to embedding
+    for course in embeddings_data:
+        course_codes = course.get('course_codes', [])
+        if isinstance(course_codes, str):
+            course_codes = [course_codes]
+        
+        embedding = course.get('embedding', [])
+        if embedding:
+            for course_code in course_codes:
+                embeddings_map[(semester, course_code)] = embedding
 
 print(f"Loaded {len(embeddings_map)} embeddings")
 
