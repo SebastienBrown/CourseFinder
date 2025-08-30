@@ -25,12 +25,27 @@ cd /orcd/home/002/hnaka24/CourseFinder
 export DROPBOX='/orcd/pool/003/hnaka24/CourseFinder'
 export CODE='/orcd/home/002/hnaka24/CourseFinder'
 
+# Annotated Diagnostics Dataset
+export FILEDATE='20250830'
+export CONTRASTIVE_DIAGNOSTICS_PATH="${DROPBOX}/data/1_raw/diagnostics/diagnostics_${FILEDATE}.csv"
+
+# Model and mode for similarity calculations
+export MODEL="sbert"  # "gpt" or "sbert"
+export MODE="off_the_shelf"  # "self_supervised" or "off_the_shelf"
+
+# Only for GPT
+export GPT_MODEL_NAME="text-embedding-3-small"
+
+# Only for SBERT
+export SBERT_MODEL_NAME="sentence-transformers/all-MiniLM-L6-v2"
+export SBERT_MODEL_DIR="${CODE}/3_embedding/sbert_contrastive_model"
+
 # Contrastive learning configuration
 export RUN_CONTRASTIVE_LEARNING="false"  # Set to "true" to run Step 0, "false" to skip
 
 export CONTRASTIVE_JSON_PATH="${DROPBOX}/data/2_intermediate/1_llm_cleaned/amherst_courses_all.json"
 export CONTRASTIVE_SAVE_DIR="${CODE}/3_embedding/sbert_contrastive_model"
-export CONTRASTIVE_MODEL_NAME="sentence-transformers/all-MiniLM-L6-v2"
+
 export CONTRASTIVE_DROPOUT_RATE="0.1"
 export CONTRASTIVE_ALPHA="0.5"  # Weight for supervised loss (set to 0.5 for balanced supervised/self-supervised)
 export CONTRASTIVE_MAX_SELF_SUPERVISED="10000"  # Cap how many course descriptions to use
@@ -38,32 +53,15 @@ export CONTRASTIVE_NUM_EPOCHS="10"
 export CONTRASTIVE_LR="1e-5"
 export CONTRASTIVE_RANDOM_SEED="42"  # Random seed for reproducible splits
 
-# Annotated Diagnostics Dataset
-export FILEDATE='20250830'
-export CONTRASTIVE_DIAGNOSTICS_PATH="${DROPBOX}/data/1_raw/diagnostics/diagnostics_${FILEDATE}.csv"
-
-# Embedding model configuration
-export EMBEDDING_MODEL="azure_openai"  # "azure_openai" or "sbert"
-export SBERT_MODE="off_the_shelf"  # "off_the_shelf" or "self_supervised"
-export SBERT_MODEL_NAME="sentence-transformers/all-MiniLM-L6-v2"
-export SBERT_MODEL_DIR="${CODE}/3_embedding/sbert_contrastive_model"
-
-# Model and mode for similarity calculations
-export MODEL="sbert"  # "gpt" or "sbert"
-export MODE="off_the_shelf"  # "self_supervised" or "off_the_shelf"
-
 # Semester list
 export SEMESTERS="0910F,0910S,1011F,1011S,1112F,1112S,1213F,1213S,1314F,1314S,1415F,1415S,1516F,1516S,1617F,1617S,1718F,1718S,1819F,1819S,1920F,1920S,2021F,2021J,2021S,2122F,2122J,2122S,2223F,2223S,2324F,2324S,2425F,2425S,2526F,2526S"
 
 # File paths
-export LLM_CLEANED_DIR="${CODE}/llm_cleaned"
+export LLM_CLEANED_DIR="${DROPBOX}/data/2_intermediate/1_llm_cleaned"
 export EMBEDDINGS_PATH="${DROPBOX}/data/2_intermediate/2_embeddings/${MODEL}_${MODE}/"
 export SIMILARITY_OUTPUT_FILE="${DROPBOX}/data/2_intermediate/3_similarity/${MODEL}_${MODE}/output_similarity_all.json"
 export OUTPUT_PDF="${DROPBOX}/output/4_similarity/similarity_density_${MODEL}_${MODE}.pdf"
 export DIAGNOSTIC_PLOTS_DIR="${DROPBOX}/output/3_embedding/"
-
-# Azure OpenAI configuration (only used if EMBEDDING_MODEL = "azure_openai")
-export DEPLOYMENT_NAME="text-embedding-3-small"
 
 # Create necessary directories
 mkdir -p "${EMBEDDINGS_PATH}"

@@ -12,11 +12,13 @@ load_dotenv()
 # ========================================
 # Configuration
 # ========================================
-# Choose embedding model: "azure_openai" or "sbert"
-embedding_model = os.environ.get("EMBEDDING_MODEL", "azure_openai")  # Default to azure_openai if not set
-deployment_name = os.environ.get("DEPLOYMENT_NAME", "text-embedding-3-small") # Only for GPT
+# Choose embedding model: "gpt" or "sbert"
+model = os.environ.get("MODEL", "gpt")  # Default to gpt if not set
 
-# SBERT Configuration (only used if embedding_model = "sbert")
+# Only for GPT
+gpt_model_name = os.environ.get("GPT_MODEL_NAME", "text-embedding-3-small")
+
+# Only for SBERT
 sbert_mode = os.environ.get("SBERT_MODE", "off_the_shelf")  # "off_the_shelf" or "self_supervised"
 sbert_model_name = os.environ.get("SBERT_MODEL_NAME", 'sentence-transformers/all-MiniLM-L6-v2')
 sbert_model_dir = os.environ.get("SBERT_MODEL_DIR", "3_embedding/sbert_contrastive_model")  # folder where your fine-tuned model and tokenizer are saved
@@ -31,16 +33,16 @@ embeddings_path = os.environ.get("EMBEDDINGS_PATH", "embeddings/")
 # ========================================
 # Prepare Models
 # ========================================
-# Azure OpenAI Configuration (only used if embedding_model = "azure_openai")
-if embedding_model == "azure_openai":
+# Azure OpenAI Configuration (only used if model = "gpt")
+if model == "gpt":
     endpoint = os.environ["AZURE_OPENAI_ENDPOINT"]
     api_key = os.environ["AZURE_OPENAI_API_KEY"]
     
     if not endpoint or not api_key:
         raise ValueError("Please set AZURE_OPENAI_ENDPOINT and AZURE_OPENAI_API_KEY environment variables")
 
-# SBERT setup (only used if embedding_model = "sbert")
-if embedding_model == "sbert":
+# SBERT setup (only used if model = "sbert")
+if model == "sbert":
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
     # Load tokenizer and model
@@ -73,13 +75,13 @@ if embedding_model == "sbert":
 # ========================================
 # Functions to generate embeddings
 # ========================================
-def azure_openai_generate_embeddings(text, deployment_name):
+def gpt_generate_embeddings(text, gpt_model_name):
     """
     Generate embeddings using Azure OpenAI service.
     
     Args:
         text (str): The text to generate embeddings for.
-        deployment_name (str): The name of your Azure OpenAI deployment.
+        gpt_model_name (str): The name of your Azure OpenAI deployment.
         
     Returns:
         list: The embedding vector.
@@ -133,7 +135,7 @@ def sbert_generate_embeddings_batch(texts):
     all_embeddings = torch.cat(all_embeddings, dim=0)
     return all_embeddings.tolist()
 
-def process_courses(input_file, output_file, deployment_name):
+def process_courses(input_file, output_file, gpt_model_name):
     try:
         # Debug: Read the file as text and print its contents
         with open(input_file, 'r') as file:
@@ -154,13 +156,13 @@ def process_courses(input_file, output_file, deployment_name):
 
     updated_courses = []
 
-    if embedding_model == "azure_openai":
+    if model == "gpt":
         # Process courses one by one for Azure OpenAI
         for course in courses:
             description = course.get("description", "")
             
             if description:
-                embedding = azure_openai_generate_embeddings(description, deployment_name)
+                embedding = gpt_generate_embeddings(description, gpt_model_name)
                 if embedding:
                     course["embedding"] = embedding
                 else:
@@ -170,7 +172,7 @@ def process_courses(input_file, output_file, deployment_name):
             
             updated_courses.append(course)
     
-    elif embedding_model == "sbert":
+    elif model == "sbert":
         # Process courses in batches for SBERT
         descriptions = []
         valid_indices = []
@@ -215,4 +217,4 @@ for file_path in json_files:
     output_file = f'{embeddings_path}output_embeddings_{semester}.json'  # Output file
 
     # Process courses and generate embeddings
-    process_courses(input_file, output_file, deployment_name)
+    process_courses(input_file, output_file, gpt_model_name)
