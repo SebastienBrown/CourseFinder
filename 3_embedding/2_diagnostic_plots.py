@@ -237,16 +237,14 @@ with PdfPages(pdf_path) as pdf:
         ax.legend(handles=legend_elements, title='Courses', fontsize=8, title_fontsize=9, 
                  loc='best')
         
-        # Add custom legend below the plot with course titles
-        legend_y = ax.get_ylim()[0] - (ax.get_ylim()[1] - ax.get_ylim()[0]) * 0.15  # Position below plot
-        for j, (color, title) in enumerate(zip(colors, course_titles)):
-            # Add colored dot with higher zorder to ensure visibility
-            ax.scatter(ax.get_xlim()[0] + (ax.get_xlim()[1] - ax.get_xlim()[0]) * 0.1, legend_y, 
-                      c=color, s=60, alpha=0.7, zorder=10, edgecolors='black', linewidth=0.5)
-            # Add course title text (just colored dot + title, no letter)
-            ax.text(ax.get_xlim()[0] + (ax.get_xlim()[1] - ax.get_xlim()[0]) * 0.15, legend_y, 
-                   title, fontsize=8, va='center', ha='left')
-            legend_y -= (ax.get_ylim()[1] - ax.get_ylim()[0]) * 0.08  # Space between legend items
+        # Add custom legend below the plot using the same construct as built-in legend
+        legend_elements_titles = [plt.Line2D([0], [0], marker='o', color='w', 
+                                           markerfacecolor=color, markersize=8, label=title)
+                                for color, title in zip(colors, course_titles)]
+        
+        # Position legend below the plot
+        ax.legend(handles=legend_elements_titles, fontsize=8, 
+                 loc='upper center', bbox_to_anchor=(0.5, -0.15), ncol=2)
         
         successful_plots += 1
         
