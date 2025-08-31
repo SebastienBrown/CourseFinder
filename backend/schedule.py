@@ -389,7 +389,7 @@ def semantic_search():
 
     combined_list = deduped
 
-        # Extract all course names
+    # Extract all course names
     course_names = [course["course_title"] for course in combined_list]
 
     # Count frequencies
@@ -445,7 +445,7 @@ def submit_courses(payload=None, user_id=None, user_email=None):
             if courses_list:  # Only include if non-empty list
                 row_data[semester] = courses_list
 
-    print("Prepared row data:", row_data)
+    #print("Prepared row data:", row_data)
 
     # Send upsert to Supabase REST API
     headers = {
