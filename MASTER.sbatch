@@ -58,11 +58,13 @@ export SEMESTERS="0910F,0910S,1011F,1011S,1112F,1112S,1213F,1213S,1314F,1314S,14
 
 # Common file paths
 export LLM_CLEANED_DIR="${DROPBOX}/data/2_intermediate/1_llm_cleaned"
-export DIAGNOSTIC_PLOTS_DIR="${DROPBOX}/output/3_embedding/"
+export DIAGNOSTIC_PLOTS_SUBDIR="${DROPBOX}/output/3_embedding/diagnostic_plots/"
+export SIMILARITY_DENSITY_SUBDIR="${DROPBOX}/output/3_embedding/similarity_density/"
 
 # Create necessary directories
 mkdir -p "${CONTRASTIVE_SAVE_DIR}"
-mkdir -p "${DIAGNOSTIC_PLOTS_DIR}"
+mkdir -p "${DIAGNOSTIC_PLOTS_SUBDIR}"
+mkdir -p "${SIMILARITY_DENSITY_SUBDIR}"
 
 # Loop through models
 # for MODEL in "${MODELS[@]}"; do
@@ -196,10 +198,10 @@ echo ""
 echo "==== Concatenating PDFs... ===="
 
 # Set environment variables for PDF concatenation
-export GPT_DIAGNOSTIC_PDF="${DROPBOX}/output/3_embedding/diagnostic_plots_gpt_${MODE}_all.pdf"
-export SBERT_DIAGNOSTIC_PDF="${DROPBOX}/output/3_embedding/diagnostic_plots_sbert_${MODE}_all.pdf"
-export GPT_SIMILARITY_PDF="${DROPBOX}/output/4_similarity/similarity_density_gpt_${MODE}.pdf"
-export SBERT_SIMILARITY_PDF="${DROPBOX}/output/4_similarity/similarity_density_sbert_${MODE}.pdf"
+export GPT_DIAGNOSTIC_PDF="${DIAGNOSTIC_PLOTS_SUBDIR}diagnostic_plots_gpt_${MODE}_all.pdf"
+export SBERT_DIAGNOSTIC_PDF="${DIAGNOSTIC_PLOTS_SUBDIR}diagnostic_plots_sbert_${MODE}_all.pdf"
+export GPT_SIMILARITY_PDF="${SIMILARITY_DENSITY_SUBDIR}similarity_density_gpt_${MODE}.pdf"
+export SBERT_SIMILARITY_PDF="${SIMILARITY_DENSITY_SUBDIR}similarity_density_sbert_${MODE}.pdf"
 export COMBINED_PDF="${DROPBOX}/output/3_embedding/embedding_plots_all.pdf"
 
 # Create concatenated PDFs using Python script
