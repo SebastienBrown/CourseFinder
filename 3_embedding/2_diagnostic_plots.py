@@ -12,6 +12,7 @@ import numpy as np
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 from dotenv import load_dotenv
+from matplotlib.backends.backend_pdf import PdfPages
 load_dotenv()
 
 # ========================================
@@ -27,6 +28,7 @@ output_dir = os.environ.get("DIAGNOSTIC_PLOTS_DIR", dropbox + 'output/3_embeddin
 
 model = os.environ.get("MODEL", "gpt")
 mode = os.environ.get("MODE", "off_the_shelf")
+pdf_path = os.environ.get("DIAGNOSTIC_PLOTS_PDF", f'{output_dir}diagnostic_plots_{model}_{mode}_all.pdf')
 
 random_seed = int(os.environ.get("CONTRASTIVE_RANDOM_SEED", "42"))
 
@@ -105,10 +107,7 @@ print(f"Using all {len(all_rows)} rows")
 # ========================================
 # Generate Plots
 # ========================================
-from matplotlib.backends.backend_pdf import PdfPages
-
 # Create a single PDF with multiple pages
-pdf_path = f'{output_dir}diagnostic_plots_{model}_{mode}_all.pdf'
 successful_plots = 0
 plots_per_page = 4
 
