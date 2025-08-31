@@ -65,129 +65,129 @@ mkdir -p "${CONTRASTIVE_SAVE_DIR}"
 mkdir -p "${DIAGNOSTIC_PLOTS_DIR}"
 
 # Loop through models
-for MODEL in "${MODELS[@]}"; do
-    echo ""
-    echo "==============================================="
-    echo "Processing model: $MODEL"
-    echo "==============================================="
+# for MODEL in "${MODELS[@]}"; do
+#     echo ""
+#     echo "==============================================="
+#     echo "Processing model: $MODEL"
+#     echo "==============================================="
     
-    # Set model-specific environment variables
-    export MODEL="$MODEL"
+#     # Set model-specific environment variables
+#     export MODEL="$MODEL"
     
-    # Update file paths based on current model
-    export EMBEDDINGS_PATH="${DROPBOX}/data/2_intermediate/2_embeddings/${MODEL}_${MODE}/"
-    export SIMILARITY_OUTPUT_FILE="${DROPBOX}/data/2_intermediate/3_similarity/${MODEL}_${MODE}/output_similarity_all.json"
-    export OUTPUT_PDF="${DROPBOX}/output/3_embedding/similarity_density/similarity_density_${MODEL}_${MODE}.pdf"
-    export DIAGNOSTIC_PLOTS_PDF="${DROPBOX}/output/3_embedding/diagnostic_plots/diagnostic_plots_${MODEL}_${MODE}_all.pdf"
+#     # Update file paths based on current model
+#     export EMBEDDINGS_PATH="${DROPBOX}/data/2_intermediate/2_embeddings/${MODEL}_${MODE}/"
+#     export SIMILARITY_OUTPUT_FILE="${DROPBOX}/data/2_intermediate/3_similarity/${MODEL}_${MODE}/output_similarity_all.json"
+#     export SIMILARITY_DENSITY_PDF="${DROPBOX}/output/3_embedding/similarity_density/similarity_density_${MODEL}_${MODE}.pdf"
+#     export DIAGNOSTIC_PLOTS_PDF="${DROPBOX}/output/3_embedding/diagnostic_plots/diagnostic_plots_${MODEL}_${MODE}_all.pdf"
     
-    # Create necessary directories for current model
-    mkdir -p "${EMBEDDINGS_PATH}"
-    mkdir -p "${DROPBOX}/data/2_intermediate/3_similarity/${MODEL}_${MODE}/"
-    mkdir -p "${DROPBOX}/output/4_similarity/"
+#     # Create necessary directories for current model
+#     mkdir -p "${EMBEDDINGS_PATH}"
+#     mkdir -p "${DROPBOX}/data/2_intermediate/3_similarity/${MODEL}_${MODE}/"
+#     mkdir -p "${DROPBOX}/output/4_similarity/"
     
-    # Print job information
-    echo "==============================================="
-    echo "Starting embedding and similarity pipeline..."
-    echo "Job ID: $SLURM_JOB_ID"
-    echo "Node: $SLURMD_NODENAME"
-    echo "Run Contrastive Learning: $RUN_CONTRASTIVE_LEARNING"
-    echo "Embedding Model: $MODEL"
-    echo "Mode: $MODE"
-    echo "==============================================="
+#     # Print job information
+#     echo "==============================================="
+#     echo "Starting embedding and similarity pipeline..."
+#     echo "Job ID: $SLURM_JOB_ID"
+#     echo "Node: $SLURMD_NODENAME"
+#     echo "Run Contrastive Learning: $RUN_CONTRASTIVE_LEARNING"
+#     echo "Embedding Model: $MODEL"
+#     echo "Mode: $MODE"
+#     echo "==============================================="
 
-    # -----------------------------
-    # Compute Embeddings
-    # -----------------------------
-    # Step 0: Contrastive Learning (Optional)
-    if [ "$RUN_CONTRASTIVE_LEARNING" = "true" ]; then
-        echo ""
-        echo "==== Running contrastive learning... ===="
-        python "3_embedding/0_contrastive_learning.py"
-        if [ $? -ne 0 ]; then
-            echo "✗ Contrastive learning failed"
-            exit 1
-        fi
-        echo "✓ Contrastive learning completed"
-    else
-        echo ""
-        echo "==== Skipping contrastive learning (RUN_CONTRASTIVE_LEARNING=false) ===="
-    fi
+#     # -----------------------------
+#     # Compute Embeddings
+#     # -----------------------------
+#     # Step 0: Contrastive Learning (Optional)
+#     if [ "$RUN_CONTRASTIVE_LEARNING" = "true" ]; then
+#         echo ""
+#         echo "==== Running contrastive learning... ===="
+#         python "3_embedding/0_contrastive_learning.py"
+#         if [ $? -ne 0 ]; then
+#             echo "✗ Contrastive learning failed"
+#             exit 1
+#         fi
+#         echo "✓ Contrastive learning completed"
+#     else
+#         echo ""
+#         echo "==== Skipping contrastive learning (RUN_CONTRASTIVE_LEARNING=false) ===="
+#     fi
 
-    # Step 1: Compute embeddings for courses
-    # echo ""
-    # echo "==== Computing embeddings for courses... ===="
-    # python "3_embedding/1_embedding.py"
-    # if [ $? -ne 0 ]; then
-    #     echo "✗ Embedding computation failed"
-    #     exit 1
-    # fi
-    # echo "✓ Embedding computation completed"
+#     # Step 1: Compute embeddings for courses
+#     # echo ""
+#     # echo "==== Computing embeddings for courses... ===="
+#     # python "3_embedding/1_embedding.py"
+#     # if [ $? -ne 0 ]; then
+#     #     echo "✗ Embedding computation failed"
+#     #     exit 1
+#     # fi
+#     # echo "✓ Embedding computation completed"
 
-    # Step 2: Generate diagnostic plots
-    echo ""
-    echo "==== Generating diagnostic plots... ===="
-    python "3_embedding/2_diagnostic_plots.py"
-    if [ $? -ne 0 ]; then
-        echo "✗ Diagnostic plots generation failed"
-        exit 1
-    fi
-    echo "✓ Diagnostic plots generation completed"
-
-
-    # -----------------------------
-    # Compute Similarity Scores
-    # -----------------------------
-    # Step 1: Compute similarity scores for courses
-    echo ""
-    echo "==== Computing similarity scores for courses... ===="
-    python "4_similarity/1_similarity_all.py"
-    if [ $? -ne 0 ]; then
-        echo "✗ Similarity computation failed"
-        exit 1
-    fi
-    echo "✓ Similarity computation completed"
-
-    # Step 2: Create density plot of similarity scores
-    echo ""
-    echo "==== Creating density plot of similarity scores... ===="
-    python "4_similarity/2_similarity_density.py"
-    if [ $? -ne 0 ]; then
-        echo "✗ Density plot creation failed"
-        exit 1
-    fi
-    echo "✓ Density plot creation completed"
+#     # Step 2: Generate diagnostic plots
+#     echo ""
+#     echo "==== Generating diagnostic plots... ===="
+#     python "3_embedding/2_diagnostic_plots.py"
+#     if [ $? -ne 0 ]; then
+#         echo "✗ Diagnostic plots generation failed"
+#         exit 1
+#     fi
+#     echo "✓ Diagnostic plots generation completed"
 
 
-    # -----------------------------
-    # Compute Coordinates and Similar Courses
-    # -----------------------------
-    # Step 1: Compute coordinates
-    # echo ""
-    # echo "==== Computing coordinates... ===="
-    # python "5_webapp/1_tsne_coords.py"
-    # if [ $? -ne 0 ]; then
-    #     echo "✗ Coordinates computation failed"
-    #     exit 1
-    # fi
-    # echo "✓ Coordinates computation completed"
+#     # -----------------------------
+#     # Compute Similarity Scores
+#     # -----------------------------
+#     # Step 1: Compute similarity scores for courses
+#     echo ""
+#     echo "==== Computing similarity scores for courses... ===="
+#     python "4_similarity/1_similarity_all.py"
+#     if [ $? -ne 0 ]; then
+#         echo "✗ Similarity computation failed"
+#         exit 1
+#     fi
+#     echo "✓ Similarity computation completed"
 
-    # # Step 2: Append similar courses
-    # echo ""
-    # echo "==== Appending similar courses... ===="
-    # python "5_webapp/2_append_similar_courses.py"
-    # if [ $? -ne 0 ]; then
-    #     echo "✗ Appending similar courses failed"
-    #     exit 1
-    # fi
-    # echo "✓ Appending similar courses completed"
+#     # Step 2: Create density plot of similarity scores
+#     echo ""
+#     echo "==== Creating density plot of similarity scores... ===="
+#     python "4_similarity/2_similarity_density.py"
+#     if [ $? -ne 0 ]; then
+#         echo "✗ Density plot creation failed"
+#         exit 1
+#     fi
+#     echo "✓ Density plot creation completed"
 
 
-    # -----------------------------
-    echo ""
-    echo "🎉 Processing completed for model: $MODEL"
-    echo "==============================================="
+#     # -----------------------------
+#     # Compute Coordinates and Similar Courses
+#     # -----------------------------
+#     # Step 1: Compute coordinates
+#     # echo ""
+#     # echo "==== Computing coordinates... ===="
+#     # python "5_webapp/1_tsne_coords.py"
+#     # if [ $? -ne 0 ]; then
+#     #     echo "✗ Coordinates computation failed"
+#     #     exit 1
+#     # fi
+#     # echo "✓ Coordinates computation completed"
+
+#     # # Step 2: Append similar courses
+#     # echo ""
+#     # echo "==== Appending similar courses... ===="
+#     # python "5_webapp/2_append_similar_courses.py"
+#     # if [ $? -ne 0 ]; then
+#     #     echo "✗ Appending similar courses failed"
+#     #     exit 1
+#     # fi
+#     # echo "✓ Appending similar courses completed"
+
+
+#     # -----------------------------
+#     echo ""
+#     echo "🎉 Processing completed for model: $MODEL"
+#     echo "==============================================="
     
-done
+# done
 
 # -----------------------------
 # Concatenate PDFs
@@ -195,26 +195,23 @@ done
 echo ""
 echo "==== Concatenating PDFs... ===="
 
-# Check if we have the required tools
-if ! command -v pdftk &> /dev/null; then
-    echo "Warning: pdftk not found, trying to install..."
-    # Try to install pdftk (this might not work on all systems)
-    if command -v apt-get &> /dev/null; then
-        sudo apt-get update && sudo apt-get install -y pdftk
-    elif command -v yum &> /dev/null; then
-        sudo yum install -y pdftk
-    else
-        echo "Error: Could not install pdftk. Please install it manually."
-        exit 1
-    fi
+# Set environment variables for PDF concatenation
+export GPT_DIAGNOSTIC_PDF="${DROPBOX}/output/3_embedding/diagnostic_plots_gpt_${MODE}_all.pdf"
+export SBERT_DIAGNOSTIC_PDF="${DROPBOX}/output/3_embedding/diagnostic_plots_sbert_${MODE}_all.pdf"
+export GPT_SIMILARITY_PDF="${DROPBOX}/output/4_similarity/similarity_density_gpt_${MODE}.pdf"
+export SBERT_SIMILARITY_PDF="${DROPBOX}/output/4_similarity/similarity_density_sbert_${MODE}.pdf"
+export COMBINED_PDF="${DROPBOX}/output/3_embedding/embedding_plots_all.pdf"
+
+# Create concatenated PDFs using Python script
+echo "Creating combined embedding plots PDF..."
+python concatenate_pdfs.py
+if [ $? -ne 0 ]; then
+    echo "✗ PDF concatenation failed"
+    exit 1
 fi
 
-# Create concatenated PDFs
-echo "Creating combined embedding plots PDF..."
-pdftk "${DROPBOX}/output/3_embedding/diagnostic_plots_gpt_${MODE}_all.pdf" "${DROPBOX}/output/3_embedding/diagnostic_plots_sbert_${MODE}_all.pdf" "${DROPBOX}/output/4_similarity/similarity_density_gpt_${MODE}.pdf" "${DROPBOX}/output/4_similarity/similarity_density_sbert_${MODE}.pdf" cat output "${DROPBOX}/output/3_embedding/embedding_plots_all.pdf"
-
 echo "✓ PDF concatenation completed"
-echo "Combined embedding plots: ${DROPBOX}/output/3_embedding/embedding_plots_all.pdf"
+echo "Combined embedding plots: ${COMBINED_PDF}"
 
 echo ""
 echo "🎉 Embedding and similarity pipeline completed successfully for all models!"

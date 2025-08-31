@@ -15,7 +15,7 @@ mode = os.environ.get("MODE", "off_the_shelf")
 
 similarity_file = os.environ.get("SIMILARITY_OUTPUT_FILE", dropbox + f'data/2_intermediate/3_similarity/{model}_{mode}/output_similarity_all.json')
 diagnostics_file = os.environ.get("CONTRASTIVE_DIAGNOSTICS_PATH", dropbox + 'data/1_raw/diagnostics/diagnostics_20250827.csv')
-output_pdf = os.environ.get("OUTPUT_PDF", dropbox + f'output/4_similarity/similarity_density_{model}_{mode}.pdf')
+output_pdf = os.environ.get("SIMILARITY_DENSITY_PDF", dropbox + f'output/4_similarity/similarity_density_{model}_{mode}.pdf')
 
 # ========================================
 # Functions
