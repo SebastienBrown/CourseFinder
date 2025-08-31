@@ -77,8 +77,8 @@ for MODEL in "${MODELS[@]}"; do
     # Update file paths based on current model
     export EMBEDDINGS_PATH="${DROPBOX}/data/2_intermediate/2_embeddings/${MODEL}_${MODE}/"
     export SIMILARITY_OUTPUT_FILE="${DROPBOX}/data/2_intermediate/3_similarity/${MODEL}_${MODE}/output_similarity_all.json"
-    export OUTPUT_PDF="${DROPBOX}/output/4_similarity/similarity_density_${MODEL}_${MODE}.pdf"
-    export DIAGNOSTIC_PLOTS_PDF="${DROPBOX}/output/3_embedding/diagnostic_plots_${MODEL}_${MODE}_all.pdf"
+    export OUTPUT_PDF="${DROPBOX}/output/3_embedding/similarity_density/similarity_density_${MODEL}_${MODE}.pdf"
+    export DIAGNOSTIC_PLOTS_PDF="${DROPBOX}/output/3_embedding/diagnostic_plots/diagnostic_plots_${MODEL}_${MODE}_all.pdf"
     
     # Create necessary directories for current model
     mkdir -p "${EMBEDDINGS_PATH}"
