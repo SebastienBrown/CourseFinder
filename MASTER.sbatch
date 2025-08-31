@@ -3,7 +3,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
 
-#SBATCH --mem=160GB
+#SBATCH --mem=200GB
 #SBATCH --time=30:00:00
 #SBATCH --partition=sched_mit_econ
 
@@ -30,7 +30,7 @@ export FILEDATE='20250830'
 export CONTRASTIVE_DIAGNOSTICS_PATH="${DROPBOX}/data/1_raw/diagnostics/diagnostics_${FILEDATE}.csv"
 
 # Model and mode for similarity calculations
-export MODEL="sbert"  # "gpt" or "sbert"
+MODELS=("gpt" "sbert")  # Array of models to process
 export MODE="off_the_shelf"  # "by-major" "manual" or "off_the_shelf"
 
 # Only for GPT
@@ -56,117 +56,137 @@ export CONTRASTIVE_RANDOM_SEED="42"  # Random seed for reproducible splits
 # Semester list
 export SEMESTERS="0910F,0910S,1011F,1011S,1112F,1112S,1213F,1213S,1314F,1314S,1415F,1415S,1516F,1516S,1617F,1617S,1718F,1718S,1819F,1819S,1920F,1920S,2021F,2021J,2021S,2122F,2122J,2122S,2223F,2223S,2324F,2324S,2425F,2425S,2526F,2526S"
 
-# File paths
+# Common file paths
 export LLM_CLEANED_DIR="${DROPBOX}/data/2_intermediate/1_llm_cleaned"
-export EMBEDDINGS_PATH="${DROPBOX}/data/2_intermediate/2_embeddings/${MODEL}_${MODE}/"
-export SIMILARITY_OUTPUT_FILE="${DROPBOX}/data/2_intermediate/3_similarity/${MODEL}_${MODE}/output_similarity_all.json"
-export OUTPUT_PDF="${DROPBOX}/output/4_similarity/similarity_density_${MODEL}_${MODE}.pdf"
 export DIAGNOSTIC_PLOTS_DIR="${DROPBOX}/output/3_embedding/"
 
 # Create necessary directories
-mkdir -p "${EMBEDDINGS_PATH}"
-mkdir -p "${DROPBOX}/data/2_intermediate/3_similarity/${MODEL}_${MODE}/"
-mkdir -p "${DROPBOX}/output/4_similarity/"
 mkdir -p "${CONTRASTIVE_SAVE_DIR}"
 mkdir -p "${DIAGNOSTIC_PLOTS_DIR}"
 
-# Print job information
-echo "==============================================="
-echo "Starting embedding and similarity pipeline..."
-echo "Job ID: $SLURM_JOB_ID"
-echo "Node: $SLURMD_NODENAME"
-echo "Run Contrastive Learning: $RUN_CONTRASTIVE_LEARNING"
-echo "Embedding Model: $MODEL"
-echo "Mode: $MODE"
-echo "==============================================="
-
-# -----------------------------
-# Compute Embeddings
-# -----------------------------
-# Step 0: Contrastive Learning (Optional)
-if [ "$RUN_CONTRASTIVE_LEARNING" = "true" ]; then
+# Loop through models
+for MODEL in "${MODELS[@]}"; do
     echo ""
-    echo "==== Running contrastive learning... ===="
-    python "3_embedding/0_contrastive_learning.py"
+    echo "==============================================="
+    echo "Processing model: $MODEL"
+    echo "==============================================="
+    
+    # Set model-specific environment variables
+    export MODEL="$MODEL"
+    
+    # Update file paths based on current model
+    export EMBEDDINGS_PATH="${DROPBOX}/data/2_intermediate/2_embeddings/${MODEL}_${MODE}/"
+    export SIMILARITY_OUTPUT_FILE="${DROPBOX}/data/2_intermediate/3_similarity/${MODEL}_${MODE}/output_similarity_all.json"
+    export OUTPUT_PDF="${DROPBOX}/output/4_similarity/similarity_density_${MODEL}_${MODE}.pdf"
+    
+    # Create necessary directories for current model
+    mkdir -p "${EMBEDDINGS_PATH}"
+    mkdir -p "${DROPBOX}/data/2_intermediate/3_similarity/${MODEL}_${MODE}/"
+    mkdir -p "${DROPBOX}/output/4_similarity/"
+    
+    # Print job information
+    echo "==============================================="
+    echo "Starting embedding and similarity pipeline..."
+    echo "Job ID: $SLURM_JOB_ID"
+    echo "Node: $SLURMD_NODENAME"
+    echo "Run Contrastive Learning: $RUN_CONTRASTIVE_LEARNING"
+    echo "Embedding Model: $MODEL"
+    echo "Mode: $MODE"
+    echo "==============================================="
+
+    # -----------------------------
+    # Compute Embeddings
+    # -----------------------------
+    # Step 0: Contrastive Learning (Optional)
+    if [ "$RUN_CONTRASTIVE_LEARNING" = "true" ]; then
+        echo ""
+        echo "==== Running contrastive learning... ===="
+        python "3_embedding/0_contrastive_learning.py"
+        if [ $? -ne 0 ]; then
+            echo "✗ Contrastive learning failed"
+            exit 1
+        fi
+        echo "✓ Contrastive learning completed"
+    else
+        echo ""
+        echo "==== Skipping contrastive learning (RUN_CONTRASTIVE_LEARNING=false) ===="
+    fi
+
+    # Step 1: Compute embeddings for courses
+    # echo ""
+    # echo "==== Computing embeddings for courses... ===="
+    # python "3_embedding/1_embedding.py"
+    # if [ $? -ne 0 ]; then
+    #     echo "✗ Embedding computation failed"
+    #     exit 1
+    # fi
+    # echo "✓ Embedding computation completed"
+
+    # Step 2: Generate diagnostic plots
+    echo ""
+    echo "==== Generating diagnostic plots... ===="
+    python "3_embedding/2_diagnostic_plots.py"
     if [ $? -ne 0 ]; then
-        echo "✗ Contrastive learning failed"
+        echo "✗ Diagnostic plots generation failed"
         exit 1
     fi
-    echo "✓ Contrastive learning completed"
-else
+    echo "✓ Diagnostic plots generation completed"
+
+
+    # -----------------------------
+    # Compute Similarity Scores
+    # -----------------------------
+    # Step 1: Compute similarity scores for courses
+    # echo ""
+    # echo "==== Computing similarity scores for courses... ===="
+    # python "4_similarity/1_similarity_all.py"
+    # if [ $? -ne 0 ]; then
+    #     echo "✗ Similarity computation failed"
+    #     exit 1
+    # fi
+    # echo "✓ Similarity computation completed"
+
+    # Step 2: Create density plot of similarity scores
     echo ""
-    echo "==== Skipping contrastive learning (RUN_CONTRASTIVE_LEARNING=false) ===="
-fi
+    echo "==== Creating density plot of similarity scores... ===="
+    python "4_similarity/2_similarity_density.py"
+    if [ $? -ne 0 ]; then
+        echo "✗ Density plot creation failed"
+        exit 1
+    fi
+    echo "✓ Density plot creation completed"
 
-# Step 1: Compute embeddings for courses
-# echo ""
-# echo "==== Computing embeddings for courses... ===="
-# python "3_embedding/1_embedding.py"
-# if [ $? -ne 0 ]; then
-#     echo "✗ Embedding computation failed"
-#     exit 1
-# fi
-# echo "✓ Embedding computation completed"
 
-# Step 2: Generate diagnostic plots
+    # -----------------------------
+    # Compute Coordinates and Similar Courses
+    # -----------------------------
+    # Step 1: Compute coordinates
+    # echo ""
+    # echo "==== Computing coordinates... ===="
+    # python "5_webapp/1_tsne_coords.py"
+    # if [ $? -ne 0 ]; then
+    #     echo "✗ Coordinates computation failed"
+    #     exit 1
+    # fi
+    # echo "✓ Coordinates computation completed"
+
+    # # Step 2: Append similar courses
+    # echo ""
+    # echo "==== Appending similar courses... ===="
+    # python "5_webapp/2_append_similar_courses.py"
+    # if [ $? -ne 0 ]; then
+    #     echo "✗ Appending similar courses failed"
+    #     exit 1
+    # fi
+    # echo "✓ Appending similar courses completed"
+
+
+    # -----------------------------
+    echo ""
+    echo "🎉 Processing completed for model: $MODEL"
+    echo "==============================================="
+    
+done
+
 echo ""
-echo "==== Generating diagnostic plots... ===="
-python "3_embedding/2_diagnostic_plots.py"
-if [ $? -ne 0 ]; then
-    echo "✗ Diagnostic plots generation failed"
-    exit 1
-fi
-echo "✓ Diagnostic plots generation completed"
-
-
-# -----------------------------
-# Compute Similarity Scores
-# -----------------------------
-# Step 1: Compute similarity scores for courses
-# echo ""
-# echo "==== Computing similarity scores for courses... ===="
-# python "4_similarity/1_similarity_all.py"
-# if [ $? -ne 0 ]; then
-#     echo "✗ Similarity computation failed"
-#     exit 1
-# fi
-# echo "✓ Similarity computation completed"
-
-# Step 2: Create density plot of similarity scores
-echo ""
-echo "==== Creating density plot of similarity scores... ===="
-python "4_similarity/2_similarity_density.py"
-if [ $? -ne 0 ]; then
-    echo "✗ Density plot creation failed"
-    exit 1
-fi
-echo "✓ Density plot creation completed"
-
-
-# -----------------------------
-# Compute Coordinates and Similar Courses
-# -----------------------------
-# Step 1: Compute coordinates
-# echo ""
-# echo "==== Computing coordinates... ===="
-# python "5_webapp/1_tsne_coords.py"
-# if [ $? -ne 0 ]; then
-#     echo "✗ Coordinates computation failed"
-#     exit 1
-# fi
-# echo "✓ Coordinates computation completed"
-
-# # Step 2: Append similar courses
-# echo ""
-# echo "==== Appending similar courses... ===="
-# python "5_webapp/2_append_similar_courses.py"
-# if [ $? -ne 0 ]; then
-#     echo "✗ Appending similar courses failed"
-#     exit 1
-# fi
-# echo "✓ Appending similar courses completed"
-
-
-# -----------------------------# -----------------------------
-echo ""
-echo "🎉 Embedding and similarity pipeline completed successfully!"
+echo "🎉 Embedding and similarity pipeline completed successfully for all models!"
