@@ -14,9 +14,9 @@ if not dropbox or not output_pdf:
     sys.exit(1)
 
 # Get model configurations from environment variable (same as MASTER.sbatch)
-model_configs_str = os.environ.get("MODEL_CONFIGS")
+model_configs_str = os.environ.get("MODEL_CONFIGS_STR")
 if not model_configs_str:
-    print("Error: MODEL_CONFIGS environment variable not set")
+    print("Error: MODEL_CONFIGS_STR environment variable not set")
     sys.exit(1)
 
 # Parse the MODEL_CONFIGS string into a list of tuples
