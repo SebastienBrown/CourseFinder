@@ -37,7 +37,7 @@ MODEL_CONFIGS=(
     # "sbert:off_the_shelf:"
 
 # Export MODEL_CONFIGS as space-separated string for Python script
-export MODEL_CONFIGS="${MODEL_CONFIGS[*]}"
+export MODEL_CONFIGS_STR="${MODEL_CONFIGS[*]}"
 
 # Only for GPT
 export GPT_MODEL_NAME="text-embedding-3-small"
@@ -77,10 +77,6 @@ for i in "${!MODEL_CONFIGS[@]}"; do
     MODEL=$(echo "$CONFIG" | cut -d: -f1)
     MODE=$(echo "$CONFIG" | cut -d: -f2)
     ALPHA=$(echo "$CONFIG" | cut -d: -f3)
-    
-    # Debug: print what we're parsing
-    echo "DEBUG: i=$i, CONFIG='$CONFIG'"
-    echo "DEBUG: MODEL='$MODEL', MODE='$MODE', ALPHA='$ALPHA'"
     
     echo ""
     echo "==============================================="
