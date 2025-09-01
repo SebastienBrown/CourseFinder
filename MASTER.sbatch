@@ -71,11 +71,16 @@ mkdir -p "${DIAGNOSTIC_PLOTS_SUBDIR}"
 mkdir -p "${SIMILARITY_DENSITY_SUBDIR}"
 
 # Loop through model configurations
-for CONFIG in "${MODEL_CONFIGS[@]}"; do
+for i in "${!MODEL_CONFIGS[@]}"; do
+    CONFIG="${MODEL_CONFIGS[$i]}"
     # Parse the configuration string using parameter expansion
     MODEL=$(echo "$CONFIG" | cut -d: -f1)
     MODE=$(echo "$CONFIG" | cut -d: -f2)
     ALPHA=$(echo "$CONFIG" | cut -d: -f3)
+    
+    # Debug: print what we're parsing
+    echo "DEBUG: i=$i, CONFIG='$CONFIG'"
+    echo "DEBUG: MODEL='$MODEL', MODE='$MODE', ALPHA='$ALPHA'"
     
     echo ""
     echo "==============================================="
