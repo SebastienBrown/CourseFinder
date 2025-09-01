@@ -200,11 +200,11 @@ fig.suptitle(f'{model.upper()}, {mode.replace("_", " ").title()}', fontsize=16)
 
 # Plot 1: Within vs Across Department
 if same_dept_scores:
-    sns.kdeplot(same_dept_scores, fill=False, bw_adjust=0.2, color='blue', alpha=0.6, 
+    sns.kdeplot(same_dept_scores, fill=False, bw_adjust=0.2, color='blue', alpha=0.8, linewidth=2.5,
                 label=f'Within Department (n={len(same_dept_scores)})', ax=ax1)
 
 if diff_dept_scores:
-    sns.kdeplot(diff_dept_scores, fill=False, bw_adjust=0.2, color='pink', alpha=0.6, 
+    sns.kdeplot(diff_dept_scores, fill=False, bw_adjust=0.2, color='magenta', alpha=0.8, linewidth=2.5,
                 label=f'Across Departments (n={len(diff_dept_scores)})', ax=ax1)
 
 ax1.set_title('Similarity Scores by Department')
@@ -216,11 +216,11 @@ ax1.set_xticks(np.arange(0, 1.1, 0.1))
 
 # Plot 2: Diagnostics Positive vs Negative Pairs
 if diagnostics_pos_scores:
-    sns.kdeplot(diagnostics_pos_scores, fill=False, bw_adjust=0.2, color='blue', alpha=0.6, 
+    sns.kdeplot(diagnostics_pos_scores, fill=False, bw_adjust=0.2, color='blue', alpha=0.8, linewidth=2.5,
                 label=f'Diagnostics Positive (n={len(diagnostics_pos_scores)})', ax=ax2)
 
 if diagnostics_neg_scores:
-    sns.kdeplot(diagnostics_neg_scores, fill=False, bw_adjust=0.2, color='pink', alpha=0.6, 
+    sns.kdeplot(diagnostics_neg_scores, fill=False, bw_adjust=0.2, color='magenta', alpha=0.8, linewidth=2.5,
                 label=f'Diagnostics Negative (n={len(diagnostics_neg_scores)})', ax=ax2)
 
 ax2.set_title('Similarity Scores by Diagnostics Pairs')
