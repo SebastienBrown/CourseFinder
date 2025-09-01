@@ -241,9 +241,9 @@ with PdfPages(pdf_path) as pdf:
                                            markerfacecolor=color, markersize=8, label=title)
                                 for color, title in zip(colors, course_titles)]
         
-        # Position legend below the plot
-        ax.legend(handles=legend_elements_titles, fontsize=8, 
-                 loc='upper center', bbox_to_anchor=(0.5, -0.15), ncol=2)
+        # Position legend below the plot using figure coordinates
+        fig.legend(handles=legend_elements_titles, fontsize=8, 
+                  loc='upper center', bbox_to_anchor=(0.5, 0.02), ncol=2)
         
         successful_plots += 1
         
