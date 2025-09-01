@@ -72,8 +72,10 @@ mkdir -p "${SIMILARITY_DENSITY_SUBDIR}"
 
 # Loop through model configurations
 for CONFIG in "${MODEL_CONFIGS[@]}"; do
-    # Parse the configuration string
-    IFS=':' read -r MODEL MODE ALPHA <<< "$CONFIG"
+    # Parse the configuration string using parameter expansion
+    MODEL=$(echo "$CONFIG" | cut -d: -f1)
+    MODE=$(echo "$CONFIG" | cut -d: -f2)
+    ALPHA=$(echo "$CONFIG" | cut -d: -f3)
     
     echo ""
     echo "==============================================="

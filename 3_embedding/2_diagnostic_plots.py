@@ -241,9 +241,10 @@ with PdfPages(pdf_path) as pdf:
                                            markerfacecolor=color, markersize=8, label=title)
                                 for color, title in zip(colors, course_titles)]
         
-        # Position legend below the plot using figure coordinates
+        # Position legend below the plot using figure coordinates - one line per course title
         fig.legend(handles=legend_elements_titles, fontsize=8, 
-                  loc='upper center', bbox_to_anchor=(0.5, 0.02), ncol=2)
+                  loc='upper center', bbox_to_anchor=(0.5, 0.02), ncol=1, 
+                  frameon=False)
         
         successful_plots += 1
         
@@ -259,7 +260,8 @@ with PdfPages(pdf_path) as pdf:
                     axes[unused_pos].text(0.5, 0.5, '', ha='center', va='center', transform=axes[unused_pos].transAxes)
             
             plt.tight_layout()
-            pdf.savefig(fig, dpi=300, bbox_inches='tight')
+            # Save without bbox_inches='tight' to maintain consistent page size
+            pdf.savefig(fig, dpi=300)
             plt.close()
 
 print(f"\nGenerated {successful_plots} diagnostic plots in single PDF")
