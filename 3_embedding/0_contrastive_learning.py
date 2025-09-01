@@ -81,8 +81,7 @@ def create_triplets(pos_pairs, neg_pairs):
 
 def encode_texts(texts, model):
     inputs = tokenizer(texts, padding=True, truncation=True, return_tensors='pt').to(device)
-    with torch.no_grad():
-        return model(**inputs)
+    return model(**inputs)
 
 def compute_validation_loss(model, val_triplets):
     """Compute validation loss on validation triplets"""
