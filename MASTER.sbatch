@@ -39,20 +39,16 @@ MODEL_CONFIGS=(
 # Export MODEL_CONFIGS as space-separated string for Python script
 export MODEL_CONFIGS_STR="${MODEL_CONFIGS[*]}"
 
-# Only for GPT
+# Model names
 export GPT_MODEL_NAME="text-embedding-3-small"
-
-# Only for SBERT
 export SBERT_MODEL_NAME="sentence-transformers/all-MiniLM-L6-v2"
-export SBERT_MODEL_DIR="${CODE}/3_embedding/sbert_contrastive_model"
 
 # Contrastive learning configuration
 export CONTRASTIVE_JSON_PATH="${DROPBOX}/data/2_intermediate/1_llm_cleaned/amherst_courses_all.json"
-export CONTRASTIVE_SAVE_DIR="${CODE}/3_embedding/sbert_contrastive_model"
 
 export CONTRASTIVE_DROPOUT_RATE="0.1"
 export CONTRASTIVE_MAX_SELF_SUPERVISED="10000"  # Cap how many course descriptions to use
-export CONTRASTIVE_NUM_EPOCHS="10"
+export CONTRASTIVE_NUM_EPOCHS="25"
 export CONTRASTIVE_LR="1e-5"
 export CONTRASTIVE_RANDOM_SEED="42"  # Random seed for reproducible splits
 
@@ -86,6 +82,10 @@ for i in "${!MODEL_CONFIGS[@]}"; do
     # Set model-specific environment variables
     export MODEL="$MODEL"
     export MODE="$MODE"
+    
+    # Set model directory based on MODEL and MODE
+    export CONTRASTIVE_SAVE_DIR="${CODE}/3_embedding/model/${MODEL}_${MODE}/"
+    mkdir -p "${CONTRASTIVE_SAVE_DIR}"
     
     # Only set CONTRASTIVE_ALPHA if it's not empty (relevant for contrastive learning modes)
     if [ -n "$ALPHA" ]; then
@@ -179,24 +179,24 @@ for i in "${!MODEL_CONFIGS[@]}"; do
     # Compute Coordinates and Similar Courses
     # -----------------------------
     # Step 1: Compute coordinates
-    echo ""
-    echo "==== Computing coordinates... ===="
-    python "5_webapp/1_tsne_coords.py"
-    if [ $? -ne 0 ]; then
-        echo "✗ Coordinates computation failed"
-        exit 1
-    fi
-    echo "✓ Coordinates computation completed"
+    # echo ""
+    # echo "==== Computing coordinates... ===="
+    # python "5_webapp/1_tsne_coords.py"
+    # if [ $? -ne 0 ]; then
+    #     echo "✗ Coordinates computation failed"
+    #     exit 1
+    # fi
+    # echo "✓ Coordinates computation completed"
 
-    # Step 2: Append similar courses
-    echo ""
-    echo "==== Appending similar courses... ===="
-    python "5_webapp/2_append_similar_courses.py"
-    if [ $? -ne 0 ]; then
-        echo "✗ Appending similar courses failed"
-        exit 1
-    fi
-    echo "✓ Appending similar courses completed"
+    # # Step 2: Append similar courses
+    # echo ""
+    # echo "==== Appending similar courses... ===="
+    # python "5_webapp/2_append_similar_courses.py"
+    # if [ $? -ne 0 ]; then
+    #     echo "✗ Appending similar courses failed"
+    #     exit 1
+    # fi
+    # echo "✓ Appending similar courses completed"
 
 
     # -----------------------------
