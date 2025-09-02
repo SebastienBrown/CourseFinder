@@ -62,7 +62,6 @@ export SIMILARITY_DENSITY_SUBDIR="${DROPBOX}/output/3_embedding/similarity_densi
 export COMBINED_PDF="${DROPBOX}/output/3_embedding/embedding_plots_all.pdf"
 
 # Create necessary directories
-mkdir -p "${CONTRASTIVE_SAVE_DIR}"
 mkdir -p "${DIAGNOSTIC_PLOTS_SUBDIR}"
 mkdir -p "${SIMILARITY_DENSITY_SUBDIR}"
 

@@ -47,7 +47,10 @@ print("Loading embeddings...")
 embeddings_map = {}
 
 # Load from multiple files in directory
-embedding_files = glob.glob(os.path.join(embeddings_path, "output_embeddings_*.json"))
+embedding_files = [f for f in glob.glob(os.path.join(embeddings_path, "output_embeddings_*.json"))
+                  if len(f.split('_')[-1].replace('.json', '')) == 5 and 
+                  f.split('_')[-1].replace('.json', '')[:4].isdigit() and 
+                  f.split('_')[-1].replace('.json', '')[4].isalpha()]
 print(f"Found {len(embedding_files)} embedding files")
 
 for file_path in embedding_files:
@@ -144,7 +147,7 @@ with PdfPages(pdf_path) as pdf:
                     if course_code in course_codes:
                         title = course.get('course_title', course_code)
                         break
-            course_labels.append(f"{course_code}\n{semester}")
+            course_labels.append(f"{courses[j]}: {course_code}\n{semester}")
             # Store titles separately for legend
             course_titles.append(title)
         
@@ -228,13 +231,6 @@ with PdfPages(pdf_path) as pdf:
         ax.set_xlabel('PC1 (C-D aligned)', fontsize=9)
         ax.set_ylabel('PC2', fontsize=9)
         ax.set_title(f'Row {i + 1}', fontsize=10)
-        
-        # Add small in-graph legend for ABCD with smart positioning
-        legend_elements = [plt.Line2D([0], [0], marker='o', color='w', 
-                                     markerfacecolor=color, markersize=8, label=courses[j])
-                          for j, color in enumerate(colors)]
-        ax.legend(handles=legend_elements, title='Courses', fontsize=8, title_fontsize=9, 
-                 loc='best')
         
         # Add custom legend below the plot using the same construct as built-in legend
         legend_elements_titles = [plt.Line2D([0], [0], marker='o', color='w', 
