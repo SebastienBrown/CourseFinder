@@ -75,28 +75,33 @@ def concatenate_pdfs(input_files, output_file):
 # Build input files dynamically
 # ========================================
 input_files = []
+
+# First, add all diagnostic plots for all configs
 for model, mode in model_configs:
-    # Add diagnostic plots
     diagnostic_path = f"{dropbox}/output/3_embedding/diagnostic_plots/diagnostic_plots_{model}_{mode}_all.pdf"
     if os.path.exists(diagnostic_path):
         input_files.append(diagnostic_path)
-        print(f"Found diagnostic plots: {diagnostic_path}")
+        print(f"✓ Found diagnostic plots: {diagnostic_path}")
     else:
-        print(f"Warning: Diagnostic plots not found: {diagnostic_path}")
-    
-    # Add similarity density plots
+        print(f"⚠ Warning: Diagnostic plots not found: {diagnostic_path}")
+
+# Then, add all similarity density plots for all configs
+for model, mode in model_configs:
     similarity_path = f"{dropbox}/output/3_embedding/similarity_density/similarity_density_{model}_{mode}.pdf"
     if os.path.exists(similarity_path):
         input_files.append(similarity_path)
-        print(f"Found similarity density: {similarity_path}")
+        print(f"✓ Found similarity density: {similarity_path}")
     else:
-        print(f"Warning: Similarity density not found: {similarity_path}")
+        print(f"⚠ Warning: Similarity density not found: {similarity_path}")
 
 if not input_files:
     print("Error: No PDF files found to concatenate")
     sys.exit(1)
 
-print(f"Found {len(input_files)} PDF files to concatenate")
+print(f"\n=== Summary ===")
+print(f"Total PDF files to concatenate: {len(input_files)}")
+print(f"Diagnostic plots: {len([f for f in input_files if 'diagnostic_plots' in f])}")
+print(f"Similarity density plots: {len([f for f in input_files if 'similarity_density' in f])}")
 
 # ========================================
 # Main Script
