@@ -21,7 +21,7 @@ gpt_model_name = os.environ.get("GPT_MODEL_NAME", "text-embedding-3-small")
 # Only for SBERT
 sbert_mode = os.environ.get("SBERT_MODE", "off_the_shelf")  # "off_the_shelf" or "self_supervised"
 sbert_model_name = os.environ.get("SBERT_MODEL_NAME", 'sentence-transformers/all-MiniLM-L6-v2')
-sbert_model_dir = os.environ.get("SBERT_MODEL_DIR", "3_embedding/sbert_contrastive_model")  # folder where your fine-tuned model and tokenizer are saved
+sbert_model_dir = os.environ.get("CONTRASTIVE_SAVE_DIR", "3_embedding/model/default/")  # folder where your fine-tuned model and tokenizer are saved
 
 # Input File Paths
 llm_cleaned_dir = Path(os.environ.get("LLM_CLEANED_DIR", "llm_cleaned"))
