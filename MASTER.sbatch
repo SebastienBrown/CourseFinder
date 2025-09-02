@@ -30,11 +30,11 @@ export CONTRASTIVE_DIAGNOSTICS_PATH="${DROPBOX}/data/1_raw/diagnostics/diagnosti
 
 # Configuration: (model, mode, contrastive_alpha)
 MODEL_CONFIGS=(
+    "gpt:off_the_shelf:"
+    "sbert:off_the_shelf:"
     "sbert:by_major:0.0"
     "sbert:manual:0.3"
 )
-    # "gpt:off_the_shelf:"
-    # "sbert:off_the_shelf:"
 
 # Export MODEL_CONFIGS as space-separated string for Python script
 export MODEL_CONFIGS_STR="${MODEL_CONFIGS[*]}"
@@ -115,19 +115,19 @@ for i in "${!MODEL_CONFIGS[@]}"; do
     # Compute Embeddings
     # -----------------------------
     # Step 0: Contrastive Learning (Optional)
-    if [ "$MODE" != "off_the_shelf" ]; then
-        echo ""
-        echo "==== Running contrastive learning... ===="
-        python "3_embedding/0_contrastive_learning.py"
-        if [ $? -ne 0 ]; then
-            echo "✗ Contrastive learning failed"
-            exit 1
-        fi
-        echo "✓ Contrastive learning completed"
-    else
-        echo ""
-        echo "==== Skipping contrastive learning (MODE=off_the_shelf) ===="
-    fi
+    # if [ "$MODE" != "off_the_shelf" ]; then
+    #     echo ""
+    #     echo "==== Running contrastive learning... ===="
+    #     python "3_embedding/0_contrastive_learning.py"
+    #     if [ $? -ne 0 ]; then
+    #         echo "✗ Contrastive learning failed"
+    #         exit 1
+    #     fi
+    #     echo "✓ Contrastive learning completed"
+    # else
+    #     echo ""
+    #     echo "==== Skipping contrastive learning (MODE=off_the_shelf) ===="
+    # fi
 
     # Step 1: Compute embeddings for courses
     echo ""
