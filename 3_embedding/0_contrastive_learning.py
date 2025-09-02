@@ -20,7 +20,7 @@ dropbox = os.environ.get("DROPBOX", '/Users/hnaka24/Dropbox (Personal)/AmherstCo
 code = os.environ.get("CODE", '/Users/hnaka24/Desktop/code/CourseFinder/')
 
 json_path = os.environ.get("CONTRASTIVE_JSON_PATH", dropbox + 'data/2_intermediate/1_llm_cleaned/amherst_courses_2324S.json')
-save_dir = os.environ.get("CONTRASTIVE_SAVE_DIR", code + "3_embedding/sbert_contrastive_model")
+save_dir = os.environ.get("CONTRASTIVE_SAVE_DIR", code + "3_embedding/model/default/")
 
 model_name = os.environ.get("CONTRASTIVE_MODEL_NAME", 'sentence-transformers/all-MiniLM-L6-v2')
 dropout_rate = float(os.environ.get("CONTRASTIVE_DROPOUT_RATE", "0.1"))
