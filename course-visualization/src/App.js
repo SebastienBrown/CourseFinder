@@ -7,9 +7,10 @@ import Intake from "./Intake"; // intake semester checklist
 import SemesterCourseIntake from "./SemesterCourseIntake"; // per-semester course selector
 import { useNavigate } from "react-router-dom";
 import CourseInput from "./CourseInput";
-import { CURRENT_SEMESTER, API_BASE_URL } from "./config";
+import { CURRENT_SEMESTER } from "./config";
 import Upload from "./Upload";
 import IntakePrompt from "./IntakePrompt";
+import SurpriseButton from "./SurpriseButton";
 
 
 console.log("🟢 Using backend URL:", process.env.REACT_APP_BACKEND_URL);
@@ -128,6 +129,14 @@ function App() {
     }
   }, [backendUrl]);
 
+  // Handler for surprise recommendation
+  const handleSurpriseRecommendation = useCallback((courseCodes) => {
+    // Highlight the recommended course on the graph
+    setHighlighted(courseCodes);
+    // Check for conflicts with the recommended course
+    checkConflicts(courseCodes, currentSemester);
+  }, [checkConflicts, currentSemester]);
+
   // Effect to handle semester changes
   useEffect(() => {
     // When semester changes, check conflicts with current highlighted list
@@ -177,6 +186,7 @@ function App() {
             showOnboarding={showOnboarding}
             setShowOnboarding={setShowOnboarding}
           />
+          <SurpriseButton onSurpriseRecommendation={handleSurpriseRecommendation} />
         </Layout>
       }
     />

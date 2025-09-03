@@ -31,24 +31,37 @@ validator = QueryValidator()
 
 SUPABASE_TABLE_URL = f"{SUPABASE_URL}/rest/v1/user_courses"  # Example table path
 
-# Azure OpenAI Configuration from .env
+# --- Azure OpenAI: use TWO clients (different resources) ---
+
+# Chat resource (matches AZURE_CHATOPENAI_* in your .env)
+AZURE_CHATOPENAI_API_KEY = os.getenv("AZURE_CHATOPENAI_API_KEY")
+AZURE_CHATOPENAI_ENDPOINT = os.getenv("AZURE_CHATOPENAI_ENDPOINT")
+AZURE_CHATOPENAI_DEPLOYMENT = os.getenv("AZURE_CHATOPENAI_DEPLOYMENT")  # e.g., gpt-4o-mini
+CHATOPENAI_API_VERSION = os.getenv("CHATOPENAI_API_VERSION", "2025-01-01-preview")
+
+# Embeddings resource (matches AZURE_OPENAI_* in your .env)
 AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY")
 AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
-AZURE_OPENAI_DEPLOYMENT = os.getenv("AZURE_OPENAI_DEPLOYMENT")
-AZURE_OPENAI_API_VERSION = "2023-05-15"
+AZURE_OPENAI_EMBED_DEPLOYMENT = os.getenv("AZURE_OPENAI_DEPLOYMENT")    # e.g., text-embedding-3-small
+AZURE_OPENAI_API_VERSION = os.getenv("AZURE_OPENAI_API_VERSION", "2023-05-15")
 
-
-client = openai.AzureOpenAI(
-    api_key=AZURE_OPENAI_API_KEY,
-    azure_endpoint=AZURE_OPENAI_ENDPOINT,
-    api_version=AZURE_OPENAI_API_VERSION
+# Create two distinct clients
+client_chat = openai.AzureOpenAI(
+    api_key=AZURE_CHATOPENAI_API_KEY,
+    azure_endpoint=AZURE_CHATOPENAI_ENDPOINT,
+    api_version=CHATOPENAI_API_VERSION,
 )
 
+client_embed = openai.AzureOpenAI(
+    api_key=AZURE_OPENAI_API_KEY,
+    azure_endpoint=AZURE_OPENAI_ENDPOINT,
+    api_version=AZURE_OPENAI_API_VERSION,
+)
 
 app = Flask(__name__)
 
 # Load allowed origins from environment variables
-ALLOWED_ORIGINS = os.getenv('ALLOWED_ORIGINS', 'http://localhost:3000').split(',')
+ALLOWED_ORIGINS = os.getenv('ALLOWED_ORIGINS', 'http://localhost:3000' ).split(',')
 
 # Configure CORS with specific origins
 CORS(app, origins=ALLOWED_ORIGINS, 
@@ -123,8 +136,8 @@ def jwt_required(f):
 
 def get_openai_embedding(text):
     """Get embedding from Azure OpenAI using full 1536 dimensions."""
-    response = client.embeddings.create(
-        model=AZURE_OPENAI_DEPLOYMENT,
+    response = client_embed.embeddings.create(
+        model=AZURE_OPENAI_EMBED_DEPLOYMENT,
         input=text,
         encoding_format="float" 
     )
@@ -176,6 +189,15 @@ with open('./data/precomputed_tsne_coords_all_v3.json') as f:
 #taken_course_codes = ["ARHA-324","ARHA-357","HIST-428"]
 
 # --- Helper functions ---
+def catalog_semesters_in_data():
+    """Return SEMESTER_COLUMNS that actually appear in amherst_data, in chronological order."""
+    present = {c.get("semester") for c in amherst_data if c.get("semester")}
+    return [s for s in SEMESTER_COLUMNS if s in present]
+
+def latest_semesters_in_catalog(k=1):
+    ordered = catalog_semesters_in_data()
+    return ordered[-k:] if ordered else []
+
 
 # Helper to convert time string to (start, end) datetime.time objects
 def parse_time_range(time_str):
@@ -533,6 +555,210 @@ def transcript_parsing():
         print("Error:", str(e))
         return jsonify({"error": str(e)}), 500
     
+@app.route("/surprise_recommendation", methods=["POST"])
+@jwt_required
+def surprise_recommendation(payload=None, user_id=None, user_email=None):
+    """Recommend ONE course from the latest semester only, with a surprising but meaningful connection to the user's history."""
+    try:
+        user_id = payload["sub"]
+
+        body = request.get_json(silent=True) or {}
+        client_exclude = body.get("exclude_codes", [])
+        exclude_codes = {str(c).strip().upper() for c in client_exclude if isinstance(c, str)}
+
+
+        # --- fetch user's course history from Supabase ---
+        headers = {
+            "apikey": SUPABASE_KEY,
+            "Authorization": f"Bearer {SUPABASE_KEY}",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+        get_url = f"{SUPABASE_TABLE_URL}?id=eq.{user_id}"
+        resp = requests.get(get_url, headers=headers)
+        if resp.status_code != 200:
+            return jsonify({"error": "Could not retrieve course history"}), 500
+
+        user_data = resp.json()
+        if not user_data:
+            return jsonify({"error": "No course history found. Please add your courses first."}), 400
+
+        # --- build user's history across ALL semesters (past + current) ---
+        user_courses: list[str] = []
+        user_departments: set[str] = set()
+        for semester in SEMESTER_COLUMNS:
+            if semester in user_data[0] and user_data[0][semester]:
+                for code in user_data[0][semester]:
+                    user_courses.append(code)
+                    if "-" in code:
+                        user_departments.add(code.split("-")[0])
+
+        if not user_courses:
+            return jsonify({"error": "No courses found in your history"}), 400
+
+        # --- find the latest semester that actually exists in amherst_data ---
+        present_terms = {c.get("semester") for c in amherst_data if c.get("semester")}
+        latest_semester = next((s for s in reversed(SEMESTER_COLUMNS) if s in present_terms), None)
+        if not latest_semester:
+            return jsonify({"error": "No semesters available in catalog"}), 500
+
+        # --- candidates: ONLY courses from latest_semester, not taken, from new departments ---
+        # --- candidates: ONLY courses from latest_semester, not taken, from new departments, NOT SEEN THIS SESSION ---
+        candidate_courses = []
+        for course in amherst_data:
+            if course.get("semester") != latest_semester:
+                continue
+            course_codes = course.get("course_codes", []) or []
+            if not course_codes:
+                continue
+
+            # Normalize codes once
+            norm_codes = [str(code).strip().upper() for code in course_codes]
+
+            # Skip if course was already recommended in this browser session
+            if any(c in exclude_codes for c in norm_codes):
+                continue
+
+            # departments for this course
+            course_departments = {code.split("-")[0] for code in course_codes if "-" in code}
+
+            # skip user's usual departments; skip courses they've taken
+            if course_departments & user_departments:
+                continue
+            if any(code in user_courses for code in course_codes):
+                continue
+
+            candidate_courses.append(course)
+
+        if not candidate_courses:
+            return jsonify({"error": f"No unseen surprising courses found in {latest_semester}."}), 400
+
+            # --- build helpers to create text for similarity ---
+        def course_text(c: dict) -> str:
+            title = (c.get("course_title") or "").strip()
+            desc = (c.get("description") or "").strip()
+            return f"{title}. {desc}".strip()
+
+        code_to_course = {}
+        for c in amherst_data:
+            for code in c.get("course_codes", []) or []:
+                code_to_course[code] = c
+
+        # user profile text from their history (titles+descriptions)
+        user_profile_texts = []
+        for code in user_courses:
+            c = code_to_course.get(code)
+            if c:
+                t = course_text(c)
+                if t:
+                    user_profile_texts.append(t)
+        user_profile = " ".join(user_profile_texts).strip() or " ".join(user_courses)
+
+        # --- rank latest-semester candidates by TF-IDF similarity to user profile ---
+        from sklearn.feature_extraction.text import TfidfVectorizer  # local import to keep global deps minimal
+
+        cand_texts = [course_text(c) for c in candidate_courses]
+        pairs = [(c, t) for c, t in zip(candidate_courses, cand_texts) if t]
+
+        if pairs:
+            docs = [user_profile] + [t for _, t in pairs]
+            vect = TfidfVectorizer(stop_words="english", max_features=8000)
+            X = vect.fit_transform(docs)
+            sims = cosine_similarity(X[0:1], X[1:]).ravel()
+
+            ranked = [c for (c, _s) in sorted(zip([c for c, _ in pairs], sims),
+                                              key=lambda x: x[1], reverse=True)]
+
+            # tiny diversity: sample from the top pool deterministically per user
+            import random
+            rng = random.Random(user_id)
+            pool = ranked[:200] if len(ranked) > 200 else ranked
+            rng.shuffle(pool)
+            shortlist = pool[:50] if len(pool) > 50 else pool
+        else:
+            # fallback: if we had no text, at least avoid A/B bias with a deterministic shuffle
+            import random
+            rng = random.Random(user_id)
+            shortlist = candidate_courses[:]
+            rng.shuffle(shortlist)
+            shortlist = shortlist[:50]
+
+        if not shortlist:
+            return jsonify({"error": f"No candidate courses available in {latest_semester}."}), 400
+
+        # --- build LLM prompt using ONLY latest-semester shortlist ---
+        user_courses_str = ", ".join(user_courses[:40])
+        prompt = f"""
+You are a course recommendation system. A student has taken these courses: {user_courses_str}
+
+From the course offerings in {latest_semester}, choose ONE course from departments they haven't typically explored that
+has a surprising but meaningful connection to their past coursework (skills, methods, themes, or perspectives).
+Explain the connection briefly and concretely.
+
+Candidate courses (select ONE):
+""".strip()
+
+        for i, course in enumerate(shortlist, start=1):
+            codes = "/".join(course.get("course_codes", []))
+            title = course.get("course_title", "") or ""
+            description = (course.get("description", "") or "")[:300]
+            prompt += f"\n{i}. {codes} - {title}: {description}"
+
+        prompt += """
+        
+Respond with ONLY this JSON:
+{
+  "recommended_course_index": <1-based index>,
+  "surprise_connection": "<2-3 sentences referencing specific themes or skills>"
+}
+""".rstrip()
+
+        # --- call chat model ---
+        response = client_chat.chat.completions.create(
+            model=AZURE_CHATOPENAI_DEPLOYMENT,
+            messages=[
+                {"role": "system", "content": "You are a helpful academic advisor who finds surprising interdisciplinary connections between courses."},
+                {"role": "user", "content": prompt},
+            ],
+            temperature=0.7,
+            max_tokens=500,
+        )
+
+        llm_response = response.choices[0].message.content.strip()
+
+        # --- parse LLM JSON; safe fallback ---
+        try:
+            import json
+            llm_json = json.loads(llm_response)
+            recommended_index = int(llm_json["recommended_course_index"]) - 1
+            surprise_connection = llm_json["surprise_connection"]
+            if recommended_index < 0 or recommended_index >= len(shortlist):
+                raise ValueError("Index out of range")
+        except Exception as e:
+            print(f"Error parsing LLM response: {e}\nLLM Response: {llm_response!r}")
+            import random
+            rng = random.Random(user_id)
+            recommended_index = rng.randrange(len(shortlist))
+            surprise_connection = (
+                "This course lies outside your usual departments but connects to your prior work in a surprising way."
+            )
+
+        recommended_course = shortlist[recommended_index]
+
+        recommendation = {
+            "course_codes": recommended_course.get("course_codes", []),
+            "course_title": recommended_course.get("course_title", ""),
+            "description": recommended_course.get("description", ""),
+            "department": recommended_course.get("department", ""),
+            "semester": latest_semester,
+            "surprise_connection": surprise_connection,
+        }
+        return jsonify(recommendation), 200
+
+    except Exception as e:
+        print(f"Error in surprise_recommendation: {str(e)}")
+        return jsonify({"error": "Internal server error"}), 500
+
 @app.route('/health')
 def health_check():
     return jsonify({
