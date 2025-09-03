@@ -194,7 +194,9 @@ rows = []
 for idx, row in df.iterrows():
     mapped_nodes, missing = [], []  # Separate lists for found and not found courses
     
+    # -----------------------------
     # Process each semester column
+    # -----------------------------
     for semester_col in semester_columns:
         semester = semester_col  # e.g., "2526F", "2526S"
         courses_in_semester = parse_courses_from_cell(row[semester_col])
@@ -212,6 +214,9 @@ for idx, row in df.iterrows():
     # Create a subgraph containing only the student's courses (from unfiltered graph for distances)
     subG = G.subgraph(mapped_nodes).copy()
 
+    # -----------------------------
+    # Breadth and depth scores from unfiltered graph
+    # -----------------------------
     # Count cross-listed
     n_crosslisted = sum(1 for node_id in mapped_nodes if '|' in subG.nodes[node_id]['codes'])
     
@@ -233,38 +238,77 @@ for idx, row in df.iterrows():
     
     avg_distance = np.mean(distances) if distances else 1.0
     max_distance = np.max(distances) if distances else 1.0
+
+    # Rao's quadratic entropy
+    pairwise = compute_pairwise_shortest_distances(subG, weight_key="weight")  # SP distances
+    rao_q = rao_q_from_distances(len(mapped_nodes), pairwise)  # Rao’s Q from avg pairwise
     
-    ###### Filter by minimum similarity ######
+    # Eccentricity scores
+    ecc_r, ecc_d = weighted_eccentricity_stats(subG, weight_key="weight")  # radius/diameter (weighted)
+
+    # -----------------------------
+    # Filter by minimum similarity
+    # -----------------------------
     for u, v, d in list(subG.edges(data=True)):
         if d.get("similarity", 0) < MIN_SIM:
             subG.remove_edge(u, v)
-    ##########################################
-    
+
+    # -----------------------------
+    # Connected components
+    # -----------------------------
     # Get connected components (sets of nodes connected to each other)
     comps = list(nx.connected_components(subG))
 
     # Sort components by size (largest first)
     comps_sorted = sorted(comps, key=lambda s: len(s), reverse=True)
-
     # Convert each component to a sorted list of strings for saving in CSV
     comps_lists  = [sorted(map(str, comp)) for comp in comps_sorted]
-
     # List of component sizes
     comp_sizes = [len(cset) for cset in comps_sorted]
 
-    # Add this student's summary info to rows
+    # -----------------------------
+    # Depth scores
+    # -----------------------------
+    # Average clustering coefficient
+    avg_clust = average_weighted_clustering(subG, weight_key="similarity")
+    
+    # Progression depth
+    if subG.number_of_nodes() == 0:
+        prog_depth = 0
+    else:
+        # Get the largest connected component
+        Hc_nodes = max(nx.connected_components(subG), key=len)
+        Hc = subG.subgraph(Hc_nodes).copy()
+        if Hc.number_of_nodes() == 1:
+            prog_depth = 0
+        else:
+            try:
+                prog_depth = int(nx.diameter(Hc))
+            except Exception:
+                lengths = dict(nx.all_pairs_shortest_path_length(Hc))
+                prog_depth = int(max(max(d.values()) for d in lengths.values()))
+
+    # -----------------------------
+    # Append all metrics
+    # -----------------------------
     rows.append({
         "student_index": idx,                        # Which student (by order in CSV)
+
         "n_courses": len(mapped_nodes) + len(missing),  # Total courses attempted
         "n_crosslisted": n_crosslisted,              # How many were cross-listed
+
         "n_courses_mapped": len(mapped_nodes),         # How many matched to graph nodes
         "n_courses_unmapped": len(missing),                  # How many didn't match
+
         "n_components": len(comp_sizes),             # How many connected components
         "largest_component": (comp_sizes[0] if comp_sizes else 0),  # Size of largest
-        "avg_distance": avg_distance,                # Average distance between all course pairs
-        "max_distance": max_distance,                # Maximum distance between any course pair
         "component_sizes_sorted": comp_sizes[:10],   # Preview first 10 sizes
         "unmapped_example": ", ".join(missing),      # Unmapped courses (if any)
+
+        "avg_distance": avg_distance,                # Average distance between all course pairs
+        "max_distance": max_distance,                # Maximum distance between any course pair
+
+        "progression_depth_hops": prog_depth, 
     })
 
 # Convert rows list into a DataFrame

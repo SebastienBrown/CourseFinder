@@ -20,7 +20,7 @@ dropbox = os.environ.get("DROPBOX", '/Users/hnaka24/Dropbox (Personal)/AmherstCo
 code = os.environ.get("CODE", '/Users/hnaka24/Desktop/code/CourseFinder/')
 
 json_path = os.environ.get("CONTRASTIVE_JSON_PATH", dropbox + 'data/2_intermediate/1_llm_cleaned/amherst_courses_2324S.json')
-save_dir = os.environ.get("CONTRASTIVE_SAVE_DIR", code + "3_embedding/sbert_contrastive_model")
+save_dir = os.environ.get("CONTRASTIVE_SAVE_DIR", code + "3_embedding/model/default/")
 
 model_name = os.environ.get("CONTRASTIVE_MODEL_NAME", 'sentence-transformers/all-MiniLM-L6-v2')
 dropout_rate = float(os.environ.get("CONTRASTIVE_DROPOUT_RATE", "0.1"))
@@ -81,8 +81,7 @@ def create_triplets(pos_pairs, neg_pairs):
 
 def encode_texts(texts, model):
     inputs = tokenizer(texts, padding=True, truncation=True, return_tensors='pt').to(device)
-    with torch.no_grad():
-        return model(**inputs)
+    return model(**inputs)
 
 def compute_validation_loss(model, val_triplets):
     """Compute validation loss on validation triplets"""
@@ -396,8 +395,8 @@ for epoch in tqdm(range(num_epochs), desc="Training"):
             best_val_loss = val_loss
             patience_counter = 0
             # Save best model
-            model.encoder.save_pretrained(save_dir + "_best")
-            tokenizer.save_pretrained(save_dir + "_best")
+            model.encoder.save_pretrained(save_dir)
+            tokenizer.save_pretrained(save_dir)
         else:
             patience_counter += 1
         
@@ -416,9 +415,9 @@ print("FINAL EVALUATION")
 print("="*50)
 
 # Load best model if early stopping was used
-if os.path.exists(save_dir + "_best"):
+if os.path.exists(save_dir):
     print("Loading best model from early stopping...")
-    model.encoder = AutoModel.from_pretrained(save_dir + "_best")
+    model.encoder = AutoModel.from_pretrained(save_dir)
     model = model.to(device)
 
 # Final validation loss

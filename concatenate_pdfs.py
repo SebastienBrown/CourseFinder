@@ -1,12 +1,47 @@
-#!/usr/bin/env python3
-"""
-Simple PDF concatenation script using PyPDF2
-"""
-
 import sys
 import os
 from PyPDF2 import PdfMerger
 
+# ========================================
+# Configuration
+# ========================================
+# Get output directory and build file paths dynamically
+dropbox = os.environ.get("DROPBOX")
+output_pdf = os.environ.get("COMBINED_PDF")
+
+if not dropbox or not output_pdf:
+    print("Error: DROPBOX or COMBINED_PDF environment variable not set")
+    sys.exit(1)
+
+# Get model configurations from environment variable (same as MASTER.sbatch)
+model_configs_str = os.environ.get("MODEL_CONFIGS_STR")
+if not model_configs_str:
+    print("Error: MODEL_CONFIGS_STR environment variable not set")
+    sys.exit(1)
+
+# Parse the MODEL_CONFIGS string into a list of tuples
+model_configs = []
+for config in model_configs_str.split():
+    if ':' in config:
+        parts = config.split(':')
+        if len(parts) >= 2:
+            model = parts[0]
+            mode = parts[1]
+            model_configs.append((model, mode))
+        else:
+            print(f"Warning: Invalid config format: {config}")
+    else:
+        print(f"Warning: Invalid config format: {config}")
+
+if not model_configs:
+    print("Error: No valid model configurations found")
+    sys.exit(1)
+
+print(f"Found {len(model_configs)} model configurations: {model_configs}")
+
+# ========================================
+# Functions
+# ========================================
 def concatenate_pdfs(input_files, output_file):
     """
     Concatenate multiple PDF files into a single PDF
@@ -36,45 +71,39 @@ def concatenate_pdfs(input_files, output_file):
         print(f"Error concatenating PDFs: {e}")
         sys.exit(1)
 
-# Get environment variables
-dropbox = os.environ.get("DROPBOX")
-mode = os.environ.get("MODE", "off_the_shelf")
+# ========================================
+# Build input files dynamically
+# ========================================
+input_files = []
 
-if not dropbox:
-    print("Error: DROPBOX environment variable not set")
+# First, add all diagnostic plots for all configs
+for model, mode in model_configs:
+    diagnostic_path = f"{dropbox}/output/3_embedding/diagnostic_plots/diagnostic_plots_{model}_{mode}_all.pdf"
+    if os.path.exists(diagnostic_path):
+        input_files.append(diagnostic_path)
+        print(f"✓ Found diagnostic plots: {diagnostic_path}")
+    else:
+        print(f"⚠ Warning: Diagnostic plots not found: {diagnostic_path}")
+
+# Then, add all similarity density plots for all configs
+for model, mode in model_configs:
+    similarity_path = f"{dropbox}/output/3_embedding/similarity_density/similarity_density_{model}_{mode}.pdf"
+    if os.path.exists(similarity_path):
+        input_files.append(similarity_path)
+        print(f"✓ Found similarity density: {similarity_path}")
+    else:
+        print(f"⚠ Warning: Similarity density not found: {similarity_path}")
+
+if not input_files:
+    print("Error: No PDF files found to concatenate")
     sys.exit(1)
 
-# Get file paths from environment variables
-gpt_diagnostic_pdf = os.environ.get("GPT_DIAGNOSTIC_PDF")
-sbert_diagnostic_pdf = os.environ.get("SBERT_DIAGNOSTIC_PDF")
-gpt_similarity_pdf = os.environ.get("GPT_SIMILARITY_PDF")
-sbert_similarity_pdf = os.environ.get("SBERT_SIMILARITY_PDF")
-output_pdf = os.environ.get("COMBINED_PDF")
+print(f"\n=== Summary ===")
+print(f"Total PDF files to concatenate: {len(input_files)}")
+print(f"Diagnostic plots: {len([f for f in input_files if 'diagnostic_plots' in f])}")
+print(f"Similarity density plots: {len([f for f in input_files if 'similarity_density' in f])}")
 
-# Check if all required environment variables are set
-required_vars = {
-    "GPT_DIAGNOSTIC_PDF": gpt_diagnostic_pdf,
-    "SBERT_DIAGNOSTIC_PDF": sbert_diagnostic_pdf,
-    "GPT_SIMILARITY_PDF": gpt_similarity_pdf,
-    "SBERT_SIMILARITY_PDF": sbert_similarity_pdf,
-    "COMBINED_PDF": output_pdf
-}
-
-missing_vars = [var for var, value in required_vars.items() if not value]
-if missing_vars:
-    print(f"Error: Missing environment variables: {', '.join(missing_vars)}")
-    sys.exit(1)
-
-# Define input files from environment variables
-input_files = [
-    gpt_diagnostic_pdf,
-    sbert_diagnostic_pdf,
-    gpt_similarity_pdf,
-    sbert_similarity_pdf
-]
-
-# Create output directory if it doesn't exist
-os.makedirs(os.path.dirname(output_pdf), exist_ok=True)
-
-# Concatenate PDFs
+# ========================================
+# Main Script
+# ========================================
 concatenate_pdfs(input_files, output_pdf)

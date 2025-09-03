@@ -25,6 +25,9 @@ major_codes = [
 remove_numbers = {"290","390","490","498","499"}
 entropy_base = "e"  # use "2" for bits
 
+# Semester pattern for detecting semester columns
+pat_sem = re.compile(r"^(\d{4})([A-Z])$")  # semester like 2223F / 2021S / 0910F
+
 # -----------------------------
 # Helpers
 # -----------------------------
@@ -173,13 +176,19 @@ for original_idx, row in course_df.iterrows():
     if not probs:
         continue
 
-    # Return matrix of pairwise distance for the student
-    
-
-    # Compute diversity metrics
+    # Compute breadth metrics
     H = shannon_entropy(probs, base=entropy_base)
     H_norm = normalized_entropy(probs, base=entropy_base)
     HHI = hhi_index(probs)    # 0..1, higher = less diverse
+
+    # Average course difficulty
+    lvls = []
+    for c in courses:
+        m = re.search(r"-(\d{3})", str(c))  # Extract the hundreds level from the code, e.g. 'MATH-211' -> 200
+        lvl = (int(m.group(1)) // 100) * 100 if m else None
+        if lvl is not None:
+            lvls.append(lvl)  # Add the level (int like 100/200/300/400) to our list
+    avg_diff = float(np.mean(lvls)) if lvls else float("nan") # compute the arithmetic mean
 
     # Create result dict with semester columns preserved
     result_dict = {
@@ -189,6 +198,7 @@ for original_idx, row in course_df.iterrows():
         "EntropyScore": H,
         "EntropyNormalized": H_norm,
         "HHIIndex": HHI,
+        "avg_course_difficulty": avg_diff
     }
     
     # Add all original semester columns from the row

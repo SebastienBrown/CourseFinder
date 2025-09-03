@@ -12,23 +12,21 @@ load_dotenv()
 # ========================================
 # Configuration
 # ========================================
-# Choose embedding model: "gpt" or "sbert"
-model = os.environ.get("MODEL", "gpt")  # Default to gpt if not set
-
-# Only for GPT
+# Model configuration (set by MASTER.sbatch)
+model = os.environ.get("MODEL", "gpt")
 gpt_model_name = os.environ.get("GPT_MODEL_NAME", "text-embedding-3-small")
-
-# Only for SBERT
-sbert_mode = os.environ.get("SBERT_MODE", "off_the_shelf")  # "off_the_shelf" or "self_supervised"
 sbert_model_name = os.environ.get("SBERT_MODEL_NAME", 'sentence-transformers/all-MiniLM-L6-v2')
-sbert_model_dir = os.environ.get("SBERT_MODEL_DIR", "3_embedding/sbert_contrastive_model")  # folder where your fine-tuned model and tokenizer are saved
+sbert_model_dir = os.environ.get("CONTRASTIVE_SAVE_DIR", "3_embedding/model/default/")
 
-# Input File Paths
+# File paths (set by MASTER.sbatch)
 llm_cleaned_dir = Path(os.environ.get("LLM_CLEANED_DIR", "llm_cleaned"))
-json_files = sorted(list(llm_cleaned_dir.glob('amherst_courses_*.json')))
-
-# Output File Paths
 embeddings_path = os.environ.get("EMBEDDINGS_PATH", "embeddings/")
+
+# Prepare JSON file list
+json_files = sorted([f for f in llm_cleaned_dir.glob('amherst_courses_*.json') 
+                    if len(f.stem.split('_')[-1]) == 5 and 
+                    f.stem.split('_')[-1][:4].isdigit() and 
+                    f.stem.split('_')[-1][4].isalpha()]) # exclude _all.json
 
 # ========================================
 # Prepare Models
@@ -46,8 +44,8 @@ if model == "sbert":
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
     # Load tokenizer and model
-    if sbert_mode != "off_the_shelf":
-        print(f"Loading local SBERT model from: {sbert_model_dir}")
+    if os.path.exists(sbert_model_dir) and os.path.exists(os.path.join(sbert_model_dir, "pytorch_model.bin")):
+        print(f"Loading fine-tuned SBERT model from: {sbert_model_dir}")
         tokenizer = AutoTokenizer.from_pretrained(sbert_model_dir)
         base_model = AutoModel.from_pretrained(sbert_model_dir)
     else:
