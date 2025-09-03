@@ -126,6 +126,8 @@ export default function CourseSimilarityPrecomputedGraph({
   const [showConflicts, setShowConflicts] = useState(true);
   const mapContainerRef = useRef(null);
   const contentToCaptureRef = useRef(null);
+  const [legendCollapsed, setLegendCollapsed] = useState(false);
+
 
   // Add a new state variable to hold backend output data
   const [backendOutputData, setBackendOutputData] = useState(null);
@@ -975,6 +977,7 @@ export default function CourseSimilarityPrecomputedGraph({
           .text(d => d.codes.length > 1 ? `${d.codes[0]}...` : d.codes[0]);
       }
 
+      if (!legendCollapsed) {
       // === DEPARTMENT LEGEND (2-COLUMN LAYOUT) ===
       const legendPaddingY = 290 - width * 0.15;
       const legendPaddingX = width * 0.01;
@@ -1220,6 +1223,7 @@ export default function CourseSimilarityPrecomputedGraph({
         .attr("width", 1)
         .attr("height", height)
         .attr("fill", "#e8e2f2");
+    }
 
       // Main title with adjusted positioning
       svg
@@ -1263,6 +1267,7 @@ export default function CourseSimilarityPrecomputedGraph({
     selectedSemester,
     activeTab,
     showConflicts,
+    legendCollapsed,
   ]);
 
   // Function to handle image download
@@ -1465,6 +1470,13 @@ export default function CourseSimilarityPrecomputedGraph({
               className="w-full h-full absolute top-0 left-0"
               style={{ top: '0px' }}
             ></svg>
+
+            <button
+              style={{ position: "absolute", top: 60, right: 10, zIndex: 10 }}
+              onClick={() => setLegendCollapsed(prev => !prev)}
+            >
+              {legendCollapsed ? "Show Legend" : "Hide Legend"}
+            </button>
 
             {loading && (
               <div className="absolute inset-0 flex items-center justify-center bg-white/50">
