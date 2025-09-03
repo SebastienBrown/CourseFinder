@@ -6,26 +6,31 @@ export default function IntakePrompt() {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen gap-6">
-      <h1 className="text-2xl font-bold">What would you like to do?</h1>
-      <p className="max-w-xl text-center text-gray-600">
-        First, let us know what courses you have taken at Amherst. You can upload
-        your transcript to auto-populate your courses, or manually input them
-        yourself.
-      </p>
-      <div className="flex gap-4">
-        <button
-          onClick={() => navigate("/upload")}
-          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-        >
-          Upload Transcript
-        </button>
-        <button
-          onClick={() => navigate("/intake")}
-          className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
-        >
-          Manually Input Courses
-        </button>
+    <div className="flex items-center justify-center min-h-screen bg-[#f9f7fb] px-4">
+      <div className="bg-white rounded-2xl shadow-lg p-10 max-w-lg w-full flex flex-col gap-6">
+        <h1 className="text-3xl font-bold text-[#3f1f69] text-center">
+          What would you like to do?
+        </h1>
+        <p className="text-center text-gray-600">
+          First, let us know what courses you have taken at Amherst. You can upload
+          your transcript to auto-populate your courses, or manually input them
+          yourself.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <button
+            onClick={() => navigate("/upload")}
+            className="flex-1 px-6 py-3 bg-[#3f1f69] text-white rounded-xl font-semibold shadow hover:bg-[#311a4d] transition"
+          >
+            Upload Transcript
+          </button>
+          <button
+            onClick={() => navigate("/intake")}
+            className="flex-1 px-6 py-3 bg-[#5d3c85] text-white rounded-xl font-semibold shadow hover:bg-[#4b2f72] transition"
+          >
+            Manually Input Courses
+          </button>
+        </div>
       </div>
     </div>
   );

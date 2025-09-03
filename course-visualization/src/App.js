@@ -27,25 +27,28 @@ function Layout({ children, logout, onShowHelp }) {
             The Visual Open Curriculum
           </h1>
           <div className="flex space-x-2">
-            <button
-              onClick={logout}
-              className="bg-red-500 text-white px-4 py-2 rounded"
-            >
-              Sign Out
-            </button>
-            <button
-              onClick={onShowHelp}
-              className="bg-gray-500 text-white px-4 py-2 rounded"
-            >
-              Help
-            </button>
-            <button
-              onClick={() => navigate("/intake-prompt")}
-              className="bg-blue-500 text-white px-4 py-2 rounded"
-            >
-              Add Courses
-            </button>
-          </div>
+          <button
+            onClick={logout}
+            className="px-4 py-2 bg-red-600 text-white rounded-lg font-semibold shadow hover:bg-red-700 transition-all duration-200"
+          >
+            Sign Out
+          </button>
+
+          <button
+            onClick={onShowHelp}
+            className="px-4 py-2 bg-gray-600 text-white rounded-lg font-semibold shadow hover:bg-gray-700 transition-all duration-200"
+          >
+            Help
+          </button>
+
+          <button
+            onClick={() => navigate("/intake-prompt")}
+            className="px-4 py-2 bg-purple-600 text-white rounded-lg font-semibold shadow hover:bg-purple-700 transition-all duration-200"
+          >
+            Add Courses
+          </button>
+        </div>
+
         </div>
       </div>
       {children}
