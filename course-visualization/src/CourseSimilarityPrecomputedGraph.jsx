@@ -577,10 +577,17 @@ export default function CourseSimilarityPrecomputedGraph({
         return `${baseSize * factor}px`;
       };
 
-      // Add a reset zoom button
+        const g = svg.append("g");
+
+        g.append("rect")
+          .attr("width", width)
+          .attr("height", height)
+          .attr("fill", "none");
+
+      /*"""Add a reset zoom button
       const resetButton = svg.append("g")
         .attr("class", "reset-zoom")
-        .attr("transform", `translate(${width - 100}, 20)`)
+        .attr("transform", `translate(${width}, 60)`)
         .style("cursor", "pointer");
 
       resetButton.append("rect")
@@ -603,15 +610,10 @@ export default function CourseSimilarityPrecomputedGraph({
         svg.transition()
           .duration(750)
           .call(zoom.transform, d3.zoomIdentity);
-      });
+      }); */
 
-      const g = svg.append("g");
 
-      g.append("rect")
-        .attr("width", width)
-        .attr("height", height)
-        .attr("fill", "#f9f7fb");
-
+      
       // Calculate the legend space requirements
       const deptEntries = [...majorColorMap.entries()];
       const legendItemHeight = 25;
@@ -1270,6 +1272,20 @@ export default function CourseSimilarityPrecomputedGraph({
     legendCollapsed,
   ]);
 
+  const zoomRef = useRef(null);
+
+useEffect(() => {
+  const zoomBehavior = d3.zoom()
+    .scaleExtent([0.5, 5])
+    .on("zoom", (event) => {
+      d3.select(svgRef.current).select("g").attr("transform", event.transform);
+    });
+
+  d3.select(svgRef.current).call(zoomBehavior);
+
+  zoomRef.current = zoomBehavior;
+}, []);
+
   // Function to handle image download
   const handleDownloadImage = async () => {
     const mapContainer = contentToCaptureRef.current; // Use the new ref to get the actual DOM element for capture
@@ -1471,12 +1487,63 @@ export default function CourseSimilarityPrecomputedGraph({
               style={{ top: '0px' }}
             ></svg>
 
+            {/* Stack both buttons */}
+          <div
+            style={{
+              position: "absolute",
+              top: "10%",
+              right: "2%",
+              zIndex: 10,
+              display: "flex",
+              flexDirection: "column",
+              gap: "10px"
+            }}
+          >
             <button
-              style={{ position: "absolute", top: 60, right: 10, zIndex: 10 }}
+              style={{
+                width: 80,
+                height: 30,
+                borderRadius: 5,
+                backgroundColor: "rgba(249, 247, 251, 0.95)",
+                border: "1px solid #e8e2f2",
+                cursor: "pointer",
+                fontSize: "12px",
+                color: "#000",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+              onClick={() => {
+                if (svgRef.current) {
+                  d3.select(svgRef.current)
+                    .transition()
+                    .duration(750)
+                    .call(zoomRef.current.transform, d3.zoomIdentity);
+                }
+              }}
+            >
+              Reset View
+            </button>
+
+            <button
+              style={{
+                width: 80,
+                height: 30,
+                borderRadius: 5,
+                backgroundColor: "rgba(249, 247, 251, 0.95)",
+                border: "1px solid #e8e2f2",
+                cursor: "pointer",
+                fontSize: "12px",
+                color: "#000",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
               onClick={() => setLegendCollapsed(prev => !prev)}
             >
               {legendCollapsed ? "Show Legend" : "Hide Legend"}
             </button>
+          </div>
 
             {loading && (
               <div className="absolute inset-0 flex items-center justify-center bg-white/50">
