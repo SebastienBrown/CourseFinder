@@ -157,10 +157,10 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
 
   const handleToggle = () => {
     setUseSemanticSearch(prev => !prev);
-  };
+  };  
   
   useEffect(() => {
-    console.log("useSemanticSearch is now:", useSemanticSearch);
+    //console.log("useSemanticSearch is now:", useSemanticSearch);
   }, [useSemanticSearch]);
 
   
@@ -297,6 +297,7 @@ if (validCodes.length === 0) return; // no valid codes, do nothing
         className="w-full flex flex-wrap items-center gap-4 bg-[#f9f7fb] border border-[#eae6f4] rounded-xl px-6 py-4 mb-6"
       >
       <button
+      type="button"
         onClick={() => setUseSemanticSearch(!useSemanticSearch)}
         className={`px-4 py-2 rounded-md font-semibold transition ${
           useSemanticSearch ? "bg-[#3f1f69] text-white" : "bg-gray-200 text-black"

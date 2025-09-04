@@ -148,7 +148,7 @@ export default function CourseSimilarityPrecomputedGraph({
 
   // Log dimensions when they change
   useEffect(() => {
-    console.log('Current dimensions:', dimensions);
+    //console.log('Current dimensions:', dimensions);
   }, [dimensions]);
 
   // Combined effect to handle semester changes and tab switches
@@ -179,7 +179,7 @@ export default function CourseSimilarityPrecomputedGraph({
     if (node) setSvgReady(true);
   }, []);
 
-  console.log("Conflicted array:", conflicted);
+  //console.log("Conflicted array:", conflicted);
   
 
   useEffect(() => {
@@ -366,7 +366,7 @@ export default function CourseSimilarityPrecomputedGraph({
     }
     
     try {
-      console.log("Using backend URL:", backendUrl); // Add this for debugging!
+      //console.log("Using backend URL:", backendUrl); // Add this for debugging!
       const response = await fetch(`${backendUrl}/retrieve_courses`, { // await fetch(`${API_BASE_URL}/retrieve_courses`
         method: "POST",
       headers: {
@@ -632,14 +632,14 @@ export default function CourseSimilarityPrecomputedGraph({
       // Left legend dimensions
       const leftLegendWidth = legendItemWidth * colCount + 0.02 * width;
       const leftLegendHeight = Math.ceil(deptEntries.length / colCount) * legendItemHeight + width * width * 0.00001;
-      console.log('width', width * width * 0.00001)
+      //console.log('width', width * width * 0.00001)
       
       // Right legend dimensions (there is nothing now so set to 0)
       const rightLegendWidth = 0//leftLegendWidth; // Reduced width
       
       // Create padding for chart area
       const topPadding = 270 - width * 0.15; // Title space
-      console.log('topPadding:', topPadding)
+      //console.log('topPadding:', topPadding)
       const bottomPadding = 200 - width * 0.07; // Footer space
       const leftPadding = leftLegendWidth;
       const rightPadding = rightLegendWidth;
@@ -983,7 +983,7 @@ export default function CourseSimilarityPrecomputedGraph({
       // === DEPARTMENT LEGEND (2-COLUMN LAYOUT) ===
       const legendPaddingY = 290 - width * 0.15;
       const legendPaddingX = width * 0.01;
-      console.log('legendPadding:', legendPaddingX)
+      //console.log('legendPadding:', legendPaddingX)
 
       const legendItemCount = deptEntries.length;
       const legendRows = Math.ceil(legendItemCount / colCount);
