@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 
 export default function OnboardingPopup({ isOpen, onClose, isPublicMode = false }) {
   const [currentStep, setCurrentStep] = useState(0);
   
-  if (!isOpen) return null;
+
 
   const steps = [
     {
@@ -61,7 +61,9 @@ export default function OnboardingPopup({ isOpen, onClose, isPublicMode = false 
               <div>
                 <h4 className="font-semibold text-[#3f1f69]">Search Bar</h4>
                 <p className="text-gray-700 text-sm">
-                  Type course codes (like "MATH-111") or course titles to find specific courses. Matching courses will appear as suggestions.
+                  <strong>Default search</strong>: Type course codes (like "MATH-111") or course titles to find specific courses. Matching courses will appear as suggestions.<br />
+                  <strong>Semantic search</strong>: Search with natural language ("a math course based on basic calculus").<br/>
+                  <em><strong>Toggle by clicking "Default Search"/"Semantic Search" button.</strong></em>
                 </p>
               </div>
             </div>
@@ -107,7 +109,7 @@ export default function OnboardingPopup({ isOpen, onClose, isPublicMode = false 
               <div>
                 <h4 className="font-semibold text-[#3f1f69]">Department Legend</h4>
                 <p className="text-gray-700 text-sm">
-                  The left panel shows department colors and shapes. Courses are grouped by academic divisions (Arts, Humanities, Sciences, Social Sciences).
+                  The left panel shows department colors and shapes. Courses are grouped by academic divisions (Arts, Humanities, Sciences, Social Sciences). Use the "Hide Legend" button to hide this banner.
                 </p>
               </div>
             </div>
@@ -160,6 +162,15 @@ export default function OnboardingPopup({ isOpen, onClose, isPublicMode = false 
                 </p>
               </div>
             </div>
+            <div className="flex items-start space-x-3">
+              <div className="bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">4</div>
+              <div>
+                <h4 className="font-semibold text-[#3f1f69]">Suprise Recommendation</h4>
+                <p className="text-gray-700 text-sm">
+                  Click the ✨ button to receive a personalized course recommendation based on your academic history.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       ),
@@ -178,6 +189,7 @@ export default function OnboardingPopup({ isOpen, onClose, isPublicMode = false 
             <li>Switching between Single Semester View and My Course History</li>
             <li>Using the semester slider to explore different terms</li>
             <li>Zooming and panning to explore the course landscape</li>
+            <li>Generating personalized course recommendations </li>
           </ul>
           <p className="text-gray-700">
             Happy course planning! 🎓
@@ -205,6 +217,22 @@ export default function OnboardingPopup({ isOpen, onClose, isPublicMode = false 
   const handleSkip = () => {
     onClose();
   };
+
+  // <-- Arrow key navigation effect
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'ArrowLeft' && currentStep > 0) {
+        handlePrevious();
+      } else if (e.key === 'ArrowRight' && currentStep < steps.length - 1) {
+        handleNext();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [currentStep, steps.length]);
+
+  if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center px-4">

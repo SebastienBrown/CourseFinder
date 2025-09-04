@@ -126,6 +126,8 @@ export default function CourseSimilarityPrecomputedGraph({
   const [showConflicts, setShowConflicts] = useState(true);
   const mapContainerRef = useRef(null);
   const contentToCaptureRef = useRef(null);
+  const [legendCollapsed, setLegendCollapsed] = useState(false);
+
 
   // Add a new state variable to hold backend output data
   const [backendOutputData, setBackendOutputData] = useState(null);
@@ -146,7 +148,7 @@ export default function CourseSimilarityPrecomputedGraph({
 
   // Log dimensions when they change
   useEffect(() => {
-    console.log('Current dimensions:', dimensions);
+    //console.log('Current dimensions:', dimensions);
   }, [dimensions]);
 
   // Combined effect to handle semester changes and tab switches
@@ -177,7 +179,7 @@ export default function CourseSimilarityPrecomputedGraph({
     if (node) setSvgReady(true);
   }, []);
 
-  console.log("Conflicted array:", conflicted);
+  //console.log("Conflicted array:", conflicted);
   
 
   useEffect(() => {
@@ -364,7 +366,7 @@ export default function CourseSimilarityPrecomputedGraph({
     }
     
     try {
-      console.log("Using backend URL:", backendUrl); // Add this for debugging!
+      //console.log("Using backend URL:", backendUrl); // Add this for debugging!
       const response = await fetch(`${backendUrl}/retrieve_courses`, { // await fetch(`${API_BASE_URL}/retrieve_courses`
         method: "POST",
       headers: {
@@ -575,10 +577,17 @@ export default function CourseSimilarityPrecomputedGraph({
         return `${baseSize * factor}px`;
       };
 
-      // Add a reset zoom button
+        const g = svg.append("g");
+
+        g.append("rect")
+          .attr("width", width)
+          .attr("height", height)
+          .attr("fill", "none");
+
+      /*"""Add a reset zoom button
       const resetButton = svg.append("g")
         .attr("class", "reset-zoom")
-        .attr("transform", `translate(${width - 100}, 20)`)
+        .attr("transform", `translate(${width}, 60)`)
         .style("cursor", "pointer");
 
       resetButton.append("rect")
@@ -601,15 +610,10 @@ export default function CourseSimilarityPrecomputedGraph({
         svg.transition()
           .duration(750)
           .call(zoom.transform, d3.zoomIdentity);
-      });
+      }); */
 
-      const g = svg.append("g");
 
-      g.append("rect")
-        .attr("width", width)
-        .attr("height", height)
-        .attr("fill", "#f9f7fb");
-
+      
       // Calculate the legend space requirements
       const deptEntries = [...majorColorMap.entries()];
       const legendItemHeight = 25;
@@ -628,14 +632,14 @@ export default function CourseSimilarityPrecomputedGraph({
       // Left legend dimensions
       const leftLegendWidth = legendItemWidth * colCount + 0.02 * width;
       const leftLegendHeight = Math.ceil(deptEntries.length / colCount) * legendItemHeight + width * width * 0.00001;
-      console.log('width', width * width * 0.00001)
+      //console.log('width', width * width * 0.00001)
       
       // Right legend dimensions (there is nothing now so set to 0)
       const rightLegendWidth = 0//leftLegendWidth; // Reduced width
       
       // Create padding for chart area
       const topPadding = 270 - width * 0.15; // Title space
-      console.log('topPadding:', topPadding)
+      //console.log('topPadding:', topPadding)
       const bottomPadding = 200 - width * 0.07; // Footer space
       const leftPadding = leftLegendWidth;
       const rightPadding = rightLegendWidth;
@@ -975,10 +979,11 @@ export default function CourseSimilarityPrecomputedGraph({
           .text(d => d.codes.length > 1 ? `${d.codes[0]}...` : d.codes[0]);
       }
 
+      if (!legendCollapsed) {
       // === DEPARTMENT LEGEND (2-COLUMN LAYOUT) ===
       const legendPaddingY = 290 - width * 0.15;
       const legendPaddingX = width * 0.01;
-      console.log('legendPadding:', legendPaddingX)
+      //console.log('legendPadding:', legendPaddingX)
 
       const legendItemCount = deptEntries.length;
       const legendRows = Math.ceil(legendItemCount / colCount);
@@ -1220,6 +1225,7 @@ export default function CourseSimilarityPrecomputedGraph({
         .attr("width", 1)
         .attr("height", height)
         .attr("fill", "#e8e2f2");
+    }
 
       // Main title with adjusted positioning
       svg
@@ -1263,7 +1269,22 @@ export default function CourseSimilarityPrecomputedGraph({
     selectedSemester,
     activeTab,
     showConflicts,
+    legendCollapsed,
   ]);
+
+  const zoomRef = useRef(null);
+
+useEffect(() => {
+  const zoomBehavior = d3.zoom()
+    .scaleExtent([0.5, 5])
+    .on("zoom", (event) => {
+      d3.select(svgRef.current).select("g").attr("transform", event.transform);
+    });
+
+  d3.select(svgRef.current).call(zoomBehavior);
+
+  zoomRef.current = zoomBehavior;
+}, []);
 
   // Function to handle image download
   const handleDownloadImage = async () => {
@@ -1465,6 +1486,64 @@ export default function CourseSimilarityPrecomputedGraph({
               className="w-full h-full absolute top-0 left-0"
               style={{ top: '0px' }}
             ></svg>
+
+            {/* Stack both buttons */}
+          <div
+            style={{
+              position: "absolute",
+              top: "10%",
+              right: "2%",
+              zIndex: 10,
+              display: "flex",
+              flexDirection: "column",
+              gap: "10px"
+            }}
+          >
+            <button
+              style={{
+                width: 80,
+                height: 30,
+                borderRadius: 5,
+                backgroundColor: "rgba(249, 247, 251, 0.95)",
+                border: "1px solid #e8e2f2",
+                cursor: "pointer",
+                fontSize: "12px",
+                color: "#000",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+              onClick={() => {
+                if (svgRef.current) {
+                  d3.select(svgRef.current)
+                    .transition()
+                    .duration(750)
+                    .call(zoomRef.current.transform, d3.zoomIdentity);
+                }
+              }}
+            >
+              Reset View
+            </button>
+
+            <button
+              style={{
+                width: 80,
+                height: 30,
+                borderRadius: 5,
+                backgroundColor: "rgba(249, 247, 251, 0.95)",
+                border: "1px solid #e8e2f2",
+                cursor: "pointer",
+                fontSize: "12px",
+                color: "#000",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+              onClick={() => setLegendCollapsed(prev => !prev)}
+            >
+              {legendCollapsed ? "Show Legend" : "Hide Legend"}
+            </button>
+          </div>
 
             {loading && (
               <div className="absolute inset-0 flex items-center justify-center bg-white/50">
