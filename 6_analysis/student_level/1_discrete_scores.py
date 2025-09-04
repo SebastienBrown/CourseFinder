@@ -8,10 +8,10 @@ import matplotlib.pyplot as plt
 # -----------------------------
 # Paths
 # -----------------------------
-filedate = os.getenv('FILEDATE', '20250813')
-INPUT_PATH = os.getenv('INPUT_PATH', f"/Users/hnaka24/Dropbox (Personal)/AmherstCourses/data/raw/user_courses/user_courses_{filedate}.csv")
-OUTPUT_STUDENT_DATA = os.getenv('OUTPUT_STUDENT_DATA', f"/Users/hnaka24/Dropbox (Personal)/AmherstCourses/data/2_intermediate/5_scores/student_scores_{filedate}.csv")
-OUTPUT_PLOT = os.getenv('OUTPUT_PLOT', f"/Users/hnaka24/Dropbox (Personal)/AmherstCourses/output/6_scores/student_scores_scatter_{filedate}.pdf")
+filedate = os.environ['FILEDATE']
+INPUT_PATH = os.environ['INPUT_PATH']
+OUTPUT_STUDENT_DATA = os.environ['OUTPUT_STUDENT_DATA']
+OUTPUT_PLOT = os.environ['OUTPUT_PLOT']
 
 # -----------------------------
 # Config

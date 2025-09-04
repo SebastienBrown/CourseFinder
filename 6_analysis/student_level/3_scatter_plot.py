@@ -7,9 +7,9 @@ import os
 # -----------------------------
 # Paths
 # -----------------------------
-filedate = os.getenv('FILEDATE', '20250813')
-OUTPUT_STUDENT_DATA = Path(os.getenv('OUTPUT_STUDENT_DATA', f'/Users/hnaka24/Dropbox (Personal)/AmherstCourses/data/2_intermediate/5_scores/student_scores_{filedate}.csv'))
-OUTPUT_PLOT = os.getenv('OUTPUT_PLOT', f'/Users/hnaka24/Dropbox (Personal)/AmherstCourses/output/6_scores/student_scores_scatter_{filedate}.pdf')
+filedate = os.environ['FILEDATE']
+OUTPUT_STUDENT_DATA = Path(os.environ['OUTPUT_STUDENT_DATA'])
+OUTPUT_PLOT = os.environ['OUTPUT_PLOT']
 
 # -----------------------------
 # Load data

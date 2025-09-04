@@ -7,14 +7,13 @@ from utils import canon_node_id, normalize_codes, dept_replacements
 # -----------------------------
 # Config
 # -----------------------------
-INPUT_JSON = os.getenv('INPUT_JSON', '/Users/hnaka24/Dropbox (Personal)/AmherstCourses/data/2_intermediate/3_similarity/gpt_off_the_shelf/output_similarity_all.json')
-# OUTPUT_GRAPH_UNFIL = os.getenv('OUTPUT_GRAPH_UNFIL', '/Users/hnaka24/Dropbox (Personal)/AmherstCourses/output/6_scores/graph_all_unfiltered.gexf')
-OUTPUT_MAJOR_DATA = os.getenv('OUTPUT_MAJOR_DATA', f'/Users/hnaka24/Dropbox (Personal)/AmherstCourses/data/2_intermediate/5_scores/major_scores_panel.csv')
+INPUT_JSON = os.environ['INPUT_JSON']
+OUTPUT_MAJOR_DATA = os.environ['OUTPUT_MAJOR_DATA']
 
 # Convert environment variables to proper types
-keep_top_k_str = os.getenv('KEEP_TOP_K', 'None')
+keep_top_k_str = os.environ['KEEP_TOP_K']
 KEEP_TOP_K = None if keep_top_k_str == 'None' else int(keep_top_k_str)  # If set to an integer (e.g., 20), keep only the top-K neighbors per node.
-MIN_SIM = float(os.getenv('MIN_SIM', '0.75'))     # Minimum similarity threshold for keeping edges
+MIN_SIM = float(os.environ['MIN_SIM'])     # Minimum similarity threshold for keeping edges
 
 # -----------------------------
 # Read JSON

@@ -7,8 +7,8 @@ from utils import normalize_codes
 # -----------------------------
 # Config
 # -----------------------------
-INPUT_ALL_COURSES = os.getenv('INPUT_ALL_COURSES', '/orcd/home/002/hnaka24/CourseFinder/backend/data/amherst_courses_all.json')
-OUTPUT_MAJOR_DATA = os.getenv('OUTPUT_MAJOR_DATA', f'/Users/hnaka24/Dropbox (Personal)/AmherstCourses/data/2_intermediate/5_scores/major_scores_panel.csv')
+INPUT_ALL_COURSES = os.environ['INPUT_ALL_COURSES']
+OUTPUT_MAJOR_DATA = os.environ['OUTPUT_MAJOR_DATA']
 
 # -----------------------------
 # Load the JSON data
