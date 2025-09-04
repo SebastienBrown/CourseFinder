@@ -7,8 +7,8 @@ import os
 # -----------------------------
 # Paths
 # -----------------------------
-OUTPUT_MAJOR_DATA = Path(os.getenv('OUTPUT_MAJOR_DATA', f'/Users/hnaka24/Dropbox (Personal)/AmherstCourses/data/2_intermediate/5_scores/major_scores_panel.csv'))
-OUTPUT_PLOT = os.getenv('OUTPUT_PLOT', f'/Users/hnaka24/Dropbox (Personal)/AmherstCourses/output/6_scores/major_scores_scatter.pdf')
+OUTPUT_MAJOR_DATA = Path(os.environ['OUTPUT_MAJOR_DATA'])
+OUTPUT_PLOT = os.environ['OUTPUT_PLOT']
 
 # -----------------------------
 # Load data

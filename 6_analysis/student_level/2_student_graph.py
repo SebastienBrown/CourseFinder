@@ -8,15 +8,14 @@ import numpy as np
 # -----------------------------
 # Config
 # -----------------------------
-filedate = os.getenv('FILEDATE', '20250813')
-INPUT_JSON = os.getenv('INPUT_JSON', '/Users/hnaka24/Dropbox (Personal)/AmherstCourses/data/2_intermediate/3_similarity/gpt_off_the_shelf/output_similarity_all.json')
-# OUTPUT_GRAPH_UNFIL = os.getenv('OUTPUT_GRAPH_UNFIL', '/Users/hnaka24/Dropbox (Personal)/AmherstCourses/output/6_scores/graph_all_unfiltered.gexf')
-OUTPUT_STUDENT_DATA = os.getenv('OUTPUT_STUDENT_DATA', f'/Users/hnaka24/Dropbox (Personal)/AmherstCourses/data/2_intermediate/5_scores/student_scores_{filedate}.csv')
+filedate = os.environ['FILEDATE']
+INPUT_JSON = os.environ['INPUT_JSON']
+OUTPUT_STUDENT_DATA = os.environ['OUTPUT_STUDENT_DATA']
 
 # Convert environment variables to proper types
-keep_top_k_str = os.getenv('KEEP_TOP_K', 'None')
+keep_top_k_str = os.environ['KEEP_TOP_K']
 KEEP_TOP_K = None if keep_top_k_str == 'None' else int(keep_top_k_str)  # If set to an integer (e.g., 20), keep only the top-K neighbors per node.
-MIN_SIM = float(os.getenv('MIN_SIM', '0.75'))     # Minimum similarity threshold for keeping edges
+MIN_SIM = float(os.environ['MIN_SIM'])     # Minimum similarity threshold for keeping edges
 
 # -----------------------------
 # Functions
@@ -239,12 +238,29 @@ for idx, row in df.iterrows():
     avg_distance = np.mean(distances) if distances else 1.0
     max_distance = np.max(distances) if distances else 1.0
 
-    # Rao's quadratic entropy
-    pairwise = compute_pairwise_shortest_distances(subG, weight_key="weight")  # SP distances
-    rao_q = rao_q_from_distances(len(mapped_nodes), pairwise)  # Rao’s Q from avg pairwise
+    # Rao's quadratic entropy (uniform p_i) = ((N-1)/N) * mean(pairwise distances)
+    if len(mapped_nodes) <= 1 or not distances:
+        rao_q = 0.0
+    else:
+        rao_q = ((len(mapped_nodes) - 1) / len(mapped_nodes)) * float(np.mean(distances)) 
     
-    # Eccentricity scores
-    ecc_r, ecc_d = weighted_eccentricity_stats(subG, weight_key="weight")  # radius/diameter (weighted)
+    # Eccentricity scores - Weighted radius/diameter on the largest component (NaN/NaN if empty; 0/0 if singleton)
+    n = subG.number_of_nodes()
+    if n == 0:
+        ecc_r, ecc_d = float("nan"), float("nan")
+    else:
+        Hc_nodes = max(nx.connected_components(subG), key=len)
+        Hc = subG.subgraph(Hc_nodes).copy()
+        if Hc.number_of_nodes() == 1:
+            ecc_r, ecc_d = 0.0, 0.0
+        else:
+            # try:
+                ecc = nx.eccentricity(Hc, weight="weight")
+                ecc_r, ecc_d = float(min(ecc.values())), float(max(ecc.values()))
+            # except Exception:
+            #     lengths = dict(nx.all_pairs_dijkstra_path_length(Hc, weight="weight"))
+            #     ecc_vals = [max(d.values()) for d in lengths.values()]
+            #     ecc_r, ecc_d = float(min(ecc_vals)), float(max(ecc_vals))
 
     # -----------------------------
     # Filter by minimum similarity
@@ -261,16 +277,22 @@ for idx, row in df.iterrows():
 
     # Sort components by size (largest first)
     comps_sorted = sorted(comps, key=lambda s: len(s), reverse=True)
+
     # Convert each component to a sorted list of strings for saving in CSV
     comps_lists  = [sorted(map(str, comp)) for comp in comps_sorted]
+    
     # List of component sizes
     comp_sizes = [len(cset) for cset in comps_sorted]
 
     # -----------------------------
     # Depth scores
     # -----------------------------
-    # Average clustering coefficient
-    avg_clust = average_weighted_clustering(subG, weight_key="similarity")
+    # Mean local clustering coefficient weighted by similarity (NaN if empty)
+    if subG.number_of_nodes() == 0:
+        avg_clust = float("nan")
+    else:
+        cdict = nx.clustering(subG, weight="similarity")
+        avg_clust = float(np.mean(list(cdict.values()))) if cdict else float("nan")
     
     # Progression depth
     if subG.number_of_nodes() == 0:
@@ -282,17 +304,18 @@ for idx, row in df.iterrows():
         if Hc.number_of_nodes() == 1:
             prog_depth = 0
         else:
-            try:
+            # try:
                 prog_depth = int(nx.diameter(Hc))
-            except Exception:
-                lengths = dict(nx.all_pairs_shortest_path_length(Hc))
-                prog_depth = int(max(max(d.values()) for d in lengths.values()))
+            # except Exception:
+            #     lengths = dict(nx.all_pairs_shortest_path_length(Hc))
+            #     prog_depth = int(max(max(d.values()) for d in lengths.values()))
 
     # -----------------------------
     # Append all metrics
     # -----------------------------
     rows.append({
         "student_index": idx,                        # Which student (by order in CSV)
+        "StudentID": row.get("StudentID", idx),
 
         "n_courses": len(mapped_nodes) + len(missing),  # Total courses attempted
         "n_crosslisted": n_crosslisted,              # How many were cross-listed
@@ -308,6 +331,11 @@ for idx, row in df.iterrows():
         "avg_distance": avg_distance,                # Average distance between all course pairs
         "max_distance": max_distance,                # Maximum distance between any course pair
 
+        "rao_q_uniform": rao_q,
+        "ecc_radius_weighted": ecc_r,
+        "ecc_diameter_weighted": ecc_d,
+        
+        "avg_clustering_similarity": avg_clust,
         "progression_depth_hops": prog_depth, 
     })
 
