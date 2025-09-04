@@ -157,10 +157,10 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
 
   const handleToggle = () => {
     setUseSemanticSearch(prev => !prev);
-  };
+  };  
   
   useEffect(() => {
-    console.log("useSemanticSearch is now:", useSemanticSearch);
+    //console.log("useSemanticSearch is now:", useSemanticSearch);
   }, [useSemanticSearch]);
 
   
@@ -296,8 +296,8 @@ if (validCodes.length === 0) return; // no valid codes, do nothing
         onSubmit={handleSubmit}
         className="w-full flex flex-wrap items-center gap-4 bg-[#f9f7fb] border border-[#eae6f4] rounded-xl px-6 py-4 mb-6"
       >
-        <div className="flex justify-end mb-4">
       <button
+      type="button"
         onClick={() => setUseSemanticSearch(!useSemanticSearch)}
         className={`px-4 py-2 rounded-md font-semibold transition ${
           useSemanticSearch ? "bg-[#3f1f69] text-white" : "bg-gray-200 text-black"
@@ -305,7 +305,6 @@ if (validCodes.length === 0) return; // no valid codes, do nothing
       >
         {useSemanticSearch ? "Semantic Search" : "Default Search"}
       </button>
-    </div>
 
         <label
           htmlFor="course-input"
@@ -324,7 +323,11 @@ if (validCodes.length === 0) return; // no valid codes, do nothing
               //console.log('Input focused');
               setShowSuggestions(true);
             }}
-            placeholder={`Search by course code or title across all semesters (e.g. MATH-111 or Introduction to Legal Theory)`}
+            placeholder={
+              useSemanticSearch
+                ? "Search semantically across all upcoming courses (e.g., find a math course on basic calculus and limits)"
+                : "Search by course code or title across all semesters (e.g., MATH-111 or Introduction to Legal Theory)"
+            }
             className="w-full px-3 py-2 border border-[#5d3c85] bg-[#f4f0fa] text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-[#3f1f69]"
           />
           

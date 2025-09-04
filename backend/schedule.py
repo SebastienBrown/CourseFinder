@@ -454,6 +454,7 @@ def submit_courses(payload=None, user_id=None, user_email=None):
 
     user_id = payload["sub"]  # trusted Supabase user ID
     semester_courses = data.get("semester_courses")
+    print(semester_courses)
 
     if not user_id or not semester_courses:
         return jsonify({"error": "Missing user_id or semester_courses"}), 400
@@ -464,8 +465,8 @@ def submit_courses(payload=None, user_id=None, user_email=None):
     for semester in SEMESTER_COLUMNS:
         if semester in semester_courses:
             courses_list = semester_courses[semester]
-            if courses_list:  # Only include if non-empty list
-                row_data[semester] = courses_list
+            #if courses_list:  # Only include if non-empty list
+            row_data[semester] = courses_list
 
     #print("Prepared row data:", row_data)
 
