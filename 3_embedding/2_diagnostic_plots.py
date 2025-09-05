@@ -18,19 +18,19 @@ load_dotenv()
 # ========================================
 # Configuration 
 # ========================================
-dropbox = os.environ.get("DROPBOX", '/Users/hnaka24/Dropbox (Personal)/AmherstCourses/')
-code = os.environ.get("CODE", '/Users/hnaka24/Desktop/code/CourseFinder/')
+dropbox = os.environ["DROPBOX"]
+code = os.environ["CODE"]
 
-json_path = os.environ.get("CONTRASTIVE_JSON_PATH", dropbox + 'data/2_intermediate/1_llm_cleaned/amherst_courses_all.json')
-embeddings_path = os.environ.get("EMBEDDINGS_PATH", dropbox + 'data/2_intermediate/2_embeddings/')
-diagnostics_path = os.environ.get("CONTRASTIVE_DIAGNOSTICS_PATH", dropbox + 'data/1_raw/diagnostics/diagnostics_20250827.csv')
-output_dir = os.environ.get("DIAGNOSTIC_PLOTS_DIR", dropbox + 'output/3_embedding/')
+json_path = os.environ["CONTRASTIVE_JSON_PATH"]
+embeddings_path = os.environ["EMBEDDINGS_PATH"]
+diagnostics_path = os.environ["CONTRASTIVE_DIAGNOSTICS_PATH"]
+output_dir = os.environ["DIAGNOSTIC_PLOTS_DIR"]
 
-model = os.environ.get("MODEL", "gpt")
-mode = os.environ.get("MODE", "off_the_shelf")
-pdf_path = os.environ.get("DIAGNOSTIC_PLOTS_PDF", f'{output_dir}diagnostic_plots_{model}_{mode}_all.pdf')
+model = os.environ["MODEL"]
+mode = os.environ["MODE"]
+pdf_path = os.environ["DIAGNOSTIC_PLOTS_PDF"]
 
-random_seed = int(os.environ.get("CONTRASTIVE_RANDOM_SEED", "42"))
+random_seed = int(os.environ["CONTRASTIVE_RANDOM_SEED"])
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -239,7 +239,7 @@ with PdfPages(pdf_path) as pdf:
         
         # Position legend below the plot using figure coordinates - one line per course title
         fig.legend(handles=legend_elements_titles, fontsize=8, 
-                  loc='upper center', bbox_to_anchor=(0.5, 0.02), ncol=1, 
+                  loc='lower center', bbox_to_anchor=(0.5, 0.15), ncol=1, 
                   frameon=False)
         
         successful_plots += 1
@@ -255,7 +255,7 @@ with PdfPages(pdf_path) as pdf:
                     axes[unused_pos].set_frame_on(False)
                     axes[unused_pos].text(0.5, 0.5, '', ha='center', va='center', transform=axes[unused_pos].transAxes)
             
-            plt.tight_layout()
+            plt.tight_layout(rect=[0, 0.25, 1, 0.95])  # Leave space at bottom for legend
             # Save without bbox_inches='tight' to maintain consistent page size
             pdf.savefig(fig, dpi=300)
             plt.close()

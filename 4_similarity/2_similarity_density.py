@@ -8,14 +8,14 @@ import pandas as pd
 # ========================================
 # Configuration
 # ========================================
-dropbox = os.environ.get("DROPBOX", '/Users/hnaka24/Dropbox (Personal)/AmherstCourses/')
-code = os.environ.get("CODE", '/Users/hnaka24/Desktop/code/CourseFinder/')
-model = os.environ.get("MODEL", "sbert")
-mode = os.environ.get("MODE", "off_the_shelf")
+dropbox = os.environ["DROPBOX"]
+code = os.environ["CODE"]
+model = os.environ["MODEL"]
+mode = os.environ["MODE"]
 
-similarity_file = os.environ.get("SIMILARITY_OUTPUT_FILE", dropbox + f'data/2_intermediate/3_similarity/{model}_{mode}/output_similarity_all.json')
-diagnostics_file = os.environ.get("CONTRASTIVE_DIAGNOSTICS_PATH", dropbox + 'data/1_raw/diagnostics/diagnostics_20250827.csv')
-output_pdf = os.environ.get("SIMILARITY_DENSITY_PDF", dropbox + f'output/4_similarity/similarity_density_{model}_{mode}.pdf')
+similarity_file = os.environ["SIMILARITY_OUTPUT_FILE"]
+diagnostics_file = os.environ["CONTRASTIVE_DIAGNOSTICS_PATH"]
+output_pdf = os.environ["SIMILARITY_DENSITY_PDF"]
 
 # ========================================
 # Functions

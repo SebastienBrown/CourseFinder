@@ -13,14 +13,15 @@ load_dotenv()
 # Configuration
 # ========================================
 # Model configuration (set by MASTER.sbatch)
-model = os.environ.get("MODEL", "gpt")
-gpt_model_name = os.environ.get("GPT_MODEL_NAME", "text-embedding-3-small")
-sbert_model_name = os.environ.get("SBERT_MODEL_NAME", 'sentence-transformers/all-MiniLM-L6-v2')
-sbert_model_dir = os.environ.get("CONTRASTIVE_SAVE_DIR", "3_embedding/model/default/")
+model = os.environ["MODEL"]
+mode = os.environ["MODE"]
+gpt_model_name = os.environ["GPT_MODEL_NAME"]
+sbert_model_name = os.environ["SBERT_MODEL_NAME"]
+sbert_model_dir = os.environ["CONTRASTIVE_SAVE_DIR"]
 
 # File paths (set by MASTER.sbatch)
-llm_cleaned_dir = Path(os.environ.get("LLM_CLEANED_DIR", "llm_cleaned"))
-embeddings_path = os.environ.get("EMBEDDINGS_PATH", "embeddings/")
+llm_cleaned_dir = Path(os.environ["LLM_CLEANED_DIR"])
+embeddings_path = os.environ["EMBEDDINGS_PATH"]
 
 # Prepare JSON file list
 json_files = sorted([f for f in llm_cleaned_dir.glob('amherst_courses_*.json') 
@@ -44,7 +45,7 @@ if model == "sbert":
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
     # Load tokenizer and model
-    if os.path.exists(sbert_model_dir) and os.path.exists(os.path.join(sbert_model_dir, "pytorch_model.bin")):
+    if mode != "off_the_shelf":
         print(f"Loading fine-tuned SBERT model from: {sbert_model_dir}")
         tokenizer = AutoTokenizer.from_pretrained(sbert_model_dir)
         base_model = AutoModel.from_pretrained(sbert_model_dir)
