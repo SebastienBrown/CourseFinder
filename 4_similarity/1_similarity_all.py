@@ -4,16 +4,14 @@ from sklearn.metrics.pairwise import cosine_similarity
 import os
 
 # ==== Configuration ====
-dropbox = os.environ.get("DROPBOX", '/Users/hnaka24/Dropbox (Personal)/AmherstCourses/')
-code = os.environ.get("CODE", '/Users/hnaka24/Desktop/code/CourseFinder/')
-model = os.environ.get("MODEL", "gpt")  # "gpt" "sbert"
-mode = os.environ.get("MODE", "off_the_shelf")  # "self_supervised" "off_the_shelf"
+dropbox = os.environ["DROPBOX"]
+code = os.environ["CODE"]
+model = os.environ["MODEL"]
+mode = os.environ["MODE"]
 
-semesters = os.environ.get("SEMESTERS", "0910F,0910S,1011F,1011S,1112F,1112S,1213F,1213S,1314F,1314S,1415F,1415S,1516F,1516S,1617F,1617S,1718F,1718S,1819F,1819S,1920F,1920S,2021F,2021J,2021S,2122F,2122J,2122S,2223F,2223S,2324F,2324S,2425F,2425S,2526F,2526S").split(',')
-# embeddings_path = 'embeddings/'
-embeddings_path = os.environ.get("EMBEDDINGS_PATH", dropbox + f'data/2_intermediate/2_embeddings/{model}_{mode}/')
-
-output_file = os.environ.get("SIMILARITY_OUTPUT_FILE", dropbox + f'data/2_intermediate/3_similarity/{model}_{mode}/output_similarity_all.json')
+semesters = os.environ["SEMESTERS"].split(',')
+embeddings_path = os.environ["EMBEDDINGS_PATH"]
+output_file = os.environ["SIMILARITY_OUTPUT_FILE"]
 
 # ==== Functions ====
 def compute_cosine_similarity(embedding1, embedding2):

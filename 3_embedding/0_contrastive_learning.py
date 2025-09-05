@@ -16,20 +16,20 @@ load_dotenv()
 # ========================================
 # Configuration 
 # ========================================
-dropbox = os.environ.get("DROPBOX", '/Users/hnaka24/Dropbox (Personal)/AmherstCourses/')
-code = os.environ.get("CODE", '/Users/hnaka24/Desktop/code/CourseFinder/')
+dropbox = os.environ["DROPBOX"]
+code = os.environ["CODE"]
 
-json_path = os.environ.get("CONTRASTIVE_JSON_PATH", dropbox + 'data/2_intermediate/1_llm_cleaned/amherst_courses_2324S.json')
-save_dir = os.environ.get("CONTRASTIVE_SAVE_DIR", code + "3_embedding/model/default/")
+json_path = os.environ["CONTRASTIVE_JSON_PATH"]
+save_dir = os.environ["CONTRASTIVE_SAVE_DIR"]
 
-model_name = os.environ.get("CONTRASTIVE_MODEL_NAME", 'sentence-transformers/all-MiniLM-L6-v2')
-dropout_rate = float(os.environ.get("CONTRASTIVE_DROPOUT_RATE", "0.1"))
-alpha = float(os.environ.get("CONTRASTIVE_ALPHA", "0.5"))  # Weight for supervised loss
-max_self_supervised = int(os.environ.get("CONTRASTIVE_MAX_SELF_SUPERVISED", "10000"))
-num_epochs = int(os.environ.get("CONTRASTIVE_NUM_EPOCHS", "10"))
-lr = float(os.environ.get("CONTRASTIVE_LR", "1e-5"))
-random_seed = int(os.environ.get("CONTRASTIVE_RANDOM_SEED", "42"))
-diagnostics_path = os.environ.get("CONTRASTIVE_DIAGNOSTICS_PATH", dropbox + 'data/1_raw/diagnostics/diagnostics_20250827.csv')
+model_name = os.environ["CONTRASTIVE_MODEL_NAME"]
+dropout_rate = float(os.environ["CONTRASTIVE_DROPOUT_RATE"])
+alpha = float(os.environ["CONTRASTIVE_ALPHA"])  # Weight for supervised loss
+max_self_supervised = int(os.environ["CONTRASTIVE_MAX_SELF_SUPERVISED"])
+num_epochs = int(os.environ["CONTRASTIVE_NUM_EPOCHS"])
+lr = float(os.environ["CONTRASTIVE_LR"])
+random_seed = int(os.environ["CONTRASTIVE_RANDOM_SEED"])
+diagnostics_path = os.environ["CONTRASTIVE_DIAGNOSTICS_PATH"]
 
 # Early stopping variables
 best_val_loss = float('inf')
