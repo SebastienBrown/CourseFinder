@@ -610,12 +610,13 @@ def check_terms(payload=None, user_id=None, user_email=None):
             "Prefer": "resolution=merge-duplicates"  # This makes it an upsert
         }
 
-        url =  SUPABASE_TABLE_URL
+        # Add query parameter to filter by user_id
+        url = f"{SUPABASE_TABLE_URL}?id=eq.{user_id}"
         payload = {
             "id": user_id
         }
 
-        response = requests.get(url, headers=headers, json=[payload])
+        response = requests.get(url, headers=headers)
         print(response)
 
         if response.status_code not in [200, 201]:
@@ -624,10 +625,8 @@ def check_terms(payload=None, user_id=None, user_email=None):
 
         data = response.json()
         accepted = False
-        print("ACCEPTED IS ",data[0])
         if data and len(data) > 0:
-            aaccepted = data[0].get("terms_accepted") or False  # <-- this line changed
-            print("ACCEPTED TODAY IS ",accepted)
+            accepted = data[0].get("terms_accepted") or False  # <-- this line changed
         return jsonify({"accepted": accepted})
 
     except Exception as e:
