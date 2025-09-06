@@ -11,6 +11,8 @@ import { CURRENT_SEMESTER } from "./config";
 import Upload from "./Upload";
 import IntakePrompt from "./IntakePrompt";
 import SurpriseButton from "./SurpriseButton";
+import TermsModal from "./TermsModal"; // adjust path
+
 
 
 //console.log("🟢 Using backend URL:", process.env.REACT_APP_BACKEND_URL);
@@ -96,6 +98,7 @@ function App() {
   const [currentSemester, setCurrentSemester] = useState(CURRENT_SEMESTER);
   const [showOnboarding, setShowOnboarding] = useState(false);
   const backendUrl=process.env.REACT_APP_BACKEND_URL;
+  const [showTerms, setShowTerms] = useState(false);
 
   const handleHighlight = useCallback((newHighlighted) => {
     // Check if newHighlighted is a function
@@ -223,6 +226,7 @@ function App() {
     {/* ✅ catch-all redirects to graph */}
     <Route path="*" element={<Navigate to="/" replace />} />
   </Routes>
+  <TermsModal />
 </Router>
   );
 }
