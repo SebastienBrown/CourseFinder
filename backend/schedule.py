@@ -555,6 +555,85 @@ def transcript_parsing():
     except Exception as e:
         print("Error:", str(e))
         return jsonify({"error": str(e)}), 500
+
+# --- Accept Terms endpoint ---
+@app.route("/accept-terms", methods=["POST"])
+@jwt_required
+def accept_terms(payload=None, user_id=None, user_email=None):
+    """Insert or update termsAccepted=True for the authenticated user"""
+    try:
+
+        # Extract user_id from JWT payload (trusted)
+        user_id = payload["sub"]
+
+        headers = {
+            "apikey": SUPABASE_KEY,
+            "Authorization": f"Bearer {SUPABASE_KEY}",
+            "Content-Type": "application/json",
+            "Prefer": "resolution=merge-duplicates"  # This makes it an upsert
+        }
+
+        upsert_url =  SUPABASE_TABLE_URL
+        upsert_payload = {
+            "id": user_id,
+            "terms_accepted": True
+        }
+
+        response = requests.post(upsert_url, headers=headers, json=[upsert_payload])
+        print(response)
+
+        if response.status_code not in [200, 201]:
+            print("Supabase error:", response.text)
+            return jsonify({"error": "Failed to upsert user"}), 500
+
+        return jsonify({"message": "Terms accepted successfully"}), 200
+
+    except Exception as e:
+        print("Error in accept_terms:", e)
+        return jsonify({"error": str(e)}), 500
+    
+
+# --- Check Terms endpoint ---
+@app.route("/check-terms", methods=["GET"])
+@jwt_required
+def check_terms(payload=None, user_id=None, user_email=None):
+    """Insert or update termsAccepted=True for the authenticated user"""
+    try:
+
+        # Extract user_id from JWT payload (trusted)
+        user_id = payload["sub"]
+
+        headers = {
+            "apikey": SUPABASE_KEY,
+            "Authorization": f"Bearer {SUPABASE_KEY}",
+            "Content-Type": "application/json",
+            "Prefer": "resolution=merge-duplicates"  # This makes it an upsert
+        }
+
+        url =  SUPABASE_TABLE_URL
+        payload = {
+            "id": user_id
+        }
+
+        response = requests.get(url, headers=headers, json=[payload])
+        print(response)
+
+        if response.status_code not in [200, 201]:
+            print("Supabase error:", response.text)
+            return jsonify({"error": "Failed to upsert user"}), 500
+
+        data = response.json()
+        accepted = False
+        print("ACCEPTED IS ",data[0])
+        if data and len(data) > 0:
+            aaccepted = data[0].get("terms_accepted") or False  # <-- this line changed
+            print("ACCEPTED TODAY IS ",accepted)
+        return jsonify({"accepted": accepted})
+
+    except Exception as e:
+        print("Error in accept_terms:", e)
+        return jsonify({"error": str(e)}), 500
+    
     
 @app.route("/surprise_recommendation", methods=["POST"])
 @jwt_required
