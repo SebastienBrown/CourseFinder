@@ -22,7 +22,7 @@ code = os.environ["CODE"]
 json_path = os.environ["CONTRASTIVE_JSON_PATH"]
 save_dir = os.environ["CONTRASTIVE_SAVE_DIR"]
 
-model_name = os.environ["CONTRASTIVE_MODEL_NAME"]
+model_name = os.environ["SBERT_MODEL_NAME"]
 dropout_rate = float(os.environ["CONTRASTIVE_DROPOUT_RATE"])
 alpha = float(os.environ["CONTRASTIVE_ALPHA"])  # Weight for supervised loss
 max_self_supervised = int(os.environ["CONTRASTIVE_MAX_SELF_SUPERVISED"])

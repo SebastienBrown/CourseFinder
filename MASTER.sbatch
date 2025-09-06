@@ -94,8 +94,8 @@ for i in "${!MODEL_CONFIGS[@]}"; do
     # Update file paths based on current model and mode
     export EMBEDDINGS_PATH="${DROPBOX}/data/2_intermediate/2_embeddings/${MODEL}_${MODE}/"
     export SIMILARITY_OUTPUT_FILE="${DROPBOX}/data/2_intermediate/3_similarity/${MODEL}_${MODE}/output_similarity_all.json"
-    export SIMILARITY_DENSITY_PDF="${DROPBOX}/output/3_embedding/similarity_density/similarity_density_${MODEL}_${MODE}.pdf"
-    export DIAGNOSTIC_PLOTS_PDF="${DROPBOX}/output/3_embedding/diagnostic_plots/diagnostic_plots_${MODEL}_${MODE}_all.pdf"
+    export SIMILARITY_DENSITY_PDF="${SIMILARITY_DENSITY_SUBDIR}/similarity_density_${MODEL}_${MODE}.pdf"
+    export DIAGNOSTIC_PLOTS_PDF="${DIAGNOSTIC_PLOTS_SUBDIR}/diagnostic_plots_${MODEL}_${MODE}_all.pdf"
     
     # Create necessary directories for current model
     mkdir -p "${EMBEDDINGS_PATH}"
@@ -129,15 +129,15 @@ for i in "${!MODEL_CONFIGS[@]}"; do
     #     echo "==== Skipping contrastive learning (MODE=off_the_shelf) ===="
     # fi
 
-    # Step 1: Compute embeddings for courses
-    echo ""
-    echo "==== Computing embeddings for courses... ===="
-    python "3_embedding/1_embedding.py"
-    if [ $? -ne 0 ]; then
-        echo "✗ Embedding computation failed"
-        exit 1
-    fi
-    echo "✓ Embedding computation completed"
+    # # Step 1: Compute embeddings for courses
+    # echo ""
+    # echo "==== Computing embeddings for courses... ===="
+    # python "3_embedding/1_embedding.py"
+    # if [ $? -ne 0 ]; then
+    #     echo "✗ Embedding computation failed"
+    #     exit 1
+    # fi
+    # echo "✓ Embedding computation completed"
 
     # Step 2: Generate diagnostic plots
     echo ""
@@ -154,14 +154,14 @@ for i in "${!MODEL_CONFIGS[@]}"; do
     # Compute Similarity Scores
     # -----------------------------
     # Step 1: Compute similarity scores for courses
-    echo ""
-    echo "==== Computing similarity scores for courses... ===="
-    python "4_similarity/1_similarity_all.py"
-    if [ $? -ne 0 ]; then
-        echo "✗ Similarity computation failed"
-        exit 1
-    fi
-    echo "✓ Similarity computation completed"
+    # echo ""
+    # echo "==== Computing similarity scores for courses... ===="
+    # python "4_similarity/1_similarity_all.py"
+    # if [ $? -ne 0 ]; then
+    #     echo "✗ Similarity computation failed"
+    #     exit 1
+    # fi
+    # echo "✓ Similarity computation completed"
 
     # Step 2: Create density plot of similarity scores
     echo ""

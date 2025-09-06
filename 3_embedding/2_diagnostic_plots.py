@@ -24,7 +24,6 @@ code = os.environ["CODE"]
 json_path = os.environ["CONTRASTIVE_JSON_PATH"]
 embeddings_path = os.environ["EMBEDDINGS_PATH"]
 diagnostics_path = os.environ["CONTRASTIVE_DIAGNOSTICS_PATH"]
-output_dir = os.environ["DIAGNOSTIC_PLOTS_DIR"]
 
 model = os.environ["MODEL"]
 mode = os.environ["MODE"]
@@ -232,15 +231,15 @@ with PdfPages(pdf_path) as pdf:
         ax.set_ylabel('PC2', fontsize=9)
         ax.set_title(f'Row {i + 1}', fontsize=10)
         
-        # Add custom legend below the plot using the same construct as built-in legend
+        # Add custom legend below each individual subplot
         legend_elements_titles = [plt.Line2D([0], [0], marker='o', color='w', 
                                            markerfacecolor=color, markersize=8, label=title)
                                 for color, title in zip(colors, course_titles)]
         
-        # Position legend below the plot using figure coordinates - one line per course title
-        fig.legend(handles=legend_elements_titles, fontsize=8, 
-                  loc='lower center', bbox_to_anchor=(0.5, 0.15), ncol=1, 
-                  frameon=False)
+        # Position legend below the individual subplot
+        ax.legend(handles=legend_elements_titles, fontsize=7, 
+                 loc='upper center', bbox_to_anchor=(0.5, -0.15), ncol=1, 
+                 frameon=False)
         
         successful_plots += 1
         
@@ -255,7 +254,7 @@ with PdfPages(pdf_path) as pdf:
                     axes[unused_pos].set_frame_on(False)
                     axes[unused_pos].text(0.5, 0.5, '', ha='center', va='center', transform=axes[unused_pos].transAxes)
             
-            plt.tight_layout(rect=[0, 0.25, 1, 0.95])  # Leave space at bottom for legend
+            plt.tight_layout(rect=[0, 0.35, 1, 0.95])  # Leave space at bottom for individual legends
             # Save without bbox_inches='tight' to maintain consistent page size
             pdf.savefig(fig, dpi=300)
             plt.close()

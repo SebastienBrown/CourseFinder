@@ -4,7 +4,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --ntasks=1
 #SBATCH --time=08:00:00
-#SBATCH --mem=160G
+#SBATCH --mem=200G
 
 #SBATCH --output=/orcd/home/002/hnaka24/CourseFinder/logs/6_student_master_%j.txt
 #SBATCH --mail-user=hnakazawa@povertyactionlab.org

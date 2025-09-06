@@ -9,6 +9,9 @@ __pycache__/
 *.so
 *.egg-info/
 
+# --- Model weights ---
+**/model/*
+
 # --- IDE / Editor settings ---
 .vscode/
 !.vscode/extensions.json
