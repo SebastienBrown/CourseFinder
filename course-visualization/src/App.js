@@ -12,6 +12,7 @@ import Upload from "./Upload";
 import IntakePrompt from "./IntakePrompt";
 import SurpriseButton from "./SurpriseButton";
 import TermsModal from "./TermsModal"; // adjust path
+import { SemesterProvider } from './SemesterContext';
 
 
 
@@ -48,7 +49,7 @@ function Layout({ children, logout, onShowHelp }) {
             onClick={() => navigate("/intake-prompt")}
             className="px-4 py-2 bg-purple-600 text-white rounded-lg font-semibold shadow hover:bg-purple-700 transition-all duration-200"
           >
-            Add Courses
+            Add Past Courses
           </button>
         </div>
 
@@ -164,6 +165,7 @@ function App() {
   if (!user && !isPublicRoute) return <Auth onLogin={setUser} />;
 
   return (
+    <SemesterProvider>
     <Router>
   <Routes>
     {/* ✅ Default landing page is now Graph */}
@@ -228,6 +230,7 @@ function App() {
   </Routes>
   <TermsModal />
 </Router>
+</SemesterProvider>
   );
 }
 

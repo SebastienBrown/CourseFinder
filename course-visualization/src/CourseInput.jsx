@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { API_BASE_URL } from './config';
+import { useSemester } from './SemesterContext';
 
 export default function CourseInput({ onHighlight, onConflicted, currentSemester, highlighted }) {
   const [input, setInput] = useState("");
@@ -8,6 +9,9 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
   const [showSuggestions, setShowSuggestions] = useState(false);
   const backendUrl=process.env.REACT_APP_BACKEND_URL;
   const [useSemanticSearch, setUseSemanticSearch] = useState(false); // toggle state
+  const [useAllSemestersSearch,setAllSemestersSearch] = useState(false);
+  const { selectedSemester } = useSemester();
+
 
   // Helper function to calculate semester distance
   const calculateSemesterDistance = (semester1, semester2) => {
@@ -65,11 +69,19 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
     }
 
     const searchTermLower = searchTerm.toLowerCase();
-    
+
+    let allMatches;
+
     // First, find all matching courses across all semesters
-    const allMatches = allCourses
+    allMatches = allCourses
       .filter(course => {
         if (!course.semester) return false;
+
+        //console.log("current semester is ",selectedSemester)
+        if(!useAllSemestersSearch){
+          // Only include courses that match the selected semester
+          if (course.semester !== selectedSemester) return false;
+        }
 
         const courseCodes = Array.isArray(course.course_codes) 
           ? course.course_codes 
@@ -87,6 +99,8 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
         ...course,
         semesterDistance: calculateSemesterDistance(currentSemester, course.semester)
       }));
+
+
 
     // Sort by relevance first (exact matches, then partial matches), then by semester distance
     const sortedMatches = allMatches.sort((a, b) => {
@@ -161,7 +175,7 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
   
   useEffect(() => {
     //console.log("useSemanticSearch is now:", useSemanticSearch);
-  }, [useSemanticSearch]);
+  }, [selectedSemester,useSemanticSearch]);
 
   
   const searchSemanticCourse = async (searchTerm) => {
@@ -304,6 +318,16 @@ if (validCodes.length === 0) return; // no valid codes, do nothing
         }`}
       >
         {useSemanticSearch ? "Semantic Search" : "Default Search"}
+      </button>
+
+      <button
+      type="button"
+        onClick={() => setAllSemestersSearch(!useAllSemestersSearch)}
+        className={`px-4 py-2 rounded-md font-semibold transition ${
+          useAllSemestersSearch ? "bg-[#3f1f69] text-white" : "bg-gray-200 text-black"
+        }`}
+      >
+        {useAllSemestersSearch ? "All Semesters" : "Current Semester"}
       </button>
 
         <label

@@ -18,6 +18,8 @@ export default function CoursePopup({ course, onClose, onHighlight, highlighted,
     
     // Use onSelect (handleAddSelectedCourse) instead of onHighlight
     onSelect(course);
+    console.log("Added a course");
+    
     onClose();
   };
 
