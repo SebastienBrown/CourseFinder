@@ -165,6 +165,47 @@ for (u, v), sim in edges_acc_unfiltered.items():
 print(f"Unfiltered graph: {G.number_of_nodes()} nodes, {G.number_of_edges()} edges")
 
 # -----------------------------
+# Debug: Check for negative edge weights
+# -----------------------------
+print("\n=== DEBUGGING: Checking for negative edge weights ===")
+negative_edges = []
+for u, v, data in G.edges(data=True):
+    weight = data.get('weight', 0)
+    similarity = data.get('similarity', 0)
+    if weight < 0:
+        negative_edges.append((u, v, similarity, weight))
+
+if negative_edges:
+    print(f"Found {len(negative_edges)} edges with negative weights:")
+    print("Format: Node1 | Node2 | Similarity | Weight")
+    print("-" * 80)
+    
+    for i, (u, v, sim, weight) in enumerate(negative_edges[:50]):  # Show first 50
+        # Get course information for both nodes
+        u_codes = G.nodes[u]['codes']
+        u_semester = G.nodes[u]['semester']
+        v_codes = G.nodes[v]['codes'] 
+        v_semester = G.nodes[v]['semester']
+        
+        print(f"{i+1:3d}. {u_codes} ({u_semester}) | {v_codes} ({v_semester}) | {sim:.6f} | {weight:.6f}")
+    
+    if len(negative_edges) > 50:
+        print(f"... and {len(negative_edges) - 50} more negative edges")
+    
+    # Summary statistics
+    similarities = [sim for _, _, sim, _ in negative_edges]
+    weights = [weight for _, _, _, weight in negative_edges]
+    print(f"\nSummary of negative edges:")
+    print(f"  Similarity range: {min(similarities):.6f} to {max(similarities):.6f}")
+    print(f"  Weight range: {min(weights):.6f} to {max(weights):.6f}")
+    print(f"  Average similarity: {np.mean(similarities):.6f}")
+    print(f"  Average weight: {np.mean(weights):.6f}")
+else:
+    print("No negative edge weights found.")
+
+print("=== END DEBUGGING ===\n")
+
+# -----------------------------
 # Load graph
 # -----------------------------
 # G = nx.read_gexf(OUTPUT_GRAPH_UNFIL)
@@ -243,24 +284,6 @@ for idx, row in df.iterrows():
         rao_q = 0.0
     else:
         rao_q = ((len(mapped_nodes) - 1) / len(mapped_nodes)) * float(np.mean(distances)) 
-    
-    # Eccentricity scores - Weighted radius/diameter on the largest component (NaN/NaN if empty; 0/0 if singleton)
-    n = subG.number_of_nodes()
-    if n == 0:
-        ecc_r, ecc_d = float("nan"), float("nan")
-    else:
-        Hc_nodes = max(nx.connected_components(subG), key=len)
-        Hc = subG.subgraph(Hc_nodes).copy()
-        if Hc.number_of_nodes() == 1:
-            ecc_r, ecc_d = 0.0, 0.0
-        else:
-            # try:
-                ecc = nx.eccentricity(Hc, weight="weight")
-                ecc_r, ecc_d = float(min(ecc.values())), float(max(ecc.values()))
-            # except Exception:
-            #     lengths = dict(nx.all_pairs_dijkstra_path_length(Hc, weight="weight"))
-            #     ecc_vals = [max(d.values()) for d in lengths.values()]
-            #     ecc_r, ecc_d = float(min(ecc_vals)), float(max(ecc_vals))
 
     # -----------------------------
     # Filter by minimum similarity
@@ -293,23 +316,70 @@ for idx, row in df.iterrows():
     else:
         cdict = nx.clustering(subG, weight="similarity")
         avg_clust = float(np.mean(list(cdict.values()))) if cdict else float("nan")
-    
-    # Progression depth
+
+    # Radius and diameter of largest connected component
+    if subG.number_of_nodes() == 0:
+        lcc_radius, lcc_diameter = float("nan"), float("nan")
+    else:
+        # Get the connected component with the most nodes
+        Hc_nodes = max(nx.connected_components(subG), key=len)
+        Hc_node_list = list(Hc_nodes)
+        if len(Hc_node_list) <= 1:
+            lcc_radius, lcc_diameter = 0.0, 0.0
+        else:
+            # Calculate eccentricity for each node in this connected component
+            lcc_node_eccentricities = []
+            for i, node1 in enumerate(Hc_node_list):
+                max_dist_from_node = 0.0
+                for j, node2 in enumerate(Hc_node_list):
+                    if i != j:  # Don't compare node to itself
+                        if subG.has_edge(node1, node2):
+                            # Get similarity and convert to distance
+                            sim = subG[node1][node2].get("similarity")
+                            if sim is None and "weight" in subG[node1][node2]:
+                                sim = 1.0 - float(subG[node1][node2]["weight"])
+                            if sim is not None:
+                                dist = 1.0 - float(sim)
+                            else:
+                                dist = 1.0  # Default distance if similarity is missing
+                        else:
+                            # If no edge exists, assume max distance
+                            dist = 1.0
+                        max_dist_from_node = max(max_dist_from_node, dist)
+                lcc_node_eccentricities.append(max_dist_from_node)
+            
+            # Radius = min eccentricity, diameter = max eccentricity
+            lcc_radius, lcc_diameter = float(min(lcc_node_eccentricities)), float(max(lcc_node_eccentricities))
+
+    # Progression depth - longest chain across all connected components
     if subG.number_of_nodes() == 0:
         prog_depth = 0
     else:
-        # Get the largest connected component
-        Hc_nodes = max(nx.connected_components(subG), key=len)
-        Hc = subG.subgraph(Hc_nodes).copy()
-        if Hc.number_of_nodes() == 1:
-            prog_depth = 0
-        else:
-            # try:
-                prog_depth = int(nx.diameter(Hc))
-            # except Exception:
-            #     lengths = dict(nx.all_pairs_shortest_path_length(Hc))
-            #     prog_depth = int(max(max(d.values()) for d in lengths.values()))
-
+        # Get all connected components
+        connected_components = list(nx.connected_components(subG))
+        max_chain_length = 0
+        
+        for component in connected_components:
+            if len(component) <= 1:
+                # Single node or empty component has chain length 0
+                continue
+            else:
+                # Create subgraph for this component
+                comp_subgraph = subG.subgraph(component).copy()
+                
+                # Find longest chain in this component using unweighted paths
+                try:
+                    # Get all pairs shortest path lengths for this component
+                    lengths = dict(nx.all_pairs_shortest_path_length(comp_subgraph))
+                    # Find the maximum path length in this component
+                    max_length_in_comp = max(max(d.values()) for d in lengths.values())
+                    max_chain_length = max(max_chain_length, max_length_in_comp)
+                except Exception:
+                    # Fallback: if NetworkX fails, assume chain length is component size - 1
+                    max_chain_length = max(max_chain_length, len(component) - 1)
+        
+        prog_depth = int(max_chain_length)
+                
     # -----------------------------
     # Append all metrics
     # -----------------------------
@@ -330,10 +400,10 @@ for idx, row in df.iterrows():
 
         "avg_distance": avg_distance,                # Average distance between all course pairs
         "max_distance": max_distance,                # Maximum distance between any course pair
-
+        
         "rao_q_uniform": rao_q,
-        "ecc_radius_weighted": ecc_r,
-        "ecc_diameter_weighted": ecc_d,
+        "radius_largest_comp": lcc_radius,
+        "diameter_largest_comp": lcc_diameter,
         
         "avg_clustering_similarity": avg_clust,
         "progression_depth_hops": prog_depth, 
