@@ -20,6 +20,11 @@ import Settings from './Settings';
 import html2canvas from 'html2canvas'; // Import html2canvas
 import OnboardingPopup from './OnboardingPopup';
 
+// Using global context
+import { useSemester } from './SemesterContext';
+
+
+
 // Use the globally defined current semester
 // const semester = CURRENT_SEMESTER;
 const backendUrl=process.env.REACT_APP_BACKEND_URL;
@@ -120,7 +125,8 @@ export default function CourseSimilarityPrecomputedGraph({
     height: window.innerHeight,
   });
   const [selectedCourse, setSelectedCourse] = useState(null);
-  const [selectedSemester, setSelectedSemester] = useState(CURRENT_SEMESTER);
+  // In your component:
+  const { selectedSemester, setSelectedSemester } = useSemester(); // Use global state
   const [userId, setUserId] = useState(null);
   const [activeTab, setActiveTab] = useState(isPublicMode ? 'thisSemester' : 'thisSemester');
   const [showConflicts, setShowConflicts] = useState(true);
