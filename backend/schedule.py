@@ -30,6 +30,7 @@ validator = QueryValidator()
 #supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 SUPABASE_TABLE_URL = f"{SUPABASE_URL}/rest/v1/user_courses"  # Example table path
+SUPABASE_TABLE_URL_EXTRA=f"{SUPABASE_URL}/rest/v1/user_courses_test"
 
 # --- Azure OpenAI: use TWO clients (different resources) ---
 
@@ -632,6 +633,112 @@ def check_terms(payload=None, user_id=None, user_email=None):
     except Exception as e:
         print("Error in accept_terms:", e)
         return jsonify({"error": str(e)}), 500
+
+
+@app.route("/add_course", methods=["POST"])
+@jwt_required
+def add_course(payload=None, user_id=None, user_email=None):
+    data = request.json
+
+    user_id = payload["sub"]  # trusted Supabase user ID
+    new_course = data.get("course_to_add")
+    course_semester=data.get("semester")
+    print(new_course)
+    print(course_semester)
+
+    if not user_id or not new_course:
+        return jsonify({"error": "Missing user_id or semester_courses"}), 400
+
+    # First, fetch the existing row (if any)
+    fetch_url = f"{SUPABASE_TABLE_URL}?id=eq.{user_id}"
+
+    # Send upsert to Supabase REST API
+    headers = {
+        "apikey": SUPABASE_KEY,
+        "Authorization": f"Bearer {SUPABASE_KEY}",
+        "Content-Type": "application/json"
+    }
+
+    fetch_response = requests.get(fetch_url, headers=headers)
+    if fetch_response.status_code != 200:
+        return jsonify({"error": "Failed to fetch user row", "details": fetch_response.text}), 500
+
+    existing_rows = fetch_response.json()
+    print("existing rows are ",existing_rows)
+
+    if not existing_rows:
+        # Row does not exist, create a blank one with just the ID
+        row_data = {"id": user_id, course_semester: [new_course]}
+        insert_response = requests.post(
+            SUPABASE_TABLE_URL,
+            json=[row_data],
+            headers={**headers, "Prefer": "resolution=merge-duplicates"}
+        )
+        if insert_response.status_code not in [200, 201, 204]:
+            return jsonify({"error": "Failed to create new row", "details": insert_response.text}), 500
+    else:
+        # Row exists → append the course to the matching semester column
+        existing_row = existing_rows[0]
+        current_courses = existing_row.get(course_semester, []) or []
+        if new_course not in current_courses:
+            current_courses.append(new_course)
+        print("current courses are now ",current_courses)
+
+        update_data = {course_semester: current_courses}
+        update_url = f"{SUPABASE_TABLE_URL}?id=eq.{user_id}"
+        update_response = requests.patch(update_url, json=update_data, headers=headers)
+        print("succesful response")
+
+        if update_response.status_code not in [200, 201, 204]:
+            return jsonify({"error": "Failed to update existing row", "details": update_response.text}), 500
+
+    return jsonify({"status": "success"}), 200
+
+
+@app.route("/remove_course", methods=["POST"])
+@jwt_required
+def remove_course(payload=None, user_id=None, user_email=None):
+    data = request.json
+
+    user_id = payload["sub"]  # trusted Supabase user ID
+    new_course = data.get("course_to_add")
+    course_semester=data.get("semester")
+    print(new_course)
+    print(course_semester)
+
+    if not user_id or not new_course:
+        return jsonify({"error": "Missing user_id or semester_courses"}), 400
+
+    # First, fetch the existing row (if any)
+    fetch_url = f"{SUPABASE_TABLE_URL}?id=eq.{user_id}"
+
+    # Send upsert to Supabase REST API
+    headers = {
+        "apikey": SUPABASE_KEY,
+        "Authorization": f"Bearer {SUPABASE_KEY}",
+        "Content-Type": "application/json"
+    }
+
+    fetch_response = requests.get(fetch_url, headers=headers)
+    if fetch_response.status_code != 200:
+        return jsonify({"error": "Failed to fetch user row", "details": fetch_response.text}), 500
+
+    existing_rows = fetch_response.json()
+
+    # Row exists → append the course to the matching semester column
+    existing_row = existing_rows[0]
+    current_courses = existing_row.get(course_semester, []) or []
+    if new_course in current_courses:
+        current_courses.remove(new_course)
+
+    update_data = {course_semester: current_courses}
+    update_url = f"{SUPABASE_TABLE_URL}?id=eq.{user_id}"
+    update_response = requests.patch(update_url, json=update_data, headers=headers)
+
+    if update_response.status_code not in [200, 201, 204]:
+        return jsonify({"error": "Failed to update existing row", "details": update_response.text}), 500
+
+    return jsonify({"status": "success"}), 200
     
     
 @app.route("/surprise_recommendation", methods=["POST"])
