@@ -1,10 +1,16 @@
 import React from "react";
+import { supabase } from "./supabaseClient"; 
 
 export default function CoursePopup({ course, onClose, onHighlight, highlighted, activeTab, onSelect, courseDetailsData, setSelectedCourse }) {
   if (!course) return null;
 
   // Ensure highlighted is an array
   const highlightedArray = Array.isArray(highlighted) ? highlighted : [];
+  const backendUrl=process.env.REACT_APP_BACKEND_URL;
+  const SUPABASE_URL=process.env.REACT_APP_SUPABASE_URL;
+  const SUPABASE_TABLE_URL = `${SUPABASE_URL}/rest/v1/user_courses`
+  const SUPABASE_TABLE_URL_EXTRA=`${SUPABASE_URL}/rest/v1/user_courses_test`
+  
 
   // Check if any of the course codes are already highlighted
   const isSelected = course.course_codes && 
@@ -13,13 +19,78 @@ export default function CoursePopup({ course, onClose, onHighlight, highlighted,
         highlightedArray.includes(course.course_codes.join('/'))
       : highlightedArray.includes(course.course_codes));
 
-  const handleSelect = () => {
+  const handleSelect = async () => {
     if (!course.course_codes) return;
     
     // Use onSelect (handleAddSelectedCourse) instead of onHighlight
     onSelect(course);
-    console.log("Added a course");
-    
+
+    const { data: { session } } = await supabase.auth.getSession();
+    const token = session?.access_token;
+      
+      if (!token) {
+        console.error("No valid session token found");
+        return;
+      }
+
+      const payload = {
+        course_to_add: course.course_codes[0],
+        semester: course.semester
+      };
+
+
+      if (!isSelected){
+
+      console.log("Added a course");
+      console.log(course.course_codes[0]);
+        
+        try {
+          const response = await fetch(`${backendUrl}/add_course`, { // await fetch(`${API_BASE_URL}/retrieve_courses`
+            method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`,
+          },
+          //for cross-listed courses, this will take the first course code - be aware of this as it COULD cause issues later-on depending on treatment of cross-listed courses
+          body: JSON.stringify(payload) // no user_id
+          });
+      
+          if (!response.ok) {
+            throw new Error(`Backend error: ${response.status}`);
+          }
+      
+        } catch (err) {
+          console.log(err.message);
+          console.error("Error fetching backend data:", err);
+        }
+      }
+      else{
+
+        console.log("Removed a course");
+        console.log(course.course_codes[0]);
+          
+          try {
+            const response = await fetch(`${backendUrl}/remove_course`, { // await fetch(`${API_BASE_URL}/retrieve_courses`
+              method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${token}`,
+            },
+            //for cross-listed courses, this will take the first course code - be aware of this as it COULD cause issues later-on depending on treatment of cross-listed courses
+            body: JSON.stringify(payload) // no user_id
+            });
+        
+            if (!response.ok) {
+              throw new Error(`Backend error: ${response.status}`);
+            }
+        
+          } catch (err) {
+            console.log(err.message);
+            console.error("Error fetching backend data:", err);
+          }
+
+      }
+
     onClose();
   };
 
