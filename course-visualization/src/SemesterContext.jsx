@@ -5,7 +5,7 @@ import { AVAILABLE_SEMESTERS } from './config';
 const SemesterContext = createContext();
 
 export const SemesterProvider = ({ children }) => {
-  const [selectedSemester, setSelectedSemester] = useState(AVAILABLE_SEMESTERS[0]);
+  const [selectedSemester, setSelectedSemester] = useState("2324S");
   return (
     <SemesterContext.Provider value={{ selectedSemester, setSelectedSemester }}>
       {children}
