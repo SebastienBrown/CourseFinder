@@ -16,6 +16,7 @@ import time
 from datetime import datetime
 from query_validation import QueryValidator
 import jwt
+import glob
 
 
 # Load env
@@ -367,10 +368,12 @@ SEMESTER_COLUMNS = [
 @app.route("/semantic_course_search", methods=["POST"])
 def semantic_search():
     data=request.json
-    print("Incoming semantic input data: ",data)
+    #print("Incoming semantic input data: ",data)
 
     query=data.get("query")
-    print(query)
+    #print(query)
+    useAllSemesters=data.get("allSemesterSearch")
+    currentSem=data.get("currentSemester")
 
     # Check if query is safe to use
     is_valid, error = validator.validate(query)
@@ -383,24 +386,30 @@ def semantic_search():
     query_embedding=get_openai_embedding(query)
     print(query_embedding)
 
-    # Input and output paths
-    file1_path = "data/gpt_off_the_shelf/output_embeddings_2526F.json"
-    file2_path = "data/gpt_off_the_shelf/output_embeddings_2526S.json"
-    output_path = "combined.json"
+    ##########################
+    combined_list = []
 
-    # Load both JSON lists
-    with open(file1_path, 'r', encoding='utf-8') as f1:
-        list1 = json.load(f1)
+    if useAllSemesters==False:
 
-    with open(file2_path, 'r', encoding='utf-8') as f2:
-        list2 = json.load(f2)
+        print(currentSem)
+        # 1. Read from a single file
+        single_file_path = f"data/gpt_off_the_shelf/output_embeddings_{currentSem}.json"
+        with open(single_file_path, 'r', encoding='utf-8') as f:
+            combined_list = json.load(f)
 
-    # Ensure both are lists
-    if not isinstance(list1, list) or not isinstance(list2, list):
-        raise ValueError("Both JSON files must contain lists.")
+        if not isinstance(combined_list, list):
+            raise ValueError("The JSON file must contain a list.")
 
-    # Concatenate lists
-    combined_list = list1 + list2
+    else:
+        # 2. Read from multiple files and concatenate their contents
+        all_files = [f"data/gpt_off_the_shelf/output_embeddings_{sem}.json" for sem in SEMESTER_COLUMNS]
+
+        for file_path in all_files:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                if not isinstance(data, list):
+                    raise ValueError(f"JSON file {file_path} must contain a list.")
+                combined_list.extend(data)
 
     seen_titles = set()
     deduped = []
@@ -416,24 +425,41 @@ def semantic_search():
     course_names = [course["course_title"] for course in combined_list]
 
     # Count frequencies
-    name_counts = Counter(course_names)
+    #name_counts = Counter(course_names)
 
     # Print frequencies
-    for name, count in name_counts.items():
-        print(f"{name}: {count}")
+    #for name, count in name_counts.items():
+       #print(f"{name}: {count}")
+
+    # Separate valid and invalid courses
+    valid_courses = []
+    invalid_courses = []
+
+    for course in combined_list:
+        if "embedding" in course and course["embedding"] is not None:
+            valid_courses.append(course)
+        else:
+            invalid_courses.append(course)
+
+    # Print invalid courses with title and semester
+    print(f"Found {len(invalid_courses)} courses without embeddings:")
+    for course in invalid_courses:
+        title = course.get("course_title", "<no title>")
+        semester = course.get("semester", "<no semester>")
+        print(f"- {title} ({semester})")
 
     # Step 2: Prepare course embeddings matrix
-    course_embeddings = np.array([course["embedding"] for course in combined_list])
-    print(course_embeddings)
+    course_embeddings = np.array([course["embedding"] for course in valid_courses])
+    #print(course_embeddings)
 
     # Step 3: Compute cosine similarity
     similarities = cosine_similarity(query_embedding, course_embeddings)[0]  # [0] to flatten
 
     # Step 4: Assign similarity scores and rank courses
-    for course, sim in zip(combined_list, similarities):
+    for course, sim in zip(valid_courses, similarities):
         course["similarity"] = sim
 
-    ranked_courses = sorted(combined_list, key=lambda x: x["similarity"], reverse=True)
+    ranked_courses = sorted(valid_courses, key=lambda x: x["similarity"], reverse=True)
 
     # Print only the course codes
     #print("RANKED COURSE CODES:")
