@@ -220,7 +220,7 @@ const searchCourses = (searchTerm) => {
       const response = await fetch(`${backendUrl}/semantic_course_search`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query: searchTerm, semester: currentSemester }),
+        body: JSON.stringify({ query: searchTerm, allSemesterSearch: useAllSemestersSearch, currentSemester: selectedSemester }),
       });
       const data = await response.json();
       setSuggestions(data.slice(0, 5)); // limit to top 5
