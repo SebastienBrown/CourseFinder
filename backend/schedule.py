@@ -662,7 +662,7 @@ def add_course(payload=None, user_id=None, user_email=None):
         return jsonify({"error": "Missing user_id or semester_courses"}), 400
 
     # First, fetch the existing row (if any)
-    fetch_url = f"{SUPABASE_TABLE_URL}?id=eq.{user_id}"
+    fetch_url = f"{SUPABASE_TABLE_URL_EXTRA}?id=eq.{user_id}"
 
     # Send upsert to Supabase REST API
     headers = {
@@ -682,7 +682,7 @@ def add_course(payload=None, user_id=None, user_email=None):
         # Row does not exist, create a blank one with just the ID
         row_data = {"id": user_id, course_semester: [new_course]}
         insert_response = requests.post(
-            SUPABASE_TABLE_URL,
+            SUPABASE_TABLE_URL_EXTRA,
             json=[row_data],
             headers={**headers, "Prefer": "resolution=merge-duplicates"}
         )
@@ -697,7 +697,7 @@ def add_course(payload=None, user_id=None, user_email=None):
         print("current courses are now ",current_courses)
 
         update_data = {course_semester: current_courses}
-        update_url = f"{SUPABASE_TABLE_URL}?id=eq.{user_id}"
+        update_url = f"{SUPABASE_TABLE_URL_EXTRA}?id=eq.{user_id}"
         update_response = requests.patch(update_url, json=update_data, headers=headers)
         print("succesful response")
 
@@ -722,7 +722,7 @@ def remove_course(payload=None, user_id=None, user_email=None):
         return jsonify({"error": "Missing user_id or semester_courses"}), 400
 
     # First, fetch the existing row (if any)
-    fetch_url = f"{SUPABASE_TABLE_URL}?id=eq.{user_id}"
+    fetch_url = f"{SUPABASE_TABLE_URL_EXTRA}?id=eq.{user_id}"
 
     # Send upsert to Supabase REST API
     headers = {
@@ -744,7 +744,7 @@ def remove_course(payload=None, user_id=None, user_email=None):
         current_courses.remove(new_course)
 
     update_data = {course_semester: current_courses}
-    update_url = f"{SUPABASE_TABLE_URL}?id=eq.{user_id}"
+    update_url = f"{SUPABASE_TABLE_URL_EXTRA}?id=eq.{user_id}"
     update_response = requests.patch(update_url, json=update_data, headers=headers)
 
     if update_response.status_code not in [200, 201, 204]:
