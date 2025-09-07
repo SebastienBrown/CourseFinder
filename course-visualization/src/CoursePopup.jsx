@@ -264,7 +264,7 @@ export default function CoursePopup({ course, onClose, onHighlight, highlighted,
                   : 'bg-[#3f1f69] text-white hover:bg-[#311a4d]'
               }`}
             >
-              {isSelected ? 'I did not take this course' : 'I took this course'}
+              {isSelected ? 'I no longer want to take this course' : 'I might take this course'}
             </button>
 
             {/* <button
