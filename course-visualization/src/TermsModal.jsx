@@ -125,9 +125,8 @@ export default function TermsModal() {
             our Privacy Policy. Please read the summary below.
           </p>
           <ul className="list-disc pl-5">
-            <li>We collect minimal data needed to provide the service.</li>
-            <li>You can opt out of non-essential analytics at any time.</li>
-            <li>See our full Terms for details on usage and restrictions.</li>
+            <li>The course history data we collect is stored anonymously and will only be used for research purposes..</li>
+            <li>Users may upload a transcript for simplified onboarding: no grade information will be stored.</li>
           </ul>
         </div>
 
@@ -139,7 +138,7 @@ export default function TermsModal() {
             className="mt-1 h-4 w-4 rounded border-gray-300"
           />
           <span className="text-sm text-gray-800">
-            I have read and agree to the <a href="#" className="underline font-medium">Terms & Conditions</a>.
+            I have read and agree to the <a className="strong font-medium">Terms & Conditions</a>.
           </span>
         </label>
 

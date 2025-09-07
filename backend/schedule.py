@@ -494,10 +494,9 @@ def submit_courses(payload=None, user_id=None, user_email=None):
 @jwt_required
 def retrieve_courses(payload=None, user_id=None, user_email=None):
     data = request.json
-    print("Incoming request data:", data)
 
     user_id = payload["sub"]  # trusted Supabase user ID
-    print("USER ID IS: ",user_id)
+    #print("USER ID IS: ",user_id)
     if not user_id:
         return jsonify({"error": "Missing user_id"}), 400
 
@@ -510,24 +509,37 @@ def retrieve_courses(payload=None, user_id=None, user_email=None):
 
     # Build GET URL with filter to retrieve row by user id
     get_url = f"{SUPABASE_TABLE_URL}?id=eq.{user_id}"
+    get_url2 = f"{SUPABASE_TABLE_URL_EXTRA}?id=eq.{user_id}"
     
     try:
         response = requests.get(get_url, headers=headers)
-        print("Supabase response:", response.status_code, response.text)
+        response2 = requests.get(get_url2, headers=headers)
 
-        if response.status_code == 200:
-            data = response.json()
-            if data:
+        if response.status_code == 200 and response2.status_code == 200:
+
+            data1 = response.json()
+            data2 = response2.json()
+
+            combined_data = []
+            if data1:
+                combined_data.append(data1[0])  # Or extend if you expect multiple rows
+            if data2:
+                combined_data.append(data2[0])  # Or extend if you expect multiple rows
+
+            if combined_data:
                 # Create a list of courses with their semester information
                 courses_with_semesters = []
-                for semester in SEMESTER_COLUMNS:
-                    if semester in data[0] and data[0][semester] is not None:
-                        for course in data[0][semester]:
-                            courses_with_semesters.append({
-                                "course_code": course,
-                                "semester": semester
-                            })
+                for entry in combined_data:
+                    for semester in SEMESTER_COLUMNS:
+                        if semester in entry and entry[semester] is not None:
+                            for course in entry[semester]:
+                                courses_with_semesters.append({
+                                    "course_code": course,
+                                    "semester": semester
+                                })
+                
                 return jsonify(courses_with_semesters)
+                
             else:
                 return jsonify([])  # No data found
         else:
