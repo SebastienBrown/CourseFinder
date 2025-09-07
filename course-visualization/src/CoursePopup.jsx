@@ -19,11 +19,12 @@ export default function CoursePopup({ course, onClose, onHighlight, highlighted,
         highlightedArray.includes(course.course_codes.join('/'))
       : highlightedArray.includes(course.course_codes));
 
-  const handleSelect = async () => {
+  const handleSelectHistory = async () => {
     if (!course.course_codes) return;
     
     // Use onSelect (handleAddSelectedCourse) instead of onHighlight
     onSelect(course);
+    onClose();
 
     const { data: { session } } = await supabase.auth.getSession();
     const token = session?.access_token;
@@ -90,8 +91,80 @@ export default function CoursePopup({ course, onClose, onHighlight, highlighted,
           }
 
       }
+  };
 
+  const handleSelectTest = async () => {
+    if (!course.course_codes) return;
+    
+    // Use onSelect (handleAddSelectedCourse) instead of onHighlight
+    onSelect(course);
     onClose();
+
+    const { data: { session } } = await supabase.auth.getSession();
+    const token = session?.access_token;
+      
+      if (!token) {
+        console.error("No valid session token found");
+        return;
+      }
+
+      const payload = {
+        course_to_add: course.course_codes[0],
+        semester: course.semester
+      };
+
+
+      if (!isSelected){
+
+      console.log("Added a course");
+      console.log(course.course_codes[0]);
+        
+        try {
+          const response = await fetch(`${backendUrl}/add_course`, { // await fetch(`${API_BASE_URL}/retrieve_courses`
+            method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`,
+          },
+          //for cross-listed courses, this will take the first course code - be aware of this as it COULD cause issues later-on depending on treatment of cross-listed courses
+          body: JSON.stringify(payload) // no user_id
+          });
+      
+          if (!response.ok) {
+            throw new Error(`Backend error: ${response.status}`);
+          }
+      
+        } catch (err) {
+          console.log(err.message);
+          console.error("Error fetching backend data:", err);
+        }
+      }
+      else{
+
+        console.log("Removed a course");
+        console.log(course.course_codes[0]);
+          
+          try {
+            const response = await fetch(`${backendUrl}/remove_course`, { // await fetch(`${API_BASE_URL}/retrieve_courses`
+              method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${token}`,
+            },
+            //for cross-listed courses, this will take the first course code - be aware of this as it COULD cause issues later-on depending on treatment of cross-listed courses
+            body: JSON.stringify(payload) // no user_id
+            });
+        
+            if (!response.ok) {
+              throw new Error(`Backend error: ${response.status}`);
+            }
+        
+          } catch (err) {
+            console.log(err.message);
+            console.error("Error fetching backend data:", err);
+          }
+
+      }
   };
 
   return (
@@ -182,17 +255,29 @@ export default function CoursePopup({ course, onClose, onHighlight, highlighted,
         )}
 
         {activeTab === 'thisSemester' && (
-          <div className="flex justify-end pt-4">
+          <div className="flex justify-end pt-4 space-x-3">
             <button
-              onClick={handleSelect}
+              onClick={handleSelectHistory}
               className={`px-4 py-2 rounded-md font-medium transition-colors ${
                 isSelected
                   ? 'bg-red-100 text-red-700 hover:bg-red-200'
                   : 'bg-[#3f1f69] text-white hover:bg-[#311a4d]'
               }`}
             >
-              {isSelected ? 'Deselect Course' : 'Select Course'}
+              {isSelected ? 'I did not take this course' : 'I took this course'}
             </button>
+
+            {/* <button
+              onClick={handleSelectTest}
+              className={`px-4 py-2 rounded-md font-medium transition-colors ${
+                isSelected
+                  ? 'bg-blue-100 text-blue-700 hover:bg-blue-200'
+                  : 'bg-green-600 text-white hover:bg-green-700'
+              }`}
+            >
+              {isSelected ? 'I do not plan to take this course' : 'I might take this course'}
+            </button> */}
+
           </div>
         )}
       </div>

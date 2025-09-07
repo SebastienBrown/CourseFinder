@@ -189,11 +189,22 @@ export default function CourseSimilarityPrecomputedGraph({
   
 
   useEffect(() => {
-    function handleResize() {
-      setDimensions({ width: window.innerWidth, height: window.innerHeight });
-    }
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    if (!mapContainerRef.current) return;
+    
+    let timeoutId;
+    const resizeObserver = new ResizeObserver((entries) => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        const { width, height } = entries[0].contentRect;
+        setDimensions({ width, height });
+      }, 16); // One frame delay
+    });
+    
+    resizeObserver.observe(mapContainerRef.current);
+    return () => {
+      resizeObserver.disconnect();
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   // Effect to extract user course codes whenever backend data is available
@@ -292,7 +303,8 @@ export default function CourseSimilarityPrecomputedGraph({
                   });
                 }
               });
-
+              
+              //BUG: Issue with 0910F ARHA-37 - caused history to crash: why?
               // Add semester information to each tsneCoord and apply FYSE filter
               const tsneCoordsWithSemester = tsneCoords
                 .filter(coord => shouldIncludeFyse || !coord.codes.some(code => code.startsWith('FYSE-')))
@@ -622,7 +634,7 @@ export default function CourseSimilarityPrecomputedGraph({
       
       // Calculate the legend space requirements
       const deptEntries = [...majorColorMap.entries()];
-      const legendItemHeight = 25;
+      const legendItemHeight = 20;
       
       // Conditional legend column and item width for Department Legend
       let legendItemWidth;
@@ -636,15 +648,15 @@ export default function CourseSimilarityPrecomputedGraph({
       }
       
       // Left legend dimensions
-      const leftLegendWidth = legendItemWidth * colCount + 0.02 * width;
-      const leftLegendHeight = Math.ceil(deptEntries.length / colCount) * legendItemHeight + width * width * 0.00001;
+      const leftLegendWidth = 300;
+      const leftLegendHeight = height*0.63;
       //console.log('width', width * width * 0.00001)
       
       // Right legend dimensions (there is nothing now so set to 0)
       const rightLegendWidth = 0//leftLegendWidth; // Reduced width
       
       // Create padding for chart area
-      const topPadding = 270 - width * 0.15; // Title space
+      const topPadding = 52; // Title space
       //console.log('topPadding:', topPadding)
       const bottomPadding = 200 - width * 0.07; // Footer space
       const leftPadding = leftLegendWidth;
@@ -987,8 +999,8 @@ export default function CourseSimilarityPrecomputedGraph({
 
       if (!legendCollapsed) {
       // === DEPARTMENT LEGEND (2-COLUMN LAYOUT) ===
-      const legendPaddingY = 290 - width * 0.15;
-      const legendPaddingX = width * 0.01;
+      const legendPaddingY = 62;
+      const legendPaddingX = 20;
       //console.log('legendPadding:', legendPaddingX)
 
       const legendItemCount = deptEntries.length;
@@ -996,12 +1008,14 @@ export default function CourseSimilarityPrecomputedGraph({
       
       // Create background for legend
       svg.append("rect")
-        .attr("x", legendPaddingX)
-        .attr("y", legendPaddingY - 10)
+        .attr("x", 0)
+        .attr("y", 0)
         .attr("width", leftLegendWidth - 20)
-        .attr("height", leftLegendHeight)
+        .attr("height", height)
         .attr("fill", "rgba(249, 247, 251, 0.95)")
-        .attr("rx", 5);
+        .attr("rx", 5)
+        .attr('stroke-dasharray', '5,5') // 5px dash, 5px gap
+        .attr('stroke', '#FF0000'); // red outline)
       
       // Add title to legend
       svg.append("text")
@@ -1093,7 +1107,7 @@ export default function CourseSimilarityPrecomputedGraph({
       // === TRANCHE SHAPE LEGEND ===
       const shapeEntries = Object.entries(TRANCHE_SHAPES).filter(([tranche]) => tranche !== "First Year Seminar");
       const shapeLegendX = legendPaddingX;
-      const shapeLegendY = legendPaddingY + leftLegendHeight;
+      const shapeLegendY = leftLegendHeight+5;
       let shapeLegendHeight;
       if (width > 1600) {
         shapeLegendHeight = shapeEntries.length * legendItemHeight + width * 0.02; // Adjusted height for disclaimer text
@@ -1112,7 +1126,7 @@ export default function CourseSimilarityPrecomputedGraph({
 
       // Background for shape legend
       svg.append("rect")
-        .attr("x", shapeLegendX - 10)
+        .attr("x", 0)
         .attr("y", shapeLegendY - 10)
         .attr("width", leftLegendWidth - 20)
         .attr("height", shapeLegendHeight)
@@ -1226,7 +1240,7 @@ export default function CourseSimilarityPrecomputedGraph({
 
       // Optional: Add a visual separator between legends and graph
       svg.append("rect")
-        .attr("x", leftPadding - 10)
+        .attr("x", leftPadding - 20)
         .attr("y", 0)
         .attr("width", 1)
         .attr("height", height)
