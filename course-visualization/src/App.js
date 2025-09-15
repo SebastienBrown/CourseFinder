@@ -13,7 +13,7 @@ import IntakePrompt from "./IntakePrompt";
 import SurpriseButton from "./SurpriseButton";
 import TermsModal from "./TermsModal"; // adjust path
 import { SemesterProvider } from './SemesterContext';
-
+import SubmissionPage from "./SubmissionPage";
 
 
 //console.log("🟢 Using backend URL:", process.env.REACT_APP_BACKEND_URL);
@@ -50,6 +50,13 @@ function Layout({ children, logout, onShowHelp }) {
             className="px-4 py-2 bg-purple-600 text-white rounded-lg font-semibold shadow hover:bg-purple-700 transition-all duration-200"
           >
             Add Past Courses
+          </button>
+
+          <button
+            onClick={() => navigate("/question")}
+            className="px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold shadow hover:bg-blue-700 transition-all duration-200"
+          >
+            Ask a Question
           </button>
         </div>
 
@@ -198,6 +205,7 @@ function App() {
 
     {/* ✅ IntakePrompt moved to its own route */}
     <Route path="/intake-prompt" element={<IntakePrompt />} />
+    <Route path="question" element={<SubmissionPage />} />
 
     <Route path="/upload" element={<Upload />} />
     <Route path="/intake" element={<Intake />} />

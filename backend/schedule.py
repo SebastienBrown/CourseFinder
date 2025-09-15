@@ -32,6 +32,7 @@ validator = QueryValidator()
 
 SUPABASE_TABLE_URL = f"{SUPABASE_URL}/rest/v1/user_courses"  # Example table path
 SUPABASE_TABLE_URL_EXTRA=f"{SUPABASE_URL}/rest/v1/user_courses_test"
+SUPABASE_FEEDBACK_TABLE_URL=f"{SUPABASE_URL}/rest/v1/questions"
 
 # --- Azure OpenAI: use TWO clients (different resources) ---
 
@@ -667,6 +668,48 @@ def check_terms(payload=None, user_id=None, user_email=None):
         if data and len(data) > 0:
             accepted = data[0].get("terms_accepted") or False  # <-- this line changed
         return jsonify({"accepted": accepted})
+
+    except Exception as e:
+        print("Error in accept_terms:", e)
+        return jsonify({"error": str(e)}), 500
+    
+
+# --- Check Terms endpoint ---
+@app.route("/submit-feedback", methods=["POST"])
+@jwt_required
+def submit_feedback(payload=None, user_id=None, user_email=None):
+    """Insert or update termsAccepted=True for the authenticated user"""
+    try:
+
+        # Extract user_id from JWT payload (trusted)
+        user_id = payload["sub"]
+
+        data = request.get_json()
+        TYPE=data.get("TYPE")
+        content=data.get("content")
+
+        headers = {
+            "apikey": SUPABASE_KEY,
+            "Authorization": f"Bearer {SUPABASE_KEY}",
+            "Content-Type": "application/json"
+        }
+
+        # Add query parameter to filter by user_id
+        url = SUPABASE_FEEDBACK_TABLE_URL
+        payload = {
+            "user_id": user_id,
+            "type": TYPE,
+            "contents":content, 
+        }
+
+        response = requests.post(url, headers=headers, json=payload)
+        print(response)
+
+        if not response.ok:
+            return jsonify({"error": response.text}), 500
+
+        # No response.json() needed if body is empty
+        return jsonify({"message": "Submission saved"}), 201
 
     except Exception as e:
         print("Error in accept_terms:", e)
