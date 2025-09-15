@@ -16,28 +16,41 @@ export default function SubmissionPage() {
       return;
     }
 
-    const { data: { session } } = await supabase.auth.getSession();
-    const token = session?.access_token;
-      
-    if (!token) {
-      console.error("No valid session token found");
-      return;
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      const token = session?.access_token;
+
+      if (!token) {
+        setStatus("❌ No valid session token found.");
+        return;
+      }
+
+      const res = await fetch(`${backendUrl}/submit-feedback`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          TYPE: category,
+          content: content,
+        }),
+      });
+
+      if (!res.ok) {
+        const errText = await res.text();
+        setStatus(`❌ Submission failed: ${errText}`);
+        return;
+      }
+
+      // Clear input fields on success
+      setCategory("Question");
+      setContent("");
+      setStatus("✅ Submission successful!");
+    } catch (err) {
+      console.error(err);
+      setStatus("❌ An error occurred while submitting.");
     }
-
-    const res = await fetch(`${backendUrl}/submit-feedback`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}`,
-      },
-      body: JSON.stringify({
-        "TYPE":category,
-        "content":content,  
-      }),
-    });
-
-      const data = await res.json();
-      console.log(data);
 
   };
 
