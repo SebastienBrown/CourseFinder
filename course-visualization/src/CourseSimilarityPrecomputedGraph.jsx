@@ -22,6 +22,7 @@ import OnboardingPopup from './OnboardingPopup';
 
 // Using global context
 import { useSemester } from './SemesterContext';
+import domtoimage from 'dom-to-image-more';
 
 
 
@@ -1014,8 +1015,8 @@ export default function CourseSimilarityPrecomputedGraph({
         .attr("height", height)
         .attr("fill", "rgba(249, 247, 251, 0.95)")
         .attr("rx", 5)
-        .attr('stroke-dasharray', '5,5') // 5px dash, 5px gap
-        .attr('stroke', '#FF0000'); // red outline)
+        .attr('stroke-dasharray', '5,5'); // 5px dash, 5px gap
+        //.attr('stroke', '#FF0000'); // red outline)
       
       // Add title to legend
       svg.append("text")
@@ -1323,13 +1324,12 @@ useEffect(() => {
           height: mapContainer.offsetHeight, // Capture the element's actual height
         });
 
-        const image = canvas.toDataURL('image/jpeg', 1); // Convert to JPEG with quality 1
+        const image = await domtoimage.toJpeg(mapContainer, { quality: 1, bgcolor: "#fff" });
         const link = document.createElement('a');
         link.href = image;
-        link.download = `my_open_curriculum.jpeg`;
-        document.body.appendChild(link);
+        link.download = 'my_open_curriculum.jpeg';
         link.click();
-        document.body.removeChild(link);
+        link.remove(); // safer than removeChild
 
         // Restore original scroll position
         window.scrollTo(0, originalScrollY);
