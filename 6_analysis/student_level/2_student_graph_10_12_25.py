@@ -10,7 +10,7 @@ import json, re, ast                      # JSON I/O, regex, safe literal parsin
 import numpy as np                        # numeric ops
 import pandas as pd                       # CSV I/O
 import networkx as nx                     # graphs
-from collections import Counter, defaultdict  # <-- NEW
+from collections import Counter, defaultdict
 
 # ---------- CLI arguments ----------
 parser = argparse.ArgumentParser(description="Compute curriculum diversity/depth metrics per student (no overwrite).")
@@ -23,17 +23,17 @@ parser.add_argument("--debug", action="store_true", help="Verbose debug prints")
 args = parser.parse_args()
 
 # ---------- Resolve flags to vars ----------
-INPUT_JSON = args.graph_json                          # big JSON similarity file
-INPUT_STUDENT_CSV = args.students_csv                  # original student CSV
-OUTPUT_METRICS_CSV = args.out_csv                      # metrics-only output CSV
-MIN_SIM = args.min_sim                                 # similarity threshold
-KEEP_TOP_K = args.keep_top_k                           # optional KNN pruning
-DEBUG = args.debug                                     # debug flag
+INPUT_JSON = args.graph_json
+INPUT_STUDENT_CSV = args.students_csv
+OUTPUT_METRICS_CSV = args.out_csv
+MIN_SIM = args.min_sim
+KEEP_TOP_K = args.keep_top_k
+DEBUG = args.debug
 
 # ---------- Regex / small parsers ----------
-pat_code = re.compile(r"[A-Za-z]{2,5}-\d{2,4}[A-Za-z]?")   # course code like ECON-111 / PSYC-498D
-pat_sem  = re.compile(r"^(\d{4})([A-Z])$")                 # semester like 2223F / 2021S / 0910F
-TERM_ORDER = {"F": 0, "J": 1, "S": 2}                      # within-year ordering
+pat_code = re.compile(r"[A-Za-z]{2,5}-\d{2,4}[A-Za-z]?")
+pat_sem  = re.compile(r"^(\d{4})([A-Z])$")
+TERM_ORDER = {"F": 0, "J": 1, "S": 2}
 
 def parse_courses_from_cell(s):
     """Parse a cell into a list of course codes (try list literal, else regex)."""
@@ -89,7 +89,10 @@ for node, (codes, sem) in node_meta.items():
 for (u, v), sim in edges_acc.items():
     G.add_edge(u, v, similarity=float(sim), weight=1.0 - float(sim))
 
-# Optional: keep only top-K similar neighbors per node
+# Keep a copy of the ORIGINAL/UNPRUNED graph for "global" RaoQ           # <<< NEW
+G_global = G.copy()                                                       # <<< NEW
+
+# Optional: keep only top-K similar neighbors per node (prunes G, not G_global)
 if KEEP_TOP_K is not None:
     for n in list(G.nodes()):
         nbrs = list(G[n].items())
@@ -98,11 +101,13 @@ if KEEP_TOP_K is not None:
             if G.has_edge(n, drop_u):
                 G.remove_edge(n, drop_u)
 
-print(f"Graph: {G.number_of_nodes()} nodes, {G.number_of_edges()} edges")
+print(f"Graph (possibly pruned): {G.number_of_nodes()} nodes, {G.number_of_edges()} edges")
+if DEBUG:
+    print(f"Global graph (unpruned)  : {G_global.number_of_nodes()} nodes, {G_global.number_of_edges()} edges")
 
 # ---------- Build lookup maps (with robust fallback) ----------
 code_sem_to_node, code_to_sem_nodes = {}, {}
-for node_id, attrs in G.nodes(data=True):
+for node_id, attrs in G_global.nodes(data=True):  # use global nodes for mapping robustness  # <<< NEW
     codes_str = attrs.get("codes", "")
     sem = attrs.get("semester", "")
     for code in codes_str.split("|"):
@@ -161,10 +166,7 @@ def compute_pairwise_shortest_distances(subg, weight_key="weight"):
     return dists
 
 def average_pairwise_distance(n_nodes, pairwise):
-    """
-    Mean pairwise distance across unordered node pairs in the subgraph.
-    Returns NaN if not enough nodes or no distances.
-    """
+    """Mean pairwise distance across unordered node pairs in the subgraph."""
     return float(np.mean(pairwise)) if (n_nodes > 1 and pairwise) else float("nan")
 
 def weighted_eccentricity_stats(subg, weight_key="weight"):
@@ -212,14 +214,7 @@ def _subject_from_code(code):
     return m.group(1).upper() if m else None
 
 def shannon_simpson_from_codes(all_codes):
-    """
-    Shannon/Simpson over subjects using *listed* codes:
-      - p_i = subject proportions
-      - H (Shannon) = -∑ p_i ln p_i
-      - H_norm = H / ln(k) for k>=2 (else 0)
-      - HHI = ∑ p_i^2
-      - Simpson = 1 - HHI
-    """
+    """Shannon/Simpson over subjects using *listed* codes."""
     subs = [_subject_from_code(c) for c in all_codes]
     subs = [s for s in subs if s]
     n = len(subs)
@@ -246,12 +241,9 @@ def shannon_simpson_from_codes(all_codes):
         "n_subjects": int(k),
     }
 
-# ---------- NEW: helpers for subject-level Rao Q ----------
+# ---------- Rao Q helpers ----------
 def _subjects_from_codes_attr(codes_attr_str):
-    """
-    Node attr 'codes' is a '|' joined string of codes.
-    Return a set of subject prefixes found in it (handles cross-listing).
-    """
+    """Parse node 'codes' (pipe-joined) into a set of subject prefixes (handles cross-listing)."""
     subs = set()
     for code in str(codes_attr_str).split("|"):
         s = _subject_from_code(code)
@@ -259,14 +251,15 @@ def _subjects_from_codes_attr(codes_attr_str):
             subs.add(s)
     return subs
 
-def rao_q_subject_weighted(subg_unfiltered, all_listed_codes, weight_key="weight"):
+def rao_q_subject_weighted(subg_unfiltered, all_listed_codes, weight_key="weight", mode="shortest"):
     """
-    Rao's Q over subjects for ONE student (with replacement):
+    Rao's Q over subjects for ONE student (with replacement), computed on the student's subgraph:
       - p_i from subject proportions in all_listed_codes.
-      - d_ij = mean shortest-path distance between any course with subject i and any with subject j,
-               computed from the student's UNFILTERED subgraph (edge weight = 'weight' = 1 - similarity).
-      - If no i–j node pairs or no reachable paths: d_ij := 1.0 (max dissimilarity).
-      - d_ii := 0.0.
+      - d_ij:
+          mode="shortest": mean shortest-path distance between any course in i and any in j (geodesic on student's graph)
+          mode="edge":     mean *direct-edge* distance if edge exists else 1.0 (fast fallback)
+      - If no observed i–j pairs (or unreachable in 'shortest'): d_ij := 1.0
+      - d_ii := 0.0
     Returns float Q (NaN if <2 subjects or graph too small).
     """
     subs = [_subject_from_code(c) for c in all_listed_codes]
@@ -278,39 +271,60 @@ def rao_q_subject_weighted(subg_unfiltered, all_listed_codes, weight_key="weight
     subjects = sorted(cnt.keys())
     if len(subjects) == 1:
         return 0.0
-
     p = {s: cnt[s] / n_codes for s in subjects}
 
     if subg_unfiltered.number_of_nodes() <= 1:
         return float("nan")
 
-    # node -> set(subjects) from node 'codes'
     node_subjects = {n: _subjects_from_codes_attr(subg_unfiltered.nodes[n].get("codes", "")) 
                      for n in subg_unfiltered.nodes()}
-
-    lengths = dict(nx.all_pairs_dijkstra_path_length(subg_unfiltered, weight=weight_key))
-
-    spair_sum = defaultdict(float)   # (i,j) -> sum distances
-    spair_cnt = defaultdict(int)     # (i,j) -> count
-
     nodes = list(subg_unfiltered.nodes())
-    for u in nodes:
-        lu = lengths.get(u, {})
-        Su = node_subjects.get(u, set())
-        if not Su:
-            continue
-        for v, dist_uv in lu.items():
-            if v == u:
+
+    spair_sum = defaultdict(float)
+    spair_cnt = defaultdict(int)
+
+    if mode == "shortest":
+        lengths = dict(nx.all_pairs_dijkstra_path_length(subg_unfiltered, weight=weight_key))
+        for u in nodes:
+            lu = lengths.get(u, {})
+            Su = node_subjects.get(u, set())
+            if not Su:
                 continue
-            Sv = node_subjects.get(v, set())
-            if not Sv:
+            for v, dist_uv in lu.items():
+                if v == u:
+                    continue
+                Sv = node_subjects.get(v, set())
+                if not Sv:
+                    continue
+                d = float(dist_uv)
+                for i in Su:
+                    for j in Sv:
+                        if i == j:
+                            continue
+                        spair_sum[(i, j)] += d
+                        spair_cnt[(i, j)] += 1
+    elif mode == "edge":
+        idx = {n: k for k, n in enumerate(nodes)}
+        for u in nodes:
+            Su = node_subjects.get(u, set())
+            if not Su:
                 continue
-            for i in Su:
-                for j in Sv:
-                    if i == j:
-                        continue
-                    spair_sum[(i, j)] += float(dist_uv)
-                    spair_cnt[(i, j)] += 1
+            for v in nodes:
+                if idx[v] <= idx[u]:
+                    continue
+                Sv = node_subjects.get(v, set())
+                if not Sv:
+                    continue
+                edata = subg_unfiltered.get_edge_data(u, v)
+                d = float(edata.get(weight_key, 1.0)) if edata else 1.0
+                for i in Su:
+                    for j in Sv:
+                        if i == j:
+                            continue
+                        spair_sum[(i, j)] += d; spair_cnt[(i, j)] += 1
+                        spair_sum[(j, i)] += d; spair_cnt[(j, i)] += 1
+    else:
+        raise ValueError("mode must be 'shortest' or 'edge'")
 
     def d_ij(i, j):
         if i == j:
@@ -318,7 +332,93 @@ def rao_q_subject_weighted(subg_unfiltered, all_listed_codes, weight_key="weight
         key = (i, j)
         if spair_cnt.get(key, 0) > 0:
             return spair_sum[key] / spair_cnt[key]
-        return 1.0  # fallback if no observed paths
+        return 1.0
+
+    Q = 0.0
+    for i in subjects:
+        for j in subjects:
+            Q += p[i] * p[j] * d_ij(i, j)
+    return float(Q)
+
+def rao_q_subject_on_global(G_global, mapped_nodes, all_listed_codes, weight_key="weight", mode="shortest"):
+    """
+    Rao's Q computed using the ORIGINAL (unpruned) global graph distances among the student's mapped nodes.
+      - mode="shortest": geodesic distances on G_global between mapped nodes (respects weak ties).
+      - mode="edge":     direct-edge distances from G_global; missing edge -> 1.0.
+    This answers: what's the expected subject dissimilarity if we measure proximity in the full network?
+    """
+    subs = [_subject_from_code(c) for c in all_listed_codes]
+    subs = [s for s in subs if s]
+    n_codes = len(subs)
+    if n_codes == 0:
+        return float("nan")
+    cnt = Counter(subs)
+    subjects = sorted(cnt.keys())
+    if len(subjects) == 1:
+        return 0.0
+    p = {s: cnt[s] / n_codes for s in subjects}
+
+    if len(mapped_nodes) <= 1:
+        return float("nan")
+
+    node_subjects = {n: _subjects_from_codes_attr(G_global.nodes[n].get("codes", "")) 
+                     for n in mapped_nodes}
+
+    spair_sum = defaultdict(float)
+    spair_cnt = defaultdict(int)
+
+    mapped_set = set(mapped_nodes)
+    if mode == "shortest":
+        # Dijkstra from each mapped node, but aggregate only over mapped targets
+        for u in mapped_nodes:
+            Su = node_subjects.get(u, set())
+            if not Su:
+                continue
+            lu = nx.single_source_dijkstra_path_length(G_global, u, weight=weight_key)
+            for v, dist_uv in lu.items():
+                if v == u or v not in mapped_set:
+                    continue
+                Sv = node_subjects.get(v, set())
+                if not Sv:
+                    continue
+                d = float(dist_uv)
+                for i in Su:
+                    for j in Sv:
+                        if i == j:
+                            continue
+                        spair_sum[(i, j)] += d
+                        spair_cnt[(i, j)] += 1
+    elif mode == "edge":
+        # Direct lookup on global graph
+        idx = {n: k for k, n in enumerate(mapped_nodes)}
+        for u in mapped_nodes:
+            Su = node_subjects.get(u, set())
+            if not Su:
+                continue
+            for v in mapped_nodes:
+                if idx[v] <= idx[u]:
+                    continue
+                Sv = node_subjects.get(v, set())
+                if not Sv:
+                    continue
+                edata = G_global.get_edge_data(u, v)
+                d = float(edata.get(weight_key, 1.0)) if edata else 1.0
+                for i in Su:
+                    for j in Sv:
+                        if i == j:
+                            continue
+                        spair_sum[(i, j)] += d; spair_cnt[(i, j)] += 1
+                        spair_sum[(j, i)] += d; spair_cnt[(j, i)] += 1
+    else:
+        raise ValueError("mode must be 'shortest' or 'edge'")
+
+    def d_ij(i, j):
+        if i == j:
+            return 0.0
+        key = (i, j)
+        if spair_cnt.get(key, 0) > 0:
+            return spair_sum[key] / spair_cnt[key]
+        return 1.0
 
     Q = 0.0
     for i in subjects:
@@ -347,17 +447,27 @@ for idx, row in df.iterrows():
                 missing.append(f"{code_u}({sem})")
 
     mapped = sorted(set(mapped))
-    subG_unf = G.subgraph(mapped).copy()
+    subG_unf = G.subgraph(mapped).copy()     # student's UNFILTERED (but possibly K-pruned) graph
 
     n_cross = sum(1 for n in mapped if '|' in subG_unf.nodes[n].get('codes', ''))
 
-    # Distance-based metrics (UNFILTERED)
+    # Distance-based metrics (UNFILTERED student graph)
     pairwise = compute_pairwise_shortest_distances(subG_unf, weight_key="weight")
     avg_d = average_pairwise_distance(len(mapped), pairwise)
     max_d = float(np.max(pairwise)) if (pairwise and len(mapped) > 1) else float("nan")
 
-    # Rao's Q (subject-weighted): general definition
-    rao_q_subject = rao_q_subject_weighted(subG_unf, all_listed_codes, weight_key="weight")
+    # Rao's Q (student subgraph, geodesic)
+    rao_q_subject_geodesic = rao_q_subject_weighted(subG_unf, all_listed_codes, weight_key="weight", mode="shortest")
+
+    # Rao's Q (GLOBAL graph, geodesic)                                    # <<< NEW
+    rao_q_subject_global = rao_q_subject_on_global(                        # <<< NEW
+        G_global, mapped, all_listed_codes, weight_key="weight", mode="shortest"
+    )                                                                      # <<< NEW
+
+    # OPTIONAL: Rao's Q on GLOBAL graph using direct-edge lookups only     # <<< NEW
+    # rao_q_subject_direct = rao_q_subject_on_global(                      # <<< NEW
+    #     G_global, mapped, all_listed_codes, weight_key="weight", mode="edge"
+    # )
 
     ecc_r, ecc_d = weighted_eccentricity_stats(subG_unf, weight_key="weight")
 
@@ -395,7 +505,9 @@ for idx, row in df.iterrows():
         "max_distance": max_d,
 
         # Rao Qs
-        "rao_q_subject": rao_q_subject,
+        "rao_q_subject_geodesic": rao_q_subject_geodesic,   # student graph
+        "rao_q_subject_global": rao_q_subject_global,       # original global graph (geodesic)
+        # "rao_q_subject_direct": rao_q_subject_direct,     # uncomment if you also want the direct-edge version
 
         # other graph metrics
         "ecc_radius_weighted": ecc_r,
@@ -423,7 +535,9 @@ print(f"Total students: {len(analysis_df)}")
 
 # Optional quick summaries (guard NaNs)
 with np.errstate(all="ignore"):
-    print(f"Mean RaoQ (subject-weighted): {np.nanmean(analysis_df['rao_q_subject']):.3f}")
+    print(f"Mean RaoQ (student geodesic): {np.nanmean(analysis_df['rao_q_subject_geodesic']):.3f}")
+    print(f"Mean RaoQ (global geodesic) : {np.nanmean(analysis_df['rao_q_subject_global']):.3f}")
+    # print(f"Mean RaoQ (global direct)   : {np.nanmean(analysis_df['rao_q_subject_direct']):.3f}")  # if enabled
     print(f"Mean ecc radius/diam: {np.nanmean(analysis_df['ecc_radius_weighted']):.3f} / "
           f"{np.nanmean(analysis_df['ecc_diameter_weighted']):.3f}")
     print(f"Mean clustering(sim): {np.nanmean(analysis_df['avg_clustering_similarity']):.3f}")
