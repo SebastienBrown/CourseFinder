@@ -69,8 +69,8 @@ export default function Auth({ onLogin }) {
     <div className="p-4 max-w-md mx-auto">
       <h2 className="text-xl font-semibold mb-4">Login or Sign Up</h2>
       <p className="text-sm text-gray-600 mb-3">
-        First time here? After signing up, please check your email — a verification
-        link will be sent to confirm your account.
+        First time here? Enter your email and password, then click “Sign Up.”
+        Next, check your email for a verification link — click the link to confirm your account. You'll then be redirected back to the app, and from the second time onwards you can sign in using the same email and password.
       </p>
       <input
         className="border p-2 w-full mb-2"
