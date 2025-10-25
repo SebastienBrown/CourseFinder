@@ -60,7 +60,7 @@
 
 **Run Backend**
 - `cd backend`
-- `python3 -m venv venv` optional but recommended
+- `python -m venv venv` optional but recommended
 - `source venv/bin/activate` or `venv\Scripts\activate` on Windows
 - `pip install -r requirements.txt`
 - `export FLASK_APP=schedule.py` or `set FLASK_APP=schedule.py` on Windows
@@ -70,6 +70,8 @@ If the search bar returns a "fetch" error, try changing the port.
 - If you are a new user, add your username and preferred port number to `course-visualization/src/config.js` AND `backend/config.py`
 
 **Run Frontend**
+- `cd course-visualization`
+- `ln -s ../.env .env` to make the frontend refer to the .env file in the root directory
 - `cd course-visualization/src`
 - The first time:
    ```
@@ -88,6 +90,7 @@ If the search bar returns a "fetch" error, try changing the port.
    ```
    SUPABASE_URL=
    SUPABASE_KEY=
+   SUPABASE_JWT_SECRET=
    REACT_APP_SUPABASE_URL=
    REACT_APP_SUPABASE_KEY=
    REACT_APP_BACKEND_URL="http://127.0.0.1:5000" # this should be your backend port

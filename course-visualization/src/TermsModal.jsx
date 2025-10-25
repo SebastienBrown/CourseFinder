@@ -121,8 +121,7 @@ export default function TermsModal() {
 
         <div id="terms-desc" className="mt-4 space-y-3 text-sm leading-6 text-gray-700">
           <p>
-            By proceeding, you agree to our Terms & Conditions and acknowledge
-            our Privacy Policy. Please read the summary below.
+            By proceeding, you agree to our Terms & Conditions as listed below.
           </p>
           <ul className="list-disc pl-5">
             <li>The course history data we collect is stored anonymously and will only be used for research purposes..</li>

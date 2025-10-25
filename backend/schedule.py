@@ -1026,6 +1026,91 @@ Respond with ONLY this JSON:
         print(f"Error in surprise_recommendation: {str(e)}")
         return jsonify({"error": "Internal server error"}), 500
 
+@app.route("/save_user_info", methods=["POST"])
+@jwt_required
+def save_user_info(payload=None, user_id=None, user_email=None):
+    """Save user's class year and major information"""
+    try:
+        user_id = payload["sub"]
+        data = request.get_json()
+        
+        class_year = data.get("classYear")
+        majors = data.get("majors", [])
+        graduation_month = data.get("graduationMonth")
+        
+        if not class_year or not majors or not graduation_month:
+            return jsonify({"error": "Class year, major(s), and graduation month are required"}), 400
+        
+        # Format class year based on graduation month
+        if graduation_month == "December":
+            formatted_class_year = f"{class_year}E"
+        else:  # May
+            formatted_class_year = str(class_year)
+        
+        headers = {
+            "apikey": SUPABASE_KEY,
+            "Authorization": f"Bearer {SUPABASE_KEY}",
+            "Content-Type": "application/json",
+            "Prefer": "resolution=merge-duplicates"
+        }
+        
+        upsert_url = SUPABASE_TABLE_URL
+        upsert_payload = {
+            "id": user_id,
+            "class_year": formatted_class_year,
+            "major": majors
+        }
+        
+        response = requests.post(upsert_url, headers=headers, json=[upsert_payload])
+        
+        if response.status_code not in [200, 201]:
+            print("Supabase error:", response.text)
+            return jsonify({"error": "Failed to save user information"}), 500
+        
+        return jsonify({"message": "User information saved successfully"}), 200
+        
+    except Exception as e:
+        print("Error in save_user_info:", e)
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/check_user_info", methods=["GET"])
+@jwt_required
+def check_user_info(payload=None, user_id=None, user_email=None):
+    """Check if user has provided class year and major information"""
+    try:
+        user_id = payload["sub"]
+        
+        headers = {
+            "apikey": SUPABASE_KEY,
+            "Authorization": f"Bearer {SUPABASE_KEY}",
+            "Content-Type": "application/json"
+        }
+        
+        url = f"{SUPABASE_TABLE_URL}?id=eq.{user_id}"
+        response = requests.get(url, headers=headers)
+        
+        if response.status_code not in [200, 201]:
+            print("Supabase error:", response.text)
+            return jsonify({"error": "Failed to check user information"}), 500
+        
+        data = response.json()
+        has_info = False
+        
+        if data and len(data) > 0:
+            user_data = data[0]
+            has_info = bool(
+                user_data.get("class_year") and 
+                user_data.get("major")
+            )
+        
+        return jsonify({"has_info": has_info})
+        
+    except Exception as e:
+        print("Error in check_user_info:", e)
+        return jsonify({"error": str(e)}), 500
+
+
 @app.route('/health')
 def health_check():
     return jsonify({

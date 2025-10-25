@@ -12,6 +12,8 @@ import Upload from "./Upload";
 import IntakePrompt from "./IntakePrompt";
 import SurpriseButton from "./SurpriseButton";
 import TermsModal from "./TermsModal"; // adjust path
+import UserInfoPopup from "./UserInfoPopup";
+import AccountDropdown from "./AccountDropdown";
 import { SemesterProvider } from './SemesterContext';
 import SubmissionPage from "./SubmissionPage";
 
@@ -20,7 +22,7 @@ import SubmissionPage from "./SubmissionPage";
 
 
 // Layout component for shared UI elements
-function Layout({ children, logout, onShowHelp }) {
+function Layout({ children, logout, onShowHelp, onShowUserInfo }) {
   const navigate = useNavigate();
   
   return (
@@ -31,32 +33,30 @@ function Layout({ children, logout, onShowHelp }) {
             The Visual Open Curriculum
           </h1>
           <div className="flex space-x-2">
-          <button
-            onClick={logout}
-            className="px-4 py-2 bg-red-600 text-white rounded-lg font-semibold shadow hover:bg-red-700 transition-all duration-200"
-          >
-            Sign Out
-          </button>
+          <AccountDropdown 
+            onSignOut={logout}
+            onShowUserInfo={onShowUserInfo}
+          />
 
           <button
             onClick={onShowHelp}
-            className="px-4 py-2 bg-gray-600 text-white rounded-lg font-semibold shadow hover:bg-gray-700 transition-all duration-200"
+            className="px-4 py-2 bg-purple-500 text-white rounded-lg font-semibold shadow hover:bg-purple-200 transition-all duration-200 h-10"
           >
             Help
           </button>
 
           <button
-            onClick={() => navigate("/intake-prompt")}
-            className="px-4 py-2 bg-purple-600 text-white rounded-lg font-semibold shadow hover:bg-purple-700 transition-all duration-200"
+            onClick={() => navigate("/question")}
+            className="px-4 py-2 bg-purple-800 text-white rounded-lg font-semibold shadow hover:bg-purple-800 transition-all duration-200 h-10"
           >
-            Add Past Courses
+            Ask a Question
           </button>
 
           <button
-            onClick={() => navigate("/question")}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold shadow hover:bg-blue-700 transition-all duration-200"
+            onClick={() => navigate("/intake-prompt")}
+            className="px-4 py-2 bg-[#3f1f69] text-white rounded-lg font-semibold shadow hover:bg-[#311a4d] transition-all duration-200 h-10"
           >
-            Ask a Question
+            Add Past Courses
           </button>
         </div>
 
@@ -107,6 +107,8 @@ function App() {
   const [showOnboarding, setShowOnboarding] = useState(false);
   const backendUrl=process.env.REACT_APP_BACKEND_URL;
   const [showTerms, setShowTerms] = useState(false);
+  const [showUserInfoPopup, setShowUserInfoPopup] = useState(false);
+  const [pendingUser, setPendingUser] = useState(null);
 
   const handleHighlight = useCallback((newHighlighted) => {
     // Check if newHighlighted is a function
@@ -166,21 +168,73 @@ function App() {
     setUser(null);
   };
 
+  // UserInfoPopup handlers
+  const handleUserInfoSave = async (userInfo) => {
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      const token = session?.access_token;
+      
+      if (!token) {
+        throw new Error("No valid session token found");
+      }
+
+      const response = await fetch(`${backendUrl}/save_user_info`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`,
+        },
+        body: JSON.stringify(userInfo),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Failed to save user information");
+      }
+
+      setShowUserInfoPopup(false);
+      setPendingUser(null);
+      
+      // Proceed with login if there's a pending user
+      if (pendingUser) {
+        setUser(pendingUser);
+      }
+    } catch (error) {
+      console.error("Error saving user info:", error);
+      throw error;
+    }
+  };
+
+  const handleUserInfoClose = () => {
+    setShowUserInfoPopup(false);
+    setPendingUser(null);
+    
+    // Still proceed with login even if they close the popup
+    if (pendingUser) {
+      setUser(pendingUser);
+    }
+  };
+
+  const showUserInfoPopupForUser = (user) => {
+    setPendingUser(user);
+    setShowUserInfoPopup(true);
+  };
+
   // Only show Auth component if no user and not on public routes
   const isPublicRoute = window.location.pathname === '/public-graph';
   
-  if (!user && !isPublicRoute) return <Auth onLogin={setUser} />;
+  if (!user && !isPublicRoute) return <Auth onLogin={setUser} onShowUserInfo={showUserInfoPopupForUser} />;
 
   return (
     <SemesterProvider>
     <Router>
   <Routes>
     {/* ✅ Default landing page is now Graph */}
-    <Route
-      path="/"
-      element={
-        <Layout logout={logout} onShowHelp={() => setShowOnboarding(true)}>
-          <CourseInput
+            <Route
+              path="/"
+              element={
+                <Layout logout={logout} onShowHelp={() => setShowOnboarding(true)} onShowUserInfo={() => showUserInfoPopupForUser(user)}>
+                  <CourseInput
             onHighlight={handleHighlight}
             onConflicted={setConflicted}
             currentSemester={currentSemester}
@@ -237,6 +291,11 @@ function App() {
     <Route path="*" element={<Navigate to="/" replace />} />
   </Routes>
   <TermsModal />
+  <UserInfoPopup
+    isOpen={showUserInfoPopup}
+    onClose={handleUserInfoClose}
+    onSave={handleUserInfoSave}
+  />
 </Router>
 </SemesterProvider>
   );

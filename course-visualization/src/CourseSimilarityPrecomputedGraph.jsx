@@ -74,7 +74,6 @@ const TRANCHES = {
     "RUSS",
     "SPAN",
     "SWAG",
-    "WAGS",
   ],
   "Sciences": [
     "ASTR",
