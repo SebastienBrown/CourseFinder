@@ -72,7 +72,7 @@ export default function Auth({ onLogin, onShowUserInfo }) {
 
   const signUp = async () => {
     setMessage("");
-    const debugText = `SignUp Attempt - Email: ${email}, Password: ${password}`;
+    // const debugText = `SignUp Attempt - Email: ${email}, Password: ${password}`;
     setDebugInfo(debugText);
     console.log(debugText);
 

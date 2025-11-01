@@ -191,6 +191,8 @@ function App() {
   const showUserInfoPopupForUser = (user) => {
     setPendingUser(user);
     setShowUserInfoPopup(true);
+    // Set user so Auth component unmounts and popup can show properly
+    setUser(user);
   };
 
   useEffect(() => {
@@ -253,10 +255,7 @@ function App() {
       setShowUserInfoPopup(false);
       setPendingUser(null);
       
-      // Proceed with login if there's a pending user
-      if (pendingUser) {
-        setUser(pendingUser);
-      }
+      // User is already set in showUserInfoPopupForUser, so no need to set it again
     } catch (error) {
       console.error("Error saving user info:", error);
       throw error;
@@ -267,10 +266,7 @@ function App() {
     setShowUserInfoPopup(false);
     setPendingUser(null);
     
-    // Still proceed with login even if they close the popup
-    if (pendingUser) {
-      setUser(pendingUser);
-    }
+    // User is already set in showUserInfoPopupForUser, so no need to set it again
   };
 
   // Only show Auth component if no user and not on public routes
