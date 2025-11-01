@@ -156,10 +156,68 @@ function App() {
     checkConflicts(highlighted, currentSemester);
   }, [currentSemester, highlighted, checkConflicts]);
 
+  // Helper function to check if user has provided their info
+  const checkUserInfo = async (user) => {
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      const token = session?.access_token;
+      
+      if (!token) {
+        console.error("No valid session token found");
+        return false;
+      }
+
+      const response = await fetch(`${backendUrl}/check_user_info`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`,
+        },
+      });
+
+      if (!response.ok) {
+        console.error("Failed to check user info");
+        return false;
+      }
+
+      const data = await response.json();
+      return data.has_info;
+    } catch (error) {
+      console.error("Error checking user info:", error);
+      return false;
+    }
+  };
+
+  const showUserInfoPopupForUser = (user) => {
+    setPendingUser(user);
+    setShowUserInfoPopup(true);
+  };
+
   useEffect(() => {
-    supabase.auth.getUser().then(({ data: { user } }) => setUser(user));
-    supabase.auth.onAuthStateChange((_, session) => {
-      setUser(session?.user || null);
+    supabase.auth.getUser().then(async ({ data: { user } }) => {
+      if (user) {
+        const hasUserInfo = await checkUserInfo(user);
+        if (!hasUserInfo) {
+          showUserInfoPopupForUser(user);
+        } else {
+          setUser(user);
+        }
+      } else {
+        setUser(null);
+      }
+    });
+    
+    supabase.auth.onAuthStateChange(async (_, session) => {
+      if (session?.user) {
+        const hasUserInfo = await checkUserInfo(session.user);
+        if (!hasUserInfo) {
+          showUserInfoPopupForUser(session.user);
+        } else {
+          setUser(session.user);
+        }
+      } else {
+        setUser(null);
+      }
     });
   }, []);
 
@@ -213,11 +271,6 @@ function App() {
     if (pendingUser) {
       setUser(pendingUser);
     }
-  };
-
-  const showUserInfoPopupForUser = (user) => {
-    setPendingUser(user);
-    setShowUserInfoPopup(true);
   };
 
   // Only show Auth component if no user and not on public routes
