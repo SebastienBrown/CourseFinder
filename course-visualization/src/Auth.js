@@ -108,22 +108,8 @@ export default function Auth({ onLogin, onShowUserInfo }) {
         setMessage("Please confirm your email before signing in.");
       } else {
         setMessage("");
-        
-        // Check if user has provided their info
-        const hasUserInfo = await checkUserInfo(data.user);
-        
-        if (!hasUserInfo) {
-          // Show user info popup for first-time users
-          if (onShowUserInfo) {
-            onShowUserInfo(data.user);
-          } else {
-            onLogin(data.user);
-          }
-          // Don't call onLogin yet - wait for popup to complete
-        } else {
-          // User has info, proceed with login
-          onLogin(data.user);
-        }
+        // Just proceed with login - App.js will handle checking for user info
+        onLogin(data.user);
       }
     } else {
       console.error("SignIn Error:", signInError);

@@ -156,16 +156,8 @@ function App() {
     checkConflicts(highlighted, currentSemester);
   }, [currentSemester, highlighted, checkConflicts]);
 
-  const showUserInfoPopupForUser = (user) => {
-    setPendingUser(user);
-    setShowUserInfoPopup(true);
-    // Also set user state so they can access the main page (popup will overlay)
-    setUser(user);
-  };
-
-  // Helper function to check if user has info
+  // Function to check if user has provided their info
   const checkUserInfo = async (user) => {
-    if (!user) return false;
     try {
       const { data: { session } } = await supabase.auth.getSession();
       const token = session?.access_token;
@@ -197,52 +189,31 @@ function App() {
   };
 
   useEffect(() => {
-    supabase.auth.getUser().then(async ({ data: { user } }) => {
-      if (user) {
-        // Set user state first to allow access, then check info
-        setUser(user);
-        // Check user info asynchronously without blocking
-        try {
-          const hasInfo = await checkUserInfo(user);
-          if (!hasInfo) {
-            // User exists but doesn't have info - show popup
-            showUserInfoPopupForUser(user);
-          }
-        } catch (error) {
-          console.error("Error checking user info on initial load:", error);
-          // If check fails, show popup to be safe (they can close it if they've already filled it)
-          showUserInfoPopupForUser(user);
-        }
-      } else {
-        setUser(null);
-      }
+    supabase.auth.getUser().then(({ data: { user } }) => setUser(user));
+    supabase.auth.onAuthStateChange((_, session) => {
+      setUser(session?.user || null);
     });
-    
-    supabase.auth.onAuthStateChange(async (_, session) => {
-      const newUser = session?.user || null;
-      if (newUser) {
-        // Set user state first to allow access, then check info
-        setUser(newUser);
-        // Check user info asynchronously without blocking
-        try {
-          const hasInfo = await checkUserInfo(newUser);
-          if (!hasInfo) {
-            // User just logged in but doesn't have info - show popup
-            showUserInfoPopupForUser(newUser);
-          }
-        } catch (error) {
-          console.error("Error checking user info on auth change:", error);
-          // If check fails, show popup to be safe (they can close it if they've already filled it)
-          showUserInfoPopupForUser(newUser);
-        }
-      } else {
-        setUser(null);
-        // Clear popup state when user signs out
-        setShowUserInfoPopup(false);
-        setPendingUser(null);
+  }, []);
+
+  // Check if user has filled out their info whenever user state changes
+  useEffect(() => {
+    const checkAndShowPopup = async () => {
+      // Skip if no user, already showing popup, or on public route
+      if (!user || showUserInfoPopup || window.location.pathname === '/public-graph') {
+        return;
       }
-    });
-  }, [backendUrl]);
+
+      // Check if user has provided their info
+      const hasUserInfo = await checkUserInfo(user);
+      
+      if (!hasUserInfo) {
+        // Show popup if user hasn't filled out their info
+        showUserInfoPopupForUser(user);
+      }
+    };
+
+    checkAndShowPopup();
+  }, [user, showUserInfoPopup, backendUrl]);
 
   const logout = async () => {
     await supabase.auth.signOut();
@@ -294,6 +265,11 @@ function App() {
     if (pendingUser) {
       setUser(pendingUser);
     }
+  };
+
+  const showUserInfoPopupForUser = (user) => {
+    setPendingUser(user);
+    setShowUserInfoPopup(true);
   };
 
   // Only show Auth component if no user and not on public routes
