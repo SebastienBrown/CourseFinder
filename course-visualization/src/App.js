@@ -199,12 +199,19 @@ function App() {
   useEffect(() => {
     supabase.auth.getUser().then(async ({ data: { user } }) => {
       if (user) {
-        const hasInfo = await checkUserInfo(user);
-        if (!hasInfo) {
-          // User exists but doesn't have info - show popup
+        // Set user state first to allow access, then check info
+        setUser(user);
+        // Check user info asynchronously without blocking
+        try {
+          const hasInfo = await checkUserInfo(user);
+          if (!hasInfo) {
+            // User exists but doesn't have info - show popup
+            showUserInfoPopupForUser(user);
+          }
+        } catch (error) {
+          console.error("Error checking user info on initial load:", error);
+          // If check fails, show popup to be safe (they can close it if they've already filled it)
           showUserInfoPopupForUser(user);
-        } else {
-          setUser(user);
         }
       } else {
         setUser(null);
@@ -214,12 +221,19 @@ function App() {
     supabase.auth.onAuthStateChange(async (_, session) => {
       const newUser = session?.user || null;
       if (newUser) {
-        const hasInfo = await checkUserInfo(newUser);
-        if (!hasInfo) {
-          // User just logged in but doesn't have info - show popup
+        // Set user state first to allow access, then check info
+        setUser(newUser);
+        // Check user info asynchronously without blocking
+        try {
+          const hasInfo = await checkUserInfo(newUser);
+          if (!hasInfo) {
+            // User just logged in but doesn't have info - show popup
+            showUserInfoPopupForUser(newUser);
+          }
+        } catch (error) {
+          console.error("Error checking user info on auth change:", error);
+          // If check fails, show popup to be safe (they can close it if they've already filled it)
           showUserInfoPopupForUser(newUser);
-        } else {
-          setUser(newUser);
         }
       } else {
         setUser(null);
