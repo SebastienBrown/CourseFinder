@@ -665,9 +665,10 @@ export default function CourseSimilarityPrecomputedGraph({
       const xExtent = d3.extent(finalNodes, (d) => d.x);
       const yExtent = d3.extent(finalNodes, (d) => d.y);
 
-      // Add some padding inside the data extent to avoid drawing to the very edge
-      const xMargin = (xExtent[1] - xExtent[0]) * 0.05;
-      const yMargin = (yExtent[1] - yExtent[0]) * 0.05;
+      // Add padding to spread out coordinates more (decreased from 0.05 to 0.001 for more spacing)
+      // This makes the domain wider, so coordinates are more spread out on the screen
+      const xMargin = (xExtent[1] - xExtent[0]) * 0.01;
+      const yMargin = (yExtent[1] - yExtent[0]) * 0.01;
 
       const xScale = d3
         .scaleLinear()

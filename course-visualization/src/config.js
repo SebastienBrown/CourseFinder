@@ -38,7 +38,7 @@ export const CURRENT_SEMESTER = "2324S";
 export function getSemesterDataPaths(semester) {
   return {
     courseDetails: `/amherst_courses_all.json`,
-    tsneCoords: `/precomputed_tsne_coords_all_v4.json`,
+    tsneCoords: `/precomputed_tsne_coords_all_5707402.json`,
     similarityData: `/output_similarity_all.json`,
   };
 } 

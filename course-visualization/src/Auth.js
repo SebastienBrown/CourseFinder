@@ -110,10 +110,9 @@ export default function Auth({ onLogin, onShowUserInfo }) {
         setMessage("");
         
         // Check if user has provided their info
-        // const hasUserInfo = await checkUserInfo(data.user);
+        const hasUserInfo = await checkUserInfo(data.user);
         
-        // Temporarily show popup for all users
-        // if (!hasUserInfo) {
+        if (!hasUserInfo) {
           // Show user info popup for first-time users
           if (onShowUserInfo) {
             onShowUserInfo(data.user);
@@ -121,10 +120,10 @@ export default function Auth({ onLogin, onShowUserInfo }) {
             onLogin(data.user);
           }
           // Don't call onLogin yet - wait for popup to complete
-        // } else {
-        //   // User has info, proceed with login
-        //   onLogin(data.user);
-        // }
+        } else {
+          // User has info, proceed with login
+          onLogin(data.user);
+        }
       }
     } else {
       console.error("SignIn Error:", signInError);
