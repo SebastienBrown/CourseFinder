@@ -156,8 +156,16 @@ function App() {
     checkConflicts(highlighted, currentSemester);
   }, [currentSemester, highlighted, checkConflicts]);
 
-  // Helper function to check if user has provided their info
+  const showUserInfoPopupForUser = (user) => {
+    setPendingUser(user);
+    setShowUserInfoPopup(true);
+    // Also set user state so they can access the main page (popup will overlay)
+    setUser(user);
+  };
+
+  // Helper function to check if user has info
   const checkUserInfo = async (user) => {
+    if (!user) return false;
     try {
       const { data: { session } } = await supabase.auth.getSession();
       const token = session?.access_token;
@@ -188,18 +196,12 @@ function App() {
     }
   };
 
-  const showUserInfoPopupForUser = (user) => {
-    setPendingUser(user);
-    setShowUserInfoPopup(true);
-    // Set user so Auth component unmounts and popup can show properly
-    setUser(user);
-  };
-
   useEffect(() => {
     supabase.auth.getUser().then(async ({ data: { user } }) => {
       if (user) {
-        const hasUserInfo = await checkUserInfo(user);
-        if (!hasUserInfo) {
+        const hasInfo = await checkUserInfo(user);
+        if (!hasInfo) {
+          // User exists but doesn't have info - show popup
           showUserInfoPopupForUser(user);
         } else {
           setUser(user);
@@ -210,18 +212,23 @@ function App() {
     });
     
     supabase.auth.onAuthStateChange(async (_, session) => {
-      if (session?.user) {
-        const hasUserInfo = await checkUserInfo(session.user);
-        if (!hasUserInfo) {
-          showUserInfoPopupForUser(session.user);
+      const newUser = session?.user || null;
+      if (newUser) {
+        const hasInfo = await checkUserInfo(newUser);
+        if (!hasInfo) {
+          // User just logged in but doesn't have info - show popup
+          showUserInfoPopupForUser(newUser);
         } else {
-          setUser(session.user);
+          setUser(newUser);
         }
       } else {
         setUser(null);
+        // Clear popup state when user signs out
+        setShowUserInfoPopup(false);
+        setPendingUser(null);
       }
     });
-  }, []);
+  }, [backendUrl]);
 
   const logout = async () => {
     await supabase.auth.signOut();
@@ -255,7 +262,10 @@ function App() {
       setShowUserInfoPopup(false);
       setPendingUser(null);
       
-      // User is already set in showUserInfoPopupForUser, so no need to set it again
+      // Proceed with login if there's a pending user
+      if (pendingUser) {
+        setUser(pendingUser);
+      }
     } catch (error) {
       console.error("Error saving user info:", error);
       throw error;
@@ -266,7 +276,10 @@ function App() {
     setShowUserInfoPopup(false);
     setPendingUser(null);
     
-    // User is already set in showUserInfoPopupForUser, so no need to set it again
+    // Still proceed with login even if they close the popup
+    if (pendingUser) {
+      setUser(pendingUser);
+    }
   };
 
   // Only show Auth component if no user and not on public routes
