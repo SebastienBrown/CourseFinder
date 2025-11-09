@@ -313,7 +313,7 @@ function App() {
     <Route path="/intake-prompt" element={<IntakePrompt />} />
     <Route path="question" element={<SubmissionPage />} />
 
-    <Route path="/upload" element={<Upload />} />
+    {/*<Route path="/upload" element={<Upload />} />*/}
     <Route path="/intake" element={<Intake />} />
     <Route path="/intake/courses/:index" element={<SemesterCourseIntake />} />
 

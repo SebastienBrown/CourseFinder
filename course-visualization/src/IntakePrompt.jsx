@@ -18,12 +18,12 @@ export default function IntakePrompt() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button
+          {/* <button
             onClick={() => navigate("/upload")}
             className="flex-1 px-6 py-3 bg-[#3f1f69] text-white rounded-xl font-semibold shadow hover:bg-[#311a4d] transition"
           >
             Upload Transcript
-          </button>
+          </button> */}
           <button
             onClick={() => navigate("/intake")}
             className="flex-1 px-6 py-3 bg-[#5d3c85] text-white rounded-xl font-semibold shadow hover:bg-[#4b2f72] transition"

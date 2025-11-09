@@ -124,8 +124,10 @@ export default function TermsModal() {
             By proceeding, you agree to our Terms & Conditions as listed below.
           </p>
           <ul className="list-disc pl-5">
-            <li>The course history data we collect is stored anonymously and will only be used for research purposes..</li>
-            <li>Users may upload a transcript for simplified onboarding: no grade information will be stored.</li>
+          <li>The course history data we collect is stored anonymously and used solely to build your personalized course history and provide better course recommendations.</li>
+          <li>We do not sell, share, or monetize this data in any way.</li>
+          <li>Your information will never be used for advertising or shared with third parties.</li>
+          <li>Our goal is to help you discover relevant courses while keeping your academic data private and secure.</li>
           </ul>
         </div>
 
