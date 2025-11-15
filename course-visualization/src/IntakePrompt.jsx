@@ -11,10 +11,15 @@ export default function IntakePrompt() {
         <h1 className="text-3xl font-bold text-[#3f1f69] text-center">
           What would you like to do?
         </h1>
-        <p className="text-center text-gray-600">
+        {/*<p className="text-center text-gray-600">
           First, let us know what courses you have taken at Amherst. You can upload
           your transcript to auto-populate your courses, or manually input them
           yourself.
+        </p>*/}
+
+        <p className="text-center text-gray-600">
+          First, let us know what courses you have taken at Amherst. You can manually input your prior
+          courses using the following dropdown.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

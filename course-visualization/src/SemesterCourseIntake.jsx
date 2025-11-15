@@ -271,7 +271,8 @@ export default function SemesterCourseIntake() {
   if (!semester) return null;
 
   return (
-    <div className="max-w-3xl mx-auto mt-12 p-6 bg-white shadow rounded space-y-6">
+    <div className="w-full h-screen overflow-y-auto bg-gray-50">
+    <div className="max-w-3xl mx-auto my-12 p-6 bg-white shadow rounded space-y-6">
       <h2 className="text-2xl font-bold text-center text-[#3f1f69]">
         {fromTranscriptUpload ? `Edit Courses for ${semester}` : `Select Courses for Semester ${semester}`}
       </h2>
@@ -401,6 +402,7 @@ export default function SemesterCourseIntake() {
           }
         </button>
       </div>
+    </div>
     </div>
   );
 }
