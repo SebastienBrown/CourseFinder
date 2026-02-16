@@ -1,170 +1,170 @@
 import React from "react";
-import { supabase } from "./supabaseClient"; 
+import { supabase } from "./supabaseClient";
 
 export default function CoursePopup({ course, onClose, onHighlight, highlighted, activeTab, onSelect, courseDetailsData, setSelectedCourse }) {
   if (!course) return null;
 
   // Ensure highlighted is an array
   const highlightedArray = Array.isArray(highlighted) ? highlighted : [];
-  const backendUrl=process.env.REACT_APP_BACKEND_URL;
-  const SUPABASE_URL=process.env.REACT_APP_SUPABASE_URL;
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+  const SUPABASE_URL = process.env.REACT_APP_SUPABASE_URL;
   const SUPABASE_TABLE_URL = `${SUPABASE_URL}/rest/v1/user_courses`
-  const SUPABASE_TABLE_URL_EXTRA=`${SUPABASE_URL}/rest/v1/user_courses_test`
-  
+  const SUPABASE_TABLE_URL_EXTRA = `${SUPABASE_URL}/rest/v1/user_courses_test`
+
 
   // Check if any of the course codes are already highlighted
-  const isSelected = course.course_codes && 
-    (Array.isArray(course.course_codes) 
+  const isSelected = course.course_codes &&
+    (Array.isArray(course.course_codes)
       ? course.course_codes.some(code => highlightedArray.includes(code)) ||
-        highlightedArray.includes(course.course_codes.join('/'))
+      highlightedArray.includes(course.course_codes.join('/'))
       : highlightedArray.includes(course.course_codes));
 
   const handleSelectHistory = async () => {
     if (!course.course_codes) return;
-    
+
     // Use onSelect (handleAddSelectedCourse) instead of onHighlight
     onSelect(course);
     onClose();
 
     const { data: { session } } = await supabase.auth.getSession();
     const token = session?.access_token;
-      
-      if (!token) {
-        console.error("No valid session token found");
-        return;
-      }
 
-      const payload = {
-        course_to_add: course.course_codes[0],
-        semester: course.semester
-      };
+    if (!token) {
+      console.error("No valid session token found");
+      return;
+    }
+
+    const payload = {
+      course_to_add: course.course_codes[0],
+      semester: course.semester
+    };
 
 
-      if (!isSelected){
+    if (!isSelected) {
 
       console.log("Added a course");
       console.log(course.course_codes[0]);
-        
-        try {
-          const response = await fetch(`${backendUrl}/add_course`, { // await fetch(`${API_BASE_URL}/retrieve_courses`
-            method: "POST",
+
+      try {
+        const response = await fetch(`${backendUrl}/add_course`, { // await fetch(`${API_BASE_URL}/retrieve_courses`
+          method: "POST",
           headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${token}`,
           },
           //for cross-listed courses, this will take the first course code - be aware of this as it COULD cause issues later-on depending on treatment of cross-listed courses
           body: JSON.stringify(payload) // no user_id
-          });
-      
-          if (!response.ok) {
-            throw new Error(`Backend error: ${response.status}`);
-          }
-      
-        } catch (err) {
-          console.log(err.message);
-          console.error("Error fetching backend data:", err);
+        });
+
+        if (!response.ok) {
+          throw new Error(`Backend error: ${response.status}`);
         }
-      }
-      else{
 
-        console.log("Removed a course");
-        console.log(course.course_codes[0]);
-          
-          try {
-            const response = await fetch(`${backendUrl}/remove_course`, { // await fetch(`${API_BASE_URL}/retrieve_courses`
-              method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              "Authorization": `Bearer ${token}`,
-            },
-            //for cross-listed courses, this will take the first course code - be aware of this as it COULD cause issues later-on depending on treatment of cross-listed courses
-            body: JSON.stringify(payload) // no user_id
-            });
-        
-            if (!response.ok) {
-              throw new Error(`Backend error: ${response.status}`);
-            }
-        
-          } catch (err) {
-            console.log(err.message);
-            console.error("Error fetching backend data:", err);
-          }
-
+      } catch (err) {
+        console.log(err.message);
+        console.error("Error fetching backend data:", err);
       }
+    }
+    else {
+
+      console.log("Removed a course");
+      console.log(course.course_codes[0]);
+
+      try {
+        const response = await fetch(`${backendUrl}/remove_course`, { // await fetch(`${API_BASE_URL}/retrieve_courses`
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`,
+          },
+          //for cross-listed courses, this will take the first course code - be aware of this as it COULD cause issues later-on depending on treatment of cross-listed courses
+          body: JSON.stringify(payload) // no user_id
+        });
+
+        if (!response.ok) {
+          throw new Error(`Backend error: ${response.status}`);
+        }
+
+      } catch (err) {
+        console.log(err.message);
+        console.error("Error fetching backend data:", err);
+      }
+
+    }
   };
 
   const handleSelectTest = async () => {
     if (!course.course_codes) return;
-    
+
     // Use onSelect (handleAddSelectedCourse) instead of onHighlight
     onSelect(course);
     onClose();
 
     const { data: { session } } = await supabase.auth.getSession();
     const token = session?.access_token;
-      
-      if (!token) {
-        console.error("No valid session token found");
-        return;
-      }
 
-      const payload = {
-        course_to_add: course.course_codes[0],
-        semester: course.semester
-      };
+    if (!token) {
+      console.error("No valid session token found");
+      return;
+    }
+
+    const payload = {
+      course_to_add: course.course_codes[0],
+      semester: course.semester
+    };
 
 
-      if (!isSelected){
+    if (!isSelected) {
 
       console.log("Added a course");
       console.log(course.course_codes[0]);
-        
-        try {
-          const response = await fetch(`${backendUrl}/add_course`, { // await fetch(`${API_BASE_URL}/retrieve_courses`
-            method: "POST",
+
+      try {
+        const response = await fetch(`${backendUrl}/add_course`, { // await fetch(`${API_BASE_URL}/retrieve_courses`
+          method: "POST",
           headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${token}`,
           },
           //for cross-listed courses, this will take the first course code - be aware of this as it COULD cause issues later-on depending on treatment of cross-listed courses
           body: JSON.stringify(payload) // no user_id
-          });
-      
-          if (!response.ok) {
-            throw new Error(`Backend error: ${response.status}`);
-          }
-      
-        } catch (err) {
-          console.log(err.message);
-          console.error("Error fetching backend data:", err);
+        });
+
+        if (!response.ok) {
+          throw new Error(`Backend error: ${response.status}`);
         }
-      }
-      else{
 
-        console.log("Removed a course");
-        console.log(course.course_codes[0]);
-          
-          try {
-            const response = await fetch(`${backendUrl}/remove_course`, { // await fetch(`${API_BASE_URL}/retrieve_courses`
-              method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              "Authorization": `Bearer ${token}`,
-            },
-            //for cross-listed courses, this will take the first course code - be aware of this as it COULD cause issues later-on depending on treatment of cross-listed courses
-            body: JSON.stringify(payload) // no user_id
-            });
-        
-            if (!response.ok) {
-              throw new Error(`Backend error: ${response.status}`);
-            }
-        
-          } catch (err) {
-            console.log(err.message);
-            console.error("Error fetching backend data:", err);
-          }
-
+      } catch (err) {
+        console.log(err.message);
+        console.error("Error fetching backend data:", err);
       }
+    }
+    else {
+
+      console.log("Removed a course");
+      console.log(course.course_codes[0]);
+
+      try {
+        const response = await fetch(`${backendUrl}/remove_course`, { // await fetch(`${API_BASE_URL}/retrieve_courses`
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`,
+          },
+          //for cross-listed courses, this will take the first course code - be aware of this as it COULD cause issues later-on depending on treatment of cross-listed courses
+          body: JSON.stringify(payload) // no user_id
+        });
+
+        if (!response.ok) {
+          throw new Error(`Backend error: ${response.status}`);
+        }
+
+      } catch (err) {
+        console.log(err.message);
+        console.error("Error fetching backend data:", err);
+      }
+
+    }
   };
 
   return (
@@ -199,23 +199,23 @@ export default function CoursePopup({ course, onClose, onHighlight, highlighted,
           {course.description || "No course description available."}
         </p>
 
-        <p className="text-gray-600">
-          <strong>Instructor:</strong>{" "}
-          {course.faculty
-            ? Object.values(course.faculty)?.[0]?.[0] || "Unavailable"
-            : "Unavailable"}
-        </p>
+        {course.faculty && Object.keys(course.faculty).length > 0 && (
+          <p className="text-gray-600">
+            <strong>Instructor:</strong>{" "}
+            {Object.values(course.faculty)?.[0]?.[0] || "Unavailable"}
+          </p>
+        )}
 
-        <p className="text-gray-500">
-          <strong>When:</strong>{" "}
-          {course.times_and_locations
-            ? Object.values(
-                Object.values(course.times_and_locations)?.[0] || {}
-              )[0]
-                ?.map((s) => `${s.day} ${s.time}`)
-                .join(", ") || "Unavailable"
-            : "Unavailable"}
-        </p>
+        {course.times_and_locations && Object.keys(course.times_and_locations).length > 0 && (
+          <p className="text-gray-500">
+            <strong>When:</strong>{" "}
+            {Object.values(
+              Object.values(course.times_and_locations)?.[0] || {}
+            )[0]
+              ?.map((s) => `${s.day} ${s.time}`)
+              .join(", ") || "Unavailable"}
+          </p>
+        )}
 
         {course.similar_courses && course.similar_courses.length > 0 && (
           <div className="border-t pt-4">
@@ -241,8 +241,8 @@ export default function CoursePopup({ course, onClose, onHighlight, highlighted,
                     className="block w-full text-left px-3 py-2 rounded-md hover:bg-gray-100 transition-colors"
                   >
                     <span className="font-medium text-[#3f1f69]">
-                      {similarCourse?.course_codes?.join(', ') || 
-                       (Array.isArray(similar.code) ? similar.code.join(', ') : similar.code)}
+                      {similarCourse?.course_codes?.join(', ') ||
+                        (Array.isArray(similar.code) ? similar.code.join(', ') : similar.code)}
                     </span>
                     <span className="text-gray-600 ml-2">
                       {similarCourse?.course_title || 'Course Title Unavailable'}
@@ -258,11 +258,10 @@ export default function CoursePopup({ course, onClose, onHighlight, highlighted,
           <div className="flex justify-end pt-4 space-x-3">
             <button
               onClick={handleSelectHistory}
-              className={`px-4 py-2 rounded-md font-medium transition-colors ${
-                isSelected
+              className={`px-4 py-2 rounded-md font-medium transition-colors ${isSelected
                   ? 'bg-red-100 text-red-700 hover:bg-red-200'
                   : 'bg-[#3f1f69] text-white hover:bg-[#311a4d]'
-              }`}
+                }`}
             >
               {isSelected ? 'I no longer want to take this course' : 'I might take this course'}
             </button>

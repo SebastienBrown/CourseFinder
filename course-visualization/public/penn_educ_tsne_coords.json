@@ -1,0 +1,4435 @@
+[
+  {
+    "code": "EDUC-1000",
+    "title": "Foundations of Tutoring Training",
+    "label": "EDUC-1000 \u2014 Foundations of Tutoring Training",
+    "x": 33.970279693603516,
+    "y": -12.645980834960938,
+    "codes": [
+      "EDUC-1000"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-1001",
+    "title": "Advanced Tutoring Principles",
+    "label": "EDUC-1001 \u2014 Advanced Tutoring Principles",
+    "x": 33.906951904296875,
+    "y": -12.62320327758789,
+    "codes": [
+      "EDUC-1001"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-1450",
+    "title": "(Re)Making U.S. Schools",
+    "label": "EDUC-1450 \u2014 (Re)Making U.S. Schools",
+    "x": -1.0087112188339233,
+    "y": -18.375627517700195,
+    "codes": [
+      "EDUC-1450"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-2002",
+    "title": "Urban Education",
+    "label": "EDUC-2002 \u2014 Urban Education",
+    "x": 1.8661268949508667,
+    "y": -16.78281593322754,
+    "codes": [
+      "EDUC-2002"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-2050",
+    "title": "Learning from Children",
+    "label": "EDUC-2050 \u2014 Learning from Children",
+    "x": 8.993992805480957,
+    "y": 10.564947128295898,
+    "codes": [
+      "EDUC-2050"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-2140",
+    "title": "Education in American Culture",
+    "label": "EDUC-2140 \u2014 Education in American Culture",
+    "x": 5.161714553833008,
+    "y": -16.35779571533203,
+    "codes": [
+      "EDUC-2140"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-2445",
+    "title": "Civil Dialogue Seminar: Civic Engagement In A Divided Nation",
+    "label": "EDUC-2445 \u2014 Civil Dialogue Seminar: Civic Engagement In A Divided Nation",
+    "x": 18.639503479003906,
+    "y": -13.153380393981934,
+    "codes": [
+      "EDUC-2445"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-2535",
+    "title": "Psychology of Women",
+    "label": "EDUC-2535 \u2014 Psychology of Women",
+    "x": -31.041292190551758,
+    "y": 17.792037963867188,
+    "codes": [
+      "EDUC-2535"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-2541",
+    "title": "Educational Psychology",
+    "label": "EDUC-2541 \u2014 Educational Psychology",
+    "x": -9.027643203735352,
+    "y": 18.445791244506836,
+    "codes": [
+      "EDUC-2541"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-2551",
+    "title": "Mindfulness and Human Development (SNF Paideia Program Course)",
+    "label": "EDUC-2551 \u2014 Mindfulness and Human Development (SNF Paideia Program Course)",
+    "x": -32.95186233520508,
+    "y": 35.89024353027344,
+    "codes": [
+      "EDUC-2551"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-3123",
+    "title": "Tutoring School: Theory and Practic",
+    "label": "EDUC-3123 \u2014 Tutoring School: Theory and Practic",
+    "x": 30.625431060791016,
+    "y": -11.601522445678711,
+    "codes": [
+      "EDUC-3123"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-3545",
+    "title": "Psychology of Personal Growth",
+    "label": "EDUC-3545 \u2014 Psychology of Personal Growth",
+    "x": -28.065629959106445,
+    "y": 25.229412078857422,
+    "codes": [
+      "EDUC-3545"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-3560",
+    "title": "Human Development in Global Perspective",
+    "label": "EDUC-3560 \u2014 Human Development in Global Perspective",
+    "x": -18.012086868286133,
+    "y": 30.552574157714844,
+    "codes": [
+      "EDUC-3560"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-3726",
+    "title": "Tutoring in Urban Public Elementary Schools: A Child Development Perspective",
+    "label": "EDUC-3726 \u2014 Tutoring in Urban Public Elementary Schools: A Child Development Perspective",
+    "x": 30.209138870239258,
+    "y": -10.22681999206543,
+    "codes": [
+      "EDUC-3726"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-4014",
+    "title": "Children's Literature",
+    "label": "EDUC-4014 \u2014 Children's Literature",
+    "x": 43.01774215698242,
+    "y": 26.2728271484375,
+    "codes": [
+      "EDUC-4014"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-4902",
+    "title": "Teaching Creative Writing to High School Students",
+    "label": "EDUC-4902 \u2014 Teaching Creative Writing to High School Students",
+    "x": 34.337886810302734,
+    "y": 17.94685173034668,
+    "codes": [
+      "EDUC-4902"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-4920",
+    "title": "Language, Culture, and Society in Contemporary Korea",
+    "label": "EDUC-4920 \u2014 Language, Culture, and Society in Contemporary Korea",
+    "x": 13.554190635681152,
+    "y": 32.65114212036133,
+    "codes": [
+      "EDUC-4920"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5007",
+    "title": "Teaching & Learning in Student Centered Classrooms",
+    "label": "EDUC-5007 \u2014 Teaching & Learning in Student Centered Classrooms",
+    "x": 39.91415786743164,
+    "y": -2.7606966495513916,
+    "codes": [
+      "EDUC-5007"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5007A",
+    "title": "Teaching & Learning in Student Centered Classrooms",
+    "label": "EDUC-5007A \u2014 Teaching & Learning in Student Centered Classrooms",
+    "x": 40.30046081542969,
+    "y": -2.3551435470581055,
+    "codes": [
+      "EDUC-5007A"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5007B",
+    "title": "Teaching & Learning in Student Centered Classrooms",
+    "label": "EDUC-5007B \u2014 Teaching & Learning in Student Centered Classrooms",
+    "x": 40.44248580932617,
+    "y": -2.9607014656066895,
+    "codes": [
+      "EDUC-5007B"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5015",
+    "title": "Field Seminar: Culturally Responsive Teaching",
+    "label": "EDUC-5015 \u2014 Field Seminar: Culturally Responsive Teaching",
+    "x": 25.454259872436523,
+    "y": 5.808717250823975,
+    "codes": [
+      "EDUC-5015"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5015A",
+    "title": "Field Seminar: Culturally Responsive Pedagogy",
+    "label": "EDUC-5015A \u2014 Field Seminar: Culturally Responsive Pedagogy",
+    "x": 24.692962646484375,
+    "y": 6.5831475257873535,
+    "codes": [
+      "EDUC-5015A"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5015B",
+    "title": "Field Seminar: Culturally Responsive Teaching",
+    "label": "EDUC-5015B \u2014 Field Seminar: Culturally Responsive Teaching",
+    "x": 23.711355209350586,
+    "y": 5.926025867462158,
+    "codes": [
+      "EDUC-5015B"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5016A",
+    "title": "Field Seminar in Secondary Schools",
+    "label": "EDUC-5016A \u2014 Field Seminar in Secondary Schools",
+    "x": 25.197954177856445,
+    "y": 3.888211727142334,
+    "codes": [
+      "EDUC-5016A"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5016B",
+    "title": "Field Seminar in Secondary Schools",
+    "label": "EDUC-5016B \u2014 Field Seminar in Secondary Schools",
+    "x": 23.802978515625,
+    "y": 4.1298627853393555,
+    "codes": [
+      "EDUC-5016B"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5018",
+    "title": "Integrating the Arts in the K-8 Classroom",
+    "label": "EDUC-5018 \u2014 Integrating the Arts in the K-8 Classroom",
+    "x": 39.19478225708008,
+    "y": 8.203171730041504,
+    "codes": [
+      "EDUC-5018"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5020",
+    "title": "Literacy in Elementary/Middle Schools",
+    "label": "EDUC-5020 \u2014 Literacy in Elementary/Middle Schools",
+    "x": 34.714820861816406,
+    "y": 26.697219848632812,
+    "codes": [
+      "EDUC-5020"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5021",
+    "title": "Science Methods: Project-Based Learning Approaches",
+    "label": "EDUC-5021 \u2014 Science Methods: Project-Based Learning Approaches",
+    "x": 33.22207260131836,
+    "y": -0.06360146403312683,
+    "codes": [
+      "EDUC-5021"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5023",
+    "title": "Social Studies in the Elementary and Middle Schools",
+    "label": "EDUC-5023 \u2014 Social Studies in the Elementary and Middle Schools",
+    "x": 28.013137817382812,
+    "y": -3.2288947105407715,
+    "codes": [
+      "EDUC-5023"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5030",
+    "title": "Cultivating Creativity in the K-8 Classroom",
+    "label": "EDUC-5030 \u2014 Cultivating Creativity in the K-8 Classroom",
+    "x": 40.796409606933594,
+    "y": 7.5559186935424805,
+    "codes": [
+      "EDUC-5030"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5031",
+    "title": "Mathematics in the Elementary and Middle Schools",
+    "label": "EDUC-5031 \u2014 Mathematics in the Elementary and Middle Schools",
+    "x": 32.60578918457031,
+    "y": -3.9606096744537354,
+    "codes": [
+      "EDUC-5031"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5040",
+    "title": "Differentiating Instruction for Special Education Learners",
+    "label": "EDUC-5040 \u2014 Differentiating Instruction for Special Education Learners",
+    "x": 25.999122619628906,
+    "y": 16.29486656188965,
+    "codes": [
+      "EDUC-5040"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5041",
+    "title": "Differentiating Instruction for English Language Learners",
+    "label": "EDUC-5041 \u2014 Differentiating Instruction for English Language Learners",
+    "x": 25.08073616027832,
+    "y": 17.124143600463867,
+    "codes": [
+      "EDUC-5041"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5054",
+    "title": "Managing Collaborative Learning Environments in Urban Contexts",
+    "label": "EDUC-5054 \u2014 Managing Collaborative Learning Environments in Urban Contexts",
+    "x": 24.851600646972656,
+    "y": -1.366826057434082,
+    "codes": [
+      "EDUC-5054"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5055",
+    "title": "Advanced Field Seminar: Student-Centered Social Justice Pedagogy",
+    "label": "EDUC-5055 \u2014 Advanced Field Seminar: Student-Centered Social Justice Pedagogy",
+    "x": 22.640012741088867,
+    "y": 2.171999454498291,
+    "codes": [
+      "EDUC-5055"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5057",
+    "title": "Advanced Field Seminar in Secondary Schools",
+    "label": "EDUC-5057 \u2014 Advanced Field Seminar in Secondary Schools",
+    "x": 24.2191162109375,
+    "y": 2.189155101776123,
+    "codes": [
+      "EDUC-5057"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5065",
+    "title": "Introduction to Teaching & Classroom Routines",
+    "label": "EDUC-5065 \u2014 Introduction to Teaching & Classroom Routines",
+    "x": 31.6426944732666,
+    "y": 5.440694332122803,
+    "codes": [
+      "EDUC-5065"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5100",
+    "title": "Experimental Course (Teaching, Learning, and Leadership)",
+    "label": "EDUC-5100 \u2014 Experimental Course (Teaching, Learning, and Leadership)",
+    "x": 19.10507583618164,
+    "y": 8.62343978881836,
+    "codes": [
+      "EDUC-5100"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5113",
+    "title": "Development of the Young Child",
+    "label": "EDUC-5113 \u2014 Development of the Young Child",
+    "x": -16.48441505432129,
+    "y": 22.487497329711914,
+    "codes": [
+      "EDUC-5113"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5126",
+    "title": "Technology for Educators",
+    "label": "EDUC-5126 \u2014 Technology for Educators",
+    "x": 6.411778450012207,
+    "y": 14.611684799194336,
+    "codes": [
+      "EDUC-5126"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5134",
+    "title": "Diversity and Social Justice in American K-12 Education",
+    "label": "EDUC-5134 \u2014 Diversity and Social Justice in American K-12 Education",
+    "x": 3.5342354774475098,
+    "y": -14.52562427520752,
+    "codes": [
+      "EDUC-5134"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5144",
+    "title": "Dashboards for Discovery and Learning Applications",
+    "label": "EDUC-5144 \u2014 Dashboards for Discovery and Learning Applications",
+    "x": -1.2378958463668823,
+    "y": 13.79820728302002,
+    "codes": [
+      "EDUC-5144"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5150",
+    "title": "Educational and Social Entrepreneurship",
+    "label": "EDUC-5150 \u2014 Educational and Social Entrepreneurship",
+    "x": 8.974976539611816,
+    "y": -25.47831153869629,
+    "codes": [
+      "EDUC-5150"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5151",
+    "title": "Outside the School Box: History, Policy and Alternatives",
+    "label": "EDUC-5151 \u2014 Outside the School Box: History, Policy and Alternatives",
+    "x": -5.373658180236816,
+    "y": -11.947603225708008,
+    "codes": [
+      "EDUC-5151"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5152",
+    "title": "Video Games and Virtual Worlds as Sites for Learning",
+    "label": "EDUC-5152 \u2014 Video Games and Virtual Worlds as Sites for Learning",
+    "x": -1.989674687385559,
+    "y": 10.22998332977295,
+    "codes": [
+      "EDUC-5152"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5160",
+    "title": "Quantitative Ethnography and Epistemic Network Analysis",
+    "label": "EDUC-5160 \u2014 Quantitative Ethnography and Epistemic Network Analysis",
+    "x": -27.510005950927734,
+    "y": -0.12484654039144516,
+    "codes": [
+      "EDUC-5160"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5162",
+    "title": "Artificial Intelligence for Children and Youth Learning and Creating in K-12 Education",
+    "label": "EDUC-5162 \u2014 Artificial Intelligence for Children and Youth Learning and Creating in K-12 Education",
+    "x": -0.21600663661956787,
+    "y": 19.67980194091797,
+    "codes": [
+      "EDUC-5162"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5171",
+    "title": "Collaboration & Conflict",
+    "label": "EDUC-5171 \u2014 Collaboration & Conflict",
+    "x": 16.25649642944336,
+    "y": -31.735631942749023,
+    "codes": [
+      "EDUC-5171"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5180",
+    "title": "Gender & Education",
+    "label": "EDUC-5180 \u2014 Gender & Education",
+    "x": -26.026329040527344,
+    "y": -31.539817810058594,
+    "codes": [
+      "EDUC-5180"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5183",
+    "title": "Adaptive Learning Systems",
+    "label": "EDUC-5183 \u2014 Adaptive Learning Systems",
+    "x": 1.531722903251648,
+    "y": 15.04369068145752,
+    "codes": [
+      "EDUC-5183"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5204",
+    "title": "Citizen Sociolinguistics",
+    "label": "EDUC-5204 \u2014 Citizen Sociolinguistics",
+    "x": 16.95520782470703,
+    "y": 38.2239875793457,
+    "codes": [
+      "EDUC-5204"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5208",
+    "title": "Classroom Discourse and Interaction",
+    "label": "EDUC-5208 \u2014 Classroom Discourse and Interaction",
+    "x": 4.510345935821533,
+    "y": 25.987709045410156,
+    "codes": [
+      "EDUC-5208"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5212",
+    "title": "Communication and Culture in Context",
+    "label": "EDUC-5212 \u2014 Communication and Culture in Context",
+    "x": 12.493461608886719,
+    "y": 26.336841583251953,
+    "codes": [
+      "EDUC-5212"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5216",
+    "title": "Content-Based Instruction",
+    "label": "EDUC-5216 \u2014 Content-Based Instruction",
+    "x": 22.658397674560547,
+    "y": 15.278044700622559,
+    "codes": [
+      "EDUC-5216"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5220",
+    "title": "Pedagogy and Action for Critical Education",
+    "label": "EDUC-5220 \u2014 Pedagogy and Action for Critical Education",
+    "x": 14.299375534057617,
+    "y": -5.229269981384277,
+    "codes": [
+      "EDUC-5220"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5224",
+    "title": "Curriculum and Materials Development for English Language Teaching",
+    "label": "EDUC-5224 \u2014 Curriculum and Materials Development for English Language Teaching",
+    "x": 14.081918716430664,
+    "y": 15.55074691772461,
+    "codes": [
+      "EDUC-5224"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5232",
+    "title": "Indigenous Education and Language Revitalization",
+    "label": "EDUC-5232 \u2014 Indigenous Education and Language Revitalization",
+    "x": -7.121513843536377,
+    "y": -4.508686542510986,
+    "codes": [
+      "EDUC-5232"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5236",
+    "title": "Intercultural Communication and Miscommunication",
+    "label": "EDUC-5236 \u2014 Intercultural Communication and Miscommunication",
+    "x": 11.64018726348877,
+    "y": 24.088388442993164,
+    "codes": [
+      "EDUC-5236"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5240",
+    "title": "Language and Gender",
+    "label": "EDUC-5240 \u2014 Language and Gender",
+    "x": 11.72878646850586,
+    "y": 35.64918899536133,
+    "codes": [
+      "EDUC-5240"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5248",
+    "title": "Language Assessment",
+    "label": "EDUC-5248 \u2014 Language Assessment",
+    "x": 18.064775466918945,
+    "y": 25.190946578979492,
+    "codes": [
+      "EDUC-5248"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5252",
+    "title": "Language Diversity and Education",
+    "label": "EDUC-5252 \u2014 Language Diversity and Education",
+    "x": 17.925273895263672,
+    "y": 32.703182220458984,
+    "codes": [
+      "EDUC-5252"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5256",
+    "title": "Linguistic Anthropology of Education",
+    "label": "EDUC-5256 \u2014 Linguistic Anthropology of Education",
+    "x": 16.023263931274414,
+    "y": 35.1475715637207,
+    "codes": [
+      "EDUC-5256"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5264",
+    "title": "Structure of English",
+    "label": "EDUC-5264 \u2014 Structure of English",
+    "x": 15.974674224853516,
+    "y": 21.18956756591797,
+    "codes": [
+      "EDUC-5264"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5268",
+    "title": "Teaching Performance Art for Cross-Cultural Education",
+    "label": "EDUC-5268 \u2014 Teaching Performance Art for Cross-Cultural Education",
+    "x": 33.935062408447266,
+    "y": 12.301340103149414,
+    "codes": [
+      "EDUC-5268"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5270",
+    "title": "Selected Topics in ELX: Adult Literacy for ELLs",
+    "label": "EDUC-5270 \u2014 Selected Topics in ELX: Adult Literacy for ELLs",
+    "x": 25.834735870361328,
+    "y": 38.64060592651367,
+    "codes": [
+      "EDUC-5270"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5271",
+    "title": "Technology in Language Education",
+    "label": "EDUC-5271 \u2014 Technology in Language Education",
+    "x": 5.9432053565979,
+    "y": 16.83127784729004,
+    "codes": [
+      "EDUC-5271"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5272",
+    "title": "Selected Topics in ELX: Conversation Analysis for Second Language Teaching and Research",
+    "label": "EDUC-5272 \u2014 Selected Topics in ELX: Conversation Analysis for Second Language Teaching and Research",
+    "x": 24.179048538208008,
+    "y": 38.85193634033203,
+    "codes": [
+      "EDUC-5272"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5273",
+    "title": "Selected Topics in ELX: Task Based Language Teaching",
+    "label": "EDUC-5273 \u2014 Selected Topics in ELX: Task Based Language Teaching",
+    "x": 24.71131134033203,
+    "y": 39.1525993347168,
+    "codes": [
+      "EDUC-5273"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5280",
+    "title": "Teaching Writing in Multilingual Contexts",
+    "label": "EDUC-5280 \u2014 Teaching Writing in Multilingual Contexts",
+    "x": 25.376750946044922,
+    "y": 25.117877960205078,
+    "codes": [
+      "EDUC-5280"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5281",
+    "title": "Teaching Multilingual Immigrant Youth",
+    "label": "EDUC-5281 \u2014 Teaching Multilingual Immigrant Youth",
+    "x": 23.328054428100586,
+    "y": 26.062053680419922,
+    "codes": [
+      "EDUC-5281"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5299",
+    "title": "TESOL Classroom Fundamentals",
+    "label": "EDUC-5299 \u2014 TESOL Classroom Fundamentals",
+    "x": 18.102197647094727,
+    "y": 13.986139297485352,
+    "codes": [
+      "EDUC-5299"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5324",
+    "title": "Fieldwork in Lang in Education I",
+    "label": "EDUC-5324 \u2014 Fieldwork in Lang in Education I",
+    "x": 29.345211029052734,
+    "y": 45.10087585449219,
+    "codes": [
+      "EDUC-5324"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5325",
+    "title": "Fieldwork in Language in Education II",
+    "label": "EDUC-5325 \u2014 Fieldwork in Language in Education II",
+    "x": 29.34958267211914,
+    "y": 45.04219436645508,
+    "codes": [
+      "EDUC-5325"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5333",
+    "title": "Forming and Reforming the Elementary Reading/Writing/Literacy Curriculum",
+    "label": "EDUC-5333 \u2014 Forming and Reforming the Elementary Reading/Writing/Literacy Curriculum",
+    "x": 35.163692474365234,
+    "y": 28.98648452758789,
+    "codes": [
+      "EDUC-5333"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5335",
+    "title": "Literature for Children and Adolescents",
+    "label": "EDUC-5335 \u2014 Literature for Children and Adolescents",
+    "x": 42.99457550048828,
+    "y": 27.08537483215332,
+    "codes": [
+      "EDUC-5335"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5340",
+    "title": "Literacy In Action",
+    "label": "EDUC-5340 \u2014 Literacy In Action",
+    "x": 28.788511276245117,
+    "y": 29.930734634399414,
+    "codes": [
+      "EDUC-5340"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5378",
+    "title": "Teaching Reading and Study in Colleges and Universities",
+    "label": "EDUC-5378 \u2014 Teaching Reading and Study in Colleges and Universities",
+    "x": 34.68391799926758,
+    "y": 23.109039306640625,
+    "codes": [
+      "EDUC-5378"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5382",
+    "title": "Theories and Pedagogies of Teaching Writing",
+    "label": "EDUC-5382 \u2014 Theories and Pedagogies of Teaching Writing",
+    "x": 27.048297882080078,
+    "y": 22.95810890197754,
+    "codes": [
+      "EDUC-5382"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5388",
+    "title": "Digital Literacies in a Networked World",
+    "label": "EDUC-5388 \u2014 Digital Literacies in a Networked World",
+    "x": 30.097482681274414,
+    "y": 27.439756393432617,
+    "codes": [
+      "EDUC-5388"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5404",
+    "title": "Systems Thinking for International Development and Educational Change",
+    "label": "EDUC-5404 \u2014 Systems Thinking for International Development and Educational Change",
+    "x": -6.848515033721924,
+    "y": 3.5319316387176514,
+    "codes": [
+      "EDUC-5404"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5406",
+    "title": "International Early Childhood Policies and Programs",
+    "label": "EDUC-5406 \u2014 International Early Childhood Policies and Programs",
+    "x": -14.85857105255127,
+    "y": 12.291553497314453,
+    "codes": [
+      "EDUC-5406"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5412",
+    "title": "Policy Planning in International Educational Development: Theory and Practice",
+    "label": "EDUC-5412 \u2014 Policy Planning in International Educational Development: Theory and Practice",
+    "x": -10.183176040649414,
+    "y": 2.757150650024414,
+    "codes": [
+      "EDUC-5412"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5414",
+    "title": "Economics of Education in Lower Middle Income Countries",
+    "label": "EDUC-5414 \u2014 Economics of Education in Lower Middle Income Countries",
+    "x": -18.537141799926758,
+    "y": -21.46809959411621,
+    "codes": [
+      "EDUC-5414"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5418",
+    "title": "Global Governance and Cooperation: International Education Policy and Practice",
+    "label": "EDUC-5418 \u2014 Global Governance and Cooperation: International Education Policy and Practice",
+    "x": -6.601191520690918,
+    "y": 0.3808698356151581,
+    "codes": [
+      "EDUC-5418"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5428",
+    "title": "Participatory Educational Research in Global Perspective: Theory and Practice",
+    "label": "EDUC-5428 \u2014 Participatory Educational Research in Global Perspective: Theory and Practice",
+    "x": -9.878084182739258,
+    "y": 0.5208313465118408,
+    "codes": [
+      "EDUC-5428"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5430",
+    "title": "Migration, Displacement, and Education",
+    "label": "EDUC-5430 \u2014 Migration, Displacement, and Education",
+    "x": -2.1327314376831055,
+    "y": -5.185186862945557,
+    "codes": [
+      "EDUC-5430"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5431",
+    "title": "Global Citizenship",
+    "label": "EDUC-5431 \u2014 Global Citizenship",
+    "x": -3.1687185764312744,
+    "y": -0.3642904758453369,
+    "codes": [
+      "EDUC-5431"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5432",
+    "title": "Contemporary Immigration in the U.S.",
+    "label": "EDUC-5432 \u2014 Contemporary Immigration in the U.S.",
+    "x": -1.6270389556884766,
+    "y": -5.8908162117004395,
+    "codes": [
+      "EDUC-5432"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5433",
+    "title": "Teaching and Learning in the Global Era",
+    "label": "EDUC-5433 \u2014 Teaching and Learning in the Global Era",
+    "x": -0.5322386026382446,
+    "y": 3.125025749206543,
+    "codes": [
+      "EDUC-5433"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5434",
+    "title": "Decolonizing Education",
+    "label": "EDUC-5434 \u2014 Decolonizing Education",
+    "x": -6.9105424880981445,
+    "y": -5.640295028686523,
+    "codes": [
+      "EDUC-5434"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5435",
+    "title": "Youth Cultural Formations",
+    "label": "EDUC-5435 \u2014 Youth Cultural Formations",
+    "x": 7.095647811889648,
+    "y": 1.1011908054351807,
+    "codes": [
+      "EDUC-5435"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5436",
+    "title": "Philosophical Aspects of Education Policy",
+    "label": "EDUC-5436 \u2014 Philosophical Aspects of Education Policy",
+    "x": -5.106751441955566,
+    "y": -15.087695121765137,
+    "codes": [
+      "EDUC-5436"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5437",
+    "title": "Interfaith Dialogue in Action (SNF Paideia Program Course)",
+    "label": "EDUC-5437 \u2014 Interfaith Dialogue in Action (SNF Paideia Program Course)",
+    "x": 23.164024353027344,
+    "y": -14.192475318908691,
+    "codes": [
+      "EDUC-5437"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5438",
+    "title": "Education Law and Policy",
+    "label": "EDUC-5438 \u2014 Education Law and Policy",
+    "x": -9.822575569152832,
+    "y": -22.402725219726562,
+    "codes": [
+      "EDUC-5438"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5439",
+    "title": "Examining the School to Prison Pipeline: Implications of History, Policy, and Race",
+    "label": "EDUC-5439 \u2014 Examining the School to Prison Pipeline: Implications of History, Policy, and Race",
+    "x": -4.473659515380859,
+    "y": -21.31332015991211,
+    "codes": [
+      "EDUC-5439"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5443",
+    "title": "Education and the American Metropolis",
+    "label": "EDUC-5443 \u2014 Education and the American Metropolis",
+    "x": 4.898063659667969,
+    "y": -18.83877182006836,
+    "codes": [
+      "EDUC-5443"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5445",
+    "title": "Ethics & Schools",
+    "label": "EDUC-5445 \u2014 Ethics & Schools",
+    "x": 8.696557998657227,
+    "y": -13.833057403564453,
+    "codes": [
+      "EDUC-5445"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5448",
+    "title": "Politics of School Reform",
+    "label": "EDUC-5448 \u2014 Politics of School Reform",
+    "x": -3.5660688877105713,
+    "y": -18.62247657775879,
+    "codes": [
+      "EDUC-5448"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5449",
+    "title": "The Social & Political Philosophy of Education",
+    "label": "EDUC-5449 \u2014 The Social & Political Philosophy of Education",
+    "x": -3.647850275039673,
+    "y": -14.662069320678711,
+    "codes": [
+      "EDUC-5449"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5450",
+    "title": "Economic Development, Education, and Inequality in East Asia",
+    "label": "EDUC-5450 \u2014 Economic Development, Education, and Inequality in East Asia",
+    "x": -19.528127670288086,
+    "y": -23.724895477294922,
+    "codes": [
+      "EDUC-5450"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5451",
+    "title": "Politics and Education",
+    "label": "EDUC-5451 \u2014 Politics and Education",
+    "x": -7.926234245300293,
+    "y": -17.324811935424805,
+    "codes": [
+      "EDUC-5451"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5453",
+    "title": "History of American Education",
+    "label": "EDUC-5453 \u2014 History of American Education",
+    "x": 2.663104295730591,
+    "y": -20.238149642944336,
+    "codes": [
+      "EDUC-5453"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5455",
+    "title": "Merit and America",
+    "label": "EDUC-5455 \u2014 Merit and America",
+    "x": 4.507882595062256,
+    "y": -22.947729110717773,
+    "codes": [
+      "EDUC-5455"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5457",
+    "title": "Education and the Culture Wars: Historical and Contemporary Perspectives",
+    "label": "EDUC-5457 \u2014 Education and the Culture Wars: Historical and Contemporary Perspectives",
+    "x": 2.2166500091552734,
+    "y": -21.0340576171875,
+    "codes": [
+      "EDUC-5457"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5459",
+    "title": "Activism Beyond the Classroom",
+    "label": "EDUC-5459 \u2014 Activism Beyond the Classroom",
+    "x": 22.474124908447266,
+    "y": -11.575987815856934,
+    "codes": [
+      "EDUC-5459"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5460",
+    "title": "American Education Reform: History, Policy, Practice",
+    "label": "EDUC-5460 \u2014 American Education Reform: History, Policy, Practice",
+    "x": -1.944337010383606,
+    "y": -19.50634765625,
+    "codes": [
+      "EDUC-5460"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5466",
+    "title": "Ethnographic Filmmaking",
+    "label": "EDUC-5466 \u2014 Ethnographic Filmmaking",
+    "x": -22.815776824951172,
+    "y": 4.644038200378418,
+    "codes": [
+      "EDUC-5466"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5467",
+    "title": "Community Youth Filmmaking",
+    "label": "EDUC-5467 \u2014 Community Youth Filmmaking",
+    "x": 22.065950393676758,
+    "y": -7.38076639175415,
+    "codes": [
+      "EDUC-5467"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5480",
+    "title": "Education and International Development",
+    "label": "EDUC-5480 \u2014 Education and International Development",
+    "x": -8.265769004821777,
+    "y": 2.662679672241211,
+    "codes": [
+      "EDUC-5480"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5490",
+    "title": "School and Society in America",
+    "label": "EDUC-5490 \u2014 School and Society in America",
+    "x": 8.49249267578125,
+    "y": -19.610122680664062,
+    "codes": [
+      "EDUC-5490"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5495",
+    "title": "Anthropology and Education",
+    "label": "EDUC-5495 \u2014 Anthropology and Education",
+    "x": 10.816557884216309,
+    "y": -19.492233276367188,
+    "codes": [
+      "EDUC-5495"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5522",
+    "title": "Psychology of the African-American",
+    "label": "EDUC-5522 \u2014 Psychology of the African-American",
+    "x": 4.73707914352417,
+    "y": -6.855760097503662,
+    "codes": [
+      "EDUC-5522"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5538",
+    "title": "Stereotype Threat, Impostor Phenomenon, and African Americans",
+    "label": "EDUC-5538 \u2014 Stereotype Threat, Impostor Phenomenon, and African Americans",
+    "x": 3.2884199619293213,
+    "y": -7.573261737823486,
+    "codes": [
+      "EDUC-5538"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5553",
+    "title": "Foundations of Education for Diverse Learners",
+    "label": "EDUC-5553 \u2014 Foundations of Education for Diverse Learners",
+    "x": 27.744220733642578,
+    "y": 15.270479202270508,
+    "codes": [
+      "EDUC-5553"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5557",
+    "title": "Developmental Theories: Applications with Adolescents",
+    "label": "EDUC-5557 \u2014 Developmental Theories: Applications with Adolescents",
+    "x": -22.98619270324707,
+    "y": 27.678268432617188,
+    "codes": [
+      "EDUC-5557"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5558",
+    "title": "Developmental Theories: Applications with Young Adults",
+    "label": "EDUC-5558 \u2014 Developmental Theories: Applications with Young Adults",
+    "x": -24.471179962158203,
+    "y": 27.3489990234375,
+    "codes": [
+      "EDUC-5558"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5560",
+    "title": "Human Development",
+    "label": "EDUC-5560 \u2014 Human Development",
+    "x": -18.4415225982666,
+    "y": 29.827293395996094,
+    "codes": [
+      "EDUC-5560"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5561",
+    "title": "Adolescent Development",
+    "label": "EDUC-5561 \u2014 Adolescent Development",
+    "x": -21.990785598754883,
+    "y": 28.59284210205078,
+    "codes": [
+      "EDUC-5561"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5562",
+    "title": "Personality & Social Development",
+    "label": "EDUC-5562 \u2014 Personality & Social Development",
+    "x": -19.50830841064453,
+    "y": 25.754682540893555,
+    "codes": [
+      "EDUC-5562"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5568",
+    "title": "Cognitive Development",
+    "label": "EDUC-5568 \u2014 Cognitive Development",
+    "x": -14.469828605651855,
+    "y": 23.19869613647461,
+    "codes": [
+      "EDUC-5568"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5570",
+    "title": "Qualitative Studies of Developmental Interventions",
+    "label": "EDUC-5570 \u2014 Qualitative Studies of Developmental Interventions",
+    "x": -19.65729522705078,
+    "y": 18.179702758789062,
+    "codes": [
+      "EDUC-5570"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5571",
+    "title": "Mindfulness for Emerging Adults",
+    "label": "EDUC-5571 \u2014 Mindfulness for Emerging Adults",
+    "x": -32.944091796875,
+    "y": 36.03812789916992,
+    "codes": [
+      "EDUC-5571"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5573",
+    "title": "Psychoeducational Interactions with Black Males",
+    "label": "EDUC-5573 \u2014 Psychoeducational Interactions with Black Males",
+    "x": 5.6912102699279785,
+    "y": -8.59312915802002,
+    "codes": [
+      "EDUC-5573"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5580",
+    "title": "Developmental Theories & Applications with Children",
+    "label": "EDUC-5580 \u2014 Developmental Theories & Applications with Children",
+    "x": -17.436561584472656,
+    "y": 20.24115562438965,
+    "codes": [
+      "EDUC-5580"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5581",
+    "title": "Advanced Psychology of Women",
+    "label": "EDUC-5581 \u2014 Advanced Psychology of Women",
+    "x": -31.675132751464844,
+    "y": 18.027450561523438,
+    "codes": [
+      "EDUC-5581"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5584",
+    "title": "Basic Counseling Skills",
+    "label": "EDUC-5584 \u2014 Basic Counseling Skills",
+    "x": -35.98621368408203,
+    "y": 26.23714256286621,
+    "codes": [
+      "EDUC-5584"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5585",
+    "title": "Advanced Group and Family Counseling",
+    "label": "EDUC-5585 \u2014 Advanced Group and Family Counseling",
+    "x": -39.735633850097656,
+    "y": 23.125511169433594,
+    "codes": [
+      "EDUC-5585"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5587",
+    "title": "Human Sexuality",
+    "label": "EDUC-5587 \u2014 Human Sexuality",
+    "x": -29.843965530395508,
+    "y": -31.093799591064453,
+    "codes": [
+      "EDUC-5587"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5588",
+    "title": "Autism, Language, and Reasoning",
+    "label": "EDUC-5588 \u2014 Autism, Language, and Reasoning",
+    "x": -4.0074849128723145,
+    "y": 26.86996841430664,
+    "codes": [
+      "EDUC-5588"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5594",
+    "title": "Race/Ethnicity in Human Development",
+    "label": "EDUC-5594 \u2014 Race/Ethnicity in Human Development",
+    "x": -16.526357650756836,
+    "y": 25.882150650024414,
+    "codes": [
+      "EDUC-5594"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5730",
+    "title": "The Evolution of Assessment: Classroom and Policy Uses",
+    "label": "EDUC-5730 \u2014 The Evolution of Assessment: Classroom and Policy Uses",
+    "x": -6.625438690185547,
+    "y": 15.446809768676758,
+    "codes": [
+      "EDUC-5730"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5760",
+    "title": "Applied Research Methods to Inform Policy and Practice",
+    "label": "EDUC-5760 \u2014 Applied Research Methods to Inform Policy and Practice",
+    "x": -24.9619197845459,
+    "y": -7.462041854858398,
+    "codes": [
+      "EDUC-5760"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5782",
+    "title": "Sociology of Education",
+    "label": "EDUC-5782 \u2014 Sociology of Education",
+    "x": 10.61751937866211,
+    "y": -21.864656448364258,
+    "codes": [
+      "EDUC-5782"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5804",
+    "title": "Contemporary Issues in Higher Education",
+    "label": "EDUC-5804 \u2014 Contemporary Issues in Higher Education",
+    "x": -9.524922370910645,
+    "y": -35.74681854248047,
+    "codes": [
+      "EDUC-5804"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5805",
+    "title": "Globalization & the University",
+    "label": "EDUC-5805 \u2014 Globalization & the University",
+    "x": -10.954122543334961,
+    "y": -50.665767669677734,
+    "codes": [
+      "EDUC-5805"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5806",
+    "title": "The Americas: Caribbean and Afro-Latin Education Studies",
+    "label": "EDUC-5806 \u2014 The Americas: Caribbean and Afro-Latin Education Studies",
+    "x": 1.089544653892517,
+    "y": -10.536083221435547,
+    "codes": [
+      "EDUC-5806"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5812",
+    "title": "University-Community Partnerships",
+    "label": "EDUC-5812 \u2014 University-Community Partnerships",
+    "x": -4.370068550109863,
+    "y": -46.386966705322266,
+    "codes": [
+      "EDUC-5812"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5820",
+    "title": "Special Topics in Higher Education",
+    "label": "EDUC-5820 \u2014 Special Topics in Higher Education",
+    "x": -7.2545061111450195,
+    "y": -33.870330810546875,
+    "codes": [
+      "EDUC-5820"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5832",
+    "title": "Pursuing Institutions of Excellence: Strategies, Choices, Pitfalls & Possibilities",
+    "label": "EDUC-5832 \u2014 Pursuing Institutions of Excellence: Strategies, Choices, Pitfalls & Possibilities",
+    "x": 2.2782328128814697,
+    "y": -49.206207275390625,
+    "codes": [
+      "EDUC-5832"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5841",
+    "title": "Access & Choice in American Higher Education",
+    "label": "EDUC-5841 \u2014 Access & Choice in American Higher Education",
+    "x": -4.967704772949219,
+    "y": -32.78996658325195,
+    "codes": [
+      "EDUC-5841"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5843",
+    "title": "Understanding Minority Serving Institutions",
+    "label": "EDUC-5843 \u2014 Understanding Minority Serving Institutions",
+    "x": 2.50170636177063,
+    "y": -30.37563133239746,
+    "codes": [
+      "EDUC-5843"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5853",
+    "title": "Academic Advising in Higher Education",
+    "label": "EDUC-5853 \u2014 Academic Advising in Higher Education",
+    "x": -4.741953372955322,
+    "y": -39.527099609375,
+    "codes": [
+      "EDUC-5853"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5856",
+    "title": "Higher Education Finance",
+    "label": "EDUC-5856 \u2014 Higher Education Finance",
+    "x": -13.32046890258789,
+    "y": -25.747037887573242,
+    "codes": [
+      "EDUC-5856"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5869",
+    "title": "Administration of Student Life",
+    "label": "EDUC-5869 \u2014 Administration of Student Life",
+    "x": -9.863256454467773,
+    "y": -41.484588623046875,
+    "codes": [
+      "EDUC-5869"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5873",
+    "title": "Higher Education Policy : What Can We Learn from Other Countries?",
+    "label": "EDUC-5873 \u2014 Higher Education Policy : What Can We Learn from Other Countries?",
+    "x": -15.37626838684082,
+    "y": -32.10014724731445,
+    "codes": [
+      "EDUC-5873"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5892",
+    "title": "Professional Development in Higher Education",
+    "label": "EDUC-5892 \u2014 Professional Development in Higher Education",
+    "x": -5.708252429962158,
+    "y": -38.1541633605957,
+    "codes": [
+      "EDUC-5892"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5894",
+    "title": "Diversity in Higher Education",
+    "label": "EDUC-5894 \u2014 Diversity in Higher Education",
+    "x": -3.7360785007476807,
+    "y": -29.45499610900879,
+    "codes": [
+      "EDUC-5894"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5901",
+    "title": "Radical Reading: Strutured Literacy in Context",
+    "label": "EDUC-5901 \u2014 Radical Reading: Strutured Literacy in Context",
+    "x": 36.89023208618164,
+    "y": 31.200407028198242,
+    "codes": [
+      "EDUC-5901"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5910",
+    "title": "Applied Network Analysis in Learning",
+    "label": "EDUC-5910 \u2014 Applied Network Analysis in Learning",
+    "x": -17.495872497558594,
+    "y": -5.071932315826416,
+    "codes": [
+      "EDUC-5910"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5911",
+    "title": "Artificial Intelligence for Children and Youth: Learning, Creating, and Understanding",
+    "label": "EDUC-5911 \u2014 Artificial Intelligence for Children and Youth: Learning, Creating, and Understanding",
+    "x": -0.23517391085624695,
+    "y": 19.8889217376709,
+    "codes": [
+      "EDUC-5911"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5912",
+    "title": "Math Tutoring in Urban Elementary Schools",
+    "label": "EDUC-5912 \u2014 Math Tutoring in Urban Elementary Schools",
+    "x": 29.737821578979492,
+    "y": -8.672835350036621,
+    "codes": [
+      "EDUC-5912"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5913",
+    "title": "Programming Fundamentals for Educational Research",
+    "label": "EDUC-5913 \u2014 Programming Fundamentals for Educational Research",
+    "x": -28.083480834960938,
+    "y": -13.982108116149902,
+    "codes": [
+      "EDUC-5913"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5914",
+    "title": "Creating Culturally Responsive and Sustaining Classrooms",
+    "label": "EDUC-5914 \u2014 Creating Culturally Responsive and Sustaining Classrooms",
+    "x": 29.322383880615234,
+    "y": 9.683625221252441,
+    "codes": [
+      "EDUC-5914"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5915",
+    "title": "Artificial Intelligence, Learning Sciences, and Education Policy Worldwide",
+    "label": "EDUC-5915 \u2014 Artificial Intelligence, Learning Sciences, and Education Policy Worldwide",
+    "x": -0.9164710640907288,
+    "y": 18.11507225036621,
+    "codes": [
+      "EDUC-5915"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5916",
+    "title": "Quantitative Ethnography and Epistemic Network Analysis",
+    "label": "EDUC-5916 \u2014 Quantitative Ethnography and Epistemic Network Analysis",
+    "x": -27.542625427246094,
+    "y": -0.13721714913845062,
+    "codes": [
+      "EDUC-5916"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5918",
+    "title": "Large Language Model Seminar",
+    "label": "EDUC-5918 \u2014 Large Language Model Seminar",
+    "x": 13.442402839660645,
+    "y": 44.99311828613281,
+    "codes": [
+      "EDUC-5918"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5920",
+    "title": "Children's Additional Language Development",
+    "label": "EDUC-5920 \u2014 Children's Additional Language Development",
+    "x": 20.880268096923828,
+    "y": 28.38713836669922,
+    "codes": [
+      "EDUC-5920"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5930",
+    "title": "Arts Integration in the K-12 Classroom",
+    "label": "EDUC-5930 \u2014 Arts Integration in the K-12 Classroom",
+    "x": 38.56169128417969,
+    "y": 8.511181831359863,
+    "codes": [
+      "EDUC-5930"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5931",
+    "title": "Community-Engaged Teaching and Learning in Philadelphia's Chinatown",
+    "label": "EDUC-5931 \u2014 Community-Engaged Teaching and Learning in Philadelphia's Chinatown",
+    "x": 19.181867599487305,
+    "y": -8.395480155944824,
+    "codes": [
+      "EDUC-5931"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5941",
+    "title": "Women, Human Rights and Global Transformations",
+    "label": "EDUC-5941 \u2014 Women, Human Rights and Global Transformations",
+    "x": -0.2704331576824188,
+    "y": -0.8317238092422485,
+    "codes": [
+      "EDUC-5941"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5943",
+    "title": "Racialization and Education",
+    "label": "EDUC-5943 \u2014 Racialization and Education",
+    "x": 4.227908611297607,
+    "y": -11.837620735168457,
+    "codes": [
+      "EDUC-5943"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5944",
+    "title": "Education and the Politics of Knowledge in the Global South",
+    "label": "EDUC-5944 \u2014 Education and the Politics of Knowledge in the Global South",
+    "x": -10.021740913391113,
+    "y": -2.2405271530151367,
+    "codes": [
+      "EDUC-5944"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5945",
+    "title": "Qualitative Methods and the Politics of Knowledge",
+    "label": "EDUC-5945 \u2014 Qualitative Methods and the Politics of Knowledge",
+    "x": -11.778738021850586,
+    "y": -2.2962121963500977,
+    "codes": [
+      "EDUC-5945"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5949",
+    "title": "Methods and Applications of Quantitative Educational Research",
+    "label": "EDUC-5949 \u2014 Methods and Applications of Quantitative Educational Research",
+    "x": -29.812042236328125,
+    "y": -6.975142955780029,
+    "codes": [
+      "EDUC-5949"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5950",
+    "title": "Praxis/Developmental Research Methods",
+    "label": "EDUC-5950 \u2014 Praxis/Developmental Research Methods",
+    "x": -23.17169952392578,
+    "y": 15.526554107666016,
+    "codes": [
+      "EDUC-5950"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5951",
+    "title": "Human Development and Media Studies",
+    "label": "EDUC-5951 \u2014 Human Development and Media Studies",
+    "x": -14.582479476928711,
+    "y": 28.445209503173828,
+    "codes": [
+      "EDUC-5951"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5953",
+    "title": "Socialization in Educational Context",
+    "label": "EDUC-5953 \u2014 Socialization in Educational Context",
+    "x": 13.975075721740723,
+    "y": -21.262531280517578,
+    "codes": [
+      "EDUC-5953"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5954",
+    "title": "Digital Technology and Child Development",
+    "label": "EDUC-5954 \u2014 Digital Technology and Child Development",
+    "x": -11.838671684265137,
+    "y": 30.462080001831055,
+    "codes": [
+      "EDUC-5954"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5970",
+    "title": "Inquiry Fundamentals for Education Policy",
+    "label": "EDUC-5970 \u2014 Inquiry Fundamentals for Education Policy",
+    "x": -25.058303833007812,
+    "y": -10.91518783569336,
+    "codes": [
+      "EDUC-5970"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5971",
+    "title": "Dimensions and Drivers of Educational Inequalities",
+    "label": "EDUC-5971 \u2014 Dimensions and Drivers of Educational Inequalities",
+    "x": -0.44226086139678955,
+    "y": -24.865140914916992,
+    "codes": [
+      "EDUC-5971"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5972",
+    "title": "Economic Perspectives on Higher Education Policy",
+    "label": "EDUC-5972 \u2014 Economic Perspectives on Higher Education Policy",
+    "x": -13.318904876708984,
+    "y": -28.647462844848633,
+    "codes": [
+      "EDUC-5972"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5973",
+    "title": "Social Capital and Social Networks in Schools",
+    "label": "EDUC-5973 \u2014 Social Capital and Social Networks in Schools",
+    "x": 17.745319366455078,
+    "y": -22.26392364501953,
+    "codes": [
+      "EDUC-5973"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5974",
+    "title": "The Politics of Policymaking in K-12 Education",
+    "label": "EDUC-5974 \u2014 The Politics of Policymaking in K-12 Education",
+    "x": -10.442200660705566,
+    "y": -16.783479690551758,
+    "codes": [
+      "EDUC-5974"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5975",
+    "title": "Software Skills for Policy Analysis and Reporting",
+    "label": "EDUC-5975 \u2014 Software Skills for Policy Analysis and Reporting",
+    "x": -27.823707580566406,
+    "y": -11.283186912536621,
+    "codes": [
+      "EDUC-5975"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5976",
+    "title": "Assessing Research Quality in Education Policy",
+    "label": "EDUC-5976 \u2014 Assessing Research Quality in Education Policy",
+    "x": -27.244752883911133,
+    "y": -9.228898048400879,
+    "codes": [
+      "EDUC-5976"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5980",
+    "title": "The Professoriate: Foundations, Careers, and Current Issues",
+    "label": "EDUC-5980 \u2014 The Professoriate: Foundations, Careers, and Current Issues",
+    "x": -0.47537899017333984,
+    "y": -38.67719650268555,
+    "codes": [
+      "EDUC-5980"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5983",
+    "title": "The Community\u2019s College",
+    "label": "EDUC-5983 \u2014 The Community\u2019s College",
+    "x": 0.8033367991447449,
+    "y": -34.188053131103516,
+    "codes": [
+      "EDUC-5983"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5984",
+    "title": "Equity and Inclusion in Higher Education and Beyond",
+    "label": "EDUC-5984 \u2014 Equity and Inclusion in Higher Education and Beyond",
+    "x": -2.639113187789917,
+    "y": -27.52605628967285,
+    "codes": [
+      "EDUC-5984"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5986",
+    "title": "Mixed Methods in Higher Education",
+    "label": "EDUC-5986 \u2014 Mixed Methods in Higher Education",
+    "x": -36.07773971557617,
+    "y": 3.962805986404419,
+    "codes": [
+      "EDUC-5986"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5987",
+    "title": "Foundations of American Higher Education",
+    "label": "EDUC-5987 \u2014 Foundations of American Higher Education",
+    "x": -1.331162929534912,
+    "y": -34.0317497253418,
+    "codes": [
+      "EDUC-5987"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5988",
+    "title": "Seeking Global Citizenship at Home and Abroad",
+    "label": "EDUC-5988 \u2014 Seeking Global Citizenship at Home and Abroad",
+    "x": -2.0067014694213867,
+    "y": -1.0395946502685547,
+    "codes": [
+      "EDUC-5988"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5989",
+    "title": "Leading Change in Higher Education",
+    "label": "EDUC-5989 \u2014 Leading Change in Higher Education",
+    "x": 4.141282081604004,
+    "y": -43.831947326660156,
+    "codes": [
+      "EDUC-5989"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-5990",
+    "title": "Education in a Connected Global Landscape",
+    "label": "EDUC-5990 \u2014 Education in a Connected Global Landscape",
+    "x": -1.6480413675308228,
+    "y": 3.3323020935058594,
+    "codes": [
+      "EDUC-5990"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6027",
+    "title": "Teaching in the Middle and Secondary Schools: Math",
+    "label": "EDUC-6027 \u2014 Teaching in the Middle and Secondary Schools: Math",
+    "x": 30.823591232299805,
+    "y": -2.0368735790252686,
+    "codes": [
+      "EDUC-6027"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6028",
+    "title": "Teaching in the Middle and Secondary Schools: Science",
+    "label": "EDUC-6028 \u2014 Teaching in the Middle and Secondary Schools: Science",
+    "x": 31.040987014770508,
+    "y": -0.9090312123298645,
+    "codes": [
+      "EDUC-6028"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6029",
+    "title": "Teaching in the Middle and Secondary Schools: Social Studies",
+    "label": "EDUC-6029 \u2014 Teaching in the Middle and Secondary Schools: Social Studies",
+    "x": 29.331069946289062,
+    "y": -1.8988986015319824,
+    "codes": [
+      "EDUC-6029"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6030",
+    "title": "Teaching in the Middle and Secondary Schools: English",
+    "label": "EDUC-6030 \u2014 Teaching in the Middle and Secondary Schools: English",
+    "x": 33.20357894897461,
+    "y": 25.33298110961914,
+    "codes": [
+      "EDUC-6030"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6041",
+    "title": "Culturally Responsive Pedagogy in Urban Secondary Schools",
+    "label": "EDUC-6041 \u2014 Culturally Responsive Pedagogy in Urban Secondary Schools",
+    "x": 28.19464111328125,
+    "y": 8.346890449523926,
+    "codes": [
+      "EDUC-6041"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6042",
+    "title": "School, Society & Self",
+    "label": "EDUC-6042 \u2014 School, Society & Self",
+    "x": 11.522351264953613,
+    "y": -13.252312660217285,
+    "codes": [
+      "EDUC-6042"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6042A",
+    "title": "School, Society & Self",
+    "label": "EDUC-6042A \u2014 School, Society & Self",
+    "x": 10.93773365020752,
+    "y": -13.742077827453613,
+    "codes": [
+      "EDUC-6042A"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6042B",
+    "title": "School, Society & Self",
+    "label": "EDUC-6042B \u2014 School, Society & Self",
+    "x": 10.927420616149902,
+    "y": -13.73352336883545,
+    "codes": [
+      "EDUC-6042B"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6057",
+    "title": "Advanced Methods in Middle & Secondary Schools: Math",
+    "label": "EDUC-6057 \u2014 Advanced Methods in Middle & Secondary Schools: Math",
+    "x": 29.326091766357422,
+    "y": 0.2725358009338379,
+    "codes": [
+      "EDUC-6057"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6058",
+    "title": "Advanced Methods in Middle & Secondary Schools: Science",
+    "label": "EDUC-6058 \u2014 Advanced Methods in Middle & Secondary Schools: Science",
+    "x": 30.26877212524414,
+    "y": 1.2433223724365234,
+    "codes": [
+      "EDUC-6058"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6059",
+    "title": "Advanced Methods in Middle & Secondary Schools: Social Studies",
+    "label": "EDUC-6059 \u2014 Advanced Methods in Middle & Secondary Schools: Social Studies",
+    "x": 27.84157943725586,
+    "y": 0.17127929627895355,
+    "codes": [
+      "EDUC-6059"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6060",
+    "title": "Advanced Methods in Middle & Secondary Schools: English",
+    "label": "EDUC-6060 \u2014 Advanced Methods in Middle & Secondary Schools: English",
+    "x": 28.80664825439453,
+    "y": 1.8129643201828003,
+    "codes": [
+      "EDUC-6060"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6101",
+    "title": "Curriculum Development and Enactment",
+    "label": "EDUC-6101 \u2014 Curriculum Development and Enactment",
+    "x": 11.783592224121094,
+    "y": 15.783863067626953,
+    "codes": [
+      "EDUC-6101"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6108",
+    "title": "MaKer Studio",
+    "label": "EDUC-6108 \u2014 MaKer Studio",
+    "x": 43.55278778076172,
+    "y": 7.386319637298584,
+    "codes": [
+      "EDUC-6108"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6111",
+    "title": "Educational Assessment of and for Learning",
+    "label": "EDUC-6111 \u2014 Educational Assessment of and for Learning",
+    "x": -7.144233226776123,
+    "y": 17.58132553100586,
+    "codes": [
+      "EDUC-6111"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6116",
+    "title": "Master's Foundations of Teaching and Learning",
+    "label": "EDUC-6116 \u2014 Master's Foundations of Teaching and Learning",
+    "x": 6.321986675262451,
+    "y": 6.669658184051514,
+    "codes": [
+      "EDUC-6116"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6118",
+    "title": "Leadership in Educational Institutions",
+    "label": "EDUC-6118 \u2014 Leadership in Educational Institutions",
+    "x": 11.63865852355957,
+    "y": -29.805967330932617,
+    "codes": [
+      "EDUC-6118"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6123",
+    "title": "Big Data, Education, and Society",
+    "label": "EDUC-6123 \u2014 Big Data, Education, and Society",
+    "x": -14.921506881713867,
+    "y": -10.976516723632812,
+    "codes": [
+      "EDUC-6123"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6130",
+    "title": "Introduction to Mixed-Methods Research",
+    "label": "EDUC-6130 \u2014 Introduction to Mixed-Methods Research",
+    "x": -35.660804748535156,
+    "y": 4.949626445770264,
+    "codes": [
+      "EDUC-6130"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6137",
+    "title": "Contemporary Issues in Science and Technology Education Research",
+    "label": "EDUC-6137 \u2014 Contemporary Issues in Science and Technology Education Research",
+    "x": 12.373703002929688,
+    "y": 4.162275314331055,
+    "codes": [
+      "EDUC-6137"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6139",
+    "title": "Design of Learning Environments",
+    "label": "EDUC-6139 \u2014 Design of Learning Environments",
+    "x": 0.8665984272956848,
+    "y": 10.072949409484863,
+    "codes": [
+      "EDUC-6139"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6144",
+    "title": "Learning Sciences: Past, Present, Future",
+    "label": "EDUC-6144 \u2014 Learning Sciences: Past, Present, Future",
+    "x": 0.9800554513931274,
+    "y": 10.756656646728516,
+    "codes": [
+      "EDUC-6144"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6150",
+    "title": "Technologies for Language Learning and Teaching",
+    "label": "EDUC-6150 \u2014 Technologies for Language Learning and Teaching",
+    "x": 5.323500156402588,
+    "y": 17.295175552368164,
+    "codes": [
+      "EDUC-6150"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6159",
+    "title": "How Innovations Flourish",
+    "label": "EDUC-6159 \u2014 How Innovations Flourish",
+    "x": 0.8558875918388367,
+    "y": 7.571475982666016,
+    "codes": [
+      "EDUC-6159"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6160",
+    "title": "Museum Education",
+    "label": "EDUC-6160 \u2014 Museum Education",
+    "x": 21.72784996032715,
+    "y": -39.172428131103516,
+    "codes": [
+      "EDUC-6160"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6165",
+    "title": "Research on Teaching",
+    "label": "EDUC-6165 \u2014 Research on Teaching",
+    "x": 14.15971851348877,
+    "y": 6.782177925109863,
+    "codes": [
+      "EDUC-6165"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6168",
+    "title": "Master's Seminar in Teaching, Learning, and Leadership",
+    "label": "EDUC-6168 \u2014 Master's Seminar in Teaching, Learning, and Leadership",
+    "x": 0.2713760435581207,
+    "y": 39.16570281982422,
+    "codes": [
+      "EDUC-6168"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6177",
+    "title": "Whiteness and Education",
+    "label": "EDUC-6177 \u2014 Whiteness and Education",
+    "x": 4.784304141998291,
+    "y": -12.712180137634277,
+    "codes": [
+      "EDUC-6177"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6178",
+    "title": "Gender and Sexuality in Education",
+    "label": "EDUC-6178 \u2014 Gender and Sexuality in Education",
+    "x": -26.908605575561523,
+    "y": -31.57647705078125,
+    "codes": [
+      "EDUC-6178"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6181",
+    "title": "Applied Research in the Learning Sciences",
+    "label": "EDUC-6181 \u2014 Applied Research in the Learning Sciences",
+    "x": -22.526681900024414,
+    "y": -3.4709739685058594,
+    "codes": [
+      "EDUC-6181"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6185",
+    "title": "Databases and Data Management",
+    "label": "EDUC-6185 \u2014 Databases and Data Management",
+    "x": -29.06048011779785,
+    "y": -19.78564453125,
+    "codes": [
+      "EDUC-6185"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6186",
+    "title": "In/formal Learning Experience",
+    "label": "EDUC-6186 \u2014 In/formal Learning Experience",
+    "x": 25.628238677978516,
+    "y": 31.089025497436523,
+    "codes": [
+      "EDUC-6186"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6189",
+    "title": "Contemporary Issues in Mathematics Curriculum",
+    "label": "EDUC-6189 \u2014 Contemporary Issues in Mathematics Curriculum",
+    "x": 12.651985168457031,
+    "y": 2.77785325050354,
+    "codes": [
+      "EDUC-6189"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6190",
+    "title": "Feature Engineering",
+    "label": "EDUC-6190 \u2014 Feature Engineering",
+    "x": -30.73293685913086,
+    "y": -16.570846557617188,
+    "codes": [
+      "EDUC-6190"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6191",
+    "title": "Core Methods in Educational Data Mining",
+    "label": "EDUC-6191 \u2014 Core Methods in Educational Data Mining",
+    "x": -28.694040298461914,
+    "y": -17.377197265625,
+    "codes": [
+      "EDUC-6191"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6192",
+    "title": "Large Language Model Applications in Education",
+    "label": "EDUC-6192 \u2014 Large Language Model Applications in Education",
+    "x": 13.476001739501953,
+    "y": 45.12564468383789,
+    "codes": [
+      "EDUC-6192"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6195",
+    "title": "Capstone Seminar: Learning Analytics",
+    "label": "EDUC-6195 \u2014 Capstone Seminar: Learning Analytics",
+    "x": -4.856132507324219,
+    "y": 38.954078674316406,
+    "codes": [
+      "EDUC-6195"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6200",
+    "title": "Introduction to Applied Linguistics",
+    "label": "EDUC-6200 \u2014 Introduction to Applied Linguistics",
+    "x": 13.410904884338379,
+    "y": 29.124347686767578,
+    "codes": [
+      "EDUC-6200"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6205",
+    "title": "Linguistics in Education",
+    "label": "EDUC-6205 \u2014 Linguistics in Education",
+    "x": 19.00798797607422,
+    "y": 35.453338623046875,
+    "codes": [
+      "EDUC-6205"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6210",
+    "title": "Sociolinguistics in Education",
+    "label": "EDUC-6210 \u2014 Sociolinguistics in Education",
+    "x": 16.97645378112793,
+    "y": 34.45075607299805,
+    "codes": [
+      "EDUC-6210"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6215",
+    "title": "Approaches to Teaching English and Other Modern Languages",
+    "label": "EDUC-6215 \u2014 Approaches to Teaching English and Other Modern Languages",
+    "x": 18.132139205932617,
+    "y": 18.27031135559082,
+    "codes": [
+      "EDUC-6215"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6216",
+    "title": "Approaches to Teaching Chinese",
+    "label": "EDUC-6216 \u2014 Approaches to Teaching Chinese",
+    "x": 18.071475982666016,
+    "y": 17.54012107849121,
+    "codes": [
+      "EDUC-6216"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6220",
+    "title": "Discursive Approaches in Language, Globalization, and Intercultural Studies",
+    "label": "EDUC-6220 \u2014 Discursive Approaches in Language, Globalization, and Intercultural Studies",
+    "x": 10.860506057739258,
+    "y": 29.934837341308594,
+    "codes": [
+      "EDUC-6220"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6299",
+    "title": "Ethnography for Language, Globalization, and Intercultural Studies",
+    "label": "EDUC-6299 \u2014 Ethnography for Language, Globalization, and Intercultural Studies",
+    "x": 9.848820686340332,
+    "y": 30.398218154907227,
+    "codes": [
+      "EDUC-6299"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6306",
+    "title": "Literacy Research, Theory, and Practice",
+    "label": "EDUC-6306 \u2014 Literacy Research, Theory, and Practice",
+    "x": 31.27677345275879,
+    "y": 31.25558090209961,
+    "codes": [
+      "EDUC-6306"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6323",
+    "title": "Multicultural Issues in Education",
+    "label": "EDUC-6323 \u2014 Multicultural Issues in Education",
+    "x": 4.50774621963501,
+    "y": -2.7367355823516846,
+    "codes": [
+      "EDUC-6323"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6326",
+    "title": "Literacy, Discourse, and Interaction",
+    "label": "EDUC-6326 \u2014 Literacy, Discourse, and Interaction",
+    "x": 37.24346160888672,
+    "y": 28.924041748046875,
+    "codes": [
+      "EDUC-6326"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6329",
+    "title": "Teaching English/Language and Literacy in Middle and Secondary Schools",
+    "label": "EDUC-6329 \u2014 Teaching English/Language and Literacy in Middle and Secondary Schools",
+    "x": 33.09673309326172,
+    "y": 25.829376220703125,
+    "codes": [
+      "EDUC-6329"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6333",
+    "title": "Selected Topics in RWL: Literacy and Learning Differences",
+    "label": "EDUC-6333 \u2014 Selected Topics in RWL: Literacy and Learning Differences",
+    "x": 35.32593536376953,
+    "y": 35.624332427978516,
+    "codes": [
+      "EDUC-6333"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6334",
+    "title": "Selected Topics in RWL: Critical Literacies",
+    "label": "EDUC-6334 \u2014 Selected Topics in RWL: Critical Literacies",
+    "x": 35.57218933105469,
+    "y": 36.182193756103516,
+    "codes": [
+      "EDUC-6334"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6335",
+    "title": "Assessing Language and Learning Differences",
+    "label": "EDUC-6335 \u2014 Assessing Language and Learning Differences",
+    "x": 18.58965301513672,
+    "y": 24.797739028930664,
+    "codes": [
+      "EDUC-6335"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6336",
+    "title": "Young Adult Literature, Media & Culture",
+    "label": "EDUC-6336 \u2014 Young Adult Literature, Media & Culture",
+    "x": 44.06435775756836,
+    "y": 29.215139389038086,
+    "codes": [
+      "EDUC-6336"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6345",
+    "title": "Issues in Education and Health: Disparities and Prevention in Schools and Communities",
+    "label": "EDUC-6345 \u2014 Issues in Education and Health: Disparities and Prevention in Schools and Communities",
+    "x": 1.2298169136047363,
+    "y": -15.135458946228027,
+    "codes": [
+      "EDUC-6345"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6362",
+    "title": "Picturebooks and the Practice of Literacy",
+    "label": "EDUC-6362 \u2014 Picturebooks and the Practice of Literacy",
+    "x": 39.870826721191406,
+    "y": 25.128074645996094,
+    "codes": [
+      "EDUC-6362"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6369",
+    "title": "Participatory Methods in Education",
+    "label": "EDUC-6369 \u2014 Participatory Methods in Education",
+    "x": 17.61084747314453,
+    "y": -2.186971426010132,
+    "codes": [
+      "EDUC-6369"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6371",
+    "title": "Adult Literacy",
+    "label": "EDUC-6371 \u2014 Adult Literacy",
+    "x": 31.80721092224121,
+    "y": 35.495113372802734,
+    "codes": [
+      "EDUC-6371"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6381",
+    "title": "Literacy and Illustrated Texts: Picturebooks, Comics and Graphic Novels",
+    "label": "EDUC-6381 \u2014 Literacy and Illustrated Texts: Picturebooks, Comics and Graphic Novels",
+    "x": 38.959346771240234,
+    "y": 25.23552703857422,
+    "codes": [
+      "EDUC-6381"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6402",
+    "title": "Curriculum & Pedagogy in International Contexts",
+    "label": "EDUC-6402 \u2014 Curriculum & Pedagogy in International Contexts",
+    "x": 13.29281997680664,
+    "y": 13.679062843322754,
+    "codes": [
+      "EDUC-6402"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6410",
+    "title": "Global Perspectives on School Climate & Soci-Emotional Learning",
+    "label": "EDUC-6410 \u2014 Global Perspectives on School Climate & Soci-Emotional Learning",
+    "x": 16.07135772705078,
+    "y": -18.209381103515625,
+    "codes": [
+      "EDUC-6410"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6460",
+    "title": "Qualitative Methods: Principles and Techniques",
+    "label": "EDUC-6460 \u2014 Qualitative Methods: Principles and Techniques",
+    "x": -31.116212844848633,
+    "y": 4.256881237030029,
+    "codes": [
+      "EDUC-6460"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6462",
+    "title": "Principles of Monitoring & Evaluation in International Education Development",
+    "label": "EDUC-6462 \u2014 Principles of Monitoring & Evaluation in International Education Development",
+    "x": -23.213157653808594,
+    "y": -15.725918769836426,
+    "codes": [
+      "EDUC-6462"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6465",
+    "title": "Social Capital and Social Networks",
+    "label": "EDUC-6465 \u2014 Social Capital and Social Networks",
+    "x": 17.778499603271484,
+    "y": -22.296932220458984,
+    "codes": [
+      "EDUC-6465"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6480",
+    "title": "International Educational Development in Practice: Tools, Techniques and Ethics",
+    "label": "EDUC-6480 \u2014 International Educational Development in Practice: Tools, Techniques and Ethics",
+    "x": -10.927840232849121,
+    "y": 6.0935492515563965,
+    "codes": [
+      "EDUC-6480"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6482",
+    "title": "Masters Proseminar in International Educational Development",
+    "label": "EDUC-6482 \u2014 Masters Proseminar in International Educational Development",
+    "x": -12.476899147033691,
+    "y": 6.436233997344971,
+    "codes": [
+      "EDUC-6482"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6490",
+    "title": "Master's Seminar in Education, Culture, and Society",
+    "label": "EDUC-6490 \u2014 Master's Seminar in Education, Culture, and Society",
+    "x": 0.30420807003974915,
+    "y": 38.519466400146484,
+    "codes": [
+      "EDUC-6490"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6503",
+    "title": "Wellness and Addictions Counseling",
+    "label": "EDUC-6503 \u2014 Wellness and Addictions Counseling",
+    "x": -42.6115837097168,
+    "y": 23.71497344970703,
+    "codes": [
+      "EDUC-6503"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6510",
+    "title": "Cultural Perspectives on Human Development",
+    "label": "EDUC-6510 \u2014 Cultural Perspectives on Human Development",
+    "x": -17.393545150756836,
+    "y": 25.642967224121094,
+    "codes": [
+      "EDUC-6510"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6512",
+    "title": "LGBT Counseling & Development",
+    "label": "EDUC-6512 \u2014 LGBT Counseling & Development",
+    "x": -40.257774353027344,
+    "y": 30.15900993347168,
+    "codes": [
+      "EDUC-6512"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6513",
+    "title": "Group Counseling",
+    "label": "EDUC-6513 \u2014 Group Counseling",
+    "x": -41.5291748046875,
+    "y": 26.927764892578125,
+    "codes": [
+      "EDUC-6513"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6515",
+    "title": "Parenting and Children's Educational Development",
+    "label": "EDUC-6515 \u2014 Parenting and Children's Educational Development",
+    "x": -12.125824928283691,
+    "y": 15.309471130371094,
+    "codes": [
+      "EDUC-6515"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6517",
+    "title": "Counseling for School to Career Transitions",
+    "label": "EDUC-6517 \u2014 Counseling for School to Career Transitions",
+    "x": -32.948463439941406,
+    "y": 24.80064582824707,
+    "codes": [
+      "EDUC-6517"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6558",
+    "title": "Diagnosis and Psychopathology",
+    "label": "EDUC-6558 \u2014 Diagnosis and Psychopathology",
+    "x": -20.55028533935547,
+    "y": 22.217140197753906,
+    "codes": [
+      "EDUC-6558"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6563",
+    "title": "Sociocultural Foundations in Counseling",
+    "label": "EDUC-6563 \u2014 Sociocultural Foundations in Counseling",
+    "x": -38.30668640136719,
+    "y": 27.192344665527344,
+    "codes": [
+      "EDUC-6563"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6577",
+    "title": "EdTech and International Development",
+    "label": "EDUC-6577 \u2014 EdTech and International Development",
+    "x": -7.413405418395996,
+    "y": 6.7672905921936035,
+    "codes": [
+      "EDUC-6577"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6580",
+    "title": "Early Childhood, Early Literacy, and Parent-Family-Community Engagement",
+    "label": "EDUC-6580 \u2014 Early Childhood, Early Literacy, and Parent-Family-Community Engagement",
+    "x": -13.386804580688477,
+    "y": 13.61973762512207,
+    "codes": [
+      "EDUC-6580"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6585",
+    "title": "Career Counseling and Development",
+    "label": "EDUC-6585 \u2014 Career Counseling and Development",
+    "x": -31.586181640625,
+    "y": 24.505142211914062,
+    "codes": [
+      "EDUC-6585"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6586",
+    "title": "Counseling Interventions",
+    "label": "EDUC-6586 \u2014 Counseling Interventions",
+    "x": -38.88863754272461,
+    "y": 25.874170303344727,
+    "codes": [
+      "EDUC-6586"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6587",
+    "title": "Counseling Ethics & Professional Principles",
+    "label": "EDUC-6587 \u2014 Counseling Ethics & Professional Principles",
+    "x": -37.16681671142578,
+    "y": 24.969255447387695,
+    "codes": [
+      "EDUC-6587"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6588",
+    "title": "Counseling Practicum",
+    "label": "EDUC-6588 \u2014 Counseling Practicum",
+    "x": -38.42095947265625,
+    "y": 16.790603637695312,
+    "codes": [
+      "EDUC-6588"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6625",
+    "title": "Data Processing and Analysis",
+    "label": "EDUC-6625 \u2014 Data Processing and Analysis",
+    "x": -31.417255401611328,
+    "y": -12.597386360168457,
+    "codes": [
+      "EDUC-6625"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6667",
+    "title": "Introductory Statistics for Educational Research",
+    "label": "EDUC-6667 \u2014 Introductory Statistics for Educational Research",
+    "x": -39.89558410644531,
+    "y": -3.7594175338745117,
+    "codes": [
+      "EDUC-6667"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6680",
+    "title": "Evaluation of Policies, Programs and Projects",
+    "label": "EDUC-6680 \u2014 Evaluation of Policies, Programs and Projects",
+    "x": -20.74200439453125,
+    "y": -14.648353576660156,
+    "codes": [
+      "EDUC-6680"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6683",
+    "title": "Survey Methods & Design",
+    "label": "EDUC-6683 \u2014 Survey Methods & Design",
+    "x": -33.44971466064453,
+    "y": -3.9210846424102783,
+    "codes": [
+      "EDUC-6683"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6684",
+    "title": "Measurement & Assessment",
+    "label": "EDUC-6684 \u2014 Measurement & Assessment",
+    "x": -45.54658126831055,
+    "y": 1.5809271335601807,
+    "codes": [
+      "EDUC-6684"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6715",
+    "title": "Public Communications in Education: Challenges and Strategies",
+    "label": "EDUC-6715 \u2014 Public Communications in Education: Challenges and Strategies",
+    "x": -7.5643439292907715,
+    "y": -11.363251686096191,
+    "codes": [
+      "EDUC-6715"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6720",
+    "title": "Methods of Economic Evaluation in Education",
+    "label": "EDUC-6720 \u2014 Methods of Economic Evaluation in Education",
+    "x": -19.97475242614746,
+    "y": -17.964366912841797,
+    "codes": [
+      "EDUC-6720"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6725",
+    "title": "The Politics of Policymaking in K-12 Education",
+    "label": "EDUC-6725 \u2014 The Politics of Policymaking in K-12 Education",
+    "x": -10.539544105529785,
+    "y": -16.666353225708008,
+    "codes": [
+      "EDUC-6725"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6734",
+    "title": "Child Development and Social Policy",
+    "label": "EDUC-6734 \u2014 Child Development and Social Policy",
+    "x": -16.29815673828125,
+    "y": 17.024438858032227,
+    "codes": [
+      "EDUC-6734"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6736",
+    "title": "Education Finance Policy",
+    "label": "EDUC-6736 \u2014 Education Finance Policy",
+    "x": -12.723697662353516,
+    "y": -21.87162208557129,
+    "codes": [
+      "EDUC-6736"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6738",
+    "title": "Education Policy Issues",
+    "label": "EDUC-6738 \u2014 Education Policy Issues",
+    "x": -20.992889404296875,
+    "y": -8.980599403381348,
+    "codes": [
+      "EDUC-6738"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6739",
+    "title": "Applied Policy Analysis",
+    "label": "EDUC-6739 \u2014 Applied Policy Analysis",
+    "x": -24.08970069885254,
+    "y": -9.296980857849121,
+    "codes": [
+      "EDUC-6739"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6784",
+    "title": "Economics of Education",
+    "label": "EDUC-6784 \u2014 Economics of Education",
+    "x": -16.845739364624023,
+    "y": -20.69634246826172,
+    "codes": [
+      "EDUC-6784"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6804",
+    "title": "Ethics and Leadership in Higher Education",
+    "label": "EDUC-6804 \u2014 Ethics and Leadership in Higher Education",
+    "x": 11.269149780273438,
+    "y": -31.80840301513672,
+    "codes": [
+      "EDUC-6804"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6807",
+    "title": "Faculty and Academic Governance",
+    "label": "EDUC-6807 \u2014 Faculty and Academic Governance",
+    "x": 0.25992077589035034,
+    "y": -40.86712646484375,
+    "codes": [
+      "EDUC-6807"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6808",
+    "title": "Organizational Change in Higher Education",
+    "label": "EDUC-6808 \u2014 Organizational Change in Higher Education",
+    "x": 3.860962152481079,
+    "y": -43.55543899536133,
+    "codes": [
+      "EDUC-6808"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6811",
+    "title": "Higher Education Data Systems",
+    "label": "EDUC-6811 \u2014 Higher Education Data Systems",
+    "x": -11.550874710083008,
+    "y": -30.038166046142578,
+    "codes": [
+      "EDUC-6811"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6819",
+    "title": "College Student Health",
+    "label": "EDUC-6819 \u2014 College Student Health",
+    "x": -11.463868141174316,
+    "y": -42.157169342041016,
+    "codes": [
+      "EDUC-6819"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6820",
+    "title": "Enrollment Management",
+    "label": "EDUC-6820 \u2014 Enrollment Management",
+    "x": 14.582703590393066,
+    "y": -46.16204833984375,
+    "codes": [
+      "EDUC-6820"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6824",
+    "title": "Gender in College",
+    "label": "EDUC-6824 \u2014 Gender in College",
+    "x": -24.909324645996094,
+    "y": -33.12279510498047,
+    "codes": [
+      "EDUC-6824"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6831",
+    "title": "Research Topics",
+    "label": "EDUC-6831 \u2014 Research Topics",
+    "x": 0.07204142957925797,
+    "y": 42.80690383911133,
+    "codes": [
+      "EDUC-6831"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6840",
+    "title": "History of American Higher Education",
+    "label": "EDUC-6840 \u2014 History of American Higher Education",
+    "x": -1.2453255653381348,
+    "y": -33.21342086791992,
+    "codes": [
+      "EDUC-6840"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6845",
+    "title": "Geography of Opportunity",
+    "label": "EDUC-6845 \u2014 Geography of Opportunity",
+    "x": 16.497291564941406,
+    "y": -8.915955543518066,
+    "codes": [
+      "EDUC-6845"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6856",
+    "title": "College and University Teaching",
+    "label": "EDUC-6856 \u2014 College and University Teaching",
+    "x": 36.60567855834961,
+    "y": 2.5864980220794678,
+    "codes": [
+      "EDUC-6856"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6858",
+    "title": "The College and University Presidency",
+    "label": "EDUC-6858 \u2014 The College and University Presidency",
+    "x": 0.017266644164919853,
+    "y": -43.47087478637695,
+    "codes": [
+      "EDUC-6858"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6871",
+    "title": "The High Impact University: the Social Purposes of Universities",
+    "label": "EDUC-6871 \u2014 The High Impact University: the Social Purposes of Universities",
+    "x": -2.91304349899292,
+    "y": -49.195709228515625,
+    "codes": [
+      "EDUC-6871"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6871A",
+    "title": "The High Impact University: the Social Purposes of Universities",
+    "label": "EDUC-6871A \u2014 The High Impact University: the Social Purposes of Universities",
+    "x": -2.906027317047119,
+    "y": -49.215492248535156,
+    "codes": [
+      "EDUC-6871A"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6871B",
+    "title": "The High Impact University: the Social Purposes of Universities",
+    "label": "EDUC-6871B \u2014 The High Impact University: the Social Purposes of Universities",
+    "x": -3.7102956771850586,
+    "y": -49.23999786376953,
+    "codes": [
+      "EDUC-6871B"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6872",
+    "title": "The Evolving Global Landscape",
+    "label": "EDUC-6872 \u2014 The Evolving Global Landscape",
+    "x": -8.831271171569824,
+    "y": -50.81122970581055,
+    "codes": [
+      "EDUC-6872"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6872A",
+    "title": "The Evolving Global Landscape",
+    "label": "EDUC-6872A \u2014 The Evolving Global Landscape",
+    "x": -8.588326454162598,
+    "y": -51.511837005615234,
+    "codes": [
+      "EDUC-6872A"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6872B",
+    "title": "The Evolving Global Landscape",
+    "label": "EDUC-6872B \u2014 The Evolving Global Landscape",
+    "x": -9.13692855834961,
+    "y": -51.92665100097656,
+    "codes": [
+      "EDUC-6872B"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6873",
+    "title": "Magnifying the Mission",
+    "label": "EDUC-6873 \u2014 Magnifying the Mission",
+    "x": 18.148849487304688,
+    "y": -40.99045181274414,
+    "codes": [
+      "EDUC-6873"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6873A",
+    "title": "Magnifying the Mission",
+    "label": "EDUC-6873A \u2014 Magnifying the Mission",
+    "x": 18.313987731933594,
+    "y": -40.64266586303711,
+    "codes": [
+      "EDUC-6873A"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6873B",
+    "title": "Magnifying the Mission",
+    "label": "EDUC-6873B \u2014 Magnifying the Mission",
+    "x": 18.534170150756836,
+    "y": -41.138580322265625,
+    "codes": [
+      "EDUC-6873B"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6874",
+    "title": "Governance, Change, & Strategy",
+    "label": "EDUC-6874 \u2014 Governance, Change, & Strategy",
+    "x": 5.089906692504883,
+    "y": -47.99858474731445,
+    "codes": [
+      "EDUC-6874"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6874A",
+    "title": "Governance, Change, & Strategy",
+    "label": "EDUC-6874A \u2014 Governance, Change, & Strategy",
+    "x": 5.411816120147705,
+    "y": -47.24321746826172,
+    "codes": [
+      "EDUC-6874A"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6874B",
+    "title": "Governance, Change, & Strategy",
+    "label": "EDUC-6874B \u2014 Governance, Change, & Strategy",
+    "x": 5.4076104164123535,
+    "y": -47.23583984375,
+    "codes": [
+      "EDUC-6874B"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6875",
+    "title": "University in its External Context",
+    "label": "EDUC-6875 \u2014 University in its External Context",
+    "x": -3.840579032897949,
+    "y": -53.422096252441406,
+    "codes": [
+      "EDUC-6875"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6875A",
+    "title": "University in its External Context",
+    "label": "EDUC-6875A \u2014 University in its External Context",
+    "x": -3.6017019748687744,
+    "y": -54.20248794555664,
+    "codes": [
+      "EDUC-6875A"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6875B",
+    "title": "University in its External Context",
+    "label": "EDUC-6875B \u2014 University in its External Context",
+    "x": -2.9152729511260986,
+    "y": -53.39584732055664,
+    "codes": [
+      "EDUC-6875B"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6876",
+    "title": "Designing the Future",
+    "label": "EDUC-6876 \u2014 Designing the Future",
+    "x": 8.79529857635498,
+    "y": -50.346920013427734,
+    "codes": [
+      "EDUC-6876"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6876A",
+    "title": "Designing the Future",
+    "label": "EDUC-6876A \u2014 Designing the Future",
+    "x": 7.999406814575195,
+    "y": -50.94890213012695,
+    "codes": [
+      "EDUC-6876A"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6876B",
+    "title": "Designing the Future",
+    "label": "EDUC-6876B \u2014 Designing the Future",
+    "x": 8.775405883789062,
+    "y": -51.16891860961914,
+    "codes": [
+      "EDUC-6876B"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6877",
+    "title": "The Challenges of Leading",
+    "label": "EDUC-6877 \u2014 The Challenges of Leading",
+    "x": 8.743648529052734,
+    "y": -46.60544967651367,
+    "codes": [
+      "EDUC-6877"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6878",
+    "title": "The Human Enterprise",
+    "label": "EDUC-6878 \u2014 The Human Enterprise",
+    "x": 2.468557357788086,
+    "y": -54.992977142333984,
+    "codes": [
+      "EDUC-6878"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6878A",
+    "title": "The Human Enterprise",
+    "label": "EDUC-6878A \u2014 The Human Enterprise",
+    "x": 1.8180392980575562,
+    "y": -54.7908935546875,
+    "codes": [
+      "EDUC-6878A"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6878B",
+    "title": "The Human Enterprise",
+    "label": "EDUC-6878B \u2014 The Human Enterprise",
+    "x": 2.2730953693389893,
+    "y": -55.68862533569336,
+    "codes": [
+      "EDUC-6878B"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6879",
+    "title": "The Business of the Academic Business",
+    "label": "EDUC-6879 \u2014 The Business of the Academic Business",
+    "x": -0.16736406087875366,
+    "y": -56.56426239013672,
+    "codes": [
+      "EDUC-6879"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6880A",
+    "title": "Action Lab: Problems/Opportunities of Practice",
+    "label": "EDUC-6880A \u2014 Action Lab: Problems/Opportunities of Practice",
+    "x": 8.496970176696777,
+    "y": -37.19255828857422,
+    "codes": [
+      "EDUC-6880A"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6880B",
+    "title": "Action Lab: Problems/Opportunities of Practice",
+    "label": "EDUC-6880B \u2014 Action Lab: Problems/Opportunities of Practice",
+    "x": 8.501333236694336,
+    "y": -37.189144134521484,
+    "codes": [
+      "EDUC-6880B"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6893",
+    "title": "Student Development in College Environments",
+    "label": "EDUC-6893 \u2014 Student Development in College Environments",
+    "x": -27.530189514160156,
+    "y": 23.55641746520996,
+    "codes": [
+      "EDUC-6893"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6894",
+    "title": "College Athletics and Higher Education: Money, Power, Politics",
+    "label": "EDUC-6894 \u2014 College Athletics and Higher Education: Money, Power, Politics",
+    "x": -3.4794585704803467,
+    "y": -42.7390251159668,
+    "codes": [
+      "EDUC-6894"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6906",
+    "title": "Teaching in the Middle and Secondary Schools: World Languages",
+    "label": "EDUC-6906 \u2014 Teaching in the Middle and Secondary Schools: World Languages",
+    "x": 20.815383911132812,
+    "y": 18.897035598754883,
+    "codes": [
+      "EDUC-6906"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6910",
+    "title": "Classroom Discourse",
+    "label": "EDUC-6910 \u2014 Classroom Discourse",
+    "x": 4.710085391998291,
+    "y": 24.705284118652344,
+    "codes": [
+      "EDUC-6910"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6940",
+    "title": "Evidence in International Education: Design, Implementation, and Impact",
+    "label": "EDUC-6940 \u2014 Evidence in International Education: Design, Implementation, and Impact",
+    "x": -13.86989688873291,
+    "y": 1.8534045219421387,
+    "codes": [
+      "EDUC-6940"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6980",
+    "title": "Intro to Academic Writing and Methods in Higher Education Research",
+    "label": "EDUC-6980 \u2014 Intro to Academic Writing and Methods in Higher Education Research",
+    "x": -35.81464767456055,
+    "y": 2.0973398685455322,
+    "codes": [
+      "EDUC-6980"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6988",
+    "title": "Humanizing Data: Storytelling, Folklore and Ethnography",
+    "label": "EDUC-6988 \u2014 Humanizing Data: Storytelling, Folklore and Ethnography",
+    "x": -21.302461624145508,
+    "y": 3.3359668254852295,
+    "codes": [
+      "EDUC-6988"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-6990",
+    "title": "Capstone I",
+    "label": "EDUC-6990 \u2014 Capstone I",
+    "x": -5.782062530517578,
+    "y": 38.98044967651367,
+    "codes": [
+      "EDUC-6990"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7102",
+    "title": "Conceptual Models of School Leadership & Organization",
+    "label": "EDUC-7102 \u2014 Conceptual Models of School Leadership & Organization",
+    "x": 14.301580429077148,
+    "y": -27.20884132385254,
+    "codes": [
+      "EDUC-7102"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7119",
+    "title": "Research on Teacher Education and Learning to Teach",
+    "label": "EDUC-7119 \u2014 Research on Teacher Education and Learning to Teach",
+    "x": 13.751380920410156,
+    "y": 6.38079309463501,
+    "codes": [
+      "EDUC-7119"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7122",
+    "title": "Reforming Philadelphia Schools: A Research Practicum on Community Engagement",
+    "label": "EDUC-7122 \u2014 Reforming Philadelphia Schools: A Research Practicum on Community Engagement",
+    "x": 23.283618927001953,
+    "y": -10.12829303741455,
+    "codes": [
+      "EDUC-7122"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7132",
+    "title": "Doctoral Proseminar on Education Research",
+    "label": "EDUC-7132 \u2014 Doctoral Proseminar on Education Research",
+    "x": 3.4732131958007812,
+    "y": 43.881858825683594,
+    "codes": [
+      "EDUC-7132"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7140",
+    "title": "Social Foundations of Teaching and Learning",
+    "label": "EDUC-7140 \u2014 Social Foundations of Teaching and Learning",
+    "x": 13.660209655761719,
+    "y": -15.800209999084473,
+    "codes": [
+      "EDUC-7140"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7201",
+    "title": "Methods of Discourse Analysis",
+    "label": "EDUC-7201 \u2014 Methods of Discourse Analysis",
+    "x": 3.4465532302856445,
+    "y": 27.109434127807617,
+    "codes": [
+      "EDUC-7201"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7220",
+    "title": "Seminar in Microethnography",
+    "label": "EDUC-7220 \u2014 Seminar in Microethnography",
+    "x": -22.929906845092773,
+    "y": 6.301912307739258,
+    "codes": [
+      "EDUC-7220"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7225",
+    "title": "Second Language Development",
+    "label": "EDUC-7225 \u2014 Second Language Development",
+    "x": 19.094993591308594,
+    "y": 28.325162887573242,
+    "codes": [
+      "EDUC-7225"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7230",
+    "title": "Experiential Learning Design for Language, Globalization, and Intercultural Studies",
+    "label": "EDUC-7230 \u2014 Experiential Learning Design for Language, Globalization, and Intercultural Studies",
+    "x": 9.662798881530762,
+    "y": 27.409944534301758,
+    "codes": [
+      "EDUC-7230"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7313",
+    "title": "Responding to Literature: An Interdisciplinary Perspective",
+    "label": "EDUC-7313 \u2014 Responding to Literature: An Interdisciplinary Perspective",
+    "x": 40.880672454833984,
+    "y": 30.329696655273438,
+    "codes": [
+      "EDUC-7313"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7323",
+    "title": "Multicultural Issues in Education",
+    "label": "EDUC-7323 \u2014 Multicultural Issues in Education",
+    "x": 4.464831352233887,
+    "y": -2.7052950859069824,
+    "codes": [
+      "EDUC-7323"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7324",
+    "title": "Literacy: Social and Historical Perspectives",
+    "label": "EDUC-7324 \u2014 Literacy: Social and Historical Perspectives",
+    "x": 37.96928405761719,
+    "y": 33.99178695678711,
+    "codes": [
+      "EDUC-7324"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7335",
+    "title": "Culturally Relevant and Sustaining Approaches to Literacy Tutorial Work",
+    "label": "EDUC-7335 \u2014 Culturally Relevant and Sustaining Approaches to Literacy Tutorial Work",
+    "x": 33.8076171875,
+    "y": 30.29705238342285,
+    "codes": [
+      "EDUC-7335"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7337",
+    "title": "Research in Teaching Writing",
+    "label": "EDUC-7337 \u2014 Research in Teaching Writing",
+    "x": 27.586912155151367,
+    "y": 22.216716766357422,
+    "codes": [
+      "EDUC-7337"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7350",
+    "title": "Qualitative Digital Methods in Educational Research",
+    "label": "EDUC-7350 \u2014 Qualitative Digital Methods in Educational Research",
+    "x": -28.702848434448242,
+    "y": 6.120457649230957,
+    "codes": [
+      "EDUC-7350"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7460",
+    "title": "Qualitative Research: Concepts, Methods and Design",
+    "label": "EDUC-7460 \u2014 Qualitative Research: Concepts, Methods and Design",
+    "x": -31.136003494262695,
+    "y": 4.151084899902344,
+    "codes": [
+      "EDUC-7460"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7462",
+    "title": "Advanced Monitoring & Evaluation in International Education Development",
+    "label": "EDUC-7462 \u2014 Advanced Monitoring & Evaluation in International Education Development",
+    "x": -24.206298828125,
+    "y": -15.878381729125977,
+    "codes": [
+      "EDUC-7462"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7464",
+    "title": "Advanced Qualitative and Case Study Research",
+    "label": "EDUC-7464 \u2014 Advanced Qualitative and Case Study Research",
+    "x": -30.537046432495117,
+    "y": 2.361185312271118,
+    "codes": [
+      "EDUC-7464"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7468",
+    "title": "Ethnographic Research Methods",
+    "label": "EDUC-7468 \u2014 Ethnographic Research Methods",
+    "x": -25.5323429107666,
+    "y": 3.1515302658081055,
+    "codes": [
+      "EDUC-7468"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7509",
+    "title": "Peer Relationships in Childhood and Adolescence",
+    "label": "EDUC-7509 \u2014 Peer Relationships in Childhood and Adolescence",
+    "x": -20.896587371826172,
+    "y": 25.476720809936523,
+    "codes": [
+      "EDUC-7509"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7517",
+    "title": "Professional Internship in Counseling I",
+    "label": "EDUC-7517 \u2014 Professional Internship in Counseling I",
+    "x": -39.47397994995117,
+    "y": 19.99987030029297,
+    "codes": [
+      "EDUC-7517"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7518",
+    "title": "Professional Internship in Counseling II",
+    "label": "EDUC-7518 \u2014 Professional Internship in Counseling II",
+    "x": -38.75657272338867,
+    "y": 18.663860321044922,
+    "codes": [
+      "EDUC-7518"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7525",
+    "title": "Advanced Professional Practice in Communities, Agencies and Organizations",
+    "label": "EDUC-7525 \u2014 Advanced Professional Practice in Communities, Agencies and Organizations",
+    "x": -38.01328659057617,
+    "y": 22.4456729888916,
+    "codes": [
+      "EDUC-7525"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7531",
+    "title": "Risk, Resilience, and Prevention Science",
+    "label": "EDUC-7531 \u2014 Risk, Resilience, and Prevention Science",
+    "x": -25.314245223999023,
+    "y": 34.40277862548828,
+    "codes": [
+      "EDUC-7531"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7539",
+    "title": "Poverty and Child Development",
+    "label": "EDUC-7539 \u2014 Poverty and Child Development",
+    "x": -15.979649543762207,
+    "y": 16.85455894470215,
+    "codes": [
+      "EDUC-7539"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7548",
+    "title": "Neuroscience, Brain Development, and Learning",
+    "label": "EDUC-7548 \u2014 Neuroscience, Brain Development, and Learning",
+    "x": -11.517337799072266,
+    "y": 22.783952713012695,
+    "codes": [
+      "EDUC-7548"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7550",
+    "title": "Trauma & Counseling",
+    "label": "EDUC-7550 \u2014 Trauma & Counseling",
+    "x": -36.53326416015625,
+    "y": 29.180086135864258,
+    "codes": [
+      "EDUC-7550"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7564",
+    "title": "Cognitive Processes",
+    "label": "EDUC-7564 \u2014 Cognitive Processes",
+    "x": -8.608877182006836,
+    "y": 22.79766082763672,
+    "codes": [
+      "EDUC-7564"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7566",
+    "title": "Advanced Professional Counseling Interventions",
+    "label": "EDUC-7566 \u2014 Advanced Professional Counseling Interventions",
+    "x": -39.66145324707031,
+    "y": 21.69658660888672,
+    "codes": [
+      "EDUC-7566"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7582",
+    "title": "Assessment for Counselors I",
+    "label": "EDUC-7582 \u2014 Assessment for Counselors I",
+    "x": -42.988712310791016,
+    "y": 19.160043716430664,
+    "codes": [
+      "EDUC-7582"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7585",
+    "title": "Selected Topics in Professional Psychology",
+    "label": "EDUC-7585 \u2014 Selected Topics in Professional Psychology",
+    "x": -41.52288818359375,
+    "y": 21.001306533813477,
+    "codes": [
+      "EDUC-7585"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7665",
+    "title": "Introduction to Causal Inference for Educational Research",
+    "label": "EDUC-7665 \u2014 Introduction to Causal Inference for Educational Research",
+    "x": -34.48285675048828,
+    "y": -9.068258285522461,
+    "codes": [
+      "EDUC-7665"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7667",
+    "title": "Regression and Analysis of Variance",
+    "label": "EDUC-7667 \u2014 Regression and Analysis of Variance",
+    "x": -38.4344367980957,
+    "y": -8.887848854064941,
+    "codes": [
+      "EDUC-7667"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7668",
+    "title": "Measurement Theory and Test Construction",
+    "label": "EDUC-7668 \u2014 Measurement Theory and Test Construction",
+    "x": -45.980255126953125,
+    "y": 0.07451774179935455,
+    "codes": [
+      "EDUC-7668"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7671",
+    "title": "Factor Analysis and Scale Development",
+    "label": "EDUC-7671 \u2014 Factor Analysis and Scale Development",
+    "x": -46.06705093383789,
+    "y": -1.5164613723754883,
+    "codes": [
+      "EDUC-7671"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7677",
+    "title": "Structural Equations Modeling",
+    "label": "EDUC-7677 \u2014 Structural Equations Modeling",
+    "x": -45.78287887573242,
+    "y": -4.616148948669434,
+    "codes": [
+      "EDUC-7677"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7708",
+    "title": "The Social Organization of Schooling",
+    "label": "EDUC-7708 \u2014 The Social Organization of Schooling",
+    "x": 13.224225044250488,
+    "y": -23.570871353149414,
+    "codes": [
+      "EDUC-7708"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7742",
+    "title": "Teachers and Teaching Policy",
+    "label": "EDUC-7742 \u2014 Teachers and Teaching Policy",
+    "x": 11.62331771850586,
+    "y": -9.869606018066406,
+    "codes": [
+      "EDUC-7742"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7762",
+    "title": "Introduction to Applied Quantitative Methods for Education Research: Pre-K to 20",
+    "label": "EDUC-7762 \u2014 Introduction to Applied Quantitative Methods for Education Research: Pre-K to 20",
+    "x": -30.009950637817383,
+    "y": -7.653895854949951,
+    "codes": [
+      "EDUC-7762"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7770",
+    "title": "Education Policy Research Practicum",
+    "label": "EDUC-7770 \u2014 Education Policy Research Practicum",
+    "x": -22.53729248046875,
+    "y": -7.912315845489502,
+    "codes": [
+      "EDUC-7770"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7771",
+    "title": "The Intersection of Leadership Theory and Practice",
+    "label": "EDUC-7771 \u2014 The Intersection of Leadership Theory and Practice",
+    "x": 14.431275367736816,
+    "y": -29.80541229248047,
+    "codes": [
+      "EDUC-7771"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7772",
+    "title": "Expanding Civic Opportunities for Youth (Practicum)",
+    "label": "EDUC-7772 \u2014 Expanding Civic Opportunities for Youth (Practicum)",
+    "x": 23.744918823242188,
+    "y": -10.653142929077148,
+    "codes": [
+      "EDUC-7772"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7804",
+    "title": "Economics of Higher Education",
+    "label": "EDUC-7804 \u2014 Economics of Higher Education",
+    "x": -15.141744613647461,
+    "y": -27.908607482910156,
+    "codes": [
+      "EDUC-7804"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7805",
+    "title": "Proseminar in Research & Analysis",
+    "label": "EDUC-7805 \u2014 Proseminar in Research & Analysis",
+    "x": 0.8968750238418579,
+    "y": 45.328651428222656,
+    "codes": [
+      "EDUC-7805"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7814",
+    "title": "Law and Higher Education",
+    "label": "EDUC-7814 \u2014 Law and Higher Education",
+    "x": -12.76657485961914,
+    "y": -36.6506462097168,
+    "codes": [
+      "EDUC-7814"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7815",
+    "title": "Case Studies in Higher Education Administration",
+    "label": "EDUC-7815 \u2014 Case Studies in Higher Education Administration",
+    "x": -7.156432151794434,
+    "y": -38.06378936767578,
+    "codes": [
+      "EDUC-7815"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7816",
+    "title": "Public Policy Issues in Higher Education",
+    "label": "EDUC-7816 \u2014 Public Policy Issues in Higher Education",
+    "x": -12.421547889709473,
+    "y": -35.59540557861328,
+    "codes": [
+      "EDUC-7816"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7828",
+    "title": "Advanced Public Policy Seminar in Higher Education",
+    "label": "EDUC-7828 \u2014 Advanced Public Policy Seminar in Higher Education",
+    "x": -12.200428009033203,
+    "y": -33.10272979736328,
+    "codes": [
+      "EDUC-7828"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7833",
+    "title": "Students' Transitions from High School to College and to the Job Market",
+    "label": "EDUC-7833 \u2014 Students' Transitions from High School to College and to the Job Market",
+    "x": -7.27266263961792,
+    "y": -31.879243850708008,
+    "codes": [
+      "EDUC-7833"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7836",
+    "title": "Quasi-Experimental Design",
+    "label": "EDUC-7836 \u2014 Quasi-Experimental Design",
+    "x": -35.936336517333984,
+    "y": -6.501359462738037,
+    "codes": [
+      "EDUC-7836"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7844",
+    "title": "Building Inclusive Communities in Higher Education",
+    "label": "EDUC-7844 \u2014 Building Inclusive Communities in Higher Education",
+    "x": -4.543210506439209,
+    "y": -36.26385498046875,
+    "codes": [
+      "EDUC-7844"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7847",
+    "title": "Social and Statistical Network Analysis",
+    "label": "EDUC-7847 \u2014 Social and Statistical Network Analysis",
+    "x": -17.268783569335938,
+    "y": -5.253108024597168,
+    "codes": [
+      "EDUC-7847"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7848",
+    "title": "Spatial Socio-Econometric Modeling",
+    "label": "EDUC-7848 \u2014 Spatial Socio-Econometric Modeling",
+    "x": -36.97865295410156,
+    "y": -12.803977966308594,
+    "codes": [
+      "EDUC-7848"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7849",
+    "title": "Modeling Leadership Resilience through Chaos, Crisis, Calamity, Calumny, and Catastrophe",
+    "label": "EDUC-7849 \u2014 Modeling Leadership Resilience through Chaos, Crisis, Calamity, Calumny, and Catastrophe",
+    "x": 10.610877990722656,
+    "y": -42.21061325073242,
+    "codes": [
+      "EDUC-7849"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-7870",
+    "title": "New Models for Postsecondary Education",
+    "label": "EDUC-7870 \u2014 New Models for Postsecondary Education",
+    "x": -16.591693878173828,
+    "y": -36.700740814208984,
+    "codes": [
+      "EDUC-7870"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-8215",
+    "title": "TESOL Practice Teaching",
+    "label": "EDUC-8215 \u2014 TESOL Practice Teaching",
+    "x": 18.290897369384766,
+    "y": 13.583953857421875,
+    "codes": [
+      "EDUC-8215"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-8225",
+    "title": "TESOL Seminar",
+    "label": "EDUC-8225 \u2014 TESOL Seminar",
+    "x": 2.372605085372925,
+    "y": 36.51607894897461,
+    "codes": [
+      "EDUC-8225"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-8230",
+    "title": "LGIS Seminar",
+    "label": "EDUC-8230 \u2014 LGIS Seminar",
+    "x": 8.277782440185547,
+    "y": 31.27182960510254,
+    "codes": [
+      "EDUC-8230"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-8334",
+    "title": "Critical Literacy: Reading the self, texts and the world",
+    "label": "EDUC-8334 \u2014 Critical Literacy: Reading the self, texts and the world",
+    "x": 31.77208137512207,
+    "y": 29.529245376586914,
+    "codes": [
+      "EDUC-8334"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-8336",
+    "title": "Issues in Instructional Leadership in Reading and Writing",
+    "label": "EDUC-8336 \u2014 Issues in Instructional Leadership in Reading and Writing",
+    "x": 34.50968933105469,
+    "y": 32.52760696411133,
+    "codes": [
+      "EDUC-8336"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-8405",
+    "title": "Culture/Power/Subjectivities",
+    "label": "EDUC-8405 \u2014 Culture/Power/Subjectivities",
+    "x": 9.035443305969238,
+    "y": -3.79801607131958,
+    "codes": [
+      "EDUC-8405"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-8436",
+    "title": "Narrating the Self",
+    "label": "EDUC-8436 \u2014 Narrating the Self",
+    "x": -20.774986267089844,
+    "y": 8.52565860748291,
+    "codes": [
+      "EDUC-8436"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-8466",
+    "title": "Craft of Ethnography",
+    "label": "EDUC-8466 \u2014 Craft of Ethnography",
+    "x": -25.183189392089844,
+    "y": 3.3593862056732178,
+    "codes": [
+      "EDUC-8466"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-8480",
+    "title": "International Educational Development Doctoral Proseminar",
+    "label": "EDUC-8480 \u2014 International Educational Development Doctoral Proseminar",
+    "x": -13.096067428588867,
+    "y": 7.213396072387695,
+    "codes": [
+      "EDUC-8480"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-8490",
+    "title": "Education, Culture and Society",
+    "label": "EDUC-8490 \u2014 Education, Culture and Society",
+    "x": 9.915959358215332,
+    "y": -5.498904228210449,
+    "codes": [
+      "EDUC-8490"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-8560",
+    "title": "ISHD Proseminar",
+    "label": "EDUC-8560 \u2014 ISHD Proseminar",
+    "x": -23.09566307067871,
+    "y": 14.110466957092285,
+    "codes": [
+      "EDUC-8560"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-8629",
+    "title": "Policy Research",
+    "label": "EDUC-8629 \u2014 Policy Research",
+    "x": -25.785839080810547,
+    "y": -6.209656715393066,
+    "codes": [
+      "EDUC-8629"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-8671",
+    "title": "Randomized Trials and Experiments",
+    "label": "EDUC-8671 \u2014 Randomized Trials and Experiments",
+    "x": -36.25159454345703,
+    "y": -9.023529052734375,
+    "codes": [
+      "EDUC-8671"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-8680",
+    "title": "Complex, Multilevel, and Longitudinal Research Models",
+    "label": "EDUC-8680 \u2014 Complex, Multilevel, and Longitudinal Research Models",
+    "x": -46.73872756958008,
+    "y": -5.144228935241699,
+    "codes": [
+      "EDUC-8680"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-8681",
+    "title": "Classifications, Profiles, and Latent Growth Mixture Models",
+    "label": "EDUC-8681 \u2014 Classifications, Profiles, and Latent Growth Mixture Models",
+    "x": -47.528236389160156,
+    "y": -5.593702793121338,
+    "codes": [
+      "EDUC-8681"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-8710",
+    "title": "Advanced Analysis in the Economics of Education",
+    "label": "EDUC-8710 \u2014 Advanced Analysis in the Economics of Education",
+    "x": -18.6540470123291,
+    "y": -19.391719818115234,
+    "codes": [
+      "EDUC-8710"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-8762",
+    "title": "Applied Research & Reporting",
+    "label": "EDUC-8762 \u2014 Applied Research & Reporting",
+    "x": -22.780061721801758,
+    "y": -5.303284168243408,
+    "codes": [
+      "EDUC-8762"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-8930",
+    "title": "Literacy Studies Research Advisory Committee",
+    "label": "EDUC-8930 \u2014 Literacy Studies Research Advisory Committee",
+    "x": 4.667860984802246,
+    "y": 43.7536506652832,
+    "codes": [
+      "EDUC-8930"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-9126",
+    "title": "How People Learn: Theoretical Foundations",
+    "label": "EDUC-9126 \u2014 How People Learn: Theoretical Foundations",
+    "x": 5.851679801940918,
+    "y": 6.815698146820068,
+    "codes": [
+      "EDUC-9126"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-9205",
+    "title": "Research Seminar: Language Policy and Education",
+    "label": "EDUC-9205 \u2014 Research Seminar: Language Policy and Education",
+    "x": 12.613621711730957,
+    "y": 38.74515914916992,
+    "codes": [
+      "EDUC-9205"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-9210",
+    "title": "Issues in Second Language Acquisition",
+    "label": "EDUC-9210 \u2014 Issues in Second Language Acquisition",
+    "x": 17.881120681762695,
+    "y": 27.91765594482422,
+    "codes": [
+      "EDUC-9210"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-9215",
+    "title": "Genealogies of Race and Language in Educational Research",
+    "label": "EDUC-9215 \u2014 Genealogies of Race and Language in Educational Research",
+    "x": 10.157742500305176,
+    "y": 36.30223083496094,
+    "codes": [
+      "EDUC-9215"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-9317",
+    "title": "Research Seminar: Language and Power",
+    "label": "EDUC-9317 \u2014 Research Seminar: Language and Power",
+    "x": 12.617094993591309,
+    "y": 37.92857360839844,
+    "codes": [
+      "EDUC-9317"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-9320",
+    "title": "Proposal Writing Seminar",
+    "label": "EDUC-9320 \u2014 Proposal Writing Seminar",
+    "x": 28.61219596862793,
+    "y": 34.24300003051758,
+    "codes": [
+      "EDUC-9320"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-9560",
+    "title": "Advanced Research in Human Learning and Development",
+    "label": "EDUC-9560 \u2014 Advanced Research in Human Learning and Development",
+    "x": -11.255870819091797,
+    "y": 25.47148323059082,
+    "codes": [
+      "EDUC-9560"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-9580",
+    "title": "Mixed Methods Research: Counseling & Development",
+    "label": "EDUC-9580 \u2014 Mixed Methods Research: Counseling & Development",
+    "x": -36.13481521606445,
+    "y": 8.058460235595703,
+    "codes": [
+      "EDUC-9580"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-9764",
+    "title": "Research Seminar in Applied Research Synthesis Methods",
+    "label": "EDUC-9764 \u2014 Research Seminar in Applied Research Synthesis Methods",
+    "x": -1.3135852813720703,
+    "y": 44.608951568603516,
+    "codes": [
+      "EDUC-9764"
+    ],
+    "semester": "2024F"
+  },
+  {
+    "code": "EDUC-9901",
+    "title": "Executive Education MSEd Thesis/Fieldwork Seminar",
+    "label": "EDUC-9901 \u2014 Executive Education MSEd Thesis/Fieldwork Seminar",
+    "x": 0.38830500841140747,
+    "y": 35.700870513916016,
+    "codes": [
+      "EDUC-9901"
+    ],
+    "semester": "2024F"
+  }
+]

@@ -20,7 +20,7 @@ export default function SemesterCourseIntake() {
   const fromTranscriptUpload = localStorage.getItem('fromTranscriptUpload') === 'true';
   const editingSemesterIndex = localStorage.getItem('editingSemesterIndex');
 
-  const backendUrl=process.env.REACT_APP_BACKEND_URL;
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
   // Load courses JSON dynamically on mount or semester change
   useEffect(() => {
@@ -31,10 +31,12 @@ export default function SemesterCourseIntake() {
 
     async function fetchCourses() {
       try {
-        const res = await fetch(`/amherst_courses_all.json`);
+        const schoolId = process.env.REACT_APP_SCHOOL_ID || 'AMHERST';
+        const coursesFile = schoolId === 'UPENN' ? '/upenn_courses.json' : '/amherst_courses_all.json';
+        const res = await fetch(coursesFile);
         const allData = await res.json();
         // Filter courses by the current semester
-        const data = allData.filter(course => 
+        const data = allData.filter(course =>
           course.semester && course.semester.includes(semester)
         );
         setAllCourses(data);
@@ -72,14 +74,14 @@ export default function SemesterCourseIntake() {
     const codesArray = Array.isArray(course.course_codes)
       ? course.course_codes
       : [course.course_codes];
-  
+
     const codesMatch = codesArray.some((code) =>
       code.toLowerCase().includes(searchTerm.toLowerCase())
     );
-  
-    const titleMatch = course.course_title && 
+
+    const titleMatch = course.course_title &&
       course.course_title.toLowerCase().includes(searchTerm.toLowerCase());
-  
+
     return codesMatch || titleMatch;
   });
 
@@ -117,32 +119,32 @@ export default function SemesterCourseIntake() {
     });
 
     const coursesArray = Array.from(uniqueCoursesMap.values());
-    
+
     // Separate into selected and unselected
     const selected = [];
     const unselected = [];
-    
+
     coursesArray.forEach(course => {
       const courseCodesArray = Array.isArray(course.course_codes) ? course.course_codes : [course.course_codes];
       const courseCode = courseCodesArray[0];
-      
+
       // Check if any of the course codes are in selectedCourses
       const isSelected = courseCodesArray.some(code => selectedCourses.includes(code));
-      
+
       if (isSelected) {
         selected.push(course);
       } else {
         unselected.push(course);
       }
     });
-    
+
     // Sort both arrays alphabetically
     const sortFn = (a, b) => {
       const aCode = Array.isArray(a.course_codes) ? a.course_codes[0] : a.course_codes;
       const bCode = Array.isArray(b.course_codes) ? b.course_codes[0] : b.course_codes;
       return aCode.localeCompare(bCode);
     };
-    
+
     return {
       selectedCoursesData: selected.sort(sortFn),
       unselectedCourses: unselected.sort(sortFn)
@@ -150,14 +152,14 @@ export default function SemesterCourseIntake() {
   }, [allCourses, selectedCourses, filteredCourses]);
 
   const toggleCourse = (course) => {
-    const courseCodesArray = Array.isArray(course.course_codes) 
-      ? course.course_codes 
+    const courseCodesArray = Array.isArray(course.course_codes)
+      ? course.course_codes
       : [course.course_codes];
-    
+
     setSelectedCourses((prev) => {
       // Check if any of the course codes are currently selected
       const isCurrentlySelected = courseCodesArray.some(code => prev.includes(code));
-      
+
       if (isCurrentlySelected) {
         // Remove all course codes for this course
         return prev.filter(code => !courseCodesArray.includes(code));
@@ -191,7 +193,7 @@ export default function SemesterCourseIntake() {
 
     // Set flag to indicate return from edit
     localStorage.setItem('returnFromTranscriptEdit', 'true');
-    
+
     // Navigate back to transcript upload
     navigate('/upload');
   };
@@ -199,12 +201,12 @@ export default function SemesterCourseIntake() {
   const handleSubmit = async () => {
 
     const { data: { session } } = await supabase.auth.getSession();
-      const token = session?.access_token;
-      
-      if (!token) {
-        console.error("No valid session token found");
-        return;
-      }
+    const token = session?.access_token;
+
+    if (!token) {
+      console.error("No valid session token found");
+      return;
+    }
 
     // If we came from transcript upload, handle return differently
     if (fromTranscriptUpload) {
@@ -272,137 +274,137 @@ export default function SemesterCourseIntake() {
 
   return (
     <div className="w-full h-screen overflow-y-auto bg-gray-50">
-    <div className="max-w-3xl mx-auto my-12 p-6 bg-white shadow rounded space-y-6">
-      <h2 className="text-2xl font-bold text-center text-[#3f1f69]">
-        {fromTranscriptUpload ? `Edit Courses for ${semester}` : `Select Courses for Semester ${semester}`}
-      </h2>
+      <div className="max-w-3xl mx-auto my-12 p-6 bg-white shadow rounded space-y-6">
+        <h2 className="text-2xl font-bold text-center text-[#3f1f69]">
+          {fromTranscriptUpload ? `Edit Courses for ${semester}` : `Select Courses for Semester ${semester}`}
+        </h2>
 
-      {fromTranscriptUpload && (
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
-          <p className="text-blue-800 text-sm">
-            You are editing courses from your transcript. Click "Save Changes" when done to return to the validation page.
-          </p>
-        </div>
-      )}
-
-      <input
-        type="text"
-        placeholder="Search courses..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        onKeyDown={handleKeyDown}
-        className="w-full border rounded px-3 py-2"
-      />
-
-      {/* Fixed Selected Courses Section */}
-      {selectedCoursesData.length > 0 && (
-        <div className="bg-[#f9f7fb] border border-[#3f1f69] rounded-lg p-4 mb-4">
-          <div className="text-sm text-[#3f1f69] font-bold mb-3">
-            Selected Courses ({selectedCoursesData.length})
+        {fromTranscriptUpload && (
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
+            <p className="text-blue-800 text-sm">
+              You are editing courses from your transcript. Click "Save Changes" when done to return to the validation page.
+            </p>
           </div>
-          <div className="space-y-2">
-            {selectedCoursesData.map((course) => {
-              const courseCodesArray = Array.isArray(course.course_codes)
-                ? course.course_codes
-                : [course.course_codes];
-              const courseCode = courseCodesArray[0];
-              const courseCodesDisplay = courseCodesArray.join(", ");
-
-              return (
-                <div 
-                  key={`selected-${courseCode}`}
-                  className="flex items-center p-2 bg-white rounded border border-[#3f1f69]"
-                >
-                  <input
-                    type="checkbox"
-                    id={`selected-${courseCode}`}
-                    checked={true}
-                    onChange={(e) => {
-                      e.preventDefault();
-                      toggleCourse(course);
-                    }}
-                    className="mr-3 h-4 w-4 text-[#3f1f69] focus:ring-[#3f1f69] border-gray-300 rounded"
-                  />
-                  <label 
-                    htmlFor={`selected-${courseCode}`}
-                    className="flex-1 cursor-pointer font-medium text-[#3f1f69]"
-                  >
-                    <span className="font-bold">{courseCodesDisplay}</span>
-                    {course.course_title && (
-                      <span className="font-normal">: {course.course_title}</span>
-                    )}
-                  </label>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      )}
-
-      {/* Searchable/Scrollable Unselected Courses */}
-      <div className="max-h-96 overflow-y-auto border rounded p-4 space-y-2">
-        {unselectedCourses.length === 0 && selectedCoursesData.length === 0 && (
-          <p className="text-center text-gray-500">No courses found.</p>
         )}
-        
-        {unselectedCourses.length === 0 && selectedCoursesData.length > 0 && searchTerm && (
-          <p className="text-center text-gray-500">No additional courses found matching "{searchTerm}".</p>
-        )}
-        
-        {unselectedCourses.map((course) => {
-          const courseCodesArray = Array.isArray(course.course_codes)
-            ? course.course_codes
-            : [course.course_codes];
-          const courseCode = courseCodesArray[0];
-          const courseCodesDisplay = courseCodesArray.join(", ");
 
-          return (
-            <div 
-              key={`unselected-${courseCode}`}
-              className="flex items-center p-2 rounded hover:bg-gray-50"
-            >
-              <input
-                type="checkbox"
-                id={`unselected-${courseCode}`}
-                checked={false}
-                onChange={(e) => {
-                  e.preventDefault();
-                  toggleCourse(course);
-                }}
-                className="mr-3 h-4 w-4 text-[#3f1f69] focus:ring-[#3f1f69] border-gray-300 rounded"
-              />
-              <label 
-                htmlFor={`unselected-${courseCode}`}
-                className="flex-1 cursor-pointer"
-              >
-                <span className="font-medium">{courseCodesDisplay}</span>
-                {course.course_title && (
-                  <span className="text-gray-600">: {course.course_title}</span>
-                )}
-              </label>
+        <input
+          type="text"
+          placeholder="Search courses..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          onKeyDown={handleKeyDown}
+          className="w-full border rounded px-3 py-2"
+        />
+
+        {/* Fixed Selected Courses Section */}
+        {selectedCoursesData.length > 0 && (
+          <div className="bg-[#f9f7fb] border border-[#3f1f69] rounded-lg p-4 mb-4">
+            <div className="text-sm text-[#3f1f69] font-bold mb-3">
+              Selected Courses ({selectedCoursesData.length})
             </div>
-          );
-        })}
-      </div>
+            <div className="space-y-2">
+              {selectedCoursesData.map((course) => {
+                const courseCodesArray = Array.isArray(course.course_codes)
+                  ? course.course_codes
+                  : [course.course_codes];
+                const courseCode = courseCodesArray[0];
+                const courseCodesDisplay = courseCodesArray.join(", ");
 
-      <div className="flex gap-4">
-        <button
-          onClick={handleBack}
-          className="flex-1 bg-gray-500 text-white py-2 rounded hover:bg-gray-600 transition"
-        >
-          {fromTranscriptUpload ? "Cancel" : "Back"}
-        </button>
-        <button
-          onClick={handleSubmit}
-          className="flex-1 bg-[#3f1f69] text-white py-2 rounded hover:bg-[#5b2ca0] transition"
-        >
-          {fromTranscriptUpload 
-            ? "Save Changes" 
-            : (parseInt(index) + 1 < selectedSemesters.length ? "Next Semester" : "Finish")
-          }
-        </button>
+                return (
+                  <div
+                    key={`selected-${courseCode}`}
+                    className="flex items-center p-2 bg-white rounded border border-[#3f1f69]"
+                  >
+                    <input
+                      type="checkbox"
+                      id={`selected-${courseCode}`}
+                      checked={true}
+                      onChange={(e) => {
+                        e.preventDefault();
+                        toggleCourse(course);
+                      }}
+                      className="mr-3 h-4 w-4 text-[#3f1f69] focus:ring-[#3f1f69] border-gray-300 rounded"
+                    />
+                    <label
+                      htmlFor={`selected-${courseCode}`}
+                      className="flex-1 cursor-pointer font-medium text-[#3f1f69]"
+                    >
+                      <span className="font-bold">{courseCodesDisplay}</span>
+                      {course.course_title && (
+                        <span className="font-normal">: {course.course_title}</span>
+                      )}
+                    </label>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* Searchable/Scrollable Unselected Courses */}
+        <div className="max-h-96 overflow-y-auto border rounded p-4 space-y-2">
+          {unselectedCourses.length === 0 && selectedCoursesData.length === 0 && (
+            <p className="text-center text-gray-500">No courses found.</p>
+          )}
+
+          {unselectedCourses.length === 0 && selectedCoursesData.length > 0 && searchTerm && (
+            <p className="text-center text-gray-500">No additional courses found matching "{searchTerm}".</p>
+          )}
+
+          {unselectedCourses.map((course) => {
+            const courseCodesArray = Array.isArray(course.course_codes)
+              ? course.course_codes
+              : [course.course_codes];
+            const courseCode = courseCodesArray[0];
+            const courseCodesDisplay = courseCodesArray.join(", ");
+
+            return (
+              <div
+                key={`unselected-${courseCode}`}
+                className="flex items-center p-2 rounded hover:bg-gray-50"
+              >
+                <input
+                  type="checkbox"
+                  id={`unselected-${courseCode}`}
+                  checked={false}
+                  onChange={(e) => {
+                    e.preventDefault();
+                    toggleCourse(course);
+                  }}
+                  className="mr-3 h-4 w-4 text-[#3f1f69] focus:ring-[#3f1f69] border-gray-300 rounded"
+                />
+                <label
+                  htmlFor={`unselected-${courseCode}`}
+                  className="flex-1 cursor-pointer"
+                >
+                  <span className="font-medium">{courseCodesDisplay}</span>
+                  {course.course_title && (
+                    <span className="text-gray-600">: {course.course_title}</span>
+                  )}
+                </label>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="flex gap-4">
+          <button
+            onClick={handleBack}
+            className="flex-1 bg-gray-500 text-white py-2 rounded hover:bg-gray-600 transition"
+          >
+            {fromTranscriptUpload ? "Cancel" : "Back"}
+          </button>
+          <button
+            onClick={handleSubmit}
+            className="flex-1 bg-[#3f1f69] text-white py-2 rounded hover:bg-[#5b2ca0] transition"
+          >
+            {fromTranscriptUpload
+              ? "Save Changes"
+              : (parseInt(index) + 1 < selectedSemesters.length ? "Next Semester" : "Finish")
+            }
+          </button>
+        </div>
       </div>
-    </div>
     </div>
   );
 }

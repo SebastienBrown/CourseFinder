@@ -5,7 +5,13 @@ import os
 from flask_cors import CORS
 import requests
 from dotenv import load_dotenv
-from config import PORT
+
+# Load env from parent directory (project root)
+# Doing this BEFORE local imports so config.py sees the correct environment
+env_path = os.path.join(os.path.dirname(__file__), '..', '.env')
+load_dotenv(env_path,override=True)
+
+from config import PORT, SCHOOL_CONFIG
 from transcript_scrape import extract_courses_from_transcript
 import openai
 import numpy as np
@@ -19,8 +25,8 @@ import jwt
 import glob
 
 
-# Load env
-load_dotenv()
+# env loaded above
+
 
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
@@ -30,9 +36,9 @@ validator = QueryValidator()
 
 #supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
-SUPABASE_TABLE_URL = f"{SUPABASE_URL}/rest/v1/user_courses"  # Example table path
-SUPABASE_TABLE_URL_EXTRA=f"{SUPABASE_URL}/rest/v1/user_courses_test"
-SUPABASE_FEEDBACK_TABLE_URL=f"{SUPABASE_URL}/rest/v1/questions"
+SUPABASE_TABLE_URL = f"{SUPABASE_URL}/rest/v1/{SCHOOL_CONFIG['supabase_table']}"
+SUPABASE_TABLE_URL_EXTRA = f"{SUPABASE_URL}/rest/v1/{SCHOOL_CONFIG['supabase_table_extra']}"
+SUPABASE_FEEDBACK_TABLE_URL=f"{SUPABASE_URL}/rest/v1/{SCHOOL_CONFIG['supabase_feedback_table']}"
 
 # --- Azure OpenAI: use TWO clients (different resources) ---
 
@@ -156,25 +162,25 @@ def get_openai_embedding(text):
     return embedding.reshape(1, -1)  
 
 
-with open('./data/amherst_courses_all.json') as f:
+with open(SCHOOL_CONFIG['courses_file']) as f:
     try:
         amherst_data = json.load(f)
         if not isinstance(amherst_data, list):
             raise ValueError("amherst_data must be a list")
-        print(f"Successfully loaded amherst_data with {len(amherst_data)} entries")
+        print(f"Successfully loaded courses from {SCHOOL_CONFIG['courses_file']} with {len(amherst_data)} entries")
     except json.JSONDecodeError as e:
-        print(f"Error loading amherst_courses_all.json: {e}")
+        print(f"Error loading {SCHOOL_CONFIG['courses_file']}: {e}")
         amherst_data = []
     except Exception as e:
         print(f"Unexpected error loading amherst_courses_all.json: {e}")
         amherst_data = []
 
-with open('./data/precomputed_tsne_coords_all_v3.json') as f:
+with open(SCHOOL_CONFIG['tsne_file']) as f:
     try:
         coords_data = json.load(f)
         if not isinstance(coords_data, list):
             raise ValueError("coords_data must be a list")
-        print(f"Successfully loaded coords_data with {len(coords_data)} entries")
+        print(f"Successfully loaded coords_data from {SCHOOL_CONFIG['tsne_file']} with {len(coords_data)} entries")
         # Validate first few entries
         for i, entry in enumerate(coords_data[:5]):
             if not isinstance(entry, dict):
@@ -182,10 +188,10 @@ with open('./data/precomputed_tsne_coords_all_v3.json') as f:
             if "codes" not in entry:
                 print(f"Warning: Entry {i} missing 'codes' field: {entry}")
     except json.JSONDecodeError as e:
-        print(f"Error loading precomputed_tsne_coords_all.json: {e}")
+        print(f"Error loading {SCHOOL_CONFIG['tsne_file']}: {e}")
         coords_data = []
     except Exception as e:
-        print(f"Unexpected error loading precomputed_tsne_coords_all.json: {e}")
+        print(f"Unexpected error loading {SCHOOL_CONFIG['tsne_file']}: {e}")
         coords_data = []
 
 # Sample input: list of course names the student is already taking
@@ -327,42 +333,8 @@ def conflicted_courses():
 
 
 # List of allowed semester columns
-SEMESTER_COLUMNS = [
-    "0910F",
-    "0910S",
-    "1011F",
-    "1011S",
-    "1112F",
-    "1112S",
-    "1213F",
-    "1213S",
-    "1314F",
-    "1314S",
-    "1415F",
-    "1415S",
-    "1516F",
-    "1516S",
-    "1617F",
-    "1617S",
-    "1718F",
-    "1718S",
-    "1819F",
-    "1819S",
-    "1920F",
-    "1920S",
-    "2021F",
-    "2021J",
-    "2021S",
-    "2122F",
-    "2122J",
-    "2122S",
-    "2223F",
-    "2223S",
-    "2324F",
-    "2324S",
-    "2425F",
-    "2425S"
-]
+# List of allowed semester columns
+SEMESTER_COLUMNS = SCHOOL_CONFIG['semester_columns']
 
 
 
@@ -394,7 +366,7 @@ def semantic_search():
 
         print(currentSem)
         # 1. Read from a single file
-        single_file_path = f"data/gpt_off_the_shelf/output_embeddings_{currentSem}.json"
+        single_file_path = SCHOOL_CONFIG['embeddings_file'].format(semester=currentSem)
         with open(single_file_path, 'r', encoding='utf-8') as f:
             combined_list = json.load(f)
 
@@ -403,7 +375,7 @@ def semantic_search():
 
     else:
         # 2. Read from multiple files and concatenate their contents
-        all_files = [f"data/gpt_off_the_shelf/output_embeddings_{sem}.json" for sem in SEMESTER_COLUMNS]
+        all_files = [SCHOOL_CONFIG['embeddings_file'].format(semester=sem) for sem in SEMESTER_COLUMNS]
 
         for file_path in all_files:
             with open(file_path, 'r', encoding='utf-8') as f:
@@ -506,7 +478,7 @@ def submit_courses(payload=None, user_id=None, user_email=None):
         "Prefer": "resolution=merge-duplicates"  # enables upsert
     }
 
-    # Note — POST to table endpoint, no ?id filter
+    # Write to main table (for courses you've TAKEN - from semester selection or transcript)
     response = requests.post(SUPABASE_TABLE_URL, json=[row_data], headers=headers)
 
     print("Supabase response:", response.status_code, response.text)
@@ -542,16 +514,23 @@ def retrieve_courses(payload=None, user_id=None, user_email=None):
         response = requests.get(get_url, headers=headers)
         response2 = requests.get(get_url2, headers=headers)
 
-        if response.status_code == 200 and response2.status_code == 200:
+        print(f"DEBUG: Main table response status: {response.status_code}")
+        print(f"DEBUG: Extra table response status: {response2.status_code}")
 
+        if response.status_code == 200 and response2.status_code == 200:
             data1 = response.json()
             data2 = response2.json()
 
+            print(f"DEBUG: Main table data: {data1}")
+            print(f"DEBUG: Extra table data: {data2}")
+
             combined_data = []
             if data1:
-                combined_data.append(data1[0])  # Or extend if you expect multiple rows
+                combined_data.append(data1[0])
             if data2:
-                combined_data.append(data2[0])  # Or extend if you expect multiple rows
+                combined_data.append(data2[0])
+
+            print(f"DEBUG: Combined data: {combined_data}")
 
             if combined_data:
                 # Create a list of courses with their semester information
@@ -565,9 +544,10 @@ def retrieve_courses(payload=None, user_id=None, user_email=None):
                                     "semester": semester
                                 })
                 
+                print(f"DEBUG: Returning {len(courses_with_semesters)} courses")
                 return jsonify(courses_with_semesters)
-                
             else:
+                print("DEBUG: No combined data found, returning empty array")
                 return jsonify([])  # No data found
         else:
             return jsonify({"error": "Failed to retrieve from Supabase", "details": response.text}), 500
@@ -731,7 +711,7 @@ def add_course(payload=None, user_id=None, user_email=None):
         return jsonify({"error": "Missing user_id or semester_courses"}), 400
 
     # First, fetch the existing row (if any)
-    fetch_url = f"{SUPABASE_TABLE_URL_EXTRA}?id=eq.{user_id}"
+    fetch_url = f"{SUPABASE_TABLE_URL}?id=eq.{user_id}"
 
     # Send upsert to Supabase REST API
     headers = {
@@ -751,7 +731,7 @@ def add_course(payload=None, user_id=None, user_email=None):
         # Row does not exist, create a blank one with just the ID
         row_data = {"id": user_id, course_semester: [new_course]}
         insert_response = requests.post(
-            SUPABASE_TABLE_URL_EXTRA,
+            SUPABASE_TABLE_URL_EXTRA,  # Fixed: write to _extra table for testing/exploring courses
             json=[row_data],
             headers={**headers, "Prefer": "resolution=merge-duplicates"}
         )
@@ -766,7 +746,7 @@ def add_course(payload=None, user_id=None, user_email=None):
         print("current courses are now ",current_courses)
 
         update_data = {course_semester: current_courses}
-        update_url = f"{SUPABASE_TABLE_URL_EXTRA}?id=eq.{user_id}"
+        update_url = f"{SUPABASE_TABLE_URL}?id=eq.{user_id}"
         update_response = requests.patch(update_url, json=update_data, headers=headers)
         print("succesful response")
 
@@ -791,7 +771,7 @@ def remove_course(payload=None, user_id=None, user_email=None):
         return jsonify({"error": "Missing user_id or semester_courses"}), 400
 
     # First, fetch the existing row (if any)
-    fetch_url = f"{SUPABASE_TABLE_URL_EXTRA}?id=eq.{user_id}"
+    fetch_url = f"{SUPABASE_TABLE_URL}?id=eq.{user_id}"
 
     # Send upsert to Supabase REST API
     headers = {
@@ -813,7 +793,7 @@ def remove_course(payload=None, user_id=None, user_email=None):
         current_courses.remove(new_course)
 
     update_data = {course_semester: current_courses}
-    update_url = f"{SUPABASE_TABLE_URL_EXTRA}?id=eq.{user_id}"
+    update_url = f"{SUPABASE_TABLE_URL}?id=eq.{user_id}"
     update_response = requests.patch(update_url, json=update_data, headers=headers)
 
     if update_response.status_code not in [200, 201, 204]:
@@ -847,21 +827,20 @@ def surprise_recommendation(payload=None, user_id=None, user_email=None):
             return jsonify({"error": "Could not retrieve course history"}), 500
 
         user_data = resp.json()
-        if not user_data:
-            return jsonify({"error": "No course history found. Please add your courses first."}), 400
 
         # --- build user's history across ALL semesters (past + current) ---
         user_courses: list[str] = []
         user_departments: set[str] = set()
-        for semester in SEMESTER_COLUMNS:
-            if semester in user_data[0] and user_data[0][semester]:
-                for code in user_data[0][semester]:
-                    user_courses.append(code)
-                    if "-" in code:
-                        user_departments.add(code.split("-")[0])
+        
+        if user_data:
+            for semester in SEMESTER_COLUMNS:
+                if semester in user_data[0] and user_data[0][semester]:
+                    for code in user_data[0][semester]:
+                        user_courses.append(code)
+                        if "-" in code:
+                            user_departments.add(code.split("-")[0])
 
-        if not user_courses:
-            return jsonify({"error": "No courses found in your history"}), 400
+        # history is optional now - if empty, we'll pick a random course
 
         # --- find the latest semester that actually exists in amherst_data ---
         present_terms = {c.get("semester") for c in amherst_data if c.get("semester")}
@@ -869,9 +848,13 @@ def surprise_recommendation(payload=None, user_id=None, user_email=None):
         if not latest_semester:
             return jsonify({"error": "No semesters available in catalog"}), 500
 
-        # --- candidates: ONLY courses from latest_semester, not taken, from new departments ---
-        # --- candidates: ONLY courses from latest_semester, not taken, from new departments, NOT SEEN THIS SESSION ---
+        # --- Two-pass candidate filtering ---
+        # Pass 1: Try to find courses from NEW departments (more surprising)
+        # Pass 2: If none found, relax to ANY courses they haven't taken (for single-dept schools like UPenn)
+        
         candidate_courses = []
+        
+        # Pass 1: Courses from departments user hasn't explored
         for course in amherst_data:
             if course.get("semester") != latest_semester:
                 continue
@@ -889,16 +872,55 @@ def surprise_recommendation(payload=None, user_id=None, user_email=None):
             # departments for this course
             course_departments = {code.split("-")[0] for code in course_codes if "-" in code}
 
-            # skip user's usual departments; skip courses they've taken
+            # Pass 1: skip user's usual departments AND courses they've taken
             if course_departments & user_departments:
                 continue
             if any(code in user_courses for code in course_codes):
                 continue
 
             candidate_courses.append(course)
+        
+        # Pass 2: If no candidates from new departments, relax to any untaken courses
+        if not candidate_courses:
+            print(f"No courses from new departments found. Relaxing filter to any untaken courses in {latest_semester}.")
+            for course in amherst_data:
+                if course.get("semester") != latest_semester:
+                    continue
+                course_codes = course.get("course_codes", []) or []
+                if not course_codes:
+                    continue
+
+                # Normalize codes once
+                norm_codes = [str(code).strip().upper() for code in course_codes]
+
+                # Skip if course was already recommended in this browser session
+                if any(c in exclude_codes for c in norm_codes):
+                    continue
+
+                # Pass 2: ONLY skip courses they've actually taken (allow same department)
+                if any(code in user_courses for code in course_codes):
+                    continue
+
+                candidate_courses.append(course)
 
         if not candidate_courses:
             return jsonify({"error": f"No unseen surprising courses found in {latest_semester}."}), 400
+
+        # --- If no history, pick a random course immediately and return ---
+        if not user_courses:
+            import random
+            rng = random.Random(user_id) # deterministic per user
+            recommended_course = rng.choice(candidate_courses)
+            
+            recommendation = {
+                "course_codes": recommended_course.get("course_codes", []),
+                "course_title": recommended_course.get("course_title", ""),
+                "description": recommended_course.get("description", ""),
+                "department": recommended_course.get("department", ""),
+                "semester": latest_semester,
+                "surprise_connection": "This is a great course to start your exploration! Since we don't have your course history yet, we've picked a random surprising option for you.",
+            }
+            return jsonify(recommendation), 200
 
             # --- build helpers to create text for similarity ---
         def course_text(c: dict) -> str:

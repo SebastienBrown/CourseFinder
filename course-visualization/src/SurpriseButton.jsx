@@ -135,7 +135,7 @@ const SurpriseButton = ({ semester /* e.g., "2425F" */ }) => {
           role="dialog"
           aria-modal="true"
         >
-          <div className="bg-white rounded-lg max-w-md w-full max-h-[80vh] overflow-y-auto shadow-xl">
+          <div className="bg-white rounded-lg w-[90vw] max-w-4xl shadow-xl overflow-visible">
             {/* Header */}
             <div className="flex justify-between items-center p-6 border-b">
               <h2 className="text-xl font-bold text-gray-900 flex items-center gap-2">
