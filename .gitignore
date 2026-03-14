@@ -3,6 +3,8 @@ venv/
 .venv/
 env/
 .env
+**/.env/** 
+**/.env
 course_venv/     
 __pycache__/
 *.py[cod]

@@ -143,6 +143,7 @@ export default function CourseSimilarityPrecomputedGraph({
   const [userCourseCodes, setUserCourseCodes] = useState([]);
 
   const [showSettings, setShowSettings] = useState(false);
+  const [tooltip, setTooltip] = useState(null); // { x, y, code, title }
 
   // Check if this is the user's first visit
   useEffect(() => {
@@ -464,16 +465,23 @@ export default function CourseSimilarityPrecomputedGraph({
       }
 
       const allMajors = Object.values(TRANCHES).flat();
-      const colorPalette = d3.schemePastel1.slice(0, 8).concat(d3.schemePastel2);
+      // Saturated palette: 40 distinct colors cycling through hue wheel
+      const totalDepts = allMajors.filter(m => m !== "FYSE").length;
       const majorColorMap = new Map();
       let colorIndex = 0;
       for (const tranche of Object.values(TRANCHES)) {
         for (const major of tranche) {
           if (!majorColorMap.has(major)) {
-            // Use dark gray for FYSE
-            const color = major === "FYSE" ? "#4a4a4a" : colorPalette[colorIndex % colorPalette.length];
-            majorColorMap.set(major, color);
-            colorIndex++;
+            if (major === "FYSE") {
+              majorColorMap.set(major, "#4a4a4a");
+            } else {
+              // Spread evenly around hue wheel, vary saturation and lightness
+              const hue = (colorIndex / totalDepts) * 360;
+              const sat = 0.55 + (colorIndex % 3) * 0.12; // 0.55, 0.67, 0.79
+              const lit = 0.45 + (colorIndex % 2) * 0.13;  // 0.45, 0.58
+              majorColorMap.set(major, d3.hsl(hue, sat, lit).toString());
+              colorIndex++;
+            }
           }
         }
       }
@@ -571,9 +579,8 @@ export default function CourseSimilarityPrecomputedGraph({
         .attr("height", height)
         .attr("viewBox", `0 0 ${width} ${height}`);
 
-      // Add zoom behavior
       const zoom = d3.zoom()
-        .scaleExtent([0.5, 8]) // Min and max zoom levels
+        .scaleExtent([0.5, 8])
         .on("zoom", (event) => {
           g.attr("transform", event.transform);
         });
@@ -600,7 +607,7 @@ export default function CourseSimilarityPrecomputedGraph({
         g.append("rect")
           .attr("width", width)
           .attr("height", height)
-          .attr("fill", "none");
+          .attr("fill", "#f9f7fb");
 
       /*"""Add a reset zoom button
       const resetButton = svg.append("g")
@@ -632,25 +639,8 @@ export default function CourseSimilarityPrecomputedGraph({
 
 
       
-      // Calculate the legend space requirements
-      const deptEntries = [...majorColorMap.entries()];
-      const legendItemHeight = 20;
-      
-      // Conditional legend column and item width for Department Legend
-      let legendItemWidth;
-      let colCount;
-      if (width > 1600) {
-        legendItemWidth = 90; // Reduced width for fewer columns
-        colCount = 2;
-      } else {
-        legendItemWidth = 100; // Original width for more columns
-        colCount = 3;
-      }
-      
-      // Left legend dimensions
-      const leftLegendWidth = 300;
-      const leftLegendHeight = height*0.63;
-      //console.log('width', width * width * 0.00001)
+      // Left legend dimensions (reduced from 300 for cleaner grouped layout)
+      const leftLegendWidth = 240;
       
       // Right legend dimensions (there is nothing now so set to 0)
       const rightLegendWidth = 0//leftLegendWidth; // Reduced width
@@ -954,296 +944,238 @@ export default function CourseSimilarityPrecomputedGraph({
           });
         }
 
-        group.style("cursor", "pointer").on("click", () => {
-          const full = courseDetails.find((entry) =>
-            entry.course_codes.some(code => d.codes.includes(code))
-          );
-          setSelectedCourse(full || { course_title: "Unknown", ...d });
-        });
+        // Store scaled position for hover effects
+        const nodeX = xScale(d.x);
+        const nodeY = yScale(d.y);
+
+        group.style("cursor", "pointer")
+          .on("click", () => {
+            const full = courseDetails.find((entry) =>
+              entry.course_codes.some(code => d.codes.includes(code))
+            );
+            setSelectedCourse(full || { course_title: "Unknown", ...d });
+          })
+          .on("mouseover", function (event) {
+            // Proposal 4: Glow + scale effect
+            d3.select(this)
+              .raise() // bring to front
+              .transition().duration(150)
+              .attr("transform", `translate(${nodeX},${nodeY}) scale(1.3)`)
+              .style("filter", `drop-shadow(0 0 6px ${d.color})`);
+            // Proposal 3: Show tooltip
+            const full = courseDetails.find((entry) =>
+              entry.course_codes.some(code => d.codes.includes(code))
+            );
+            const rect = mapContainerRef.current?.getBoundingClientRect();
+            if (rect) {
+              setTooltip({
+                x: event.clientX - rect.left + 12,
+                y: event.clientY - rect.top - 10,
+                code: d.codes.join(' / '),
+                title: full?.course_title || 'Unknown Course',
+              });
+            }
+            // Proposal 7: Show label on hover even if hidden
+            d3.select(this).select(".node-label").style("opacity", 1);
+          })
+          .on("mousemove", function (event) {
+            const rect = mapContainerRef.current?.getBoundingClientRect();
+            if (rect) {
+              setTooltip(prev => prev ? {
+                ...prev,
+                x: event.clientX - rect.left + 12,
+                y: event.clientY - rect.top - 10,
+              } : null);
+            }
+          })
+          .on("mouseout", function () {
+            d3.select(this)
+              .transition().duration(150)
+              .attr("transform", `translate(${nodeX},${nodeY}) scale(1)`)
+              .style("filter", "none");
+            setTooltip(null);
+          });
+
+        // Proposal 4: Add subtle stroke to all shape elements for clickable feel
+        group.selectAll("circle, rect, path")
+          .attr("stroke", d3.color(d.color)?.darker(0.5) || "#666")
+          .attr("stroke-width", 0.5)
+          .attr("stroke-opacity", 0.3);
       });
 
-      // Only add labels for user's courses in the history tab
+      // Add labels -- hidden by default, shown for highlighted nodes or on zoom >2x
       if (activeTab === 'yourHistory') {
         nodeGroup
-          .filter(d => d.historyHighlighted)
           .append("text")
           .attr("text-anchor", "middle")
           .attr("dy", -12)
           .attr("font-size", getFontSize(8))
           .attr("fill", "#000")
           .attr("class", "node-label")
-          // For labels, if multiple user courses at the same point, show the first one or indicate multiple
           .text(d => {
-            const userCoursesAtThisPoint = d.coursesAtPoint.filter(ca => 
+            const userCoursesAtThisPoint = d.coursesAtPoint.filter(ca =>
               userCourseCodes.some(uc => uc.code === ca.code && uc.semester === ca.semester)
             );
             if (userCoursesAtThisPoint.length === 1) {
               return userCoursesAtThisPoint[0].code;
             } else if (userCoursesAtThisPoint.length > 1) {
-              // If multiple user courses at this point, show the first code and an ellipsis
               return `${userCoursesAtThisPoint[0].code}...`;
             } else {
-              return ''; // Should not happen with the filter above
+              return d.codes.length > 1 ? `${d.codes[0]}...` : d.codes[0];
             }
           });
       } else {
-        // Add labels for all courses in the single semester tab
         nodeGroup
           .append("text")
           .attr("text-anchor", "middle")
           .attr("dy", d => d.highlighted ? -12 : -8)
-          .attr("font-size", d => d.highlighted ? getFontSize(8) : getFontSize(7))
-          .attr("fill", d => d.highlighted ? "#000" : "#333")
+          .attr("font-size", d => d.highlighted ? getFontSize(8) : getFontSize(6))
+          .attr("fill", d => d.highlighted ? "#000" : "#555")
           .attr("class", "node-label")
           .text(d => d.codes.length > 1 ? `${d.codes[0]}...` : d.codes[0]);
       }
 
-      if (!legendCollapsed) {
-      // === DEPARTMENT LEGEND (2-COLUMN LAYOUT) ===
-      const legendPaddingY = 62;
-      const legendPaddingX = 20;
-      //console.log('legendPadding:', legendPaddingX)
+      // Proposal 5: Pulse animation on highlighted nodes
+      nodeGroup.filter(d => d.highlighted || d.historyHighlighted)
+        .append("circle")
+        .attr("class", "pulse-ring")
+        .attr("r", 12)
+        .attr("fill", "none")
+        .attr("stroke", d => majorColorMap.get(d.department) || "#999")
+        .attr("stroke-width", 2)
+        .attr("stroke-opacity", 0.6)
+        .each(function pulse() {
+          d3.select(this)
+            .attr("r", 12).attr("stroke-opacity", 0.5)
+            .transition().duration(1200).ease(d3.easeQuadOut)
+            .attr("r", 24).attr("stroke-opacity", 0)
+            .transition().duration(0)
+            .on("end", pulse);
+        });
 
-      const legendItemCount = deptEntries.length;
-      const legendRows = Math.ceil(legendItemCount / colCount);
-      
-      // Create background for legend
+      if (!legendCollapsed) {
+      // === PROPOSAL 1: GROUPED LEGEND BY TRANCHE ===
+      const legendPaddingY = 52;
+      const legendPaddingX = 16;
+      const legendItemHeight = 18;
+      const legendColWidth = 85;
+
+      // Legend background: clean white card
       svg.append("rect")
         .attr("x", 0)
         .attr("y", 0)
         .attr("width", leftLegendWidth - 20)
         .attr("height", height)
-        .attr("fill", "rgba(249, 247, 251, 0.95)")
-        .attr("rx", 5)
-        .attr('stroke-dasharray', '5,5'); // 5px dash, 5px gap
-        //.attr('stroke', '#FF0000'); // red outline)
-      
-      // Add title to legend
-      svg.append("text")
-        .attr("x", legendPaddingX)
-        .attr("y", legendPaddingY)
-        .attr("text-anchor", "start")
-        .style("font-weight", "bold")
-        .style("font-size", getFontSize(14))
-        .text("Departments");
-        
+        .attr("fill", "rgba(255, 255, 255, 0.97)")
+        .attr("rx", 8)
+        .attr("stroke", "#e8e2f2")
+        .attr("stroke-width", 1);
+
       const legend = svg
         .append("g")
-        .attr("transform", `translate(${legendPaddingX}, ${legendPaddingY + width * 0.01})`)
+        .attr("transform", `translate(${legendPaddingX}, ${legendPaddingY})`)
         .attr("class", "legend");
 
-      deptEntries.forEach((entry, i) => {
-        const [dept, color] = entry;
-        const col = Math.floor(i / legendRows);
-        const row = i % legendRows;
-        
-        const legendItem = legend
-          .append("g")
-          .attr("transform", `translate(${col * legendItemWidth}, ${row * legendItemHeight})`);
-
-        const shape = getShapeForDept(dept);
-        const size = 6;
-
-        switch (shape) {
-          case "circle":
-            legendItem.append("circle")
-              .attr("r", size)
-              .attr("fill", color);
-            break;
-          case "doubleCircle":
-            // Draw outer circle (unfilled)
-            legendItem.append("circle")
-              .attr("r", size * 1.2)
-              .attr("fill", "none")
-              .attr("stroke", color)
-              .attr("stroke-width", 1.5);
-            // Draw inner circle (filled)
-            legendItem.append("circle")
-              .attr("r", size * 0.8)
-              .attr("fill", color);
-            break;
-          case "square":
-            legendItem
-              .append("rect")
-              .attr("x", -size)
-              .attr("y", -size)
-              .attr("width", size * 2)
-              .attr("height", size * 2)
-              .attr("fill", color);
-            break;
-          case "triangle":
-            legendItem
-              .append("path")
-              .attr(
-                "d",
-                d3
-                  .symbol()
-                  .type(d3.symbolTriangle)
-                  .size(size * size * 4)() // Reverted size multiplier
-              )
-              .attr("fill", color);
-            break;
-          case "star":
-            legendItem
-              .append("path")
-              .attr(
-                "d",
-                d3
-                  .symbol()
-                  .type(d3.symbolStar)
-                  .size(size * size * 4)() // Reverted size multiplier
-              )
-              .attr("fill", color);
-            break;
-        }
-
-        legendItem
-          .append("text")
-          .attr("x", 10)
-          .attr("y", 5)
-          .text(dept === "SWAG" ? "SWAG/WAGS" : dept)
-          .style("font-size", getFontSize(12));
-      });
-
-      // === TRANCHE SHAPE LEGEND ===
-      const shapeEntries = Object.entries(TRANCHE_SHAPES).filter(([tranche]) => tranche !== "First Year Seminar");
-      const shapeLegendX = legendPaddingX;
-      const shapeLegendY = leftLegendHeight+5;
-      let shapeLegendHeight;
-      if (width > 1600) {
-        shapeLegendHeight = shapeEntries.length * legendItemHeight + width * 0.02; // Adjusted height for disclaimer text
-      } else {
-        shapeLegendHeight = shapeEntries.length * legendItemHeight;
-      }
-      
-      // Define column count for shape legend (e.g., 2 columns)
-      let shapeColCount;
-      if (width > 1600) {
-        shapeColCount = 1; // Single column for large screens
-      } else {
-        shapeColCount = 2; // Two columns for smaller screens
-      }
-      const shapeLegendRows = Math.ceil(shapeEntries.length / shapeColCount);
-
-      // Background for shape legend
-      svg.append("rect")
-        .attr("x", 0)
-        .attr("y", shapeLegendY - 10)
-        .attr("width", leftLegendWidth - 20)
-        .attr("height", shapeLegendHeight)
-        .attr("fill", "rgba(249, 247, 251, 0.95)")
-        .attr("rx", 5);
-        
-      const shapeLegend = svg
-        .append("g")
-        .attr("transform", `translate(${shapeLegendX}, ${shapeLegendY})`)
-        .attr("class", "shape-legend");
-
-      // Title for shape legend
-      shapeLegend
-        .append("text")
-        .attr("x", 0)
-        .attr("y", 5)
-        .text("Department Groups")
-        .style("font-weight", "bold")
-        .style("font-size", getFontSize(14));
-
-      const shapeLegendItemVerticalOffset = 25;
-
-      shapeEntries.forEach(([tranche, shapeType], i) => {
-        const col = Math.floor(i / shapeLegendRows);
-        const row = i % shapeLegendRows;
-
-        const legendItem = shapeLegend
-          .append("g")
-          .attr("transform", `translate(${col * legendItemWidth}, ${row * legendItemHeight + shapeLegendItemVerticalOffset})`);
-
-        const size = 6;
-        // Use a standard color for the shape legend
-        const color = "#666";
-
+      // Helper to draw a legend shape icon
+      const drawLegendShape = (parent, shapeType, color, size) => {
         switch (shapeType) {
           case "circle":
-            legendItem.append("circle")
-              .attr("r", size)
-              .attr("fill", color);
+            parent.append("circle").attr("r", size).attr("fill", color);
             break;
           case "doubleCircle":
-            // Draw outer circle (unfilled)
-            legendItem.append("circle")
-              .attr("r", size * 1.2)
-              .attr("fill", "none")
-              .attr("stroke", color)
-              .attr("stroke-width", 1.5);
-            // Draw inner circle (filled)
-            legendItem.append("circle")
-              .attr("r", size * 0.8)
-              .attr("fill", color);
+            parent.append("circle").attr("r", size * 1.2).attr("fill", "none")
+              .attr("stroke", color).attr("stroke-width", 1.5);
+            parent.append("circle").attr("r", size * 0.8).attr("fill", color);
             break;
           case "square":
-            legendItem
-              .append("rect")
-              .attr("x", -size)
-              .attr("y", -size)
-              .attr("width", size * 2)
-              .attr("height", size * 2)
-              .attr("fill", color);
+            parent.append("rect").attr("x", -size).attr("y", -size)
+              .attr("width", size * 2).attr("height", size * 2).attr("fill", color);
             break;
           case "triangle":
-            legendItem
-              .append("path")
-              .attr(
-                "d",
-                d3
-                  .symbol()
-                  .type(d3.symbolTriangle)
-                  .size(size * size * 4)() // Reverted size multiplier
-              )
+            parent.append("path")
+              .attr("d", d3.symbol().type(d3.symbolTriangle).size(size * size * 4)())
               .attr("fill", color);
             break;
           case "star":
-            legendItem
-              .append("path")
-              .attr(
-                "d",
-                d3
-                  .symbol()
-                  .type(d3.symbolStar)
-                  .size(size * size * 4)() // Reverted size multiplier
-              )
+            parent.append("path")
+              .attr("d", d3.symbol().type(d3.symbolStar).size(size * size * 4)())
               .attr("fill", color);
             break;
         }
+      };
 
-        legendItem
-          .append("text")
-          .attr("x", 12)
+      let currentY = 0;
+      const trancheEntries = Object.entries(TRANCHES);
+
+      trancheEntries.forEach(([trancheName, depts], trancheIdx) => {
+        const shapeType = TRANCHE_SHAPES[trancheName] || "circle";
+
+        // Tranche group header: shape icon + tranche name
+        const headerGroup = legend.append("g")
+          .attr("transform", `translate(0, ${currentY})`);
+
+        // Draw shape icon for this tranche
+        const headerIcon = headerGroup.append("g")
+          .attr("transform", "translate(8, 0)");
+        drawLegendShape(headerIcon, shapeType, "#3f1f69", 6);
+
+        headerGroup.append("text")
+          .attr("x", 20)
           .attr("y", 5)
-          .text(tranche.charAt(0).toUpperCase() + tranche.slice(1)) // Capitalize
-          .style("font-size", getFontSize(14));
+          .text(trancheName)
+          .style("font-weight", "bold")
+          .style("font-size", getFontSize(12))
+          .style("fill", "#3f1f69");
+
+        currentY += 22;
+
+        // Departments in 2 columns under this tranche header
+        const deptsPerCol = Math.ceil(depts.length / 2);
+        depts.forEach((dept, i) => {
+          const col = Math.floor(i / deptsPerCol);
+          const row = i % deptsPerCol;
+          const color = majorColorMap.get(dept) || "#999";
+
+          const item = legend.append("g")
+            .attr("transform", `translate(${12 + col * legendColWidth}, ${currentY + row * legendItemHeight})`);
+
+          // Small colored dot for each department
+          item.append("circle")
+            .attr("r", 4)
+            .attr("fill", color);
+
+          item.append("text")
+            .attr("x", 8)
+            .attr("y", 4)
+            .text(dept === "SWAG" ? "SWAG/WAGS" : dept)
+            .style("font-size", getFontSize(11))
+            .style("fill", "#444");
+        });
+
+        currentY += deptsPerCol * legendItemHeight + 6;
+
+        if (trancheIdx < trancheEntries.length - 1) {
+          currentY += 4;
+        }
       });
 
-      // Add small text below the Department Groups legend
-      const disclaimerText = shapeLegend
-        .append("text")
-        .attr("x", -3)
-        .attr("y", shapeLegendHeight) // Adjusted Y position to be inside the background
-        .style("font-size", getFontSize(14))
-        .style("fill", "#666");
-
+      // Disclaimer text at the bottom of legend
+      currentY += 10;
+      const disclaimerText = legend.append("text")
+        .attr("x", 0)
+        .attr("y", currentY)
+        .style("font-size", getFontSize(10))
+        .style("fill", "#999");
+      disclaimerText.append("tspan").text("Special topics and thesis");
       disclaimerText.append("tspan")
-        .text("Special topics and thesis");
-
-      disclaimerText.append("tspan")
-        .attr("x", -3) // Align with the x of the parent text element
-        .attr("dy", "1.2em") // Move to the next line below the previous tspan
+        .attr("x", 0).attr("dy", "1.3em")
         .text("courses are not displayed.");
 
-      // Optional: Add a visual separator between legends and graph
+      // Visual separator between legend and graph
       svg.append("rect")
         .attr("x", leftPadding - 20)
         .attr("y", 0)
-        .attr("width", 1)
+        .attr("width", 1.5)
         .attr("height", height)
         .attr("fill", "#e8e2f2");
     }
@@ -1262,12 +1194,16 @@ export default function CourseSimilarityPrecomputedGraph({
             : 'My Amherst Curriculum'
         );
 
-      // Add CSS to handle label scaling
+      // Add CSS to handle label scaling and pulse rings
       const style = document.createElement('style');
       style.textContent = `
         .node-label {
           pointer-events: none;
           text-rendering: geometricPrecision;
+          transition: opacity 0.2s ease;
+        }
+        .pulse-ring {
+          pointer-events: none;
         }
       `;
       document.head.appendChild(style);
@@ -1299,7 +1235,8 @@ useEffect(() => {
   const zoomBehavior = d3.zoom()
     .scaleExtent([0.5, 5])
     .on("zoom", (event) => {
-      d3.select(svgRef.current).select("g").attr("transform", event.transform);
+      const svgEl = d3.select(svgRef.current);
+      svgEl.select("g").attr("transform", event.transform);
     });
 
   d3.select(svgRef.current).call(zoomBehavior);
@@ -1506,6 +1443,24 @@ useEffect(() => {
               className="w-full h-full absolute top-0 left-0"
               style={{ top: '0px' }}
             ></svg>
+
+            {/* Proposal 3: Hover tooltip */}
+            {tooltip && (
+              <div
+                style={{
+                  position: 'absolute',
+                  left: tooltip.x,
+                  top: tooltip.y,
+                  pointerEvents: 'none',
+                  zIndex: 20,
+                  transform: 'translateY(-100%)',
+                }}
+                className="bg-white shadow-lg rounded-lg px-3 py-2 border border-[#e8e2f2] transition-opacity duration-150 max-w-[260px]"
+              >
+                <div className="text-xs font-bold text-[#3f1f69] truncate">{tooltip.code}</div>
+                <div className="text-xs text-gray-600 mt-0.5 leading-tight">{tooltip.title}</div>
+              </div>
+            )}
 
             {/* Stack both buttons */}
           <div

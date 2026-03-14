@@ -1,11 +1,11 @@
 import os
 
 # Default port configuration
-DEFAULT_PORT = 5000
+DEFAULT_PORT = 5001
 
 # User-specific port configurations
 USER_PORTS = {
-    'hnaka24': 5000,
+    'hnaka24': 5001,
     # Add other users and their ports here
 }
 

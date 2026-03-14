@@ -69,21 +69,20 @@ export default function UserInfoPopup({ isOpen, onClose, onSave }) {
     }
 
     setIsLoading(true);
+    // Timeout wrapper: close popup after 5s regardless of save outcome
+    const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error('Save timeout')), 5000));
     try {
-      await onSave({ classYear, majors, graduationMonth });
-      onClose();
+      await Promise.race([onSave({ classYear, majors, graduationMonth }), timeout]);
     } catch (error) {
-      console.error('Error saving user info:', error);
-      alert('Failed to save information. Please try again.');
+      console.warn('User info save skipped:', error.message);
     } finally {
       setIsLoading(false);
+      onClose();
     }
   };
 
   const handleClose = () => {
-    if (!isLoading) {
-      onClose();
-    }
+    onClose();
   };
 
   const handleMajorChange = (majorCode) => {
