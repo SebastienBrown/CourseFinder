@@ -169,7 +169,7 @@ with open('./data/amherst_courses_all.json') as f:
         print(f"Unexpected error loading amherst_courses_all.json: {e}")
         amherst_data = []
 
-with open('./data/precomputed_tsne_coords_all_v3.json') as f:
+with open('./data/precomputed_tsne_coords_all_5707402.json') as f:
     try:
         coords_data = json.load(f)
         if not isinstance(coords_data, list):
@@ -182,10 +182,10 @@ with open('./data/precomputed_tsne_coords_all_v3.json') as f:
             if "codes" not in entry:
                 print(f"Warning: Entry {i} missing 'codes' field: {entry}")
     except json.JSONDecodeError as e:
-        print(f"Error loading precomputed_tsne_coords_all.json: {e}")
+        print(f"Error loading precomputed_tsne_coords_all_5707402.json: {e}")
         coords_data = []
     except Exception as e:
-        print(f"Unexpected error loading precomputed_tsne_coords_all.json: {e}")
+        print(f"Unexpected error loading precomputed_tsne_coords_all_5707402.json: {e}")
         coords_data = []
 
 # Sample input: list of course names the student is already taking

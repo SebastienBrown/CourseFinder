@@ -1,104 +1,141 @@
-# Creating the virtual environment:
+# CourseFinder — The Visual Open Curriculum
 
-- `python -m venv course_venv` or `python3.10 -m venv course_venv`
-- `source course_venv/bin/activate`
-- `pip install -r requirements.txt`
+Interactive web application for exploring course similarity at Amherst College (and UPenn). Students can visualize courses on a 2D similarity map, search for courses, get recommendations, check schedule conflicts, and record their course history.
 
-# Workflow:
+## Live Deployments
 
-**Data Collection and Cleaning**
+- **Amherst:** https://visual-open-curriculum.vercel.app/ (branch: `main`)
+- **UPenn:** https://course-finder-upenn.vercel.app/ (branch: `feature/upenn-integration`)
 
-1. Scraping:
-   `sbatch 1_scraping/course_scraper.sbatch`
+## Architecture
 
-2. To complete the scraping,
-- `sbatch 1_scraping/failed_links.sbatch`
-- Manually check the log of failed_links and add courses
-- Find course AMST 224 in amherst_courses_2526F.json and manually add course codes EDST/PSYC/AMST/AAPI 224
+```
+CourseFinder/
+  course-visualization/      # React frontend
+    src/
+      App.js                 # Routing, auth, layout
+      CourseSimilarityPrecomputedGraph.jsx  # Main t-SNE map (D3.js)
+      CourseInput.jsx         # Course search bar
+      CoursePopup.jsx         # Course detail popup
+      SemesterCourseIntake.jsx  # Onboarding course selector
+      IntakePrompt.jsx        # Prompt to add past courses
+      SurpriseButton.jsx      # Random recommendation
+      Auth.js                 # Supabase authentication
+      UserInfoPopup.jsx       # Demographic info collection
+      TermsModal.jsx          # Terms of service
+      SubmissionPage.jsx      # Question submission
+      SemesterContext.jsx     # Semester state context
+      config.js               # Semester list, data paths, port config
+      supabaseClient.js       # Supabase client init
+    public/
+      amherst_courses_all.json                           # Full course catalog (23MB)
+      tsne_coords_all_sbert_off_the_shelf_5790245.json   # Precomputed t-SNE coordinates
+    server.js                # Express server for production
+    package.json             # React dependencies (D3, Supabase, React Router)
 
-3. To clean scraped data:
-- `sbatch 2_cleaning/llm_parsing.sbatch` uses LLM to extract a clean subset of the original.
-- Manually clean the courses printed under `Courses that caused errors`.
-- Run `python 2_cleaning/clean_json.py` to remove duplicates, special characters, and fill in missing course codes.
+  backend/                   # Flask API server
+    schedule.py              # All API endpoints (search, conflicts, auth, etc.)
+    config.py                # Port configuration
+    query_validation.py      # Input validation
+    transcript_scrape.py     # OCR transcript parsing
+    Dockerfile               # Container config
+    requirements.txt         # Python dependencies
+    data/                    # Embedding data by model config
 
-4. Append the cleaned files together
-- Run `python 2_cleaning/append_metadata.py`
-- Output: `course-visualization/public/amherst_courses_all.json`.
+  .env                       # Environment variables (Supabase + Azure OpenAI keys)
+  package.json               # Root dependencies (html2canvas, tsne-js)
+  requirements.txt           # Root Python requirements
+```
 
-**Embeddings, Similarity Scores, Mapping, Similar Courses**
-`sbatch MASTER.sh` runs the entire pipeline from top to bottom. The `MASTER.sh` file declares all of the global variables, including file paths, LLM to be used, configuration for fine-tuning, etc. If you wish to run only certain sections, simply comment out the other sections. A brief outline of the pipeline is provided below.
+## Tech Stack
 
-0. Contrastive learning
-- `3_embedding/0_contrastive_learning.py` 
-- Input: manually annotated sets of four courses () and `amherst_courses_all.json`.
-- Output: fine-tuned model in `3_embedding/sbert_contrastive_model/`.
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React 19, React Router v7, Tailwind CSS, D3.js |
+| Backend | Flask, Flask-CORS |
+| Auth | Supabase (email/password) |
+| Database | Supabase (PostgreSQL) |
+| AI | Azure OpenAI (GPT-4o-mini for chat, text-embedding-3-small for search) |
+| Hosting | Vercel (auto-deploy on push) |
 
-1. Create embeddings for each course
-- `3_embedding/1_embeddings.py` computes the embeddings.
-- Output: `output_embeddings_{semester}.json` in the data folder (`data/2_intermediate/2_embeddings/{model}/`) and `backend/data/{model}/`.
+## Local Development
 
-2. Create diagnostic plots of 4-course sets
-- `3_embedding/2_diagnostic_plots.py`
-- Output:
+### Prerequisites
+- Node.js and npm
+- Python 3.10+
+- `.env` files with required keys (see below)
 
-3. Compute pairwise similarity scores
-- `4_similarity/1_similarity_all.py` computes the pairwise similarity scores.
-- Output: `output_similarity_{semester}.json`, where semester = 'all' when running for all semesters
+### Environment Variables
+Create `.env` in the project root with:
+```
+SUPABASE_URL=<your-supabase-url>
+SUPABASE_KEY=<your-supabase-anon-key>
+SUPABASE_JWT_SECRET=<your-jwt-secret>
+REACT_APP_SUPABASE_URL=<same-as-above>
+REACT_APP_SUPABASE_KEY=<same-as-above>
+REACT_APP_BACKEND_URL="http://127.0.0.1:5000"
+AZURE_OPENAI_API_KEY=<embedding-resource-key>
+AZURE_OPENAI_ENDPOINT=<embedding-resource-endpoint>
+AZURE_OPENAI_DEPLOYMENT=<embedding-deployment-name>
+AZURE_CHATOPENAI_API_KEY=<chat-resource-key>
+AZURE_CHATOPENAI_ENDPOINT=<chat-resource-endpoint>
+AZURE_CHATOPENAI_DEPLOYMENT=<chat-deployment-name>
+ALLOWED_ORIGINS=http://localhost:3000
+```
 
-4. Create density plots of similarity scores
-- `4_similarity/2_similarity_density.py` plots the density of similarity scores by i) within and across departments, and ii) positive and negative pairs from the manual annotated list.
-- Input: `output_similarity_{semester}.json`
-- Output: 
+The `course-visualization/.env` symlinks to the root `.env`. The `backend/.env` needs its own copy.
 
-5. Apply t-SNE to compute coordinates for each course
-- `5_webapp/1_tsne_coords.py` computes the coordinates for the App map.
-- Output: `course-visualization/public/precomputed_tsne_coords_{semester}.json`
+### Run Backend
+```bash
+cd backend
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+export FLASK_APP=schedule.py
+flask run
+```
 
-6. Add three most similar courses in the same semester
-- `5_webapp/2_append_similar_courses.py` appends for each course the three most similar course in the same semester.
-- Output: `course-visualization/public/precomputed_tsne_coords_{semester}.json` (appends to same file as 3)
+### Run Frontend
+```bash
+cd course-visualization
+npm install
+npm run start
+```
 
-**Run Backend**
-- `cd backend`
-- `python -m venv venv` optional but recommended
-- `source venv/bin/activate` or `venv\Scripts\activate` on Windows
-- `pip install -r requirements.txt`
-- `export FLASK_APP=schedule.py` or `set FLASK_APP=schedule.py` on Windows
-- `flask run`
+The frontend runs on `http://localhost:3000`, backend on `http://localhost:5000`.
 
-If the search bar returns a "fetch" error, try changing the port.
-- If you are a new user, add your username and preferred port number to `course-visualization/src/config.js` AND `backend/config.py`
+### Port Configuration
+Each developer can set their preferred port in:
+- `course-visualization/src/config.js` — `USER_PORTS` object
+- `backend/config.py` — `USER_PORTS` dictionary
 
-**Run Frontend**
-- `cd course-visualization`
-- `ln -s ../.env .env` to make the frontend refer to the .env file in the root directory
-- `cd course-visualization/src`
-- The first time:
-   ```
-   npm install
-   npm install tsne-js
-   npm install html2canvas
-   npm install lucide-react
-   ```
-- `npm run start`
+## Branches
 
-`npm install react-router-dom` may fix some issues if the error is related to react-router-dom (should be installed automatically with `npm install`)
+| Branch | Purpose | Deployment |
+|--------|---------|------------|
+| `main` | Amherst production | visual-open-curriculum.vercel.app |
+| `feature/upenn-integration` | UPenn production | course-finder-upenn.vercel.app |
+| `backup-main` | Safety backup | — |
+| `map_trials` | Map layout experiments | — |
+| `ocr-test-docker` | Transcript OCR testing | — |
 
-**Deploying the Website**
-- Both `requirements.txt` and `backend/requirements.txt` are necessary.
-- Two `.env` files are necessary: in `course-visualization` and in `backend`. Both should have the following elements:
-   ```
-   SUPABASE_URL=
-   SUPABASE_KEY=
-   SUPABASE_JWT_SECRET=
-   REACT_APP_SUPABASE_URL=
-   REACT_APP_SUPABASE_KEY=
-   REACT_APP_BACKEND_URL="http://127.0.0.1:5000" # this should be your backend port
-   ```
-   all should have the elements in straight double quotes "", without spaces and no curly quotes.
-   If it loads the wrong backend url, try quitting both your browser and terminal, fix the above issues and try again.
+## Data Pipeline
 
-**Analysis**
-- `cd 6_analysis`
-- Run major (department)-level analysis with `sbatch major_master.sbatch`
-- Run student-level analysis with `sbatch student_master.sbatch`
+The precomputed data files in `course-visualization/public/` are generated by the research pipeline in the separate `amherstcourse` repository on ORCD HPC. The flow is:
+
+1. Research repo scrapes + cleans course data → `amherst_courses_all.json`
+2. Research repo computes embeddings → similarity → t-SNE coordinates
+3. Output JSON files are copied to this repo's `public/` directory
+4. Frontend loads these files directly (no backend needed for the map)
+
+The backend is used for: course search (via Azure OpenAI embeddings), schedule conflict detection, user data storage (Supabase), and question submission.
+
+## Key Features
+
+- **Course Map:** t-SNE visualization of all courses colored by department, with pan/zoom
+- **Course Search:** Semantic search using Azure OpenAI embeddings
+- **Schedule Conflicts:** Backend checks time overlaps for selected courses
+- **Surprise Recommendation:** Random course suggestion
+- **Course History:** Students record past courses (stored in Supabase)
+- **Public Mode:** Read-only map at `/public-graph` (no auth required)
+- **Ask a Question:** Submit questions to researchers
