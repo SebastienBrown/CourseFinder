@@ -63,14 +63,38 @@ Interactive web application ("The Visual Open Curriculum") that lets Amherst Col
 - The frontend currently loads `precomputed_tsne_coords_all_5707402.json`; the SBERT off-the-shelf version (5790245) was experimental
 - OCR-based transcript scraping (separate branch)
 - Various auth flows (current: Supabase email/password)
+- GPT-5-mini migration from GPT-4o-mini for surprise recommendations (2026-03-14)
+
+## Local Development
+
+### Port Configuration
+- **Flask must run on port 5001** — macOS ControlCenter occupies port 5000 (Monterey+)
+- `REACT_APP_BACKEND_URL` in root `.env` controls ALL frontend API calls
+- CRA bakes env vars at build time — must restart `npm run start` after `.env` changes (hot reload won't pick up)
+- If port was cached in localStorage: `localStorage.removeItem('apiPort'); location.reload();`
+- Port config locations: `backend/config.py`, `course-visualization/src/config.js`, root `.env`
+
+### Starting Locally
+```bash
+# Backend (port 5001)
+cd backend && source venv/bin/activate && FLASK_APP=schedule.py flask run --port 5001
+
+# Frontend (port 3000)
+cd course-visualization && npm run start
+```
+
+### GPT-5-mini (Azure OpenAI) Compatibility
+The surprise recommendation feature uses GPT-5-mini via direct HTTP (not the openai SDK, which is incompatible):
+- **No `temperature` parameter** — only default (1) is supported, any other value returns 400
+- **Use `max_completion_tokens`** (not `max_tokens`) — set to 2000+ because reasoning tokens eat into the budget
+- **API version**: `2025-01-01-preview` or newer
+- **Use `response_format: {"type": "json_object"}`** to ensure parseable output
+- Implementation: direct `httpx.post()` call in `schedule.py` (the `openai` Python SDK sends deprecated params)
 
 ## To-Do
 [No specific tasks assigned for today]
 
 ## Useful Skills
-- Frontend development: `npm run start` from `course-visualization/`
-- Backend: `flask run` from `backend/` (set `FLASK_APP=schedule.py`)
-- The `.env` symlink in `course-visualization/` points to root `.env`
 - Vercel deployment is automatic on push to respective branches
 - Port configuration: default 5000, configurable per user in both `config.js` and `config.py`
 

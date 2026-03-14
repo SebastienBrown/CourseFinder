@@ -1002,18 +1002,23 @@ Respond with ONLY this JSON:
 }
 """.rstrip()
 
-        # --- call chat model ---
-        response = client_chat.chat.completions.create(
-            model=AZURE_CHATOPENAI_DEPLOYMENT,
-            messages=[
-                {"role": "system", "content": "You are a helpful academic advisor who finds surprising interdisciplinary connections between courses."},
+        # --- call chat model via direct HTTP (SDK incompatible with gpt-5-mini) ---
+        import httpx
+        chat_url = f"{AZURE_CHATOPENAI_ENDPOINT.rstrip('/')}/openai/deployments/{AZURE_CHATOPENAI_DEPLOYMENT}/chat/completions?api-version={CHATOPENAI_API_VERSION}"
+        chat_resp = httpx.post(chat_url, json={
+            "messages": [
+                {"role": "system", "content": "You are a helpful academic advisor who finds surprising interdisciplinary connections between courses. Always respond with valid JSON only."},
                 {"role": "user", "content": prompt},
             ],
-            temperature=0.7,
-            max_tokens=500,
-        )
-
-        llm_response = response.choices[0].message.content.strip()
+            "max_completion_tokens": 2000,
+            "response_format": {"type": "json_object"},
+        }, headers={"api-key": AZURE_CHATOPENAI_API_KEY, "Content-Type": "application/json"}, timeout=30)
+        if chat_resp.status_code != 200:
+            import sys
+            print(f"Chat API error {chat_resp.status_code}: {chat_resp.text[:1000]}", file=sys.stderr, flush=True)
+            raise Exception(f"Chat API returned {chat_resp.status_code}: {chat_resp.text[:500]}")
+        resp_json = chat_resp.json()
+        llm_response = (resp_json["choices"][0]["message"].get("content") or "").strip()
 
         # --- parse LLM JSON; safe fallback ---
         try:

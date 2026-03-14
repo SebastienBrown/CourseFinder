@@ -225,35 +225,35 @@ function App() {
     try {
       const { data: { session } } = await supabase.auth.getSession();
       const token = session?.access_token;
-      
+
       if (!token) {
-        throw new Error("No valid session token found");
-      }
+        console.warn("No session token — skipping save");
+      } else {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 5000);
+        const response = await fetch(`${backendUrl}/save_user_info`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`,
+          },
+          body: JSON.stringify(userInfo),
+          signal: controller.signal,
+        });
+        clearTimeout(timeoutId);
 
-      const response = await fetch(`${backendUrl}/save_user_info`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${token}`,
-        },
-        body: JSON.stringify(userInfo),
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || "Failed to save user information");
-      }
-
-      setShowUserInfoPopup(false);
-      setPendingUser(null);
-      
-      // Proceed with login if there's a pending user
-      if (pendingUser) {
-        setUser(pendingUser);
+        if (!response.ok) {
+          console.warn("Failed to save user info:", response.status);
+        }
       }
     } catch (error) {
-      console.error("Error saving user info:", error);
-      throw error;
+      console.warn("Error saving user info (non-blocking):", error);
+    } finally {
+      setShowUserInfoPopup(false);
+      if (pendingUser) {
+        setUser(pendingUser);
+        setPendingUser(null);
+      }
     }
   };
 

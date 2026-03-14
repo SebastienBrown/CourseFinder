@@ -40,11 +40,11 @@ DATA_CONFIG = {
 SCHOOL_CONFIG = DATA_CONFIG.get(SCHOOL_ID, DATA_CONFIG["AMHERST"])
 
 # Default port configuration
-DEFAULT_PORT = 5000
+DEFAULT_PORT = 5001
 
 # User-specific port configurations (Legacy)
 USER_PORTS = {
-    'hnaka24': 5000,
+    'hnaka24': 5001,
     # Add other users and their ports here
 }
 
