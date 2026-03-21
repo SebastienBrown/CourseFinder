@@ -99,6 +99,10 @@ if not SUPABASE_JWT_SECRET:
 
 print("Using Supabase JWT Secret for HS256 verification")
 
+# --- GitHub Actions Dispatch Configuration ---
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+GITHUB_REPO = os.getenv("GITHUB_REPO", "SebastienBrown/CourseFinder") # owner/repo
+
 def jwt_required(f):
     @wraps(f)
     def wrapper(*args, **kwargs):
@@ -1212,6 +1216,7 @@ def cleanup_supabase_report(file_name):
 @app.route("/email_to_advisor", methods=["POST"])
 @jwt_required
 def email_to_advisor(payload=None, user_id=None, user_email=None):
+    global GITHUB_TOKEN, GITHUB_REPO
     try:
         user_id = payload["sub"]
         data = request.get_json()
