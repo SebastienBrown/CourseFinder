@@ -1,4 +1,6 @@
 from flask import Flask, request, jsonify
+from flask_mail import Mail, Message
+import base64
 from datetime import datetime
 import json
 import os
@@ -33,6 +35,7 @@ validator = QueryValidator()
 SUPABASE_TABLE_URL = f"{SUPABASE_URL}/rest/v1/user_courses"  # Example table path
 SUPABASE_TABLE_URL_EXTRA=f"{SUPABASE_URL}/rest/v1/user_courses_test"
 SUPABASE_FEEDBACK_TABLE_URL=f"{SUPABASE_URL}/rest/v1/questions"
+SUPABASE_NOTES_TABLE_URL=f"{SUPABASE_URL}/rest/v1/user_notes"
 
 # --- Azure OpenAI: use TWO clients (different resources) ---
 
@@ -76,6 +79,16 @@ CORS(app, origins=ALLOWED_ORIGINS,
 # Get Supabase JWT Secret (NOT JWKS!)
 # Find this in: Settings → Configuration → Data API
 SUPABASE_JWT_SECRET = os.getenv("SUPABASE_JWT_SECRET")
+
+# --- Flask-Mail Configuration ---
+app.config['MAIL_SERVER'] = os.getenv('MAIL_SERVER', 'smtp.gmail.com')
+app.config['MAIL_PORT'] = int(os.getenv('MAIL_PORT', 587))
+app.config['MAIL_USE_TLS'] = os.getenv('MAIL_USE_TLS', 'True') == 'True'
+app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
+app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_USERNAME')
+
+mail = Mail(app)
 
 if not SUPABASE_JWT_SECRET:
     raise ValueError("SUPABASE_JWT_SECRET environment variable is required")
@@ -1109,13 +1122,132 @@ def check_user_info(payload=None, user_id=None, user_email=None):
                 user_data.get("class_year") and 
                 user_data.get("major")
             )
+            return jsonify({
+                "has_info": has_info,
+                "class_year": user_data.get("class_year"),
+                "major": user_data.get("major")
+            })
         
-        return jsonify({"has_info": has_info})
+        return jsonify({"has_info": false})
         
     except Exception as e:
         print("Error in check_user_info:", e)
         return jsonify({"error": str(e)}), 500
 
+
+# --- Notes Feature Endpoints ---
+
+@app.route("/get_user_notes", methods=["GET"])
+@jwt_required
+def get_user_notes(payload=None, user_id=None, user_email=None):
+    try:
+        user_id = payload["sub"]
+        headers = {
+            "apikey": SUPABASE_KEY,
+            "Authorization": f"Bearer {SUPABASE_KEY}",
+            "Content-Type": "application/json"
+        }
+        
+        url = f"{SUPABASE_NOTES_TABLE_URL}?id=eq.{user_id}"
+        response = requests.get(url, headers=headers)
+        
+        if response.status_code == 200:
+            data = response.json()
+            if data and len(data) > 0:
+                return jsonify(data[0]), 200
+            return jsonify({}), 200
+        else:
+            return jsonify({"error": "Failed to fetch notes", "details": response.text}), response.status_code
+            
+    except Exception as e:
+        print("Error in get_user_notes:", e)
+        return jsonify({"error": str(e)}), 500
+
+@app.route("/save_user_notes", methods=["POST"])
+@jwt_required
+def save_user_notes(payload=None, user_id=None, user_email=None):
+    try:
+        user_id = payload["sub"]
+        data = request.get_json()
+        
+        headers = {
+            "apikey": SUPABASE_KEY,
+            "Authorization": f"Bearer {SUPABASE_KEY}",
+            "Content-Type": "application/json",
+            "Prefer": "resolution=merge-duplicates"
+        }
+        
+        upsert_payload = {
+            "id": user_id,
+            "predefined_responses": data.get("predefined_responses", {}),
+            "custom_qna": data.get("custom_qna", []),
+            "personal_notes": data.get("personal_notes", ""),
+            "updated_at": datetime.now().isoformat()
+        }
+        
+        response = requests.post(SUPABASE_NOTES_TABLE_URL, headers=headers, json=[upsert_payload])
+        
+        if response.status_code in [200, 201, 204]:
+            return jsonify({"status": "success"}), 200
+        else:
+            return jsonify({"error": "Failed to save notes", "details": response.text}), 500
+            
+    except Exception as e:
+        print("Error in save_user_notes:", e)
+        return jsonify({"error": str(e)}), 500
+
+@app.route("/email_to_advisor", methods=["POST"])
+@jwt_required
+def email_to_advisor(payload=None, user_id=None, user_email=None):
+    try:
+        user_id = payload["sub"]
+        data = request.get_json()
+        
+        advisor_email = data.get("email")
+        notes_data = data.get("notes") # { predefined: {}, custom: [] }
+        screenshot_b64 = data.get("screenshot") # base64 string "data:image/png;base64,..."
+        
+        if not advisor_email:
+            return jsonify({"error": "Advisor email is required"}), 400
+
+        # Construct Email Body
+        body = f"Hello,\n\nA student has shared their course selection report with you via Amherst CourseFinder.\n\n"
+        
+        body += "--- ADVISOR QUESTIONS ---\n"
+        for q, a in notes_data.get("predefined", {}).items():
+            body += f"Q: {q}\nA: {a or 'No response'}\n\n"
+            
+        if notes_data.get("custom"):
+            body += "--- CUSTOM QUESTIONS ---\n"
+            for item in notes_data.get("custom", []):
+                body += f"Q: {item.get('question')}\nA: {item.get('answer') or 'No response'}\n\n"
+
+        body += "\nBest regards,\nAmherst CourseFinder"
+
+        msg = Message(
+            subject=f"Course Selection Report: {user_email}",
+            recipients=[advisor_email],
+            body=body
+        )
+
+        # Attach Screenshot if provided
+        if screenshot_b64 and "," in screenshot_b64:
+            try:
+                # Remove the "data:image/png;base64," prefix
+                header, encoded = screenshot_b64.split(",", 1)
+                file_data = base64.b64decode(encoded)
+                msg.attach("course_graph_screenshot.png", "image/png", file_data)
+            except Exception as e:
+                print(f"Error attaching screenshot: {e}")
+
+        mail.send(msg)
+        print(f"Email sent successfully to {advisor_email}")
+        
+        return jsonify({"message": "Email sent to advisor successfully!"}), 200
+        
+    except Exception as e:
+        print("Error in email_to_advisor:", e)
+        return jsonify({"error": str(e)}), 500
 
 @app.route('/health')
 def health_check():
