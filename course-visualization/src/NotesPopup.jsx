@@ -114,8 +114,7 @@ export default function NotesPopup({ isOpen, onClose, graphRef, classYear }) {
         const dataToSave = {
             predefined_responses: predefinedResponses,
             custom_qna: customQna,
-            personal_notes: personalNotes,
-            student_name: studentName
+            personal_notes: personalNotes
         };
 
         // Immediate local save
