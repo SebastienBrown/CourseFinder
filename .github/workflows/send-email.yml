@@ -1,0 +1,31 @@
+name: Send Advisor Email
+on:
+  repository_dispatch:
+    types: [send-report]
+
+jobs:
+  email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Screenshot
+        if: github.event.client_payload.screenshot_url != ''
+        run: |
+          curl -L "${{ github.event.client_payload.screenshot_url }}" -o screenshot.png
+
+      - name: Send Mail
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{secrets.MAIL_USERNAME}}
+          password: ${{secrets.MAIL_PASSWORD}}
+          subject: "Amherst CourseFinder Report: ${{github.event.client_payload.user_email}}"
+          to: ${{github.event.client_payload.advisor_email}}
+          from: "Amherst CourseFinder <${{secrets.MAIL_USERNAME}}>"
+          html_body: |
+            ${{github.event.client_payload.body_html}}
+            <br>
+            <p><i>Note: The high-resolution course map is attached to this email.</i></p>
+            <br>
+            <p><i>Sent via GitHub Actions (Secure Disposable Attachment)</i></p>
+          attachments: screenshot.png

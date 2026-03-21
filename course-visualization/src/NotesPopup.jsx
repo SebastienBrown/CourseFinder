@@ -180,10 +180,38 @@ export default function NotesPopup({ isOpen, onClose, graphRef, classYear }) {
             const { data: { session } } = await supabase.auth.getSession();
 
             // Capture Screenshot
-            let screenshotBase64 = "";
+            // 1. Capture High-Quality Screenshot
+            let screenshotUrl = "";
+            let fileName = "";
             if (graphRef && graphRef.current) {
-                const canvas = await html2canvas(graphRef.current);
-                screenshotBase64 = canvas.toDataURL("image/png");
+                const canvas = await html2canvas(graphRef.current, {
+                    scale: 2, // High quality
+                    useCORS: true
+                });
+
+                // Convert to Blob for upload
+                const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+                fileName = `report_${session.user.id}_${Date.now()}.png`;
+
+                // 2. Upload to Supabase Storage (Private bucket 'reports' recommended)
+                const { data, error: uploadError } = await supabase.storage
+                    .from('reports')
+                    .upload(fileName, blob, { contentType: 'image/png', upsert: true });
+
+                if (uploadError) {
+                    console.error("Supabase Upload Error:", uploadError);
+                } else {
+                    // Create a Signed URL (valid for 5 minutes / 300 seconds)
+                    const { data: { signedUrl }, error: signedUrlError } = await supabase.storage
+                        .from('reports')
+                        .createSignedUrl(fileName, 300);
+
+                    if (signedUrlError) {
+                        console.error("Signed URL Error:", signedUrlError);
+                    } else {
+                        screenshotUrl = signedUrl;
+                    }
+                }
             }
 
             const res = await fetch(`${backendUrl}/email_to_advisor`, {
@@ -195,14 +223,19 @@ export default function NotesPopup({ isOpen, onClose, graphRef, classYear }) {
                 body: JSON.stringify({
                     email: advisorEmail,
                     notes: { predefined: predefinedResponses, custom: customQna },
-                    screenshot: screenshotBase64
+                    screenshot_url: screenshotUrl,
+                    file_name: fileName
                 })
             });
 
+            const result = await res.json();
             if (res.ok) {
-                alert("Email sent to advisor!");
+                console.log("--- SUCCESS: Secure email trigger (with temporary signed URL) sent to GitHub Actions ---");
+                alert("Email request sent! (Note: The screenshot link is temporary and will be deleted after the email is sent)");
             } else {
-                alert("Failed to send email.");
+                const details = result.details ? ` (${result.details})` : "";
+                console.error("Failed to trigger email:", result);
+                alert("Failed to send email." + details);
             }
         } catch (err) {
             console.error(err);

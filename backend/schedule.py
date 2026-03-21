@@ -16,6 +16,9 @@ from collections import Counter
 from functools import wraps
 import time
 from datetime import datetime
+from supabase import create_client, Client
+import threading
+import time
 from query_validation import QueryValidator
 import jwt
 import glob
@@ -30,7 +33,8 @@ SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 # Create global validator instance
 validator = QueryValidator()
 
-#supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+# Supabase Client for Storage
+supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 SUPABASE_TABLE_URL = f"{SUPABASE_URL}/rest/v1/user_courses"  # Example table path
 SUPABASE_TABLE_URL_EXTRA=f"{SUPABASE_URL}/rest/v1/user_courses_test"
@@ -1196,6 +1200,15 @@ def save_user_notes(payload=None, user_id=None, user_email=None):
         print("Error in save_user_notes:", e)
         return jsonify({"error": str(e)}), 500
 
+def cleanup_supabase_report(file_name):
+    """Wait and then delete the report from Supabase storage."""
+    time.sleep(120)  # Wait 2 minutes for GitHub to finish
+    try:
+        supabase.storage.from_("reports").remove([file_name])
+        print(f"--- SUCCESS: Deleted disposable report {file_name} from Supabase ---")
+    except Exception as e:
+        print(f"--- ERROR: Failed to delete {file_name} from Supabase: {e} ---")
+
 @app.route("/email_to_advisor", methods=["POST"])
 @jwt_required
 def email_to_advisor(payload=None, user_id=None, user_email=None):
@@ -1204,47 +1217,68 @@ def email_to_advisor(payload=None, user_id=None, user_email=None):
         data = request.get_json()
         
         advisor_email = data.get("email")
-        notes_data = data.get("notes") # { predefined: {}, custom: [] }
-        screenshot_b64 = data.get("screenshot") # base64 string "data:image/png;base64,..."
+        notes_data = data.get("notes")
+        screenshot_url = data.get("screenshot_url")
+        file_name = data.get("file_name")
         
         if not advisor_email:
             return jsonify({"error": "Advisor email is required"}), 400
 
-        # Construct Email Body
-        body = f"Hello,\n\nA student has shared their course selection report with you via Amherst CourseFinder.\n\n"
+        # Validate GitHub Configuration
+        if not GITHUB_TOKEN:
+            print("ERROR: GITHUB_TOKEN environment variable is not set!")
+            return jsonify({"error": "Server configuration is missing GITHUB_TOKEN."}), 500
+
+        # Construct Email Body (HTML)
+        body_html = f"<h3>Amherst CourseFinder: Student Report</h3>"
+        body_html += f"<p>A student ({user_email}) has shared their course selection report with you.</p>"
         
-        body += "--- ADVISOR QUESTIONS ---\n"
-        for q, a in notes_data.get("predefined", {}).items():
-            body += f"Q: {q}\nA: {a or 'No response'}\n\n"
+        if notes_data:
+            body_html += "<h4>Advisor Questions:</h4><ul>"
+            for q, a in notes_data.get('predefined', {}).items():
+                body_html += f"<li><b>{q}:</b> {a or 'No response'}</li>"
+            body_html += "</ul>"
             
-        if notes_data.get("custom"):
-            body += "--- CUSTOM QUESTIONS ---\n"
-            for item in notes_data.get("custom", []):
-                body += f"Q: {item.get('question')}\nA: {item.get('answer') or 'No response'}\n\n"
+            if notes_data.get('custom'):
+                body_html += "<h4>Custom Questions:</h4><ul>"
+                for item in notes_data.get('custom', []):
+                    q = item.get('question')
+                    a = item.get('answer')
+                    if q and a:
+                        body_html += f"<li><b>{q}:</b> {a}</li>"
+                body_html += "</ul>"
 
-        body += "\nBest regards,\nAmherst CourseFinder"
+        body_html += "<br><p>Best regards,<br>Amherst CourseFinder</p>"
 
-        msg = Message(
-            subject=f"Course Selection Report: {user_email}",
-            recipients=[advisor_email],
-            body=body
-        )
-
-        # Attach Screenshot if provided
-        if screenshot_b64 and "," in screenshot_b64:
-            try:
-                # Remove the "data:image/png;base64," prefix
-                header, encoded = screenshot_b64.split(",", 1)
-                file_data = base64.b64decode(encoded)
-                msg.attach("course_graph_screenshot.png", "image/png", file_data)
-            except Exception as e:
-                print(f"Error attaching screenshot: {e}")
-
-        mail.send(msg)
-        print(f"Email sent successfully to {advisor_email}")
+        # Trigger GitHub Dispatch
+        dispatch_url = f"https://api.github.com/repos/{GITHUB_REPO}/dispatches"
+        headers = {
+            "Authorization": f"Bearer {GITHUB_TOKEN}",
+            "Accept": "application/vnd.github.v3+json",
+            "Content-Type": "application/json"
+        }
+        payload_data = {
+            "event_type": "send-report",
+            "client_payload": {
+                "advisor_email": advisor_email,
+                "user_email": user_email,
+                "body_html": body_html,
+                "screenshot_url": screenshot_url
+            }
+        }
         
-        return jsonify({"message": "Email sent to advisor successfully!"}), 200
+        response = requests.post(dispatch_url, headers=headers, json=payload_data)
         
+        if response.status_code == 204:
+            # Trigger background cleanup if a file was uploaded
+            if file_name:
+                threading.Thread(target=cleanup_supabase_report, args=(file_name,)).start()
+            print(f"--- SUCCESS: Pushed email trigger to GitHub Actions for {advisor_email} ---")
+            return jsonify({"message": "Email request sent to GitHub Actions successfully!"}), 200
+        else:
+            print(f"ERROR: GitHub API returned {response.status_code}: {response.text}")
+            return jsonify({"error": "Failed to trigger GitHub Action", "details": response.text}), 500
+            
     except Exception as e:
         print("Error in email_to_advisor:", e)
         return jsonify({"error": str(e)}), 500

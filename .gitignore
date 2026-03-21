@@ -70,3 +70,6 @@ course_metadata/*
 
 # --- Node.js dependencies ---
 node_modules/
+# --- Research & Analysis ---
+amherst_reference/
+temp_analysis/
