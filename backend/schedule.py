@@ -40,6 +40,7 @@ SUPABASE_TABLE_URL = f"{SUPABASE_URL}/rest/v1/user_courses"  # Example table pat
 SUPABASE_TABLE_URL_EXTRA=f"{SUPABASE_URL}/rest/v1/user_courses_test"
 SUPABASE_FEEDBACK_TABLE_URL=f"{SUPABASE_URL}/rest/v1/questions"
 SUPABASE_NOTES_TABLE_URL=f"{SUPABASE_URL}/rest/v1/user_notes"
+SUPABASE_SURPRISE_TABLE_URL=f"{SUPABASE_URL}/rest/v1/surprise_history"
 
 # --- Azure OpenAI: use TWO clients (different resources) ---
 
@@ -71,7 +72,7 @@ client_embed = openai.AzureOpenAI(
 app = Flask(__name__)
 
 # Load allowed origins from environment variables
-ALLOWED_ORIGINS = os.getenv('ALLOWED_ORIGINS', 'http://localhost:3000' ).split(',')
+ALLOWED_ORIGINS = os.getenv('ALLOWED_ORIGINS', 'http://localhost:3000').split(',')
 
 # Configure CORS with specific origins
 CORS(app, origins=ALLOWED_ORIGINS, 
@@ -1046,6 +1047,35 @@ Respond with ONLY this JSON:
             "semester": latest_semester,
             "surprise_connection": surprise_connection,
         }
+
+        # --- Log to Supabase surprise_history with incremental index ---
+        try:
+            # 1. Fetch current max index for this user
+            idx_url = f"{SUPABASE_SURPRISE_TABLE_URL}?user_id=eq.{user_id}&select=insight_index&order=insight_index.desc&limit=1"
+            idx_resp = requests.get(idx_url, headers=headers)
+            new_index = 1
+            if idx_resp.status_code == 200:
+                idx_data = idx_resp.json()
+                if idx_data and len(idx_data) > 0:
+                    last_index = idx_data[0].get("insight_index") or 0
+                    new_index = last_index + 1
+
+            # 2. Log the surprise
+            log_payload = {
+                "user_id": user_id,
+                "course_codes": recommendation["course_codes"],
+                "course_title": recommendation["course_title"],
+                "semester": recommendation["semester"],
+                "surprise_connection": recommendation["surprise_connection"],
+                "insight_index": new_index
+            }
+            log_resp = requests.post(SUPABASE_SURPRISE_TABLE_URL, headers=headers, json=log_payload)
+            if log_resp.status_code not in [200, 201]:
+                print(f"Error logging surprise to Supabase: {log_resp.text}")
+
+        except Exception as log_err:
+            print(f"Error in surprise logging process: {log_err}")
+
         return jsonify(recommendation), 200
 
     except Exception as e:
@@ -1136,7 +1166,7 @@ def check_user_info(payload=None, user_id=None, user_email=None):
                 "major": user_data.get("major")
             })
         
-        return jsonify({"has_info": false})
+        return jsonify({"has_info": False})
         
     except Exception as e:
         print("Error in check_user_info:", e)

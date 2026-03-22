@@ -18,6 +18,19 @@ import { SemesterProvider } from './SemesterContext';
 import SubmissionPage from "./SubmissionPage";
 import NotesPopup from "./NotesPopup";
 import { StickyNote } from "lucide-react";
+import { Analytics } from "@vercel/analytics/react"
+import posthog from 'posthog-js'
+// --- PostHog Initialization ---
+if (process.env.REACT_APP_POSTHOG_KEY && process.env.REACT_APP_POSTHOG_HOST) {
+  console.log("🚀 Initializing PostHog with:", process.env.REACT_APP_POSTHOG_HOST);
+  posthog.init(process.env.REACT_APP_POSTHOG_KEY, {
+    api_host: process.env.REACT_APP_POSTHOG_HOST,
+    person_profiles: 'identified_only',
+    capture_pageview: true,
+  });
+} else {
+  console.warn("⚠️ PostHog: Missing REACT_APP_POSTHOG_KEY or REACT_APP_POSTHOG_HOST in .env");
+}
 
 
 //console.log("🟢 Using backend URL:", process.env.REACT_APP_BACKEND_URL);
@@ -154,6 +167,22 @@ function App() {
       setConflicted([]);
     }
   }, [backendUrl]);
+
+  // --- PostHog Identity Sync (Developer Switch) ---
+  useEffect(() => {
+    const isIdentifyEnabled = String(process.env.REACT_APP_POSTHOG_IDENTIFY_ENABLED).toLowerCase() === 'true';
+
+    if (user && isIdentifyEnabled) {
+      console.log("👤 PostHog: Identifying user:", user.email);
+      posthog.identify(user.id, {
+        email: user.email,
+        class_year: userClassYear
+      });
+    } else {
+      console.log("👤 PostHog: Staying anonymous (Switch is:", process.env.REACT_APP_POSTHOG_IDENTIFY_ENABLED, ")");
+      posthog.reset(); // Stay anonymous
+    }
+  }, [user, userClassYear]);
 
   // Handler for surprise recommendation
   const handleSurpriseRecommendation = useCallback((courseCodes) => {
@@ -374,6 +403,7 @@ function App() {
           onClose={handleUserInfoClose}
           onSave={handleUserInfoSave}
         />
+        <Analytics />
       </Router>
     </SemesterProvider>
   );

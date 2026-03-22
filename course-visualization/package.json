@@ -13,6 +13,7 @@
     "dom-to-image-more": "^3.7.1",
     "html2canvas": "^1.4.1",
     "lucide-react": "^0.515.0",
+    "posthog-js": "^1.363.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.2",
