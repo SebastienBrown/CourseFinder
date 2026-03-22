@@ -72,13 +72,12 @@ client_embed = openai.AzureOpenAI(
 app = Flask(__name__)
 
 # Load allowed origins from environment variables
-ALLOWED_ORIGINS = os.getenv('ALLOWED_ORIGINS', 'http://localhost:3000,http://localhost:3001,http://127.0.0.1:3000,http://127.0.0.1:3001' ).split(',')
+ALLOWED_ORIGINS = os.getenv('ALLOWED_ORIGINS', 'http://localhost:3000', 'http://localhost:3001').split(',')
 
-# Configure CORS to allow ALL origins for debugging
-CORS(app, 
-     resources={r"/*": {"origins": "*"}},
-     methods=['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-     allow_headers=['Content-Type', 'Authorization', 'Prefer'])
+# Configure CORS with specific origins
+CORS(app, origins=ALLOWED_ORIGINS, 
+     methods=['GET', 'POST'],
+     allow_headers=['Content-Type', 'Authorization'])
 
 #CORS(app)
 
@@ -108,11 +107,6 @@ GITHUB_REPO = os.getenv("GITHUB_REPO", "SebastienBrown/CourseFinder") # owner/re
 def jwt_required(f):
     @wraps(f)
     def wrapper(*args, **kwargs):
-        # Skip JWT verification for OPTIONS preflight requests
-        # Return 204 No Content to satisfy the browser preflight
-        if request.method == 'OPTIONS':
-            return '', 204
-
         auth_header = request.headers.get("Authorization")
         if not auth_header or not auth_header.startswith("Bearer "):
             return jsonify({"error": "Missing or invalid Authorization header"}), 401

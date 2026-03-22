@@ -18,7 +18,7 @@ const getPort = () => {
 };
 
 // Export the API base URL
-export const API_BASE_URL = `http://127.0.0.1:${getPort()}`;
+export const API_BASE_URL = process.env.REACT_APP_BACKEND_URL || `http://127.0.0.1:${getPort()}`;
 
 // Allow runtime changes to the port
 export const updatePort = (newPort) => {
