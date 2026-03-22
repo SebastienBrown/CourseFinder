@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "@vercel/analytics": "^2.0.1",
     "html2canvas": "^1.4.1",
     "tsne-js": "^1.0.3"
   },
