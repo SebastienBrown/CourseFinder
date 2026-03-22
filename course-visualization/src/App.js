@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { supabase } from "./supabaseClient";
 import CourseSimilarityPrecomputedGraph from "./CourseSimilarityPrecomputedGraph";
@@ -7,7 +7,7 @@ import Intake from "./Intake"; // intake semester checklist
 import SemesterCourseIntake from "./SemesterCourseIntake"; // per-semester course selector
 import { useNavigate } from "react-router-dom";
 import CourseInput from "./CourseInput";
-import { CURRENT_SEMESTER, API_BASE_URL } from "./config";
+import { CURRENT_SEMESTER } from "./config";
 import Upload from "./Upload";
 import IntakePrompt from "./IntakePrompt";
 import SurpriseButton from "./SurpriseButton";
@@ -16,13 +16,15 @@ import UserInfoPopup from "./UserInfoPopup";
 import AccountDropdown from "./AccountDropdown";
 import { SemesterProvider } from './SemesterContext';
 import SubmissionPage from "./SubmissionPage";
+import NotesPopup from "./NotesPopup";
+import { StickyNote } from "lucide-react";
 
 
 //console.log("🟢 Using backend URL:", process.env.REACT_APP_BACKEND_URL);
 
 
 // Layout component for shared UI elements
-function Layout({ children, logout, onShowHelp, onShowUserInfo }) {
+function Layout({ children, logout, onShowHelp, onShowUserInfo, onShowNotes }) {
   const navigate = useNavigate();
 
   return (
@@ -50,6 +52,14 @@ function Layout({ children, logout, onShowHelp, onShowUserInfo }) {
               className="px-4 py-2 bg-purple-800 text-white rounded-lg font-semibold shadow hover:bg-purple-800 transition-all duration-200 h-10"
             >
               Ask a Question
+            </button>
+
+            <button
+              onClick={onShowNotes}
+              className="px-4 py-2 bg-purple-600 text-white rounded-lg font-semibold shadow hover:bg-purple-700 transition-all duration-200 h-10 flex items-center gap-2"
+            >
+              <StickyNote className="w-4 h-4" />
+              Notes
             </button>
 
             <button
@@ -105,10 +115,13 @@ function App() {
   const [conflicted, setConflicted] = useState([]);
   const [currentSemester, setCurrentSemester] = useState(CURRENT_SEMESTER);
   const [showOnboarding, setShowOnboarding] = useState(false);
-  const backendUrl = API_BASE_URL;
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
   const [showTerms, setShowTerms] = useState(false);
   const [showUserInfoPopup, setShowUserInfoPopup] = useState(false);
+  const [showNotesPopup, setShowNotesPopup] = useState(false);
+  const [userClassYear, setUserClassYear] = useState(null);
   const [pendingUser, setPendingUser] = useState(null);
+  const graphRef = useRef(null);
 
   const handleHighlight = useCallback((newHighlighted) => {
     // Check if newHighlighted is a function
@@ -181,6 +194,7 @@ function App() {
       }
 
       const data = await response.json();
+      if (data.class_year) setUserClassYear(data.class_year);
       return data.has_info;
     } catch (error) {
       console.error("Error checking user info:", error);
@@ -285,7 +299,12 @@ function App() {
           <Route
             path="/"
             element={
-              <Layout logout={logout} onShowHelp={() => setShowOnboarding(true)} onShowUserInfo={() => showUserInfoPopupForUser(user)}>
+              <Layout
+                logout={logout}
+                onShowHelp={() => setShowOnboarding(true)}
+                onShowUserInfo={() => showUserInfoPopupForUser(user)}
+                onShowNotes={() => setShowNotesPopup(true)}
+              >
                 <CourseInput
                   onHighlight={handleHighlight}
                   onConflicted={setConflicted}
@@ -303,6 +322,7 @@ function App() {
                   onHighlight={handleHighlight}
                   showOnboarding={showOnboarding}
                   setShowOnboarding={setShowOnboarding}
+                  captureRef={graphRef}
                 />
                 <SurpriseButton onSurpriseRecommendation={handleSurpriseRecommendation} />
               </Layout>
@@ -343,6 +363,12 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <TermsModal />
+        <NotesPopup
+          isOpen={showNotesPopup}
+          onClose={() => setShowNotesPopup(false)}
+          graphRef={graphRef}
+          classYear={userClassYear}
+        />
         <UserInfoPopup
           isOpen={showUserInfoPopup}
           onClose={handleUserInfoClose}

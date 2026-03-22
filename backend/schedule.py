@@ -1,4 +1,6 @@
 from flask import Flask, request, jsonify
+from flask_mail import Mail, Message
+import base64
 from datetime import datetime
 import json
 import os
@@ -14,6 +16,9 @@ from collections import Counter
 from functools import wraps
 import time
 from datetime import datetime
+from supabase import create_client, Client
+import threading
+import time
 from query_validation import QueryValidator
 import jwt
 import glob
@@ -28,11 +33,13 @@ SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 # Create global validator instance
 validator = QueryValidator()
 
-#supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+# Supabase Client for Storage
+supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 SUPABASE_TABLE_URL = f"{SUPABASE_URL}/rest/v1/user_courses"  # Example table path
 SUPABASE_TABLE_URL_EXTRA=f"{SUPABASE_URL}/rest/v1/user_courses_test"
 SUPABASE_FEEDBACK_TABLE_URL=f"{SUPABASE_URL}/rest/v1/questions"
+SUPABASE_NOTES_TABLE_URL=f"{SUPABASE_URL}/rest/v1/user_notes"
 
 # --- Azure OpenAI: use TWO clients (different resources) ---
 
@@ -77,10 +84,24 @@ CORS(app, origins=ALLOWED_ORIGINS,
 # Find this in: Settings → Configuration → Data API
 SUPABASE_JWT_SECRET = os.getenv("SUPABASE_JWT_SECRET")
 
+# --- Flask-Mail Configuration ---
+app.config['MAIL_SERVER'] = os.getenv('MAIL_SERVER', 'smtp.gmail.com')
+app.config['MAIL_PORT'] = int(os.getenv('MAIL_PORT', 587))
+app.config['MAIL_USE_TLS'] = os.getenv('MAIL_USE_TLS', 'True') == 'True'
+app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
+app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_USERNAME')
+
+mail = Mail(app)
+
 if not SUPABASE_JWT_SECRET:
     raise ValueError("SUPABASE_JWT_SECRET environment variable is required")
 
 print("Using Supabase JWT Secret for HS256 verification")
+
+# --- GitHub Actions Dispatch Configuration ---
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+GITHUB_REPO = os.getenv("GITHUB_REPO", "SebastienBrown/CourseFinder") # owner/repo
 
 def jwt_required(f):
     @wraps(f)
@@ -1109,13 +1130,163 @@ def check_user_info(payload=None, user_id=None, user_email=None):
                 user_data.get("class_year") and 
                 user_data.get("major")
             )
+            return jsonify({
+                "has_info": has_info,
+                "class_year": user_data.get("class_year"),
+                "major": user_data.get("major")
+            })
         
-        return jsonify({"has_info": has_info})
+        return jsonify({"has_info": false})
         
     except Exception as e:
         print("Error in check_user_info:", e)
         return jsonify({"error": str(e)}), 500
 
+
+# --- Notes Feature Endpoints ---
+
+@app.route("/get_user_notes", methods=["GET"])
+@jwt_required
+def get_user_notes(payload=None, user_id=None, user_email=None):
+    try:
+        user_id = payload["sub"]
+        headers = {
+            "apikey": SUPABASE_KEY,
+            "Authorization": f"Bearer {SUPABASE_KEY}",
+            "Content-Type": "application/json"
+        }
+        
+        url = f"{SUPABASE_NOTES_TABLE_URL}?id=eq.{user_id}"
+        response = requests.get(url, headers=headers)
+        
+        if response.status_code == 200:
+            data = response.json()
+            if data and len(data) > 0:
+                return jsonify(data[0]), 200
+            return jsonify({}), 200
+        else:
+            return jsonify({"error": "Failed to fetch notes", "details": response.text}), response.status_code
+            
+    except Exception as e:
+        print("Error in get_user_notes:", e)
+        return jsonify({"error": str(e)}), 500
+
+@app.route("/save_user_notes", methods=["POST"])
+@jwt_required
+def save_user_notes(payload=None, user_id=None, user_email=None):
+    try:
+        user_id = payload["sub"]
+        data = request.get_json()
+        
+        headers = {
+            "apikey": SUPABASE_KEY,
+            "Authorization": f"Bearer {SUPABASE_KEY}",
+            "Content-Type": "application/json",
+            "Prefer": "resolution=merge-duplicates"
+        }
+        
+        upsert_payload = {
+            "id": user_id,
+            "predefined_responses": data.get("predefined_responses", {}),
+            "custom_qna": data.get("custom_qna", []),
+            "personal_notes": data.get("personal_notes", ""),
+            "updated_at": datetime.now().isoformat()
+        }
+        
+        response = requests.post(SUPABASE_NOTES_TABLE_URL, headers=headers, json=[upsert_payload])
+        
+        if response.status_code in [200, 201, 204]:
+            return jsonify({"status": "success"}), 200
+        else:
+            return jsonify({"error": "Failed to save notes", "details": response.text}), 500
+            
+    except Exception as e:
+        print("Error in save_user_notes:", e)
+        return jsonify({"error": str(e)}), 500
+
+def cleanup_supabase_report(file_name):
+    """Wait and then delete the report from Supabase storage."""
+    time.sleep(120)  # Wait 2 minutes for GitHub to finish
+    try:
+        supabase.storage.from_("reports").remove([file_name])
+        print(f"--- SUCCESS: Deleted disposable report {file_name} from Supabase ---")
+    except Exception as e:
+        print(f"--- ERROR: Failed to delete {file_name} from Supabase: {e} ---")
+
+@app.route("/email_to_advisor", methods=["POST"])
+@jwt_required
+def email_to_advisor(payload=None, user_id=None, user_email=None):
+    global GITHUB_TOKEN, GITHUB_REPO
+    try:
+        user_id = payload["sub"]
+        data = request.get_json()
+        
+        advisor_email = data.get("email")
+        notes_data = data.get("notes")
+        screenshot_url = data.get("screenshot_url")
+        file_name = data.get("file_name")
+        
+        if not advisor_email:
+            return jsonify({"error": "Advisor email is required"}), 400
+
+        # Validate GitHub Configuration
+        if not GITHUB_TOKEN:
+            print("ERROR: GITHUB_TOKEN environment variable is not set!")
+            return jsonify({"error": "Server configuration is missing GITHUB_TOKEN."}), 500
+
+        # Construct Email Body (HTML)
+        body_html = f"<h3>Amherst CourseFinder: Student Report</h3>"
+        body_html += f"<p>A student ({user_email}) has shared their course selection report with you.</p>"
+        
+        if notes_data:
+            body_html += "<h4>Advisor Questions:</h4><ul>"
+            for q, a in notes_data.get('predefined', {}).items():
+                body_html += f"<li><b>{q}:</b> {a or 'No response'}</li>"
+            body_html += "</ul>"
+            
+            if notes_data.get('custom'):
+                body_html += "<h4>Custom Questions:</h4><ul>"
+                for item in notes_data.get('custom', []):
+                    q = item.get('question')
+                    a = item.get('answer')
+                    if q and a:
+                        body_html += f"<li><b>{q}:</b> {a}</li>"
+                body_html += "</ul>"
+
+        body_html += "<br><p>Best regards,<br>Amherst CourseFinder</p>"
+
+        # Trigger GitHub Dispatch
+        dispatch_url = f"https://api.github.com/repos/{GITHUB_REPO}/dispatches"
+        headers = {
+            "Authorization": f"Bearer {GITHUB_TOKEN}",
+            "Accept": "application/vnd.github.v3+json",
+            "Content-Type": "application/json"
+        }
+        payload_data = {
+            "event_type": "send-report",
+            "client_payload": {
+                "advisor_email": advisor_email,
+                "user_email": user_email,
+                "body_html": body_html,
+                "screenshot_url": screenshot_url
+            }
+        }
+        
+        response = requests.post(dispatch_url, headers=headers, json=payload_data)
+        
+        if response.status_code == 204:
+            # Trigger background cleanup if a file was uploaded
+            if file_name:
+                threading.Thread(target=cleanup_supabase_report, args=(file_name,)).start()
+            print(f"--- SUCCESS: Pushed email trigger to GitHub Actions for {advisor_email} ---")
+            return jsonify({"message": "Email request sent to GitHub Actions successfully!"}), 200
+        else:
+            print(f"ERROR: GitHub API returned {response.status_code}: {response.text}")
+            return jsonify({"error": "Failed to trigger GitHub Action", "details": response.text}), 500
+            
+    except Exception as e:
+        print("Error in email_to_advisor:", e)
+        return jsonify({"error": str(e)}), 500
 
 @app.route('/health')
 def health_check():

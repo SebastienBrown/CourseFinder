@@ -1,16 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import { supabase } from "./supabaseClient"; // adjust import if using another auth
-import { useLocation } from 'react-router-dom';
 
 export default function TermsModal() {
   const dialogRef = useRef(null);
   const [checked, setChecked] = useState(false);
   const [loading, setLoading] = useState(false);
-  const backendUrl=process.env.REACT_APP_BACKEND_URL;
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
   const [isOpen, setIsOpen] = useState(null); // null = loading
 
   // Inside TermsModal component:
-//const location = useLocation(); 
 
   // Disable scrolling when modal is loaded
   useEffect(() => {
@@ -35,21 +33,21 @@ export default function TermsModal() {
     const checkTerms = async () => {
       try {
 
-      const { data: { session } } = await supabase.auth.getSession();
-      const token = session?.access_token;
-  
-      if (!token) {
-        console.error("No valid session token found");
-        return;
-      }
+        const { data: { session } } = await supabase.auth.getSession();
+        const token = session?.access_token;
 
-      const res = await fetch(`${backendUrl}/check-terms`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${token}`,
-        },
-      });
+        if (!token) {
+          console.error("No valid session token found");
+          return;
+        }
+
+        const res = await fetch(`${backendUrl}/check-terms`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`,
+          },
+        });
 
         const data = await res.json();
         console.log(data);
@@ -60,7 +58,7 @@ export default function TermsModal() {
       }
     };
     checkTerms();
-  }, []);
+  }, [backendUrl]);
 
 
   const handleAccept = async () => {
@@ -69,7 +67,7 @@ export default function TermsModal() {
     try {
       const { data: { session } } = await supabase.auth.getSession();
       const token = session?.access_token;
-  
+
       if (!token) {
         console.error("No valid session token found");
         return;
@@ -83,7 +81,7 @@ export default function TermsModal() {
         },
       });
       if (!res.ok) throw new Error("Failed to accept terms");
-  
+
       setIsOpen(false); // immediately hide modal after backend update
       document.body.style.overflow = ""; // re-enable scrolling
     } catch (err) {
@@ -124,10 +122,10 @@ export default function TermsModal() {
             By proceeding, you agree to our Terms & Conditions as listed below.
           </p>
           <ul className="list-disc pl-5">
-          <li>The course history data we collect is stored anonymously and used solely to build your personalized course history and provide better course recommendations.</li>
-          <li>We do not sell, share, or monetize this data in any way.</li>
-          <li>Your information will never be used for advertising or shared with third parties.</li>
-          <li>Our goal is to help you discover relevant courses while keeping your academic data private and secure.</li>
+            <li>The course history data we collect is stored anonymously and used solely to build your personalized course history and provide better course recommendations.</li>
+            <li>We do not sell, share, or monetize this data in any way.</li>
+            <li>Your information will never be used for advertising or shared with third parties.</li>
+            <li>Our goal is to help you discover relevant courses while keeping your academic data private and secure.</li>
           </ul>
         </div>
 
@@ -139,7 +137,7 @@ export default function TermsModal() {
             className="mt-1 h-4 w-4 rounded border-gray-300"
           />
           <span className="text-sm text-gray-800">
-            I have read and agree to the <a className="strong font-medium">Terms & Conditions</a>.
+            I have read and agree to the <span className="strong font-medium">Terms & Conditions</span>.
           </span>
         </label>
 
@@ -147,11 +145,10 @@ export default function TermsModal() {
           <button
             onClick={handleAccept}
             disabled={!checked || loading}
-            className={`rounded-2xl px-4 py-2 text-sm font-medium text-white shadow transition active:scale-[.98] ${
-              checked
+            className={`rounded-2xl px-4 py-2 text-sm font-medium text-white shadow transition active:scale-[.98] ${checked
                 ? "bg-black hover:bg-gray-800"
                 : "bg-gray-300 cursor-not-allowed"
-            }`}
+              }`}
             aria-disabled={!checked || loading}
           >
             {loading ? "Saving..." : "Accept & Continue"}
