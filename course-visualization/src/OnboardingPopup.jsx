@@ -1,8 +1,8 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function OnboardingPopup({ isOpen, onClose, isPublicMode = false }) {
   const [currentStep, setCurrentStep] = useState(0);
-  
+
 
 
   const steps = [
@@ -26,7 +26,7 @@ export default function OnboardingPopup({ isOpen, onClose, isPublicMode = false 
         <div className="space-y-4">
           <div className="space-y-3">
             <div className="flex items-start space-x-3">
-              <div className="bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">1</div>
+              <div className="flex-shrink-0 bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">1</div>
               <div>
                 <h4 className="font-semibold text-[#3f1f69]">Single Semester View</h4>
                 <p className="text-gray-700 text-sm">
@@ -35,11 +35,11 @@ export default function OnboardingPopup({ isOpen, onClose, isPublicMode = false 
               </div>
             </div>
             <div className="flex items-start space-x-3">
-              <div className="bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">2</div>
+              <div className="flex-shrink-0 bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">2</div>
               <div>
                 <h4 className="font-semibold text-[#3f1f69]">My Course History</h4>
                 <p className="text-gray-700 text-sm">
-                  {isPublicMode 
+                  {isPublicMode
                     ? "View your complete academic journey across all semesters (available when signed in)."
                     : "View your complete academic journey across all semesters. Your courses will be highlighted on the graph."
                   }
@@ -57,18 +57,18 @@ export default function OnboardingPopup({ isOpen, onClose, isPublicMode = false 
         <div className="space-y-4">
           <div className="space-y-3">
             <div className="flex items-start space-x-3">
-              <div className="bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">1</div>
+              <div className="flex-shrink-0 bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">1</div>
               <div>
                 <h4 className="font-semibold text-[#3f1f69]">Search Bar</h4>
                 <p className="text-gray-700 text-sm">
                   <strong>Default search</strong>: Type course codes (like "MATH-111") or course titles to find specific courses. Matching courses will appear as suggestions.<br />
-                  <strong>Semantic search</strong>: Search with natural language ("a math course based on basic calculus").<br/>
+                  <strong>Semantic search</strong>: Search with natural language ("a math course based on basic calculus").<br />
                   <em><strong>Toggle by clicking "Default Search"/"Semantic Search" button.</strong></em>
                 </p>
               </div>
             </div>
             <div className="flex items-start space-x-3">
-              <div className="bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">2</div>
+              <div className="flex-shrink-0 bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">2</div>
               <div>
                 <h4 className="font-semibold text-[#3f1f69]">Course Selection</h4>
                 <p className="text-gray-700 text-sm">
@@ -77,7 +77,7 @@ export default function OnboardingPopup({ isOpen, onClose, isPublicMode = false 
               </div>
             </div>
             <div className="flex items-start space-x-3">
-              <div className="bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">3</div>
+              <div className="flex-shrink-0 bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">3</div>
               <div>
                 <h4 className="font-semibold text-[#3f1f69]">Similar Courses</h4>
                 <p className="text-gray-700 text-sm">
@@ -96,7 +96,7 @@ export default function OnboardingPopup({ isOpen, onClose, isPublicMode = false 
         <div className="space-y-4">
           <div className="space-y-3">
             <div className="flex items-start space-x-3">
-              <div className="bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">1</div>
+              <div className="flex-shrink-0 bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">1</div>
               <div>
                 <h4 className="font-semibold text-[#3f1f69]">Zoom & Pan</h4>
                 <p className="text-gray-700 text-sm">
@@ -105,7 +105,7 @@ export default function OnboardingPopup({ isOpen, onClose, isPublicMode = false 
               </div>
             </div>
             <div className="flex items-start space-x-3">
-              <div className="bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">2</div>
+              <div className="flex-shrink-0 bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">2</div>
               <div>
                 <h4 className="font-semibold text-[#3f1f69]">Department Legend</h4>
                 <p className="text-gray-700 text-sm">
@@ -114,7 +114,7 @@ export default function OnboardingPopup({ isOpen, onClose, isPublicMode = false 
               </div>
             </div>
             <div className="flex items-start space-x-3">
-              <div className="bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">3</div>
+              <div className="flex-shrink-0 bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">3</div>
               <div>
                 <h4 className="font-semibold text-[#3f1f69]">Course Shapes</h4>
                 <p className="text-gray-700 text-sm">
@@ -133,7 +133,7 @@ export default function OnboardingPopup({ isOpen, onClose, isPublicMode = false 
         <div className="space-y-4">
           <div className="space-y-3">
             <div className="flex items-start space-x-3">
-              <div className="bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">1</div>
+              <div className="flex-shrink-0 bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">1</div>
               <div>
                 <h4 className="font-semibold text-[#3f1f69]">Conflict Detection</h4>
                 <p className="text-gray-700 text-sm">
@@ -142,7 +142,7 @@ export default function OnboardingPopup({ isOpen, onClose, isPublicMode = false 
               </div>
             </div>
             <div className="flex items-start space-x-3">
-              <div className="bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">2</div>
+              <div className="flex-shrink-0 bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">2</div>
               <div>
                 <h4 className="font-semibold text-[#3f1f69]">Download Image</h4>
                 <p className="text-gray-700 text-sm">
@@ -151,11 +151,11 @@ export default function OnboardingPopup({ isOpen, onClose, isPublicMode = false 
               </div>
             </div>
             <div className="flex items-start space-x-3">
-              <div className="bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">3</div>
+              <div className="flex-shrink-0 bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">3</div>
               <div>
                 <h4 className="font-semibold text-[#3f1f69]">Add Courses</h4>
                 <p className="text-gray-700 text-sm">
-                  {isPublicMode 
+                  {isPublicMode
                     ? "Sign in to add your course history and see your personalized academic journey."
                     : "Use the 'Add Courses' button to input your course history and see your personalized academic journey."
                   }
@@ -163,7 +163,7 @@ export default function OnboardingPopup({ isOpen, onClose, isPublicMode = false 
               </div>
             </div>
             <div className="flex items-start space-x-3">
-              <div className="bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">4</div>
+              <div className="flex-shrink-0 bg-[#3f1f69] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">4</div>
               <div>
                 <h4 className="font-semibold text-[#3f1f69]">Suprise Recommendation</h4>
                 <p className="text-gray-700 text-sm">
@@ -258,13 +258,16 @@ export default function OnboardingPopup({ isOpen, onClose, isPublicMode = false 
           {steps[currentStep].content}
         </div>
 
-        {/* Progress Bar */}
+        {/* Progress Tracker (Circles) */}
         <div className="mb-6">
-          <div className="w-full bg-gray-200 rounded-full h-2">
-            <div 
-              className="bg-[#3f1f69] h-2 rounded-full transition-all duration-300"
-              style={{ width: `${((currentStep + 1) / steps.length) * 100}%` }}
-            ></div>
+          <div className="flex justify-center space-x-2">
+            {steps.map((_, index) => (
+              <div
+                key={index}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentStep ? 'bg-[#3f1f69] w-6' : 'bg-gray-300'
+                  }`}
+              ></div>
+            ))}
           </div>
           <div className="text-center text-sm text-gray-500 mt-2">
             Step {currentStep + 1} of {steps.length}
@@ -276,15 +279,14 @@ export default function OnboardingPopup({ isOpen, onClose, isPublicMode = false 
           <button
             onClick={handlePrevious}
             disabled={currentStep === 0}
-            className={`px-4 py-2 rounded-md font-medium transition-colors ${
-              currentStep === 0
+            className={`px-4 py-2 rounded-md font-medium transition-colors ${currentStep === 0
                 ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-            }`}
+              }`}
           >
             Previous
           </button>
-          
+
           <button
             onClick={handleNext}
             className="px-6 py-2 bg-[#3f1f69] text-white rounded-md font-medium hover:bg-[#311a4d] transition-colors"

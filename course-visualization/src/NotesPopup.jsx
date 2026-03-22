@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { X, Plus, Trash2, Send, Save, CheckCircle } from 'lucide-react';
 import { supabase } from './supabaseClient';
 import html2canvas from 'html2canvas';
+import { API_BASE_URL } from './config';
 
 const FY_QUESTIONS = [
     "Are there particular skills or knowledge you would like to gain this semester? If so, what are they?",
@@ -25,7 +26,7 @@ export default function NotesPopup({ isOpen, onClose, graphRef, classYear }) {
     const [advisorEmail, setAdvisorEmail] = useState("");
     const [saveStatus, setSaveStatus] = useState("Saved");
     const [isSending, setIsSending] = useState(false);
-    const backendUrl = process.env.REACT_APP_BACKEND_URL;
+    const backendUrl = API_BASE_URL;
     const saveTimeoutRef = useRef(null);
 
     // Determine if student is a First Year
