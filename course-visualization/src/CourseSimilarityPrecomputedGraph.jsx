@@ -12,7 +12,7 @@ import {
   applyTSNE,
   useLoadData,
 } from "./CourseSimilarityPrecomputedProcessor";
-import { CURRENT_SEMESTER, AVAILABLE_SEMESTERS, getSemesterDataPaths } from "./config";
+import { CURRENT_SEMESTER, AVAILABLE_SEMESTERS, getSemesterDataPaths, API_BASE_URL } from "./config";
 import CoursePopup from "./CoursePopup";
 import { supabase } from "./supabaseClient"; // make sure this points to your initialized Supabase client
 // import { API_BASE_URL } from './config';
@@ -28,7 +28,7 @@ import domtoimage from 'dom-to-image-more';
 
 // Use the globally defined current semester
 // const semester = CURRENT_SEMESTER;
-const backendUrl = process.env.REACT_APP_BACKEND_URL;
+const backendUrl = API_BASE_URL;
 
 // === Tranche & Shape Definitions ===
 const TRANCHE_SHAPES = {
@@ -711,8 +711,8 @@ export default function CourseSimilarityPrecomputedGraph({
           } else { // Default size for other courses
             baseSize = 7;
           }
-          // Opacity: full for search-highlighted or historical courses, half for others
-          opacity = (d.highlighted || d.historyHighlighted) ? 1 : 0.5;
+          // Opacity: full for search-highlighted or historical courses, much lower for others in history tab
+          opacity = (d.highlighted || d.historyHighlighted) ? 1 : 0.15;
         } else {
           // Single Semester View: Adjust base sizes for single vs multi-code courses
           if (d.codes.length === 1) {
@@ -738,6 +738,11 @@ export default function CourseSimilarityPrecomputedGraph({
           const dept = departments[0];
           let shape = getShapeForDept(dept);
           let color = majorColorMap.get(dept) || "#999";
+
+          // Grey out non-highlighted courses in history tab
+          if (activeTab === 'yourHistory' && !d.historyHighlighted && !d.highlighted) {
+            color = "#d1d1d1";
+          }
 
           // Make colors more vibrant for user's courses in history tab or highlighted courses in single semester view
           if (activeTab === 'yourHistory') {
@@ -843,6 +848,11 @@ export default function CourseSimilarityPrecomputedGraph({
 
             const shape = getShapeForDept(dept);
             let color = majorColorMap.get(dept) || "#999";
+
+            // Grey out non-highlighted multi-code courses in history tab
+            if (activeTab === 'yourHistory' && !d.historyHighlighted && !d.highlighted) {
+              color = "#d1d1d1";
+            }
 
             // Make colors more vibrant based on tab and highlighting state
             if (activeTab === 'yourHistory') {
@@ -1025,7 +1035,8 @@ export default function CourseSimilarityPrecomputedGraph({
             } else if (userCoursesAtThisPoint.length > 1) {
               return `${userCoursesAtThisPoint[0].code}...`;
             } else {
-              return d.codes.length > 1 ? `${d.codes[0]}...` : d.codes[0];
+              // Only show label for non-historical courses if they are specifically highlighted by search
+              return d.highlighted ? (d.codes.length > 1 ? `${d.codes[0]}...` : d.codes[0]) : "";
             }
           });
       } else {
@@ -1143,10 +1154,10 @@ export default function CourseSimilarityPrecomputedGraph({
             const item = legend.append("g")
               .attr("transform", `translate(${12 + col * legendColWidth}, ${currentY + row * legendItemHeight})`);
 
-            // Small colored dot for each department
-            item.append("circle")
-              .attr("r", 4)
-              .attr("fill", color);
+            // Draw the appropriate shape for each department
+            const iconGroup = item.append("g")
+              .attr("transform", "translate(0, 0)");
+            drawLegendShape(iconGroup, shapeType, color, 4);
 
             item.append("text")
               .attr("x", 8)
@@ -1363,8 +1374,8 @@ export default function CourseSimilarityPrecomputedGraph({
           <div className="flex">
             <button
               className={`px-4 py-2 text-sm font-medium ${activeTab === 'thisSemester'
-                  ? 'text-[#3f1f69] border-b-2 border-[#3f1f69]'
-                  : 'text-gray-500 hover:text-gray-700'
+                ? 'text-[#3f1f69] border-b-2 border-[#3f1f69]'
+                : 'text-gray-500 hover:text-gray-700'
                 }`}
               onClick={() => setActiveTab('thisSemester')}
             >
@@ -1373,8 +1384,8 @@ export default function CourseSimilarityPrecomputedGraph({
             {!isPublicMode && (
               <button
                 className={`px-4 py-2 text-sm font-medium ${activeTab === 'yourHistory'
-                    ? 'text-[#3f1f69] border-b-2 border-[#3f1f69]'
-                    : 'text-gray-500 hover:text-gray-700'
+                  ? 'text-[#3f1f69] border-b-2 border-[#3f1f69]'
+                  : 'text-gray-500 hover:text-gray-700'
                   }`}
                 onClick={() => setActiveTab('yourHistory')}
               >

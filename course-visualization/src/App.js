@@ -7,7 +7,7 @@ import Intake from "./Intake"; // intake semester checklist
 import SemesterCourseIntake from "./SemesterCourseIntake"; // per-semester course selector
 import { useNavigate } from "react-router-dom";
 import CourseInput from "./CourseInput";
-import { CURRENT_SEMESTER } from "./config";
+import { CURRENT_SEMESTER, API_BASE_URL } from "./config";
 import Upload from "./Upload";
 import IntakePrompt from "./IntakePrompt";
 import SurpriseButton from "./SurpriseButton";
@@ -128,7 +128,7 @@ function App() {
   const [conflicted, setConflicted] = useState([]);
   const [currentSemester, setCurrentSemester] = useState(CURRENT_SEMESTER);
   const [showOnboarding, setShowOnboarding] = useState(false);
-  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+  const backendUrl = API_BASE_URL;
   const [showTerms, setShowTerms] = useState(false);
   const [showUserInfoPopup, setShowUserInfoPopup] = useState(false);
   const [showNotesPopup, setShowNotesPopup] = useState(false);

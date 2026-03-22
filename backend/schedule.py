@@ -72,12 +72,13 @@ client_embed = openai.AzureOpenAI(
 app = Flask(__name__)
 
 # Load allowed origins from environment variables
-ALLOWED_ORIGINS = os.getenv('ALLOWED_ORIGINS', 'http://localhost:3000').split(',')
+ALLOWED_ORIGINS = os.getenv('ALLOWED_ORIGINS', 'http://localhost:3000,http://localhost:3001,http://127.0.0.1:3000,http://127.0.0.1:3001' ).split(',')
 
-# Configure CORS with specific origins
-CORS(app, origins=ALLOWED_ORIGINS, 
-     methods=['GET', 'POST'],
-     allow_headers=['Content-Type', 'Authorization'])
+# Configure CORS to allow ALL origins for debugging
+CORS(app, 
+     resources={r"/*": {"origins": "*"}},
+     methods=['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+     allow_headers=['Content-Type', 'Authorization', 'Prefer'])
 
 #CORS(app)
 
@@ -107,6 +108,11 @@ GITHUB_REPO = os.getenv("GITHUB_REPO", "SebastienBrown/CourseFinder") # owner/re
 def jwt_required(f):
     @wraps(f)
     def wrapper(*args, **kwargs):
+        # Skip JWT verification for OPTIONS preflight requests
+        # Return 204 No Content to satisfy the browser preflight
+        if request.method == 'OPTIONS':
+            return '', 204
+
         auth_header = request.headers.get("Authorization")
         if not auth_header or not auth_header.startswith("Bearer "):
             return jsonify({"error": "Missing or invalid Authorization header"}), 401
@@ -844,7 +850,7 @@ def remove_course(payload=None, user_id=None, user_email=None):
     return jsonify({"status": "success"}), 200
     
     
-@app.route("/surprise_recommendation", methods=["POST"])
+@app.route("/surprise_recommendation", methods=["GET", "POST"])
 @jwt_required
 def surprise_recommendation(payload=None, user_id=None, user_email=None):
     """Recommend ONE course from the latest semester only, with a surprising but meaningful connection to the user's history."""
@@ -869,21 +875,30 @@ def surprise_recommendation(payload=None, user_id=None, user_email=None):
             return jsonify({"error": "Could not retrieve course history"}), 500
 
         user_data = resp.json()
-        if not user_data:
-            return jsonify({"error": "No course history found. Please add your courses first."}), 400
-
-        # --- build user's history across ALL semesters (past + current) ---
         user_courses: list[str] = []
         user_departments: set[str] = set()
-        for semester in SEMESTER_COLUMNS:
-            if semester in user_data[0] and user_data[0][semester]:
-                for code in user_data[0][semester]:
-                    user_courses.append(code)
-                    if "-" in code:
-                        user_departments.add(code.split("-")[0])
+        if user_data:
+            for sem in SEMESTER_COLUMNS:
+                if sem in user_data[0] and user_data[0][sem]:
+                    for code in user_data[0][sem]:
+                        user_courses.append(code)
+                        if "-" in code:
+                            user_departments.add(code.split("-")[0])
 
-        if not user_courses:
-            return jsonify({"error": "No courses found in your history"}), 400
+        # --- fetch user's notes from Supabase for additional profiling ---
+        user_note_profile = ""
+        notes_url = f"{SUPABASE_URL}/rest/v1/user_notes?id=eq.{user_id}"
+        notes_resp = requests.get(notes_url, headers=headers)
+        if notes_resp.status_code == 200:
+            notes_data = notes_resp.json()
+            if notes_data and "predefined_responses" in notes_data[0]:
+                preds = notes_data[0]["predefined_responses"]
+                # The first question for both FY and Others
+                q1 = "Are there particular skills or knowledge you would like to gain this semester? If so, what are they?"
+                user_note_profile = preds.get(q1, "").strip()
+
+        if not user_courses and not user_note_profile:
+            return jsonify({"error": "No course history or interest notes found. Please add courses or fill out your 'Academic Notes' first."}), 400
 
         # --- find the latest semester that actually exists in amherst_data ---
         present_terms = {c.get("semester") for c in amherst_data if c.get("semester")}
@@ -933,8 +948,11 @@ def surprise_recommendation(payload=None, user_id=None, user_email=None):
             for code in c.get("course_codes", []) or []:
                 code_to_course[code] = c
 
-        # user profile text from their history (titles+descriptions)
+        # user profile text: merge history titles/descriptions + their interest notes
         user_profile_texts = []
+        if user_note_profile:
+            user_profile_texts.append(user_note_profile)
+
         for code in user_courses:
             c = code_to_course.get(code)
             if c:
@@ -977,12 +995,19 @@ def surprise_recommendation(payload=None, user_id=None, user_email=None):
 
         # --- build LLM prompt using ONLY latest-semester shortlist ---
         user_courses_str = ", ".join(user_courses[:40])
+        
+        notes_context = ""
+        if user_note_profile:
+            notes_context = f"\nThe student has also expressed these academic interests: \"{user_note_profile}\""
+
         prompt = f"""
-You are a course recommendation system. A student has taken these courses: {user_courses_str}
+You are a course recommendation system.
+A student has taken these courses: {user_courses_str if user_courses else "None (First-year student)"}
+{notes_context}
 
 From the course offerings in {latest_semester}, choose ONE course from departments they haven't typically explored that
-has a surprising but meaningful connection to their past coursework (skills, methods, themes, or perspectives).
-Explain the connection briefly and concretely.
+has a surprising but meaningful connection to their past coursework OR their stated academic interests (skills, methods, themes, or perspectives).
+Explain the connection briefly and concretely, referencing their notes or past courses where appropriate.
 
 Candidate courses (select ONE):
 """.strip()
