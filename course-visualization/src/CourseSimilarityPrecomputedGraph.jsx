@@ -12,7 +12,7 @@ import {
   applyTSNE,
   useLoadData,
 } from "./CourseSimilarityPrecomputedProcessor";
-import { CURRENT_SEMESTER, AVAILABLE_SEMESTERS, getSemesterDataPaths } from "./config";
+import { CURRENT_SEMESTER, AVAILABLE_SEMESTERS, getSemesterDataPaths, API_BASE_URL } from "./config";
 import CoursePopup from "./CoursePopup";
 import { supabase } from "./supabaseClient"; // make sure this points to your initialized Supabase client
 // import { API_BASE_URL } from './config';
@@ -28,7 +28,7 @@ import domtoimage from 'dom-to-image-more';
 
 // Use the globally defined current semester
 // const semester = CURRENT_SEMESTER;
-const backendUrl=process.env.REACT_APP_BACKEND_URL;
+const backendUrl = API_BASE_URL;
 
 // === Tranche & Shape Definitions ===
 const TRANCHE_SHAPES = {
@@ -161,17 +161,17 @@ export default function CourseSimilarityPrecomputedGraph({
   // Combined effect to handle semester changes and tab switches
   useEffect(() => {
     onSemesterChange?.(selectedSemester);
-    
+
     // Only populate user courses if we're in Single Semester View and not in public mode
     if (activeTab === 'thisSemester' && !isPublicMode && userCourseCodes && userCourseCodes.length > 0) {
       console.log('Tab/UserCourses effect triggered:', { activeTab, selectedSemester, userCourseCodesLength: userCourseCodes?.length, isPublicMode });
-      
+
       const userCoursesForSemester = userCourseCodes
         .filter(uc => uc.semester === selectedSemester)
         .map(uc => uc.code);
-      
+
       console.log(`Populating user courses for semester ${selectedSemester}:`, userCoursesForSemester);
-      
+
       if (userCoursesForSemester.length > 0) {
         onHighlight(userCoursesForSemester);
       } else {
@@ -187,11 +187,11 @@ export default function CourseSimilarityPrecomputedGraph({
   }, []);
 
   //console.log("Conflicted array:", conflicted);
-  
+
 
   useEffect(() => {
     if (!mapContainerRef.current) return;
-    
+
     let timeoutId;
     const resizeObserver = new ResizeObserver((entries) => {
       clearTimeout(timeoutId);
@@ -200,7 +200,7 @@ export default function CourseSimilarityPrecomputedGraph({
         setDimensions({ width, height });
       }, 16); // One frame delay
     });
-    
+
     resizeObserver.observe(mapContainerRef.current);
     return () => {
       resizeObserver.disconnect();
@@ -212,7 +212,7 @@ export default function CourseSimilarityPrecomputedGraph({
   useEffect(() => {
     if (backendOutputData && !isPublicMode) {
       console.log("Extracting user course codes from backend data:", backendOutputData);
-      
+
       // Get the user's course codes with their semesters for highlighting
       const userCourses = backendOutputData
         .filter(course => course && course.course_code)
@@ -229,12 +229,12 @@ export default function CourseSimilarityPrecomputedGraph({
     async function loadData() {
       try {
         setLoading(true);
-        
+
         // In public mode, force single semester view
         if (isPublicMode) {
           setActiveTab('thisSemester');
         }
-        
+
         if (activeTab === 'thisSemester') {
           // Load single semester data
           const { courses, courseDetails, tsneCoords: filteredTsneCoords } = await loadPrecomputedCourseData(selectedSemester);
@@ -245,11 +245,11 @@ export default function CourseSimilarityPrecomputedGraph({
           // Load history data (only if not in public mode)
           if (backendOutputData && !isPublicMode) {
             console.log("Processing backend data for history:", backendOutputData);
-            
+
             // Get unique semesters from the history data
             const historySemesters = [...new Set(backendOutputData.map(course => course.semester))];
             console.log("Found history semesters:", historySemesters);
-            
+
             // Group courses by semester for the history display
             const coursesBySemester = backendOutputData.reduce((acc, course) => {
               if (!course || !course.course_code) return acc;
@@ -304,7 +304,7 @@ export default function CourseSimilarityPrecomputedGraph({
                   });
                 }
               });
-              
+
               //BUG: Issue with 0910F ARHA-37 - caused history to crash: why?
               // Add semester information to each tsneCoord and apply FYSE filter
               const tsneCoordsWithSemester = tsneCoords
@@ -349,7 +349,7 @@ export default function CourseSimilarityPrecomputedGraph({
         console.log("Public mode - skipping authentication");
         return;
       }
-      
+
       const {
         data: { user },
         error,
@@ -369,13 +369,13 @@ export default function CourseSimilarityPrecomputedGraph({
 
   async function fetchBackendData() {
 
-  const { data: { session } } = await supabase.auth.getSession();
-  const token = session?.access_token;
-  
-  if (!token) {
-    console.error("No valid session token found");
-    return;
-  }
+    const { data: { session } } = await supabase.auth.getSession();
+    const token = session?.access_token;
+
+    if (!token) {
+      console.error("No valid session token found");
+      return;
+    }
 
     // Skip backend calls in public mode
     if (isPublicMode) {
@@ -383,22 +383,22 @@ export default function CourseSimilarityPrecomputedGraph({
       setBackendOutputData([]);
       return;
     }
-    
+
     try {
       //console.log("Using backend URL:", backendUrl); // Add this for debugging!
       const response = await fetch(`${backendUrl}/retrieve_courses`, { // await fetch(`${API_BASE_URL}/retrieve_courses`
         method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}`,
-      },
-      body: JSON.stringify({}) // no user_id
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`,
+        },
+        body: JSON.stringify({}) // no user_id
       });
-  
+
       if (!response.ok) {
         throw new Error(`Backend error: ${response.status}`);
       }
-  
+
       const data = await response.json();
       console.log("Backend response data:", data); // <-- log the response here
       setBackendOutputData(data);  // store output here
@@ -407,14 +407,14 @@ export default function CourseSimilarityPrecomputedGraph({
       console.error("Error fetching backend data:", err);
     }
   }
-  
+
   useEffect(() => {
     if (isPublicMode) {
       // In public mode, set empty backend data immediately
       setBackendOutputData([]);
       return;
     }
-    
+
     if (!userId) return;
     fetchBackendData();
   }, [userId, isPublicMode]);
@@ -435,8 +435,8 @@ export default function CourseSimilarityPrecomputedGraph({
   useLayoutEffect(() => {
     // Ensure SVG is ready and all necessary data is loaded and in expected format
     if (!svgReady || !graphData || !courseDetailsData || !tsneCoords ||
-        !Array.isArray(tsneCoords) || tsneCoords.length === 0 ||
-        !Array.isArray(courseDetailsData) || courseDetailsData.length === 0) {
+      !Array.isArray(tsneCoords) || tsneCoords.length === 0 ||
+      !Array.isArray(courseDetailsData) || courseDetailsData.length === 0) {
       return;
     }
 
@@ -491,68 +491,68 @@ export default function CourseSimilarityPrecomputedGraph({
       precomputedTSNECoords.forEach(({ codes: tsneCoordCodes, x, y, semester: coordSemester }) => {
         const currentTsneCodes = Array.isArray(tsneCoordCodes) ? tsneCoordCodes : [tsneCoordCodes]; // Ensure 'codes' is always an array
         // Filter out conflicted codes only if in 'thisSemester' tab AND showConflicts is true
-        const filteredCodes = currentTsneCodes.filter(code => 
-            code && (activeTab === 'yourHistory' || !showConflicts || !conflicted.includes(code))
+        const filteredCodes = currentTsneCodes.filter(code =>
+          code && (activeTab === 'yourHistory' || !showConflicts || !conflicted.includes(code))
         );
-        
+
         if (filteredCodes.length === 0) return;
 
         const key = `${x},${y}`;
         if (!mergedNodes.has(key)) {
-            // For new merged node, collect all course details at this coordinate
-            const coursesAtPoint = [];
-            filteredCodes.forEach(code => {
-                const courseDetail = courseDetails.find(cd => cd.course_codes.includes(code));
-                if (courseDetail) {
-                    coursesAtPoint.push({ code, semester: coordSemester }); // Add code and its specific semester
-                }
-            });
+          // For new merged node, collect all course details at this coordinate
+          const coursesAtPoint = [];
+          filteredCodes.forEach(code => {
+            const courseDetail = courseDetails.find(cd => cd.course_codes.includes(code));
+            if (courseDetail) {
+              coursesAtPoint.push({ code, semester: coordSemester }); // Add code and its specific semester
+            }
+          });
 
-            const firstCode = filteredCodes[0] || "TBD";
-            const dept = firstCode.split('-')[0];
-            
-            mergedNodes.set(key, {
-                id: firstCode,
-                x,
-                y,
-                department: dept,
-                codes: filteredCodes, // Still keep for general checks
-                coursesAtPoint: coursesAtPoint, // New: list of {code, semester} for this point
-                shape: getShapeForDept(dept),
-                color: majorColorMap.get(dept) || "#999",
-                // Separate highlighting for history vs search
-                highlighted: filteredCodes.some(code => highlighted.includes(code)),
-                historyHighlighted: coursesAtPoint.some(ca => 
-                    userCourseCodes.some(uc => uc.code === ca.code && uc.semester === ca.semester)
-                ),
-                conflicted: false, // We already filtered conflicted codes
-                semester: coordSemester, // This node represents a coordinate within this semester
-            });
+          const firstCode = filteredCodes[0] || "TBD";
+          const dept = firstCode.split('-')[0];
+
+          mergedNodes.set(key, {
+            id: firstCode,
+            x,
+            y,
+            department: dept,
+            codes: filteredCodes, // Still keep for general checks
+            coursesAtPoint: coursesAtPoint, // New: list of {code, semester} for this point
+            shape: getShapeForDept(dept),
+            color: majorColorMap.get(dept) || "#999",
+            // Separate highlighting for history vs search
+            highlighted: filteredCodes.some(code => highlighted.includes(code)),
+            historyHighlighted: coursesAtPoint.some(ca =>
+              userCourseCodes.some(uc => uc.code === ca.code && uc.semester === ca.semester)
+            ),
+            conflicted: false, // We already filtered conflicted codes
+            semester: coordSemester, // This node represents a coordinate within this semester
+          });
         } else {
-            const node = mergedNodes.get(key);
-            node.codes = [...new Set([...node.codes, ...filteredCodes])];
-            const departments = node.codes.map(code => code.split('-')[0]);
-            node.department = departments[0];
-            node.shape = getShapeForDept(node.department);
-            node.color = majorColorMap.get(node.department) || "#999";
+          const node = mergedNodes.get(key);
+          node.codes = [...new Set([...node.codes, ...filteredCodes])];
+          const departments = node.codes.map(code => code.split('-')[0]);
+          node.department = departments[0];
+          node.shape = getShapeForDept(node.department);
+          node.color = majorColorMap.get(node.department) || "#999";
 
-            // Add new courses (with semester) to coursesAtPoint for existing node
-            filteredCodes.forEach(code => {
-                const courseDetail = courseDetails.find(cd => cd.course_codes.includes(code));
-                if (courseDetail) {
-                    const existingCourse = node.coursesAtPoint.find(ca => ca.code === code && ca.semester === coordSemester);
-                    if (!existingCourse) {
-                        node.coursesAtPoint.push({ code, semester: coordSemester });
-                    }
-                }
-            });
+          // Add new courses (with semester) to coursesAtPoint for existing node
+          filteredCodes.forEach(code => {
+            const courseDetail = courseDetails.find(cd => cd.course_codes.includes(code));
+            if (courseDetail) {
+              const existingCourse = node.coursesAtPoint.find(ca => ca.code === code && ca.semester === coordSemester);
+              if (!existingCourse) {
+                node.coursesAtPoint.push({ code, semester: coordSemester });
+              }
+            }
+          });
 
-            // Re-evaluate highlighting for existing node
-            node.highlighted = filteredCodes.some(code => highlighted.includes(code));
-            node.historyHighlighted = node.coursesAtPoint.some(ca => 
-                userCourseCodes.some(uc => uc.code === ca.code && uc.semester === ca.semester)
-            );
-            node.conflicted = false; // We already filtered conflicted codes
+          // Re-evaluate highlighting for existing node
+          node.highlighted = filteredCodes.some(code => highlighted.includes(code));
+          node.historyHighlighted = node.coursesAtPoint.some(ca =>
+            userCourseCodes.some(uc => uc.code === ca.code && uc.semester === ca.semester)
+          );
+          node.conflicted = false; // We already filtered conflicted codes
         }
       });
 
@@ -602,12 +602,12 @@ export default function CourseSimilarityPrecomputedGraph({
         return `${baseSize * factor}px`;
       };
 
-        const g = svg.append("g");
+      const g = svg.append("g");
 
-        g.append("rect")
-          .attr("width", width)
-          .attr("height", height)
-          .attr("fill", "#f9f7fb");
+      g.append("rect")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("fill", "#f9f7fb");
 
       /*"""Add a reset zoom button
       const resetButton = svg.append("g")
@@ -638,20 +638,20 @@ export default function CourseSimilarityPrecomputedGraph({
       }); */
 
 
-      
+
       // Left legend dimensions (reduced from 300 for cleaner grouped layout)
       const leftLegendWidth = 240;
-      
+
       // Right legend dimensions (there is nothing now so set to 0)
       const rightLegendWidth = 0//leftLegendWidth; // Reduced width
-      
+
       // Create padding for chart area
       const topPadding = 52; // Title space
       //console.log('topPadding:', topPadding)
       const bottomPadding = 200 - width * 0.07; // Footer space
       const leftPadding = leftLegendWidth;
       const rightPadding = rightLegendWidth;
-      
+
       const xExtent = d3.extent(finalNodes, (d) => d.x);
       const yExtent = d3.extent(finalNodes, (d) => d.y);
 
@@ -684,9 +684,9 @@ export default function CourseSimilarityPrecomputedGraph({
         const group = d3.select(this);
         // Check if this node contains any of the user's courses in the correct semester
         // Now using d.coursesAtPoint for accurate check
-        
+
         // Calculate highlighted codes count first (needed for both tabs)
-        const highlightedCodes = d.codes.filter(code => 
+        const highlightedCodes = d.codes.filter(code =>
           highlighted.some(highlightedCode => {
             // If the highlighted code contains a slash, split it and check each part
             if (highlightedCode.includes('/')) {
@@ -696,19 +696,19 @@ export default function CourseSimilarityPrecomputedGraph({
           })
         );
         const highlightedCount = highlightedCodes.length;
-        
+
         // Adjust size and opacity based on whether it's a user's course and which tab we're in
         let baseSize, opacity;
         if (activeTab === 'yourHistory') {
           if (d.highlighted) { // If course is highlighted by search, give it the largest size
-              baseSize = 15;
+            baseSize = 15;
           } else if (d.historyHighlighted) { // If it's a historical user course (and not also highlighted by search), give it a medium size
-              baseSize = 14;
+            baseSize = 14;
           } else { // Default size for other courses
-              baseSize = 7;
+            baseSize = 7;
           }
-          // Opacity: full for search-highlighted or historical courses, half for others
-          opacity = (d.highlighted || d.historyHighlighted) ? 1 : 0.5;
+          // Opacity: full for search-highlighted or historical courses, much lower for others in history tab
+          opacity = (d.highlighted || d.historyHighlighted) ? 1 : 0.15;
         } else {
           // Single Semester View: Adjust base sizes for single vs multi-code courses
           if (d.codes.length === 1) {
@@ -724,7 +724,7 @@ export default function CourseSimilarityPrecomputedGraph({
         // Get all departments for this course
         const departments = d.codes.map(code => code.split('-')[0]);
         const uniqueDepts = [...new Set(departments)];
-        
+
         // Define scaling factor for non-circle shapes in single-code nodes
         const singleShapeScale = 0.7;
 
@@ -734,7 +734,12 @@ export default function CourseSimilarityPrecomputedGraph({
           const dept = departments[0];
           let shape = getShapeForDept(dept);
           let color = majorColorMap.get(dept) || "#999";
-          
+
+          // Grey out non-highlighted courses in history tab
+          if (activeTab === 'yourHistory' && !d.historyHighlighted && !d.highlighted) {
+            color = "#d1d1d1";
+          }
+
           // Make colors more vibrant for user's courses in history tab or highlighted courses in single semester view
           if (activeTab === 'yourHistory') {
             if (d.historyHighlighted) {
@@ -816,11 +821,11 @@ export default function CourseSimilarityPrecomputedGraph({
           // Multi code: Draw clipped shape segments (pie chart)
           // Calculate total weight for portions (based on department count)
           const totalWeight = departments.length; // Use total number of departments as weight
-          
+
           // Calculate department weights (how many times each department appears)
           const departmentCounts = {};
           departments.forEach(dept => {
-              departmentCounts[dept] = (departmentCounts[dept] || 0) + 1;
+            departmentCounts[dept] = (departmentCounts[dept] || 0) + 1;
           });
 
           // Create a group for shapes and apply clipping
@@ -839,7 +844,12 @@ export default function CourseSimilarityPrecomputedGraph({
 
             const shape = getShapeForDept(dept);
             let color = majorColorMap.get(dept) || "#999";
-            
+
+            // Grey out non-highlighted multi-code courses in history tab
+            if (activeTab === 'yourHistory' && !d.historyHighlighted && !d.highlighted) {
+              color = "#d1d1d1";
+            }
+
             // Make colors more vibrant based on tab and highlighting state
             if (activeTab === 'yourHistory') {
               if (d.historyHighlighted) {
@@ -866,78 +876,78 @@ export default function CourseSimilarityPrecomputedGraph({
                 }
               }
             }
-            
+
             // Create a clip path for this portion (pie slice)
             const clipPathId = `clip-${d.id}-${dept}-${startAngle}`;
             const clipPath = svg.append("defs").append("clipPath")
               .attr("id", clipPathId);
-            
+
             const arc = d3.arc()
               .innerRadius(0)
               .outerRadius(baseSize)
               .startAngle(startAngle * Math.PI / 180)
               .endAngle(endAngle * Math.PI / 180);
-            
+
             clipPath.append("path")
               .attr("d", arc());
 
             // Create a group for this segment and apply the clip path
             const shapeSegmentGroup = shapeContainer.append("g")
-               .attr("clip-path", `url(#${clipPathId})`);
+              .attr("clip-path", `url(#${clipPathId})`);
 
             // Draw the full shape within the clipped area with adjusted size for non-circles
             let currentShapeSize = baseSize; // Start with base size
-             switch (shape) {
-                case "circle":
-                  // Circle size remains the same as single-code
-                  shapeSegmentGroup.append("circle")
-                    .attr("r", currentShapeSize)
-                    .attr("fill", color)
-                    .attr("fill-opacity", opacity);
-                  break;
-                case "doubleCircle":
-                  // Draw outer circle (unfilled)
-                  shapeSegmentGroup.append("circle")
-                    .attr("r", currentShapeSize * 1.2)
-                    .attr("fill", "none")
-                    .attr("stroke", color)
-                    .attr("stroke-opacity", opacity)
-                    .attr("stroke-width", 1.5);
-                  // Draw inner circle (filled)
-                  shapeSegmentGroup.append("circle")
-                    .attr("r", currentShapeSize * 0.8)
-                    .attr("fill", color)
-                    .attr("fill-opacity", opacity);
-                  break;
-                case "square":
-                  // Scale down square size for multi-code
-                  currentShapeSize = baseSize * multiShapeScale; // Apply multi-shape scale
-                  shapeSegmentGroup.append("rect")
-                    .attr("x", -currentShapeSize)
-                    .attr("y", -currentShapeSize)
-                    .attr("width", currentShapeSize * 2)
-                    .attr("height", currentShapeSize * 2)
-                    .attr("fill", color)
-                    .attr("fill-opacity", opacity);
-                  break;
-                case "triangle":
-                  // Scale down triangle size for multi-code, maintaining visual proportion
-                  currentShapeSize = baseSize * multiShapeScale; // Apply multi-shape scale
-                  const multiTriangleSymbolSize = currentShapeSize * currentShapeSize * 3; // Use same area multiplier as single-code
-                   shapeSegmentGroup.append("path")
-                    .attr("d", d3.symbol().type(d3.symbolTriangle).size(multiTriangleSymbolSize)())
-                    .attr("fill", color)
-                    .attr("fill-opacity", opacity);
-                  break;
-                case "star":
-                  // Scale down star size for multi-code, maintaining visual proportion
-                  currentShapeSize = baseSize * multiShapeScale; // Apply multi-shape scale
-                  const multiStarSymbolSize = currentShapeSize * currentShapeSize * 2.7; // Use same area multiplier as single-code
-                   shapeSegmentGroup.append("path")
-                    .attr("d", d3.symbol().type(d3.symbolStar).size(multiStarSymbolSize)())
-                    .attr("fill", color)
-                    .attr("fill-opacity", opacity);
-                  break;
+            switch (shape) {
+              case "circle":
+                // Circle size remains the same as single-code
+                shapeSegmentGroup.append("circle")
+                  .attr("r", currentShapeSize)
+                  .attr("fill", color)
+                  .attr("fill-opacity", opacity);
+                break;
+              case "doubleCircle":
+                // Draw outer circle (unfilled)
+                shapeSegmentGroup.append("circle")
+                  .attr("r", currentShapeSize * 1.2)
+                  .attr("fill", "none")
+                  .attr("stroke", color)
+                  .attr("stroke-opacity", opacity)
+                  .attr("stroke-width", 1.5);
+                // Draw inner circle (filled)
+                shapeSegmentGroup.append("circle")
+                  .attr("r", currentShapeSize * 0.8)
+                  .attr("fill", color)
+                  .attr("fill-opacity", opacity);
+                break;
+              case "square":
+                // Scale down square size for multi-code
+                currentShapeSize = baseSize * multiShapeScale; // Apply multi-shape scale
+                shapeSegmentGroup.append("rect")
+                  .attr("x", -currentShapeSize)
+                  .attr("y", -currentShapeSize)
+                  .attr("width", currentShapeSize * 2)
+                  .attr("height", currentShapeSize * 2)
+                  .attr("fill", color)
+                  .attr("fill-opacity", opacity);
+                break;
+              case "triangle":
+                // Scale down triangle size for multi-code, maintaining visual proportion
+                currentShapeSize = baseSize * multiShapeScale; // Apply multi-shape scale
+                const multiTriangleSymbolSize = currentShapeSize * currentShapeSize * 3; // Use same area multiplier as single-code
+                shapeSegmentGroup.append("path")
+                  .attr("d", d3.symbol().type(d3.symbolTriangle).size(multiTriangleSymbolSize)())
+                  .attr("fill", color)
+                  .attr("fill-opacity", opacity);
+                break;
+              case "star":
+                // Scale down star size for multi-code, maintaining visual proportion
+                currentShapeSize = baseSize * multiShapeScale; // Apply multi-shape scale
+                const multiStarSymbolSize = currentShapeSize * currentShapeSize * 2.7; // Use same area multiplier as single-code
+                shapeSegmentGroup.append("path")
+                  .attr("d", d3.symbol().type(d3.symbolStar).size(multiStarSymbolSize)())
+                  .attr("fill", color)
+                  .attr("fill-opacity", opacity);
+                break;
             }
 
             currentAngle = endAngle;
@@ -1021,7 +1031,8 @@ export default function CourseSimilarityPrecomputedGraph({
             } else if (userCoursesAtThisPoint.length > 1) {
               return `${userCoursesAtThisPoint[0].code}...`;
             } else {
-              return d.codes.length > 1 ? `${d.codes[0]}...` : d.codes[0];
+              // Only show label for non-historical courses if they are specifically highlighted by search
+              return d.highlighted ? (d.codes.length > 1 ? `${d.codes[0]}...` : d.codes[0]) : "";
             }
           });
       } else {
@@ -1054,131 +1065,131 @@ export default function CourseSimilarityPrecomputedGraph({
         });
 
       if (!legendCollapsed) {
-      // === PROPOSAL 1: GROUPED LEGEND BY TRANCHE ===
-      const legendPaddingY = 52;
-      const legendPaddingX = 16;
-      const legendItemHeight = 18;
-      const legendColWidth = 85;
+        // === PROPOSAL 1: GROUPED LEGEND BY TRANCHE ===
+        const legendPaddingY = 52;
+        const legendPaddingX = 16;
+        const legendItemHeight = 18;
+        const legendColWidth = 85;
 
-      // Legend background: clean white card
-      svg.append("rect")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("width", leftLegendWidth - 20)
-        .attr("height", height)
-        .attr("fill", "rgba(255, 255, 255, 0.97)")
-        .attr("rx", 8)
-        .attr("stroke", "#e8e2f2")
-        .attr("stroke-width", 1);
+        // Legend background: clean white card
+        svg.append("rect")
+          .attr("x", 0)
+          .attr("y", 0)
+          .attr("width", leftLegendWidth - 20)
+          .attr("height", height)
+          .attr("fill", "rgba(255, 255, 255, 0.97)")
+          .attr("rx", 8)
+          .attr("stroke", "#e8e2f2")
+          .attr("stroke-width", 1);
 
-      const legend = svg
-        .append("g")
-        .attr("transform", `translate(${legendPaddingX}, ${legendPaddingY})`)
-        .attr("class", "legend");
+        const legend = svg
+          .append("g")
+          .attr("transform", `translate(${legendPaddingX}, ${legendPaddingY})`)
+          .attr("class", "legend");
 
-      // Helper to draw a legend shape icon
-      const drawLegendShape = (parent, shapeType, color, size) => {
-        switch (shapeType) {
-          case "circle":
-            parent.append("circle").attr("r", size).attr("fill", color);
-            break;
-          case "doubleCircle":
-            parent.append("circle").attr("r", size * 1.2).attr("fill", "none")
-              .attr("stroke", color).attr("stroke-width", 1.5);
-            parent.append("circle").attr("r", size * 0.8).attr("fill", color);
-            break;
-          case "square":
-            parent.append("rect").attr("x", -size).attr("y", -size)
-              .attr("width", size * 2).attr("height", size * 2).attr("fill", color);
-            break;
-          case "triangle":
-            parent.append("path")
-              .attr("d", d3.symbol().type(d3.symbolTriangle).size(size * size * 4)())
+        // Helper to draw a legend shape icon
+        const drawLegendShape = (parent, shapeType, color, size) => {
+          switch (shapeType) {
+            case "circle":
+              parent.append("circle").attr("r", size).attr("fill", color);
+              break;
+            case "doubleCircle":
+              parent.append("circle").attr("r", size * 1.2).attr("fill", "none")
+                .attr("stroke", color).attr("stroke-width", 1.5);
+              parent.append("circle").attr("r", size * 0.8).attr("fill", color);
+              break;
+            case "square":
+              parent.append("rect").attr("x", -size).attr("y", -size)
+                .attr("width", size * 2).attr("height", size * 2).attr("fill", color);
+              break;
+            case "triangle":
+              parent.append("path")
+                .attr("d", d3.symbol().type(d3.symbolTriangle).size(size * size * 4)())
+                .attr("fill", color);
+              break;
+            case "star":
+              parent.append("path")
+                .attr("d", d3.symbol().type(d3.symbolStar).size(size * size * 4)())
+                .attr("fill", color);
+              break;
+          }
+        };
+
+        let currentY = 0;
+        const trancheEntries = Object.entries(TRANCHES);
+
+        trancheEntries.forEach(([trancheName, depts], trancheIdx) => {
+          const shapeType = TRANCHE_SHAPES[trancheName] || "circle";
+
+          // Tranche group header: shape icon + tranche name
+          const headerGroup = legend.append("g")
+            .attr("transform", `translate(0, ${currentY})`);
+
+          // Draw shape icon for this tranche
+          const headerIcon = headerGroup.append("g")
+            .attr("transform", "translate(8, 0)");
+          drawLegendShape(headerIcon, shapeType, "#3f1f69", 6);
+
+          headerGroup.append("text")
+            .attr("x", 20)
+            .attr("y", 5)
+            .text(trancheName)
+            .style("font-weight", "bold")
+            .style("font-size", getFontSize(12))
+            .style("fill", "#3f1f69");
+
+          currentY += 22;
+
+          // Departments in 2 columns under this tranche header
+          const deptsPerCol = Math.ceil(depts.length / 2);
+          depts.forEach((dept, i) => {
+            const col = Math.floor(i / deptsPerCol);
+            const row = i % deptsPerCol;
+            const color = majorColorMap.get(dept) || "#999";
+
+            const item = legend.append("g")
+              .attr("transform", `translate(${12 + col * legendColWidth}, ${currentY + row * legendItemHeight})`);
+
+            // Small colored dot for each department
+            item.append("circle")
+              .attr("r", 4)
               .attr("fill", color);
-            break;
-          case "star":
-            parent.append("path")
-              .attr("d", d3.symbol().type(d3.symbolStar).size(size * size * 4)())
-              .attr("fill", color);
-            break;
-        }
-      };
 
-      let currentY = 0;
-      const trancheEntries = Object.entries(TRANCHES);
+            item.append("text")
+              .attr("x", 8)
+              .attr("y", 4)
+              .text(dept === "SWAG" ? "SWAG/WAGS" : dept)
+              .style("font-size", getFontSize(11))
+              .style("fill", "#444");
+          });
 
-      trancheEntries.forEach(([trancheName, depts], trancheIdx) => {
-        const shapeType = TRANCHE_SHAPES[trancheName] || "circle";
+          currentY += deptsPerCol * legendItemHeight + 6;
 
-        // Tranche group header: shape icon + tranche name
-        const headerGroup = legend.append("g")
-          .attr("transform", `translate(0, ${currentY})`);
-
-        // Draw shape icon for this tranche
-        const headerIcon = headerGroup.append("g")
-          .attr("transform", "translate(8, 0)");
-        drawLegendShape(headerIcon, shapeType, "#3f1f69", 6);
-
-        headerGroup.append("text")
-          .attr("x", 20)
-          .attr("y", 5)
-          .text(trancheName)
-          .style("font-weight", "bold")
-          .style("font-size", getFontSize(12))
-          .style("fill", "#3f1f69");
-
-        currentY += 22;
-
-        // Departments in 2 columns under this tranche header
-        const deptsPerCol = Math.ceil(depts.length / 2);
-        depts.forEach((dept, i) => {
-          const col = Math.floor(i / deptsPerCol);
-          const row = i % deptsPerCol;
-          const color = majorColorMap.get(dept) || "#999";
-
-          const item = legend.append("g")
-            .attr("transform", `translate(${12 + col * legendColWidth}, ${currentY + row * legendItemHeight})`);
-
-          // Small colored dot for each department
-          item.append("circle")
-            .attr("r", 4)
-            .attr("fill", color);
-
-          item.append("text")
-            .attr("x", 8)
-            .attr("y", 4)
-            .text(dept === "SWAG" ? "SWAG/WAGS" : dept)
-            .style("font-size", getFontSize(11))
-            .style("fill", "#444");
+          if (trancheIdx < trancheEntries.length - 1) {
+            currentY += 4;
+          }
         });
 
-        currentY += deptsPerCol * legendItemHeight + 6;
+        // Disclaimer text at the bottom of legend
+        currentY += 10;
+        const disclaimerText = legend.append("text")
+          .attr("x", 0)
+          .attr("y", currentY)
+          .style("font-size", getFontSize(10))
+          .style("fill", "#999");
+        disclaimerText.append("tspan").text("Special topics and thesis");
+        disclaimerText.append("tspan")
+          .attr("x", 0).attr("dy", "1.3em")
+          .text("courses are not displayed.");
 
-        if (trancheIdx < trancheEntries.length - 1) {
-          currentY += 4;
-        }
-      });
-
-      // Disclaimer text at the bottom of legend
-      currentY += 10;
-      const disclaimerText = legend.append("text")
-        .attr("x", 0)
-        .attr("y", currentY)
-        .style("font-size", getFontSize(10))
-        .style("fill", "#999");
-      disclaimerText.append("tspan").text("Special topics and thesis");
-      disclaimerText.append("tspan")
-        .attr("x", 0).attr("dy", "1.3em")
-        .text("courses are not displayed.");
-
-      // Visual separator between legend and graph
-      svg.append("rect")
-        .attr("x", leftPadding - 20)
-        .attr("y", 0)
-        .attr("width", 1.5)
-        .attr("height", height)
-        .attr("fill", "#e8e2f2");
-    }
+        // Visual separator between legend and graph
+        svg.append("rect")
+          .attr("x", leftPadding - 20)
+          .attr("y", 0)
+          .attr("width", 1.5)
+          .attr("height", height)
+          .attr("fill", "#e8e2f2");
+      }
 
       // Main title with adjusted positioning
       svg
@@ -1189,7 +1200,7 @@ export default function CourseSimilarityPrecomputedGraph({
         .style("font-size", getFontSize(18))
         .style("font-weight", "bold")
         .text(
-          activeTab === 'thisSemester' 
+          activeTab === 'thisSemester'
             ? `Course Similarity Graph - ${selectedSemester}`
             : 'My Amherst Curriculum'
         );
@@ -1231,18 +1242,18 @@ export default function CourseSimilarityPrecomputedGraph({
 
   const zoomRef = useRef(null);
 
-useEffect(() => {
-  const zoomBehavior = d3.zoom()
-    .scaleExtent([0.5, 5])
-    .on("zoom", (event) => {
-      const svgEl = d3.select(svgRef.current);
-      svgEl.select("g").attr("transform", event.transform);
-    });
+  useEffect(() => {
+    const zoomBehavior = d3.zoom()
+      .scaleExtent([0.5, 5])
+      .on("zoom", (event) => {
+        const svgEl = d3.select(svgRef.current);
+        svgEl.select("g").attr("transform", event.transform);
+      });
 
-  d3.select(svgRef.current).call(zoomBehavior);
+    d3.select(svgRef.current).call(zoomBehavior);
 
-  zoomRef.current = zoomBehavior;
-}, []);
+    zoomRef.current = zoomBehavior;
+  }, []);
 
   // Function to handle image download
   const handleDownloadImage = async () => {
@@ -1298,14 +1309,14 @@ useEffect(() => {
   // Function to handle adding a course to selected courses
   const handleAddSelectedCourse = async (course) => {
     if (!course.course_codes) return;
-    
-    const codes = Array.isArray(course.course_codes) 
-      ? course.course_codes 
+
+    const codes = Array.isArray(course.course_codes)
+      ? course.course_codes
       : [course.course_codes];
-    
+
     // If there are multiple codes, combine them with a slash
     const codeToAdd = codes.length > 1 ? codes.join('/') : codes[0];
-    
+
     // Check if the course is already selected
     const isSelected = highlighted.some(code => {
       if (code.includes('/')) {
@@ -1317,30 +1328,30 @@ useEffect(() => {
     // Update highlighted courses and get the new state
     const newHighlighted = isSelected
       ? highlighted.filter(code => {
-          if (code.includes('/')) {
-            return code !== codeToAdd;
-          }
-          return !codes.includes(code);
-        })
+        if (code.includes('/')) {
+          return code !== codeToAdd;
+        }
+        return !codes.includes(code);
+      })
       : [...highlighted, codeToAdd];
 
     // Update highlighted courses
     onHighlight(newHighlighted);
-    
+
     // Skip conflict checking in public mode
     if (isPublicMode) {
       return;
     }
-    
+
     // Check for conflicts with the new selection
     const response = await fetch(`${backendUrl}/conflicted_courses`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ 
+      body: JSON.stringify({
         taken_courses: newHighlighted, // Use the new state directly
-        semester: selectedSemester 
+        semester: selectedSemester
       }),
     });
 
@@ -1358,31 +1369,29 @@ useEffect(() => {
         <div className="flex justify-between items-center">
           <div className="flex">
             <button
-              className={`px-4 py-2 text-sm font-medium ${
-                activeTab === 'thisSemester'
-                  ? 'text-[#3f1f69] border-b-2 border-[#3f1f69]'
-                  : 'text-gray-500 hover:text-gray-700'
-              }`}
+              className={`px-4 py-2 text-sm font-medium ${activeTab === 'thisSemester'
+                ? 'text-[#3f1f69] border-b-2 border-[#3f1f69]'
+                : 'text-gray-500 hover:text-gray-700'
+                }`}
               onClick={() => setActiveTab('thisSemester')}
             >
               Single Semester View
             </button>
             {!isPublicMode && (
               <button
-                className={`px-4 py-2 text-sm font-medium ${
-                  activeTab === 'yourHistory'
-                    ? 'text-[#3f1f69] border-b-2 border-[#3f1f69]'
-                    : 'text-gray-500 hover:text-gray-700'
-                }`}
+                className={`px-4 py-2 text-sm font-medium ${activeTab === 'yourHistory'
+                  ? 'text-[#3f1f69] border-b-2 border-[#3f1f69]'
+                  : 'text-gray-500 hover:text-gray-700'
+                  }`}
                 onClick={() => setActiveTab('yourHistory')}
               >
                 My Course History
               </button>
             )}
           </div>
-          
 
-          
+
+
           {/* Download Map button moved to the right, alongside Eliminate Conflicts */}
           {activeTab === 'yourHistory' && !isPublicMode && (
             <button
@@ -1406,7 +1415,7 @@ useEffect(() => {
               Download as Image
             </button>
           )}
-          
+
 
           {activeTab === 'thisSemester' && (
             <div className="flex items-center px-4 py-2 ml-auto">
@@ -1463,62 +1472,62 @@ useEffect(() => {
             )}
 
             {/* Stack both buttons */}
-          <div
-            style={{
-              position: "absolute",
-              top: "10%",
-              right: "2%",
-              zIndex: 10,
-              display: "flex",
-              flexDirection: "column",
-              gap: "10px"
-            }}
-          >
-            <button
+            <div
               style={{
-                width: 80,
-                height: 30,
-                borderRadius: 5,
-                backgroundColor: "rgba(249, 247, 251, 0.95)",
-                border: "1px solid #e8e2f2",
-                cursor: "pointer",
-                fontSize: "12px",
-                color: "#000",
+                position: "absolute",
+                top: "10%",
+                right: "2%",
+                zIndex: 10,
                 display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-              onClick={() => {
-                if (svgRef.current) {
-                  d3.select(svgRef.current)
-                    .transition()
-                    .duration(750)
-                    .call(zoomRef.current.transform, d3.zoomIdentity);
-                }
+                flexDirection: "column",
+                gap: "10px"
               }}
             >
-              Reset View
-            </button>
+              <button
+                style={{
+                  width: 80,
+                  height: 30,
+                  borderRadius: 5,
+                  backgroundColor: "rgba(249, 247, 251, 0.95)",
+                  border: "1px solid #e8e2f2",
+                  cursor: "pointer",
+                  fontSize: "12px",
+                  color: "#000",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+                onClick={() => {
+                  if (svgRef.current) {
+                    d3.select(svgRef.current)
+                      .transition()
+                      .duration(750)
+                      .call(zoomRef.current.transform, d3.zoomIdentity);
+                  }
+                }}
+              >
+                Reset View
+              </button>
 
-            <button
-              style={{
-                width: 80,
-                height: 30,
-                borderRadius: 5,
-                backgroundColor: "rgba(249, 247, 251, 0.95)",
-                border: "1px solid #e8e2f2",
-                cursor: "pointer",
-                fontSize: "12px",
-                color: "#000",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-              onClick={() => setLegendCollapsed(prev => !prev)}
-            >
-              {legendCollapsed ? "Show Legend" : "Hide Legend"}
-            </button>
-          </div>
+              <button
+                style={{
+                  width: 80,
+                  height: 30,
+                  borderRadius: 5,
+                  backgroundColor: "rgba(249, 247, 251, 0.95)",
+                  border: "1px solid #e8e2f2",
+                  cursor: "pointer",
+                  fontSize: "12px",
+                  color: "#000",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+                onClick={() => setLegendCollapsed(prev => !prev)}
+              >
+                {legendCollapsed ? "Show Legend" : "Hide Legend"}
+              </button>
+            </div>
 
             {loading && (
               <div className="absolute inset-0 flex items-center justify-center bg-white/50">
@@ -1644,7 +1653,7 @@ useEffect(() => {
         <Settings onClose={() => setShowSettings(false)} />
       )}
 
-      <OnboardingPopup 
+      <OnboardingPopup
         isOpen={showOnboarding}
         onClose={handleOnboardingClose}
         isPublicMode={isPublicMode}

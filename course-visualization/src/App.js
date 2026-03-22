@@ -7,7 +7,7 @@ import Intake from "./Intake"; // intake semester checklist
 import SemesterCourseIntake from "./SemesterCourseIntake"; // per-semester course selector
 import { useNavigate } from "react-router-dom";
 import CourseInput from "./CourseInput";
-import { CURRENT_SEMESTER } from "./config";
+import { CURRENT_SEMESTER, API_BASE_URL } from "./config";
 import Upload from "./Upload";
 import IntakePrompt from "./IntakePrompt";
 import SurpriseButton from "./SurpriseButton";
@@ -24,7 +24,7 @@ import SubmissionPage from "./SubmissionPage";
 // Layout component for shared UI elements
 function Layout({ children, logout, onShowHelp, onShowUserInfo }) {
   const navigate = useNavigate();
-  
+
   return (
     <div className="flex flex-col min-h-screen bg-[#f9f7fb]">
       <div className="w-full max-w-[1200px] mx-auto space-y-6 mb-4 px-4">
@@ -33,32 +33,32 @@ function Layout({ children, logout, onShowHelp, onShowUserInfo }) {
             The Visual Open Curriculum
           </h1>
           <div className="flex space-x-2">
-          <AccountDropdown 
-            onSignOut={logout}
-            onShowUserInfo={onShowUserInfo}
-          />
+            <AccountDropdown
+              onSignOut={logout}
+              onShowUserInfo={onShowUserInfo}
+            />
 
-          <button
-            onClick={onShowHelp}
-            className="px-4 py-2 bg-purple-500 text-white rounded-lg font-semibold shadow hover:bg-purple-200 transition-all duration-200 h-10"
-          >
-            Help
-          </button>
+            <button
+              onClick={onShowHelp}
+              className="px-4 py-2 bg-purple-500 text-white rounded-lg font-semibold shadow hover:bg-purple-200 transition-all duration-200 h-10"
+            >
+              Help
+            </button>
 
-          <button
-            onClick={() => navigate("/question")}
-            className="px-4 py-2 bg-purple-800 text-white rounded-lg font-semibold shadow hover:bg-purple-800 transition-all duration-200 h-10"
-          >
-            Ask a Question
-          </button>
+            <button
+              onClick={() => navigate("/question")}
+              className="px-4 py-2 bg-purple-800 text-white rounded-lg font-semibold shadow hover:bg-purple-800 transition-all duration-200 h-10"
+            >
+              Ask a Question
+            </button>
 
-          <button
-            onClick={() => navigate("/intake-prompt")}
-            className="px-4 py-2 bg-[#3f1f69] text-white rounded-lg font-semibold shadow hover:bg-[#311a4d] transition-all duration-200 h-10"
-          >
-            Add Past Courses
-          </button>
-        </div>
+            <button
+              onClick={() => navigate("/intake-prompt")}
+              className="px-4 py-2 bg-[#3f1f69] text-white rounded-lg font-semibold shadow hover:bg-[#311a4d] transition-all duration-200 h-10"
+            >
+              Add Past Courses
+            </button>
+          </div>
 
         </div>
       </div>
@@ -70,7 +70,7 @@ function Layout({ children, logout, onShowHelp, onShowUserInfo }) {
 // Public layout component without authentication controls
 function PublicLayout({ children, onShowHelp }) {
   const navigate = useNavigate();
-  
+
   return (
     <div className="flex flex-col min-h-screen bg-[#f9f7fb]">
       <div className="w-full max-w-[1200px] mx-auto space-y-6 mb-4 px-4">
@@ -105,7 +105,7 @@ function App() {
   const [conflicted, setConflicted] = useState([]);
   const [currentSemester, setCurrentSemester] = useState(CURRENT_SEMESTER);
   const [showOnboarding, setShowOnboarding] = useState(false);
-  const backendUrl=process.env.REACT_APP_BACKEND_URL;
+  const backendUrl = API_BASE_URL;
   const [showTerms, setShowTerms] = useState(false);
   const [showUserInfoPopup, setShowUserInfoPopup] = useState(false);
   const [pendingUser, setPendingUser] = useState(null);
@@ -129,9 +129,9 @@ function App() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ 
+        body: JSON.stringify({
           taken_courses: courses,
-          semester: semester 
+          semester: semester
         }),
       });
       const data = await response.json();
@@ -161,7 +161,7 @@ function App() {
     try {
       const { data: { session } } = await supabase.auth.getSession();
       const token = session?.access_token;
-      
+
       if (!token) {
         console.error("No valid session token found");
         return false;
@@ -205,7 +205,7 @@ function App() {
 
       // Check if user has provided their info
       const hasUserInfo = await checkUserInfo(user);
-      
+
       if (!hasUserInfo) {
         // Show popup if user hasn't filled out their info
         showUserInfoPopupForUser(user);
@@ -260,7 +260,7 @@ function App() {
   const handleUserInfoClose = () => {
     setShowUserInfoPopup(false);
     setPendingUser(null);
-    
+
     // Still proceed with login even if they close the popup
     if (pendingUser) {
       setUser(pendingUser);
@@ -274,82 +274,82 @@ function App() {
 
   // Only show Auth component if no user and not on public routes
   const isPublicRoute = window.location.pathname === '/public-graph';
-  
+
   if (!user && !isPublicRoute) return <Auth onLogin={setUser} onShowUserInfo={showUserInfoPopupForUser} />;
 
   return (
     <SemesterProvider>
-    <Router>
-  <Routes>
-    {/* ✅ Default landing page is now Graph */}
-            <Route
-              path="/"
-              element={
-                <Layout logout={logout} onShowHelp={() => setShowOnboarding(true)} onShowUserInfo={() => showUserInfoPopupForUser(user)}>
-                  <CourseInput
-            onHighlight={handleHighlight}
-            onConflicted={setConflicted}
-            currentSemester={currentSemester}
-            highlighted={highlighted}
+      <Router>
+        <Routes>
+          {/* ✅ Default landing page is now Graph */}
+          <Route
+            path="/"
+            element={
+              <Layout logout={logout} onShowHelp={() => setShowOnboarding(true)} onShowUserInfo={() => showUserInfoPopupForUser(user)}>
+                <CourseInput
+                  onHighlight={handleHighlight}
+                  onConflicted={setConflicted}
+                  currentSemester={currentSemester}
+                  highlighted={highlighted}
+                />
+                <CourseSimilarityPrecomputedGraph
+                  highlighted={highlighted}
+                  conflicted={conflicted}
+                  setHighlighted={setHighlighted}
+                  setConflicted={setConflicted}
+                  currentSemester={currentSemester}
+                  onSemesterChange={setCurrentSemester}
+                  onConflicted={setConflicted}
+                  onHighlight={handleHighlight}
+                  showOnboarding={showOnboarding}
+                  setShowOnboarding={setShowOnboarding}
+                />
+                <SurpriseButton onSurpriseRecommendation={handleSurpriseRecommendation} />
+              </Layout>
+            }
           />
-          <CourseSimilarityPrecomputedGraph
-            highlighted={highlighted}
-            conflicted={conflicted}
-            setHighlighted={setHighlighted}
-            setConflicted={setConflicted}
-            currentSemester={currentSemester}
-            onSemesterChange={setCurrentSemester}
-            onConflicted={setConflicted}
-            onHighlight={handleHighlight}
-            showOnboarding={showOnboarding}
-            setShowOnboarding={setShowOnboarding}
+
+          {/* ✅ IntakePrompt moved to its own route */}
+          <Route path="/intake-prompt" element={<IntakePrompt />} />
+          <Route path="question" element={<SubmissionPage />} />
+
+          {/*<Route path="/upload" element={<Upload />} />*/}
+          <Route path="/intake" element={<Intake />} />
+          <Route path="/intake/courses/:index" element={<SemesterCourseIntake />} />
+
+          {/* Public route */}
+          <Route
+            path="/public-graph"
+            element={
+              <PublicLayout onShowHelp={() => setShowOnboarding(true)}>
+                <CourseSimilarityPrecomputedGraph
+                  highlighted={[]}
+                  conflicted={[]}
+                  setHighlighted={() => { }}
+                  setConflicted={() => { }}
+                  currentSemester={CURRENT_SEMESTER}
+                  onSemesterChange={() => { }}
+                  onConflicted={() => { }}
+                  onHighlight={() => { }}
+                  isPublicMode={true}
+                  showOnboarding={showOnboarding}
+                  setShowOnboarding={setShowOnboarding}
+                />
+              </PublicLayout>
+            }
           />
-          <SurpriseButton onSurpriseRecommendation={handleSurpriseRecommendation} />
-        </Layout>
-      }
-    />
 
-    {/* ✅ IntakePrompt moved to its own route */}
-    <Route path="/intake-prompt" element={<IntakePrompt />} />
-    <Route path="question" element={<SubmissionPage />} />
-
-    {/*<Route path="/upload" element={<Upload />} />*/}
-    <Route path="/intake" element={<Intake />} />
-    <Route path="/intake/courses/:index" element={<SemesterCourseIntake />} />
-
-    {/* Public route */}
-    <Route
-      path="/public-graph"
-      element={
-        <PublicLayout onShowHelp={() => setShowOnboarding(true)}>
-          <CourseSimilarityPrecomputedGraph
-            highlighted={[]}
-            conflicted={[]}
-            setHighlighted={() => {}}
-            setConflicted={() => {}}
-            currentSemester={CURRENT_SEMESTER}
-            onSemesterChange={() => {}}
-            onConflicted={() => {}}
-            onHighlight={() => {}}
-            isPublicMode={true}
-            showOnboarding={showOnboarding}
-            setShowOnboarding={setShowOnboarding}
-          />
-        </PublicLayout>
-      }
-    />
-
-    {/* ✅ catch-all redirects to graph */}
-    <Route path="*" element={<Navigate to="/" replace />} />
-  </Routes>
-  <TermsModal />
-  <UserInfoPopup
-    isOpen={showUserInfoPopup}
-    onClose={handleUserInfoClose}
-    onSave={handleUserInfoSave}
-  />
-</Router>
-</SemesterProvider>
+          {/* ✅ catch-all redirects to graph */}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+        <TermsModal />
+        <UserInfoPopup
+          isOpen={showUserInfoPopup}
+          onClose={handleUserInfoClose}
+          onSave={handleUserInfoSave}
+        />
+      </Router>
+    </SemesterProvider>
   );
 }
 
