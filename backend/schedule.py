@@ -72,7 +72,7 @@ client_embed = openai.AzureOpenAI(
 app = Flask(__name__)
 
 # Load allowed origins from environment variables
-ALLOWED_ORIGINS = os.getenv('ALLOWED_ORIGINS', 'http://localhost:3000', 'http://localhost:3001').split(',')
+ALLOWED_ORIGINS = os.getenv('ALLOWED_ORIGINS', 'http://localhost:3000').split(',')
 
 # Configure CORS with specific origins
 CORS(app, origins=ALLOWED_ORIGINS, 
