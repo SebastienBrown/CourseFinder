@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { API_BASE_URL } from './config';
 import { useSemester } from './SemesterContext';
-import { supabase } from "./supabaseClient"; 
+import { supabase } from "./supabaseClient";
 import CoursePopup from "./CoursePopup"; // Add this import
 
-export default function CourseInput({ onHighlight, onConflicted, currentSemester, highlighted}) {
+export default function CourseInput({ onHighlight, onConflicted, currentSemester, highlighted }) {
   const [input, setInput] = useState("");
   const [allCourses, setAllCourses] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
-  const backendUrl=process.env.REACT_APP_BACKEND_URL;
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
   const [useSemanticSearch, setUseSemanticSearch] = useState(false); // toggle state
-  const [useAllSemestersSearch,setAllSemestersSearch] = useState(false);
+  const [useAllSemestersSearch, setAllSemestersSearch] = useState(false);
   const { selectedSemester } = useSemester();
   const [selectedCourse, setSelectedCourse] = useState(null); // Add this state
 
@@ -32,7 +32,7 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
     // Calculate distance: (year difference * 3) + term difference
     const yearDiff = Math.abs(sem1.year - sem2.year);
     const termDiff = Math.abs(sem1.termOrder - sem2.termOrder);
-    
+
     return (yearDiff * 3) + termDiff;
   };
 
@@ -60,136 +60,136 @@ export default function CourseInput({ onHighlight, onConflicted, currentSemester
     loadCourses();
   }, []);
 
-// Search function to find matching courses with all semesters listed
-const searchCourses = (searchTerm) => {
-  //console.log('Searching with term:', searchTerm);
-  //console.log('Current semester:', currentSemester);
-  //console.log('Number of courses available:', allCourses.length);
-  
-  if (!searchTerm.trim()) {
-    setSuggestions([]);
-    return;
-  }
+  // Search function to find matching courses with all semesters listed
+  const searchCourses = (searchTerm) => {
+    //console.log('Searching with term:', searchTerm);
+    //console.log('Current semester:', currentSemester);
+    //console.log('Number of courses available:', allCourses.length);
 
-  const searchTermLower = searchTerm.toLowerCase();
+    if (!searchTerm.trim()) {
+      setSuggestions([]);
+      return;
+    }
 
-  let allMatches;
+    const searchTermLower = searchTerm.toLowerCase();
 
-  // First, find all matching courses across all semesters
-  allMatches = allCourses
-    .filter(course => {
-      if (!course.semester) return false;
+    let allMatches;
 
-      //console.log("current semester is ", selectedSemester)
-      if (!useAllSemestersSearch) {
-        // Only include courses that match the selected semester
-        if (course.semester !== selectedSemester) return false;
+    // First, find all matching courses across all semesters
+    allMatches = allCourses
+      .filter(course => {
+        if (!course.semester) return false;
+
+        //console.log("current semester is ", selectedSemester)
+        if (!useAllSemestersSearch) {
+          // Only include courses that match the selected semester
+          if (course.semester !== selectedSemester) return false;
+        }
+
+        const courseCodes = Array.isArray(course.course_codes)
+          ? course.course_codes
+          : [course.course_codes];
+
+        const codeMatch = courseCodes.some(code =>
+          code.toLowerCase().includes(searchTermLower)
+        );
+        const titleMatch = course.course_title &&
+          course.course_title.toLowerCase().includes(searchTermLower);
+
+        return codeMatch || titleMatch;
+      })
+      .map(course => ({
+        ...course,
+        semesterDistance: calculateSemesterDistance(currentSemester, course.semester)
+      }));
+
+    // Group courses by their primary course code
+    const courseGroups = new Map();
+
+    for (const course of allMatches) {
+      const courseCodes = Array.isArray(course.course_codes) ? course.course_codes : [course.course_codes];
+      const primaryCode = courseCodes[0];
+
+      if (!courseGroups.has(primaryCode)) {
+        courseGroups.set(primaryCode, {
+          course_codes: course.course_codes,
+          course_title: course.course_title,
+          semesters: [],
+          courses: [] // Store all course instances
+        });
       }
 
-      const courseCodes = Array.isArray(course.course_codes) 
-        ? course.course_codes 
-        : [course.course_codes];
-      
-      const codeMatch = courseCodes.some(code => 
-        code.toLowerCase().includes(searchTermLower)
-      );
-      const titleMatch = course.course_title && 
-        course.course_title.toLowerCase().includes(searchTermLower);
-      
-      return codeMatch || titleMatch;
-    })
-    .map(course => ({
-      ...course,
-      semesterDistance: calculateSemesterDistance(currentSemester, course.semester)
-    }));
-
-  // Group courses by their primary course code
-  const courseGroups = new Map();
-  
-  for (const course of allMatches) {
-    const courseCodes = Array.isArray(course.course_codes) ? course.course_codes : [course.course_codes];
-    const primaryCode = courseCodes[0];
-    
-    if (!courseGroups.has(primaryCode)) {
-      courseGroups.set(primaryCode, {
-        course_codes: course.course_codes,
-        course_title: course.course_title,
-        semesters: [],
-        courses: [] // Store all course instances
-      });
+      const group = courseGroups.get(primaryCode);
+      group.semesters.push(course.semester);
+      group.courses.push(course);
     }
-    
-    const group = courseGroups.get(primaryCode);
-    group.semesters.push(course.semester);
-    group.courses.push(course);
-  }
 
-  // Convert grouped courses back to array format with semester lists
-  const groupedCourses = Array.from(courseGroups.values()).map(group => {
-    // Sort semesters chronologically (you may need to adjust this based on your semester format)
-    const sortedSemesters = group.semesters.sort((a, b) => {
-      // Assuming semester format like "Fall 2023", "Spring 2024", etc.
-      // You may need to adjust this sorting logic based on your actual semester format
-      return a.localeCompare(b);
+    // Convert grouped courses back to array format with semester lists
+    const groupedCourses = Array.from(courseGroups.values()).map(group => {
+      // Sort semesters chronologically (you may need to adjust this based on your semester format)
+      const sortedSemesters = group.semesters.sort((a, b) => {
+        // Assuming semester format like "Fall 2023", "Spring 2024", etc.
+        // You may need to adjust this sorting logic based on your actual semester format
+        return a.localeCompare(b);
+      });
+
+      // Find the course instance from the closest semester for other properties
+      const closestCourse = group.courses.reduce((closest, current) => {
+        return current.semesterDistance < closest.semesterDistance ? current : closest;
+      });
+
+      return {
+        ...closestCourse,
+        semesters: sortedSemesters,
+        semesterCount: sortedSemesters.length,
+        // Add a display property for all semesters
+        allSemestersText: sortedSemesters.join(', ')
+      };
     });
 
-    // Find the course instance from the closest semester for other properties
-    const closestCourse = group.courses.reduce((closest, current) => {
-      return current.semesterDistance < closest.semesterDistance ? current : closest;
+    // Sort by relevance first, then by semester distance of the closest occurrence
+    const sortedMatches = groupedCourses.sort((a, b) => {
+      // First, prioritize exact matches in course codes
+      const aCodes = Array.isArray(a.course_codes) ? a.course_codes : [a.course_codes];
+      const bCodes = Array.isArray(b.course_codes) ? b.course_codes : [b.course_codes];
+
+      const aExactMatch = aCodes.some(code => code.toLowerCase() === searchTermLower);
+      const bExactMatch = bCodes.some(code => code.toLowerCase() === searchTermLower);
+
+      if (aExactMatch && !bExactMatch) return -1;
+      if (!aExactMatch && bExactMatch) return 1;
+
+      // Then prioritize exact matches in titles
+      const aTitleExact = a.course_title && a.course_title.toLowerCase() === searchTermLower;
+      const bTitleExact = b.course_title && b.course_title.toLowerCase() === searchTermLower;
+
+      if (aTitleExact && !bTitleExact) return -1;
+      if (!aTitleExact && bTitleExact) return 1;
+
+      // Then prioritize starts-with matches
+      const aStartsWith = aCodes.some(code => code.toLowerCase().startsWith(searchTermLower)) ||
+        (a.course_title && a.course_title.toLowerCase().startsWith(searchTermLower));
+      const bStartsWith = bCodes.some(code => code.toLowerCase().startsWith(searchTermLower)) ||
+        (b.course_title && b.course_title.toLowerCase().startsWith(searchTermLower));
+
+      if (aStartsWith && !bStartsWith) return -1;
+      if (!aStartsWith && bStartsWith) return 1;
+
+      // Finally, sort by semester distance (closer semesters first)
+      return a.semesterDistance - b.semesterDistance;
     });
 
-    return {
-      ...closestCourse,
-      semesters: sortedSemesters,
-      semesterCount: sortedSemesters.length,
-      // Add a display property for all semesters
-      allSemestersText: sortedSemesters.join(', ')
-    };
-  });
+    // Limit to 5 suggestions
+    const matches = sortedMatches.slice(0, 5);
 
-  // Sort by relevance first, then by semester distance of the closest occurrence
-  const sortedMatches = groupedCourses.sort((a, b) => {
-    // First, prioritize exact matches in course codes
-    const aCodes = Array.isArray(a.course_codes) ? a.course_codes : [a.course_codes];
-    const bCodes = Array.isArray(b.course_codes) ? b.course_codes : [b.course_codes];
-    
-    const aExactMatch = aCodes.some(code => code.toLowerCase() === searchTermLower);
-    const bExactMatch = bCodes.some(code => code.toLowerCase() === searchTermLower);
-    
-    if (aExactMatch && !bExactMatch) return -1;
-    if (!aExactMatch && bExactMatch) return 1;
-    
-    // Then prioritize exact matches in titles
-    const aTitleExact = a.course_title && a.course_title.toLowerCase() === searchTermLower;
-    const bTitleExact = b.course_title && b.course_title.toLowerCase() === searchTermLower;
-    
-    if (aTitleExact && !bTitleExact) return -1;
-    if (!aTitleExact && bTitleExact) return 1;
-    
-    // Then prioritize starts-with matches
-    const aStartsWith = aCodes.some(code => code.toLowerCase().startsWith(searchTermLower)) ||
-                       (a.course_title && a.course_title.toLowerCase().startsWith(searchTermLower));
-    const bStartsWith = bCodes.some(code => code.toLowerCase().startsWith(searchTermLower)) ||
-                       (b.course_title && b.course_title.toLowerCase().startsWith(searchTermLower));
-    
-    if (aStartsWith && !bStartsWith) return -1;
-    if (!aStartsWith && bStartsWith) return 1;
-    
-    // Finally, sort by semester distance (closer semesters first)
-    return a.semesterDistance - b.semesterDistance;
-  });
-
-  // Limit to 5 suggestions
-  const matches = sortedMatches.slice(0, 5);
-
-  //console.log('Found matches with all semesters:', matches);
-  setSuggestions(matches);
-};
+    //console.log('Found matches with all semesters:', matches);
+    setSuggestions(matches);
+  };
 
   const handleInputChange = (e) => {
     const value = e.target.value;
     setInput(value);
-    
+
     if (!useSemanticSearch) {
       // Default behavior: live search as usual
       searchCourses(value);
@@ -202,19 +202,19 @@ const searchCourses = (searchTerm) => {
 
   const handleToggle = () => {
     setUseSemanticSearch(prev => !prev);
-  };  
-  
+  };
+
   useEffect(() => {
     //console.log("useSemanticSearch is now:", useSemanticSearch);
-  }, [selectedSemester,useSemanticSearch]);
+  }, [selectedSemester, useSemanticSearch]);
 
-  
+
   const searchSemanticCourse = async (searchTerm) => {
     if (!searchTerm.trim()) {
       setSuggestions([]);
       return;
     }
-    
+
     try {
       console.log("attempted semantic search");
       const response = await fetch(`${backendUrl}/semantic_course_search`, {
@@ -231,16 +231,16 @@ const searchCourses = (searchTerm) => {
   };
 
   const handleSuggestionClick = async (course) => {
-    const courseCodes = Array.isArray(course.course_codes) 
-      ? course.course_codes 
+    const courseCodes = Array.isArray(course.course_codes)
+      ? course.course_codes
       : [course.course_codes];
-    
+
     setInput(courseCodes[0]); // Set the first course code as input
     setShowSuggestions(false);
 
     // Show the course popup
     setSelectedCourse(course);
-    
+
     /* 
     // Ensure highlighted is an array before spreading
     const currentHighlighted = Array.isArray(highlighted) ? highlighted : [];
@@ -266,7 +266,7 @@ const searchCourses = (searchTerm) => {
     } catch (error) {
       console.error('Error checking conflicts:', error);
     } */
-    
+
     //maybe the most logical thing to do when selecting a course is to bring up it's popup 
     //but not select - looking up a course doesn't mean that someone wants to take it
     //on the flip side - neither should it be highlighted!!!
@@ -313,32 +313,32 @@ const searchCourses = (searchTerm) => {
 
   // Function to handle course selection (adding/removing from highlighted list)
   const handleAddSelectedCourse = async (course) => {
-    const courseCodes = Array.isArray(course.course_codes) 
-      ? course.course_codes 
+    const courseCodes = Array.isArray(course.course_codes)
+      ? course.course_codes
       : [course.course_codes];
-    
+
     const primaryCode = courseCodes[0];
-    
+
     // Check if already highlighted
     const currentHighlighted = Array.isArray(highlighted) ? highlighted : [];
     const isAlreadyHighlighted = currentHighlighted.includes(primaryCode) ||
       courseCodes.some(code => currentHighlighted.includes(code)) ||
       currentHighlighted.includes(courseCodes.join('/'));
-    
+
     let newHighlighted;
     if (isAlreadyHighlighted) {
       // Remove from highlighted
-      newHighlighted = currentHighlighted.filter(code => 
+      newHighlighted = currentHighlighted.filter(code =>
         !courseCodes.includes(code) && code !== courseCodes.join('/')
       );
     } else {
       // Add to highlighted
       newHighlighted = [...currentHighlighted, primaryCode];
     }
-    
+
     // Update highlighted courses
     onHighlight(newHighlighted);
-    
+
     // Check for conflicts
     try {
       const response = await fetch(`${backendUrl}/conflicted_courses`, {
@@ -346,9 +346,9 @@ const searchCourses = (searchTerm) => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ 
+        body: JSON.stringify({
           taken_courses: newHighlighted,
-          semester: currentSemester 
+          semester: currentSemester
         }),
       });
       const data = await response.json();
@@ -372,28 +372,28 @@ const searchCourses = (searchTerm) => {
       .split(",")
       .map((code) => code.trim().toUpperCase())
       .filter((code) => code.length > 0);
-    
-  if (codes.length === 0) return; // nothing to process
+
+    if (codes.length === 0) return; // nothing to process
 
     // Create a set of all valid course codes
-  const allCourseCodes = new Set(
-    allCourses.flatMap(course => 
-      Array.isArray(course.course_codes) 
-        ? course.course_codes 
-        : [course.course_codes]
-    )
-  );
+    const allCourseCodes = new Set(
+      allCourses.flatMap(course =>
+        Array.isArray(course.course_codes)
+          ? course.course_codes
+          : [course.course_codes]
+      )
+    );
 
-// Filter input codes to only keep valid ones
-const validCodes = codes.filter(code => allCourseCodes.has(code));
+    // Filter input codes to only keep valid ones
+    const validCodes = codes.filter(code => allCourseCodes.has(code));
 
-if (validCodes.length === 0) return; // no valid codes, do nothing
+    if (validCodes.length === 0) return; // no valid codes, do nothing
 
     // Combine with current highlighted courses
-  const currentHighlighted = Array.isArray(highlighted) ? highlighted : [];
-  const newHighlighted = [...currentHighlighted, ...validCodes];
-  onHighlight(newHighlighted);
-    
+    const currentHighlighted = Array.isArray(highlighted) ? highlighted : [];
+    const newHighlighted = [...currentHighlighted, ...validCodes];
+    onHighlight(newHighlighted);
+
     // Check for conflicts
     try {
       const response = await fetch(`${backendUrl}/conflicted_courses`, {
@@ -401,9 +401,9 @@ if (validCodes.length === 0) return; // no valid codes, do nothing
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ 
+        body: JSON.stringify({
           taken_courses: newHighlighted,
-          semester: currentSemester 
+          semester: currentSemester
         }),
       });
       const data = await response.json();
@@ -411,7 +411,7 @@ if (validCodes.length === 0) return; // no valid codes, do nothing
     } catch (error) {
       console.error('Error checking conflicts:', error);
     }
-    
+
     setInput(""); // Clear the input after search
   };
 
@@ -427,32 +427,36 @@ if (validCodes.length === 0) return; // no valid codes, do nothing
 
   return (
     <div className="relative w-full max-w-[1200px] mx-auto">
-      
-      
+
+
 
       <form
         onSubmit={handleSubmit}
         className="w-full flex flex-wrap items-center gap-4 bg-[#f9f7fb] border border-[#eae6f4] rounded-xl px-6 py-4 mb-6"
       >
-      <button
-      type="button"
-        onClick={() => setUseSemanticSearch(!useSemanticSearch)}
-        className={`px-4 py-2 rounded-md font-semibold transition ${
-          useSemanticSearch ? "bg-[#3f1f69] text-white" : "bg-gray-200 text-black"
-        }`}
-      >
-        {useSemanticSearch ? "Semantic Search" : "Default Search"}
-      </button>
+        <div className="flex flex-col gap-1">
+          <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider px-1">Search Mode</label>
+          <select
+            value={useSemanticSearch ? "semantic" : "default"}
+            onChange={(e) => setUseSemanticSearch(e.target.value === "semantic")}
+            className="px-4 py-2 bg-white border border-[#eae6f4] rounded-lg font-semibold text-[#3f1f69] focus:outline-none focus:ring-2 focus:ring-[#3f1f69] transition shadow-sm cursor-pointer"
+          >
+            <option value="default">Default Search</option>
+            <option value="semantic">Semantic (AI) Search</option>
+          </select>
+        </div>
 
-      <button
-      type="button"
-        onClick={() => setAllSemestersSearch(!useAllSemestersSearch)}
-        className={`px-4 py-2 rounded-md font-semibold transition ${
-          useAllSemestersSearch ? "bg-[#3f1f69] text-white" : "bg-gray-200 text-black"
-        }`}
-      >
-        {useAllSemestersSearch ? "All Semesters" : "Current Semester"}
-      </button>
+        <div className="flex flex-col gap-1">
+          <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider px-1">Semester Scope</label>
+          <select
+            value={useAllSemestersSearch ? "all" : "current"}
+            onChange={(e) => setAllSemestersSearch(e.target.value === "all")}
+            className="px-4 py-2 bg-white border border-[#eae6f4] rounded-lg font-semibold text-[#3f1f69] focus:outline-none focus:ring-2 focus:ring-[#3f1f69] transition shadow-sm cursor-pointer"
+          >
+            <option value="current">Current Semester Only</option>
+            <option value="all">Across All Semesters</option>
+          </select>
+        </div>
 
         <label
           htmlFor="course-input"
@@ -478,45 +482,51 @@ if (validCodes.length === 0) return; // no valid codes, do nothing
             }
             className="w-full px-3 py-2 border border-[#5d3c85] bg-[#f4f0fa] text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-[#3f1f69]"
           />
-          
-          {showSuggestions && suggestions.length > 0 && (
-          <div className="absolute z-50 w-full mt-1 bg-white border border-[#eae6f4] rounded-md shadow-lg">
-            {suggestions.map((course, index) => (
-              <div
-                key={index}
-                onClick={() => handleSuggestionClick(course)}
-                className="px-3 py-2 hover:bg-[#f4f0fa] cursor-pointer text-sm"
-              >
-                <div className="font-medium text-[#3f1f69]">
-                  {Array.isArray(course.course_codes) 
-                    ? course.course_codes.join(", ") 
-                    : course.course_codes}
+
+          {showSuggestions && input.trim() && (
+            <div className="absolute z-50 w-full mt-1 bg-white border border-[#eae6f4] rounded-md shadow-lg">
+              {suggestions.length > 0 ? (
+                suggestions.map((course, index) => (
+                  <div
+                    key={index}
+                    onClick={() => handleSuggestionClick(course)}
+                    className="px-3 py-2 hover:bg-[#f4f0fa] cursor-pointer text-sm"
+                  >
+                    <div className="font-medium text-[#3f1f69]">
+                      {Array.isArray(course.course_codes)
+                        ? course.course_codes.join(", ")
+                        : course.course_codes}
+                    </div>
+                    <div className="text-gray-600">
+                      {course.course_title}
+                    </div>
+                    {/* Show all semesters if multiple semesters exist */}
+                    {course.semesters && course.semesters.length > 1 && (
+                      <div className="text-xs text-gray-500 mt-1">
+                        Taught in: {course.allSemestersText}
+                      </div>
+                    )}
+                    {/* Show single semester for courses taught in only one semester */}
+                    {course.semesters && course.semesters.length === 1 && (
+                      <div className="text-xs text-gray-500 mt-1">
+                        {course.semester}
+                      </div>
+                    )}
+                    {/* Fallback for courses without the new semesters array (backward compatibility) */}
+                    {!course.semesters && course.semester && (
+                      <div className="text-xs text-gray-500 mt-1">
+                        {course.semester}
+                      </div>
+                    )}
+                  </div>
+                ))
+              ) : (
+                <div className="px-3 py-4 text-sm text-center text-gray-500 italic">
+                  No matching courses
                 </div>
-                <div className="text-gray-600">
-                  {course.course_title}
-                </div>
-                {/* Show all semesters if multiple semesters exist */}
-                {course.semesters && course.semesters.length > 1 && (
-                  <div className="text-xs text-gray-500 mt-1">
-                    Taught in: {course.allSemestersText}
-                  </div>
-                )}
-                {/* Show single semester for courses taught in only one semester */}
-                {course.semesters && course.semesters.length === 1 && (
-                  <div className="text-xs text-gray-500 mt-1">
-                    {course.semester}
-                  </div>
-                )}
-                {/* Fallback for courses without the new semesters array (backward compatibility) */}
-                {!course.semesters && course.semester && (
-                  <div className="text-xs text-gray-500 mt-1">
-                    {course.semester}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        )}
+              )}
+            </div>
+          )}
         </div>
 
         <button

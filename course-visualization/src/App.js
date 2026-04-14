@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import { supabase } from "./supabaseClient";
 import CourseSimilarityPrecomputedGraph from "./CourseSimilarityPrecomputedGraph";
 import Auth from "./Auth";
+import UpdatePassword from "./UpdatePassword";
 import Intake from "./Intake"; // intake semester checklist
 import SemesterCourseIntake from "./SemesterCourseIntake"; // per-semester course selector
 import { useNavigate } from "react-router-dom";
@@ -134,6 +135,7 @@ function App() {
   const [showNotesPopup, setShowNotesPopup] = useState(false);
   const [userClassYear, setUserClassYear] = useState(null);
   const [pendingUser, setPendingUser] = useState(null);
+  const [recoveryMode, setRecoveryMode] = useState(false);
   const graphRef = useRef(null);
 
   const handleHighlight = useCallback((newHighlighted) => {
@@ -232,9 +234,31 @@ function App() {
   };
 
   useEffect(() => {
-    supabase.auth.getUser().then(({ data: { user } }) => setUser(user));
-    supabase.auth.onAuthStateChange((_, session) => {
-      setUser(session?.user || null);
+    // Check if we're returning from a recovery email via URL fragment
+    if (window.location.hash.includes('type=recovery')) {
+      console.log("🔗 URL Fragment detected recovery mode via hash!");
+      setRecoveryMode(true);
+    }
+
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      console.log("🕵️ Initial user fetch:", user?.email);
+      setUser(user);
+    });
+
+    supabase.auth.onAuthStateChange((event, session) => {
+      console.log("🔔 Auth Event Fired:", event, "User:", session?.user?.email);
+
+      if (event === 'PASSWORD_RECOVERY') {
+        console.log("🔑 PASSWORD_RECOVERY detected! Setting recovery mode to true.");
+        setRecoveryMode(true);
+      }
+
+      if (session?.user) {
+        setUser(session.user);
+      } else if (event === 'SIGNED_OUT') {
+        setUser(null);
+        setRecoveryMode(false);
+      }
     });
   }, []);
 
@@ -317,6 +341,13 @@ function App() {
 
   // Only show Auth component if no user and not on public routes
   const isPublicRoute = window.location.pathname === '/public-graph';
+
+  if (recoveryMode) {
+    return <UpdatePassword onComplete={() => {
+      setRecoveryMode(false);
+      setUser(null); // Force re-auth after reset
+    }} />;
+  }
 
   if (!user && !isPublicRoute) return <Auth onLogin={setUser} onShowUserInfo={showUserInfoPopupForUser} />;
 

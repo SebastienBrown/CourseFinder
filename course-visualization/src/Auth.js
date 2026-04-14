@@ -6,12 +6,15 @@ export default function Auth({ onLogin, onShowUserInfo }) {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState(""); // message state
   const [debugInfo, setDebugInfo] = useState(""); // debug info state
+  const [isResetMode, setIsResetMode] = useState(false);
+  const [resetSent, setResetSent] = useState(false);
+  const [isSignUpMode, setIsSignUpMode] = useState(false);
 
   const checkUserInfo = async (user) => {
     try {
       const { data: { session } } = await supabase.auth.getSession();
       const token = session?.access_token;
-      
+
       if (!token) {
         console.error("No valid session token found");
         return false;
@@ -43,7 +46,7 @@ export default function Auth({ onLogin, onShowUserInfo }) {
     try {
       const { data: { session } } = await supabase.auth.getSession();
       const token = session?.access_token;
-      
+
       if (!token) {
         throw new Error("No valid session token found");
       }
@@ -79,7 +82,12 @@ export default function Auth({ onLogin, onShowUserInfo }) {
     const { data, error: signUpError } = await supabase.auth.signUp({ email, password });
 
     if (!signUpError) {
-      setMessage("Check your email to confirm your sign-up!");
+      // Supabase's email enumeration protection returns a dummy user with no identities if the email already exists
+      if (data?.user?.identities != null && data.user.identities.length === 0) {
+        setMessage("This email is already registered. Please sign in.");
+      } else {
+        setMessage("Check your email to confirm your sign-up!");
+      }
     } else if (signUpError.message.includes("User already registered")) {
       setMessage("This email is already registered. Please sign in.");
     } else {
@@ -91,6 +99,77 @@ export default function Auth({ onLogin, onShowUserInfo }) {
       );
     }
   };
+
+  const handleResetPassword = async () => {
+    if (!email) {
+      setMessage("Please enter your email to reset your password.");
+      return;
+    }
+
+    setMessage("");
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}`,
+    });
+
+    if (error) {
+      console.error("Reset Password Error:", error);
+      if (error.message.includes("rate limit exceeded")) {
+        setMessage("Email rate limit exceeded. Please wait a minute or two before trying again.");
+      } else {
+        setMessage(`Error: ${error.message}`);
+      }
+    } else {
+      setResetSent(true);
+      setMessage("Check your email for the password reset link!");
+    }
+  };
+
+  if (isResetMode) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-[#f9f7fb] px-4">
+        <div className="bg-white rounded-2xl shadow-lg p-10 max-w-lg w-full">
+          <div className="text-center mb-8">
+            <h1 className="text-3xl font-bold text-[#3f1f69] mb-2">Reset Password</h1>
+            <p className="text-gray-600 mb-6">Enter your email and we'll send you a recovery link.</p>
+
+            <input
+              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#3f1f69] focus:border-transparent transition-all duration-200 placeholder-gray-500 mb-4"
+              type="email"
+              placeholder="Email address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+
+            <button
+              onClick={handleResetPassword}
+              disabled={resetSent}
+              className={`w-full px-6 py-3 text-white rounded-xl font-semibold shadow transition-all duration-200 ${resetSent ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#3f1f69] hover:bg-[#311a4d] hover:shadow-lg'
+                }`}
+            >
+              {resetSent ? "Email Sent" : "Send Recovery Link"}
+            </button>
+
+            <button
+              onClick={() => {
+                setIsResetMode(false);
+                setResetSent(false);
+                setMessage("");
+              }}
+              className="mt-6 w-full text-[#3f1f69] font-medium hover:underline text-sm"
+            >
+              Back to Sign In
+            </button>
+
+            {message && (
+              <div className={`mt-4 p-3 rounded-xl border ${resetSent ? 'bg-green-50 border-green-200 text-green-600' : 'bg-red-50 border-red-200 text-red-600'}`}>
+                <div className="text-sm">{message}</div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   const signIn = async () => {
     setMessage("");
@@ -137,29 +216,9 @@ export default function Auth({ onLogin, onShowUserInfo }) {
           <h1 className="text-3xl font-bold text-[#3f1f69] mb-2">
             The Visual Open Curriculum
           </h1>
-          <h2 className="text-xl font-semibold text-gray-700 mb-4">Welcome Back</h2>
-          <div className="bg-[#f9f7fb] border border-[#e8e2f2] rounded-xl p-4 mb-6">
-            <div className="flex items-center justify-center space-x-2 mb-3">
-              <svg className="w-5 h-5 text-[#3f1f69]" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-              </svg>
-              <h3 className="text-sm font-semibold text-[#3f1f69]">First Time Here?</h3>
-            </div>
-            <div className="space-y-2 text-sm text-gray-600">
-              <div className="flex items-center space-x-2" style={{ marginLeft: '5rem' }}>
-                <span className="w-1.5 h-1.5 bg-[#3f1f69] rounded-full flex-shrink-0"></span>
-                <span>Enter your email and password</span>
-              </div>
-              <div className="flex items-center space-x-2" style={{ marginLeft: '5rem' }}>
-                <span className="w-1.5 h-1.5 bg-[#3f1f69] rounded-full flex-shrink-0"></span>
-                <span>Click <strong>"Sign Up"</strong> for new accounts</span>
-              </div>
-              <div className="flex items-center space-x-2" style={{ marginLeft: '5rem' }}>
-                <span className="w-1.5 h-1.5 bg-[#3f1f69] rounded-full flex-shrink-0"></span>
-                <span>Check your email for verification link</span>
-              </div>
-            </div>
-          </div>
+          <h2 className="text-xl font-semibold text-gray-700">
+            {isSignUpMode ? "Create an Account" : "Welcome Back"}
+          </h2>
         </div>
 
         {/* Form */}
@@ -182,35 +241,49 @@ export default function Auth({ onLogin, onShowUserInfo }) {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
+          
+          {!isSignUpMode && (
+            <div className="text-right">
+              <button
+                onClick={() => setIsResetMode(true)}
+                className="text-sm text-[#3f1f69] hover:underline font-medium"
+              >
+                Forgot Password?
+              </button>
+            </div>
+          )}
         </div>
 
-        {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-3 mt-6">
-          <button 
-            onClick={signIn} 
-            className="flex-1 px-6 py-3 bg-[#3f1f69] text-white rounded-xl font-semibold shadow hover:bg-[#311a4d] transition-all duration-200 hover:shadow-lg"
+        {/* Button */}
+        <div className="mt-6">
+          <button
+            onClick={isSignUpMode ? signUp : signIn}
+            className="w-full px-6 py-3 bg-[#3f1f69] text-white rounded-xl font-semibold shadow hover:bg-[#311a4d] transition-all duration-200 hover:shadow-lg"
           >
-            Sign In
+            {isSignUpMode ? "Sign Up" : "Sign In"}
           </button>
-          <button 
-            onClick={signUp} 
-            className="flex-1 px-6 py-3 bg-[#5d3c85] text-white rounded-xl font-semibold shadow hover:bg-[#4b2f72] transition-all duration-200 hover:shadow-lg"
-          >
-            Sign Up
-          </button>
+        </div>
+        
+        {/* Toggle Mode */}
+        <div className="text-center mt-6">
+          <p className="text-sm text-gray-600">
+            {isSignUpMode ? "Already have an account?" : "Don't have an account?"}{" "}
+            <button
+              onClick={() => {
+                setIsSignUpMode(!isSignUpMode);
+                setMessage("");
+              }}
+              className="text-[#3f1f69] font-semibold hover:underline"
+            >
+              {isSignUpMode ? "Sign In" : "Sign Up"}
+            </button>
+          </p>
         </div>
 
         {/* Message */}
         {message && (
-          <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-xl">
-            <div className="text-red-600 text-sm">{message}</div>
-          </div>
-        )}
-
-        {/* Debug info */}
-        {debugInfo && (
-          <div className="text-sm text-gray-500 mt-4">
-            {/* Debug Info: {debugInfo} */}
+          <div className={`mt-4 p-3 rounded-xl border ${message.includes("Error") || message.includes("Invalid") ? 'bg-red-50 border-red-200 text-red-600' : 'bg-blue-50 border-blue-200 text-blue-600'}`}>
+            <div className="text-sm">{message}</div>
           </div>
         )}
       </div>
