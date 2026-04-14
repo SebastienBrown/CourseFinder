@@ -826,139 +826,113 @@ def surprise_recommendation(payload=None, user_id=None, user_email=None):
         client_exclude = body.get("exclude_codes", [])
         exclude_codes = {str(c).strip().upper() for c in client_exclude if isinstance(c, str)}
 
-
-        # --- fetch user's course history from Supabase ---
+        # --- 1. Fetch user context from Supabase ---
         headers = {
             "apikey": SUPABASE_KEY,
             "Authorization": f"Bearer {SUPABASE_KEY}",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
-        get_url = f"{SUPABASE_TABLE_URL}?id=eq.{user_id}"
-        resp = requests.get(get_url, headers=headers)
+        
+        # Course history
+        resp = requests.get(f"{SUPABASE_TABLE_URL}?id=eq.{user_id}", headers=headers)
         if resp.status_code != 200:
             return jsonify({"error": "Could not retrieve course history"}), 500
-
         user_data = resp.json()
-        user_courses: list[str] = []
-        user_departments: set[str] = set()
-        if user_data:
-            for sem in SEMESTER_COLUMNS:
-                if sem in user_data[0] and user_data[0][sem]:
-                    for code in user_data[0][sem]:
-                        user_courses.append(code)
-                        if "-" in code:
-                            user_departments.add(code.split("-")[0])
 
-        # --- fetch user's notes from Supabase for additional profiling ---
+        user_courses = []
+        user_departments = set()
+        if user_data:
+            row = user_data[0]
+            for sem in SEMESTER_COLUMNS:
+                if sem in row and row[sem]:
+                    for code in row[sem]:
+                        code_norm = str(code).strip().upper()
+                        user_courses.append(code_norm)
+                        if "-" in code_norm:
+                            user_departments.add(code_norm.split("-")[0])
+
+        # User interest notes
         user_note_profile = ""
-        notes_url = f"{SUPABASE_URL}/rest/v1/user_notes?id=eq.{user_id}"
-        notes_resp = requests.get(notes_url, headers=headers)
+        notes_resp = requests.get(f"{SUPABASE_URL}/rest/v1/user_notes?id=eq.{user_id}", headers=headers)
         if notes_resp.status_code == 200:
             notes_data = notes_resp.json()
             if notes_data and "predefined_responses" in notes_data[0]:
-                preds = notes_data[0]["predefined_responses"]
-                # The first question for both FY and Others
                 q1 = "Are there particular skills or knowledge you would like to gain this semester? If so, what are they?"
-                user_note_profile = preds.get(q1, "").strip()
+                user_note_profile = notes_data[0]["predefined_responses"].get(q1, "").strip()
 
         if not user_courses and not user_note_profile:
             return jsonify({"error": "No course history or interest notes found. Please add courses or fill out your 'Academic Notes' first."}), 400
 
-        # --- find the latest semester that actually exists in amherst_data ---
+        # --- 2. Build User Profile and Get Embedding ---
+        # We build a descriptive text summary of who the student is
+        profile_parts = []
+        if user_note_profile:
+            profile_parts.append(f"Student's stated interests: {user_note_profile}")
+        
+        # Add a few course titles from history to give context (to avoid massive profile text)
+        if user_courses:
+            # We used to iterate amherst_data for this, but to save memory we can just 
+            # query Qdrant by ID or just use the codes. 
+            # For simplicity in 'surprise', we'll just use the codes for now, or fetch titles if we want better results.
+            profile_parts.append(f"Student has previously taken these courses: {', '.join(user_courses[:30])}")
+
+        profile_text = "\n".join(profile_parts)
+        
+        # Generate the query vector
+        try:
+            profile_vector = get_openai_embedding(profile_text).flatten().tolist()
+        except Exception as e:
+            print(f"Embedding error in surprise: {e}")
+            return jsonify({"error": "Failed to generate user interest profile"}), 500
+
+        # --- 3. Query Qdrant for semantic candidates in the latest semester ---
         present_terms = {c.get("semester") for c in amherst_data if c.get("semester")}
         latest_semester = next((s for s in reversed(SEMESTER_COLUMNS) if s in present_terms), None)
         if not latest_semester:
             return jsonify({"error": "No semesters available in catalog"}), 500
 
-        # --- candidates: ONLY courses from latest_semester, not taken, from new departments ---
-        # --- candidates: ONLY courses from latest_semester, not taken, from new departments, NOT SEEN THIS SESSION ---
-        candidate_courses = []
-        for course in amherst_data:
-            if course.get("semester") != latest_semester:
-                continue
-            course_codes = course.get("course_codes", []) or []
-            if not course_codes:
-                continue
+        # We fetch top 150 from latest semester to provide enough room for post-filtering "surprises"
+        search_result = qdrant.search(
+            collection_name="amherst_courses",
+            query_vector=profile_vector,
+            query_filter=models.Filter(
+                must=[
+                    models.FieldCondition(
+                        key="semester",
+                        match=models.MatchValue(value=latest_semester)
+                    )
+                ]
+            ),
+            limit=150
+        )
 
-            # Normalize codes once
-            norm_codes = [str(code).strip().upper() for code in course_codes]
-
-            # Skip if course was already recommended in this browser session
-            if any(c in exclude_codes for c in norm_codes):
-                continue
-
-            # departments for this course
-            course_departments = {code.split("-")[0] for code in course_codes if "-" in code}
-
-            # skip user's usual departments; skip courses they've taken
-            if course_departments & user_departments:
-                continue
-            if any(code in user_courses for code in course_codes):
-                continue
-
-            candidate_courses.append(course)
-
-        if not candidate_courses:
-            return jsonify({"error": f"No unseen surprising courses found in {latest_semester}."}), 400
-
-            # --- build helpers to create text for similarity ---
-        def course_text(c: dict) -> str:
-            title = (c.get("course_title") or "").strip()
-            desc = (c.get("description") or "").strip()
-            return f"{title}. {desc}".strip()
-
-        code_to_course = {}
-        for c in amherst_data:
-            for code in c.get("course_codes", []) or []:
-                code_to_course[code] = c
-
-        # user profile text: merge history titles/descriptions + their interest notes
-        user_profile_texts = []
-        if user_note_profile:
-            user_profile_texts.append(user_note_profile)
-
-        for code in user_courses:
-            c = code_to_course.get(code)
-            if c:
-                t = course_text(c)
-                if t:
-                    user_profile_texts.append(t)
-        user_profile = " ".join(user_profile_texts).strip() or " ".join(user_courses)
-
-        # --- rank latest-semester candidates by TF-IDF similarity to user profile ---
-        from sklearn.feature_extraction.text import TfidfVectorizer  # local import to keep global deps minimal
-
-        cand_texts = [course_text(c) for c in candidate_courses]
-        pairs = [(c, t) for c, t in zip(candidate_courses, cand_texts) if t]
-
-        if pairs:
-            docs = [user_profile] + [t for _, t in pairs]
-            vect = TfidfVectorizer(stop_words="english", max_features=8000)
-            X = vect.fit_transform(docs)
-            sims = cosine_similarity(X[0:1], X[1:]).ravel()
-
-            ranked = [c for (c, _s) in sorted(zip([c for c, _ in pairs], sims),
-                                              key=lambda x: x[1], reverse=True)]
-
-            # tiny diversity: sample from the top pool deterministically per user
-            import random
-            rng = random.Random(user_id)
-            pool = ranked[:200] if len(ranked) > 200 else ranked
-            rng.shuffle(pool)
-            shortlist = pool[:50] if len(pool) > 50 else pool
-        else:
-            # fallback: if we had no text, at least avoid A/B bias with a deterministic shuffle
-            import random
-            rng = random.Random(user_id)
-            shortlist = candidate_courses[:]
-            rng.shuffle(shortlist)
-            shortlist = shortlist[:50]
+        # --- 4. Post-filter for "Surprise" elements in candidate pool ---
+        shortlist = []
+        for point in search_result:
+            payload = point.payload
+            course_codes = payload.get("course_codes", [])
+            norm_codes = [str(c).strip().upper() for c in course_codes]
+            
+            # Skip if taken or excluded
+            if any(c in user_courses for c in norm_codes): continue
+            if any(c in exclude_codes for c in norm_codes): continue
+            
+            # Surprise factor: department check
+            course_depts = {c.split("-")[0] for c in norm_codes if "-" in c}
+            if course_depts & user_departments:
+                continue # Skip if in a department they've already explored
+            
+            shortlist.append(payload)
+            if len(shortlist) >= 30: # Balanced shortlist for reliability and variety
+                break
 
         if not shortlist:
-            return jsonify({"error": f"No candidate courses available in {latest_semester}."}), 400
+            return jsonify({
+                "error": f"No unseen surprising courses found in {latest_semester} that match your profile. Try adding more courses or interests!"
+            }), 400
 
-        # --- build LLM prompt using ONLY latest-semester shortlist ---
+        # --- 5. Final LLM Selection (Reverting to original prompt/logic) ---
         user_courses_str = ", ".join(user_courses[:40])
         
         notes_context = ""
@@ -992,7 +966,7 @@ Respond with ONLY this JSON:
 }
 """.rstrip()
 
-        # --- call chat model via direct HTTP (SDK incompatible with gpt-5-mini) ---
+        # --- call chat model via direct HTTP (SDK was returning empty for gpt-5-mini) ---
         import httpx
         chat_url = f"{AZURE_CHATOPENAI_ENDPOINT.rstrip('/')}/openai/deployments/{AZURE_CHATOPENAI_DEPLOYMENT}/chat/completions?api-version={CHATOPENAI_API_VERSION}"
         chat_resp = httpx.post(chat_url, json={
@@ -1002,55 +976,44 @@ Respond with ONLY this JSON:
             ],
             "max_completion_tokens": 2000,
             "response_format": {"type": "json_object"},
-        }, headers={"api-key": AZURE_CHATOPENAI_API_KEY, "Content-Type": "application/json"}, timeout=30)
+        }, headers={"api-key": AZURE_CHATOPENAI_API_KEY, "Content-Type": "application/json"}, timeout=120)
+        
         if chat_resp.status_code != 200:
             import sys
             print(f"Chat API error {chat_resp.status_code}: {chat_resp.text[:1000]}", file=sys.stderr, flush=True)
             raise Exception(f"Chat API returned {chat_resp.status_code}: {chat_resp.text[:500]}")
-        resp_json = chat_resp.json()
-        llm_response = (resp_json["choices"][0]["message"].get("content") or "").strip()
-
-        # --- parse LLM JSON; safe fallback ---
+            
+        llm_json = chat_resp.json()["choices"][0]["message"].get("content", "{}")
+        print(f"DEBUG: LLM Response content: {llm_json!r}")
+        
         try:
             import json
-            llm_json = json.loads(llm_response)
-            recommended_index = int(llm_json["recommended_course_index"]) - 1
-            surprise_connection = llm_json["surprise_connection"]
-            if recommended_index < 0 or recommended_index >= len(shortlist):
-                raise ValueError("Index out of range")
-        except Exception as e:
-            print(f"Error parsing LLM response: {e}\nLLM Response: {llm_response!r}")
-            import random
-            rng = random.Random(user_id)
-            recommended_index = rng.randrange(len(shortlist))
-            surprise_connection = (
-                "This course lies outside your usual departments but connects to your prior work in a surprising way."
-            )
-
-        recommended_course = shortlist[recommended_index]
-
+            llm_data = json.loads(llm_json)
+            rec_idx = int(llm_data.get("recommended_course_index", 1)) - 1
+            if rec_idx < 0 or rec_idx >= len(shortlist): rec_idx = 0
+            surprise_connection = llm_data.get("surprise_connection", "This course offers a new perspective outside your usual fields.")
+        except Exception as json_err:
+            print(f"Error parsing LLM response: {json_err}. Fallback to first course.")
+            rec_idx = 0
+            surprise_connection = "This course connects to your interests in an interdisciplinary way."
+        
+        recommended_course = shortlist[rec_idx]
+        
         recommendation = {
             "course_codes": recommended_course.get("course_codes", []),
             "course_title": recommended_course.get("course_title", ""),
             "description": recommended_course.get("description", ""),
             "department": recommended_course.get("department", ""),
             "semester": latest_semester,
-            "surprise_connection": surprise_connection,
+            "surprise_connection": surprise_connection
         }
 
-        # --- Log to Supabase surprise_history with incremental index ---
+        # --- 6. Log to Supabase surprise_history ---
         try:
-            # 1. Fetch current max index for this user
-            idx_url = f"{SUPABASE_SURPRISE_TABLE_URL}?user_id=eq.{user_id}&select=insight_index&order=insight_index.desc&limit=1"
-            idx_resp = requests.get(idx_url, headers=headers)
-            new_index = 1
-            if idx_resp.status_code == 200:
-                idx_data = idx_resp.json()
-                if idx_data and len(idx_data) > 0:
-                    last_index = idx_data[0].get("insight_index") or 0
-                    new_index = last_index + 1
-
-            # 2. Log the surprise
+            # Get next index
+            idx_resp = requests.get(f"{SUPABASE_SURPRISE_TABLE_URL}?user_id=eq.{user_id}&select=insight_index&order=insight_index.desc&limit=1", headers=headers)
+            new_index = (idx_resp.json()[0].get("insight_index", 0) + 1) if idx_resp.status_code == 200 and idx_resp.json() else 1
+            
             log_payload = {
                 "user_id": user_id,
                 "course_codes": recommendation["course_codes"],
@@ -1059,12 +1022,9 @@ Respond with ONLY this JSON:
                 "surprise_connection": recommendation["surprise_connection"],
                 "insight_index": new_index
             }
-            log_resp = requests.post(SUPABASE_SURPRISE_TABLE_URL, headers=headers, json=log_payload)
-            if log_resp.status_code not in [200, 201]:
-                print(f"Error logging surprise to Supabase: {log_resp.text}")
-
+            requests.post(SUPABASE_SURPRISE_TABLE_URL, headers=headers, json=log_payload)
         except Exception as log_err:
-            print(f"Error in surprise logging process: {log_err}")
+            print(f"Error logging surprise: {log_err}")
 
         return jsonify(recommendation), 200
 
