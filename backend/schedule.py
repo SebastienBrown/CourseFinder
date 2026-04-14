@@ -11,7 +11,8 @@ from config import PORT
 from transcript_scrape import extract_courses_from_transcript
 import openai
 import numpy as np
-from sklearn.metrics.pairwise import cosine_similarity
+from qdrant_client import QdrantClient
+from qdrant_client.http import models
 from collections import Counter
 from functools import wraps
 import time
@@ -35,6 +36,17 @@ validator = QueryValidator()
 
 # Supabase Client for Storage
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+
+# --- Qdrant Vector DB ---
+QDRANT_URL = os.getenv("QDRANT_URL", "http://localhost:6333")
+QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
+
+try:
+    qdrant = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
+    print(f"Connected to Qdrant at {QDRANT_URL}")
+except Exception as e:
+    print(f"Failed to connect to Qdrant: {e}")
+    qdrant = None
 
 SUPABASE_TABLE_URL = f"{SUPABASE_URL}/rest/v1/user_courses"  # Example table path
 SUPABASE_TABLE_URL_EXTRA=f"{SUPABASE_URL}/rest/v1/user_courses_test"
@@ -407,93 +419,52 @@ def semantic_search():
         return jsonify({"error": error}), 400
 
     query_embedding=get_openai_embedding(query)
-    print(query_embedding)
+    
+    if not qdrant:
+        return jsonify({"error": "Qdrant is not connected"}), 500
+        
+    query_filter = None
+    if not useAllSemesters and currentSem:
+        query_filter = models.Filter(
+            must=[
+                models.FieldCondition(
+                    key="semester",
+                    match=models.MatchValue(value=currentSem)
+                )
+            ]
+        )
+        
+    # get_openai_embedding returns it as shape (1, 1536), so flatten it
+    embedding_list = query_embedding[0].tolist()
 
-    ##########################
-    combined_list = []
-
-    if useAllSemesters==False:
-
-        print(currentSem)
-        # 1. Read from a single file
-        single_file_path = f"data/gpt_off_the_shelf/output_embeddings_{currentSem}.json"
-        with open(single_file_path, 'r', encoding='utf-8') as f:
-            combined_list = json.load(f)
-
-        if not isinstance(combined_list, list):
-            raise ValueError("The JSON file must contain a list.")
-
-    else:
-        # 2. Read from multiple files and concatenate their contents
-        all_files = [f"data/gpt_off_the_shelf/output_embeddings_{sem}.json" for sem in SEMESTER_COLUMNS]
-
-        for file_path in all_files:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-                if not isinstance(data, list):
-                    raise ValueError(f"JSON file {file_path} must contain a list.")
-                combined_list.extend(data)
-
+    search_result = qdrant.search(
+        collection_name="amherst_courses",
+        query_vector=embedding_list,
+        query_filter=query_filter,
+        limit=100  # Fetch a wide batch for proper deduplication
+    )
+    
     seen_titles = set()
-    deduped = []
-    for course in combined_list:
+    ranked_courses = []
+    
+    for hit in search_result:
+        course = hit.payload
+        course["similarity"] = hit.score
+        
+        # Deduplicate by course title
         title = course.get("course_title", "").strip().lower()
         if title and title not in seen_titles:
-            deduped.append(course)
             seen_titles.add(title)
-
-    combined_list = deduped
-
-    # Extract all course names
-    course_names = [course["course_title"] for course in combined_list]
-
-    # Count frequencies
-    #name_counts = Counter(course_names)
-
-    # Print frequencies
-    #for name, count in name_counts.items():
-       #print(f"{name}: {count}")
-
-    # Separate valid and invalid courses
-    valid_courses = []
-    invalid_courses = []
-
-    for course in combined_list:
-        if "embedding" in course and course["embedding"] is not None:
-            valid_courses.append(course)
-        else:
-            invalid_courses.append(course)
-
-    # Print invalid courses with title and semester
-    print(f"Found {len(invalid_courses)} courses without embeddings:")
-    for course in invalid_courses:
-        title = course.get("course_title", "<no title>")
-        semester = course.get("semester", "<no semester>")
-        print(f"- {title} ({semester})")
-
-    # Step 2: Prepare course embeddings matrix
-    course_embeddings = np.array([course["embedding"] for course in valid_courses])
-    #print(course_embeddings)
-
-    # Step 3: Compute cosine similarity
-    similarities = cosine_similarity(query_embedding, course_embeddings)[0]  # [0] to flatten
-
-    # Step 4: Assign similarity scores and rank courses
-    for course, sim in zip(valid_courses, similarities):
-        course["similarity"] = sim
-
-    ranked_courses = sorted(valid_courses, key=lambda x: x["similarity"], reverse=True)
-
-    # Print only the course codes
-    #print("RANKED COURSE CODES:")
-    #for course in ranked_courses:
-        #print(course["course_codes"])
+            ranked_courses.append(course)
+            
+        if len(ranked_courses) >= 5:
+            break
 
     # Step 5: Print top 5
-    for course in ranked_courses[:5]:
-        print(f"{course['course_codes']} - {course['course_title']} (similarity: {course['similarity']:.4f})")
+    for course in ranked_courses:
+        print(f"{course.get('course_codes')} - {course.get('course_title')} (similarity: {course['similarity']:.4f})")
 
-    return ranked_courses[:5]
+    return jsonify(ranked_courses)
 
 
 @app.route("/submit_courses", methods=["POST"])
